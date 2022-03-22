@@ -1,0 +1,4 @@
+[
+"bgp 1000004 started 2020-02-21T12:03:51",
+"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"pim\",\"localeInheritance\":[\"DI\",\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":true,\"baseEntityIIDs\":[1000004]}","Base Entity Export batch 1 with batch size of 1",{"csid":"[e>ART1001 $iid=1000004 $nature=single_article $catalog=pim $type=ARTICLE]","$baselocale":"en_US","_level":1,"$embdtype":"UNDEFINED","LEmbd":"","Lrecord":[{"csid":"[v>:1000004:200 $valueiid=1000005 $locale=en_US $prop=nameattribute $type=STANDARD_ATTRIBUTE]","_status":"DIRECT","value":"Single Article 2"},{"csid":"[t>:1000004:276 $prop=lifestatustag $type=TAG]","Ltag":[{ "$tag": "life_status_inbox" , "range": 100}],"_status":"DIRECT"},{"csid":"[t>:1000004:277 $prop=listingstatustag $type=TAG]","Ltag":[{ "$tag": "listing_status_catlog" , "range": 100}],"_status":"DIRECT"}],"LClassifier":""},"bgp 1000004 ended 2020-02-21T12:03:51"
+]

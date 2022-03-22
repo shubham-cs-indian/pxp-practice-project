@@ -1,0 +1,32 @@
+@import "./../../../../styleguide/style-guide";
+.nothingFoundViewContainer{
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .nothingFoundInnerContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100px;
+    text-align: center;
+
+    .nothingFoundIcon{
+      width: 100%;
+      height: 40px;
+      display: inline-block;
+      opacity: .5;
+      @include background-properties($image-CS-Urgent-Property-64,40px);
+    }
+
+    .nothingFoundMsg{
+      display: inline-block;
+      font-size: 20px;
+      text-align: center;
+      color: #777;
+      margin-top: 20px;
+    }
+  }
+}

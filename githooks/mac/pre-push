@@ -1,0 +1,25 @@
+#!/bin/sh
+LC_ALL=C
+echo "Validating branch name and commit message"
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+valid_branch_regex="(^(feature|poc|release|hotfix|dev)\/[a-z0-9._-]+$)|development|master"
+error=false
+
+#containsElement () {
+#  local e match="$1"
+#  shift
+#  for e; do [[ "$e" == "$match" ]] && return 1; done
+#  return 0
+#}
+
+message=""
+
+if [[ ! $local_branch =~ $valid_branch_regex ]]
+then
+    echo "Your branch name does not adhere to the required standard. Please review and try commiting again."
+    exit 1
+fi
+
+echo "Exiting success"
+
+exit 0

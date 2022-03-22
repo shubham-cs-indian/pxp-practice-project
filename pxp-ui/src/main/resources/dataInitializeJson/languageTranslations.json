@@ -1,0 +1,70 @@
+[
+  {
+    "id": "en_US",
+    "translations": {
+      "en_US": {
+        "label": "English"
+      },
+      "es_ES": {
+        "label": "InglÃ©s"
+      },
+      "fr_FR": {
+        "label": "Anglais"
+      },
+      "de_DE": {
+        "label": "Englisch"
+      }
+    }
+  },
+  {
+    "id": "fr_FR",
+    "translations": {
+      "en_US": {
+        "label": "French"
+      },
+      "es_ES": {
+        "label": "FrancÃ©s"
+      },
+      "fr_FR": {
+        "label": "FranÃ§ais"
+      },
+      "de_DE": {
+        "label": "FranzÃ¶sisch"
+      }
+    }
+  },
+  {
+    "id": "de_DE",
+    "translations": {
+      "en_US": {
+        "label": "German"
+      },
+      "es_ES": {
+        "label": "AlemÃ¡n"
+      },
+      "fr_FR": {
+        "label": "Allemand"
+      },
+      "de_DE": {
+        "label": "Deutsche"
+      }
+    }
+  },
+  {
+    "id": "es_ES",
+    "translations": {
+      "en_US": {
+        "label": "Spanish"
+      },
+      "es_ES": {
+        "label": "EspaÃ±ol"
+      },
+      "fr_FR": {
+        "label": "Espanol"
+      },
+      "de_DE": {
+        "label": "Spanisch"
+      }
+    }
+  }
+]

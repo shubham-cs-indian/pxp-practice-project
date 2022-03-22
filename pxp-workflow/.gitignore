@@ -1,0 +1,12 @@
+/.gradle
+/bin/
+/build/
+/.settings
+.classpath
+.project
+/logs/
+/ExportedFiles/
+/UploadSourceFiles
+/rdbms-logs/
+/rdbms-props/
+/.nb-gradle/

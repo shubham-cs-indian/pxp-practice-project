@@ -1,0 +1,111 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "csid": "[c>R_Hie_R2 $iid=0 $type=HIERARCHY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_Hie_R2",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "Jembeddedclasses": {
+      
+    },
+    "masterParentTag": "",
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "LLevelCode": [
+      "R_Hie_level3",
+      "R_Hie_level4"
+    ],
+    "LLevelLabels": [
+      "R_Hie_level1123",
+      "R_Hie_level2123"
+    ],
+    "taxonomytype": "majorTaxonomy",
+    "parentCode": "-1"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "csid": "[c>R_hie_child4 $iid=0 $type=HIERARCHY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_hie_child4",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "R_Hie_R2",
+    "masterParentTag": "R_Hie_level3",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "csid": "[c>R_hie_child5 $iid=0 $type=HIERARCHY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_hie_child5",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "R_Hie_R2",
+    "masterParentTag": "R_Hie_level3",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  }
+]

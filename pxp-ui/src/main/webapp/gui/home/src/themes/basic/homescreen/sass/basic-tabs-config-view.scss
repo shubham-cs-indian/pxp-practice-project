@@ -1,0 +1,75 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.tabPropertySequenceListContainer{
+  scroll-behavior: auto;
+  overflow-y: auto;
+  max-height: inherit;
+
+  .nothingFoundMessage{
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    color: $color-dark-5;
+    width: 100%;
+  }
+
+  .tabSortViewWrapper {
+    overflow: hidden;
+    padding: 5px 0;
+    z-index: 2000;
+    width: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+
+    .handle {
+      float: right;
+      position: relative;
+      top: 1px;
+      display: block;
+      width: 14px;
+      height: 10px;
+      opacity: .25;
+      margin: 4px 10px 0px 4px;
+      cursor: row-resize;
+      background: -webkit-linear-gradient(top, #000, #000 20%, #fff 0, #fff 40%, #000 0, #000 60%, #fff 0, #fff 80%, #000 0, #000);
+      background: linear-gradient(180deg, #000, #000 20%, #fff 0, #fff 40%, #000 0, #000 60%, #fff 0, #fff 80%, #000 0, #000);
+    }
+
+    .tabSortLabel {
+      float: left;
+      color: inherit;
+      width: calc(100% - 35px);
+      @include ellipsis();
+
+    }
+    .itemTypeIcon {
+      height: 17px;
+      width: 17px;
+      float: left;
+      margin: 0 10px;
+      opacity: 0.8;
+      position: relative;
+
+      .imageSimpleViewNoImage {
+        background-size: 17px;
+      }
+
+      &.relationship {
+        @include background-properties($image-CS-hub, 17px);
+      }
+      &.propertyCollection {
+        @include background-properties($image-CS-table-black-50, 17px);
+      }
+      &.context {
+        @include background-properties($image-CS-tags-black-50, 17px);
+      }
+    }
+  }
+
+  .dragDropContextViewWrapper{
+    .droppableListContainer{
+      border-right: none;
+    }
+  }
+}

@@ -1,0 +1,387 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+.xRaySettings {
+  height: auto;
+  width: 243px;
+  margin: 0px;
+  position: relative;
+
+  .arrowSection {
+    height: 10px;
+    width: 50px;
+    margin: 0 21px 0 auto;
+    overflow: hidden;
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+    @include background-properties($image-CS-Up-52, 24px, 50% 0 );
+    display: none;
+  }
+
+  .mainSection {
+    background-color: $color-light-1;
+    width: inherit;
+    border-radius: 2px;
+    overflow: hidden;
+    //box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+    //border: 1px solid rgba(0,0,0,0.1);
+
+    .headingLabel {
+      padding: 10px;
+      color: $color-dark-4;
+      font-size: $font-small;
+      font-weight: 500;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-light-4;
+    }
+
+    .modeButtonsContainer {
+
+      .modeButton {
+        height: 30px;
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        background-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        font-size: $font-small;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: $color-light-2;
+        }
+      }
+
+      .isSelected {
+        box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.25);
+        background-color: $color-light-4;
+
+        &:hover {
+          background-color: $color-light-4;
+        }
+      }
+    }
+
+    .searchInputContainer {
+      padding: 7px;
+      border-bottom: 1px solid $color-light-3;
+      border-top: 1px solid $color-light-3;
+      position: relative;
+
+      .searchInput {
+        border-radius: 2px;
+        border: 1px solid $color-light-4;
+        padding: 2px 24px 2px 6px;
+        font-size: $font-normal;
+        line-height: 18px;
+        width: 100%;
+      }
+
+      .clearSearch {
+        width: 24px;
+        height: 24px;
+        opacity: .6;
+        cursor: pointer;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        @include background-properties($image-CS-Cross, 16px, 50%);
+        transition: all .2s;
+      }
+    }
+
+    .nothingFoundMessage {
+      padding: 0 8px;
+      font-size: $font-small;
+      text-align: center;
+      line-height: 24px;
+      font-style: italic;
+      color: $color-dark-5;
+    }
+
+    .listContainer {
+      //padding: 5px 1px 1px 1px;
+      overflow-y: auto;
+      max-height: 260px;
+      scrollbar-width: thin;
+
+      .listOperations {
+        width: 100%;
+        padding: 2px 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-light-3;
+        text-transform: lowercase;
+
+        .selectAll {
+          display: inline-block;
+          vertical-align: top;
+          font-size: $font-small;
+          line-height: 20px;
+          font-weight: 500;
+          cursor: pointer;
+          color: $color-dark-4;
+        }
+
+        .showSelected {
+          display: inline-block;
+          vertical-align: top;
+          font-size: $font-small;
+          line-height: 20px;
+          font-weight: 500;
+          cursor: pointer;
+          color: $color-dark-4;
+        }
+      }
+
+      .propertyList {
+        // max-height: 200px;
+      }
+      
+      .propertyList .scroll {
+        overflow-y: auto;
+      }
+
+      .propertyType {
+        padding: 5px 33px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+          content: " ";
+          height: 12px;
+          width: 12px;
+          position: absolute;
+          left: 12px;
+          top: 8px;
+        }
+
+        &.collapsed:before {
+          @include background-properties($image-CS-arrow-forward);
+        }
+
+        &.expanded:before {
+          @include background-properties($image-CS-expand-arrow-icon);
+        }
+      }
+
+      .loadMoreMessage {
+        padding: 5px;
+        text-align: center;
+        font-style: italic;
+        cursor: pointer;
+      }
+
+      .listItem {
+        padding: 0 8px;
+        transition: all .2s;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+          background: $color-light-3;
+        }
+
+        &.isSelected {
+          background: $color-light-4;
+        }
+
+        &.inFocus {
+          background: $color-light-5;
+        }
+
+        .listItemCheck {
+          height: 20px;
+          width: 20px;
+          @include background-properties($image-CS-Unchecked-Checkbox-48-Material, 14px, 3px);
+          float: left;
+          vertical-align: top;
+          cursor: pointer;
+          margin: 2px 0;
+
+          &.checked {
+            @include background-properties($image-CS-checked-checkbox-icon, 14px, 3px);
+          }
+        }
+
+        .listItemLabel {
+          float: left;
+          vertical-align: top;
+          font-size: $font-small;
+          line-height: 24px;
+          padding: 0 0 0 5px;
+          width: calc(100% - 20px);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .listItemDelete {
+          height: 24px;
+          width: 20px;
+          display: inline-block;
+          vertical-align: top;
+          font-size: $font-small;
+          line-height: 24px;
+          @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 12px, 50%);
+
+          &:hover {
+            background-size: 16px;
+          }
+        }
+      }
+
+      .nothingFoundMessage {
+        padding: 0 8px;
+        font-size: $font-small;
+        text-align: center;
+        line-height: 24px;
+        font-style: italic;
+        color: $color-dark-5;
+      }
+
+      .groupWrapper{
+        .groupList{
+          .groupBody {
+            &.showApply {
+              min-height: 150px;
+              .groupOptionsWrapper {
+                height: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .applyButton {
+      height: 0;
+      width: 100%;
+      transition: all .2s;
+      text-align: center;
+      font-size: $font-normal;
+      line-height: 30px;
+      font-weight: 500;
+      text-transform: uppercase;
+      cursor: pointer;
+      overflow: hidden;
+
+      &.visible {
+        height: 38px;
+        padding: 2px 10px;
+        border-top: 1px solid $color-light-3;
+      }
+    }
+
+    .activeGroupSection {
+      height: 0;
+
+      &.visible {
+        height: 45px;
+        padding: 7px;
+        border-bottom: 1px solid $color-light-3;
+        border-top: 1px solid $color-light-3;
+      }
+
+      .activeGroupSectionInnerContainer {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        .activeGroupInformation {
+          height: 29px;
+          width: 100%;
+          float: left;
+
+          &.adjust {
+            width: calc(100% - 85px);
+            margin-right: 7px;
+          }
+
+          .activeGroupLabel {
+            padding: 0px 6px;
+            float: left;
+            font-size: $font-normal;
+            line-height: 28px;
+            font-weight: 500;
+            height: 100%;
+            width: calc(100% - 28px);
+            transition: all .2s;
+            @include ellipsis();
+          }
+
+          .closeActiveGroupButton {
+            width: 28px;
+            height: 28px;
+            opacity: .6;
+            cursor: pointer;
+            vertical-align: top;
+            @include background-properties($image-CS-Cross, 16px, 50%);
+            transition: all .2s;
+            float: left;
+          }
+
+        }
+
+
+      }
+    }
+
+    .createNewSection {
+      height: 0;
+      overflow: hidden;
+      transition: all .2s;
+
+      &.visible {
+        height: 45px;
+        padding: 7px;
+        border-bottom: 1px solid $color-light-3;
+        border-top: 1px solid $color-light-3;
+      }
+
+      .createNewSectionInnerContainer {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        .createInput {
+          border-radius: 2px;
+          border: 1px solid $color-light-4;
+          padding: 2px 6px;
+          font-size: $font-normal;
+          line-height: 18px;
+          width: 100%;
+          transition: all .2s;
+          height: 29px;
+
+          &.adjust {
+            width: calc(100% - 100px);
+            height: 29px;
+          }
+        }
+
+        .clearCreateGroup {
+          width: 20px;
+          height: 29px;
+          opacity: .6;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: top;
+          @include background-properties($image-CS-Cross, 16px, 1px)
+        }
+
+        .customMaterialButton > span {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .customMaterialButton > span {
+    padding: 0;
+    @include ellipsis();
+  }
+}

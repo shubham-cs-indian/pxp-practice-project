@@ -1,0 +1,166 @@
+@import "./../../../../styleguide/style-guide";
+
+
+.contentComparisonMNMPropertyViewContainer {
+  display: flex;
+  align-items: center;
+  .contentComparisonPropertyValueWrapper {
+    width: 100%;
+    float: left;
+    height: 100%;
+    padding-left: 10px;
+    flex: 1;
+
+    .propertyValueEmpty {
+      color: #333333;
+      font-size: 12px;
+    }
+
+    .contentAttributeElementViewWrapper {
+      .customTextFieldViewContainer {
+        input.customTextField {
+          background-color: transparent;
+          padding-top: 6px;
+        }
+        .customTextField {
+          font-size: 13px;
+          &.isDisabled {
+            background-color: transparent !important;
+            padding-top: 1px;
+            color: $color-dark-2;
+          }
+        }
+      }
+      .attributeElementFroalaWrapper {
+        .customFroalaView {
+          margin: 0;
+          .fr-inline {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .froalaContainer, .fr-wrapper {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .attributeElementTextFieldWrapper {
+        .customTextFieldViewContainer {
+          margin: 0;
+          .customTextField {
+            background: none;
+          }
+        }
+        .customDatePickerDisabledValue {
+          margin: 0;
+        }
+      }
+      .numberLocaleViewContainer {
+        .numberLocaleInput {
+          color: $color-dark-2;
+          margin: 0;
+          background-color: transparent;
+          &.isDisabled {
+            background: none;
+            background-color: transparent;
+          }
+        }
+      }
+      .numberLocaleInput {
+        line-height: normal;
+      }
+    }
+
+    .tagsGroupContainer {
+      .tagsSectionBody {
+        padding: 0;
+        .entityTagsSummaryView {
+          margin: 0;
+          .noTagsGrey {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+      .rulerTagTypeView {
+        .rulerTagIconLabel {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &.isDisabled {
+      .contentAttributeElementViewWrapper {
+        .attributeElementDateWrapper {
+          .customDatePickerWrapper {
+            .customDatePickerDisabledValue {
+              margin-top: 4px;
+              font-style: italic;
+              color: $color-dark-5;
+              padding: 2px;
+              margin-bottom: 3px;
+            }
+          }
+        }
+        .attributeElementFroalaWrapper {
+          .customFroalaView {
+            background: none;
+          }
+        }
+      }
+    }
+    .tagsGroupContainer {
+      .gridYesNoPropertyView {
+        .gridYesNoSwitch {
+          .gridYesNoPropertyView .gridYesNoSwitch .gridYesNoSwitchButton.disabled {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  .contentComparisonPropertyIconsWrapper {
+    display: flex;
+    align-items: center;
+    float: left;
+    min-height: 35px;
+    padding-right: 10px;
+    .contentPropertyEditButton {
+      height: 32px;
+      width: 24px;
+      background-image: url($image-CS-Edit-32);
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      float: left;
+      opacity: .5;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+    .notClickableIcon {
+      float: left;
+      height: 18px;
+      width: 20px;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+      //margin: 0 2px;
+      opacity: 0.7;
+
+      &.disabledIcon {
+        opacity: 1;
+        background-image: url($image-CS-Unavailable-48);
+      }
+
+      &.translatableIcon {
+        background-size: 18px;
+        background-image: url($image-geography);
+      }
+    }
+  }
+}

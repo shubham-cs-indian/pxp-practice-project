@@ -1,0 +1,107 @@
+[
+  {
+    "Ltags": [
+      {
+        "Lcouplings": [
+          {
+            "Ltagvalues": [
+              {
+                "from": 100,
+                "to": 100,
+                "id": "regularlyavailable"
+              }
+            ],
+            "$type": "exact"
+          }
+        ],
+        "entityid": "availabilitytag"
+      },
+      {
+        "Lcouplings": [
+          {
+            "Ltagvalues": [
+              {
+                "from": 100,
+                "to": 100,
+                "id": "image_extension_format_jpg"
+              }
+            ],
+            "$type": "exact"
+          }
+        ],
+        "entityid": "imageextensiontag"
+      }
+    ],
+    "Llanguages": [
+      "en_US"
+    ],
+    "Ltaxonomies": [
+      "R_Taxonomy1",
+      "R_taxonomy2"
+    ],
+    "Lorganizations": [
+      "-1"
+    ],
+    "csid": "[R>R_Rules101]",
+    "Ltypes": [
+      "single_article"
+    ],
+    "$isstandard": false,
+    "$islanguagedependent": false,
+    "label": "R_Rules100_Label",
+    "Lrelationships": [
+      
+    ],
+    "Lphysicalcatalogids": [
+      "pim",
+      "dataIntegration",
+      "offboarding"
+    ],
+    "$type": "violation",
+    "Lattributes": [
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              "wo12"
+            ],
+            "comparewithsysdate": false,
+            "type": "exact"
+          }
+        ],
+        "entityid": "descriptionattribute"
+      },
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              "k12"
+            ],
+            "comparewithsysdate": false,
+            "type": "exact"
+          }
+        ],
+        "entityid": "addressattribute"
+      }
+    ],
+    "Lnormalizations": [
+      
+    ],
+    "Lruleviolations": [
+      {
+        "versionId": 1,
+        "color": "red",
+        "description": "this was changed",
+        "entityId": "discountattribute",
+        "type": "attribute"
+      },
+      {
+        "versionId": 1,
+        "color": "yellow",
+        "description": "jajajba",
+        "entityId": "imageextensiontag",
+        "type": "tag"
+      }
+    ]
+  }
+]

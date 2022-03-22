@@ -1,0 +1,65 @@
+@import "./theme-selector";
+@import "./colors";
+
+/*
+*
+*
+all the HACKS and QUICK FIXES go here
+*
+*
+1. If it’s a hack, it goes in shame.css.
+2. Document all hacks fully:
+    - Related to: What part of the codebase does it relate to?
+    - Why: Why was this needed?
+    - Possible Solution: How might you fix it properly, given more time?
+3. Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+4. Try and clean shame.css up when you have some down time.
+*
+*
+*/
+
+
+
+/*
+       RELATED TO : About dialog
+              WHY : 'MDM' not shown in CS theme but shown in all other brand themes
+POSSIBLE SOLUTION : -
+*/
+
+$about-dialog-show-product-name: false !default;
+
+@mixin aboutDialog () {
+
+  .aboutDialogLogoNameContainer {
+    @if $about-dialog-show-product-name {
+      padding: 30px 50px;
+      //display: flex;
+
+    } @else {
+      padding: 70px 120px;
+    }
+
+
+    .aboutDialogNameVersion {
+      @if $about-dialog-show-product-name {
+        flex: 1;
+      }
+
+
+      .aboutDialogNameHeader {
+
+        @if $about-dialog-show-product-name {
+          display: block;
+        } @else {
+          display: none;
+        }
+        color: $color-dark-1;
+      }
+
+      .aboutDialogVersion {
+        color: $color-dark-1;
+
+      }
+    }
+  }
+}

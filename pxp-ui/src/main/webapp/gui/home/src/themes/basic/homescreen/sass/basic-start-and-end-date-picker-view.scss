@@ -1,0 +1,130 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.startAndEndDatePickerView {
+  height: 100%;
+  width: 100%;
+
+  .sectionTitle {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  .startAndEndDateViewWrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .startEndDateFieldGroup {
+      flex: 1 0;
+      transition: all .2s;
+      min-height: 50px;
+      display : flex;
+      .eventField {
+        margin-right: 10px;
+        border: 1px solid #eee;
+        background: #fff;
+        padding: 4px 5px 0 5px;
+        flex: 1;
+        align-items: stretch;
+        float: left;
+        padding-bottom: 10px;
+        margin-right: 10px;
+
+        .fieldLabel {
+          font-size: 12px;
+          margin-left: 5px;
+          color: #777;
+          font-weight: 500;
+          line-height: 14px;
+          width: calc(100% - 50px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .value {
+          margin-top: 13px;
+          //line-height: 14px;
+          width: calc(100% - 15px);
+          word-break: break-all;
+          background: transparent;
+          position: relative;
+          z-index: 2;
+          overflow: hidden;
+          .customDatePickerWrapper{
+            //max-width: 100px;
+          }
+
+          .dateTimePickerContainer {
+            .customDatePickerWrapper {
+              padding-right: 0px;
+              width: auto;
+              border: 1px inset rgba(241, 241, 241, 0.83);
+              border-radius: 4px;
+              padding-left: 5px;
+              .customDatePickerDisabledValue {
+                color: $color-dark-5;
+              }
+              .datePickerCustom {
+                height: auto !important;
+                & > input {
+                  padding: 0 5px !important;
+                  font-size: 13px !important;
+                }
+                .textFieldUnderLineHr {
+                  bottom: 2px !important;
+                }
+              }
+            }
+            .customTimePickerWrapper {
+              padding-right: 0px;
+              width: auto;
+              border: 1px inset rgba(241, 241, 241, 0.83);
+              border-radius: 4px;
+              padding-left: 5px;
+              div{
+                div{
+
+              input {
+                padding: 0 5px !important;
+                font-size: 13px !important;
+                bottom: 0px !important;
+              }
+                  div:nth-child(3){
+                    display: none;
+                  }
+                }
+              }
+              .timeActionItems{
+                .customTimePickerEmptyButton{
+                  width: 20px;
+                }
+              }
+            }
+          }
+
+          .textFieldPlaceHolder {
+            line-height: 10px !important;
+          }
+          .custom_placeholder{
+            input{
+              margin-left: 5px;
+              padding: 0;
+            }
+          }
+        }
+        .customDatePickerEmptyButton {
+          top: 7px;
+        }
+      }
+    }
+
+    .repeatHandlerWrapper {
+      display: flex;
+      padding-left: 10px;
+    }
+
+  }
+}

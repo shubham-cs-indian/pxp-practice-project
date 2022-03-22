@@ -1,0 +1,143 @@
+@import "../../../../styleguide/mixin";
+@import "bpmn-wrapper-view";
+
+.jobContainer {
+  height: 100%;
+  width: 100%;
+
+  .jobListViewContainer {
+    height: calc(100% - 30px);
+    overflow: auto;
+    padding: 64px 100px;
+    position: relative;
+
+    .listGroup {
+      margin-bottom: 20px;
+
+      .listGroupLabel {
+        padding: 7px 20px;
+        color: #616161;
+      }
+    }
+
+    .jobItemContainer {
+      margin-bottom: 2px;
+      background: white;
+      box-shadow: 1px 1px 1px 1px #ccc;
+      line-height: 30px;
+      position: relative;
+
+      &:hover {
+        box-shadow: 1px 1px 2px 2px #ccc;
+      }
+
+      &.jobColumnContainer {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 0 100px;
+        font-weight: bold;
+        color: #424242;
+
+        .jogRowItem {
+          height: 50px;
+          cursor: initial;
+        }
+
+        &:hover {
+          box-shadow: 1px 1px 1px 1px #ccc;
+        }
+      }
+
+      &.activeItem {
+        margin-bottom: 20px;
+        .jobChildrenContainer{
+          height: 500px;
+        }
+
+        .jogRowItem {
+          margin-bottom: 2px;
+          box-shadow: 0 1px 0 0 #ccc;
+        }
+      }
+
+      .jobChildrenContainer {
+        height: 0;
+        //transition: all 0.3s;
+
+        .processConfigDesignViewContainer{
+          position: relative;
+          height: calc(100% - 30px);
+          float: left;
+          width: 80%;
+        }
+      }
+
+      .jogRowItem {
+        height: 50px;
+        cursor: pointer;
+        padding: 10px;
+        width:100%;
+
+        .filterSummaryRowClearLabel {
+          height: 22px;
+          text-align: center;
+          border: 1px solid #3248A7;
+          border-radius: 3px;
+          padding: 0px 10px 0px 10px;
+          margin-right: 35px;
+
+          .clearFilterLabel {
+            height: 14px;
+            color: $color-dark-blue;
+            font-size: 12px;
+            vertical-align: middle;
+            text-align: left;
+          }
+        }
+
+        .jobStatus {
+          height: 50px;
+          float: left;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: #c7ccc2;
+        }
+
+        .jobCell {
+          &.jobLabel {
+            padding-left: 10px;
+            float: left;
+            width: calc(100% - 650px);
+            @include ellipsis();
+          }
+
+          &.jobDate {
+            text-align: center;
+            float: left;
+            width:200px;
+            @include ellipsis();
+          }
+
+          &.jobStatusSymbol {
+            text-align: center;
+            float: left;
+            width:100px;
+            @include ellipsis();
+          }
+
+          &.jobExecutionStatus {
+            text-align: center;
+            float: left;
+            width: 150px;
+            @include ellipsis();
+          }
+        }
+      }
+    }
+  }
+}

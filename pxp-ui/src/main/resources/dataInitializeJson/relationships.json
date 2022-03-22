@@ -1,0 +1,106 @@
+[
+  {
+    "id": "standardArticleAssetRelationship",
+    "code": "standardArticleAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "article"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    },
+	"propertyIID": 400,
+	"icon": "standardArticleAssetRelationship"
+  },
+  {
+    "id": "standardMarketAssetRelationship",
+    "code": "standardMarketAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "market"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    },
+	"propertyIID": 401,
+	"icon": "standardMarketAssetRelationship"
+  },
+  {
+    "id": "standardSupplierAssetRelationship",
+    "code": "standardSupplierAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "supplier"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    },
+	"propertyIID": 402,
+	"icon": "standardSupplierAssetRelationship"
+  },
+  {
+    "id": "standardTextAsset-AssetRelationship",
+    "code": "standardTextAsset-AssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "text_asset"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    },
+	"propertyIID": 403,
+	"icon": "standardTextAsset-AssetRelationship"
+  },
+  {
+    "id": "standardArticleMarketRelationship",
+    "code": "standardArticleMarketRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "article",
+      "code": "standardArticleMarketRelationshipside1Id"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "market",
+      "code": "standardArticleMarketRelationshipside2Id"
+    },
+	"propertyIID": 404,
+	"icon": "standardArticleMarketRelationship"
+  },
+  {
+    "id": "standardArticleGoldenArticleRelationship",
+    "code": "standardArticleGoldenArticleRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "One",
+      "isVisible": false,
+      "klassId": "article"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "golden_article_klass"
+    },
+	"propertyIID": 406,
+	"icon": "standardArticleGoldenArticleRelationship"
+  }
+]

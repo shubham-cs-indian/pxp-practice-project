@@ -1,0 +1,102 @@
+@import "../../../../styleguide/style-guide";
+
+.dashboardTabViewContainer {
+  height: 100%;
+  overflow: auto;
+  scrollbar-width: thin;
+  //background-image: linear-gradient(#f1f1f1, #f6f6f6);
+  position: relative;
+  .dashboardViewContainerLabel{
+    text-transform: UPPERCASE;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .dashboardContentListContainer {
+    margin: 28px 20px 20px 20px;
+    .dashboardTileContainer {
+      display: inline-block;
+      margin: 20px 20px 0 0;
+      width: 400px;
+      vertical-align: top;
+
+      .dashboardTile {
+        height: auto;
+        margin: 4px 20px 7px 0;;
+        .dashboardChartContainer {
+          padding: 5px 0;
+        }
+        .dashboardTileBreadcrumbContainer {
+          .dashboardKpiRefreshButton {
+            display: none;
+          }
+        }
+      }
+    }
+    .dashboardContentList {
+      .detailedListItemContainer {
+        margin: 0 0px 1px 0px;
+        //border-bottom: 1px solid #eee;
+        box-shadow: none;
+        .checkButton {
+          display: none;
+        }
+      }
+    }
+  }
+  .dashboardRuleViolationItemsContainer {
+    margin: 20px;
+    .dashboardRuleViolationItemsView {
+      display: inline-block;
+      cursor: pointer;
+      margin: 20px 20px 0 0;
+      .dashboardTileContainer {
+        margin: 0;
+        .dashboardTile {
+          height: 300px;
+          margin: 0;
+          .dashboardChartContainer {
+            .bb-chart-arcs-gauge-min, .bb-chart-arcs-gauge-max {
+              font-size: 12px;
+            }
+            .contentCount {
+              text-align: center;
+              font-weight: 500;
+              font-size: 20px;
+              position: absolute;
+              top: 55%;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .dashboardFileDragAndDrop{
+    overflow: hidden;
+    position: absolute;
+    margin: 28px 20px 20px 20px;
+    width: calc(100% - 35px);
+
+    .fileDragDropViewContainer{
+      padding: 0;
+    }
+    .dashboardDragView{
+      height: 200px;
+      border: 2px dashed #aaa;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 2px;
+      background: #fff;
+
+      .dashboardDragText {
+        font-size: 20px;
+        color: #aaa;
+      }
+    }
+  }
+}

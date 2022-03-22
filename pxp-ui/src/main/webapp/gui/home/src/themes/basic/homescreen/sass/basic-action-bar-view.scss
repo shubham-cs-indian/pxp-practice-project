@@ -1,0 +1,825 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+.contentScreenContainer {
+  height: 100%;
+}
+
+.actionItemTag {
+  background-image: url($image-CS-PriceTag-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+
+}
+
+.actionItemTagValues {
+  background-image: url($image-CS-PriceTag-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemContext{
+  background-image: url($image-CS-tags-black-50);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemEvent {
+  background-image: url($image-CS-Calendar-Filled-50-Black);
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemTask {
+  background-image: url($image-CS-Todo-List-Filled-30);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemFunction {
+  @include background-properties($image-CS-Control-Panel, 18px);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemAttribute {
+  background-image: url($image-CS-Generic-Text-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemPropertyCollection {
+  background-image: url($image-CS-table-black-50);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemClass {
+  background-image: url($image-Class-32);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemClass_clone {
+  background-image: url($image-Class-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemTemplate {
+  background-image: url($image-CS-Template-Filled-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemSmartDocument {
+  background-image: url($image-CS-smart-document-icon);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemCategory {
+  @include background-properties-with-theme-white-color($image-CS-MulticastFilled-30);
+}
+
+.actionItemTaxonomyLanguageList {
+ background-image: url($image-CS-Categorize-50-333);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemTranslations {
+  background-image: url($image-CS-icons8-google-translate);
+  opacity: 0.7;
+}
+
+.actionItemTab {
+  background-image: url($image-tabs-50);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemOrganization {
+  background-image: url($image-CS-organisation-50);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemKpi {
+  background-image: url($image-CS-menu-item-dashboard);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemSystem {
+  background-image: url($image-CS-icons8-unit-50);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemPermission {
+  background-image: url($image-CS-Approval-50);
+
+  &.selected {
+    background-image: url($image-CS-Approval-50);
+  }
+}
+
+.actionItemRelationship {
+ background-image: url($image-CS-hub);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemRelationships {
+  background-image: url($image-CS-Relationships);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemUser {
+  background-image: url($image-CS-Gender-Neutral-User-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemRole {
+  background-image: url($image-CS-Administrator-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemProfile {
+  background-image: url($image-CS-map);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemAuthorization{
+  background-image: url($image-CS-lock);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemRule {
+  background-image: url($image-CS-AdministrativeTools-30);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemGoldenRecord {
+  background-image: url($image-CS-merge-files);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemCondition {
+  @include background-properties-with-theme-white-color($image-CS-Workflow);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Workflow);
+  }
+
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Workflow);
+  }
+}
+
+.actionItemState {
+  @include background-properties-with-theme-white-color($image-CS-MulticastFilled-30);
+
+
+  &:hover {
+    //background-image: url($image-CS-MulticastFilled-30);
+  }
+}
+
+.actionItemRuleList {
+  background-image: url($image-CS-Rules-Filled-32);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemProcess {
+  background-image: url($image-CS-Workflow);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemMapping {
+  background-image: url($image-CS-mapped-handshake-black);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.translationTree {
+  background-image: url($image-CS-icons8-google-translate);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemMasterList {
+  @include background-properties-with-theme-white-color($image-CS-hash-tag-list);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-hash-tag-list);
+  }
+}
+
+.actionItemAttributionTaxonomy {
+  background-image: url($image-CS-MulticastFilled-30);
+  opacity: 0.7;
+
+  &.selected {
+   opacity: 1;
+  }
+
+  &:hover {
+  }
+}
+
+.actionItemOrganisationConfig {
+  background-image: url($image-CS-organisation-50);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemTranslations {
+  background-image: url($image-CS-icons8-google-translate);
+
+  &.selected {
+    background-image: url($image-CS-icons8-google-translate);
+  }
+}
+
+.actionItemKpi {
+  background-image: url($image-CS-menu-item-dashboard);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemTabs {
+  background-image: url($image-tabs-50);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemDataGovernanceTasks {
+  background-image: url($image-Policy-Document-50);
+
+  &.selected {
+    background-image: url($image-Policy-Document-50);
+  }
+}
+
+.actionItemUpload {
+  @include background-properties-with-theme-white-color($image-CS-bulkUpload);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-bulkUpload);
+  }
+}
+
+.actionItemPlus {
+  @include background-properties-with-gray-color($image-CS-Plus-32-black);
+  &:hover {
+    @include background-properties-with-gray-color($image-CS-Plus-32-black);
+  }
+}
+
+.actionItemCopy {
+  @include background-properties-with-theme-white-color($image-CS-icons8-Copy-Filled-50);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-icons8-Copy-Filled-50);
+  }
+}
+
+.actionItemDelete {
+  @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+  &:hover {
+    @include background-properties-with-gray-color($image-CS-delete-bin-black);
+    opacity: 0.5;
+  }
+}
+
+.actionItemLeftBar {
+  @include background-properties-with-theme-white-color($image-CS-menu-list);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-menu-list);
+  }
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-menu-list);
+  }
+}
+
+.actionItemEdit {
+  //background-image: url($image-CS-Edit-32);
+  &:hover {
+    //background-image: url("../images/Edit Filled-32.png");
+  }
+}
+
+.actionItemContent {
+  background-image: url($image-CS-content-tab);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemSmartDocumentTemplate{
+  @include background-properties($image-CS-smart-document-template-icon);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemSmartDocumentPreset{
+  @include background-properties($image-CS-smart-document-preset-icon);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemDashboard {
+  background-image: url($image-CS-menu-item-dashboard);
+  opacity: 0.7;
+
+  &.selected {
+    opacity: 1;
+  }
+
+  &:hover {
+
+  }
+}
+
+.actionContentTag {
+  background-image: url($image-CS-PriceTag-32);
+  &:hover {
+    background-image: url($image-CS-PriceTag-32);
+  }
+  &.selected {
+    background-image: url($image-CS-PriceTag-32);
+  }
+}
+
+.actionItemContentClasses {
+  background-image: url($image-CS-Product-menu);
+  opacity: 0.7;
+  &.selected {
+   opacity: 1;
+  }
+}
+
+.actionItemTaskClasses {
+  background-image: url($image-CS-Todo-List-Filled-30);
+  &.selected {
+    background-image: url($image-CS-Todo-List-Filled-30);
+  }
+}
+
+.actionItemAssetClasses {
+  background-image: url($image-CS-ImageFile);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemTargetClasses {
+  background-image: url($image-CS-persona);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemEditorialClasses {
+  background-image: url($image-CS-EditColumn-50);
+  &:hover {
+    //background-image: url($image-CS-EditColumnFilled-50);
+  }
+  &.selected {
+    background-image: url($image-CS-EditColumn-50);
+  }
+}
+
+.actionItemTextAssetClasses{
+  background-image: url($image-CS-Page-Overview);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemSupplierClasses{
+ background-image: url($image-CS-Truck);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemSave {
+  background-image: url($image-CS-Save-as-Filled-white-32);
+  &:hover {
+    background-image: url($image-CS-Save-as-Filled-white-32);
+  }
+}
+
+.actionItemRefresh {
+  @include background-properties-with-theme-white-color($image-CS-Refresh-48-black);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Refresh-48-black);
+  }
+}
+
+
+.actionItemGetAllChildren {
+  @include background-properties-with-theme-white-color($image-CS-Active-Directory-000);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Active-Directory-000);
+  }
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Active-Directory-000);
+  }
+}
+
+.actionItemCancel {
+  @include background-properties-with-theme-white-color($image-CS-Left2Filled-25);
+  &:hover {
+    background-image: url($image-CS-Left2Filled-25);
+  }
+}
+
+.actionItemCreate {
+  @include background-properties-with-gray-color($image-CS-Plus-32-black);
+  &:hover {
+    @include background-properties-with-gray-color($image-CS-Plus-32-black);
+  }
+}
+
+.actionItemRefresh {
+  @include background-properties-with-theme-white-color($image-CS-Refresh-48-black);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Refresh-48-black);
+  }
+}
+
+.actionItemReset {
+  @include background-properties-with-theme-white-color($image-CS-Reset-48);
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Reset-48);
+  }
+}
+
+.actionItemShowTask {
+  background-image: url($image-CS-Todo-List-Filled-30);
+  &:hover, &.selected {
+    background-image: url($image-CS-Todo-List-Filled-30);
+  }
+}
+
+.actionItemShowVariant {
+  @include background-properties-with-theme-white-color($image-CS-DNA-Helix);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-DNA-Helix);
+  }
+}
+
+.actionItemShowVersion {
+  @include background-properties-with-theme-white-color($image-CS-Versions-64);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Versions-64);
+  }
+}
+
+.actionItemCompare {
+  @include background-properties-with-theme-white-color($image-CS-icons8-compare);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-icons8-compare);
+  }
+}
+
+.actionItemMatchMerge {
+  @include background-properties-with-theme-white-color($image-CS-merge-files);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-merge-files);
+  }
+}
+
+.actionItemSort {
+  @include background-properties-with-theme-white-color($image-CS-Sort-Ascending);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Sort-Ascending);
+  }
+}
+
+.actionItemSelectAll {
+  @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+  }
+}
+
+.actionItemContentPanel {
+  @include background-properties-with-theme-white-color($image-CS-physical-catalog-pim);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-physical-catalog-pim);
+  }
+}
+
+.actionItemCreateXRay {
+  @include background-properties-with-theme-white-color($image-CS-glasses);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-glasses);
+  }
+}
+
+.actionItemGridView {
+ @include background-properties-with-theme-white-color($icons8-CS-Grid);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($icons8-CS-Grid);
+  }
+
+  &:hover {
+    @include background-properties-with-theme-white-color($icons8-CS-Grid);
+  }
+}
+
+.actionItemTileView {
+  @include background-properties-with-theme-white-color($image-CS-MediumIcons);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-MediumIcons);
+  }
+
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-MediumIcons);
+  }
+}
+
+.actionItemListView {
+  @include background-properties-with-theme-white-color($image-CS-Todo-List-Filled-30);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Todo-List-Filled-30);
+  }
+
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Todo-List-Filled-30);
+  }
+}
+
+.actionItemTree {
+  @include background-properties-with-theme-white-color($image-CS-Tree-Structure-Black-32);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Tree-Structure-Black-32);
+  }
+
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Tree-Structure-Black-32);
+  }
+}
+
+.actionItemFormView {
+  background-image: url($image-CS-Form-30White);
+
+  &.selected {
+    background-image: url($image-CS-Form-30White);
+  }
+
+  &:hover {
+    background-image: url($image-CS-Form-30White);
+  }
+}
+
+.actionItemToggleRightPanel {
+  @include background-properties-with-theme-white-color($image-CS-Menu-2-Filled-50);
+
+  &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Menu-2-Filled-50);
+  }
+
+  &:hover {
+    @include background-properties-with-theme-white-color($image-CS-Menu-2-Filled-50);
+  }
+}
+
+.actionItemBranchOff {
+  @include background-properties-with-theme-white-color($image-CS-Tree-Structure-Black-32);
+  &:hover, &.selected {
+    @include background-properties-with-theme-white-color($image-CS-Tree-Structure-Black-32);
+  }
+}
+
+.actionItemSaveAs {
+  background-image: url($image-CS-Save-as-Filled-white-32);
+  &:hover, &.selected {
+    background-image: url($image-CS-Save-as-Filled-white-32);
+  }
+}
+
+.actionItemStaticTranslation{
+  background-image: url($image-CS-subtitles-50);
+  opacity: 0.7;
+ &.selected {
+   opacity: 1;
+ }
+}
+
+.actionItemProperties{
+  background-image: url($image-combi-ticket-50);
+  opacity: 0.7;
+}
+
+.actionItemPropertyGroups{
+  background-image: url($image-CS-windows-defragmenter-50);
+  opacity: 0.7;
+}
+
+.actionItemThemeConfiguration{
+  background-image: url($image-CS-Theme-Change-Filled-64);
+  opacity: 0.7;
+  &.selected {
+   opacity: 1;
+  }
+}
+
+.actionItemViewConfiguration{
+  background-image: url($image-CS-View-Configuration);
+  opacity: 0.7;
+  &.selected {
+   opacity: 1;
+  }
+}
+
+.actionItemVariantConfiguration{
+  @include background-properties($image-CS-Variant-Configuration, 14px);
+  opacity: 0.7;
+  &.selected {
+   opacity: 1;
+  }
+}
+
+.actionItemDownloadTracker{
+  background-image: url($image-CS-download-tracker);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemPdfReactorServer{
+  background-image: url($image-CS-pdf-reactor-configuration);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemGridEditView {
+  background-image: url($image-CS-grid-edit-view-black);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.actionItemAuditLog {
+  background-image: url($image-CS-audit-log);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+  .actionItemIconLibrary {
+    background-image: url($image-CS-icon-library);
+    opacity: 0.7;
+    &.selected {
+      opacity: 1;
+    }
+  }
+
+  .actionIconUpload
+  {
+    @include background-properties-with-theme-white-color($image-CS-Upload-Black);
+    &:hover {
+      @include background-properties-with-theme-white-color($image-CS-Upload-Black);
+    }
+  }
+
+
+.actionItemIconLibrary {
+  background-image: url($image-CS-icon-library);
+  opacity: 0.7;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+
+.actionItemAdministrationSummary {
+  @include background-properties($image-CS-administration-summary);
+  opacity: 0.8;
+  &.selected {
+    opacity: 1;
+  }
+}
+
+

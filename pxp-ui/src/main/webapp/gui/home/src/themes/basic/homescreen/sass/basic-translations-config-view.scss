@@ -1,0 +1,13 @@
+.configTranslationsTabViewContainer {
+  height:100%;
+}
+
+.translationsGridView {
+  height: 100%;
+
+  .customTextField {
+    &.isDisabled {
+      margin-top: 0px;
+    }
+  }
+}

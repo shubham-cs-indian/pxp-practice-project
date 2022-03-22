@@ -1,0 +1,428 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.eventsViewModalDialog {
+  height: 500px;
+
+  &>div {
+    height: 100%;
+
+    .eventsViewModalDialogBody {
+      height: 100%;
+
+      .contentEventsView {
+        height: 100%;
+
+        .eventsBody {
+          height: calc(100% - 46px);
+        }
+      }
+    }
+  }
+}
+
+
+.contentEventsViewContainer {
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  height: 500px;
+  position: relative;
+
+  .contentEventsView {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    background: #fff;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    float: left;
+    min-height: 250px;
+    padding-bottom: 11px;
+    margin: 2px;
+
+    .taskListViewContainer {
+      width: 100%;
+      height: 100%;
+    }
+
+    .eventsHeader {
+      height: 30px;
+      border-bottom: 1px solid #ccc;
+      background-color: #666;
+
+      .eventsTitle {
+        font-size: 15px;
+        display: inline-block;
+        padding: 4px 0;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+
+      .eventsButtonToolBar {
+        .eventButtonToolbarContainer {
+          .eventsButton {
+            width: 15px;
+            height: 15px;
+            margin: 7px 0 7px 4px;
+            background-size: cover;
+            float: left;
+            cursor: pointer;
+
+            &.selectAllEvents {
+              @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+
+              &.checked {
+                @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+              }
+            }
+
+            &.deleteAllEvents {
+              @include background-properties-with-theme-white-color($image-CS-Cross);
+            }
+
+            &.noShow {
+              opacity: .4;
+              cursor: default;
+            }
+          }
+        }
+      }
+
+      .closeEventsIcon {
+        background-image: url($image-CS-Cross);
+        width: 18px;
+        height: 18px;
+        background-size: cover;
+        float: right;
+        cursor: pointer;
+      }
+    }
+
+    .eventsActionBar {
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+      padding: 6px 0;
+
+      .eventSearch {
+        padding: 4px;
+        border: 1px solid #999;
+        .eventSearchBox {
+          padding: 2px 5px;
+          width: 22.5%;
+          border: none;
+          outline: none;
+        }
+        .searchClearIcon {
+          width: 20px;
+          height: 20px;
+          background-position: 6px;
+          background-size: 16px;
+          background-repeat: no-repeat;
+          opacity: .6;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: top;
+          background-image: url($image-CS-Cross);
+        }
+      }
+
+        .eventButton {
+          color: #fff;
+          border-radius: 4px;
+          padding: 5px 10px;
+          display: inline-block;
+          float: right;
+          cursor: pointer;
+
+          &.create {
+            background-color: #428BCA;
+          }
+          &.save {
+            background-color: #CA9028;
+          }
+        }
+    }
+
+  .eventsBody {
+    min-height: 250px;
+    overflow: hidden;
+
+    .eventList {
+      width: 25%;
+      float: left;
+      min-height: 450px;
+      overflow: auto;
+      height: 100%;
+      border-right: 1px solid #ccc;
+
+        .eventItem {
+          padding: 4px 7px;
+          position: relative;
+          cursor: default;
+          min-height: 26px;
+          -webkit-touch-callout: none; !* iOS Safari *!
+          -webkit-user-select: none; !* Safari *!
+          -moz-user-select: none; !* Firefox *!
+          -ms-user-select: none; !* Internet Explorer/Edge *!
+          user-select: none;
+          !* Non-prefixed version, currently
+                                           supported by Chrome and Opera *!
+
+          &:nth-child(even) {
+            background: #FAFAFA;
+          }
+
+          &.selected {
+            background: #ddd;
+          }
+
+          &.active {
+            background: #ddd;
+          }
+
+          .selectEvent {
+            @include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+            position: absolute;
+            left: 2px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background-size: cover;
+            filter: invert(100%);
+            opacity: 0.4;
+
+            &.selected {
+              @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+            }
+          }
+
+          .eventLabel {
+            margin: 0 15px;
+          }
+
+          .deleteEvent {
+            background-image: url($image-CS-Delete-Filled-32);
+            position: absolute;
+            right: 2px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background-size: cover;
+            opacity: 0;
+          }
+
+          &:hover {
+            .deleteEvent{
+              opacity: 0.4;
+              cursor: pointer;
+            }
+          }
+
+        }
+      }
+
+    !*
+    .startAndEndDatePickerView {
+      width: 75%;
+      float: left;
+      min-height: 250px;
+      padding: 15px;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+        .eventRow {
+          margin: 7px 0;
+
+          .fieldName {
+            text-align: right;
+            width: 25%;
+            margin: 1px 15px;
+            float: left;
+          }
+
+          .field {
+            display: inline-block;
+            position: relative;
+
+            &.extraWidth{
+              width: 40%;
+            }
+
+            .eventFieldOverlay {
+              width: 100%;
+              height: 100%;
+              opacity: 0.4;
+              background-color: #fff;
+              position: absolute;
+              z-index: 2;
+            }
+
+            .eventTextField {
+              padding: 2px 3px;
+              border-radius: 2px;
+              border: 1px solid #aaa;
+            }
+
+            textarea {
+              resize: none;
+            }
+
+            .eventNumberField {
+              width: 100px;
+            }
+
+            .selectField {
+              border-radius: 2px;
+            }
+
+            .selectionToggleView {
+              padding: 0;
+            }
+
+            .fieldLabel {
+              margin-left: 5px;
+            }
+
+            .customDatePickerWrapper {
+
+              .datePickerCustom {
+                height: auto !important;
+
+                & > input {
+                  font-size: 13px !important;
+                }
+
+                .textFieldUnderLineHr {
+                  bottom: 2px !important;
+                }
+              }
+
+              .customDatePickerEmptyButton {
+                display: none;
+              }
+            }
+
+            .onOrAfterField {
+              .onOrAfterBlock {
+                clear: both;
+                margin-bottom: 6px;
+
+                & > span, & > input{
+                  float: left;
+                }
+
+                input[type="radio"], input[type="checkbox"] {
+                  margin: 4px 5px 0 0px;
+                }
+
+                .customDatePickerWrapper {
+                  width: 35%;
+                  float: right;
+
+                  .customDatePickerDisabledValue {
+                    margin-top: 4px;
+                    margin-bottom: 0;
+                  }
+                }
+
+                .onOrAfterTextField {
+                  float: left;
+                  margin-left: 10px;
+
+                  .onOrAfterNumberField {
+                    width: 100px;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+        .iconDetailRow {
+          position: absolute;
+          top: 22px;
+          right: 8px;
+          display: inline;
+          width: 120px;
+          height: 120px;
+
+          .iconControlContainer {
+            position: absolute;
+            left: -10px;
+
+            .iconChangeImage {
+              height: 20px;
+              width: 20px;
+              float: left;
+              background: url($image-CS-Upload-Black) no-repeat;
+              background-size: 15px;
+              opacity: 0.9999;
+
+              &:hover {
+                background: url($image-CS-Upload-Black) no-repeat;
+                background-size: 15px;
+              }
+            }
+          }
+
+          .iconContainer {
+            float: left;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .iconWrapper {
+              border: none;
+              vertical-align: top;
+              height: 100%;
+              width: 100%;
+
+              &.defaultImage {
+                background: url($image-CS-ImageFile) no-repeat;
+                background-size: 100%;
+                opacity: 0.4;
+              }
+
+              .icon {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+
+            .iconRemoveImage {
+              height: 15px;
+              width: 15px;
+              background: url($image-CS-Cancel-Black) no-repeat;
+              background-size: 15px;
+              opacity: 0.5;
+              position: absolute;
+              top: 0;
+              right: -10px;
+
+              &.dispN {
+                display: none;
+              }
+
+              &:hover {
+                opacity: 0.9;
+                background: url($image-CS-Cancel-Black) no-repeat;
+                background-size: 15px;
+              }
+            }
+          }
+        }
+
+      }
+    *!
+    }
+  }
+}
+*/

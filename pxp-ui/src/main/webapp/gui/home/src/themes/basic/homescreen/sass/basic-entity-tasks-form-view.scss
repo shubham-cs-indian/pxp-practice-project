@@ -1,0 +1,39 @@
+.entityTasksFormRow, .entityTasksFormLabel, .entityTasksFormValue {
+  float: left;
+}
+
+.entityTasksFormView {
+  width: 100%;
+  .entityTasksFormRow {
+    height: 40px;
+    width: 100%;
+    .entityTasksFormLabel {
+      width: 20%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 30px;
+      line-height: 25px;
+      word-break: break-all;
+      margin: 0 5% 0 0;
+    }
+    .customTextFieldViewContainer, .numberLocaleViewContainer {
+      padding-left: 5px;
+      width: calc(100% - 5px);
+    }
+
+    .entityTasksFormValue {
+      width: 75%;
+      &.showBorder {
+        border: 1px solid #eee;
+        border-radius: 5px;
+      }
+      .numberLocaleInput {
+        margin: 0px;
+      }
+      .gridYesNoPropertyView {
+        float: left;
+        padding: 0px;
+      }
+    }
+  }
+}

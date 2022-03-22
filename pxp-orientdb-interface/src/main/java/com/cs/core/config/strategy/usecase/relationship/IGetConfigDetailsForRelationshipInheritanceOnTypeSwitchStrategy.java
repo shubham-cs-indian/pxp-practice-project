@@ -1,0 +1,10 @@
+package com.cs.core.config.strategy.usecase.relationship;
+
+import com.cs.core.runtime.interactor.entity.relationshipinstance.IConfigDetailsForRelationshipInheritanceOnTypeSwitchResponseModel;
+import com.cs.core.runtime.interactor.entity.relationshipinstance.IRelationshipInheritanceOnTypeSwitchRequestModel;
+import com.cs.core.runtime.strategy.configuration.base.IRuntimeStrategy;
+
+public interface IGetConfigDetailsForRelationshipInheritanceOnTypeSwitchStrategy extends
+IRuntimeStrategy<IRelationshipInheritanceOnTypeSwitchRequestModel, IConfigDetailsForRelationshipInheritanceOnTypeSwitchResponseModel> {
+  
+}

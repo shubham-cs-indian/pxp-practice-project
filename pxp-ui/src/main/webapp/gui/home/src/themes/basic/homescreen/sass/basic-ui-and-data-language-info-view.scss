@@ -1,0 +1,227 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.uiAndDataLanguageView {
+  margin: 0 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+
+  .uiAndDataLanguageInfoContainer {
+    border: $brand-language-border;
+    border-radius: 3px;
+    display: inline-flex;
+    cursor: pointer;
+    background-color: $brand-language-bg-color;
+    border-radius: 3px;
+
+    .uiLanguageWrapper {
+
+      .uiLanguageButton {
+        margin: 2px 3px;
+        min-width: 37px;
+        display: inline-flex;
+
+        .uiLanguageImageWrapper {
+          padding: 2px;
+          display: flex;
+          align-items: center;
+          .uiLanguageImage {
+            @include background-properties($image-ui-language-filled-gray, 18px);
+            height: 14px;
+            width: 14px;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .dataLanguageWrapper {
+      //border-left: $brand-header-language-divider-line;
+      border-left-style: solid;
+      border-left-width: 1px;
+
+      .dataLanguageButton {
+        margin: 2px 3px;
+        min-width: 37px;
+        display: inline-flex;
+
+        .dataLanguageImageWrapper {
+          display: flex;
+          align-items: center;
+          padding: 2px;
+          .dataLanguageImage {
+            @include background-properties($image-dada-language-filled-gray, 17px);
+            height: 14px;
+            width: 14px;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .selectedItemIcon {
+      height: 18px;
+      width: 18px;
+      //border-radius: 50%;
+      overflow: hidden;
+      margin: 2px 3px;
+      //box-shadow: 0 0 0 1px #ddd;
+
+      .imageFitToContainer {
+        position: relative;
+      }
+
+      .selectedLanguageLabel {
+        font-size: 12px;
+        text-align: center;
+        //color: $brand-header-font-color;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.uiAndDataLanguageSelectionView {
+  overflow: hidden;
+  .searchInputFieldBar {
+    height: 30px;
+    width: 25%;
+    position: relative;
+
+    .searchIcon {
+      @include background-properties($image-CS-SearchFilled-32, 17px);
+      position: absolute;
+      height: 30px;
+      width: 20px;
+      margin-left: 5px;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .searchInput {
+      padding: 0 30px;
+      width: 100%;
+      height: 30px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      outline: none;
+
+    }
+
+    .crossIcon {
+      @include background-properties($image-CS-Cross, 13px);
+      height: 30px;
+      width: 13px;
+      position: absolute;
+      right: 5px;
+      cursor: pointer;
+      opacity: 0.5;
+      display: inline-block;
+    }
+  }
+
+  .languageList {
+    width: 100%;
+
+    .languageHeader {
+      margin: 15px 0px 10px 0px;
+      height: 18px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    .UILanguageList {
+      width: calc(50% - 10px);
+      display: inline-block;
+      float: left;
+      height: 40vh;
+      margin-bottom: 40px;
+
+      &.languageListItems {
+        width: 100%;
+      }
+    }
+
+    .DataLanguageList {
+      width: calc(50% - 10px);
+      display: inline-block;
+      float: left;
+      margin-left: 20px;
+      height: 40vh;
+      margin-bottom: 40px;
+
+      &.languageListItems {
+        width: 100%;
+      }
+
+      .languageItemsContainer {
+      }
+    }
+  }
+
+  .languageItemsContainer {
+    display: inline-block;
+    width: 98%;
+    min-width: 350px;
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    .languageItemWrapper {
+      width: 98%;
+      min-width: 335px;
+      margin-bottom: 10px;
+      border: 1px solid $color-light-4;
+      border-radius: 3px;
+      height: 35px;
+      cursor: pointer;
+
+      &.selected {
+        border: 1px solid $color-theme-accent;
+      }
+
+      .languageItem {
+        display: inline-flex;
+        margin: 7px 10px;
+        width: calc(100% - 20px);
+        //add width
+
+        .selectedItemIcon {
+          height: 18px;
+          width: 18px;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: 0 0 0 1px $color-light-4;
+
+          .imageFitToContainer {
+            position: relative;
+          }
+        }
+
+        .defaultIcon {
+          background: url($image-CS-language) no-repeat;
+          background-size: 100%;
+          opacity: 0.5;
+          border: none;
+          vertical-align: top;
+          height: 18px;
+          width: 18px;
+          border-radius: 50%;
+          box-shadow: 0 0 0 1px #ddd;
+        }
+
+        .languageData {
+          margin-left: 10px;
+          width: calc(100% - 48px);
+          @include ellipsis();
+        }
+      }
+    }
+
+    .nothingFoundViewContainer {
+      position: absolute;
+    }
+  }
+
+}

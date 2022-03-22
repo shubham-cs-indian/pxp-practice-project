@@ -1,0 +1,21 @@
+[
+	{
+		"type": "com.cs.core.config.interactor.entity.klass.Market",
+		"id": "market",
+		"code": "market",
+		"isStandard": true,
+		"parent": {
+			"type": "com.cs.core.config.interactor.entity.klass.Market",
+			"id": "-1"
+		},
+		"sections": [
+			{
+				"propertyCollectionId": "targetGeneralInformationPropertyCollection"
+			}
+		],
+		"isAbstract": true,
+		"isDefaultChild": true,
+		"isNature": false,
+		"classifierIID": 33
+	}
+]	

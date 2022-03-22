@@ -1,0 +1,23 @@
+@import "./theme-selector";
+
+$base-path: "../themes/basic/login/images/";
+
+//--------- Login Screen Logo ------------------------------------------------------------------------------------------
+$brand-logo-login-screen: '../images/contentserv-logo.svg' !default;
+$brand-logo-login-screen-height: 100px !default;
+$brand-logo-login-screen-width: 320px !default;
+$brand-logo-login-screen-background-size: 240px !default;
+$top-logo-login-screen-margin: 80px !default;
+$left-logo-login-screen-margin: 80px !default;
+
+//--------- Flag Icons ------------------------------------------------------------------------------------------------
+$image-flag-france: '../images/icons8-france.svg';
+$image-flag-germany: '../images/icons8-germany.svg';
+$image-flag-uk: '../images/icons8-great-britain.svg';
+$image-flag-usa: '../images/icons8-usa.svg';
+$image-flag-spain: '../images/icons8-spain.svg';
+
+//--------- MXM Icons ------------------------------------------------------------------------------------------------
+$image-spiffygif-68x68: '../images/spiffygif_68x68.gif';
+$image-CS-Edit-32: '../images/icons8-Edit.svg';
+$image-CS-Cross: '../images/icons8-Cross.svg';

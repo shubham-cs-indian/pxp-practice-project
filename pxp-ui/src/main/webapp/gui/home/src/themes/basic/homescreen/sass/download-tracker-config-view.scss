@@ -1,0 +1,12 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+
+.downloadTrackerConfigViewWrapper {
+  height: 100%;
+   .gridView {
+      padding: unset;
+      height: inherit;
+    }
+}
+

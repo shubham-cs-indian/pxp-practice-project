@@ -1,0 +1,11 @@
+[{
+		"cse": "[@Create @line='2' nameattribute $iid=200 $id=nameattribute]",
+		"isStandard": true,
+		"isTranslatable": true,
+		"type": "com.cs.config.interactor.entity.concrete.attribute.standard.NameAttribute"
+	}, {
+		"cse": "[@Create @line='7' createdbyattribute $iid=201 $id=createdbyattribute]",
+		"isStandard": true,
+		"isTranslatable": false,
+		"type": "com.cs.config.interactor.entity.concrete.attribute.standard.CreatedByAttribute"
+	}]

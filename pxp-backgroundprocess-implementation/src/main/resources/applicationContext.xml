@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/tx 
+            http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+            http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/aop 
+            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+            http://www.springframework.org/schema/data/jpa
+            http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+            http://www.springframework.org/schema/util 
+            http://www.springframework.org/schema/util/spring-util-2.5.xsd
+            http://www.springframework.org/schema/task 
+            http://www.springframework.org/schema/task/spring-task-3.0.xsd 
+            ">
+
+
+	<context:component-scan
+		base-package="
+		com.cs.core.bgprocess.config,
+		com.cs.bds.runtime.usecase.relationshipInheritance, 
+		com.cs.bds.config.usecase.taxonomy,
+		com.cs.core.config.*, 
+		com.cs.core.runtime.*,
+		com.cs.core.runtime.restore.RollbackAndRestoreUtils,
+		com.cs.core.services,
+		com.cs.core.util,
+		com.cs.core.strategy.*,
+		com.cs.pim.runtime.strategy.usecase.articleinstance,
+		com.cs.pim.runtime.articleinstance,
+		com.cs.di.workflow.*, 
+		com.cs.workflow.camunda, com.cs.workflow.base, 
+		com.cs.di.config.strategy.usecase.*,
+		com.cs.dam.config.strategy.*,
+		com.cs.dam.runtime.*,
+		com.cs.pim.runtime.*,
+		com.cs.di.config.*,
+		com.cs.di.jms" />
+
+	<context:annotation-config />
+
+	<context:property-placeholder
+			location="file:#{systemEnvironment['PXP_BGP_HOME']}/bgprocess-props/bgprocess.properties, ${AUDIT_LOG_PROPERTIES}, ${DATABASE_PROPERTIES}, ${DATA_INTEGRATION_PROPERTIES}, ${PXP_LOG_PROPERTIES}" />
+	<bean id="assetStoreProtocol" class="java.lang.String">
+		<constructor-arg value="${asset.protocol}" />
+	</bean>
+
+	<bean id="assetStoreHost" class="java.lang.String">
+		<constructor-arg value="${asset.host}" />
+	</bean>
+
+	<bean id="assetStorePort" class="java.lang.String">
+		<constructor-arg value="${asset.port}" />
+	</bean>
+
+	<bean id="assetStoreURL" class="java.lang.String">
+		<constructor-arg
+			value="#{assetStoreProtocol + '://' + assetStoreHost + ':' + assetStorePort + '/'}" />
+	</bean>
+
+	<bean id="assetServerAuthURL" class="java.lang.String">
+		<constructor-arg
+			value="#{assetStoreURL + 'auth/v1.0/'}" />
+	</bean>
+
+	<util:map id="assetUploadStatusMap" scope="singleton"
+		map-class="java.util.HashMap">
+	</util:map>
+
+
+	<util:map id="assetStoreAuthenticationMap">
+		<entry key="account" value="${asset.account}" />
+		<entry key="user" value="${asset.user}" />
+		<entry key="passkey" value="${asset.passkey}" />
+	</util:map>
+
+	<bean id="assetServerDetails"
+		class="com.cs.core.config.interactor.model.asset.AssetServerDetailsModel" />
+
+
+	<bean id="assetFilesPath" class="java.lang.String">
+		<constructor-arg value="" />
+	</bean>
+
+	<bean id="defaultUserPassword" class="java.lang.String">
+		<constructor-arg value="${defaultUserPassword}" />
+	</bean>
+
+	<!-- orientdb config starts -->
+
+	<bean id="orientDBHost" class="java.lang.String">
+		<constructor-arg value="${orientdb.host}" />
+	</bean>
+
+	<bean id="orientDBPort" class="java.lang.String">
+		<constructor-arg value="${orientdb.port}" />
+	</bean>
+
+	<bean id="orientDBUser" class="java.lang.String">
+		<constructor-arg value="${orientdb.user}" />
+	</bean>
+
+	<bean id="orientDBPassword" class="java.lang.String">
+		<constructor-arg value="${orientdb.password}" />
+	</bean>
+
+	<bean id="orientDBdatabase" class="java.lang.String">
+		<constructor-arg value="${orientdb.database}" />
+	</bean>
+	<!-- orientdb ends -->
+
+	
+
+	<bean id="orientLoadBalancerLog" class="java.lang.String">
+		<constructor-arg value="/opt/cs/LoadBal/orient.log" />
+	</bean>
+
+
+	<bean id="executeWithLoadBalancer" class="java.lang.Boolean">
+		<constructor-arg value="false" />
+	</bean>
+
+	<util:map id="languageContentLabelMap">
+		<entry key="de_DE" value="Neues" />
+		<entry key="en_US" value="New" />
+		<entry key="en_UK" value="New" />
+		<entry key="fr_FR" value="Nouveau" />
+		<entry key="es_ES" value="Nuevo" />
+	</util:map>
+
+	<util:list id="cookies" value-type="java.lang.String">
+	</util:list>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+		<property name="targetDataSource">
+			<bean
+				class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+				<property name="driverClass" value="${camunda.driverclass}" />
+				<property name="url" value="${camunda.dburl}" />
+				<property name="username" value="${camunda.username}" />
+				<property name="password" value="${camunda.password}" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="processEngineConfiguration"
+		class="com.cs.core.config.strategy.cammunda.broadcast.CamundaCustomSpringProcessEngineConfiguration">
+		<property name="processEngineName" value="default" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="databaseSchemaUpdate" value="true" />
+		<property name="jdbcBatchProcessing" value="true" />
+		<property name="jobExecutorActivate" value="false" />
+		<property name="createIncidentOnFailedJobEnabled"
+			value="false" />
+		<property name="deploymentResources" value="classpath*:*.*mn" />
+		<property name="defaultNumberOfRetries"
+			value="${camunda.defaultNumberOfRetries}" />
+	</bean>
+
+	<bean id="processEngine"
+		class="org.camunda.bpm.engine.spring.ProcessEngineFactoryBean">
+		<property name="processEngineConfiguration"
+			ref="processEngineConfiguration" />
+	</bean>
+
+	<bean id="repositoryService" factory-bean="processEngine"
+	factory-method="getRepositoryService" />
+	
+	<bean id="runtimeService" factory-bean="processEngine"
+		factory-method="getRuntimeService" />
+		
+	<bean id="taskService" factory-bean="processEngine"
+		factory-method="getTaskService" />
+		
+	<bean id="historyService" factory-bean="processEngine"
+		factory-method="getHistoryService" />
+		
+	<bean id="managementService" factory-bean="processEngine"
+		factory-method="getManagementService" />
+		
+	<bean id="formService" factory-bean="processEngine"
+		factory-method="getFormService" />
+
+	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="maxPoolSize" value="12" />
+		<property name="WaitForTasksToCompleteOnShutdown"
+			value="true" />
+	</bean>
+
+
+	<bean id="articleKlassCounter" class="java.lang.Long">
+		<constructor-arg value="1" />
+	</bean>
+
+	<!-- JMS Connection Properties -->
+
+	<bean id="jndiContextFactory" class="java.lang.String">
+		<constructor-arg
+			value="org.apache.activemq.jndi.ActiveMQInitialContextFactory" />
+	</bean>
+
+	<bean id="connectionFactoryName" class="java.lang.String">
+		<constructor-arg value="QueueConnectionFactory" />
+	</bean>
+
+	<bean id="jmsUsername" class="java.lang.String">
+		<constructor-arg value="" />
+	</bean>
+
+	<bean id="jmsPassword" class="java.lang.String">
+		<constructor-arg value="" />
+	</bean>
+
+	<bean id="jmsConcurrency" class="java.lang.String">
+		<constructor-arg value="1-1" />
+	</bean>
+
+	<!-- For module specific exceptions -->
+
+	<bean id="articleException"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:articleException.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="assetException"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:assetException.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="marketException"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:marketException.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="supplierException"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:supplierException.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="textAssetException"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:textAssetException.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exportFolderPath" class="java.lang.String">
+		<constructor-arg value="ExportedFiles" />
+	</bean>
+	<bean id="hotFolderPath" class="java.lang.String">
+		<constructor-arg value="UploadSourceFiles" />
+	</bean>
+
+	<bean id="importExportLogFolderPath" class="java.lang.String">
+		<constructor-arg value="LogSourceFiles" />
+	</bean>
+
+	<bean id="exportFileName" class="java.lang.String">
+		<constructor-arg value="ExportedFile" />
+	</bean>
+
+	<!-- postgress config starts -->
+
+	<bean id="postgresHost" class="java.lang.String">
+		<constructor-arg value="${postgres.host}" />
+	</bean>
+
+	<bean id="postgresPort" class="java.lang.String">
+		<constructor-arg value="${postgres.port}" />
+	</bean>
+
+	<bean id="postgresdatabase" class="java.lang.String">
+		<constructor-arg value="${postgres.database}" />
+	</bean>
+
+	<bean id="postgresuser" class="java.lang.String">
+		<constructor-arg value="${postgres.user}" />
+	</bean>
+
+	<bean id="postgrespassword" class="java.lang.String">
+		<constructor-arg value="${postgres.password}" />
+	</bean>
+
+	<!-- postgress ends -->
+
+	<bean id="defaultLanguage" class="java.lang.String">
+		<constructor-arg value="en_US" />
+	</bean>
+
+	<!-- Velocity Template Engine -->
+
+	<bean id="velocityEngine"
+		class="org.apache.velocity.app.VelocityEngine">
+		<constructor-arg ref="velocityProperties"></constructor-arg>
+	</bean>
+
+	<bean id="velocityProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:velocityTemplate.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+ 	<bean id="postgresDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="${postgre.driver.class.name}" />
+        <property name="url" value="${postgre.rdbms.url}" />
+        <property name="username" value="${postgre.user.name}" />
+        <property name="password" value="${postgre.password}" />
+        <property name="initialSize" value="${postgre.initial.connections.size}" />
+        <property name="minIdle" value="${postgre.initial.connections.size}" />
+        <property name="maxIdle" value="${postgre.max.active.connections}" />
+        <property name="maxOpenPreparedStatements" value="${postgre.max.open.prepared.statements}" />
+        <property name="defaultAutoCommit" value="false" />
+  	</bean>
+
+  	<bean id="postgresTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    	<property name="dataSource" ref="postgresDataSource" />
+  	</bean>
+  	
+  	<bean id="driver" class="com.cs.core.rdbms.postgres.RDBMSDriver"/>
+  	<bean id="bgpApplication" class="com.cs.core.bgprocess.BGProcessApplication"/>
+  	<bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+  
+</beans>

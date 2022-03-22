@@ -1,0 +1,54 @@
+/* R20
+.classConfigImpactViewContainer {
+  min-height: 500px;
+
+  .impactedClassAttributeContainer {
+    width: calc(100% - 200px);
+    min-height: 500px;
+    float: left;
+    padding: 0 5px 5px 5px;
+  }
+
+  .impactedAttributeLabel {
+    height: 30px;
+    padding: 8px;
+    background-color: darkturquoise;
+  }
+
+  .impactedAttributeName {
+    padding: 5px;
+  }
+
+  .impactedAttributeList {
+    padding-bottom: 6px;
+
+    .impactedAttributeRow {
+      width: 100%;
+      overflow: hidden;
+
+      .impactedAttributeCheckbox {
+        width: calc(100% - 200px);
+        float: left;
+      }
+
+      .impactedAttributeExtendedName {
+        float: left;
+        width: 200px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .impactedClassListContainer {
+    width: 200px;
+    min-height: 500px;
+    float: left;
+    padding-right: 5px;
+    border-right: 1px solid #ECECEC;
+  }
+  .noItems {
+    color: #747474;
+    font-style: italic;
+    padding: 8px;
+  }
+}*/

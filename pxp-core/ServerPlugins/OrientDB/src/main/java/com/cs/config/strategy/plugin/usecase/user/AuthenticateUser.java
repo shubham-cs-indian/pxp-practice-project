@@ -1,0 +1,53 @@
+package com.cs.config.strategy.plugin.usecase.user;
+
+import com.cs.config.strategy.plugin.usecase.role.util.RoleUtils;
+import com.cs.config.strategy.plugin.usecase.util.UtilClass;
+import com.cs.constants.CommonConstants;
+import com.cs.core.runtime.interactor.constants.application.VertexLabelConstants;
+import com.cs.strategy.plugin.base.AbstractOrientPlugin;
+import com.orientechnologies.orient.core.sql.OCommandSQL;
+import com.orientechnologies.orient.server.config.OServerCommandConfiguration;
+import com.tinkerpop.blueprints.Vertex;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class AuthenticateUser extends AbstractOrientPlugin {
+  
+  public AuthenticateUser(final OServerCommandConfiguration iConfiguration)
+  {
+    super(iConfiguration);
+  }
+  
+  @Override
+  public Object execute(Map<String, Object> requestMap) throws Exception
+  {
+    String userName = null;
+    HashMap<String, Object> returnMap = null;
+    userName = (String) requestMap.get("username");
+    
+    Iterable<Vertex> resultIterable = UtilClass.getGraph()
+        .command(new OCommandSQL("select from " + VertexLabelConstants.ENTITY_TYPE_USER + " where "
+            + CommonConstants.USER_NAME_PROPERTY + " = '" + userName + "'"))
+        .execute();
+    Iterator<Vertex> iterator = resultIterable.iterator();
+    
+    Vertex userNode = null;
+    while (iterator.hasNext()) {
+      userNode = iterator.next();
+    }
+    if (userNode != null) {
+      RoleUtils.getRoleFromUser(userNode);
+      returnMap = new HashMap<String, Object>();
+      returnMap.putAll(UtilClass.getMapFromNode(userNode));
+    }
+    
+    return returnMap;
+  }
+  
+  @Override
+  public String[] getNames()
+  {
+    return new String[] { "POST|AuthenticateUser/*" };
+  }
+}

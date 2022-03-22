@@ -1,0 +1,16 @@
+[
+  {
+    "id": "-1",
+    "type": "internal",
+    "isStandard": true,
+    "roleIds": [
+      "accountablerole",
+      "consultedrole",
+      "informedrole",
+      "verifyrole",
+      "signoffrole",
+      "responsiblerole",
+      "adminrole"
+    ]
+  }
+]

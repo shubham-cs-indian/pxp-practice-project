@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>333</y>
+      <w>207</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;intterface&gt;&gt;
+IUserSessionDTO
+--
+logoutType
+logoutTime
+remarks
+--
+getUserDTO: IUserDTO()
+getSessionDTO: ISessionDTO()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>801</x>
+      <y>549</y>
+      <w>198</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;intterface&gt;&gt;
+ObjectCatalogDTO
+--
+localeID
+catalogID
+catalogName
+catalogType
+objectID
+objectName
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>153</y>
+      <w>702</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IObjectTrackingDAO
+--
+registerChange( description, sessionID, LanguageID, regionID, catalogueID, objectID, propertyIDs[]=null)  {asynchronous}
+getLastChangesByUser( userID): ICursor&lt;ObjectTracking&gt;
+getLastChangesByObject( objectID, catalogID): ICursor&lt;ObjectTracking&gt; 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>9</x>
+      <y>0</y>
+      <w>198</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>RDBMS Component Tracking
+Batch 1 target
+March-12 2019
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>432</y>
+      <w>252</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>IObjectTrackingDTO
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>279</y>
+      <w>342</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Parameter&gt;&gt;
+TrackingFilter
+{Singleton}
+--
+all=false
+creations= true {constant}
+deletions= true {constant}
+classification= true
+name= true
+criticalPropertyIDs[]
+--
+{defines what operations and property changes to track}
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>243</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>549</y>
+      <w>486</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ISessionWarningDTO
+--
+warningNo
+warningType
+warningMessage
+--
+{DuplicateSession: when another session already exists for the user}
+{AccessConflict: when two concurrent saves on the same data have been detected}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>99</y>
+      <w>486</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IUserSessionDAO
+--
+openSession(userID, userName, sessionID): IUserSessionDTO
+closeSession(sessionID, logoutType, remarks)
+shutdownSessions()
+getCurrentUserSessions( userID): ICursor&lt;IUserSessionDTO&gt;
+getWarningsByUser(userID): ICursor&lt;ISessionWarningDTO&gt;
+clearWarnings( ISessionWarningDTO[])
+newUserDTO( json): IUserDTO
+newUserSessionDTO( json): IUserSessionDTO
+openLocaleCatalog( userSessionDTO, localeID, catalogID): ILocaleCatalogDAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>468</y>
+      <w>99</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;contains&gt;&gt;</panel_attributes>
+    <additional_attributes>40.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1044</x>
+      <y>495</y>
+      <w>414</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RDBMSException
+--
+{InvalidSession: when the session is already closed}
+{CursorError: when cursor resources are overflown}
+{RDBMSError: when the RDBMS returns an error}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>558</y>
+      <w>153</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;intterface&gt;&gt;
+IPropertyDTO
+--
+propertyID
+versionnable
+propertyName
+Type
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>342</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>IUserDTO
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>342</y>
+      <w>207</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;contains&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>342</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;contains&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>468</y>
+      <w>81</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+contains
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;100.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>351</x>
+      <y>9</y>
+      <w>468</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IRDBMSDriver
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>45</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;factory&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>45</y>
+      <w>81</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;factory&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>396</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>ISessionDTO
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>396</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;contains&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>423</y>
+      <w>90</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;contains&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>81</x>
+      <y>270</y>
+      <w>81</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;factory&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>297</y>
+      <w>135</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;intterface&gt;&gt;
+ITrackingDTO
+--
+when
+event</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>639</x>
+      <y>369</y>
+      <w>90</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;contains&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1035</x>
+      <y>0</y>
+      <w>225</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IRootDTO
+--
+fromJSON(String)
+toJSONBuffer: StringBuffer
+toJSON(): String
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1044</x>
+      <y>90</y>
+      <w>207</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>{JSON static duplex translation}
+{root for any DTO}
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>549</x>
+      <y>666</y>
+      <w>99</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>{tag or attribute}
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,6 @@
+[
+"bgp 1000002 started 2020-05-27T15:27:05",
+"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"PROPERTY\"],\"PROPERTY\":[\"REF1000:REFERENCE\"],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}","Reference codes=[REF1000]",
+{"tab":"Tab100097","csid":"[REF1000 $iid=1000002 $type=REFERENCE]","$isstandard":false,"label":"test","Jside1":{"$cardinality":"Many","$classcode":"single_article","label":"Single Article","type":"PROJECT_KLASS_TYPE"},"Jside2":{"$cardinality":"Many","$classcode":"document_asset","label":"Document","type":"ASSET_KLASS_TYPE"},"$isnature":false},
+"bgp 1000002 ended 2020-05-27T15:27:05"
+]

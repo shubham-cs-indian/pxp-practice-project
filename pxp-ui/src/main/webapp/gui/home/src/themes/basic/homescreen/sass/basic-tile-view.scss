@@ -1,0 +1,88 @@
+/*
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+!*
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}0
+*!
+
+.tileViewContainer {
+  border: 1px solid #BFBEBE;
+  height: 55px;
+  margin: 0 5px 5px 5px;
+  width: 190px;
+  float: left;
+  border-radius: 2px;
+  background: #F9F9F9;
+  position: relative;
+
+  .tileDeleteIcon {
+    background: transparent url($image-CS-Cancel-Black);
+    border: 0;
+    height: 20px;
+    width: 20px;
+    float: right;
+    position: absolute;
+    top: -8px;
+    opacity: 0;
+    right: -8px;
+  }
+
+  &:hover .tileDeleteIcon {
+    opacity: .8;
+    @include transition(all .8s);
+  }
+
+  .tileImageContainer {
+    float: left;
+    margin: 2px;
+    height: 45px;
+    width: 50px;
+    text-align: center;
+    position: relative;
+    .tileImage {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .tileDetailsContainer {
+    float: left;
+    width: 128px;
+    background: #F1F1F1;
+    margin: 1px 1px 0 3px;
+    .tileName {
+      !*background: #E6E6E6;*!
+      padding: 0 5px 0 5px;
+      line-height: 18px;
+      font-weight: bold;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .tileDetails {
+      margin-top: 3px;
+      height: 29px;
+      padding: 0 5px 0 5px;
+    }
+
+  }
+}
+
+.selectedTile {
+  box-shadow: 0px 0px 1px 1px #4F60F9;
+  border-color: #4F60F9;
+}
+*/

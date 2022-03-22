@@ -1,0 +1,581 @@
+//@import "./../../../../styleguide/style-guide";
+//@import "./../../../../styleguide/mixin";
+//.contentFilterItem {
+//  box-shadow: 0px 1px 0px 0px #4A4A4A inset, 0px -1px 0px 0px #383838 inset;
+//  padding: 5px 0 0 0;
+//
+//  .innerFilterViewWrapper {
+//
+//    .innerFilterViewHeader {
+//      overflow: hidden;
+//      margin: 0px 5px;
+//
+//      .innerFilterViewHeaderIcon {
+//        height: 100%;
+//        width: 40px;
+//        background-repeat: no-repeat;
+//        background-position: 9px;
+//        background-size: 20px;
+//        float: left;
+//        opacity: .8;
+//      }
+//
+//      .innerFilterViewHeaderText {
+//        color: #ddd;
+//        font-size: 11px;
+//      }
+//    }
+//
+//    .innerFilterViewBody {
+//
+//      .innerFilterSearchContainer {
+//
+//        .contentFilterMSSContainer {
+//          position: relative;
+//
+//          .searchBarView {
+//            width: calc(100% - 10px);
+//            margin: 0 auto;
+//            min-height: 40px;
+//
+//            .searchBarContainer {
+//              border-bottom: none;
+//              padding-left: 28px;
+//              background-color: #f0f0f0;
+//              border-radius: 2px;
+//              box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+//              padding-bottom: 1px;
+//
+//              .multiSearchInputBox {
+//                color: #555;
+//                font-size: 13px;
+//                //font-weight: 500;
+//              }
+//
+//              .multiSelectNothingSelected {
+//                margin-top: 0;
+//                padding: 0;
+//                margin-bottom: 0;
+//                line-height: 27px;
+//                font-size: 11px;
+//              }
+//
+//              .selectedItems{
+//                max-width: 90%;
+//              }
+//            }
+//
+//            .dropDownListView {
+//              box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+//              border: none;
+//
+//              .dropDownNodeContainer {
+//                font-size: 13px;
+//                //font-weight: 500;
+//                color: #555;
+//                padding-left: 30px;
+//                overflow: hidden;
+//                text-overflow: ellipsis;
+//                white-space: nowrap;
+//              }
+//            }
+//          }
+//
+//          .contentFilterMSSIcon {
+//            height: 20px;
+//            width: 20px;
+//            background-repeat: no-repeat;
+//            background-position: 2px;
+//            background-size: 16px;
+//            background-image: url($image-CS-SearchFilled-32);
+//            position: absolute;
+//            left: 10px;
+//            top: 8px;
+//            z-index: 2;
+//          }
+//        }
+//      }
+//
+//      .innerFilterAttributeViewsContainer {
+//
+//      }
+//    }
+//  }
+//
+//  .attributeFilterViewWrapper {
+//
+//    .attributeFilterViewHeader {
+//
+//      .attributeFilterViewHeaderIcon {
+//        background-image: url($image-CS-ViewDetails-50White);
+//      }
+//
+//      .attributeFilterViewHeaderText {
+//
+//      }
+//    }
+//
+//    .attributeFilterViewBody {
+//
+//    }
+//  }
+//
+//  .userFilterViewWrapper {
+//
+//    .userFilterViewHeader {
+//
+//      .userFilterViewHeaderIcon {
+//        background-image: url($image-CS-ViewDetails-50White);
+//      }
+//
+//      .userFilterViewHeaderText {
+//
+//      }
+//    }
+//
+//    .userFilterViewBody {
+//
+//    }
+//  }
+//
+//  .tagFilterViewWrapper {
+//
+//    .tagFilterViewHeader {
+//
+//      .tagFilterViewHeaderIcon {
+//        @include background-properties-with-theme-white-color($image-CS-PriceTag-32);
+//      }
+//
+//      .tagFilterViewHeaderText {
+//
+//      }
+//    }
+//
+//    .tagFilterViewBody {
+//
+//      .range-slider {
+//
+//        .sliderHandleWrapper {
+//          position: absolute;
+//          z-index: 4;
+//          width: 13px;
+//          margin-left: 5px;
+//
+//          .sliderHandle {
+//            height: 13px;
+//            z-index: 2;
+//            width: 13px;
+//            cursor: inherit;
+//            border-radius: 50%;
+//            background-color: #30a9a0;
+//            box-shadow: 0px 0px 0px 1px #30a9a0;
+//
+//            &:hover {
+//              box-shadow: 0px 0px 0px 1px #237B75;
+//            }
+//          }
+//
+//          .sliderHandleBase {
+//            width: 25px;
+//            height: 20px;
+//            background-color: #eee;
+//            font-size: 11px;
+//            text-align: center;
+//            margin-left: -4px;
+//            line-height: 20px;
+//            display: inline-block;
+//            position: absolute;
+//            border-radius: 4px;
+//            top: -26px;
+//          }
+//          .sliderHandleBase:before {
+//            border-top: 5px solid #eee;
+//            border-left: 5px solid transparent;
+//            border-right: 5px solid transparent;
+//            content: "";
+//            height: 0;
+//            left: 7px;
+//            position: absolute;
+//            bottom: -4px;
+//            width: 0;
+//          }
+//        }
+//
+//        .doubleSliderHighlight {
+//          background-color: #33bbb1;
+//          position: absolute;
+//          top: 5px;
+//          height: 5px;
+//        }
+//      }
+//    }
+//  }
+//
+//  .attributeWrapper {
+//    margin: 0 5px 5px 5px;
+//    background-color: #FAFAFA;
+//    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+//    border-radius: 2px;
+//
+//    .attributeHeader {
+//      overflow: hidden;
+//
+//      .attributeExpandCollapse {
+//        height: 30px;
+//        width: 30px;
+//        background-repeat: no-repeat;
+//        background-position: 8px;
+//        background-size: 12px;
+//        float: left;
+//
+//        &.collapsed {
+//          background-image: url($image-CS-Collapse-Arrow-32);
+//        }
+//
+//        &.expanded {
+//          background-image: url($image-CS-expand-arrow-icon);
+//        }
+//      }
+//
+//      .attributeText {
+//        height: 30px;
+//        width: calc(100% - 90px);
+//        float: left;
+//        line-height: 30px;
+//        color: #555;
+//        font-size: 12px;
+//        //font-weight: 500;
+//        overflow: hidden;
+//        text-overflow: ellipsis;
+//        white-space: nowrap;
+//      }
+//
+//      .attributeAddCondition {
+//        width: 30px;
+//        height: 30px;
+//        float: right;
+//        background-repeat: no-repeat;
+//        background-position: 50%;
+//        background-size: 12px;
+//        background-image: url($image-CS-PlusStruct-32);
+//        cursor: pointer;
+//      }
+//
+//      .attributeDelete {
+//        height: 30px;
+//        width: 30px;
+//        float: right;
+//        background-repeat: no-repeat;
+//        background-position: 8px;
+//        background-image: url($image-CS-Cross);
+//        cursor: pointer;
+//        background-size: 17px;
+//        opacity: .6;
+//      }
+//    }
+//
+//    .attributeBody {
+//      overflow: hidden;
+//
+//      .attributeValueWrapper {
+//        margin-bottom: 5px;
+//        position: relative;
+//
+//        .attributeValueWrapperHeader {
+//          color: #555;
+//          font-size: 12px;
+//          //font-weight: 500;
+//          background: #f3f3f3;
+//          padding: 6px 6px 6px 15px;
+//        }
+//
+//        .attributeValueWrapperBody {
+//
+//        }
+//      }
+//
+//      &.collapsed {
+//        display: none;
+//      }
+//
+//      .attributeConditionWrapper {
+//        overflow: hidden;
+//        padding: 3px 5px 2px 15px;
+//        position: relative;
+//
+//        .attributeMultipleInput {
+//          display: inline-block;
+//          width: 100%;
+//          overflow: hidden;
+//          margin-top: 5px;
+//
+//          .attributeMultipleInputCell{
+//            width: 50%;
+//            float: left;
+//            overflow: hidden;
+//          }
+//
+//          .attributeMultipleInputLabel span{
+//            font-size: 11px;
+//          }
+//
+//          .numberLocaleViewContainer {
+//            width: 90%;
+//            margin-left: 0;
+//            float: left;
+//          }
+//        }
+//
+//        .attributeMultipleInputDate {
+//          display: inline-flex;
+//
+//          .attributeMultipleInputDateLabel{
+//            padding: 2px 5px;
+//          }
+//
+//          & *{
+//            font-size: 11px;
+//          }
+//
+//          .datePickerCustom > div {
+//            height: auto !important;
+//            div{
+//              height: 22px !important;
+//              hr{
+//                display: none;
+//              }
+//            };
+//          }
+//
+//          .customDatePickerWrapper{
+//            width: 90%;
+//          }
+//        }
+//
+//        .attributeConditionInput {
+//          width: 38%;
+//          float: left;
+//          background: transparent;
+//          border: none;
+//          border-bottom: 1px solid #aaa;
+//          color: #555;
+//          margin-left: 5%;
+//          outline: none;
+//        }
+//
+//        .attributeConditionSelect {
+//          width: 45%;
+//          float: left;
+//          margin-top: 2px;
+//
+//          select {
+//            background: transparent;
+//            color: #555;
+//            width: 100%;
+//            border: none;
+//            border-bottom: 1px solid #aaa;
+//            font-size: 11px;
+//            outline: none;
+//          }
+//        }
+//
+//        .attributeConditionUserInput {
+//          width: 40%;
+//          float: left;
+//          margin-top: 2px;
+//          margin-left: 5px;
+//
+//          select {
+//            background: transparent;
+//            color: #555;
+//            width: 100%;
+//            border: none;
+//            border-bottom: 1px solid #aaa;
+//            font-size: 11px;
+//            outline: none;
+//          }
+//        }
+//
+//        .attributeConditionDelete {
+//          height: 20px;
+//          width: 0px;
+//          position: absolute;
+//          right: 3px;
+//          top: 6px;
+//          background-repeat: no-repeat;
+//          background-position: 1px;
+//          background-size: 17px;
+//          /* border-bottom: 1px solid #aaa; */
+//          background-image: url($image-CS-Cross);
+//          cursor: pointer;
+//          opacity: .6;
+//          transition: all .2s;
+//        }
+//
+//        .customDatePickerWrapper{
+//          width: 40%;
+//          float: left;
+//          margin-left: 5%;
+//
+//          .customDatePickerEmptyButton{
+//            display: none;
+//          }
+//        }
+//
+//
+//        .filterWithMeasurementMetrics {
+//          width: 50%;
+//          float: left;
+//          margin-left: 5%;
+//          .attributeConditionInput {
+//            background: transparent;
+//            border: none;
+//            color: #555;
+//            outline: none;
+//            width: 50%;
+//            border-bottom: 1px solid #aaa;
+//          }
+//          .filterMeasurementMetricsUnit {
+//            width: 28%;
+//            height: 20px;
+//            margin-left: 5px;
+//            font-size: 10px;
+//            float: left;
+//            line-height: 26px;
+//          }
+//        }
+//
+//        .numberLocaleViewContainer{
+//          width: 40%;
+//          margin-left: 5%;
+//          float: left;
+//
+//          .numberLocaleInput{
+//            margin-top: 0;
+//            margin-bottom: 0;
+//            background: transparent;
+//            border-bottom: 1px solid #aaa;
+//          }
+//
+//          .numberLocaleDescription{
+//            display: none;
+//          }
+//        }
+//
+//        &:hover {
+//          .attributeConditionDelete {
+//            width: 20px;
+//          }
+//        }
+//      }
+//
+//      .tagsSectionHeader, .multiSelectSearchLabel {
+//        display: none;
+//      }
+//
+//      .tagsSectionBody {
+//        border-bottom: none;
+//
+//        .range-slider {
+//          margin: 25px 10px 0;
+//          width: calc(100% - 20px);
+//        }
+//
+//        .customTreeNodeWrapper {
+//          background: none;
+//          overflow: hidden;
+//          padding: 4px;
+//          background: #fff;
+//          margin: 4px 2px;
+//          border: 1px solid #eee;
+//          border-radius: 2px;
+//        }
+//
+//        .tagName.fullLengthTagName {
+//          width: 100%;
+//          margin-bottom: 6px;
+//          color: #555;
+//          font-size: 11px;
+//          line-height: 11px;
+//          background: none;
+//          margin-top: 4px;
+//        }
+//      }
+//
+//      .searchBarView .searchBarContainer .multiSearchInputBox {
+//        color: #555;
+//      }
+//
+//      svg {
+//        //fill: #eee !important;
+//      }
+//
+//      .tagValueHeaderContainer.fullLengthTagValueHeader {
+//        margin-top: 6px;
+//      }
+//    }
+//
+//    .tagBody {
+//      overflow: visible;
+//
+//      .searchBarView {
+//        padding: 5px;
+//        height: auto;
+//      }
+//    }
+//
+//    .ownersWrapper {
+//      margin: 0 5px 5px 5px;
+//      background-color: #FAFAFA;
+//      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+//      border-radius: 2px;
+//
+//      .ownersHeader {
+//        overflow: hidden;
+//      }
+//    }
+//  }
+//}
+//
+//.filterButtonContainer {
+//  text-align: center;
+//
+//  .filterButton {
+//    height: 30px;
+//    width: 42%;
+//    margin: 20px 4%;
+//    line-height: 30px;
+//    text-align: center;
+//    color: #696969;
+//    background-color: #fff;
+//    border-radius: 2px;
+//    font-size: 12px;
+//    cursor: pointer;
+//    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+//    transition: all .2s;
+//    display: inline-block;
+//
+//    &.clearButton{
+//      display: none;
+//    }
+//
+//    &:hover {
+//      background-color: #f3f3f3;
+//    }
+//  }
+//}
+//
+//.contentFilterViewWrapper {
+//  padding-bottom: 1px;
+//
+//  &.filterActive{
+//
+//    .clearButton{
+//      display: inline-block;
+//    }
+//  }
+//}
+//
+//.contentFilterViewWrapperVisibility {
+//  display: none;
+//}

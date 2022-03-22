@@ -1,0 +1,260 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+.propertiesCollectionDragabbleListContainer{
+  width: 100%;
+  height: 100%;
+
+  .propertyCollectionSearchBar {
+    height: 50px;
+    background-color: $color-light-11;
+    padding: 10px;
+
+    .searchBarContainer {
+      border: 1px solid $color-light-15;
+      border-radius: 3px;
+      overflow: hidden;
+
+      .simpleSearchBarView{
+        height:28px;
+      }
+    }
+  }
+
+  .propertyCollectionBody {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: hidden;
+
+      .dragDropContextViewWrapper{
+        width: 50%;
+        float: left;
+        .droppableContainerHeader {
+          padding: 0;
+          height: 37px;
+          border: none;
+          .headerLabel {
+            font-weight: normal;
+          }
+          .tabLayoutView {
+            width: 100%;
+            float: left;
+            height: 100%;
+            position: relative;
+
+            .tabLayoutListContainer {
+              width: 100%;
+              float: left;
+              height:auto;
+
+              .tabsSection {
+                .parentScrollContainer {
+                  .tabsList {
+                    display: grid;
+                    grid-template-columns: auto;
+                    grid-auto-flow: column;
+                    .tabItem {
+                      background-color: $color-grey;
+                      box-shadow: none;
+                      width: auto;
+                      position: relative;
+                      font-size: 12px;
+                      padding: 0 5px;
+                      .tabIcon {
+                        width: 16px;
+                        height: 36px;
+                        float: left;
+                        margin-right: 5px;
+                        &.attribute {
+                          @include background-properties($image-CS-Text-Color-Filled-50, 16px, 50%);
+                        }
+                        &.tags {
+                          @include background-properties($image-CS-Price-Tag-Filled-50, 16px, 50%);
+                        }
+                        &.classification {
+                          @include background-properties($image-CS-Letter-M--small, 16px, 50%);
+                          opacity: 0.7;
+                        }
+                      }
+                      &.isActive {
+                        background-color: $color-light-9;
+                        border-bottom: 2px solid $color-dark-blue;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .bodySection {
+              display: none;
+            }
+          }
+        }
+        .droppableListContainer{
+          height: calc(100% - 37px);
+          .droppableContainer{
+            .draggableWrapper{
+              background: $color-light-1;
+              padding: 10px;
+              margin: 0;
+              border-bottom: 1px solid $color-light-5;
+              height: 50px;
+              .propertyNewListWrapper{
+                width: 100%;
+                float: left;
+                .iconWrapper {
+                  width: 13px;
+                  height: 13px;
+                  float: left;
+                  margin-right: 10px;
+                  .imageFitToContainer {
+                    .imageFitToContainerImage {
+                      position: relative;
+                      top: unset;
+                      left: unset;
+                      transform: unset;
+                    }
+                    .imageSimpleViewNoImage {
+                      background-size: 100%;
+                      margin-top: 2px;
+                    }
+                  }
+                }
+                .propertyLabelWrapper {
+                  width: calc(100% - 25px);
+                  float: left;
+                  .propertyLabel {
+                    font-size: 12px;
+                    color: $color-dark-6;
+                    @include ellipsis();
+                  }
+                  .propertyCode {
+                    font-size: 10px;
+                    color: $color-dark-8;
+                    @include ellipsis();
+                  }
+                }
+              }
+              .selectedPropertyNewListWrapper{
+                width: 100%;
+                float: left;
+                background-color: $color-grey;
+                border: 1px solid $color-light-5;
+                border-radius: 2px;
+                padding: 5px 10px;
+
+                .selectedIconWrapper {
+                  width: 30px;
+                  height: 13px;
+                  float: left;
+                  margin-right: 10px;
+                  .propertySequence {
+                    float: left;
+                    margin-right: 10px;
+                    color: $color-dark-8;
+                    font-size: 11px;
+                  }
+                  .imageFitToContainer {
+                    width: 13px;
+                    float: left;
+                    .imageFitToContainerImage {
+                      position: relative;
+                      top: unset;
+                      left: unset;
+                      transform: unset;
+                    }
+                    .imageSimpleViewNoImage {
+                      background-size: 100%;
+                      margin-top: 2px;
+                    }
+                  }
+                }
+                .selectedPropertyLabelWrapper {
+                  width: calc(100% - 45px);
+                  float: left;
+                  display: flex;
+                  align-items: center;
+                  .labelWrapper {
+                    width:calc(100% - 40px);
+                    float: left;
+                    .propertyLabel {
+                      font-size: 12px;
+                      color: $color-dark-6;
+                    }
+                    .propertyCode {
+                      font-size: 10px;
+                      color: $color-dark-8;
+                    }
+                  }
+                  .propertyIcon {
+                    width: 20px;
+                    height: 20px;
+                    float: left;
+                    background-size: 16px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 0.6;
+
+                    &.attribute{
+                      background-image: url($image-CS-Text-Color-Filled-50);
+                    }
+
+                    &.tag{
+                      background-image: url($image-CS-Price-Tag-Filled-50);
+                    }
+
+                    &.taxonomy{
+                      background-image: url($image-CS-Multicast-Filled-50);
+                    }
+                  }
+                  .removeIcon{
+                    width: 20px;
+                    height: 20px;
+                    float: left;
+                    @include background-properties($image-CS-Cancel-Black, 16px);
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              &.selected, &.highlight{
+                background-color: $color-light-9;
+              }
+            }
+          }
+          .PropertyCollectionViewLoadMore{
+            font-style: italic;
+            color: $color-dark-5;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
+      .dragDropContextViewWrapper:last-child{
+          .droppableContainerHeader{
+            .headerLabel {
+              font-weight: 600;
+              font-size: 13px;
+              padding-bottom: 0;
+              padding-left: 40px;
+              line-height: 37px;
+              @include background-properties($image-combi-ticket-50, 18px, left 10px center)
+            }
+          }
+        .droppableListContainer {
+          .droppableContainer {
+            .draggableWrapper {
+              border-bottom: none;
+              &.selected, &.highlight{
+                background: transparent;
+                .selectedPropertyNewListWrapper{
+                  background-color: $color-light-9;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

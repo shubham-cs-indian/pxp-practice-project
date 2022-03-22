@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>150</y>
+      <w>380</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ILocaleCatalogDAO
+--
+getCursor( String cursorID): ICursor
+--
+{factory methods for other DAOs}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>100</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ConnectionManager
+--
+commit()
+rollback()
+setSavePoint(savePointName)
+rollbackToSavePoint(savePointName)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>300</y>
+      <w>480</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>RDBMSException
+--
+{InvalidSession: when unexisting or closed session}
+{NestedTransaction: when a transaction is already opened for the session}
+{RDBMSError: when the RDBMS returns an error}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>20</y>
+      <w>220</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RDBMS Component Process
+Batch 1 target
+March-29 2019
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>350</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ObjectTrackingDTO
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>290</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Session
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>190</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>280</y>
+      <w>50</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>240</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>SavePoint
+--
+savePointID=default
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>190</y>
+      <w>50</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>30</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IUserSessionDAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>70</y>
+      <w>150</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;factory&gt;&gt;
+openLocaleCatalog</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>670</x>
+      <y>60</y>
+      <w>470</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Implementation
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

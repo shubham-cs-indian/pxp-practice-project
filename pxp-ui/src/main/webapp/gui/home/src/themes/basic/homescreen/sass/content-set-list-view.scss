@@ -1,0 +1,54 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.contentSetListViewContainer {
+  height: 100%;
+  width: 100%;
+
+  .leftPanelHeader {
+    height: 28px;
+    background-color: #4A4A4A;
+    box-shadow: 0 0 4px -1px #333;
+
+    .headerLabel {
+      float: left;
+      line-height: 28px;
+      color: #ffffff;
+      padding-left: 90px;
+    }
+
+    .setListControlContainer{
+      float: right;
+      height: 100%;
+
+      .actionItem {
+        float: left;
+        height: 25px;
+        width: 25px;
+        background-size: 15px;
+        background-repeat: no-repeat;
+
+        &.createSetIcon {
+          background-image: url($image-CS-Plus-Filled-E2E9EC-32);
+
+          &:hover {
+            background-image: url($image-CS-Plus-Filled-E2E9EC-32);
+          }
+        }
+
+        &.deleteSetIcon {
+          @include background-properties-with-theme-white-color($image-CS-delete-bin);
+          &:hover {
+            background-image: url($image-CS-Delete-Filled-E2E9EC-32);
+          }
+        }
+      }
+    }
+  }
+
+  .setListContainer {
+    height: calc(100% - 28px);
+    width: 100%;
+
+  }
+}*/

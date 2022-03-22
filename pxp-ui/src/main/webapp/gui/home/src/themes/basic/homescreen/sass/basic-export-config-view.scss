@@ -1,0 +1,819 @@
+/*
+@import "./../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+$primary-button-color: #2196F3;
+$secondary-button-color: white;
+
+.exportConfigViewContainer {
+  height: calc(100% - 30px);
+
+  .ruleBasicInfo {
+    height: 65px;
+    padding: 10px;
+    margin: 10px 12px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+    background: #fafafa;
+    position: relative;
+
+    .attributeSelection {
+      float: left;
+      width: 45%;
+
+      .attributeFilterViewHeaderText {
+        font-size: 11px;
+        color: #838181;
+        margin-bottom: 5px;
+      }
+
+      .multiSelectNothingSelected {
+        margin-top: 0;
+      }
+    }
+    .mappingLabelContainer {
+      float: left;
+      width: 40%;
+
+      .ruleLabelInput {
+        border-bottom: 1px solid #ccc;
+        padding: 5px 0;
+      }
+    }
+
+    .deleteRow {
+      background: url($image-CS-Cross) no-repeat 0;
+      background-size: 18px;
+      display: none;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: 8px;
+      top: 25px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .deleteRow {
+        display: inline-block;
+      }
+    }
+    .addButtonView {
+      float: left;
+      margin-left: 45px;
+      margin-top: 5px;
+
+      .vertMenuItem {
+        width: 36px;
+        height: 36px;
+        background-position: 10px;
+
+      }
+    }
+
+    &.exportDetailViewBasicName {
+      width: 75%;
+      float: left;
+      margin: 10px 5px 10px 12px;
+    }
+
+    &.exportDetailViewBasicProperties {
+      width: 20%;
+      float: left;
+      margin-left: 11px;
+
+      .yesNoViewWrapper{
+        .radioGroupContainer{
+          float: left;
+          width: 50%;
+
+          .radioLabel{
+            display: inline-block;
+            vertical-align: super;
+          }
+
+          .radioButtonContainer{
+          }
+        }
+
+      }
+    }
+
+    .ruleLabel {
+      font-size: 11px;
+      color: #838181;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 5px;
+    }
+
+    .ruleLabelInput {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: #fafafa;
+    }
+  }
+
+  .retailerListViewContainer {
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #bbb;
+    float: left;
+  }
+
+  .rulesListViewContainer {
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #bbb;
+    float: left;
+
+    .exportRulesSection {
+      height: 100%;
+
+      .mappingsListLinked {
+        height: 100%;
+      }
+    }
+
+    .listViewsContainer {
+      height: calc(100% - 110px);
+      overflow: auto;
+      position: relative;
+    }
+
+    .listViewHeader {
+      padding: 8px 10px;
+      box-shadow: 0px 2px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+      background-color: #ccc;
+    }
+  }
+
+  .exportDetailedViewContainer {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(#f1f1f1, #f6f6f6);
+
+    .ruleDetailViewWrapper {
+      height: 100%;
+      padding-bottom: 1px;
+      overflow: scroll;
+
+      .ruleFilterViewContainer {
+        height: calc(100% - 100px);
+        width: 100%;
+        overflow: auto;
+
+        .ruleFilterItem {
+          margin: 5px 12px;
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.28);
+          padding: 10px;
+
+          .innerFilterViewWrapper {
+
+            .innerFilterViewHeader {
+              overflow: hidden;
+              margin: 0px 5px;
+
+              .innerFilterViewHeaderIcon {
+                height: 100%;
+                width: 40px;
+                background-repeat: no-repeat;
+                background-position: 9px;
+                background-size: 20px;
+                float: left;
+                opacity: .8;
+              }
+
+              .innerFilterViewHeaderText {
+                color: #656565;
+                font-size: 11px;
+              }
+            }
+
+            .innerFilterViewBody {
+
+              .innerFilterSearchContainer {
+
+                .contentFilterMSSContainer {
+                  position: relative;
+
+                  .searchBarView {
+                    height: 33px;
+                    width: calc(100% - 10px);
+                    margin: 0 auto;
+                    min-height: 40px;
+
+                    .searchBarContainer {
+                      border-bottom: none;
+                      padding-left: 28px;
+                      background-color: #fafafa;
+                      border-radius: 2px;
+                      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+
+                      .multiSearchInputBox {
+                        color: #555;
+                        font-size: 13px;
+                        //font-weight: 500;
+                      }
+
+                      .multiSelectNothingSelected {
+                        margin-top: 0;
+                        padding: 0;
+                        margin-bottom: 0;
+                        line-height: 27px;
+                        font-size: 11px;
+                      }
+                    }
+
+                    .dropDownListView {
+                      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+                      border: none;
+
+                      .dropDownNodeContainer {
+                        font-size: 13px;
+                        //font-weight: 500;
+                        color: #555;
+                        padding-left: 30px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                      }
+                    }
+                  }
+
+                  .contentFilterMSSIcon {
+                    height: 20px;
+                    width: 20px;
+                    background-repeat: no-repeat;
+                    background-position: 2px;
+                    background-size: 16px;
+                    background-image: url($image-CS-SearchFilled-32);
+                    position: absolute;
+                    left: 10px;
+                    top: 8px;
+                    z-index: 2;
+                  }
+                }
+              }
+
+              .innerFilterAttributeViewsContainer {
+
+              }
+            }
+          }
+
+          .attributeFilterViewWrapper {
+
+            .attributeFilterViewHeader {
+
+              .attributeFilterViewHeaderIcon {
+                background-image: url($image-CS-ViewDetails-50White);
+              }
+
+              .attributeFilterViewHeaderText {
+
+              }
+            }
+
+            .attributeFilterViewBody {
+
+            }
+          }
+
+          .userFilterViewWrapper {
+
+            .userFilterViewHeader {
+
+              .userFilterViewHeaderIcon {
+                background-image: url($image-CS-ViewDetails-50White);
+              }
+
+              .userFilterViewHeaderText {
+
+              }
+            }
+
+            .userFilterViewBody {
+
+            }
+          }
+
+          .tagFilterViewWrapper {
+
+            .tagFilterViewHeader {
+
+              .tagFilterViewHeaderIcon {
+                @include background-properties-with-theme-white-color($image-CS-PriceTag-32);
+              }
+
+              .tagFilterViewHeaderText {
+
+              }
+            }
+
+            .tagFilterViewBody {
+
+              .range-slider {
+
+                .sliderHandleWrapper {
+                  position: absolute;
+                  z-index: 4;
+                  width: 13px;
+                  margin-left: 5px;
+
+                  .sliderHandle {
+                    height: 13px;
+                    z-index: 2;
+                    width: 13px;
+                    cursor: inherit;
+                    border-radius: 50%;
+                    background-color: #30a9a0;
+                    box-shadow: 0px 0px 0px 1px #30a9a0;
+
+                    &:hover {
+                      box-shadow: 0px 0px 0px 1px #237B75;
+                    }
+                  }
+
+                  .sliderHandleBase {
+                    width: 25px;
+                    height: 20px;
+                    background-color: #eee;
+                    font-size: 11px;
+                    text-align: center;
+                    margin-left: -4px;
+                    line-height: 20px;
+                    display: inline-block;
+                    position: absolute;
+                    border-radius: 4px;
+                    top: -26px;
+                  }
+                  .sliderHandleBase:before {
+                    border-top: 5px solid #eee;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    content: "";
+                    height: 0;
+                    left: 7px;
+                    position: absolute;
+                    bottom: -4px;
+                    width: 0;
+                  }
+                }
+
+                .doubleSliderHighlight {
+                  background-color: #33bbb1;
+                  position: absolute;
+                  top: 5px;
+                  height: 5px;
+                }
+              }
+            }
+          }
+
+          .attributeWrapper {
+            margin: 0 5px 5px 5px;
+            background-color: #FAFAFA;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+            border-radius: 2px;
+
+            .attributeHeader {
+              overflow: hidden;
+
+              .attributeExpandCollapse {
+                height: 30px;
+                width: 30px;
+                background-repeat: no-repeat;
+                background-position: 8px;
+                background-size: 12px;
+                float: left;
+
+                &.collapsed {
+                  background-image: url($image-CS-Collapse-Arrow-32);
+                }
+
+                &.expanded {
+                  background-image: url($image-CS-expand-arrow-icon);
+                }
+              }
+
+              .attributeText {
+                height: 30px;
+                width: calc(100% - 90px);
+                float: left;
+                line-height: 30px;
+                color: #555;
+                font-size: 12px;
+                //font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding-left: 5px;
+              }
+
+              .attributeAddCondition {
+                width: 30px;
+                height: 30px;
+                float: right;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: 18px;
+                background-image: url($image-CS-PlusStruct-32);
+                cursor: pointer;
+              }
+
+              .attributeDelete {
+                height: 30px;
+                width: 30px;
+                float: right;
+                background-repeat: no-repeat;
+                background-position: 8px;
+                background-image: url($image-CS-Cross);
+                cursor: pointer;
+                background-size: 17px;
+                opacity: .6;
+              }
+            }
+
+            .attributeBody {
+              !*overflow: hidden;*!
+
+              &:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+
+              .attributeValueWrapper {
+                margin-bottom: 5px;
+                position: relative;
+
+                .attributeValueWrapperHeader {
+                  color: #555;
+                  font-size: 12px;
+                  //font-weight: 500;
+                  background: #f3f3f3;
+                  padding: 6px 6px 6px 15px;
+                }
+
+                .attributeValueWrapperBody {
+
+                }
+              }
+
+              &.collapsed {
+                display: none;
+              }
+
+              .attributeConditionWrapper {
+                !*overflow: hidden;*!
+                padding: 3px 5px 8px 15px;
+                position: relative;
+                box-shadow: 0px -1px 0px 0px #bfbfbf;
+
+                &:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+
+                .attributeConditionRow {
+                  width: 100%;
+                  !*overflow: hidden;*!
+                  &:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                  }
+
+                  .contentFilterMSSContainer {
+                    position: relative;
+                    width: 40%;
+                    float: left;
+                    margin-left: 5%;
+                    height: auto;
+
+                    .searchBarView {
+                      height: 33px;
+                      width: calc(100% - 10px);
+                      margin: 0 auto;
+                      min-height: 40px;
+
+                      .searchBarContainer {
+                        border-bottom: none;
+                        padding-left: 28px;
+                        background-color: #fafafa;
+                        border-radius: 2px;
+                        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+
+                        .multiSearchInputBox {
+                          color: #555;
+                          font-size: 13px;
+                          //font-weight: 500;
+                        }
+
+                        .multiSelectNothingSelected {
+                          margin-top: 0;
+                          padding: 0;
+                          margin-bottom: 0;
+                          line-height: 27px;
+                          font-size: 11px;
+                        }
+                      }
+
+                      .dropDownListView {
+                        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+                        border: none;
+
+                        .dropDownNodeContainer {
+                          font-size: 13px;
+                          //font-weight: 500;
+                          color: #555;
+                          padding-left: 30px;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                      }
+                    }
+
+                    .contentFilterMSSIcon {
+                      height: 20px;
+                      width: 20px;
+                      background-repeat: no-repeat;
+                      background-position: 2px;
+                      background-size: 16px;
+                      background-image: url($image-CS-SearchFilled-32);
+                      position: absolute;
+                      left: 10px;
+                      top: 8px;
+                      z-index: 2;
+                    }
+                  }
+
+                  .attributeColorDropDown {
+                    width: 45%;
+                    float: left;
+                    margin-top: 2px;
+                    background: transparent;
+                    color: #555;
+                    border: none;
+                    !* border-bottom: 1px solid #aaa; *!
+                    font-size: 11px;
+                    background-color: #eaeaea;
+                    outline: none;
+                    padding: 4px;
+                  }
+
+                  .attributeDescriptionTextArea {
+                    outline: none;
+                    border: 1px solid #dadada;
+                    border-radius: 2px;
+                    width: 40%;
+                    float: left;
+                    margin-left: 5%;
+                    height: auto;
+                  }
+                }
+
+                .attributeMultipleInput {
+                  display: inline-block;
+
+                  .attributeInputContainer {
+                    float: left;
+                    margin-left: 50px;
+
+                    input {
+                      outline: none;
+                      border: none;
+                    }
+                  }
+                }
+
+                .attributeMultipleInputDate {
+                  display: inline-flex;
+                }
+
+                .attributeConditionInput {
+                  width: 38%;
+                  float: left;
+                  background: transparent;
+                  border: none;
+                  border-bottom: 1px solid #aaa;
+                  color: #555;
+                  margin-left: 5%;
+                  outline: none;
+                }
+
+                .attributeConditionSelect {
+                  width: 45%;
+                  float: left;
+                  margin-top: 2px;
+
+                  select {
+                    background: transparent;
+                    color: #555;
+                    width: 100%;
+                    border: none;
+                    !* border-bottom: 1px solid #aaa; *!
+                    font-size: 11px;
+                    background-color: #eaeaea;
+                    outline: none;
+                    padding: 4px;
+                  }
+                }
+
+                .blackListContainer {
+                  outline: none;
+                  background-color: #eaeaea;
+                  border: none;
+                  border-radius: 2px;
+                  width: 40%;
+                  float: left;
+                  margin-left: 5%;
+                  height: auto;
+                  margin-bottom: 2%;
+
+                  .dropViewContainer {
+                    position: relative;
+                    &:hover {
+                      .removeAttributeClassIcon {
+                        width: 15px;
+                      }
+                    }
+
+                    .removeAttributeClassIcon {
+                      height: 15px;
+                      width: 0px;
+                      transition: all .2s;
+                      position: absolute;
+                      right: 5px;
+                      top: 2px;
+                      opacity: 0.7;
+                      z-index: 2;
+                      background-repeat: no-repeat;
+                      background-position: 1px;
+                      background-size: 13px;
+                      background-image: url($image-CS-Cancel-Black);
+
+                      &:hover {
+                        background-image: url($image-CS-Cancel-Black);
+                      }
+                    }
+                  }
+
+                }
+
+                .attributeConditionDelete {
+                  height: 20px;
+                  width: 0px;
+                  position: absolute;
+                  right: 3px;
+                  top: 6px;
+                  background-repeat: no-repeat;
+                  background-position: 1px;
+                  background-size: 17px;
+                  !* border-bottom: 1px solid #aaa; *!
+                  background-image: url($image-CS-Cross);
+                  cursor: pointer;
+                  opacity: .6;
+                  transition: all .2s;
+                }
+
+                &:hover {
+                  .attributeConditionDelete {
+                    width: 20px;
+                  }
+                }
+
+                .customDatePickerWrapper {
+                  width: 40%;
+                  float: left;
+                  margin-left: 5%;
+
+
+                  .customDatePickerEmptyButton {
+                    display: none;
+                  }
+                }
+
+                .filterWithMeasurementMetrics {
+                  width: 38%;
+                  float: left;
+                  margin-left: 5%;
+                  .attributeConditionInput {
+                    background: transparent;
+                    border: none;
+                    color: #555;
+                    outline: none;
+                    width: 70%;
+                    border-bottom: 1px solid #aaa;
+                  }
+                  .filterMeasurementMetricsUnit {
+                    width: 28%;
+                    margin-left: 5px;
+                    font-size: 11px;
+                  }
+                }
+              }
+
+              .tagsSectionHeader, .multiSelectSearchLabel {
+                display: none;
+              }
+
+              .tagsSectionBody {
+                border-bottom: none;
+
+                .range-slider {
+                  margin: 25px 10px 0;
+                  width: calc(100% - 20px);
+                }
+
+                .customTreeNodeWrapper {
+                  background: none;
+                  overflow: hidden;
+                  padding: 4px;
+                  background: #fff;
+                  margin: 4px 2px;
+                  border: 1px solid #eee;
+                  border-radius: 2px;
+                }
+
+                .tagName.fullLengthTagName {
+                  width: 100%;
+                  margin-bottom: 6px;
+                  color: #555;
+                  font-size: 11px;
+                  line-height: 11px;
+                  background: none;
+                  margin-top: 4px;
+                }
+              }
+
+              .searchBarView .searchBarContainer .multiSearchInputBox {
+                color: #555;
+              }
+
+              svg {
+                //fill: #eee !important;
+              }
+
+              .tagValueHeaderContainer.fullLengthTagValueHeader {
+                margin-top: 6px;
+              }
+            }
+
+            .tagBody {
+              overflow: visible;
+
+              .searchBarView {
+                padding: 5px;
+                height: auto;
+              }
+            }
+
+            .ownersWrapper {
+              margin: 0 5px 5px 5px;
+              background-color: #FAFAFA;
+              box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+              border-radius: 2px;
+
+              .ownersHeader {
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mappingAttributeViews {
+    margin: 10px 12px;
+    padding: 10px 0;
+
+    .mappingAttributeRow {
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+      position: relative;
+
+      .mappingAttributeName {
+        display: inline-block;
+        width: 45%;
+      }
+
+      .mappingAttributeLabel {
+        display: inline-block;
+        width: 40%;
+      }
+    }
+  }
+}
+
+*/

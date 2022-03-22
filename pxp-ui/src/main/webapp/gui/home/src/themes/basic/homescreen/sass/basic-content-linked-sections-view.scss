@@ -1,0 +1,678 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.contentLinkedSectionsView {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .linksContainer {
+    flex: 0 0;
+    //border-top: 1px solid #eee;
+
+    .expandableMenuListView {
+      height: 100%;
+      border: none;
+    }
+  }
+
+  .linkedSectionsContainer {
+    flex: 1 0;
+    border: 1px solid $color-light-3;
+    position: relative;
+
+    .scrollContentSectionWrapper{
+      overflow-y: auto;
+      top: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      scrollbar-width: thin;
+    }
+
+    .linkedSectionHeader {
+      height: 45px;
+      display: flex;
+      transition: all .2s ease-out;
+      padding: 0 10px;
+      justify-content: flex-end;
+
+      .sectionHeaderLabel {
+        margin: 20px 10px 0px 10px;
+        font-size: 16px;
+        display: inline-block;
+        flex: 1;
+        @include ellipsis();
+      }
+
+      .createButtonViewWrapper {
+        float: right;
+        min-height: 27px;
+        background: $brand-material-btn-color;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid $brand-material-btn-color;
+        line-height: 27px;
+        display: inline-block;
+        margin: 15px 10px 5px 10px;
+
+        .createButtonView {
+          .buttonText {
+            font-size: $font-normal;
+            font-weight: 500;
+          }
+
+          .buttonImage {
+            filter: invert(100%);
+            width: 10px;
+            margin-left: 5px;
+            @include background-properties($image-CS-triangle-south-25, 10px);
+          }
+        }
+      }
+    }
+
+    .linkedSectionColumnHeader {
+      height: 45px;
+      display: flex;
+      transition: all .2s ease-out;
+      padding: 0 10px;
+      border-bottom: 1px solid #eee;
+
+      .columnHeader {
+        display: inline-block;
+        margin: 0 10px;
+        flex: 1;
+
+        &:first-child {
+          border-right: 1px solid #eee;
+        }
+
+        .selectedItemIcon {
+          float: left;
+          display: inline-block;
+          vertical-align: top;
+          width: 24px;
+          height: calc(100% - 20px);
+          margin: 10px 0;
+
+          .imageFitToContainer {
+            position: relative;
+          }
+        }
+
+        .columnHeaderLabel {
+          line-height: 45px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          float: left;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .linkedSection:last-child {
+      min-height: 100%;
+    }
+
+    .linkedSection {
+      width: 100%;
+      padding: 10px 10px 0 10px;
+      position: relative;
+
+      .sectionHeader {
+        width: 100%;
+        overflow: hidden;
+
+        .contentSectionNewLabel {
+          float: left;
+          max-width: 50%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: calc(100% - 50px);
+        }
+
+        .upperIconWrapper {
+          position: absolute;
+          overflow: hidden;
+          right: 6px;
+          background-color: #fff;
+          z-index: 3;
+          margin: 10px;
+
+          .clickableIconsContainer {
+            float: left;
+
+            .clickableIcon {
+              float: right;
+              height: 30px;
+              width: 18px;
+              background-size: 18px;
+              background-repeat: no-repeat;
+              background-position: center;
+              margin: 0 2px;
+            }
+
+            .dynamicCoupled {
+              background-image: url($image-dynamic-coupling);
+
+              &.applied {
+                background-image: url($image-dynamic-coupling-resolved);
+              }
+            }
+
+            .tightlyCoupled {
+              background-image: url($image-tight-coupling);
+
+              &.applied {
+                background-image: url($image-tight-coupling-resolved);
+              }
+            }
+
+            .conflictingIcon {
+              background-image: url($image-CS-conflict);
+            }
+
+            .notificationIcon {
+              background-image: url($image-CS-Error-48);
+            }
+          }
+
+          .notClickableIconsContainer {
+            float: left;
+            opacity: 0.6;
+
+            .disabledIcon {
+              background-position: 1px;
+              background-size: 18px;
+              opacity: 1;
+              background-image: url($image-CS-Unavailable-48);
+              float: left;
+              height: 30px;
+              width: 20px;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+
+      .sectionHeader {
+        overflow: hidden;
+      }
+      .sectionWrapper.selected > div {
+        border: 1px solid $color-theme-accent;
+        border-radius: 2px;
+        .detailedListItemContainer.zoom_2 {
+          margin: 0 10px 10px 0;
+        }
+      }
+
+      .sectionWrapper .natureSectionView {
+        .bundleSectionHeader, .assetSchedulerSectionView .sectionTitle {
+          text-transform: none;
+          padding: 0 0 0 10px;
+          color: #333;
+        }
+      }
+
+      .sectionWrapper .assetSchedulerSectionView .sectionTitle {
+        text-transform: none;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .sectionWrapper .gridView {
+        .gridImagePropertyView {
+          //padding: 2px;
+          height: 100%;
+          width: 100%;
+          .gridImageContainer {
+            height: 100%;
+            width: 100%;
+            border: none;
+          }
+        }
+      }
+
+      .sectionWrapper {
+        .sectionClassTagInfo {
+          margin: 0px 10px 0 10px;
+          .circledTagGroupViewContainer {
+            border: 1px solid $color-light-4;
+          }
+        }
+      }
+
+      .sectionWrapper {
+        .sectionAssetDownloadInfo {
+          margin: 0px 10px 0 10px;
+          background-color: #fdfdfd;
+          border: 1px solid #ddd;
+          border-radius: 2px;
+          .sectionTitle {
+            font-size: 13px;
+            font-weight: 500;
+            padding: 10px;
+          }
+          .downloadInfoDetails {
+            /*height: 100px;*/
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-column-gap: 10px;
+            padding: 0px 10px 12px 10px;
+            margin-right: 10px;
+            .totalDownloadSection {
+              height: 100%;
+              background-color: #ffffff;
+              border: 1px solid $color-light-4;
+              .sectionTitle {
+                font-size: 11px;
+                font-weight: 500;
+                color: #777;
+                line-height: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap
+              }
+            }
+
+            .downloadWithinRangeSection {
+              height: 100%;
+              background-color: #ffffff;
+              border: 1px solid $color-light-4;
+              .sectionTitleWrapper {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                .sectionTitle {
+                  font-size: 11px;
+                  font-weight: 500;
+                  color: #777;
+                  line-height: 14px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap
+                }
+
+                .calenderSection {
+                  height: 22px;
+                  width: 100%;
+                  position: relative;
+                  float: right;
+                  display: inline-block;
+                  text-align: center;
+                  margin: 6px 6px 0 0;
+                  cursor: pointer;
+                  border: 1px solid #555;
+                  border-radius: 2px;
+                  line-height: 18px;
+                  background-color: #666;
+                  max-width: 180px;
+
+                  .dateRangeSection {
+                    float: left;
+                    color: #FFF;
+                    font-size: 11px;
+                    width: calc(100% - 18px);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+
+                  .dateRangeCalenderIcon {
+                    float: right;
+                    height: 18px;
+                    width: 18px;
+                    @include background-properties-with-theme-white-color($image-CS-Calendar-Filled-50-Black, 18px);
+                  }
+                }
+              }
+            }
+
+            .downloadCountSectionWrapper {
+              padding-left: 12px;
+              display: flex;
+              overflow: hidden;
+              .downloadCount {
+                font-size: 30px;
+                font-weight: 500;
+              }
+              .downloadLabel {
+                font-size: 12px;
+                font-weight: 500;
+                margin-left: 8px;
+                margin-top: 18px;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+
+      .sectionWrapper {
+        margin: 10px 0px 10px 0px;;
+        transition: all .2s ease-out;
+        position: relative;
+        .sectionToggle {
+          float: left;
+          height: 20px;
+          width: 20px;
+          margin-right: 2px;
+          cursor: pointer;
+
+          &.sectionCollapsed {
+            @include background-properties($image-CS-expand-arrow-icon, 14px, 3px 6px);
+          }
+
+          &.sectionExpanded {
+            @include background-properties($image-CS-Collapse-Arrow-32, 14px, 3px 6px);
+          }
+        }
+
+        &.selected {
+          width: 100%;
+        }
+      }
+
+      .sectionWrapper {
+
+        .paperViewContainer {
+          margin: 10px;
+          box-shadow: none;
+          border: 1px solid $color-light-4;
+          border-radius: 2px;
+        }
+      }
+
+      .sectionWrapper {
+        .uomView {
+          box-shadow: none;
+          float: left;
+          width: 100%;
+          .filterRowWrapper {
+            min-height: auto;
+          }
+          .tableOperationWrapper {
+            width: 100%;
+            float: left;
+            .tableOperationsView {
+              width: auto;
+              float: left;
+            }
+            .fullScreenButtonForUOM {
+              float: right;
+              border: 1px solid #ddd;
+              border-radius: 2px;
+              width: 34px;
+              height: 26px;
+              position: absolute;
+              right: 50px;
+              .fullScreenButton {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                float: right;
+                @include background-properties($image-CS-expand-000-96, 18px);
+
+                &:hover {
+                  opacity: .6;
+                }
+              }
+            }
+          }
+          .uomGridViewWrapper {
+            float: left;
+            width: 100%;
+            .gridView {
+              &.gridViewContainer {
+                padding: 0;
+                margin-top: 10px;
+                border: none;
+                max-height: 100%;
+                .gridViewUpperSection {
+                  height: 0;
+                  flex: none;
+                  .upperSectionButtonsContainer {
+                    position: absolute;
+                    top: -40px;
+                    right: 0;
+                    height: 30px;
+                    .headerButton {
+                      box-shadow: none;
+                      border: 1px solid #ddd;
+                      border-radius: 2px;
+                      width: 34px;
+                      height: 26px;
+                    }
+                  }
+                }
+                .gridViewMiddleSection {
+                  //overflow-x: auto;
+                  .gridViewMiddleSectionWrapper {
+                    .headerRowWrapper{
+                      .gridViewRow{
+                        &.gridViewHeaderRow {
+                          &.headerRowLeft {
+                            .headerWrapper{
+                              .gridViewCell {
+                                box-shadow: inset 1px 1px 0px 0px $color-light-5, inset -1px -1px 0px 0px $color-light-5
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    .customScrollbarView {
+                      .gridViewTableContainer {
+                        border-left: none;
+                        .gridViewTable {
+                          .leftFixedSection, .centralScrollableSection, .rightFixedSection {
+                           // padding-bottom: 10px;
+                            .gridRowContainer{
+                              .gridViewCell{
+                                box-shadow: inset 1px -1px 0 0 $color-light-5;
+                                .gridPropertyView{
+                                  //padding: 5px;
+                                  .customScrollbarView{
+                                    box-shadow: none;
+                                  }
+                                  .gridTagView {
+                                    width: 100%;
+                                    height: 100%;
+                                    .tagsSectionBody {
+                                      padding-top: 0;
+                                      .entityTagsSummaryView {
+                                        margin: 0;
+                                      }
+                                    }
+                                    .selectedItems{
+                                      margin-right: 3px;
+                                    }
+                                    .tagsSummaryItemsContainer{
+                                      .moreSection{
+                                        top: 1px;
+                                      }
+                                    }
+                                  }
+                                  .gridLinkedInstanceSummaryView {
+                                    height: auto;
+                                    width: 100%;
+                                    //padding: 8px 0 0;
+                                     .multiSelectSearchViewWrapper {
+                                      //padding: 0px 5px;
+                                       .multiSelectSearchView {
+                                         position: relative;
+                                         .moreSection {
+                                           position: absolute;
+                                           right: 10px;
+                                           margin: auto;
+                                           top: unset;
+                                         }
+                                         .selectedItems{
+                                           margin: 0px 3px 3px 0;
+                                         }
+                                       }
+                                    }
+                                  }
+                                  .multiSelectSearchViewWrapper {
+                                    //padding: 0px 5px;
+                                  }
+                                }
+                                &.activeCell {
+                                  box-shadow: inset 0 0 0 1px $color-theme-accent;
+                                }
+                              }
+                            }
+                          }
+
+                          //@-moz-document url-prefix() {
+                          //  .leftFixedSection ,.centralScrollableSection ,.rightFixedSection {
+                          //    padding-bottom: 22px;
+                          //  }
+                          //}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .nothingFoundViewContainer {
+            float: left;
+            .nothingFoundInnerContainer {
+              transform: unset;
+              position: unset;
+            }
+          }
+        }
+        .fullScreenView {
+          .fullScreenBody {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+            .uomView {
+              height: 100%;
+              padding: 15px;
+
+              .uomGridViewWrapper {
+                height: auto;
+                float: left;
+                width: 100%;
+                .gridView {
+                  &.gridViewContainer {
+                    padding: 0;
+                    margin-top: 10px;
+                    border: none;
+                    max-height: 100%;
+                    .gridViewMiddleSection {
+                      .gridViewMiddleSectionWrapper {
+                        .customScrollbarView {
+                          .gridViewTableContainer {
+                            border-left: none;
+                            .gridViewTable {
+                              //.leftFixedSection, .centralScrollableSection, .rightFixedSection {
+                              //  padding-bottom: 10px;
+                              //}
+                              //@-moz-document url-prefix() {
+                              //  .leftFixedSection ,.centralScrollableSection ,.rightFixedSection {
+                              //    padding-bottom: 22px;
+                              //  }
+                              //}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .paperViewContainer {
+              border: none;
+              box-shadow: 0 0 0 1px $color-light-4;
+              margin: 0;
+
+              .paperViewBody {
+                .uomView {
+                  padding: 0;
+                  height: 100%;
+                  box-shadow: none;
+
+                  .uomGridViewWrapper {
+                    margin-top: 10px;
+
+                    .gridView {
+                      &.gridViewContainer {
+                        height: 100%;
+                        padding: 0;
+                        border: none;
+                        .gridViewMiddleSection {
+                          .gridViewMiddleSectionWrapper {
+                            .customScrollbarView {
+                              .gridViewTableContainer {
+                                border-left: none;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.selected {
+          .fullScreenView {
+            border: none;
+          }
+        }
+        @media screen and (max-width: 1275px) {
+          .gridView {
+            .gridViewMiddleSection {
+              .gridViewMiddleSectionWrapper {
+                .gridViewTableContainerSibling {
+                  bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.relationshipConflictDialog {
+
+  .relationshipConflictContent {
+    padding: 0 20px 30px;
+    .relationshipConflictValue {
+      border: 1px solid #E8E8E8;
+      border-radius: 3px;
+
+      .propertyValueWrapper {
+        display: flex;
+        padding-left: 10px;
+        &:nth-child(even) {
+          background-color: #FDFCFC;
+        }
+
+        .propertyValue {
+          margin: 15px 0px;
+          background-color: #F4F4F4;
+          padding: 4px 6px;
+          border: 1px solid #E8E8E8;
+          border-radius: 3px;
+          width: auto;
+          font-style: italic;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

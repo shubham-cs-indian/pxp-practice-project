@@ -1,0 +1,15 @@
+[
+
+  {
+    "firstname": "yo",
+    "$username": "yo",
+    "gender": "female",
+    "csid": "[U>\"yo\" $iid=1000029]",
+    "contact": "111",
+    "$code": "Use100095",
+    "icon": "",
+    "$isbackgrounduser": false,
+    "email": "yo@yo.yo",
+    "lastname": "yo"
+  }
+]

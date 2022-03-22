@@ -1,0 +1,46 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$height: 100%;
+$width: 100%;
+
+.customTextFieldViewContainer {
+  width: $width;
+  line-height: 18px;
+  position: relative;
+  .customTextField {
+    resize: none;
+    border: none;
+    outline: none;
+    width: $width;
+    font-size: 13px;
+    margin: 0;
+    &.isDisabled {
+      background: transparent;
+      color: $color-dark-5;
+      cursor: context-menu;
+      overflow: hidden;
+      word-wrap: break-word;
+      width: $width;
+      span {
+        float: left;
+      }
+      .copyToClipboard {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        float: right;
+        cursor: pointer;
+        top: 3px;
+        right: 0;
+        transition: all .2s;
+        @include background-properties($image-CS-copy-to-clipboard, 16px);
+      }
+    }
+  }
+  textarea {
+    height: $height;
+    overflow: hidden;
+    padding-top: 0px;
+  }
+}

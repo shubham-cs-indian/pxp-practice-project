@@ -1,0 +1,363 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.coverflowAssetDetailsViewModelDialog {
+  height:80%;
+  maxHeight: none;
+  left: 50%;
+  top: 50%;
+}
+
+.coverflowAssetDetailsViewModelDialog > div {
+  height:100%;
+  .variantImageWrapper{
+    height: 100%;
+  }
+}
+
+.setDefaultAssetDetailsViewModel {
+  height: calc(100% - 122px);
+
+  .variantSectionImageContainer {
+    height: 100%;
+    width: inherit;
+    .variantImageWrapper {
+      height: 100%;
+      padding: 10px;
+      .imageWrapper {
+        background-color: $color-light-1;
+      }
+    }
+  }
+}
+
+.coverflowAssetDetailsViewModel{
+  height: 100%;
+  border-radius: 2px;
+  .variantSectionImageContainer {
+    height: inherit;
+    width: inherit;
+    .variantImageWrapper {
+      height: calc(100% - 46px);
+      padding: 10px;
+      /*.variantImageSelectionViewContainer {
+        padding: 0;
+        height: 100%;
+        background-color: #fafafa;
+        overflow: auto;
+        .variantImageContainer {
+          padding: 5px;
+          background-color: #fff;
+          .imageWrapper {
+            background-color: #f9f9f9;
+          }
+        }
+      }*/
+    }
+
+    .variantSectionHandler {
+      padding: 8px;
+      width: 100%;
+      text-align: right;
+      border-top: 1px solid #e5e5e5;
+      background-color: #fafafa;
+    }
+  }
+}
+.coverflowAssetDetailsViewWrapper {
+  height: 100%;
+
+  .coverflowAssetDetailsViewContainer {
+    padding: 15px 15px 0px;
+    background-color: #fafafa;
+    height: 100%;
+    color: #aaa;
+    position: relative;
+
+    .coverflowAssetDetailsColumn {
+      float: left;
+      height: 100%;
+      border-right: 1px solid #ddd;
+      //padding: 0 2px;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+
+      /*&.assetListViewContainer {
+              width: 160px;
+              padding: 2px;
+
+              .assetListViewColumn {
+                float: right;
+                width: 90%;
+              }
+
+              .assetListItem {
+                width: calc(100% - 8px);
+                height: 150px;
+                padding: 5px;
+                margin: 5px 4px;
+                border: 1px solid #eee;
+                position: relative;
+                border-radius: 2px;
+                left: 2px;
+
+                .imageWrapper {
+                  background-size: 65%;
+                }
+
+                &.assetListItemSelected {
+                  box-shadow: 0px 0px 0px 2px #aaa inset;
+                  background: #f0f0f0;
+
+                  img {
+                    opacity: 1; // remove
+                  }
+
+                  .assetListItemLabel {
+                    color: #333;
+                  }
+                }
+
+                img {
+                  max-width: 90%;
+                  max-height: 80%;
+                  position: absolute;
+                  top: 45%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+
+                .assetListItemLabel {
+                  color: #aaa;
+                  position: absolute;
+                  bottom: 3px;
+                  width: 90%;
+                  text-align: center;
+                  font-size: 12px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+
+                &.assetListItemDefaultNoThumb {
+                  background: no-repeat center;
+                  background-size: 70%;
+                  background-position-y: 15px;
+
+                  img {
+                    display: none;
+                  }
+
+                  &.coverflowPdf {
+                    background-image: url($image-ic-pdf);
+                  }
+                  &.coverflowPpt {
+                    background-image: url($image-ic-ppt);
+                  }
+                  &.coverflowIndd {
+                    background-image: url($image-ic-indd);
+                  }
+                  &.coverflowDoc {
+                    background-image: url($image-ic-doc);
+                  }
+                  &.coverflowXls {
+                    background-image: url($image-ic-xls);
+                  }
+                }
+              }
+            }*/
+      &.assetViewContainer {
+        //width: calc(100% - 160px);
+        /*padding: 0px 5px;*/
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+
+        .coverflowAssetView {
+          height: 100%;
+          text-align: center;
+          background: #ccc;
+          overflow: hidden;
+          padding: 10px;
+          position: relative;
+
+          p {
+            color: #555;
+            font-size: 18px;
+          }
+
+          .statusProgressBarContainer {
+            position: relative;
+            height: 30px;
+            width: 100%;
+            margin-top: 10px;
+            color: white;
+            border: 1px solid black;
+            background-color: #444;
+
+            .statusProgressBar {
+              height: 100%;
+              background-color: #888d9c;
+              transition: width 2500ms;
+            }
+
+            span {
+              position: absolute;
+              top: 5px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+
+          .assetViewImage {
+            height: 100%;
+            //overflow: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .videoErrorMessage {
+              font-size: $font-title;
+              color: $color-dark-4;
+            }
+
+            .assetViewImageCenterSpan {
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
+            }
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              vertical-align: middle;
+            }
+
+            video {
+              max-width: 100%;
+              max-height: 100%;
+              vertical-align: middle;
+            }
+          }
+
+          /*.annotationIcon{
+              position: absolute;
+              right: 38px;
+              top: 20px;
+              z-index: 1;
+              float: right;
+              height: 30px;
+              width: 30px;
+              cursor: pointer;
+              border-radius: 20px;
+              opacity: 0.8;
+              box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+              background-color: #fff;
+              background-position: 8px;
+              background-repeat: no-repeat;
+              background-size: 15px;
+              background-image: url($image-CS-Pin-Filled-Gray-50);
+
+              &:hover {
+                opacity: 1;
+              }
+
+              &.hideAnnotation{
+                background-color: #616367;
+                background-image: url($image-CS-Pin-Filled-50);
+              }
+            }*/
+
+          embed {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &.assetPropertyViewContainer {
+        width: 250px;
+        text-align: left;
+        border-right: none;
+        position: relative;
+
+        .coverflowAssetPropertyView {
+          position: relative;
+          height: 100%;
+
+          .assetDetailPropertyName {
+          }
+
+          .assetDetailsTextInput {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+
+          textarea {
+            height: 80px;
+          }
+
+          .assetDetailsImageAnnotationTypeDropdown{
+            height: 60px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #d6d5d5;
+          }
+
+          .assetDetailViewBtn {
+            display: block;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 450ms ease-in-out;
+
+            /*&.assetDetailViewDownload {
+              width: 100%;
+              background-color: #555;
+
+              &:hover {
+                background-color: #555;
+              }
+            }*/
+
+            &.assetDetailViewDownload {
+              padding: 8px 8px 8px 8px;
+            }
+
+            &.assetDetailViewShowAnnotation {
+              padding: 8px 8px 8px 8px;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+  .assetViewerBtnContainer {
+    width: 100%;
+    overflow: hidden;
+    height: 46px;
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+
+    .okButton {
+      float: right;
+      height: 100%;
+      padding: 8px 8px 8px 8px;
+    }
+
+    .cancelButton {
+      float: right;
+      height: 100%;
+      padding: 8px 0px 8px 8px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+compileJava.options.encoding = 'UTF-8'
+
+version = "1.0.0"	
+sourceCompatibility = 11
+
+repositories {
+	mavenCentral ()
+    mavenLocal()
+	
+    maven { url "https://repo.spring.io/libs-snapshot" }
+	maven { url "https://jitpack.io" }        
+    jcenter()
+}
+dependencies {
+	compile project(path: ':pxp-orientdb-interface')
+
+	def springFrameworkVersion = "5.2.1.RELEASE"
+    def jacksonVersion = "2.10.1"
+	def camundaVersion = "7.8.0"
+	
+	compile fileTree(dir: 'externallibs', include: ['*.jar'])
+    compile 'com.orientechnologies:orientdb-graphdb:3.0.11'
+    compile group: 'com.orientechnologies', name: 'orientdb-server', version: '3.0.11'
+    compile group: 'com.orientechnologies', name: 'orientdb-etl', version: '3.0.11'
+    compile group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '3.6.0'
+    compile 'io.searchbox:jest:2.0.0'
+    compile "org.apache.poi:poi-ooxml:3.11"
+	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+	compile 'com.github.spullara.mustache.java:compiler:0.9.1'
+	compile 'org.eclipse.jetty.websocket:websocket-client:9.3.0.v20150612'
+	compile 'org.eclipse.jetty.websocket:websocket-api:9.3.0.v20150612'
+	compile 'javax.servlet:javax.servlet-api:3.1.0'
+	compile 'org.aspectj:aspectjtools:1.8.5'
+	compile 'org.aspectj:aspectjrt:1.8.5'
+	compile group: 'org.apache.kafka', name: 'kafka-clients', version: '0.10.1.1'
+	compile "org.springframework.kafka:spring-kafka:1.1.2.RELEASE"
+	compile 'org.apache.commons:commons-collections4:4.0'
+	compile 'org.javers:javers-core:1.4.3'
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+	compile 'com.fasterxml.jackson.core:jackson-core:${jacksonVersion}'
+	compile 'com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}'
+	compile "org.springframework:spring-jdbc:${springFrameworkVersion}"
+    compile "org.springframework:spring-web:${springFrameworkVersion}"
+	compile "org.springframework:spring-webmvc:${springFrameworkVersion}"
+	compile "org.camunda.bpm:camunda-bom:${camundaVersion}"
+	compile "org.camunda.bpm:camunda-engine:${camundaVersion}"
+	compile "org.camunda.bpm:camunda-engine-spring:${camundaVersion}"
+	compile ("org.camunda.bpm:camunda-engine-rest:${camundaVersion}")  {
+		exclude group: 'com.fasterxml.jackson.core'
+	}
+	//compile group: 'postgresql', name: 'postgresql', version: '9.1-901.jdbc4'
+	//compile 'org.im4java:im4java:1.4.0'
+	//compile 'org.imgscalr:imgscalr-lib:4.2'
+	//compile 'com.googlecode.json-simple:json-simple:1.1.1'
+	//compile 'net.bramp.ffmpeg:ffmpeg:0.6'
+	//compile 'org.docx4j:docx4j:3.2.1'
+	//compile 'com.itextpdf:itextpdf:5.5.6'
+	//compile 'fr.opensagres.xdocreport:org.apache.poi.xwpf.converter.pdf:1.0.5'
+	compile group: 'com.netflix.ribbon', name: 'ribbon-httpclient', version: '2.2.5'
+    compile group: 'com.opencsv', name: 'opencsv', version: '3.7'
+    compile group: 'org.apache.activemq', name: 'activemq-spring', version: '5.14.3'
+    compile group: 'org.springframework', name: 'spring-jms', version: '4.3.5.RELEASE'
+	compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+	compile group: 'org.apache.velocity', name: 'velocity-tools', version: '2.0'
+        compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: jacksonVersion
+	//compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2.jre7'
+	
+	//compile group: 'org.springframework.boot', name: 'spring-boot', version: '2.1.2.RELEASE'
+	compile group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
+	testCompile "org.mockito:mockito-core:2.27.0"	
+	}
+
+
+task clearOrient {
+	doLast {
+		exec {
+			workingDir System.env.ORIENTDB_HOME + '/bin'
+
+			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+				println 'In windows'
+				println System.env.ORIENTDB_HOME + '/bin'
+				commandLine 'cmd', '/c', 'console.bat "connect remote:localhost/cs root pass@123; DELETE VERTEX v BATCH 1000"'
+			} else {
+				println 'Not windows '
+				commandLine 'sh', '-c', './console.sh "connect remote:localhost/cs root pass@123; DELETE VERTEX v BATCH 1000"'
+			}
+		}
+	}
+}

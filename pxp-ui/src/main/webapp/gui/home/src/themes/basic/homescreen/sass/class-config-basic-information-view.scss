@@ -1,0 +1,278 @@
+@import "./../../../../styleguide/style-guide";
+.classBasicInfoWrapper{
+
+  .commonConfigSection {
+    /*
+    box-shadow: none;
+    */
+
+    .classRelationshipHeader {
+
+      &.hideTitle {
+        display: none;
+      }
+    }
+  }
+
+  /*
+  .contextEnabledCheckbox {
+    position: relative;
+
+    .enabledLabel {
+      position: absolute;
+      left: 20px;
+      top: 1px;
+    }
+  }
+  */
+  .mssEnabledCheckboxContainer {
+    position: relative;
+
+    .enabledLabel {
+      position: absolute;
+      left: 20px;
+      top: 1px;
+    }
+  }
+  /*.classBasicInfoHeader{
+    .classSectionHeaderTitle{
+      background-color: #ccc;
+    }
+  }*/
+
+  .classBasicInfoBody{
+    min-height: 40px;
+    display: inline-block;
+    width: 100%;
+
+    .nameContainer{
+      &.fields{
+      }
+
+      .fieldName{
+      }
+      .fieldNameInputContainer{
+        .classNameInput{
+
+        }
+      }
+    }
+
+    /*.numberOfVersionsContainer{
+      width: 25%;
+
+      .numberOfVersionsLabel{
+        width: 75%;
+      }
+      .numberOfVersionsInput{
+        width: 20%;
+      }
+    }
+
+    .classBasicInfoBodyRow{
+      float: left;
+      width: 100%;
+      position: relative;
+
+      .fieldName {
+        min-width: 65px;
+      }
+    }
+
+    .folderOptionContainer{
+      float: left;
+      padding: 2px 8px;
+      width: 40%;
+
+      .folderOptionContainerHeader{
+        width: 25%;
+        padding: 5px;
+        float: left;
+        line-height: 28px;
+        font-size: 12px;
+      }
+
+      .folderOptionContainerBody{
+        float: left;
+      }
+    }
+
+    .defaultClassOptionContainer{
+      padding: 2px 8px;
+      float: left;
+      width: 30%;
+
+      .defaultClassOptionHeader{
+        min-width: 65px;
+        padding: 5px;
+        float: left;
+        line-height: 28px;
+        font-size: 12px;
+      }
+
+      .defaultClassOptionBody{
+        float: left;
+
+        .defaultClassOptionInnerContainer{
+          float: left;
+          padding-left: 10px;
+
+          .defaultClassOptionCheckBox{
+            float: left;
+          }
+          .defaultClassOptionLabel{
+            float: left;
+            padding-left: 5px;
+          }
+
+          &.allowedAtTopLevel {
+            position: relative;
+            left: 30px;
+          }
+
+          &.isAbstract {
+            position: relative;
+            left: 30px;
+          }
+
+        }
+      }
+    }
+
+    .classImageDetailContainer{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+    }
+
+    .folderOption{
+      padding: 2px 5px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      color: #ccc;
+      border-radius: 4px;
+      float: left;
+      margin: 5px;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: all .2s;
+
+      .folderOptionIcon{
+        float: left;
+        height: 20px;
+        width: 20px;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        opacity: .5;
+        transition: all .2s;
+        display: none;
+
+        &.foiAll{
+
+        }
+
+        &.foiFolder{
+          background-image: url($image-CS-Books-52);
+          display: block;
+        }
+
+        &.foiFile{
+          background-image: url($image-CS-Book-52);
+          display: block;
+        }
+      }
+
+      .folderOptionLabel{
+        float: left;
+        line-height: 21px;
+        font-size: 12px;
+        max-width: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:hover{
+        background: #fff;
+        color: #555;
+        border-color: #888;
+        box-shadow: 0px 0px 0px 1px #888 inset;
+
+        .folderOptionIcon{
+          opacity: 1;
+        }
+      }
+
+      &.selected{
+        background: #fff;
+        color: #555;
+        border-color: orange;
+        box-shadow: 0px 0px 0px 1px orange inset;
+
+        .folderOptionIcon{
+          opacity: 1;
+        }
+      }
+    }
+
+    .allowedClassWraper {
+      float: left;
+      width: 50%;
+      padding: 2px 8px;
+
+      .allowedClassMssWrapper{
+
+        .allowedClassLabel{
+          width: 25%;
+          padding: 5px;
+          float: left;
+          line-height: 28px;
+          font-size: 12px;
+        }
+
+        .searchBarView{
+          float: left;
+          width: 75%;
+
+          .multiSelectSearchLabel{
+            display: none;
+          }
+
+          .searchBarContainer{
+            border-radius: 4px;
+            padding: 0 7px;
+            background-color: #FFF;
+            border: 1px solid #CCC;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            margin-left: 5px;
+            width: 84%;
+            overflow: visible;
+          }
+        }
+      }
+    }
+
+    .classRelationshipType {
+      padding: 0px 13px 2px;
+
+      .classRelationshipTypeLabel {
+        float: left;
+        line-height: 33px;
+      }
+
+      .searchBarView {
+        width: auto;
+        display: inline-block;
+        float: left;
+        margin-left: 25px;
+
+        .multiSelectNothingSelected {
+          margin-top: 6px;
+        }
+      }
+    }*/
+  }
+}

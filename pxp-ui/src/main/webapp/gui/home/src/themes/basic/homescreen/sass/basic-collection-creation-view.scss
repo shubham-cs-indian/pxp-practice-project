@@ -1,0 +1,399 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+@mixin collectionLabelStyle( $tagLabelWidth : 25% ) {
+  width: $tagLabelWidth;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 11px;
+  color: #999;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collectionCreationViewContainer {
+  height: auto;
+  //width: 220px;
+  width: 100%;
+  max-height: 300px;
+  $collectionInformationWidth: calc(100% - 96px);
+  $collectionItemNavigatorButtonWidth:24px;
+  .headerSectionContainer{
+    width: 100%;
+    min-height: 22px;
+    border-bottom: 1px solid #eee;
+    float: left;
+    box-shadow: none;
+
+    .breadCrumbSection {
+      float: left;
+      width: calc(100% - 60px);
+      .breadcrumbViewContainer {
+        height: auto;
+        width: calc(100% - 10px);
+        text-transform: uppercase;
+        color: #ccc;
+        box-shadow: none;
+        .breadCrumbView {
+          height: 20px;
+          line-height: 20px;
+
+          .breadcrumbContainer {
+            height: 100%;
+
+            .breadcrumbItemSeparator {
+              width: 10px;
+              height: 10px;
+              margin: 5px;
+            }
+          }
+          .breadcrumbItem {
+            &::after {
+              top: 6px;
+            }
+          }
+        }
+       .breadcrumbLabel {
+         font-size: 9px;
+       }
+      }
+    }
+
+    .organiseCollectionIcon{
+      //For Text
+      @include ellipsis();
+      font-size: 9px;
+      width: 60px;
+      text-transform: uppercase;
+      line-height: 22px;
+      color: #666;
+      text-shadow: 0px 0px 0px #777;
+      float: left;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        max-width: none;
+        text-decoration: underline;
+      }
+
+      //For Icon
+      /*@include topInlineBlock();
+      margin: 0 3px;
+      width: 20px;
+      height: 20px;
+      float: right;
+      opacity: .5;
+      cursor: pointer;
+      background-size: 15px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url($image-CS-Settings-48);
+
+      &:hover{
+        opacity: .8;
+      }*/
+    }
+  }
+
+  .upperSectionContainer {
+    float: left;
+    width: 100%;
+    .userInputContainer {
+      margin: 5px;
+      border: 1px solid #ccc;
+      .userInput {
+        border-radius: 2px;
+        padding: 2px 6px;
+        font-size: 12px;
+        width: 88%;
+        border: none;
+        &:focus{
+          outline: none
+        }
+      }
+    }
+    .searchClearIcon {
+      width: 20px;
+      height: 20px;
+      background-position: 2px;
+      float: right;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      opacity: .6;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url($image-CS-Cross);
+    }
+  }
+  .collectionListLabelsContainer {
+    padding: 0 8px;
+    white-space: nowrap;
+    vertical-align: top;
+    width: $collectionInformationWidth;
+    &.notOnRootNode{
+      margin-left: $collectionItemNavigatorButtonWidth;
+    }
+    .collectionName {
+      @include collectionLabelStyle(50%);
+    }
+    .createdBy, .creationDate {
+      @include collectionLabelStyle();
+    }
+  }
+
+
+  .middleSectionContainer {
+    //max-height: 200px;
+    float: left;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 200px;
+    scrollbar-width: thin;
+
+    .collectionListContainer {
+      padding-bottom: 7px;
+      overflow: hidden;
+      .emptyListMessage {
+        padding: 4px 8px 0 8px;
+        text-align: center;
+        font-style: italic;
+        font-size: 11px;
+        color: #aaa;
+        line-height: 24px;
+      }
+
+      .collectionsList{
+        overflow: hidden;
+        .scrollContainer {
+          //width: 400px;
+          //width: 100%;
+          min-height: 25px;
+          float: left;
+        }
+      }
+
+      .collectionItem {
+        padding: 0 8px;
+        transition: all .2s;
+        cursor: pointer;
+        overflow: hidden;
+
+        .collectionItemInformation {
+          display: inline-block;
+          white-space: nowrap;
+          vertical-align: top;
+          width: $collectionInformationWidth;
+
+          .collectionItemImage {
+            display: inline-block;
+            vertical-align: top;
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            background-color: #ddd;
+            margin: 3px 6px 3px 0;
+          }
+
+          .collectionItemLabel {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 13px;
+            color: black;
+            line-height: 24px;
+            width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .collectionItemCreatedBy, .collectionItemCreatedOn{
+            @include collectionLabelStyle();
+          }
+        }
+
+        .collectionItemDelete {
+          height: 24px;
+          width: 24px;
+          float: right;
+          font-size: 11px;
+          line-height: 24px;
+          background-image: url($image-CS-delete-bin-black);
+          background-size: 15px;
+          opacity: 0.55;
+          background-position: right;
+          background-repeat: no-repeat;
+        }
+
+        .collectionItemNavigatorButton {
+          height: 24px;
+          width: $collectionItemNavigatorButtonWidth;
+          font-size: 11px;
+          line-height: 24px;
+          background-size: 15px;
+          background-position: 7px;
+          background-repeat: no-repeat;
+
+          &.collectionItemPrevious{
+            float: left;
+            background-image: url($image-CS-arrow-backward);
+          }
+
+          &.collectionItemNext{
+            float: right;
+            background-image: url($image-CS-arrow-forward);
+            //margin-right: 5px;
+          }
+
+          &:hover {
+            background-size: 16px;
+          }
+        }
+
+        .organiseCollectionIcon{
+          opacity: .5;
+          height: 24px;
+          width: 24px;
+          float: right;
+          font-size: 11px;
+          line-height: 24px;
+          background-size: 12px;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-image: url($image-CS-Settings-48);
+
+          &:hover{
+            background-size: 16px;
+          }
+        }
+
+        .collectionItemPublicButton{
+          background-image: url($image-CS-unlock);
+          height: 24px;
+          width: 24px;
+          background-size: 15px;
+          background-position: right;
+          border-radius: 50%;
+          cursor: pointer;
+          float: right;
+          background-repeat: no-repeat;
+          opacity: 0.6;
+
+          &.collectionItemPrivateButton{
+            background-image: url($image-CS-lock);
+          }
+
+        }
+
+        &:hover {
+          background: #eee;
+        }
+
+        &.isSelected {
+          background: #ececec;
+
+          /*.collectionItemInformation {
+            width: 100%;
+          }*/
+
+          /*.collectionItemDelete {
+            display: none;
+          }*/
+        }
+
+        &.isActive {
+          box-shadow: 2px 0 0 0 #3498db inset;
+        }
+      }
+    }
+  }
+
+  .lowerSectionContainer {
+    background: #eee;
+    overflow: hidden;
+    transition: all .2s;
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .publicModeButton{
+      background-image: url($image-CS-unlock);
+      height: 24px;
+      width: 24px;
+      background-size: 15px;
+      background-position: 50%;
+      border-radius: 50%;
+      cursor: pointer;
+      float: right;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+
+      &.isPrivateButton{
+        background-image: url($image-CS-lock);
+      }
+
+    }
+
+    .buttonContainer {
+      padding: 7px;
+      transition: all .2s;
+
+      &.createButton {
+        float: right;
+
+        .createButtonLabel {
+          line-height: 24px;
+          text-transform: uppercase;
+          //padding: 0 15px;
+          color: #fff;
+          font-weight: 500;
+
+          .userInputContainer {
+            display: inline-flex;
+            max-width: 110px;
+            white-space: nowrap;
+
+            .userInput {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 11px;
+            }
+          }
+        }
+
+        span {
+          font-size: 11px;
+        }
+      }
+
+      &.modifyAndOpenButtonContainer {
+        display: inline-block;
+
+        .modifyAndOpenButtons {
+          float: left;
+          margin: 4px 0px 4px 4px;
+
+          > button {
+            padding: 0px 16px;
+
+            > span {
+              @include ellipsis();
+              color: white;
+              max-width: 100%;
+              font-size: 11px;
+            }
+          }
+        }
+
+      }
+
+      &.collapsed {
+        height: 0;
+        padding: 0;
+      }
+    }
+  }
+}

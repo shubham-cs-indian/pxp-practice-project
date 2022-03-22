@@ -1,0 +1,52 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+.upload-wrapper{
+  height: 100%;
+  width: 100%;
+  border: 3px solid $color-theme-accent;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  &.displayN {
+    display: none !important;
+  }
+
+  &.over {
+    display: block;
+  }
+
+  .upload-container {
+    background: $color-theme-accent;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .upload-info{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 180px);
+    background: $color-theme-accent;
+    height: 100px;
+    width: 360px;
+    padding: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+    .upload-icon{
+      @include background-properties-with-theme-white-color($image-CS-bulkUpload);
+      margin-left: calc(50% - 26px);
+      height: 52px;
+      width: 52px;
+    }
+
+    .upload-text{
+      text-align: center;
+      font-size: $font-extra-large;
+      color: $color-light-1;
+    }
+  }
+}*/

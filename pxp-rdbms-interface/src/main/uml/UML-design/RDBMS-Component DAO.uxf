@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>370</y>
+      <w>550</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IBaseEntityDAO
+--
+IBaseEntityFullDTO {cache}
+--
+{DTO factory}
+newClassifierDTO(): IClassifierDTO
+newValueRecordDTO(): IValueRecordDTO
+newTagsRecordDTO(): ITagsRecordDTO
+newContextDTO(): IContextDTO
+newPropertyDTO(): IPropertyDTO
+--
+delete(comment= "")
+loadPropertiyRecords(IPropertyDTO...):IBaseEntityFullDTO
+createPropertyRecords(comment="", IPropertyRecordDTO&gt;...)
+udpatePropertyRecords(comment="", IPropertyRecordDTO&gt;...)
+getClassifiers():List&lt;IClassifierDTO&gt;
+addClassifiers(IClassifierDTO...)
+removeClassifiers(IClassifierDTO...)
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>220</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RDBMS Component DAO
+Batch 1 target
+April-18 2019
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>90</y>
+      <w>590</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ILocaleCatalogDAO
+--
+ILocaleCatalogDTO  {cache}
+--
+{DTO factory}
+newBaseEntityDTO(): IBaseEntityDTO
+newPropertyDTO(...): IPropertyDTO
+--
+{DAO factory}
+openBaseEntity( baseEntityDTO): IBaseEntityDTO
+--
+{data services}
+applyLocaleInheritanceSchema( List&lt;LocaleID&gt;)
+getEntityByID( objectID): IBaseEntityDTO
+getAllEntity( superType, modifierByUserID=null): ICursor&lt;IBaseEntityDTO&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>250</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+openBaseEntity</panel_attributes>
+    <additional_attributes>70.0;120.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>140</y>
+      <w>360</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ICursor&lt;anyDTO&gt;
+--
+getCount()
+getNext():List&lt;anyDTO&gt;
+getPosition()
+close()
+hibernate()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>210</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+getAllEntities</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

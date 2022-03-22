@@ -1,0 +1,177 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "csid": "[c>R_Master_4 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_Master_4",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "pid_attribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "nameattribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "sku_attribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "gtin_attribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "statustag",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "shortdescriptionattribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "longdescriptionattribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "Jembeddedclasses": {
+      
+    },
+    "masterParentTag": "",
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "LLevelCode": [
+      "R_Master_level3",
+      "R_Master_level4"
+    ],
+    "LLevelLabels": [
+      "R_Hie_level1123",
+      "R_Hie_level2123"
+    ],
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "csid": "[c>R_master_child111 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_master_child111",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "R_Master_4",
+    "masterParentTag": "R_Master_level3",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "csid": "[c>R_master_child222 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_master_child222",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "R_Master_4",
+    "masterParentTag": "R_Master_level3",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  }
+]

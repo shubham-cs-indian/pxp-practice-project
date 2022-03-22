@@ -1,0 +1,106 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.manageEntityDialog {
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .alertIcon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: right;
+    background-size: 16px;
+    background-color: #ddd;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+    &.warning {
+      background-image: url($image-CS-Brake-Warning-50);
+    }
+  }
+  .message {
+    font-size: 14px;
+    margin-bottom: 15px;
+
+    .alertMessageIcon {
+      width: 20px;
+      height: 20px;
+      @include background-properties($image-alert, 18px);
+      margin-right: 5px;
+      float: left;
+    }
+  }
+  .childWarning {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .entityWrapper {
+    width: 100%;
+    float: left;
+    margin: 5px 0;
+
+    .entityConfiguration {
+      margin-bottom: 20px;
+    }
+
+    .entityTitleWrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      h5.entityType {
+        width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 16px;
+      }
+
+      span {
+        &.usedCount {
+          margin-left: 5px;
+          background: #d9d9d9;
+          border-radius: 25px;
+          width: 22px;
+          height: 14px;
+          font-size: 10px;
+          color: #333;
+          text-align: center;
+          line-height: 15px;
+        }
+      }
+    }
+    .no_usage_found {
+      font-size: 90%;
+    }
+    .manageEntityWrapper {
+      width: 100%;
+      margin-bottom: 7px;
+
+      .used_entity_by{
+        display: grid;
+        grid-template-columns: 35% 65%;
+        margin: 3px 0;
+        font-size: 96%;
+
+        div {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-right: 10px;
+          max-width: 250px;
+          white-space: nowrap;
+          font-size: inherit;
+        }
+
+        .user_tab{
+          color: #8f8f8f;
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}

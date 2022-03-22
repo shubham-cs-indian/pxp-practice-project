@@ -1,0 +1,170 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.indesignConfigurationContainer {
+  padding: 2em;
+  height: 100%;
+
+  legend {
+    font-size: $font-sub-title;
+  }
+  .indesignServerConfigurationSection {
+    margin: 0 0 0;
+    position: relative;
+    height: calc(100% - 60px);
+
+    .indesignServerConfigurationHeaderContainer {
+      margin-bottom: 20px;
+      border: 0;
+      border-bottom: 1px solid #e5e5e5;
+      height:40px;
+      display: flex;
+      .indesignServerConfigurationHeader {
+        line-height: inherit;
+        color: #333;
+        border: 0;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 500;
+        float: left;
+        flex-grow: 1;
+      }
+    }
+
+    fieldset {
+      height: 100%;
+      border:none
+    }
+  }
+
+  .indesignLoadBalancerConfigurationsContainer {
+    padding: 15px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    background: #f9f9f9;
+    height:100%;
+
+    .loadBalancerConfiguration {
+      addIndsignServerButtonConfigContainer {
+        width: 100%;
+      }
+      label {
+        text-transform: uppercase;
+      }
+      .commonConfigSectionViewContainer {
+        .commonConfigSection {
+          margin: 10px 0px 15px 0px;
+          padding: 0px;
+          box-shadow: 0 0px 0px;
+          .commonConfigSectionElementWrapper {
+            margin: 5px 0px;
+          }
+        }
+      }
+      .addIndesignServerButton {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        color: black;
+        z-index: 1;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 5px $color-dark-1;
+        margin-top: -17px;
+        margin-left: 114px;
+      }
+    }
+    legend {
+      font-size: 14px;
+      padding: 0px 0px 10px 0px;
+      margin-bottom: 0px;
+    }
+    .indesignServerConfigurationsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      max-height: 100%;
+      overflow: auto;
+      min-height: 20%;
+      height: calc(100% - 195px);
+      scrollbar-width: thin;
+
+      .indesignServerConfigurationWrapper {
+        flex-wrap: wrap;
+        width:100%;
+
+        .indesignServerConfiguration {
+          background-color: $color-light-1;
+          border: 1px solid $color-light-4;
+          position: relative;
+          flex-basis: 415px;
+          padding: 1em;
+          align-items: flex-start;
+          margin-top: 15px;
+
+          * {
+            outline: none;
+          }
+
+          *:active {
+            outline: none;
+          }
+
+          .configurationEntry {
+            margin-bottom: 1rem;
+
+            > label {
+              margin-top: 10px;
+              margin-left: 100px;
+              text-transform: uppercase;
+            }
+
+            > input {
+              flex: 2;
+            }
+
+            .checkStatusButton {
+              margin-left: auto;
+            }
+          }
+
+          .configurationHeading {
+            position: absolute;
+            top: -13px;
+            left: 12px;
+            padding: 5px;
+            background-color: $color-light-1;
+
+          }
+
+          .removeConfigurationButton, .saveConfigurationButton {
+            @include background-properties($image-CS-Cancel-2-Filled-30-Red, 18px);
+            height: 25px;
+            width: 25px;
+            background-size: 18px;
+            opacity: .4;
+            transition: all .2s;
+            float: right;
+            margin-top: -14px;
+            filter: invert(50%);
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          .saveConfigurationButton {
+            @include background-properties($image-CS-SaveFilled-50Black, 18px);
+            right: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+
+}

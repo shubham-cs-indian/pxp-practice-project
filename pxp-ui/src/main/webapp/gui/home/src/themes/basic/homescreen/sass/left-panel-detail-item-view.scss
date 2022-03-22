@@ -1,0 +1,201 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.leftPanelDetailItemViewWrapper {
+  //height: 28px;
+
+  .leftPanelHeader {
+    box-shadow: 0 0 4px -1px #333;
+    background-color: #4A4A4A;
+
+    .headerLabel {
+      display: inline-block;
+      line-height: 28px;
+      color: #ffffff;
+      padding-left: 90px;
+    }
+
+    .rightIconContainer {
+      display: inline-block;
+      float: right;
+      padding-top: 5px;
+
+      .createCollectionIcon {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background: url($image-CS-Plus-Filled-E2E9EC-32) no-repeat 0px 0px;
+        background-size: 15px;
+
+        &:hover {
+          background: url($image-CS-Plus-Filled-E2E9EC-32) no-repeat 0px 0px;
+          background-size: 15px;
+        }
+      }
+
+      .deleteCollectionIcon {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        @include background-properties-with-theme-white-color($image-CS-delete-bin, no-repeat 0px 0px);
+        background-size: 15px;
+
+        &:hover {
+          background: url($image-CS-Delete-Filled-E2E9EC-32) no-repeat 0px 0px;
+          background-size: 15px;
+        }
+      }
+    }
+  }
+
+  .leftPanelCollectionWrapper {
+
+    .showAllProducts{
+      cursor: context-menu;
+      height: 25px;
+      line-height: 25px;
+      padding-left: 23px;
+
+      &.selected{
+      }
+    }
+
+    .setListWrapper {
+      margin-bottom: 5px;
+
+      .setHeaderContainer {
+        height: 26px;
+        padding: 4px;
+        padding-left: 0px;
+
+        .setStatusIcon {
+          width: 22px;
+          height: 18px;
+          opacity: 0.7;
+          float: left;
+          background-repeat: no-repeat;
+          background-size: 7px;
+          background-position: 7px;
+          background-image: url($image-CS-triangle-east-25);
+        }
+
+        .setHeaderLabel {
+          font-size: 12px;
+          color: #333;
+          float: left;
+          line-height: 18px;
+          max-width: calc(100% - 25px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+
+      .setListContainer {
+        .listNodeViewContainer {
+          padding: 4px 26px;
+        }
+      }
+
+      &.expanded {
+        .setStatusIcon {
+          background-image: url($image-CS-triangle-south-25);
+        }
+      }
+    }
+
+    .treeView {
+      width: 100%;
+      border: none;
+
+      .treeNodeViewChildContainer{
+        background: none;
+       }
+
+      .treeNodeViewContainer {
+        background: none;
+
+       !* .treeNodeViewNode {
+          padding-left: 10px;
+          background: none;
+        }*!
+      }
+
+   !*   .treeNodeViewName{
+        color: #eee;
+      }*!
+
+      .treeNodeChecked, .treeNodeSelected{
+        box-shadow: none;
+
+      !*  .treeNodeViewName{
+          color: #F79646;
+          font-weight: 500;
+          text-shadow: 0px 1px 1px #333;
+        }*!
+      }
+
+      .arrow-down{
+        @include background-properties-with-theme-white-color($image-CS-expand-arrow-icon);
+      }
+
+      .arrow-right{
+        @include background-properties-with-theme-white-color($image-CS-arrow-forward);
+      }
+
+      .activeNodeIcon{
+        display: none;
+      }
+    }
+
+    .leftPanelCollectionItem{
+      color: #eee;
+      font-size: 12px;
+      padding: 2px 0;
+      box-shadow: 0px 1px 0px 0px #4A4A4A inset, 0px -1px 0px 0px #383838 inset;
+      padding-left: 14px;
+      position: relative;
+      //margin: 0 10px;
+
+      .showAllProducts.selected{
+        color: #F8EC00;
+        font-weight: 500;
+        text-shadow: 0px 1px 1px #333;
+      }
+
+      .leftPanelCollectionItemIcon{
+        background-size: 16px;
+        background-position: 0;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 5px;
+        left: 12px;
+        opacity: .8;
+        z-index: 1;
+
+        &.allIcon{
+          background-image: url($image-CS-Ok-Filled-50);
+        }
+
+        &.articleIcon{
+          @include background-properties-with-theme-white-color($image-CS-Books-52Black);
+        }
+
+        &.setIcon{
+          background-image: url($image-CS-DoorSensor);
+        }
+
+        &.collectionIcon{
+          background-image: url($image-CS-Database-Filled-50);
+        }
+      }
+
+      & *{
+        font-size: 12px;
+      }
+    }
+  }
+}
+*/

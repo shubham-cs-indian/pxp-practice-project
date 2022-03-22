@@ -1,0 +1,27 @@
+/*------Refactor------------------------------------------------------------------*/
+#Refactor.Event: Revisit Event Handling
+#Refactor.MoveFile: Revisit the location of file and move to appropriate location
+#Refactor.ChangeImplementation: Revisit and change existing implementation
+
+/*------Review--------------------------------------------------------------------*/
+#Review.Event:
+
+/*-------PendingImplementation----------------------------------------------------*/
+#PendingImplementation
+
+/*-------Pending UseCase Implementation-------------------------------------------*/
+#PendingUseCase
+
+
+/*---------Clean Up---------------------------------------------------------------*/
+#CleanUp: Revisit and do clean up of code
+
+/*---------Change Functionality Handle--------------------------------------------*/
+#Tweak: Tweak the code to change functionality
+
+/*-------------Pending Logs-------------------------------------------------------*/
+#Logs: Pending Implementation
+
+
+/*--------------Pending Adapter Models----------------------------------------------*/
+#MakeAdapter: Make model as adapter pattern

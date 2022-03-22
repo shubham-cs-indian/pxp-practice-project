@@ -1,0 +1,24 @@
+@import "./../../../../styleguide/style-guide";
+.variantTagsEditContainer {
+
+  .circledTagGroupViewContainer {
+
+    .circledTagGroupViewItems {
+      .circledTagNodeViewContainer {
+
+        &.disabled {
+
+          .nodeImageCircleContainer{
+
+            &.green:after{
+              background-color: transparent;
+              @include background-properties-with-theme-light-gray-color($image-CS-CheckMark-round);
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

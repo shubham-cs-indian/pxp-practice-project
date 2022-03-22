@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>70</x>
+      <y>200</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*Unique*
+--
+{One single Owner}
+-.
+valign=top
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>460</x>
+      <y>150</y>
+      <w>190</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>*Master-slave(s)*
+--
+{Master + Slave(s) entities}
+OR
+{Master + broken Masters + Slave(s) entities}
+-.
+
+valign=top
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>920</x>
+      <y>150</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Concurrent Masters*
+--
+{Multiple Masters + Slave(s) entities}
+-.
+valign=top
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>470</x>
+      <y>440</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Notified Slaves*
+--
+{Notifying Master + Slave(s) entities}
+-.
+valign=top
+style=wordwrap
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>910</x>
+      <y>440</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Pending Slaves*
+--
+{Pending Master + Slave(s) entities}
+-.
+valign=top
+style=wordwrap
+fg=blue
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>140</x>
+      <y>80</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>90</y>
+      <w>130</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+create record 
+without coupling
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>60</y>
+      <w>110</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+create record 
+with coupling</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>550</x>
+      <y>50</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>170</y>
+      <w>300</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+create record with coupling
+from another master</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>320</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[Tight Coupling] 
+update Master record
+fg=blue</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>230</y>
+      <w>470</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+master record 
+accepted</panel_attributes>
+    <additional_attributes>370.0;10.0;370.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>440</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[Tight Coupling]
+master record denied
+fg=blue</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>490</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[Tight Coupling] 
+update Master record
+fg=blue</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>320</y>
+      <w>130</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[Tight Coupling] 
+master record 
+accepted
+fg=blue</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>270</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[Dynamic Coupling]
+Source of coupling 
+suppressed</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>440</x>
+      <y>90</y>
+      <w>690</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes>*Coupled Record*
+--
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>310</y>
+      <w>120</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+Record deleted</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>130</x>
+      <y>460</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>450</y>
+      <w>320</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+Record deleted</panel_attributes>
+    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>10</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Architecture Draft
+May 2019
+deprecated
+bg=pink
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

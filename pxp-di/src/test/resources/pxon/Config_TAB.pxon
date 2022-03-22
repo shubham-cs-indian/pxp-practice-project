@@ -1,0 +1,124 @@
+[
+  "bgp 1000016 started 2020-06-11T14:54:21",
+  "scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"TAB\"],\"TAB\":[],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}",
+  {
+    "sequence": 3,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>context_tab]",
+    "icon": null,
+    "label": "context_tab"
+  },
+  {
+    "sequence": 8,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>duplicate_tab]",
+    "icon": null,
+    "label": "duplicates_tab"
+  },
+  {
+    "sequence": 7,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>mdm_tab]",
+    "icon": null,
+    "label": "mdm_tab"
+  },
+  {
+    "sequence": 10,
+    "LpropertySequenceList": [
+      "targetGeneralInformationPropertyCollection"
+    ],
+    "csid": "[W>Tab100097]",
+    "icon": null,
+    "label": "New 88 tab"
+  },
+  {
+    "sequence": 11,
+    "LpropertySequenceList": [
+      "supplierGeneralInformationPropertyCollection",
+      "UNIT_Default",
+      "metadataCollection"
+    ],
+    "csid": "[W>Tab100098]",
+    "icon": null,
+    "label": "New 89 tab"
+  },
+  {
+    "sequence": -1,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>overview_tab]",
+    "icon": null,
+    "label": "overview_tab"
+  },
+  {
+    "sequence": 1,
+    "LpropertySequenceList": [
+      "articlegeneralInformationPropertyCollection",
+      "pricingPropertyCollection",
+      "assetInformationPropertyCollection",
+      "textassetGeneralInformationPropertyCollection",
+      "defaultXRayPropertyCollection"
+    ],
+    "csid": "[W>property_collection_tab]",
+    "icon": null,
+    "label": "property_collection_tab"
+  },
+  {
+    "sequence": 2,
+    "LpropertySequenceList": [
+      "standardArticleAssetRelationship",
+      "standardMarketAssetRelationship",
+      "standardSupplierAssetRelationship",
+      "standardTextAsset-AssetRelationship",
+      "standardArticleMarketRelationship",
+      "standardVirtualCatalogAssetRelationship",
+      "standardArticleGoldenArticleRelationship"
+    ],
+    "csid": "[W>relationship_tab]",
+    "icon": null,
+    "label": "relationship_tab"
+  },
+  {
+    "sequence": 6,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>rendition_tab]",
+    "icon": "D:\Assets\Ferrari1.jpg",
+    "label": "renditions_tab"
+  },
+  {
+    "sequence": 4,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>task_tab]",
+    "icon": "D:\Assets\Ferrari1.jpg",
+    "label": "task_tab"
+  },
+  {
+    "sequence": 5,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>timeline_tab]",
+    "icon": "D:\Assets\Ferrari1.jpg",
+    "label": "timeline_tab"
+  },
+  {
+    "sequence": 9,
+    "LpropertySequenceList": [
+      
+    ],
+    "csid": "[W>usage_tab]",
+    "icon": null,
+    "label": "Usages"
+  }
+]

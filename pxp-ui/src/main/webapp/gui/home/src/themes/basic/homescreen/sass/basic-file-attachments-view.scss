@@ -1,0 +1,182 @@
+@import "./../../../../styleguide/style-guide";
+.fileAttachmentViewWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .fileAttachmentsTile {
+    float: left;
+    width: calc(100% - 120px);
+
+    &.maximumAttachmentTileWidth{
+      width: 100%;
+    }
+
+    .moreLessButton {
+      visibility: hidden;
+      height: 0px;
+      width: 0px;
+      display: inline-block;
+      background-color: #006f00;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      margin: 0px;
+
+      &.showMoreLessButton {
+        visibility: visible;
+        height: 40px;
+        width: 40px;
+        margin: 8px;
+      }
+
+      .moreLessCount {
+        cursor: pointer;
+        line-height: 40px;
+        font-size: 11px;
+        padding: 0 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+    }
+
+    .iconWrapper {
+      vertical-align: top;
+      height: 40px;
+      width: 40px;
+      margin: 8px;
+      position: relative;
+      cursor: pointer;
+      padding: 1px;
+      float: left;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #eee;
+
+      &:hover {
+        border-color: #ccc;
+      }
+      &.removeRightMargin{
+        margin-right: 0px;
+      }
+
+      &.hideAttachmentIcon{
+        display: none;
+      }
+
+      .attachmentWrapper {
+        position: relative;
+        overflow: hidden;
+
+        .icon {
+          position: relative;
+          max-width: 35px;
+          max-height: 35px;
+        }
+
+        &.xlsIcon {
+          height: 40px;
+          width: 40px;
+          background: url($image-ic-xls) center no-repeat;
+          background-size: 30px;
+        }
+
+        &.objIcon {
+          height: 40px;
+          width: 40px;
+          background: url('../images/ic_obj.svg') center no-repeat;
+          background-size: 30px;
+        }
+
+        &.stpIcon {
+          height: 40px;
+          width: 40px;
+          background: url('../images/ic_stp.svg') center no-repeat;
+          background-size: 30px;
+        }
+
+        &.fbxIcon {
+          height: 40px;
+          width: 40px;
+          background: url('../images/ic_fbx.svg') center no-repeat;
+          background-size: 30px;
+        }
+
+      }
+
+      .iconRemoveImage{
+        height: 15px;
+        width: 15px;
+        background: url($image-CS-Cancel-Black) no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: -7px;
+        z-index: 1;
+        top: -7px;
+        opacity: 0.6;
+        transition: all .2s;
+
+        &.hideAttachmentRemoveIcon{
+          display: none;
+        }
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+      }
+    }
+
+  }
+
+  .fileAttachmentsUploadWrapper {
+    float: right;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    opacity: .6;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.hideAttachmentUploadButton{
+      display: none;
+      width: 0px;
+    }
+
+    &.moreHeight{
+      height: 50px;
+      padding-top: 27px;
+    }
+
+    .uploadAttachment{
+      height: 20px;
+      width: 25px;
+      float: right;
+      background: url($image-CS-attachment) no-repeat;
+      background-size: 15px;
+      background-position: center;
+      opacity: 0.8;
+    }
+
+    .fileAttachmentUploadLabel{
+      float: right;
+      line-height: 20px;
+      font-size: 11px;
+      color: #555;
+      max-width: 95px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+      white-space: nowrap;
+      padding: 0 3px;
+    }
+
+  }
+
+}

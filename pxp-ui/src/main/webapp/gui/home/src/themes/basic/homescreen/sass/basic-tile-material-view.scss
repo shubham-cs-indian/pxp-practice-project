@@ -1,0 +1,84 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.tileMaterialContainer {
+  display: inline-block;
+  height: 80px;
+  transition: all .1s;
+  width: 98%;
+  margin-left: 1%;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, .07);
+  position: relative;
+
+  .contentBody {
+
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    color: #333;
+    text-shadow: none;
+    line-height: 25px;
+    width: calc(100% - 80px);
+    .contentHeader {
+      margin-top: 10px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .contentDescription {
+      font-size: 11px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: calc(100% - 40px);
+      text-align: left;
+    }
+
+  }
+
+  .contentImage {
+    float: left;
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    position: relative;
+    .tileImage {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .contentRemove {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background-image: url($image-CS-DeleteFilled-100);
+    background-size: 13px;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    background-position: 8px;
+    margin: 2px;
+    opacity: .3;
+    transition: all .2s;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    &.hideDeleteIcon {
+      display: none;
+    }
+  }
+
+}
+
+
+*/

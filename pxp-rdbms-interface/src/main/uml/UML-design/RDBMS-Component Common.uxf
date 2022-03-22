@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>10</y>
+      <w>220</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RDBMS Component Common
+Batch 1 target
+March-29 2019
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>530</y>
+      <w>180</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ICatalogDTO
+--
+catalogID
+catalogName
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>180</y>
+      <w>320</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IRootDTO
+--
+fromJSON(String)
+toJSON(): String
+toJSONBuffer(): StringBuilder</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>400</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IObjectDTO
+--
+objectID
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>300</y>
+      <w>190</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;60.0;10.0;60.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>300</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>910</x>
+      <y>240</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Is common root to all DTOs
+{JSON static duplex translation}
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>530</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IPropertyDTO
+--
+propertyID
+propertyType
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>300</y>
+      <w>130</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;110.0;60.0;110.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>400</y>
+      <w>190</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IUserDTO
+--
+userID
+name</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>300</y>
+      <w>290</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;270.0;60.0;270.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1030</x>
+      <y>530</y>
+      <w>220</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Common DTOs cover the dimensions of RDBMS star schema
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>170</y>
+      <w>480</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+template=IDTO extends IRootDTO
+ICursor&lt;IDTO&gt;
+--
+getCursorID():String
+getCount():long
+getPosition():long
+next(long):List&lt;IDTO&gt;
+close()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>230</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>630</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>RDBMSException
+--
+{CursorError: when cursor resourrces are overflown}
+{RDBMSError: when the RDBMS returns an error}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>400</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>ISessionDTO
+--
+sessionID
+loginTime
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>300</y>
+      <w>330</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>310.0;10.0;310.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>20</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IRDBMSDriver
+{postgre / oracle component bootstrap}
+--
+newUserSessionDAO(): IUserSessionDAO
+newObjectTrackingDAO(): IObjectTrackingDAO
+bg=green
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>30</y>
+      <w>320</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>RDBMSManager
+{initialization singleton}
+--
+registerDriver(driver)
+IRDBMSDriver getDriver()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>50</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;factory&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

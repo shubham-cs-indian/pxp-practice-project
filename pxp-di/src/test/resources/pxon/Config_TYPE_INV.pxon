@@ -1,0 +1,197 @@
+[
+    "bgp 1000275 started 2020-05-11T17:58:02",
+    "scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"PROPERTY\"],\"PROPERTY\":[\"code_2223b864-7d19-4150-be6b-c6c679f2a4c1:RELATIONSHIP\",\"code_6ba3e954-6cf7-4c64-8b5e-b3debe349fde:RELATIONSHIP\",\"code_2cac6ece-c119-4750-8da8-340998a2de94:RELATIONSHIP\",\"standardPromotionAssetRelationship:RELATIONSHIP\",\"standardTextAssetAssetRelationship:RELATIONSHIP\",\"code_8019090d-3afa-4120-b562-351ec41d50f2:RELATIONSHIP\",\"standardArticleAssetRelationship:RELATIONSHIP\",\"standardArticleMarketRelationship:RELATIONSHIP\",\"standardTextAsset-AssetRelationship:RELATIONSHIP\",\"standardMarketAssetRelationship:RELATIONSHIP\",\"code_2edf884a-6edb-4a5a-8063-0ccc5d3c0c5d:RELATIONSHIP\",\"standardVirtualCatalogAssetRelationship:RELATIONSHIP\",\"standardArticleGoldenArticleRelationship:RELATIONSHIP\",\"standardSupplierAssetRelationship:RELATIONSHIP\",\"Testing:RELATIONSHIP\"]}", "Relationships codes=[code_2223b864-7d19-4150-be6b-c6c679f2a4c1, code_6ba3e954-6cf7-4c64-8b5e-b3debe349fde, code_2cac6ece-c119-4750-8da8-340998a2de94, standardPromotionAssetRelationship, standardTextAssetAssetRelationship, code_8019090d-3afa-4120-b562-351ec41d50f2, standardArticleAssetRelationship, standardArticleMarketRelationship, standardTextAsset-AssetRelationship, standardMarketAssetRelationship, code_2edf884a-6edb-4a5a-8063-0ccc5d3c0c5d, standardVirtualCatalogAssetRelationship, standardArticleGoldenArticleRelationship, standardSupplierAssetRelationship, Testing]", {
+        "tab": "event_tab",
+        "csid": "[Testing $iid=1000248 $type=RELATIONSHIP1]",
+        "$isstandard": false,
+        "label": "Testing",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "market",
+            "Lcouplings": [{
+                    "couplingType": "tightlyCoupled",
+                    "id": "addressattribute",
+                    "type": "attribute"
+                }
+            ],
+            "contextcode": "KK_Relationship_Variant",
+            "label": "Market 12"
+        },
+        "Jside2": {
+            "isvisible": true,
+            "$cardinality": "One",
+            "$classcode": "asset_asset",
+            "Lcouplings": [{
+                    "couplingType": "tightlyCoupled",
+                    "id": "descriptionattribute",
+                    "type": "attribute"
+                }, {
+                    "couplingType": "tightlyCoupled",
+                    "id": "availabilitytag"
+                }
+            ],
+            "contextcode": null,
+            "label": "Asset 56"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardArticleAssetRelationship $iid=281 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "Article-Asset Relationship",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "article",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Articles"
+        },
+        "Jside2": {
+            "isvisible": false,
+            "$cardinality": "Many",
+            "$classcode": "asset_asset",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Images"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardArticleGoldenArticleRelationship $iid=282 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "Article-GoldenArticle Relationship",
+        "Jside1": {
+            "isvisible": false,
+            "$cardinality": "One",
+            "$classcode": "article",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Golden Article"
+        },
+        "Jside2": {
+            "isvisible": false,
+            "$cardinality": "Many",
+            "$classcode": "golden_article_klass",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Articles"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardArticleMarketRelationship $iid=283 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "Article - Market Relationship",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "article",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Market"
+        },
+        "Jside2": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "market",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Articles"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardMarketAssetRelationship $iid=284 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "Market-Asset Relationship",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "market",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Images"
+        },
+        "Jside2": {
+            "isvisible": false,
+            "$cardinality": "Many",
+            "$classcode": "asset_asset",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Market"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardSupplierAssetRelationship $iid=286 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "Supplier-Asset Relationship",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "supplier",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Images"
+        },
+        "Jside2": {
+            "isvisible": false,
+            "$cardinality": "Many",
+            "$classcode": "asset_asset",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Supplier"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardTextAsset-AssetRelationship $iid=1000001 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "TextAsset-Asset Relationship",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "text_asset",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Images"
+        },
+        "Jside2": {
+            "isvisible": false,
+            "$cardinality": "Many",
+            "$classcode": "asset_asset",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "TextAsset"
+        },
+        "$isnature": false
+    }, {
+        "tab": "relationship_tab",
+        "csid": "[standardVirtualCatalogAssetRelationship $iid=288 $type=RELATIONSHIP]",
+        "$isstandard": true,
+        "label": "VirtualCatalog-Asset Relationship",
+        "Jside1": {
+            "isvisible": true,
+            "$cardinality": "Many",
+            "$classcode": "virtual_catalog",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "Images"
+        },
+        "Jside2": {
+            "isvisible": false,
+            "$cardinality": "Many",
+            "$classcode": "asset_asset",
+            "Lcouplings": [],
+            "contextcode": null,
+            "label": "VirtualCatalog"
+        },
+        "$isnature": false
+    },
+    "bgp 1000275 ended 2020-05-11T17:58:02"
+]
+]
+]
+]

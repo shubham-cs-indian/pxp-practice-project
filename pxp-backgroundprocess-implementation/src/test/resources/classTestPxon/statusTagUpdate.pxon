@@ -1,0 +1,44 @@
+{
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Non_Nature $iid=100 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "Lproductvariantcontextcode": [
+      
+    ],
+    "Lpromotionalversioncontextcode": [
+      
+    ],
+    "label": "Non-Nature",
+    "isabstract": true,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "Lversioncontextcode": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "$isnature": false
+  }

@@ -1,0 +1,167 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$selectedMenuItemBorder: 2px solid $color-theme-secondary;
+
+/*
+.menuContainer {
+  overflow: hidden;
+  height: 48px;
+  border-bottom: none;
+  border-bottom: none;
+  position: relative;
+  background: $color-theme-primary;
+  box-shadow: 0 0 3px 0 #383838;
+  z-index: 15;
+
+  .aboutButtonDialogViewContainer .aboutButtonContainer {
+    background-repeat: no-repeat;
+  }
+}
+*/
+
+.menuViewContainer {
+  width: calc(100% - 300px);
+  height: 100%;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .physicalCatalogMenuItem {
+    width: 80px;
+    overflow: auto;
+    .multiSelectSearchViewWrapper {
+      padding: 15% 0% 10% 0%;
+    }
+  }
+}
+
+.menuItem {
+  width: 40px;
+  height: 100%;
+  float: left;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: 3px;
+  cursor: pointer;
+  &.disabled {
+    opacity: 0.5;
+    &:hover {
+     // border-bottom: none;
+    }
+  }
+}
+
+.helpButtonViewContainer {
+  height: 100%;
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+  .helpButton {
+    background-image: url($image-CS-help-button);
+    float: right !important;
+    background-size: 31px !important;
+    height: 46px;
+    .selectedMenuItem {
+      background-image: url($image-CS-help-button);
+      border-bottom: $selectedMenuItemBorder;
+    }
+  }
+}
+
+[data-initials]:before {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #152078;
+    opacity: 1;
+    content: attr(data-initials);
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 29px;
+    text-align: center;
+}
+
+
+.logoContainer {
+  display: none;
+}
+
+.menuItem:hover {
+ // border-bottom: $selectedMenuItemBorder;
+}
+
+.contentMenuItem {
+  @include background-properties($image-CS-Product-menu);
+}
+
+.dashboardMenuItem {
+@include background-properties-with-theme-white-color($image-CS-menu-item-dashboard);
+}
+
+.settingsMenuItem {
+  background-image: url($image-CS-Settings-48);
+}
+
+/*----Selected Menu Item----------*/
+.contentMenuItem.selectedMenuItem {
+  @include background-properties-with-theme-white-color($image-CS-Product-menu);
+  border-bottom: $selectedMenuItemBorder;
+}
+
+.dashboardMenuItem.selectedMenuItem {
+  background-image: url($image-CS-menu-item-dashboard);
+  border-bottom: $selectedMenuItemBorder;
+}
+
+.settingsMenuItem.selectedMenuItem {
+  background-image: url($image-CS-Settings-48);
+  border-bottom: $selectedMenuItemBorder;
+}
+
+.logoContainer {
+  width: 48px;
+  height: 100%;
+  display: inline-block;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.searchBox {
+  margin: 8px 2px;
+  box-shadow: 0px 1px 0px rgba(196, 195, 255, 0.58), 1px 2px 3px rgba(0, 0, 0, 0.34) inset, 0px 1px 2px -1px rgba(112, 129, 139, 0.72) inset;
+  border: none;
+  &::-webkit-input-placeholder {
+    color: rgb(210, 192, 212);
+  }
+}
+
+.menuViewContainer {
+  width: auto;
+  text-align: right;
+  float: right;
+  display: inline-block;
+}
+
+.menuItem {
+  display: inline-block;
+  transition: all .2s ease-out;
+  float: none;
+  width: 34px;
+  background-size: 25px;
+}
+
+.logoImageContainer {
+  //height: 44px;
+  //width: 180px;
+  float: left;
+  display: inline-block;
+  //background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  @include brandLogo();
+  position: relative;
+}

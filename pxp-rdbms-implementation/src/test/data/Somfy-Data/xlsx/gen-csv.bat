@@ -1,0 +1,1 @@
+java -Xmx10g -Xms3g -jar ..\..\..\..\build-scripts\programs\XLS2CSV.jar -i . -o ../csv

@@ -1,0 +1,100 @@
+plugins {
+    id "application"
+    id "com.github.ManifestClasspath" version "0.1.0-RELEASE"
+    id 'com.github.johnrengelman.shadow' version '2.0.1'
+}
+apply plugin: 'java'
+
+//sourceCompatibility = 11
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+version = "1.0.0"
+
+// NetBeans will automatically add "run" and "debug" tasks relying on the
+// "mainClass" property. You may however define the property prior executing
+// tasks by passing a "-PmainClass=<QUALIFIED_CLASS_NAME>" argument.
+//
+// Note however, that you may define your own "run" and "debug" task if you
+// prefer. In this case NetBeans will not add these tasks but you may rely on
+// your own implementation.
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.cs.core.bgprocess.BGProcessApplication'
+}
+
+application {
+    mainClassName = mainClass
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://artifactory.contentserv.com/artifactory/rest'
+    }
+}
+
+
+dependencies {
+    compile project(path: ':pxp-technical-services')
+    compile project(path: ':pxp-models') 
+    compile project(path: ':pxp-shared-services')
+    compile project(path: ':business-service-api')
+    compile project(path: ':di-workflow-api')
+    compile project(path: ':pxp-di')
+    
+    def springFrameworkVersion = "5.2.1.RELEASE"
+    
+    // Note: JERSEY (REST Servlet) + JETTY
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.inject/jersey-hk2
+    compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.28'
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.20.v20190813'
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.20.v20190813'
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-server
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.29'
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet-core
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.29'
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-jetty-http
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.29'
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.29'
+    // https://mvnrepository.com/artifact/javax.xml.ws/jaxws-api
+    compile group: 'javax.xml.ws', name: 'jaxws-api', version: '2.2.6'
+    
+    compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.28'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// Make test output displayed in console
+test {
+    testLogging.showStandardStreams = false
+}
+
+
+task runnableJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'com.cs.core.bgprocess.BGProcessApplication'
+    }
+    baseName = project.name + '-runnable'
+    zip64 true
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+ shadowJar {
+   zip64 true
+    mergeServiceFiles('META-INF/spring.*')
+}
+
+run {
+    jvmArgs = ['-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005','-DDATABASE_PROPERTIES=classpath*:databaseProperties/*.properties','-DDATA_INTEGRATION_PROPERTIES=classpath*:dataIntegrationProperties/*.properties', '-DSAML=classpath*:saml/*.properties','-DAUDIT_LOG_PROPERTIES=classpath*:auditLogProperties/*.properties','-DPXP_LOG_PROPERTIES=classpath*:pxpLogProperties/*.properties']   
+}
+
+
+
+

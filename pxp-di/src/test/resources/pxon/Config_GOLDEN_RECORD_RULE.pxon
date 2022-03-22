@@ -1,0 +1,6 @@
+[
+"bgp 1000371 started 2020-05-27T16:21:15",
+"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"GOLDEN_RECORD_RULE\"],\"GOLDEN_RECORD_RULE\":[\"Gol100169\"],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}","Golden record rule codes=[Gol100169]",
+{"isautocreate":true,"Ltags":["KK_Color"],"mergeeffect":{"Ltags":[{"entitytype":"tags","entityid":"availabilitytag","type":"latest"}],"Lattributes":[{"entitytype":"attributes","entityid":"Imp_HtmlDep1","type":"latest"},{"Lsupplierids":["-1"],"entitytype":"attributes","entityid":"Imp_HTML1","type":"supplierPriority"}],"Lnaturerelationships":[{"Lsupplierids":[],"entitytype":"natureRelationships","entityid":"code_a1fdc530-045c-42e0-9408-63f223615da0","type":"supplierPriority"}],"Lrelationships":[{"Lsupplierids":["-1"],"entitytype":"relationships","entityid":"standardArticleAssetRelationship","type":"supplierPriority"}]},"Lattributes":["KK_Date"],"Ltaxonomyids":[],"Lklassids":["KK_INDI","KK_ALL_art"],"Lorganizations":[],"csid":"[S>Gol100169]","label":"Test","Lphysicalcatalogids":["pim"]},
+"bgp 1000371 ended 2020-05-27T16:21:15"
+]

@@ -1,0 +1,219 @@
+/*
+@import "../../../../styleguide/mixin";
+
+.contentDetailsView {
+  height: 100%;
+
+  .contentDetailsListItem {
+    padding: 5px 5px 5px 10px;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: normal;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+    white-space: nowrap;
+  }
+
+  .contentDetailsListItem:hover {
+    background-color: #b5d6fd;
+    cursor: pointer;
+  }
+
+  .contentDetailsListHeader {
+    background-color: #eee;
+    padding: 5px 5px 5px 10px;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: normal;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .addAttributeBtn {
+    width: 30px;
+    height: 100%;
+    float: left;
+    //background: url("../images/Plus-25.png") no-repeat 5px 4px;
+    background-size: 22px;
+    cursor: pointer;
+    &:hover {
+      //background: url("../images/PlusFilled-25.png") no-repeat 5px 4px;
+      background-size: 22px;
+    }
+  }
+
+  .allClasses {
+    color: #333333; //#E2E9EC;
+    padding: 5px 2px;
+  }
+
+  .contentClassIconContainer {
+    float: left;
+    height: 30px;
+    width: 25px;
+    margin: 0 3px 0 1px;
+    &.selected {
+      box-shadow: 0px -2px 0px 0px #F0C40F inset;
+      border: none;
+    }
+
+    &.activeClass {
+      box-shadow: 0px -2px 0px 0px #F0C40F inset;
+      border: none;
+    }
+
+    &.actionItemDefault {
+      //background: url("../images/XlargeIcons-32.png") no-repeat 0;
+      background-size: 25px;
+    }
+
+    &.allClasses {
+      background: none;
+    }
+  }
+
+  .contentAttributeDetails {
+    height: calc(50% - 30px);
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    .contentAttributeList {
+      width: 200px;
+      height: calc(100% - 8px);
+      float: left;
+      margin-top: 8px;
+      outline: 1px solid #ddd;
+      .contentDetailsAttrListHeader {
+        background-color: #eee;
+        padding: 5px 5px 5px 10px;
+        list-style-type: none;
+        font-size: 12px;
+        font-weight: normal;
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid #ddd;
+      }
+      .contentDetailsAttrList {
+        height: calc(100% - 25px);
+        overflow: auto;
+        .dragViewContainer {
+          display: block;
+        }
+      }
+    }
+    !*.attributesContainer {
+      width: 100%;
+    }*!
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .dropViewContainer {
+      height: calc(100% - 8px);
+      width: calc(100% - 200px);
+      float: left;
+    }
+
+    &.attributeListHidden {
+      .contentAttributeList {
+        width: 200px;
+        height: 100%;
+        display: none;
+      }
+      .dropViewContainer {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+
+  }
+
+  .contentRelationship {
+    height: 50%;
+    margin-top: 5px;
+    border-bottom: 1px solid #ddd;
+    .contentRelationshipList {
+      width: 200px;
+      height: calc(100% - 5px);
+      float: left;
+      margin-top: 5px;
+      outline: 1px solid #ddd;
+      .contentDetailsRelListHeader {
+        background-color: #eee;
+        padding: 5px 5px 5px 10px;
+        list-style-type: none;
+        font-size: 12px;
+        font-weight: normal;
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid #ddd;
+      }
+      .contentDetailsRelList {
+        height: calc(100% - 25px);
+        overflow: auto;
+        .dragViewContainer {
+          display: block;
+        }
+      }
+    }
+
+    .relationshipContent {
+      width: 100%;
+      height: 100%;
+      float: left;
+
+      .relationshipViewContainer {
+        outline: 1px solid #DDDDDD;
+        width: calc(50% - 12px);
+        float: left;
+
+        .relInfoContainer {
+          height: 28px;
+          background: #eee;
+
+          .relative2 {
+            font-weight: normal;
+          }
+        }
+
+        .relContentContainer {
+          box-shadow: none;
+        }
+      }
+
+      .dropViewContainer {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+
+    .dropViewContainer {
+      height: calc(100% - 8px);
+      width: calc(100% - 200px);
+      float: left;
+    }
+
+    &.relationshipListHidden {
+      .contentRelationshipList {
+        width: 200px;
+        height: 100%;
+        display: none;
+      }
+
+      .dropViewContainer {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+
+  }
+
+}*/

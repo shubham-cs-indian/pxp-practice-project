@@ -1,0 +1,19 @@
+[{
+  "type": "com.cs.core.config.interactor.entity.textasset.TextAsset",
+  "id": "text_asset",
+  "code": "text_asset",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.textasset.TextAsset",
+    "id": "-1"   
+  },
+  "sections": [
+    {
+      "propertyCollectionId": "textassetGeneralInformationPropertyCollection"     
+    }
+  ],
+  "isAbstract": true,
+  "isNature": false,
+  "isDefaultChild": true,
+  "classifierIID": 42
+}]	

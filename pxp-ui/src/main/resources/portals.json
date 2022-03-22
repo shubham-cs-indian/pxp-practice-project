@@ -1,0 +1,9 @@
+{
+  "portals" : [
+    {
+      "id": "pim",
+      "allowedEntities": ["ArticleInstance", "AssetInstance", "MarketInstance",
+        "SupplierInstance", "TextAssetInstance", "VirtualCatalogInstance", "FileInstance"]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.contentSearchViewContainer {
+  height: 100%;
+
+  .contentSearchViewNotAvailable{
+    line-height: 50px;
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .contentRightPanelSearch {
+    padding: 5px;
+    background: #fff;
+    position: relative;
+    height: 43px;
+
+    .rightPanelSearchTextInputWrapper {
+      width: calc(100% - 84px);
+      margin: 5px 5px 0 0;
+      border-bottom: none;
+      background-color: #fafafa;
+      border-radius: 2px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+      height: 28px;
+      float: left;
+
+      .rightPanelSearchBox {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 3px 6px;
+        font-size: 12px;
+        background-color: transparent;
+        line-height: 22px;
+      }
+    }
+
+    .rightPanelSearchHandleWrapper {
+      //display: inline-block;
+      //position: absolute;
+      top: 10px;
+      right: 10px;
+      height: 28px;
+      width: 26px;
+      background: #eee;
+      box-shadow: 0px 0px 0px 1px #ddd;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      padding: 3px;
+      float: left;
+      margin-top: 5px;
+
+      .rightPanelApplySearch {
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: 2px;
+        background-size: 16px;
+        background-image: url($image-CS-SearchFilled-32);
+        height: 22px;
+        width: 22px;
+      }
+
+      .rightPanelAdvanceSearch {
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: 2px;
+        background-size: 16px;
+        background-image: url($image-CS-expand-arrow-icon);
+        height: 22px;
+        width: 22px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: #e8e8e8;
+      }
+    }
+
+    .rightPanelAdvanceSearchHandleWrapper {
+      //display: inline-block;
+      //position: absolute;
+      top: 10px;
+      right: 10px;
+      height: 28px;
+      width: 26px;
+      background: #eee;
+      box-shadow: 0px 0px 0px 1px #ddd;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      padding: 3px;
+      float: right;
+      margin-top: 5px;
+
+      .rightPanelAdvanceSearch {
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: 2px;
+        background-size: 16px;
+        background-image: url($image-CS-expand-arrow-icon);
+        height: 22px;
+        width: 22px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: #e8e8e8;
+      }
+    }
+
+    .rightPanelAdvanceSearchClearWrapper {
+      //display: inline-block;
+      //position: absolute;
+      top: 10px;
+      right: 10px;
+      height: 28px;
+      width: 26px;
+      background: #eee;
+      box-shadow: 0px 0px 0px 1px #ddd;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      padding: 3px;
+      float: left;
+      margin-top: 5px;
+
+      .rightPanelAdvanceSearchClear {
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: 2px;
+        background-size: 16px;
+        background-image: url($image-CS-Cross);
+        height: 22px;
+        width: 22px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: #e8e8e8;
+      }
+    }
+  }
+
+  .thumbnailViewToRender {
+  }
+  .thumbnailViewToRenderHalf {
+    overflow: auto;
+    height: calc(100% - 77px);
+    padding: 5px;
+  }
+
+  .loadMoreContainer {
+    position: relative;
+    bottom: 0;
+    &:hover {
+      height: 30px;
+      padding: 3px;
+
+      .loadMoreButton {
+        line-height: 23px;
+      }
+    }
+  }
+
+  !*
+  .contentSearchFilterViewWrapper {
+    margin-bottom: 4px;
+    box-shadow: 0px 0px 1px 0px #9e9c9c;
+    padding-bottom: 4px;
+
+    .contentFilterViewWrapper {
+      box-shadow: none;
+      height: 100%;
+
+      .contentFilterItem {
+        box-shadow: none;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    !*
+    .filterButtonContainer {
+      text-align: center;
+      display: none;
+
+      !*.filterButton {
+        height: 30px;
+        width: 42%;
+        margin: 20px 4%;
+        line-height: 30px;
+        text-align: center;
+        color: #696969;
+        background-color: #fff;
+        border-radius: 2px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all .2s;
+        display: inline-block;
+
+        &.clearButton{
+          display: inline;
+          float: left;
+        }
+
+        &:hover {
+          background-color: #f3f3f3;
+        }
+      }*!
+    }
+    *!
+    }
+  *!
+}
+
+*/

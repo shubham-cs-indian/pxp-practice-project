@@ -1,0 +1,280 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.leftPanelContainer {
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  width: 300px;
+  transition: all .2s;
+  background: #4A4A4A;
+  box-shadow: 5px 0px 5px -5px #333 inset, -5px 0px 5px -5px #333 inset;
+
+  .leftBarWrapper {
+    background-color: #4A4A4A;
+  }
+
+  &.leftPanelContainerCollapsed{
+    width: 30px;
+  }
+
+  .leftPanelOverflowContainer {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+
+    .leftPanelItemContainer {
+      width: 300px;
+      box-shadow: 0px 1px 0px 0px #565656 inset, 0px -1px 0px 0px #3E3E3E inset;
+      transition: all .2s;
+      background-image: none;
+
+      &:hover {
+        background-image: linear-gradient(#5F5F5F, #545454);
+        box-shadow: 0px 1px 0px 0px #6D6D6D inset, 0px -1px 0px 0px #3E3E3E inset;
+      }
+
+      &.selectedItem {
+        //box-shadow: 0px -1px 0px 0px #3E3E3E inset, 0px 5px 5px -5px #333 inset, 0px -5px 5px -5px #333 inset;
+        box-shadow: 0px -1px 0px 0px #3E3E3E inset, 0px 0px 10px -3px #111 inset;
+        background: #404040;
+        //margin-bottom: 5px;
+      }
+
+      .leftPanelItemHeader {
+        height: 30px;
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+
+        .leftPanelItemIcon {
+          height: 30px;
+          width: 30px;
+          float: left;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          background-position: 7px;
+
+          !*&.dashboard {
+           @include background-properties-with-theme-white-color($image-CS-menu-item-dashboard);
+          }*!
+
+          &.collections {
+            background-image: url($image-CS-Product);
+          }
+
+          &.filter {
+            background-image: url($image-CS-Filter-50);
+          }
+
+          &.showMarker {
+            &:after {
+              content: "";
+              width: 6px;
+              height: 6px;
+              background-color: #ff7600;
+              position: absolute;
+              border-radius: 50%;
+              top: 3px;
+              left: 22px;
+            }
+          }
+        }
+
+        .leftPanelItemText {
+          float: left;
+          height: 30px;
+          width: calc(100% - 40px);
+          color: #eee;
+          line-height: 30px;
+          text-shadow: 0px 1px 1px #333;
+        }
+
+        .toolbarContainer {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          height: 20px;
+          width: 44px;
+
+          .tool {
+            height: 20px;
+            width: 22px;
+            background-repeat: no-repeat;
+            background-position: 5px;
+            background-size: 16px;
+            opacity: .8;
+            float: left;
+            transition: all .2s;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          .addItem {
+            @include background-properties-with-theme-white-color($image-CS-Plus-32);
+          }
+
+          .deleteItem {
+            @include background-properties-with-theme-white-color($image-CS-MinusBlack);
+          }
+
+          .clearFilter {
+            background-image: url($image-CS-Delete-52-gray);
+            position: absolute;
+            top: -5px;
+            right: 0px;
+          }
+        }
+      }
+
+      .leftPanelItemBody {
+        padding: 0 10px;
+      }
+
+      &.selectedItem {
+
+        .leftPanelItemIcon {
+
+          &.collections {
+            background-image: url($image-CS-ProductFilled-50);
+          }
+
+          &.filter {
+            background-image: url($image-CS-Filter-Filled-50);
+          }
+        }
+
+        .leftPanelItemText {
+          font-weight: 500;
+        }
+
+        .toolbarContainer {
+          display: block;
+        }
+
+      }
+
+      .dropViewContainer {
+
+        .dragHere {
+          display: none;
+        }
+
+        &.hoverActive {
+
+          !*.treeNodeViewNode {
+            box-shadow: 0px 0px 0px 1px #aaa inset;
+          }*!
+        }
+      }
+    }
+
+    .leftBarWrapper {
+      width: 30px;
+      float: left;
+      height: 100%;
+      transition: all 0.2s;
+      background-color: #4A4A4A;
+
+      .leftBarItem {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 18px;
+        background-size: 18px;
+
+      }
+
+      .collections {
+        background-image: url($image-CS-OpenFolderFilled-50);
+
+        &.selected {
+          background-image: url($image-CS-OpenFolderFilled-50);
+        }
+
+        &:hover {
+          background-image: url($image-CS-OpenFolderFilled-50);
+        }
+      }
+
+      .sets {
+        background-image: url($image-Sets-32);
+
+        &:hover {
+          background-image: url($image-SetsFilled-32);
+        }
+
+        &.selected {
+          background-image: url($image-SetsFilled-32);
+        }
+      }
+
+      .filter {
+        background-image: url($image-CS-Filter-50);
+
+        &:hover {
+          background-image: url($image-CS-Filter-Filled-50);
+        }
+
+        &.selected {
+          background-image: url($image-CS-Filter-Filled-50);
+        }
+      }
+
+    }
+
+    &.dispS {
+      width: 40px;
+    }
+
+    &.dispN {
+      width: 0;
+
+      .leftBarWrapper {
+        width: 0;
+      }
+    }
+
+    .detailViewContainer {
+      float: left;
+      width: 270px;
+      height: 100%;
+
+      &.dispN {
+        width: 0;
+      }
+
+      .actionBarContainer {
+        height: 28px;
+        background-color: #4A4A4A;
+      }
+
+      .detailContainer {
+        height: calc(100% - 28px);
+        background-color: #FBFBFB;
+        box-shadow: 1px 0 0 0 #dedede;
+        margin-right: 1px;
+        overflow: auto;
+      }
+    }
+
+    .leftPanelWrapper {
+      float: left;
+      width: 270px;
+      height: 100%;
+      border-right: 1px solid #bbb;
+      transition: all 0.2s;
+      background-color: #e5e5e5;
+      overflow: auto;
+
+      &.dispN {
+        width: 0px;
+      }
+    }
+  }
+}
+*/

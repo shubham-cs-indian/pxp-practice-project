@@ -1,0 +1,75 @@
+[
+	"bgp 1000131 started 2020-06-11T20:23:36",
+	"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"ORGANIZATION\"],\"ORGANIZATION\":[],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}",
+	"Organization codes=All",
+	{
+		"Lportals": [],
+		"Lsystems": [],
+		"Ltaxonomyids": [],
+		"Lklassids": [],
+		"csid": "[O>Org100145]",
+		"LphysicalCatalogs": [],
+		"Lroles": [
+			{
+				"isDashboardEnable": true,
+				"Lportals": [],
+				"LtargetTaxonomies": [],
+				"csid": "[Q>Rol100203]",
+				"LphysicalCatalogs": [],
+				"Lentities": [],
+				"Lusers": [],
+				"label": "New 18",
+				"roleType": "user",
+				"$type": "com.cs.core.config.interactor.entity.role.Role",
+				"LtargetKlasses": [],
+				"Lsystems": [],
+				"Lendpoints": [],
+				"Lkpis": []
+			},
+			{
+				"isDashboardEnable": true,
+				"Lportals": [],
+				"LtargetTaxonomies": [
+					"KKMTAX"
+				],
+				"csid": "[Q>Rol100146]",
+				"LphysicalCatalogs": [
+					"pim",
+					"onboarding"
+				],
+				"Lentities": [
+					"ArticleInstance",
+					"AssetInstance",
+					"MarketInstance",
+					"SupplierInstance",
+					"VirtualCatalogInstance"
+				],
+				"Lusers": [
+					"Use100152"
+				],
+				"label": "New 22Updated",
+				"roleType": "user",
+				"$type": "com.cs.core.config.interactor.entity.role.Role",
+				"LtargetKlasses": [
+					"article",
+					"digital_asset_agency"
+				],
+				"Lsystems": [
+					"-1"
+				],
+				"Lendpoints": [
+					"Test_inbound2",
+					"Test_outbound2",
+					"testinbound4"
+				],
+				"Lkpis": [
+					"kpi1"
+				]
+			}
+		],
+		"label": "New 21",
+		"LendpointIds": [],
+		"$type": "suppliers"
+	},
+	"bgp 1000131 ended 2020-06-11T20:23:36"
+]

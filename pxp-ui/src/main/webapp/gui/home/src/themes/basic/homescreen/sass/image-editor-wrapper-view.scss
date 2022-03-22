@@ -1,0 +1,13 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.tui-image-editor-container {
+  .tui-image-editor-main-container {
+    .tui-image-editor-header {
+      display: none;
+    }
+    .tui-colorpicker-palette-container li {
+      padding: 0;
+    }
+  }
+}

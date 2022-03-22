@@ -1,0 +1,1099 @@
+[
+	"bgp 1000006 started 2020-05-04T18:28:15",
+	"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"PROPERTY_COLLECTION\"],\"PROPERTY_COLLECTION\":[]}",
+	"PropertyCollection codes=All",
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "pid_attribute",
+				"id": "pid_attribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "nameattribute",
+				"id": "nameattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "sku_attribute",
+				"id": "sku_attribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "gtin_attribute",
+				"id": "gtin_attribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "statustag",
+				"id": "statustag",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 0,
+					"id": null
+				},
+				"type": "tag"
+			},
+			{
+				"code": "longdescriptionattribute",
+				"id": "longdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "shortdescriptionattribute",
+				"id": "shortdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>articlegeneralInformationPropertyCollection]",
+		"columns": 2,
+		"$isstandard": true,
+		"label": "General Information",
+		"rows": 4,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "nameattribute",
+				"id": "nameattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "longdescriptionattribute",
+				"id": "longdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>targetGeneralInformationPropertyCollection]",
+		"columns": 2,
+		"$isstandard": true,
+		"label": "Market General Information",
+		"rows": 2,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "isordertag",
+				"id": "isordertag",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "tag"
+			},
+			{
+				"code": "issalestag",
+				"id": "issalestag",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 1,
+					"id": null
+				},
+				"type": "tag"
+			},
+			{
+				"code": "isbaseunittag",
+				"id": "isbaseunittag",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 2,
+					"id": null
+				},
+				"type": "tag"
+			}
+		],
+		"csid": "[G>UNIT_Default]",
+		"columns": 3,
+		"$isstandard": true,
+		"label": "Unit Information",
+		"rows": 1,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "listpriceattribute",
+				"id": "listpriceattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "sellingpriceattribute",
+				"id": "sellingpriceattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "minimumpriceattribute",
+				"id": "minimumpriceattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "maximumpriceattribute",
+				"id": "maximumpriceattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>pricingPropertyCollection]",
+		"columns": 4,
+		"$isstandard": true,
+		"label": "Pricing",
+		"rows": 1,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "nameattribute",
+				"id": "nameattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "longdescriptionattribute",
+				"id": "longdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "shortdescriptionattribute",
+				"id": "shortdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>assetInformationPropertyCollection]",
+		"columns": 2,
+		"$isstandard": true,
+		"label": "Asset Information",
+		"rows": 2,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "nameattribute",
+				"id": "nameattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "longdescriptionattribute",
+				"id": "longdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>supplierGeneralInformationPropertyCollection]",
+		"columns": 2,
+		"$isstandard": true,
+		"label": "Supplier General Information",
+		"rows": 2,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "nameattribute",
+				"id": "nameattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "longdescriptionattribute",
+				"id": "longdescriptionattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>textassetGeneralInformationPropertyCollection]",
+		"columns": 2,
+		"$isstandard": true,
+		"label": "Text-Asset General Information",
+		"rows": 2,
+		"isforxray": false
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "nameattribute",
+				"id": "nameattribute",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>defaultXRayPropertyCollection]",
+		"columns": 1,
+		"$isstandard": true,
+		"label": "Default X-Ray Collection",
+		"rows": 1,
+		"isforxray": true
+	},
+	{
+		"isdefaultforxray": false,
+		"Lelements": [
+			{
+				"code": "I_META_LIGHT_SOURCE",
+				"id": "I_META_LIGHT_SOURCE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 6,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_LOCATION_DETAIL",
+				"id": "I_META_LOCATION_DETAIL",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 4,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_AUTHOR",
+				"id": "I_META_CREATOR_AUTHOR",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_FILE_NAME",
+				"id": "I_META_FILE_NAME",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_SENSOR_TYPE",
+				"id": "I_META_SENSOR_TYPE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 6,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_LOCATION",
+				"id": "I_META_LOCATION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 4,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_STREET",
+				"id": "I_META_CREATOR_STREET",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_DOCUMENT_TYPE",
+				"id": "I_META_DOCUMENT_TYPE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_BRAND",
+				"id": "I_META_BRAND",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 6,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_STATE",
+				"id": "I_META_STATE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 4,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_LOCATION",
+				"id": "I_META_CREATOR_LOCATION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_APPLICATION",
+				"id": "I_APPLICATION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_MODELL",
+				"id": "I_META_MODELL",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 6,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_COUNTRY",
+				"id": "I_META_COUNTRY",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 4,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_STATE",
+				"id": "I_META_CREATOR_STATE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_CREATE_DATE",
+				"id": "I_CREATE_DATE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_SERIAL_NUMBER",
+				"id": "I_META_SERIAL_NUMBER",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 6,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_TITEL",
+				"id": "I_META_TITEL",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 4,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_POSTAL_CODE",
+				"id": "I_META_CREATOR_POSTAL_CODE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_MODIFICATION_DATE",
+				"id": "I_MODIFICATION_DATE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_PIXEL_X_DIMENSION",
+				"id": "I_META_PIXEL_X_DIMENSION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 6,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_COPYRIGHT",
+				"id": "I_META_COPYRIGHT",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 4,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_COUNTRY",
+				"id": "I_META_CREATOR_COUNTRY",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 2,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_FILE_SIZE",
+				"id": "I_META_FILE_SIZE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 0,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_PIXEL_Y_DIMENSION",
+				"id": "I_META_PIXEL_Y_DIMENSION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 7,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_COPYRIGHT_STATUS",
+				"id": "I_META_COPYRIGHT_STATUS",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 5,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_TEL",
+				"id": "I_META_CREATOR_TEL",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_DIMENSIONS",
+				"id": "I_DIMENSIONS",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 0,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_HIGH_RESOLUTION",
+				"id": "I_META_HIGH_RESOLUTION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 7,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_EXPOSURE_INDEX",
+				"id": "I_META_EXPOSURE_INDEX",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 5,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_EMAIL",
+				"id": "I_META_CREATOR_EMAIL",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_DIMENSION_IN_INCH",
+				"id": "I_DIMENSION_IN_INCH",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 1,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_WIDTH_RESOLUTION",
+				"id": "I_META_WIDTH_RESOLUTION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 7,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_FOCAL_RANGE",
+				"id": "I_META_FOCAL_RANGE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 5,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_CREATOR_WWW",
+				"id": "I_META_CREATOR_WWW",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_RESOLUTION",
+				"id": "I_RESOLUTION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 2,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_X_RESOLUTION",
+				"id": "I_META_X_RESOLUTION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 7,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_MAX_BLINDING_VALUE",
+				"id": "I_META_MAX_BLINDING_VALUE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 5,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_HEADING",
+				"id": "I_META_HEADING",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_BIT_DEPTH",
+				"id": "I_BIT_DEPTH",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 3,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_Y_RESOLUTION",
+				"id": "I_META_Y_RESOLUTION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 7,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_RECORDING_DATE",
+				"id": "I_META_RECORDING_DATE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 5,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_DESCRIPTION",
+				"id": "I_META_DESCRIPTION",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_COLOR_MODE",
+				"id": "I_COLOR_MODE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 4,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_EXPOSURE_CONTROLS",
+				"id": "I_META_EXPOSURE_CONTROLS",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 5,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_META_KEYWORDS",
+				"id": "I_META_KEYWORDS",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 3,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			},
+			{
+				"code": "I_COLOR_PROFILE",
+				"id": "I_COLOR_PROFILE",
+				"position": {
+					"versionId": null,
+					"versionTimestamp": null,
+					"code": null,
+					"lastModifiedBy": null,
+					"x": 1,
+					"y": 5,
+					"id": null
+				},
+				"type": "attribute"
+			}
+		],
+		"csid": "[G>metadataCollection]",
+		"columns": 6,
+		"$isstandard": true,
+		"label": "Metadata",
+		"rows": 7,
+		"isforxray": false
+	},
+	"bgp 1000006 ended 2020-05-04T18:28:16"
+]

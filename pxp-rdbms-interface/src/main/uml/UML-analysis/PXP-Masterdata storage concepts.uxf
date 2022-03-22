@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>190</y>
+      <w>220</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>BaseEntity
+--
+current version: int
+lw=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>290</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Record
+lw=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>960</x>
+      <y>200</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Standing through multi-classifications and taxonomies
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>290</y>
+      <w>300</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+r1=properties
+m2=0..*
+lw=2</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>350</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>applied entity version: int
+context
+data replication?
+replication reason
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>300</y>
+      <w>40</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>20</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Catalog
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>240</x>
+      <y>200</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>{language contributes to the identification of the value record}
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>50</y>
+      <w>100</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+r1=localization
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>30</x>
+      <y>170</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Standing for attribute and tag
+fg=red
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>60</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Locale
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>90</y>
+      <w>40</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>490</x>
+      <y>80</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>{localization contributes to the identification of the base entity}
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>630</x>
+      <y>430</y>
+      <w>410</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>replication of a value record implies to have the same value record pointed by many entities}
+replication reasons are:
+- via relationship
+- via parent-to-children
+- via the taxonomy tree
+- via embedded instances
+
+Notes:
+- attribute context = value record + context
+- embedded variants = embedded instances + context
+- linked variants = relationship instances + context
+- linked versions = relationship instances + context
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>300</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+r1=sources
+calculated/concatenated</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0;10.0;90.0;140.0;90.0;140.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>460</x>
+      <y>20</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Standing for catalogs and DI
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>120</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Classifier
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>140</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+r1=parents
+</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>370</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Context
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>130</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Property
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>160</y>
+      <w>40</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>60</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ClassifierGenealogy
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*in red proxy objects synchronized from configuration*
+fg=red
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>290</y>
+      <w>130</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>100.0;80.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>400</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Context
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>340</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

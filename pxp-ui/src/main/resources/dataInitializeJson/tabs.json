@@ -1,0 +1,71 @@
+[
+  {
+    "id": "overview_tab",
+    "code": "overview_tab",
+    "isStandard": true,
+    "sequence": 0,
+    "icon":"overview_tab"
+  },
+  {
+    "id": "property_collection_tab",
+    "code": "property_collection_tab",
+    "isStandard": true,
+    "sequence": 1,
+    "icon":"property_collection_tab"
+  },
+  {
+    "id": "relationship_tab",
+    "code": "relationship_tab",
+    "isStandard": true,
+    "sequence": 2,
+    "icon":"relationship_tab"
+  },
+  {
+    "id": "context_tab",
+    "code": "context_tab",
+    "isStandard": true,
+    "sequence": 3,
+    "icon":"context_tab"
+  },
+  {
+    "id": "task_tab",
+    "code": "task_tab",
+    "isStandard": true,
+    "sequence": 4,
+    "icon":"task_tab"
+  },
+  {
+    "id": "timeline_tab",
+    "code": "timeline_tab",
+    "isStandard": true,
+    "sequence": 6,
+    "icon":"timeline_tab"
+  },
+  {
+    "id": "rendition_tab",
+    "code": "rendition_tab",
+    "isStandard": true,
+    "sequence": 7,
+    "icon":"rendition_tab"
+  },
+  {
+    "id": "mdm_tab",
+    "code": "mdm_tab",
+    "isStandard": true,
+    "sequence": 12
+  },
+  {
+    "id": "duplicate_tab",
+    "code": "duplicate_tab",
+    "isStandard": true,
+    "sequence": 13,
+    "icon":"duplicate_tab"
+  },
+  {
+    "id": "usage_tab",
+    "code": "usage_tab",
+    "isStandard": true,
+    "sequence": 14,
+    "icon":"usage_tab"
+  }
+]

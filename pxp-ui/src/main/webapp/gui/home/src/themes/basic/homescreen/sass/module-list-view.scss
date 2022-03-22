@@ -1,0 +1,97 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$selection-box-shadow: 0px -2px 0px 0px #333 inset;
+
+.moduleListViewContainer {
+  width: 100%;
+  height: 30px;
+  padding: 4px 15px;
+  background-color: white;
+  box-shadow: 0 0 1px #AA9;
+
+  .moduleItem {
+    padding: 6px 13px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #666;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &.contentScreen .jobScreen .dashboardScreen{
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: #333;
+    }
+
+    &.selected {
+      cursor: default;
+      text-shadow: 0px 0px 0px #777;
+      box-shadow: $selection-box-shadow;
+      color: #333;
+      font-weight: 500;
+    }
+
+    &.hide {
+      visibility: hidden;
+    }
+  }
+
+  .activeCollection {
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    width: 200px;
+    margin-left:-100px;
+    left: 50%;
+    line-height: 16px;
+    font-size: 12px;
+
+    .activeCollectionWrapper {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 0 2px;
+
+      .saveIcon {
+        height: 20px;
+        width: 20px;
+        background-image: url($image-CS-SaveFilled-50Black);
+        background-size: 16px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .collectionLabel {
+        color: #666;
+        font-weight: 500;
+        line-height: 20px;
+        font-size: 12px;
+        padding: 0 2px;
+        //text-overflow: ellipsis;
+        overflow: hidden;
+        //white-space: nowrap;
+        //max-width: calc(100% - 40px);
+      }
+
+      .closeIcon {
+        height: 20px;
+        width: 20px;
+        background-image: url($image-CS-Cross);
+        background-size: 16px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .inlineBlock {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+}

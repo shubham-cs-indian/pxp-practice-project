@@ -1,0 +1,450 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.searchContainerWrapper, .customSearchContainerWrapper {
+  position: absolute;
+  top: 9px;
+  height: 30px;
+  width: 470px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  padding: 0 10px;
+  outline: none;
+  z-index: 999;
+  border-style: solid;
+  border-width: 1px;
+
+  .searchInputWrapper {
+    height: inherit;
+
+    input.searchInput {
+      width: calc(100% - 30px);
+      height: inherit;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      //color: #fff;
+      line-height: 30px;
+    };
+
+    input.searchInput::placeholder{
+      //color: $color-light-1;
+      line-height: 30px;
+      opacity: 0.6;
+    };
+
+    .searchIcon {
+      vertical-align: top;
+      height: 28px;
+      opacity: .7;
+      width: 30px;
+      display: inline-block;
+      position: relative;
+      float: left;
+      padding: 0;
+      margin: 0;
+      top: 0px;
+      left: 0px;
+      @include background-properties($image-CS-SearchFilled-32, 16px);
+      background-position: left;
+    };
+
+    .crossIcon {
+      vertical-align: top;
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      position: absolute;
+      float: right;
+      padding: 0;
+      margin: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-position: right;
+      @include background-properties($image-CS-Cross, 16px);
+      right: 5px;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      };
+    };
+  };
+};
+
+.generic-view {
+  .searchItemsContainer {
+    border-radius: 3px;
+    margin-top: 0;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    .itemContainerView {
+      position: relative;
+      overflow: scroll;
+      margin-right: -10px;
+      margin-bottom: -10px;
+      min-height: 10px;
+      max-height: 350px;
+    }
+
+    .item {
+      padding: 8px 12px;
+      display: flex;
+      cursor: pointer;
+      //box-shadow: 0px 0px 1px $color-light-4;
+
+      &.inFocus {
+        background-color: $color-light-5;
+      }
+
+      .itemLabel {
+        flex: 1;
+        line-height: 20px;
+        font-size: 13px;
+        color: $color-dark-9;
+        padding-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .itemImage {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background-size: 16px;
+        opacity: 0.5;
+        top: 2px;
+
+        &.ArticleInstance {
+          @include background-properties($image-CS-Product-menu);
+        }
+
+        &.AssetInstance {
+          @include background-properties($image-CS-ImageFile);
+        }
+
+        &.SupplierInstance {
+          @include background-properties($image-CS-Truck);
+        }
+
+        &.MarketInstance {
+          @include background-properties($image-CS-persona);
+        }
+
+        &.TextAssetInstance {
+          @include background-properties($image-CS-Page-Overview);
+        }
+
+        &.context, &.calculated, &.concatenated, &.date, &.html, &.measurement, &.number, &.price, &.standard, &.text {
+          @include background-properties($image-CS-Generic-Text-32);
+        }
+
+        &.boolean, &.lov, &.master, &.status, &.unit {
+          @include background-properties($image-CS-PriceTag-32);
+        }
+
+        &.propertyCollection {
+          @include background-properties($image-CS-table-black-50);
+        }
+
+        &.tab {
+          @include background-properties($image-tabs-50);
+        }
+
+        &.inDesignServerConfiguration, &.relationship {
+          @include background-properties($image-CS-hub);
+        }
+
+        &.attributionTaxonomy {
+          @include background-properties($image-CS-group-objects);
+        }
+
+        &.template {
+          @include background-properties($image-CS-Template-Filled-32);
+        }
+
+        &.organization {
+          @include background-properties($image-CS-organisation-50);
+        }
+
+        &.user {
+          @include background-properties($image-CS-Gender-Neutral-User-32);
+        }
+
+        &.profile {
+          @include background-properties($image-CS-map);
+        }
+
+        &.mapping {
+          @include background-properties($image-CS-mapped-handshake-black);
+        }
+
+        &.process {
+          @include background-properties($image-CS-Workflow);
+        }
+
+        &.goldenRecords, &.translationsgoldenRecords {
+          @include background-properties($image-CS-merge-files);
+        }
+
+        &.keyperformanceindex {
+          @include background-properties($image-CS-menu-item-dashboard);
+        }
+
+        &.ruleList {
+          @include background-properties($image-CS-Rules-Filled-32);
+        }
+
+        &.rule {
+          @include background-properties($image-CS-AdministrativeTools-30);
+        }
+
+        &.event {
+          @include background-properties($image-CS-Calendar-Filled-50-Black);
+        }
+
+        &.translationstab {
+          @include background-properties($image-CS-icons8-google-translate);
+        }
+
+        &.task {
+          @include background-properties($image-CS-Todo-List-Filled-30);
+        }
+
+        &.translationsstaticTranslation {
+          @include background-properties($image-CS-subtitles-50);
+        }
+
+        &.translationsattribute {
+          @include background-properties($image-CS-Generic-Text-32);
+        }
+
+        &.translationsarticle {
+          @include background-properties($image-CS-Product-menu);
+        }
+
+        &.translationsasset {
+          @include background-properties($image-CS-ImageFile);
+        }
+
+        &.translationssupplier {
+          @include background-properties($image-CS-Truck);
+        }
+
+        &.translationstarget {
+          @include background-properties($image-CS-persona);
+        }
+
+        &.translationstextAsset {
+          @include background-properties($image-CS-Page-Overview);
+        }
+
+        &.translationstextAsset {
+          @include background-properties($image-CS-Page-Overview);
+        }
+
+        &.translationscontext {
+          @include background-properties($image-CS-tags-black-50);
+        }
+
+        &.translationsprofile {
+          @include background-properties($image-CS-map);
+        }
+
+        &.translationsevent {
+          @include background-properties($image-CS-Calendar-Filled-50-Black);
+        }
+
+        &.translationstaxonomy {
+          @include background-properties($image-CS-Categorize-50-333);
+        }
+
+        &.translationskeyperformanceindex {
+          @include background-properties($image-CS-menu-item-dashboard);
+        }
+
+        &.translationsmapping {
+          @include background-properties($image-CS-mapped-handshake-black);
+        }
+
+        &.translationsattributionTaxonomy {
+          @include background-properties($image-CS-group-objects);
+        }
+
+        &.translationsorganization {
+          @include background-properties($image-CS-organisation-50);
+        }
+
+        &.translationsprocess {
+          @include background-properties($image-CS-Workflow);
+        }
+
+        &.translationspropertyCollection {
+          @include background-properties($image-CS-table-black-50);
+        }
+
+        &.translationsrelationship {
+          @include background-properties($image-CS-hub);
+        }
+
+        &.translationsrole {
+          @include background-properties($image-CS-Administrator-32);
+        }
+
+        &.translationsruleList {
+          @include background-properties($image-CS-Rules-Filled-32);
+        }
+
+        &.translationsrule {
+          @include background-properties($image-CS-AdministrativeTools-30);
+        }
+
+        &.translationssystem {
+          @include background-properties($image-CS-icons8-unit-50);
+        }
+
+        &.translationsdashboardTab {
+          @include background-properties($image-CS-menu-item-dashboard);
+        }
+
+        &.translationstag, &.translationstagValues {
+          @include background-properties($image-CS-PriceTag-32);
+        }
+
+        &.translationstask {
+          @include background-properties($image-CS-Todo-List-Filled-30);
+        }
+
+        &.translationstemplate {
+          @include background-properties($image-CS-Template-Filled-32);
+        }
+
+        &.translationslanguage, &.language {
+          @include background-properties($image-CS-icons8-google-translate);
+        }
+
+        &.themeConfiguration {
+          @include background-properties($image-CS-Theme-Change-Filled-64);
+        }
+
+        &.translationssmartDocumentTemplate {
+          @include background-properties($image-CS-smart-document-template-icon);
+        }
+
+        &.translationssmartDocumentPreset {
+          @include background-properties($image-CS-smart-document-template-icon);
+        }
+
+        &.smartdocument {
+          @include background-properties($image-CS-smart-document-icon);
+        }
+
+        &.authorizationMapping {
+          @include background-properties($image-CS-lock);
+        }
+
+        &.pdfReactorServer {
+          @include background-properties($image-CS-pdf-reactor-configuration);
+        }
+
+        &.gridEditView {
+          @include background-properties($image-CS-grid-edit-view-black);
+        }
+
+        &.auditLog {
+          @include background-properties($image-CS-audit-log);
+        }
+
+        &.class , &.translationsclass{
+          @include background-properties($image-Class-32);
+        }
+
+        &.downloadTracker {
+          @include background-properties($image-CS-download-tracker);
+        }
+
+        &.viewConfiguration {
+          @include background-properties($image-CS-View-Configuration);
+        }
+
+        &.iconLibrary {
+          @include background-properties($image-CS-icon-library);
+        }
+
+        &.translationsendpoint{
+          @include background-properties($image-CS-map);
+        }
+
+        &.damConfiguration{
+          @include background-properties($image-CS-hub);
+        }
+
+        &.variantConfiguration{
+          @include background-properties($image-CS-Variant-Configuration);
+        }
+      }
+
+      .path {
+        border-radius: 10px;
+        display: inline-block;
+        margin-left: 25px;
+        font-size: 11px;
+        line-height: 20px;
+        color: $color-light-10;
+        font-style: italic;
+        max-width: 40%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:hover {
+        background-color: $color-light-2;
+        color: $color-dark-2;
+      }
+    }
+
+    .nothingFoundViewContainer{
+      position: unset;
+      .nothingFoundMsg{
+        display: block;
+      }
+    }
+
+    .itemLoadMore {
+      font-style: italic;
+      color: $color-dark-5;
+      text-align: center;
+      cursor: pointer;
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+      border-top: 1px solid $color-light-6;
+    }
+  }
+}
+
+.customSearchContainerWrapper{
+  border-style: none;
+  border-width: 0;
+  background: $color-light-3;
+
+  .searchInputWrapper {
+    .searchIcon {
+      @include background-properties-with-theme-gray-color($image-CS-SearchFilled-32, 16px);
+    }
+  }
+}
+
+@media screen and (max-width: 1199px){
+  .searchContainerWrapper, .customSearchContainerWrapper {
+    left: 40%;
+  }
+}

@@ -1,0 +1,326 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+@mixin toolBarItem(){
+  height: 34px;
+  width: 34px;
+  float: left;
+  opacity: .7;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: $color-light-1;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  &:hover {
+    opacity: .9;
+  }
+}
+
+/*
+.mainToolbarContainer {
+  overflow: hidden;
+  padding: 10px 5px;
+  height: 54px;
+
+  .addEntityButton {
+    height: 34px;
+    width: 34px;
+    float: left;
+    background-position: 9px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-color: #616367;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    @include background-properties-with-theme-white-color($image-CS-Plus-32);
+    margin: 0 5px;
+
+    &:hover {
+      opacity: .68;
+    }
+  }
+
+  .createButtonViewWrapper {
+    float: left;
+    background: $brand-material-btn-color;
+    margin: 3px 5px;
+    padding: 5px 8px;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+
+    .createButtonView {
+      display: flex;
+      padding: 2px;
+
+      .buttonText {
+        font-size: 11px;
+        font-weight: 500;
+      }
+
+      .buttonImage {
+        height: 10px;
+        filter: invert(100%);
+        width: 10px;
+        margin-left: 5px;
+        margin-top: 3px;
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-image: url($image-CS-triangle-south-25);
+      }
+    }
+  }
+
+  .mainToolbarLeft {
+    float: left;
+  }
+
+  .mainToolbarRight {
+    float: right;
+  }
+}
+*/
+
+/*
+.selectedVersionCount {
+  height: 34px;
+  width: 34px;
+  float: left;
+  opacity: .7;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .toolUnCheckAll {
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+    background-color: $color-light-1;
+    border-radius: 50%;
+    @include background-properties-with-theme-color($image-cs-checkbox-checked, 18px);
+  }
+}
+*/
+
+.toolbarItemWrapper {
+  float: left;
+  position: relative;
+}
+
+/*
+.toolbarItem {
+  @include toolBarItem();
+
+  &.toolAddAll {
+    @include background-properties($image-CS-export, 16px , 9px);
+  }
+  &.assetBulkUpload {
+    @include background-properties($image-CS-Upload-Black, 16px , 9px);
+  }
+
+  &.bulkUploadToCollection {
+    @include background-properties($image-CS-add-link, 16px , 9px);
+  }
+
+  &.assetBulkDownload {
+    @include background-properties($image-download-contents, 16px , 9px);
+  }
+
+  &.exportToMDM {
+    @include background-properties($image-download-contents, 16px , 9px);
+  }
+
+  &.transferToSupplierStaging {
+    @include background-properties($image-CS-export, 16px , 9px);
+  }
+
+  &.exportToExcel {
+    @include background-properties($image-CS-export-csv, 16px , 9px);
+  }
+
+  &.toolRefresh {
+    @include background-properties($image-CS-Refresh-48-black, 16px , 9px);
+  }
+
+  &.toolSave {
+    @include background-properties($image-CS-SaveFilled-50Black, 16px, 10px);
+  }
+
+  &.toolBranchOff {
+    @include background-properties($image-CS-switch-tracks, 16px, 10px);
+  }
+
+  &.toolCheckAll {
+    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 16px, 9px);
+  }
+
+  &.toolUnCheckAll {
+    @include background-properties-with-theme-color($image-CS-CheckedCheckbox-2-30-Black, 16px, 9px);
+  }
+
+  &.toolCloneContent {
+    @include background-properties($image-CS-create-clone, 16px, 9px);
+  }
+
+  &.toolGridEditContents {
+    @include background-properties($icons8-CS-Grid, 16px, 9px);
+  }
+
+  &.toolDelete {
+    @include background-properties($image-CS-delete-bin, 16px, 9px);
+  }
+
+  &.toolRestore {
+    @include background-properties($image-CS-Restart-26, 16px, 9px);
+  }
+
+  &.toolRemove {
+    @include background-properties($image-CS-Cross, 16px, 9px);
+  }
+
+  &.toolComparison {
+    @include background-properties($image-CS-icons8-compare, 16px, 9px);
+  }
+
+  &.toolViewRelationshipVariant {
+    @include background-properties($image-CS-glasses, 16px, 9px);
+
+    &.selected {
+      @include background-properties-with-theme-white-color($image-CS-glasses, 16px, 9px);
+      background-color: $color-dark-4;
+    }
+  }
+
+  &.toolAdd {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 63px;
+    left: 1px;
+    background-color: #333;
+    @include background-properties-with-theme-white-color($image-CS-Plus-32, 16px, 10px);
+  }
+
+  &.toolView1 {
+    @include background-properties($icons8-CS-Grid, 16px);
+    &.selected {
+      @include background-properties-with-theme-white-color($icons8-CS-Grid, 16px);
+      opacity: 1;
+      background-color: $color-dark-4;
+    }
+  }
+
+  &.toolView2 {
+    @include background-properties($image-CS-hash-tag-list, 16px);
+    &.selected {
+      @include background-properties-with-theme-white-color($image-CS-hash-tag-list, 16px);
+      opacity: 1;
+      background-color: $color-dark-4;
+    }
+  }
+
+  &.toolView3 {
+    @include background-properties($icons8-CS-Grid, 16px, 10px);
+    &.selected {
+      @include background-properties-with-theme-white-color($icons8-CS-Grid, 16px, 10px);
+      opacity: 1;
+      background-color: $color-dark-4;
+    }
+  }
+
+  &.toolClass1 {
+    @include background-properties($image-CS-presentation-filled, 16px, 10px);
+  }
+
+  &.toolClass2 {
+    @include background-properties($image-CS-group-objects, 16px, 10px);
+  }
+
+  &.toolZoomOut {
+    @include background-properties($image-zoom-out-filled, 16px, 10px);
+  }
+
+  &.toolZoomIn {
+    @include background-properties($image-zoom-in-filled, 16px, 10px);
+  }
+
+  &.toolToggleMode {
+    @include background-properties($image-CS-glasses, 16px, 10px);
+  }
+
+  &.goldenRecordBucketsButton {
+    @include background-properties($image-CS-merge-files, 16px);
+
+    &.selected {
+      @include background-properties-with-theme-white-color($image-CS-merge-files, 16px);
+      opacity: 1;
+      background-color: $color-dark-4;
+    }
+  }
+
+  &.toolComparisonView{
+    background-size: 23px;
+    background-position: 50%;
+    @include background-properties($image-CS-icons8-compare, 16px, 10px);
+
+    &.selected {
+      @include background-properties($image-CS-icons8-compare, 16px, 10px);
+      opacity: 1;
+      background-color: $color-dark-4;
+    }
+  }
+
+  &.toolLeftArrow {
+    @include background-properties($image-CS-arrow-left, 16px, 10px);
+  }
+
+  &.toolPaste {
+    @include background-properties($image-CS-cut, 16px, 10px);
+  }
+
+  &.toolCopy {
+    @include background-properties($image-CS-icons8-Copy-Filled-50, 16px, 10px);
+  }
+
+  &.toolCut {
+    @include background-properties($image-CS-cut, 16px, 10px);
+  }
+
+  &.toolCompare {
+    @include background-properties($image-CS-icons8-compare, 16px, 10px);
+  }
+
+  &.toolBulkEdit{
+    @include background-properties($image-CS-Edit-Property, 16px, 9px);
+  }
+
+  &.toolRestoreContents {
+    @include background-properties($image-CS-Restart-26, 16px, 9px);
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}
+*/
+.selectCount {
+  border: 2px solid $brand-sidebar-after-color;
+  background: $color-theme-accent;
+  color: $color-light-1;
+  font-size: $font-micro;
+  position: absolute;
+  top: -3px;
+  right: 1px;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  line-height: 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

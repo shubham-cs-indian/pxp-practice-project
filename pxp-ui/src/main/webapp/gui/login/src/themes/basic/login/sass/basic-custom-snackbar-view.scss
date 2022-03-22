@@ -1,0 +1,16 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+#client-snackbar {
+  max-width: 350px;
+  line-height: 20px;
+  word-break: break-word;
+}
+
+.messageCloseButton {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  @include background-properties-with-theme-white-color($image-CS-Cross, 15px);
+}

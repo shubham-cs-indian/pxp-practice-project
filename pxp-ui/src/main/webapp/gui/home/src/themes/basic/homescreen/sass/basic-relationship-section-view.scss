@@ -1,0 +1,49 @@
+.relationshipSectionContainer {
+  border: 1px solid #ccc;
+  height: 37px;
+  margin: 3px;
+
+  .blockContainer {
+    display: inline-block;
+    width: 50%;
+    padding: 5px 0px;
+
+    &.relationshipSectionLabelContainer {
+      border-right: 1px solid #ccc;
+    }
+
+    .blockLabel {
+      float: left;
+      width: 50%;
+      text-align: center;
+      height: 25px;
+      line-height: 25px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+
+      & span{
+        font-size: 12px;
+      }
+    }
+
+    .inputContainer {
+      float: left;
+      height: 25px;
+
+      .input {
+        max-width: 146px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        float: left;
+        border: none;
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+      }
+    }
+  }
+}

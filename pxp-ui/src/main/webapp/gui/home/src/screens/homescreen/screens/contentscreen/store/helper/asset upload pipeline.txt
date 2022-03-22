@@ -1,0 +1,79 @@
+Presumptions:
+Bulk Upload Asset Instance Task entry is put in table.
+All the assets are stored in a common storage.
+
+Algorithm:
+---------------------------------------------------------------------------------------------------------------------
+Read the entry from bgp table.
+Create list of all the files to be uploaded.
+---------------------------------------------------------------------------------------------------------------------
+Create a Singelton Map<assetObjectKey+SEPARATOR+assetInstanceId,
+baseEntityDTOInFormOfJson> mCm
+Generate Hash for all the files that are being uploaded. and store
+hash in map <AssetObjectKey, Hash> hM.
+
+isDuplicateCheckEnabled
+yes: Query RDBMS to check if duplicate exists for any of the following Hash.
+select from baseEntityDTO where hash in ('hM.values');
+
+(Store's the duplicates exception in a file to be displayed ?)
+---------------------------------------------------------------------------------------------------------------------
+extract Meta Data:
+
+Create a Map<assetObjectKey+SEPARATOR+assetInstanceId, MetaData>
+extMETA (extract elastic code of bulk create).
+---------------------------------------------------------------------------------------------------------------------
+===> Upload Content.
+
+initialzeBeanForUpload:
+excute bean upload.
+
+==>Image Upload
+Create a List<String> (lThu) of all the images that are thumbnail themselves.
+:Upload Maincontent
+Create Thumbnail for only those contents that are not thumbnail themselves.
+:Upload Thumbnail.
+
+===> Video Upload
+===> Document Upload
+
+Create a Interface for Upload.
+Create three extension's for each particular upload.
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+======> Fill success ids for Upload.
+
+----------------------------------------------------------------------------------------------------------------------
+======> Bulk Create Instance for successIds.
+Prepare Instances For Bulk Insertion.
+----------------------------------------------------------------------------------------------------------------------
+
+delete all file through ftp that are still on server.
+
+Classes To be Created:
+
+> IBulkUploadAsset
+|
+|---> BulkUploadAsset
+
+>IUpload
+|
+|--->Image Upload
+|
+|--->Video Upload
+|
+|--->Document Upload
+
+>IExtraction
+|
+|--->MetaDataExtraction
+
+>IDuplicateCheck
+|
+|--->DuplicateCheck
+
+>IBulkCreateInstances
+|
+|---> BulkCreateInstances

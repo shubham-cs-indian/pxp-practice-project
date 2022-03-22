@@ -1,0 +1,168 @@
+{
+    "Ltasks": [
+      "TSK1002"
+    ],
+    "previewimage": "ASS1011",
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Non_Nature $iid=1000009 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "icon": "index",
+    "$isstandard": false,
+    "Lproductvariantcontextcode": [
+      
+    ],
+    "Lpromotionalversioncontextcode": [
+      
+    ],
+    "label": "Non-Nature",
+    "isabstract": true,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "pid_attribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "nameattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "sku_attribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "gtin_attribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultvalue": "",
+          "isversionable": false,
+          "isshould": false,
+          "tagtype": "tag_type_yes_neutral",
+          "$type": "tag",
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "statustag",
+          "Lselectedtagvalues": [
+            
+          ],
+          "ismultiselect": false,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "shortdescriptionattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "longdescriptionattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        }
+      ]
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      "New_Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "New_Emb"
+      }
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "$isnature": false
+  }

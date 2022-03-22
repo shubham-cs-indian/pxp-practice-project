@@ -1,0 +1,266 @@
+@import "./../../../../styleguide/style-guide";
+
+.bulkUploadContainer, .bulkDownloadContainer {
+  width: 36px;
+  float: right;
+  height: 27px;
+  vertical-align: bottom;
+}
+
+.bulkUploadAssetDialog {
+  position: relative;
+
+  .selectKlassContainer, .selectCollectionsContainer {
+
+    .selectKlassLabel, .selectCollectionsLabel {
+      font-weight: 500;
+      padding: 0 2px;
+    }
+
+    .selectCollectionsLabel {
+      font-weight: 500;
+      padding: 0 2px;
+      float: left;
+      width: 100%;
+      .collectionLabelWrapper {
+        line-height: 27px;
+        float: left;
+      }
+
+      .collectionListSearchContainer {
+        float: right;
+        width: 200px;
+        margin-right: -4px;
+        .collectionSearchWrapper {
+          padding: 2px;
+          display: inline-block;
+          width: 100%;
+          position: relative;
+          .searchInputIcon {
+            background-image: url($image-CS-SearchFilled-32);
+            background-repeat: no-repeat;
+            background-size: 16px;
+            background-position: 50% 50%;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 3px;
+            opacity: 0.7;
+          }
+          .collectionSearchInput {
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            padding: 2px 6px 2px 23px;
+            font-size: 12px;
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .selectKlassBody, .selectCollectionsBody {
+
+      .multiSelectNothingSelected {
+        margin: 2px 8px;
+      }
+
+      .searchBarView{
+        min-height: auto;
+
+        .dropDownListView {
+          max-height: 250px;
+        }
+      }
+
+      .searchBarContainer {
+        display: inline-block;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+
+        &:after{
+          content: "";
+          position: absolute;
+          border: 5px solid #aaa;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          right: 10px;
+          top: 16px;
+        }
+      }
+
+      .singleSelectedItem{
+        float: left;
+      }
+    }
+
+    .bulkUploadSelectClassContainer {
+      display: inline-block;
+      border-radius: 3px;
+      border: 1px solid #ddd;
+      width: 100%;
+      height: 28px;
+
+      .multiSelectSearchViewWrapper {
+        width: 100%;
+        float: left;
+        height: 100%;
+        .contextMenuViewNewContainer {
+          height: 100%;
+          .triggerElement {
+            .multiSelectSearchView {
+              position: relative;
+              .multiSelectSummary {
+                float: left;
+                height: 100%;
+                margin: 2px;
+              }
+              .multiSelectNothingSelected {
+                margin: 1px 8px;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                border: 5px solid #aaa;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                right: 10px;
+                top: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .selectKlassBody{
+      width: 250px;
+    }
+
+    .selectCollectionsBody {
+      border: 1px solid #ddd;
+      margin-top: 5px;
+      border-radius: 3px;
+      height: 238px;
+      overflow: auto;
+      position: relative;
+
+      .collectionItemContainer {
+        padding: 4px 8px;
+
+        &:nth-child(odd) {
+          background: #fafafa;
+        }
+
+        input[type="checkbox"] {
+          margin: 0 8px 0 0;
+        }
+
+        .collectionItemLabel {
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+
+    .selectClassInvalidState{
+      font-size: 11px;
+      color: red;
+      margin: 5px 2px;
+    }
+  }
+
+  .selectKlassContainer{
+    margin-bottom: 20px;
+
+    .klassSelectorMSSContainer {
+      border-radius: 2px;
+      box-shadow: 0 0 1px;
+      width: 200px;
+      float: left;
+      margin: 5px 0;
+      padding: 5px;
+    }
+  }
+
+/*  .collectionSection {
+    border: 1px solid #aaa;
+    margin: 10px;
+    overflow: hidden;
+
+    .collectionsHeaderText {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-color: $color-light-5;
+    }
+
+    .validationMessage {
+      color: red;
+
+      &.collectionList {
+        float: left;
+        display: inline-block;
+        line-height: 25px;
+        margin: 10px;
+      }
+
+      &.collectionLabel {
+        font-size: 12px;
+      }
+    }
+
+    .existingCollectionsList {
+      height: 136px;
+      overflow: auto;
+
+      .collectionItemContainer {
+        padding: 2px 5px;
+
+        &:nth-child(odd) {
+          background-color: #fafafa;
+        }
+
+        .collectionItemLabel {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .newCollectionContainer {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .collectionLabelInput {
+      padding: 5px;
+      font-size: 11px;
+      border-radius: 1px;
+      border: 1px solid #bbb;
+    }
+
+    .uploadButton {
+      background-color: #606060;
+      text-transform: uppercase;
+      padding: 5px;
+      border-radius: 2px;
+      display: inline-block;
+      color: #fff;
+      font-size: 11px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
+  .collectionsDivider {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #aaa;
+    clear: both;
+    text-transform: uppercase;
+  }*/
+}

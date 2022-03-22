@@ -1,0 +1,38 @@
+    [
+  {
+    "Ltasks": [
+      "R_Task"
+    ],
+    "csid": "[c>R_Taxonomy_new_2 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_Taxonomy_new_2",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "Jembeddedclasses": {
+      "R_EMB": {
+        "$couplings": [
+          
+        ],
+        "label": "R_EMB"
+      }
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "LLevelCode": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  }
+]

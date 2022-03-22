@@ -1,0 +1,188 @@
+[
+	"bgp 1000046 started 2020-06-22T16:53:38",
+	"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"TRANSLATION\"],\"entityType\":\"RELATIONSHIP\",\"languages\":[\"en_US\",\"es_ES\",\"fr_FR\",\"de_DE\"],\"sortLanguage\":\"en_US\",\"sortBy\":\"label\"}",
+	"Translations=All",
+	{
+		"csid": "[N>standardArticleAssetRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "Images",
+				"label": "Article-Asset Relationship",
+				"side1Label": "Articles"
+			},
+			"es_ES": {
+				"side2Label": "Articles__es_ES",
+				"label": "Article-Asset Relationship__es_ES",
+				"side1Label": "Images__es_ES"
+			},
+			"fr_FR": {
+				"side2Label": "Articles__fr_FR",
+				"label": "Article-Asset Relationship__fr_FR",
+				"side1Label": "Images__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "Articles__de_DE",
+				"label": "Article-Asset Relationship__de_DE",
+				"side1Label": "Images__de_DE"
+			}
+		},
+		"$type": "relationship"
+	},
+	{
+		"csid": "[N>standardArticleGoldenArticleRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "Articles",
+				"label": "Article-GoldenArticle Relationship",
+				"side1Label": "Golden Article"
+			},
+			"es_ES": {
+				"side2Label": "Articles__es_ES",
+				"label": "Article-GoldenArticle Relationship__es_ES",
+				"side1Label": "Golden Article__es_ES"
+			},
+			"fr_FR": {
+				"side2Label": "Articles__fr_FR",
+				"label": "Article-GoldenArticle Relationship__fr_FR",
+				"side1Label": "Golden Article__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "Articles__de_DE",
+				"label": "Article-GoldenArticle Relationship__de_DE",
+				"side1Label": "Golden Article__fr_FR"
+			}
+		},
+		"$type": "relationship"
+	},
+	{
+		"csid": "[N>standardArticleMarketRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "Articles",
+				"label": "Article - Market Relationship",
+				"side1Label": "Market"
+			},
+			"es_ES": {
+				"side2Label": "Articles__es_ES",
+				"label": "Artikel MÃ¤rkte__es_ESS",
+				"side1Label": "Target_es"
+			},
+			"fr_FR": {
+				"side2Label": "Articles",
+				"label": "Artikel MÃ¤rkte__fr_FR",
+				"side1Label": "Market__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "Articles__fr_FR",
+				"label": "Artikel MÃ¤rkte__de_DE",
+				"side1Label": "Target_de"
+			}
+		},
+		"$type": "relationship"
+	},
+	{
+		"csid": "[N>standardMarketAssetRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "Market",
+				"label": "Market-Asset Relationship",
+				"side1Label": "Images"
+			},
+			"es_ES": {
+				"side2Label": "Target_es",
+				"label": "Market-Asset Relationship__es_ES",
+				"side1Label": "Images__es_ES"
+			},
+			"fr_FR": {
+				"side2Label": "Market__fr_FR",
+				"label": "Market-Asset Relationship__fr_FR",
+				"side1Label": "Images__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "Target_de",
+				"label": "Market-Asset Relationship__de_DE",
+				"side1Label": "Images__de_DE"
+			}
+		},
+		"$type": "relationship"
+	},
+	{
+		"csid": "[N>standardSupplierAssetRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "Supplier",
+				"label": "Supplier-Asset Relationship",
+				"side1Label": "Images"
+			},
+			"es_ES": {
+				"side2Label": "Supplier__es_ES",
+				"label": "Supplier-Asset Relationship__es_ES",
+				"side1Label": "Images__es_ES"
+			},
+			"fr_FR": {
+				"side2Label": "Fournisseur",
+				"label": "Supplier-Asset Relationship__fr_FR",
+				"side1Label": "Images__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "Supplier__de_DE",
+				"label": "Supplier-Asset Relationship__de_DE",
+				"side1Label": "Images__de_DE"
+			}
+		},
+		"$type": "relationship"
+	},
+	{
+		"csid": "[N>standardTextAsset-AssetRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "TextAsset",
+				"label": "TextAsset-Asset Relationship",
+				"side1Label": "Images"
+			},
+			"es_ES": {
+				"side2Label": "TextAsset__es_ES",
+				"label": "TextAsset-Asset Relationship__es_ES",
+				"side1Label": "Images__es_ES"
+			},
+			"fr_FR": {
+				"side2Label": "TextAsset__fr_FR",
+				"label": "TextAsset-Asset Relationship__fr_FR",
+				"side1Label": "Images__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "TextAsset__de_DE",
+				"label": "TextAsset-Asset Relationship__de_DE",
+				"side1Label": "Images__de_DE"
+			}
+		},
+		"$type": "relationship"
+	},
+	{
+		"csid": "[N>standardVirtualCatalogAssetRelationship]",
+		"Jlanguagetranslation": {
+			"en_US": {
+				"side2Label": "VirtualCatalog",
+				"label": "VirtualCatalog-Asset Relationship",
+				"side1Label": "Images"
+			},
+			"es_ES": {
+				"side2Label": "Catᬯgo virtual",
+				"label": "VirtualCatalog-Asset Relationship__es_ES",
+				"side1Label": "Images__es_ES"
+			},
+			"fr_FR": {
+				"side2Label": "Catalogue virtuel",
+				"label": "VirtualCatalog-Asset Relationship__fr_FR",
+				"side1Label": "Images__fr_FR"
+			},
+			"de_DE": {
+				"side2Label": "Virtueller Katalog",
+				"label": "VirtualCatalog-Asset Relationship__de_DE",
+				"side1Label": "Images__de_DE"
+			}
+		},
+		"$type": "relationship"
+	},
+	"bgp 1000046 ended 2020-06-22T16:53:38"
+]

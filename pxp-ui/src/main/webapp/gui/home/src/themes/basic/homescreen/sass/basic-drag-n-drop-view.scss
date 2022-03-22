@@ -1,0 +1,38 @@
+@import "../../../../styleguide/style-guide";
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+  position: relative;
+}
+
+.dragViewContainer, .draggableContainer {
+  display: inline-block;
+}
+
+.dropViewContainer, .droppableContainer {
+  &.dragHereVisible > .dragHere {
+    visibility: visible;
+    background: transparent;
+  }
+}
+
+.dragHere {
+  visibility: hidden;
+
+  &:after {
+    content: 'Drag here!';
+    text-align: center;
+    font-size: $font-title;
+    font-weight: 500;
+    color: $color-light-3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

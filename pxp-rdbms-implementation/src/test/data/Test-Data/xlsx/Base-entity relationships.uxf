@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>70</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100003: Screen W530XP_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>0</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100001: PC Mouse_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>70</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100010: Acc. High-Speed-HDMI_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>130</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100011: Acc. Mini-DisplayPort_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>320</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_400001: Accessories [7003]_
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>170</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_400002: Embedded Class [300]_
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>90</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+parent [3]</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>10</y>
+      <w>130</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+child [4]</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>80</y>
+      <w>150</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+child [4]</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>130</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+child [4]</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>250</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100005: Screen HP-23-8-inch_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>260</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [1]</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>360</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100007: Screen B0148NNKTC_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>300</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100006: Screen B07CVL2D2S_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>240</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100010: Acc. High-Speed-HDMI_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>290</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100011: Acc. Mini-DisplayPort_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>340</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100012: Acc. Docking-Station_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>390</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100013: Acc. Plugable-Display_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>450</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100014: Acc. USB-C-Dock_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>300</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [1]</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>320</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [1]</panel_attributes>
+    <additional_attributes>10.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>250</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>300</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>320</y>
+      <w>190</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>170.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>320</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>170.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>320</y>
+      <w>190</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>170.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>390</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_400001: EXTENSION_
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>340</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>460</y>
+      <w>210</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_300005: Material [2012]_
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>410</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>580</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_400003: Family Product [7002]_
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>580</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100006: Screen B07CVL2D2S_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>530</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100007: Screen B0148NNKTC_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>590</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100008: Screen B0773ZY26F_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>640</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_100009: Screen B015WCV70W_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>570</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [1]</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>540</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>570</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>190.0;30.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>580</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side [2]</panel_attributes>
+    <additional_attributes>190.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>670</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_400003: ContextualObject_
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>600</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+side 1</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

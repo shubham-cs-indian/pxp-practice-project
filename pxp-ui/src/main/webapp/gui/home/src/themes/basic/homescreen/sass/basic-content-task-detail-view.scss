@@ -1,0 +1,1305 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.taskListViewContainer{
+  width: calc(100% - 210px);
+  background: #fff;
+
+  .toolBarContainer {
+    border-bottom: 1px solid #eee;
+    position: relative;
+    height: 46px;
+    display: flex;
+    align-items: center;
+
+    .leftToolBar {
+      display: inline-flex;
+      vertical-align: top;
+      width: 40%;
+      padding-left: 16px;
+
+      .allTaskCheckbox {
+        height: 30px;
+        width: 14px;
+        margin: 8px 8px 8px 0;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 18px;
+        opacity: .5;
+        cursor: pointer;
+        float: left;
+        background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+
+        &:hover {
+          opacity: 0.8;
+        }
+        &.checked {
+          @include background-properties($image-CS-Checked-48Black, 15px);
+        }
+      }
+
+      .searchBar {
+        float: left;
+        margin: 10px 5px;
+        height: 25px;
+        width: auto;
+        flex-grow: 2;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+
+        .simpleSearchBarView {
+          margin: 2px 0;
+          height: 20px;
+
+          .simpleSearchBarInput{
+            width: calc(100% - 76px);
+          }
+        }
+      }
+
+      .deleteTasks{
+        float: right;
+        height: 30px;
+        width: 25px;
+        margin: 8px 0;
+        cursor: pointer;
+        background-color: transparent;
+        opacity: 0.6;
+        @include background-properties($image-CS-delete-bin-black, 16px);
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .rightToolBar {
+      display: inline-block;
+      width: 60%;
+
+      .saveButton {
+        float: right;
+        height: 30px;
+        width: 30px;
+        border-radius: 2px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        margin: 8px 8px 8px 0;
+        background-color: #eee;
+        background-image: url($image-CS-SaveFilled-50Black);
+
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+
+      .groupByContainer{
+        float: right;
+        height: 26px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        margin: 7px 7px 7px 0;
+        background-color: #eee;
+
+        .groupBy{
+          width: 100%;
+          height: 100%;
+          padding: 3px 8px;
+          border-radius: 3px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+
+          .groupByLabel {
+            float: left;
+            text-align: center;
+            line-height: 16px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #333;
+          }
+
+          .dropDownIcon {
+            float: left;
+            @include background-properties($image-CS-expand-arrow-icon,10px);
+            width: 15px;
+            height: 15px;
+            opacity: 0.8;
+          }
+        }
+      }
+      .contentEditToolbarViewContainer {
+        margin: 5px;
+        .toolbarButton {
+          margin: 0 5px;
+
+          &.rightMargin {
+            margin-right: 3px;
+          }
+
+          &.smallRightMargin {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .taskListAndDetailWrapper {
+    height: calc(100% - 37px);
+
+    .taskListWrapper{
+      height: 100%;
+      overflow-y: auto;
+      padding-bottom: 15px;
+
+      .nothingFound{
+        margin: 10px 0;
+      }
+
+      &.detailViewVisible {
+        width: 40%;
+      }
+    }
+
+    &.dashboard {
+      .taskListWrapper {
+        .taskListHeader {
+          margin-bottom: 0;
+        }
+
+        .roleTaskWrapper {
+          /*padding: 0 5px 0 16px;*/
+          background-color: #f8f8f8;
+          width: 100%;
+          float: left;
+          .roleTaskHeader {
+            padding: 1px 10px;
+            font-weight: 500;
+            float: left;
+            background-color: $color-light-7;
+            border-radius: 15px;
+            margin: 5px 10px;
+            box-shadow: 0 1px 0 #bbb;
+          }
+
+          .roleTaskBody {
+            .taskListItem {
+              /*padding: 0;*/
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.taskListWrapper, .subTaskListWrapper, .subTasksContainer{
+  float: left;
+  width: 100%;
+  position: relative;
+
+  .taskListItem {
+    padding: 0 5px 0 16px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    border-radius: 0 2px 2px 0;
+    transition: all .2s;
+
+    input{
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      &:focus{
+        outline: none;
+        background-color: transparent;
+      }
+    }
+
+    .taskListLabel, .taskListLabelInput {
+      float: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      word-break: break-all;
+      line-height: 30px;
+      max-width: calc(100% - 185px);
+      min-width: 50px;
+    }
+
+    .taskListLabelInput{
+     width: calc(100% - 150px);
+    }
+
+    .expiredView {
+      background-image: url($image-CS-Expired-Filled-50);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      width: 18px;
+      height: 30px;
+      margin-left: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      opacity: 1;
+    }
+
+    .deleteTask {
+      float: right;
+      height: 30px;
+      width: 0;
+      cursor: pointer;
+      transition: all .2s;
+      @include background-properties($image-CS-delete-bin-black, 17px);
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .editTask {
+      float: left;
+      margin-left: 10px;
+      height: 30px;
+      width: 0;
+      background-size: 15px;
+      background-repeat: no-repeat;
+      background-position: 3px;
+      cursor: pointer;
+      background-image: url($image-CS-Edit-32);
+    }
+
+    .variantIndicator {
+      float: right;
+      height: 30px;
+      background-size: 15px;
+      background-repeat: no-repeat;
+      background-position: 2px;
+      cursor: pointer;
+      width: 20px;
+      background-image: url($image-Variant);
+    }
+
+    .tasksTagDetails {
+      float: right;
+      width: auto;
+      height: 20px;
+      margin: 5px 4px 5px 2px;
+      border-radius: 12px;
+      background-color: #777;
+      color: #fff;
+
+      .tasksTagIcon {
+        float: left;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        padding: 3px;
+        border-radius: 50%;
+
+        .imageFitToContainer {
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: #fff;
+
+          .imageSimpleViewNoImage{
+            background-size: 70%;
+          }
+        }
+      }
+      .tasksTagLabel {
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 6px 0 6px;
+        height: 100%;
+        line-height: 20px;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        max-width: 65px;
+
+        &.iconVisible {
+          margin-left: 2px;
+        }
+      }
+    }
+
+    .tasksPriorityTag{
+      float: right;
+      width: 14px;
+      height: 14px;
+      margin: 8px 4px 8px 2px;
+      border-radius: 50%;
+    }
+
+    .taskListCheck {
+      float: left;
+      margin-right: 11px;
+      height: 30px;
+      width: 14px;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 14px;
+      opacity: .7;
+      cursor: pointer;
+      background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &.checked {
+        @include background-properties($image-CS-Checked-48Black, 15px);
+      }
+    }
+
+    &:hover {
+      background-color: rgba(238, 238, 238, 0.4);
+
+      .deleteTask, .editTask{
+        width: 20px;
+      }
+    }
+
+    &.selected {
+      background-color: #eee;
+    }
+  }
+
+  .taskListHeader {
+    margin: 5px 0;
+    height: 25px;
+    padding: 0 20px 0 16px;
+
+    .taskListHeaderText {
+      float: left;
+      margin-right: 5px;
+      position: relative;
+      max-width: calc(100% - 40px);
+
+      .listHeader {
+        line-height: 25px;
+        font-size: 15px;
+        margin-right: 5px;
+      }
+
+      .itemCount {
+        font-size: 12px;
+        line-height: 26px;
+      }
+
+      .activeElementIndicator {
+        position: absolute;
+        top: 6px;
+        right: -10px;
+        width: 0;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #00b700;
+      }
+    }
+
+    .collapsedIcon {
+      float: right;
+      width: 15px;
+      height: 25px;
+      opacity: 0.5;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-image: url($image-CS-expand-arrow-icon);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .addNewElement {
+      float: right;
+      width: 15px;
+      height: 25px;
+      margin-right: 8px;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      border-radius: 50%;
+      opacity: .5;
+      @include background-properties($image-CS-Plus-32-black, 15px);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .listLoadMore{
+    text-align: center;
+    padding: 7px 0;
+    cursor: pointer;
+    font-style: italic;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: .6;
+    transition: all .2s;
+    box-shadow: 0 1px 0 0 #f6f6f6;
+    color: $color-mxm-makeup-list-load-more;
+
+    &:hover{
+      opacity: .9;
+    }
+  }
+
+  .addNewTask {
+    cursor: pointer;
+    padding-left: 15px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: .6;
+    transition: all .2s;
+
+    .addNewTaskIcon {
+      float: left;
+      width: 17px;
+      height: 25px;
+      margin-right: 4px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      border-radius: 50%;
+      opacity: .6;
+      background-image: url($image-CS-Plus-32-black);
+    }
+
+    .addNewTaskLabel {
+      float: left;
+      text-transform: uppercase;
+      line-height: 25px;
+      font-size: 11px;
+      margin-left: 5px;
+      color: #777;
+    }
+
+    &:hover{
+      opacity: .9;
+    }
+  }
+
+  .nothingFound{
+    padding: 0 5px 0 30px;
+    font-size: 13px;
+    line-height: 24px;
+    font-style: italic;
+    font-weight: 500;
+    color: $color-dark-5;
+  }
+
+  .groupSection {
+    width: 100%;
+    float: left;
+    margin: 5px 0;
+
+    &.plannedTaskHighlight:first-child{
+      animation: taskPlannedEffect 3s ;
+      border: 1px solid transparent;
+      border-radius: 2px ;
+    }
+
+    &.collapsed {
+      height: 35px;
+      overflow: hidden;
+
+      .taskListHeader{
+        .collapsedIcon{
+          background-image: url($image-CS-Collapse-Arrow-32);
+        }
+
+        .activeElementIndicator {
+            width: 5px;
+          }
+      }
+    }
+  }
+}
+
+.taskAndSubTaskDetailViewContainer{
+  width: 60%;
+  height: 100%;
+  float: left;
+  padding: 5px;
+  border-left: 1px solid #eee;
+  position: relative;
+  overflow-y: auto;
+
+
+  .taskAndSubTaskDetailView{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+
+    .taskSubtaskDetails{
+      width: 100%;
+      position: initial;
+
+      .taskDetailElementView{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include topInlineBlock();
+        transition: all 4s ease;
+
+        .taskDetailViewWrapper{
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          .bpnmWrapperContainer{
+            height: 30vh;
+            float: left;
+            width: 100%;
+          }
+
+          .bpnmZoomButton{
+            float: right;
+          }
+
+          .taskDetailView {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .favourite{
+              position: absolute;
+              right: 20px;
+              width: 20px;
+              height: 20px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 15px;
+              opacity: 0.8;
+
+              &.notFavouriteTask{
+                background-image: url($image-CS-Christmas-Star-50);
+
+                &:hover{
+                  opacity: 1;
+                }
+              }
+
+              &.favouriteTask{
+               @include background-properties-with-theme-color($image-CS-Christmas-Star-50);
+              }
+
+              &:hover{
+                opacity: 1;
+              }
+            }
+
+            .closeTaskDetailView{
+              width: 30px;
+              height: 30px;
+              position: absolute;
+              right: 6px;
+              top: 4px;
+              opacity: 0.6;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 20px;
+              background-image: url($image-CS-Cross);
+              cursor: pointer;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+
+            .descriptionContainer {
+              padding: 5px 15px;
+
+              .contentDetails {
+                color: #ccc;
+                width: 100%;
+                text-transform: uppercase;
+                margin: 5px 0 0 0;
+
+                .contentName {
+                  font-size: 12px;
+                  cursor: pointer;
+                  display: inline-block;
+                  &:hover {
+                    color: #0237ff;
+                    text-decoration: underline;
+                  }
+                }
+              }
+              .descriptionHeaderContainer {
+                max-width: 100%;
+                height: 28px;
+                overflow: hidden;
+
+                .customTextField {
+                  height: 27px;
+                  width: 100%;
+                  padding: 0px 2px 0px 2px;
+
+                  .labelInput {
+                      height: 22px;
+                      width: fit-content;
+                      border-radius: 2px;
+                      @include ellipsis();
+
+                    &:focus {
+                      box-shadow: 0 0 0 1px #dadada;
+                    }
+                  }
+                }
+                .customTextFieldViewContainer
+                {
+                  width: calc(100% - 50px);
+                  overflow: hidden;
+                  display: inline-block;
+                }
+                &:hover {
+
+                  .customTextField {
+
+                    .labelInput{
+                      box-shadow: 0 0 0 1px #dadada;
+                    }
+                  }
+                }
+              }
+
+              .descriptionHeader {
+                width: auto;
+                //text-overflow: ellipsis;
+                //overflow: hidden;
+                //word-break: break-all;
+                //white-space: nowrap;
+                height: 25px;
+                line-height: 28px;
+                border: 0 solid;
+                font-size: 17px;
+                outline: none;
+                padding: 0;
+                float: left;
+                .labelInput {
+                  max-width: 100%;
+                  min-width: 60px;
+                  border: none;
+
+                  &:focus {
+                    outline: none
+                  }
+                }
+              }
+
+              .publicModeButton {
+                height: 20px;
+                width: 20px;
+                background-size: 18px;
+                background-repeat: no-repeat;
+                background-image: url($image-CS-lock);
+                cursor: pointer;
+                opacity: 0.6;
+                float: left;
+                margin: 5px;
+                display: inline-block;
+                &.isPublicButton {
+                  background-image: url($image-CS-unlock);
+                }
+              }
+
+              .descriptionDetails {
+                margin-bottom: 15px;
+                &:hover {
+                  .customTextFieldViewContainer {
+                    .customTextField {
+                      box-shadow: 0 0 0 1px #dadada;
+                    }
+                  }
+                }
+                .taskTextField {
+                  padding: 2px 0px;
+                  max-height: 300px;
+                  width: 100%;
+                  border-radius: 2px;
+                  outline: none;
+                  border: none;
+                  display: block;
+
+                  &::-moz-placeholder, &::-webkit-input-placeholder, &:-ms-input-placeholder{
+                    color: #ddd;
+                  }
+                }
+
+                textarea {
+                  resize: none;
+                }
+              }
+
+              .customTextFieldViewContainer {
+                margin-bottom: 0;
+
+                .customTextFieldDescription{
+                  margin: 0;
+                  .customTextField{
+                    margin-top: 10px;
+                    &.isDisabled {
+                      margin-top: 0;
+                    }
+                  }
+                }
+              }
+            }
+
+            .entityTasksFormView {
+              padding: 5px 15px;
+              float: left;
+              .entityTasksFormValue {
+                width: 50%;
+                height: 28px;
+              }
+            }
+
+            .taskMSSViewContainer {
+              padding: 5px 15px;
+              width: 100%;
+              float: left;
+
+              .taskMSSLabel{
+                float: left;
+                padding: 2px;
+                width: 25%;
+                height: 30px;
+                line-height: 25px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: break-all;
+              }
+              .taskMSSDetail{
+                float: left;
+                width: 50%;
+                height: 28px;
+                border: 1px solid #eee;
+                border-radius: 5px;
+
+                .numberTextField{
+                  padding: 4px 6px;
+                  max-height: 300px;
+                  width: 100%;
+                  border-radius: 2px;
+                  outline: none;
+                  border: none;
+                }
+
+                .customDatePickerWrapper {
+                  padding: 0 5px;
+                  height: 100%;
+
+                  .customDatePickerEmptyButton {
+                    display: none;
+                  }
+
+                  .customDatePickerDisabledValue{
+                    margin: 0;
+                    line-height: 26px;
+                  }
+
+                  .textField{
+                    height: 26px !important;
+                  }
+                }
+
+                .numberLocaleInput{
+                  padding: 0 5px;
+                  margin: 0;
+                  line-height: 23px;
+                }
+              }
+
+              .onOrAfterField {
+                float: left;
+                width: 50%;
+                margin-top: 3px;
+                .onOrAfterBlock {
+                  float: right;
+                  clear: both;
+                  margin-bottom: 7px;
+                  width: 100%;
+                  .repeatCustomDate {
+                    float: right;
+                    width: 60%;
+                    height: 28px;
+                    border: 1px solid #eee;
+                    border-radius: 5px;
+                    outline: none;
+
+                    .customDatePickerWrapper {
+                      padding: 0 5px;
+                      height: 100%;
+
+                      .datePickerCustom {
+                        height: 100%;
+                      }
+
+                      .customDatePickerEmptyButton {
+                        display: none;
+                      }
+
+                      .customDatePickerDisabledValue {
+                        margin: 0;
+                        line-height: 26px;
+                      }
+
+                      .textField {
+                        height: 26px !important;
+
+                        hr {
+                          border-bottom: solid 0px #e0e0e0 !important;
+                        }
+                      }
+                    }
+
+                    .checkBoxLabel {
+                      float: left;
+                    }
+                  }
+
+                  .inputCheckBox {
+                    float: left;
+                    margin-top: 6px;
+                  }
+
+                  .onOrAfterTextField {
+                    float: right;
+                    margin-left: 21px;
+                    width: 60%;
+
+                    .numberField {
+                      float: right;
+                      width: 100%;
+                      height: 28px;
+                      border: 1px solid #eee;
+                      border-radius: 5px;
+                    }
+
+                    .numberLocaleInput {
+                      padding: 0 5px;
+                      margin: 0;
+                      line-height: 23px;
+                    }
+                  }
+                }
+
+              }
+
+              .fieldLabel {
+                margin-top: 3px;
+                margin-left: 6px;
+                float: left;
+                max-width: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+              .timesLabel {
+                float: left;
+                margin-left: 6px;
+                margin-top: 41px;
+              }
+
+              .days {
+                float: left;
+                .selectionToggleView {
+                  padding-left: 0;
+                }
+              }
+              &.priority {
+                .taskDetail {
+                  &.red {
+                    .selectedItems {
+                      background-color: #DD0D06;
+                      color: #fff;
+
+                      .crossIcon {
+                        background-image: url($image-CS-Cross);
+                      }
+                    }
+                  }
+
+                  &.orange {
+                    .selectedItems {
+                      background-color: #f96604;
+                      color: #fff;
+
+                      .crossIcon {
+                        background-image: url($image-CS-Cross);
+                      }
+                    }
+                  }
+
+                  &.yellow {
+                    .selectedItems {
+                      background-color: rgba(249, 232, 6, 0.72);
+
+                      .crossIcon {
+                        background-image: url($image-CS-Cross);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .taskDatePickerViewContainer {
+              padding: 5px 15px;
+              width: 100%;
+              float: left;
+
+              .taskDatePickerLabel {
+                float: left;
+                padding: 2px;
+                width: 25%;
+                height: 30px;
+                line-height: 25px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: break-all;
+              }
+
+              .taskDatePickerDetail {
+                float: left;
+                width: 50%;
+                border: 1px solid #eee;
+                border-radius: 5px;
+
+                .customDatePickerWrapper {
+                  padding: 0 5px;
+                  height: 26px;
+
+                  .customDatePickerEmptyButton {
+                    display: none;
+                  }
+
+                  .customDatePickerDisabledValue {
+                    margin: 0;
+                    line-height: 26px;
+                  }
+
+                  .textField {
+                    height: 26px !important;
+                  }
+                }
+              }
+
+              &:hover {
+                .customDatePickerEmptyButton {
+                  opacity: .8;
+                }
+              }
+            }
+
+            .taskAttachmentContainer {
+              width: 100%;
+              float: left;
+              padding: 0 10px 10px 10px;
+
+              .fileAttachmentViewWrapper{
+
+                .fileAttachmentsUploadWrapper{
+                  padding-right: 8px;
+                }
+              }
+            }
+
+            .taskSection {
+              width: 100%;
+              float: left;
+
+              .taskSectionHeader{
+                width: 100%;
+                display: block;
+                height: 25px;
+                line-height: 25px;
+                margin: 15px 0;
+                padding: 0 16px;
+                cursor: default;
+
+                .bulkDeleteIcon {
+                  float: right;
+                  width: 15px;
+                  height: 25px;
+                  margin-right: 10px;
+                  opacity: 0.5;
+                  cursor: pointer;
+                  @include background-properties($image-CS-delete-bin-black,15px);
+
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+
+                .taskSectionLabel {
+                  float: left;
+                  font-size: 15px;
+                  cursor: pointer;
+                }
+
+                .collapsedIcon {
+                  float: right;
+                  width: 15px;
+                  height: 25px;
+                  opacity: 0.5;
+                  cursor: pointer;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 15px;
+                  background-image: url($image-CS-expand-arrow-icon);
+
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+              }
+
+              .taskSectionDetails{
+                width: 100%;
+                overflow: hidden;
+                margin: 10px 0;
+
+                .commentsContainer{
+                  padding-top: 10px;
+
+                  .commentTaskEditContainer{
+                    padding: 2px 15px;
+                    overflow: hidden;
+
+                    .commentsFormWrapper{
+                      width: calc(100% - 55px);
+                      float: left;
+                      margin-left: 10px;
+
+                      .commentButton{
+                        float: right;
+                        margin: 15px 5px 5px 5px;
+                        height: 28px;
+                        width: 100px;
+                        text-align: center;
+                        cursor: pointer;
+                        background-color: #2887ca;
+                        color: #fff;
+                        border-radius: 5px;
+                        line-height: 28px;
+                        transition: all .2s;
+
+                        &.disabledCommentButton{
+                          width: 0;
+                        }
+
+                      }
+
+                      .userName{
+                        font-weight: 500;
+                        padding: 0 5px 0 10px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        word-break: break-all;
+                        display: inline-block;
+                        line-height: 16px;
+                        float: left;
+                      }
+
+                      .userCommentTextBoxContainer{
+                        width: 100%;
+                        padding: 5px 5px 5px 10px;
+                        overflow: hidden;
+
+                        .fr-toolbar{
+                          z-index: 1;
+                        }
+
+                        .userCommentTextBox{
+                          width: 100%;
+                          min-height: 50px;
+                          border-radius: 2px;
+                          border: 1px solid #ddd;
+                          outline: none;
+                          resize: none;
+                          float: left;
+
+
+                          .fr-view {
+                            min-height: 160px;
+                            max-height: 200px;
+                          }
+
+                          .fr-dropdown-content {
+                            max-height: 150px;
+                          }
+
+                          .fr-popup {
+                            .fr-color-set {
+                              .fr-selected-set {
+                                max-height: 80px;
+                                overflow: auto;
+                              }
+                            }
+                          }
+                        }
+
+                      }
+
+                      .userCommentTextContainer{
+                        width: 90%;
+                        overflow-wrap: break-word;
+                        padding: 5px 5px 5px 10px;
+                        float: left;
+                      }
+
+                      .commentAttachmentViewContainer{
+                        width: 100%;
+                        padding: 2px;
+                      }
+
+                      .commentDetails {
+                        padding: 0 10px;
+                        font-size: 11px;
+                        color: #aaa;
+                        float: left;
+                        display: inline-block;
+                        line-height: 18px;
+                      }
+
+                    }
+
+                    .commentTaskIconWrapper {
+                      width: 45px;
+                      float: left;
+                      text-align: center;
+
+                      .commentTaskIconContainer{
+                        vertical-align: top;
+                        height: 45px;
+                        width: 45px;
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        border-radius: 100px;
+
+                        .defaultCommentUserIcon {
+                          @include background-properties-with-theme-white-color($image-CS-Gender-Neutral-User-32);
+                          background-size: 43px;
+                          background-repeat: no-repeat;
+                          height: 100%;
+                          background-position: 0 5px;
+                          width: 100%;
+                          background-color: #aaa;
+                        }
+
+                        .commentIcon {
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          width: 100%;
+                          height: 100%;
+                          transform: translate(-50%, -50%);
+                        }
+
+                      }
+                    }
+                  }
+                }
+
+                .workflowModifiedStatus{
+                  color: $color-bpmn-yellow;
+                  font-style: italic;
+                  padding-left: 15px;
+                  white-space: break-spaces;
+                }
+              }
+
+              &.collapsed {
+                height: 55px;
+                overflow: hidden;
+
+                .taskSectionHeader{
+                  .collapsedIcon{
+                    background-image: url($image-CS-Collapse-Arrow-32);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .backButton{
+    width: 20px;
+    height: 20px;
+    opacity: .6;
+    background-position: 2px;
+    background-size: 13px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    filter: invert(100%);
+    position: absolute;
+    top: 13px;
+    left: 0;
+    z-index: 1;
+    background-image: url($image-CS-arrow-left-grey);
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .taskDetailSeparator{
+    margin: 0 15px;
+    border-top: 1px solid #eee;
+  }
+}
+
+.taskBpnmDialogBody {
+  height: calc(100% - 76px);
+}
+
+.taskBpnmDialogContent {
+  max-height: none;
+  height: 80%;
+  left: 3%;
+  top: 10%;
+
+  > div {
+    height: 100%;
+  }
+}
+
+@keyframes taskPlannedEffect {
+   0%   { visibility:visible;border: 1px solid #152078;}
+   100% { visibility:hidden;}
+ }

@@ -1,0 +1,99 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.mnmRelationshipViewContainer {
+  .imageSliderView {
+    box-shadow: none;
+    float: left;
+    overflow: unset;
+    .imagesContainer {
+      position: relative;
+      display: inline;
+      .sliderImageWrapper {
+        width: 70px;
+        height: 70px;
+        box-shadow: none;
+        float: left;
+        padding: 0;
+        margin: 5px;
+        border: 1px solid #eee;
+        .sliderImage {
+          width: 60px;
+          height: 60px;
+        }
+        .imageSimpleViewNoImage {
+          background-size: 100%;
+        }
+      }
+      .relationshipElementTooltipContainer {
+
+      }
+
+    }
+    .removeRelationshipButtonView {
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      top: 8px;
+      right: 5px;
+      @include background-properties($image-CS-Cross, 18px);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .paginationView {
+    height: 40px;
+    border-radius: 3px;
+    padding: 5px;
+    float: right;
+    .currentPageInformation {
+      color: #7a7a7a;
+    }
+    .pageNavigationSection {
+      box-shadow: 0 0 1px #4a4a4a;
+      border-radius: 3px;
+      padding: 0;
+      &.miniPagination {
+        .pageButton {
+          background-repeat: no-repeat;
+          background-position: center;
+          box-shadow: none;
+          border-radius: 0;
+          opacity: 0.6;
+
+          &.previous {
+            background-size: 23px;
+            background-image: url($image-CS-arrow-backward);
+            box-shadow: 1px 0 0 #4a4a4a;
+
+
+            &.disabled {
+              background-image: url($image-CS-Previous-48-disabled);
+            }
+          }
+
+          &.next {
+            background-size: 20px;
+            background-image: url($image-CS-arrow-forward);
+
+            &.disabled {
+              background-image: url($image-CS-arrow-right-grey);
+            }
+          }
+
+          &:hover {
+            background-color: transparent;
+            opacity: 0.8;
+          }
+
+          &.disabled {
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

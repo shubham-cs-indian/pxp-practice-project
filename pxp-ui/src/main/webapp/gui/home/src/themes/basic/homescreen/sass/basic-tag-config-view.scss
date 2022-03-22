@@ -1,0 +1,94 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.tagConfigViewContainer {
+  .languageForTagContainer {
+    border: solid 1px #ddd;
+    width: auto;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 10px 10px 0;
+    height: 33px;
+    position: relative;
+
+    .contextMenuViewNewContainer {
+      height: 100%;
+    }
+
+    .languageSelectorContainer {
+      width: 100%;
+      height: 100%;
+      padding: 0 5px;
+
+      .dataLanguageLabel {
+        width: 90px;
+        font-size: 12px;
+        float: left;
+        line-height: 31px;
+      }
+
+      .languageSelectorIcon {
+        float: left;
+        height: 22px;
+        width: 22px;
+        overflow: hidden;
+        margin: 5px 3px;
+
+        .imageFitToContainer {
+          position: relative;
+        }
+      }
+
+      .languageSelectorLabel {
+        float: left;
+        height: 100%;
+        line-height: 34px;
+        margin: 0 4px;
+        font-weight: 500;
+      }
+
+      .buttonIcon{
+        float: left;
+        height: 100%;
+        width: 15px;
+        @include background-properties($image-CS-expand-arrow-icon, 16px);
+      }
+    }
+  }
+}
+
+/*
+.contextItemSeperator {
+
+  height: 2px;
+  cursor: default;
+  border-bottom: 1px solid gray;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.contextItemCreate {
+  background-size: 17px;
+  height: 17px;
+  width: 17px;
+}
+
+.contextItemUpdate {
+  background-size: 17px;
+  height: 17px;
+  width: 17px;
+}
+
+.contextItemDelete {
+  background-size: 17px;
+  height: 17px;
+  width: 17px;
+}
+
+.contextItemRefresh {
+  background-size: 17px;
+  height: 17px;
+  width: 17px;
+}*/

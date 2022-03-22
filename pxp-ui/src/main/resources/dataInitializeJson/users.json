@@ -1,0 +1,26 @@
+[
+  {
+    "id": "admin",
+    "code": "admin",
+    "userName": "admin",
+    "password": "Pass@123$",
+    "firstName": "admin",
+    "lastName": "user",
+    "email": "dummy@dummymail.com",
+    "type":"com.cs.core.config.interactor.entity.user.User",
+    "userIID": 10
+  },
+  {
+  "id": "backgrounduserstandardorganization",
+  "code": "backgrounduserstandardorganization",
+  "userName": "BackgroundUser_StandardOrganization",
+  "password": "Pass@123$",
+  "firstName": "Standard Organization",
+  "lastName": "Background User",
+  "email": "dummy@dummymail.com",
+  "type":"com.cs.config.interactor.entity.User",
+  "isBackgroundUser":true,
+  "isStandard":true,
+   "userIID": 11
+   }
+]

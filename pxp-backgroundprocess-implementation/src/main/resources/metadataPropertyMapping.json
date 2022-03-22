@@ -1,0 +1,984 @@
+{
+  "priority": [
+    "iptc",
+    "exif",
+    "xmp",
+    "photoshop",
+    "other"
+  ],
+  "propertyMap": {
+    "I_META_FILE_NAME": {
+      "xmp": [
+        "filename",
+        "Filename",
+        "FileName",
+        "RawFileName",
+        "CameraFilename",
+        "OriginalFileName",
+        "SubVersionFileName"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "OriginalRawFileName"
+      ],
+      "other": [
+        "filename",
+        "Filename",
+        "FileName",
+        "RawFileName",
+        "CameraFilename",
+        "OriginalFileName",
+        "SubVersionFileName",
+        "name"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_APPLICATION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        ""
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_DOCUMENT_TYPE": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        ""
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_CREATE_DATE": {
+      "xmp": [
+        "Date Created",
+        "DateCreated",
+        "Date",
+        "DateTimeDigitized",
+        "DateTimeOriginal",
+        "CreateDate"
+      ],
+      "iptc": [
+        "Date Created",
+        "DateCreated",
+        "DigitalCreationDate"
+      ],
+      "exif": [
+        "Date Created",
+        "DateCreated",
+        "CreateDate",
+        "DateTimeOriginal"
+      ],
+      "other": [
+        "FileCreateDate",
+        "Date Created",
+        "DateCreated",
+        "Date",
+        "DateTimeDigitized",
+        "DateTimeOriginal",
+        "DigitalCreationDate",
+        "CreateDate",
+        "DateTimeOriginal"
+      ],
+      "photoshop": [
+        "Date Created",
+        "DateCreated"
+      ]
+    },
+    "I_MODIFICATION_DATE": {
+      "xmp": [
+        "ModifyDate",
+        "Modify Date",
+        "ModificationDate",
+        "ModifyDate"
+      ],
+      "iptc": [
+        "ModifyDate",
+        "Modify Date"
+      ],
+      "exif": [
+        "ModifyDate",
+        "Modify Date"
+      ],
+      "other": [
+        "FileModifyDate",
+        "ModifyDate",
+        "Modify Date",
+        "ModificationDate",
+        "ModifyDate"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_FILE_SIZE": {
+      "xmp": [
+        "SlugOutlineFileSize"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "fileSize",
+        "FileSize"
+      ],
+      "other": [
+        "fileSize",
+        "FileSize",
+        "SlugOutlineFileSize"
+      ]
+    },
+    "I_DIMENSIONS": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "ImageSize"
+      ]
+    },
+    "I_DIMENSION_IN_INCH": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        ""
+      ]
+    },
+    "I_RESOLUTION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "XResolution",
+        "YResolution",
+        "WidthResolution",
+        "HeightResolution"
+      ],
+      "other": [
+        "XResolution",
+        "YResolution",
+        "WidthResolution",
+        "HeightResolution"
+      ],
+      "photoshop": [
+        "XResolution",
+        "YResolution"
+      ]
+    },
+    "I_BIT_DEPTH": {
+      "xmp": [
+        "BitsPerSample",
+        "bitsPerSample"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "BitsPerSample",
+        "bitsPerSample"
+      ],
+      "other": [
+        "BitsPerSample",
+        "bitsPerSample"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_COLOR_MODE": {
+      "xmp": [
+        "ColorMode"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "ColorSpace"
+      ],
+      "other": [
+        "ColorSpaceData",
+        "ColorMode",
+        "ColorSpace"
+      ],
+      "photoshop": [
+        "ColorMode"
+      ]
+    },
+    "I_COLOR_PROFILE": {
+      "xmp": [
+        "InterColorProfile",
+        "interColorProfile"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "InterColorProfile",
+        "interColorProfile"
+      ],
+      "other": [
+        "InterColorProfile",
+        "interColorProfile"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_CREATOR_AUTHOR": {
+      "xmp": [
+        "Creator",
+        "Author"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Creator",
+        "Author"
+      ],
+      "photoshop": [
+        "Creator",
+        "Author"
+      ]
+    },
+    "I_META_CREATOR_STREET": {
+      "xmp": [
+        "Creator Address",
+        "CreatorAddress",
+        "Address"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Creator Address",
+        "CreatorAddress",
+        "Address"
+      ],
+      "photoshop": [
+        "Address"
+      ]
+    },
+    "I_META_CREATOR_LOCATION": {
+      "xmp": [
+        "Creator City",
+        "CreatorCity"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Creator City",
+        "CreatorCity"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_CREATOR_STATE": {
+      "xmp": [
+        "Creator State",
+        "CreatorState",
+        "Creator Province",
+        "CreatorProvince",
+        "State",
+        "Province"
+      ],
+      "iptc": [
+        "Creator State",
+        "CreatorState",
+        "Creator Province",
+        "CreatorProvince",
+        "State",
+        "Province"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Creator State",
+        "CreatorState",
+        "Creator Province",
+        "CreatorProvince",
+        "State",
+        "Province",
+        "Province-State"
+      ],
+      "photoshop": [
+        "Creator State",
+        "CreatorState",
+        "Creator Province",
+        "CreatorProvince",
+        "State",
+        "Province",
+        "Province-State"
+      ]
+    },
+    "I_META_CREATOR_POSTAL_CODE": {
+      "xmp": [
+        "Creator Postal Code",
+        "CreatorPostalCode",
+        "PostalCode"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Creator Postal Code",
+        "CreatorPostalCode",
+        "PostalCode"
+      ],
+      "photoshop": [
+        "PostalCode"
+      ]
+    },
+    "I_META_CREATOR_COUNTRY": {
+      "xmp": [
+        "CreatorCountry",
+        "Creator Country",
+        "Country"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "CreatorCountry",
+        "Creator Country",
+        "Country"
+      ],
+      "photoshop": [
+        "Country"
+      ]
+    },
+    "I_META_CREATOR_TEL": {
+      "xmp": [
+        "CreatorPhone",
+        "Creator Phone",
+        "CreatorWorkTelephone",
+        "CreatorContactInfo",
+        "Phone"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "CreatorPhone",
+        "Creator Phone",
+        "CreatorWorkTelephone",
+        "CreatorContactInfo",
+        "Phone",
+        "ContactPhone"
+      ],
+      "photoshop": [
+        "ContactPhone"
+      ]
+    },
+    "I_META_CREATOR_EMAIL": {
+      "xmp": [
+        "Creator E-Mail",
+        "CreatorWorkEmail",
+        "E-Mail",
+        "WorkEmail"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [],
+      "other": [
+        "Creator E-Mail",
+        "CreatorWorkEmail",
+        "E-Mail",
+        "WorkEmail"
+      ]
+    },
+    "I_META_CREATOR_WWW": {
+      "xmp": [
+        "CreatorWorkURL",
+        "WebURL",
+        "Creator Website"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "CreatorWorkURL",
+        "WebURL",
+        "Creator Website",
+        "Contact Web URL"
+      ],
+      "photoshop": [
+        "ContactWebURL",
+        "WebURL",
+        "Contact Web URL"
+      ]
+    },
+    "I_META_HEADING": {
+      "xmp": [
+        "Headline"
+      ],
+      "iptc": [
+        "Headline"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Headline"
+      ],
+      "photoshop": [
+        "Headline"
+      ]
+    },
+    "I_META_DESCRIPTION": {
+      "xmp": [
+        "Description",
+        "Caption"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "ImageDescription"
+      ],
+      "other": [
+        "Description",
+        "Caption",
+        "ImageDescription"
+      ],
+      "photoshop": [
+        "Description"
+      ]
+    },
+    "I_META_KEYWORDS": {
+      "xmp": [
+        "Keywords",
+        "LastKeywordXMP"
+      ],
+      "iptc": [
+        "Keywords"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Keywords",
+        "LastKeywordXMP",
+        "Keywords"
+      ],
+      "photoshop": [
+        "Keywords"
+      ]
+    },
+    "I_META_LOCATION_DETAIL": {
+      "xmp": [
+        "City"
+      ],
+      "iptc": [
+        "City"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "City"
+      ],
+      "photoshop": [
+        "City"
+      ]
+    },
+    "I_META_LOCATION": {
+      "xmp": [
+        "Location"
+      ],
+      "iptc": [
+        "Location",
+        "Sub-location"
+      ],
+      "exif": [
+        "SubjectLocation"
+      ],
+      "other": [
+        "Location",
+        "Sub-location",
+        "SubjectLocation"
+      ],
+      "photoshop": [
+        "Location"
+      ]
+    },
+    "I_META_STATE": {
+      "xmp": [
+        "State",
+        "Province"
+      ],
+      "iptc": [
+        "State",
+        "Province"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "State",
+        "Province"
+      ],
+      "photoshop": [
+        "State",
+        "Province"
+      ]
+    },
+    "I_META_COUNTRY": {
+      "xmp": [
+        "Country",
+        "CountryName"
+      ],
+      "iptc": [
+        "Country",
+        "Primary Location Name",
+        "Country-PrimaryLocationName"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Country",
+        "CountryName",
+        "Primary Location Name",
+        "Country-PrimaryLocationName"
+      ],
+      "photoshop": [
+        "Country"
+      ]
+    },
+    "I_META_TITEL": {
+      "xmp": [
+        "Title"
+      ],
+      "iptc": [
+        "Object Name",
+        "ObjectName"
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Title",
+        "Object Name",
+        "ObjectName",
+        "Title",
+        "Document Title",
+        "DocumentTitle"
+      ],
+      "photoshop": [
+        "Title",
+        "Document Title",
+        "DocumentTitle"
+      ]
+    },
+    "I_META_COPYRIGHT": {
+      "xmp": [
+        "Copyright Notice",
+        "CopyrightNotice",
+        "Copyright"
+      ],
+      "iptc": [
+        "Copyright Notice",
+        "CopyrightNotice",
+        "Copyright"
+      ],
+      "exif": [
+        "Copyright"
+      ],
+      "other": [
+        "Copyright Notice",
+        "CopyrightNotice",
+        "Copyright"
+      ],
+      "photoshop": [
+        "Copyright"
+      ]
+    },
+    "I_META_COPYRIGHT_STATUS": {
+      "xmp": [
+        "Copyright Status",
+        "CopyrightStatus"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        ""
+      ],
+      "other": [
+        "Copyright Status",
+        "CopyrightStatus"
+      ],
+      "photoshop": [
+        "Copyright Status",
+        "CopyrightStatus"
+      ]
+    },
+    "I_META_EXPOSURE_INDEX": {
+      "xmp": [
+        "ExposureIndex",
+        "Exposure Index",
+        "exposureIndex"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "ExposureIndex",
+        "Exposure Index",
+        "exposureIndex"
+      ],
+      "other": [
+        "ExposureIndex",
+        "Exposure Index",
+        "exposureIndex"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_FOCAL_RANGE": {
+      "xmp": [
+        "focalLength",
+        "FocalLength"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "focalLength",
+        "FocalLength"
+      ],
+      "other": [
+        "focalLength",
+        "FocalLength"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_MAX_BLINDING_VALUE": {
+      "xmp": [
+        "MaxApertureValue",
+        "maxApertureValue"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "MaxApertureValue",
+        "maxApertureValue"
+      ],
+      "other": [
+        "MaxApertureValue",
+        "maxApertureValue"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_RECORDING_DATE": {
+      "xmp": [
+        "Date"
+      ],
+      "iptc": [
+        "DigitalCreationDate"
+      ],
+      "exif": [
+        "ModifyDate"
+      ],
+      "other": [
+        "Date",
+        "DateTimeCreated",
+        "DigitalCreationDate"
+      ]
+    },
+    "I_META_EXPOSURE_CONTROLS": {
+      "xmp": [
+        "exposureProgram",
+        "ExposureProgram",
+        "exposureMode",
+        "ExposureMode"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "exposureProgram",
+        "ExposureProgram",
+        "exposureMode",
+        "ExposureMode"
+      ],
+      "other": [
+        "exposureProgram",
+        "ExposureProgram",
+        "exposureMode",
+        "ExposureMode"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_LIGHT_SOURCE": {
+      "xmp": [
+        "LightSource"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "lightSource"
+      ],
+      "other": [
+        "LightSource"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_SENSOR_TYPE": {
+      "xmp": [
+        "SensingMethod"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "SensingMethod"
+      ],
+      "other": [
+        "SensingMethod"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_BRAND": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "Make",
+        "make"
+      ],
+      "other": [
+        "Make",
+        "make"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_MODELL": {
+      "xmp": [
+        "Model",
+        "CameraMakeModel"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "model",
+        "Model",
+        "Camera Model Name",
+        "cameraModelName",
+        "CameraModelName"
+      ],
+      "other": [
+        "Model",
+        "model",
+        "CameraMakeModel",
+        "Camera Model Name",
+        "cameraModelName",
+        "CameraModelName"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_SERIAL_NUMBER": {
+      "xmp": [
+        "SerialNumber",
+        "CameraSerialNumber",
+        "LensSerialNumber"
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "SerialNumber",
+        "CameraSerialNumber",
+        "LensSerialNumber"
+      ],
+      "other": [
+        "SerialNumber",
+        "CameraSerialNumber",
+        "LensSerialNumber"
+      ],
+      "photoshop": [
+        ""
+      ]
+    },
+    "I_META_PIXEL_X_DIMENSION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "ExifImageWidth"
+      ],
+      "other": [
+        ""
+      ]
+    },
+    "I_META_PIXEL_Y_DIMENSION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "ExifImageHeight"
+      ],
+      "other": [
+        ""
+      ]
+    },
+    "I_META_HIGH_RESOLUTION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "HeightResolution"
+      ],
+      "other": [
+        "ImageHeight"
+      ],
+      "photoshop": [
+        "YResolution"
+      ]
+    },
+    "I_META_WIDTH_RESOLUTION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "WidthResolution"
+      ],
+      "other": [
+        "ImageWidth"
+      ],
+      "photoshop": [
+        "XResolution"
+      ]
+    },
+    "I_META_X_RESOLUTION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "XResolution"
+      ],
+      "other": [
+        ""
+      ],
+      "photoshop": [
+        "XResolution"
+      ]
+    },
+    "I_META_Y_RESOLUTION": {
+      "xmp": [
+        ""
+      ],
+      "iptc": [
+        ""
+      ],
+      "exif": [
+        "YResolution"
+      ],
+      "other": [
+        ""
+      ],
+      "photoshop": [
+        "YResolution"
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$searchBarHeight: 32px;
+
+.simpleSearchBarView {
+  height: $searchBarHeight;
+  max-width: 100%;
+  background-color: #fff;
+
+  &.disabled {
+    opacity: .4;
+    pointer-events: none;
+  }
+
+  .simpleSearchBarSearchIcon {
+    height: 100%;
+    width: 32px;
+    @include topInlineBlock();
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url($image-CS-SearchFilled-32);
+    opacity: .6;
+  }
+
+  .simpleSearchBarInput {
+    height: 100%;
+    width: calc(100% - 64px);
+    outline: none;
+    border: none;
+    background: transparent;
+    @include topInlineBlock();
+  }
+
+  .simpleSearchBarClearButton {
+    height: 100%;
+    width: 32px;
+    @include topInlineBlock();
+    background-position: 6px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-image: url($image-CS-Cross);
+    opacity: .6;
+    cursor: pointer;
+  }
+}

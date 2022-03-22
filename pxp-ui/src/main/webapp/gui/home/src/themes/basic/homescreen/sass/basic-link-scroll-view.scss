@@ -1,0 +1,366 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.elementContainer {
+  overflow: auto;
+  margin-top: 1px;
+  position: relative;
+}
+
+.elementContainer > div:last-child {
+  height: 100%;
+}
+
+.linkViewContainer {
+  display: inline-block;
+  height: 100%;
+}
+
+.linkScrollView {
+  height: 100%;
+
+  .linkBarHeaderViewContainer{
+  }
+
+  .linkedContentsAndPanelWrapper {
+    overflow: hidden;
+    height: calc(100% - 28px);
+    position: relative;
+    background-image: linear-gradient(#f1f1f1, #f6f6f6);
+
+    .linkButtonContainer{
+      position: absolute;
+      width: 24px;
+      height: auto;
+      top: 14px;
+      left: 13px;
+      z-index: 1;
+
+      &.hideMe{
+        display: none;
+      }
+    }
+
+    .linkedContents {
+      overflow: auto;
+      width: 100%;
+      float: left;
+      height: 100%;
+      padding-left: 36px;
+      padding-bottom: 15px;
+      position: relative;
+
+      &.snackBarActive {
+
+        .linkedElement {
+
+          &:last-child {
+            margin-bottom: 40px;
+
+          }
+        }
+      }
+
+      .linkedElement {
+        border-top: none;
+
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        &:last-child {
+          height: 100%;
+        }
+
+        .contentRelationship {
+
+          .relationshipHeaderText {
+            display: none;
+          }
+
+          .relationshipContent {
+
+            /*
+            .relationshipViewContainer {
+              outline: 1px solid #DDDDDD;
+              width: calc(50% - 12px);
+              float: left;
+
+              .relInfoContainer {
+                height: 28px;
+                background: #eee;
+
+                .relative2 {
+                  font-weight: normal;
+                }
+              }
+
+              .relContentContainer {
+                box-shadow: none;
+              }
+            }
+            */
+          }
+        }
+      }
+    }
+
+    .containerForDeselection{
+      width: 100%;
+      height: 100%;
+      float: left;
+    }
+
+    .linkScrollPanel{
+      width: 0px;
+      float: left;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .linkScrollBar{
+      width: 0px;
+      float: right;
+      height: 100%;
+      overflow: auto;
+    }
+
+    &.panelVisible{
+
+      .containerForDeselection {
+        width: calc(100% - 300px);
+      }
+
+      .linkScrollPanel{
+        width: 300px;
+      }
+
+      &.panelTowardsLeft{
+
+        .containerForDeselection {
+          float: right;
+        }
+
+        .linkScrollPanel{
+          float: right;
+        }
+      }
+
+      .linkBarHeaderViewContainer {
+        width: calc(100% - 330px);
+      }
+    }
+
+    &.barVisible{
+
+      .containerForDeselection {
+        //width: calc(100% - 30px);
+        width: 100%;
+        height: calc(100% - 84px);
+      }
+
+      .linkScrollBar{
+        width: 30px;
+        // Temporarily hide the right bar
+        display: none;
+      }
+    }
+
+    &.barVisible.panelVisible {
+
+      .containerForDeselection {
+        width: calc(100% - 330px);
+      }
+    }
+  }
+
+  &.headerVisible{
+
+    .linkBarHeaderViewContainer{
+      height: 30px;
+      width: 100%;
+      padding: 4px 15px;
+      background-color: white;
+      box-shadow: 0px 0px 1px #AA9;
+    }
+
+    .linkedContentsAndPanelWrapper{
+      height: 100%;
+    }
+
+    .containerForDeselection{
+      //padding-top: 30px;
+    }
+
+    .linkButtonContainer{
+      top: 95px;
+    }
+  }
+
+  /*
+  .linkBar {
+    color: #F4ECEC;
+    height: 28px;
+    margin-top: 0;
+    background: rgb(74, 74, 74);
+    box-shadow: 0px 0px 4px -1px #333;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s;
+
+    .linkBarSection {
+      height: 100%;
+      line-height: 28px;
+
+      .actionItemCancel {
+       @include background-properties-with-theme-white-color($image-CS-Cancel-Black);
+
+        &:hover {
+          @include background-properties-with-theme-white-color($image-CS-Cancel-Black);
+        }
+      }
+    }
+  }
+  */
+
+  .linkIcon {
+    width: 24px;
+    height: 24px;
+    float: left;
+    background-size: 16px;
+    background-position: 4px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0 0 10px 0;
+    position: relative;
+    box-shadow: 0px 0px 0px 1px #8C8C8C;
+    background-color: #fff;
+    transition: all .3s ease;
+
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        height: 8px;
+        width: 2px;
+        background-color: #ABABAB;
+        position: absolute;
+        top: 25px;
+        left: 11px;
+      }
+    }
+
+    &:hover{
+      box-shadow: 0px 0px 0px 1px #F79646;
+    }
+
+    &.linkSelected {
+      //background-color: #4A4A4A;
+      box-shadow: 0px 0px 0px 2px #F79646;
+    }
+
+    &.classConfig1{
+      &:before{
+        content: "1";
+        color: #A8A8A8;
+        padding: 3px 0px 0px 8px;
+        position: absolute;
+      }
+    }
+
+    &.classConfig2{
+      &:before{
+        content: "2";
+        color: #A8A8A8;
+        padding: 3px 0px 0px 8px;
+        position: absolute;
+      }
+    }
+
+    &.classConfig3{
+      &:before{
+        content: "3";
+        color: #A8A8A8;
+        padding: 3px 0px 0px 8px;
+        position: absolute;
+      }
+    }
+
+    &.classConfig4{
+      &:before{
+        content: "4";
+        color: #A8A8A8;
+        padding: 3px 0px 0px 8px;
+        position: absolute;
+      }
+    }
+
+    &.classConfig5{
+      &:before{
+        content: "5";
+        color: #A8A8A8;
+        padding: 3px 0px 0px 8px;
+        position: absolute;
+      }
+    }
+
+    &.classConfig6{
+      &:before{
+        content: "6";
+        color: #A8A8A8;
+        padding: 3px 0px 0px 8px;
+        position: absolute;
+      }
+    }
+
+    &.linkIconDefaultSectionImage {
+      background-image: url($image-CS-Circled-Dot-64);
+    }
+
+    &.linkIconMatchNMerge{
+      background-image: url($image-CS-merge-files);
+    }
+
+    &.linkIconChildren{
+      background-image: url($image-CS-Active-Directory-000);
+    }
+  }
+
+  .linkIconImage {
+    height: 20px;
+    width: 20px;
+    display: table;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .basciInfo {
+    @include background-properties-with-theme-white-color($image-CS-menu-item-about);
+    &.linkSelected {
+      background-image: url($image-CS-menu-item-about);
+    }
+  }
+
+  .attributes {
+    background-image: url($image-CS-Purchase-Order-32);
+    &.linkSelected {
+      background-image: url($image-CS-Purchase-Order-32);
+    }
+  }
+
+  .relationship {
+    background-image: url($image-CS-Tree-Structure-Black-32);
+    &.linkSelected {
+      background-image: url($image-CS-Tree-Structure-Black-32);
+    }
+  }
+
+  .materialUIStructure {
+    background-image: url($image-CS-News-32);
+  }
+}
+

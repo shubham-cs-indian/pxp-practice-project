@@ -1,0 +1,292 @@
+@import "./../../../../styleguide/style-guide";
+@import "./../../../../styleguide/mixin";
+
+.taxonomyHandler {
+  overflow: hidden;
+  .taxonomyHandlerWrapper {
+    float: left;
+    .addItemHandler {
+      height: 20px;
+      width: auto;
+      position: relative;
+      float: left;
+      display: inline-block;
+      background-size: 15px;
+      text-align: center;
+      background-repeat: no-repeat;
+      margin: 2px 5px 0px 0px;
+      cursor: pointer;
+      border: 1px solid #d2d2d2;
+      border-radius: 20px;
+      line-height: 18px;
+      padding: 0 10px 0 20px;
+      color: #9c9c9c;
+      font-size: 10px;
+      &:before {
+        content: '+';
+        width: 10px;
+        height: 10px;
+        font-size: 15px;
+        position: absolute;
+        left: 5px;
+        top: 0px;
+        color: #aaa;
+      }
+      &:hover {
+        color: #808080;
+        border-color: #9a9a9a;
+        &:before {
+          color: #808080;
+        }
+      }
+    }
+  }
+}
+
+.smallTaxonomyViewContainer {
+  display: inline-block;
+  width: 100%;
+  padding-left: 3px;
+  .taxonomyDataWrapper {
+    /*display: inline-block;
+    width: 100%;*/
+    /*max-height: 120px;
+    overflow: auto;*/
+    .selectedTaxonomyWrapper {
+      width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      .addedClassificationListWrapper {
+
+        .taxonomySelectionItem {
+          width: auto;
+          position: relative;
+          float: left;
+          display: inline-block;
+          background-size: 15px;
+          text-align: center;
+          background-repeat: no-repeat;
+          margin: 2px 5px 2px 0;
+          cursor: pointer;
+          background-color: $color-light-5;
+          border-radius: 20px;
+
+          .imageFitToContainerImage {
+            padding: 3px;
+          }
+
+          &:hover {
+            .removeClass {
+              opacity: 1;
+            }
+          }
+
+          .taxonomyIcon {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            background-color: #d6d6d6;
+            max-width: 100%;
+
+            &.actionItemAttributionTaxonomy {
+              @include background-properties($image-CS-group-objects, 16px);
+              opacity: 0.6;
+            }
+          }
+
+          .taxonomyLabel {
+            font-size: 10px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 5px;
+            font-weight: 500;
+            max-width: 250px;
+
+            &.isDisabled {
+              padding: 0 10px 0 10px;
+            }
+          }
+
+          .removeClass {
+            height: 20px;
+            width: 15px;
+            background-size: 12px;
+            display: inline-block;
+            vertical-align: top;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            margin: 0 6px 0 0;
+            background-position: center;
+            background-image: url($image-CS-Cross);
+            transition: all .2s;
+            opacity: 0.5;
+          }
+
+          &.withRemoveIcon {
+
+            .taxonomyLabel {
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+
+      .furtherClassificationListWrapper {
+        /*.furtherClassificationWrapper {
+          .furtherClassificationHandler {
+            height: 20px;
+            width: auto;
+            position: relative;
+            float: left;
+            display: inline-block;
+            background-size: 15px;
+            text-align: center;
+            background-repeat: no-repeat;
+            margin: 2px 5px 0px 0px;
+            cursor: pointer;
+            border: 1px solid #d2d2d2;
+            border-radius: 20px;
+            line-height: 18px;
+            padding: 0 6px 0 7px;
+            color: #9c9c9c;
+            font-size: 10px;
+          }
+        }*/
+        .taxonomyHandlerWrapper {
+          float: left;
+          .addItemHandler {
+            border: 1px solid #d2d2d2;
+            border-radius: 20px;
+            line-height: 18px;
+            font-size: 10px;
+            height: 20px;
+            width: auto;
+            position: relative;
+            float: left;
+            display: inline-block;
+            text-align: center;
+            margin: 2px 3px 0 0;
+            cursor: pointer;
+            padding: 0 20px 0 10px;
+            color: #aaa;
+            background-color: #fff;
+
+            &:hover {
+              color: #808080;
+              border-color: #9a9a9a;
+            }
+            &:before {
+              content: '';
+              background-image: url($image-CS-expand-arrow-icon);
+              background-repeat: no-repeat;
+              background-size: 10px;
+              width: 15px;
+              height: 15px;
+              font-size: 15px;
+              position: absolute;
+              right: 2px;
+              top: 2px;
+              background-position: 2px 2px;
+              filter: invert(50%);
+            }
+          }
+        }
+      }
+    }
+
+    .noTaxonomySelectedView {
+      color: #333333;
+      font-size: 11px;
+      font-family: Rubik;
+      font-style: italic;
+      opacity: 50%;
+    }
+  }
+  .taxonomyHandler {
+    overflow: hidden;
+    .taxonomyHandlerWrapper {
+      float: left;
+      .addItemHandler {
+        height: 20px;
+        width: auto;
+        position: relative;
+        float: left;
+        display: inline-block;
+        background-size: 15px;
+        text-align: center;
+        background-repeat: no-repeat;
+        margin: 2px 5px 0px 0px;
+        cursor: pointer;
+        border: 1px solid #d2d2d2;
+        border-radius: 20px;
+        line-height: 18px;
+        padding: 0 10px 0 20px;
+        color: #9c9c9c;
+        font-size: 10px;
+        &:before {
+          content: '+';
+          width: 10px;
+          height: 10px;
+          font-size: 15px;
+          position: absolute;
+          left: 5px;
+          top: 0px;
+          color: #aaa;
+        }
+        &:hover {
+          color: #808080;
+          border-color: #9a9a9a;
+          &:before {
+            color: #808080;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+.addTaxonomyItem {
+  overflow: hidden;
+
+  .addTaxonomySelectionItem {
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    float: left;
+
+    .addTaxonomyIcon {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      float: left;
+      margin: 5px 0 5px 6px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px;
+      background-image: url($image-CS-Plus-32);
+      opacity: .3;
+    }
+
+    .addTaxonomyLabel {
+      font-size: 12px;
+      line-height: 25px;
+      margin: 0 10px 0 5px;
+      color: #aaa;
+      font-weight: 200;
+      float: left;
+      overflow: hidden;
+    }
+  }
+}
+*/

@@ -1,0 +1,172 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.otherSideContainer, .sideContainer {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding-top: 35px;
+
+  .otherSideHeader {
+    float: left;
+    width: 100%;
+    padding: 10px 10px 5px 10px;
+    color: #708090;
+    @include ellipsis();
+  }
+
+  .addPropertyViewContainer {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    .addAttribute, .addTag {
+      width: 20px;
+
+      height: 20px;
+      background: url($image-CS-Text-Color-35-Plus) no-repeat center;
+      background-size: cover;
+      float: left;
+      cursor: pointer;
+    }
+    .addTag {
+      width: 20px;
+      height: 20px;
+      background: url($image-CS-Price-Tag-35-Plus) no-repeat center;
+      background-size: cover;
+      float: left;
+      cursor: pointer;
+    }
+  }
+
+  .sideDropDownContainer {
+    float: left;
+    width: 100%;
+    padding: 5px 10px 20px 10px;
+
+    .multiSelectSearchViewWrapper {
+      height: 35px;
+      width: 100%;
+    }
+
+    .propertyCouplingContainer {
+      border: 1px solid #E8E8E8;
+      .propertyCouplingHeader {
+        overflow: hidden;
+        background-color: $color-light-5;
+        padding: 5px 10px;
+        font-weight: 500;
+
+        .propertyName {
+          width: 55%;
+          float: left;
+          margin-right: 8px;
+        }
+
+        .propertyCoupling {
+          // margin-left: 13%;
+          float: left;
+        }
+      }
+
+      .relationshipPropertyCouplingWrapper {
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+
+        .propertyTypeIcon {
+          float: left;
+          width: 15px;
+          height: 15px;
+          background-color: #fff;
+          box-shadow: 0 0 0 1px #999;
+          border-radius: 3px;
+
+          &.attributes{
+            @include background-properties($image-CS-Text-Color-Filled-50, 15px);
+          }
+
+          &.prices{
+            @include background-properties($image-CS-Prices-Config, 15px);
+          }
+
+          &.tags{
+            @include background-properties($image-CS-Price-Tag-Filled-50, 15px);
+          }
+
+          &.relationships {
+            @include background-properties($image-CS-Relationships, 15px);
+          }
+        }
+        .relationshipPropertyLabel {
+          width: 35%;
+          padding: 0px 5px;
+          flex: 1.2;
+          overflow: hidden;
+          float: left;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-left: 5px;
+        }
+
+        .relationshipPropertyContainer {
+          width: calc(60% - 45px);
+          display: inline-block;
+          padding: 2px 0 2px 24px;
+          font-size: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          flex: 1;
+          float: left;
+
+          select {
+            width: 85%;
+            height: 22px;
+            border: 1px solid #D9D9D9;
+            border-radius: 3px;
+          }
+        }
+
+        .removeProperty {
+          position: inherit;
+          float: right;
+          height: 25px;
+          width: 25px;
+          cursor: pointer;
+          transition: all .2s;
+          opacity: 0.5;
+          @include background-properties($image-CS-delete-bin-black, 17px);
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        &:nth-child(odd) {
+          background-color: #f3f3f3;
+        }
+      }
+    }
+
+  }
+}
+
+.classConfigSelectedClassesContainer {
+  position: relative;
+  .classConfigClassesDelete {
+    height: 25px;
+    width: 25px;
+    background-size: 18px;
+    opacity: .4;
+    transition: all .2s;
+    position: absolute;
+    right: 3px;
+    top: -14px;
+    @include background-properties-with-theme-red-color($image-CS-Cancel-2-Filled-30-Red , 18px);
+  }
+  .classConfigClassesDelete:hover {
+    opacity: 1;
+  }
+}

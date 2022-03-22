@@ -1,0 +1,71 @@
+@import "../../../../styleguide/mixin";
+
+table.endpointAllUploadsTable {
+  table-layout: fixed;
+}
+
+.endpointAllUploadsTable {
+  width: 380px;
+
+  .labelColumn {
+    width: 20%;
+    text-transform: capitalize;
+  }
+
+  .successColumn {
+    width: 10%;
+    text-transform: capitalize;
+  }
+
+  .violationColumn {
+    @include ellipsis();
+    width: 5%;
+    text-align: center;
+  }
+
+  .timeStampColumn {
+    width: 20%;
+    text-transform: capitalize;
+  }
+
+ /* .totalRedViolations {
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background: red;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    margin: 0px 10px;
+  }
+
+  .totalOrangeViolations {
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background: orange;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    margin: 0px 10px;
+  }
+
+  .totalYellowViolations {
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background: yellow;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    margin: 0px 10px;
+  }*/
+
+  .cellValueContainer {
+    @include ellipsis();
+    padding-right: 10px;
+  }
+
+  .endpointAllUploadsTableBody {
+
+  }
+
+}
+

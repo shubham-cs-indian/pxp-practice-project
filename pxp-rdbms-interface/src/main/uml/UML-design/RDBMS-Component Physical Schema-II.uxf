@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1089</x>
+      <y>351</y>
+      <w>261</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>BaseEntity
+--
+*baseEntityIID
+baseEntityID
+baseLocaleID
+classifierIID
+catalogIID
+sourceCatalogIID
+baseType
+current version
+extension: json
+--
+&lt;&lt;article extension&gt;&gt;
+defaultAssetInstanceIID
+
+lw=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1566</x>
+      <y>351</y>
+      <w>225</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ObjectTracking
+{infinite life cycle}
+{automatic purging for old modifications}
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1566</x>
+      <y>279</y>
+      <w>225</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>ObjectTrackingAccess
+{time partioning}
+{short time life cycle}
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>36</x>
+      <y>36</y>
+      <w>261</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>RDBMS Component Physical Schema
+Batch 1 target / Sprint 4
+April-18
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1296</x>
+      <y>117</y>
+      <w>198</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CatalogConfig
+--
+catalogCode: String
+catalogType: Short &lt;&lt;enum&gt;&gt;
+*catalogIID: long
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1278</x>
+      <y>198</y>
+      <w>81</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[CatalogID]
+m1=1
+</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>153</y>
+      <w>207</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>PropertyConfig
+--
+propertyID: String
+*propertyIID: long
+propertyCode: String
+propertyType: Short &lt;&lt;enum&gt;&gt;
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1089</x>
+      <y>117</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ClassifierConfig
+--
+classifierType: Short &lt;&lt;enum&gt;&gt;
+classifierCode: String
+*classifierIID: long
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>198</y>
+      <w>117</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[classifierIID]
+m1=1
+r1=nature class</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1629</x>
+      <y>99</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>UserConfig
+{lazy synchro}
+--
+*userID: String
+userName: String
+*userIID: long
+fg=red
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>414</y>
+      <w>315</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m1=0..*
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;330.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>522</y>
+      <w>261</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>BaseEntityRecordLink
+--
+entityStartVersion: long
+entityEndVersion: long
+couplingType: short &lt;&lt;enum&gt;&gt;
+extension:json
+--
+&lt;&lt;extension&gt;&gt;
+couplingReason
+
+lw=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>423</y>
+      <w>36</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>999</x>
+      <y>720</y>
+      <w>198</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+BaseType
+--
+className: String
+name: String
+typeCode: Short &lt;&lt;enum&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>198</y>
+      <w>171</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[SourceCatalogID]
+m1=0..1
+r1=import source
+</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;230.0;60.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1017</x>
+      <y>180</y>
+      <w>90</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=0..*
+m1=0..*
+</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0;10.0;230.0;80.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>117</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>LocaleConfig
+--
+*localeID: String
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>180</y>
+      <w>144</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[localeID]
+m1=1
+locale of the value</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>603</y>
+      <w>198</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ContextConfig
+--
+contextID: String
+*contextIID: long
+contextCode: String
+contextType: short &lt;&lt;enum&gt;&gt;
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>63</x>
+      <y>477</y>
+      <w>108</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[ContextIID]
+m1=0..1
+contextual 
+attribute
+</panel_attributes>
+    <additional_attributes>40.0;140.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>828</x>
+      <y>360</y>
+      <w>135</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>{name and save comment are here a special case of property in RDBMS}
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>576</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>TagRecord
+
+
+lw=2
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>297</y>
+      <w>270</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>ValueRecord
+--
+value: String
+asExpression: json
+asNumber: double
+asHTML: String &lt;&lt;clob&gt;&gt;
+valueExtension: json
+unitSymbol: String
+--
+&lt;&lt;value extension&gt;&gt;
+contextStartTime
+contextEndTime
+
+lw=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>369</y>
+      <w>306</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[propertyRecordIID]
+m1=1
+inherits</panel_attributes>
+    <additional_attributes>320.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>450</y>
+      <w>117</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[propertyRecordIID]
+m1=0..1
+m2=1..*
+inherits</panel_attributes>
+    <additional_attributes>60.0;10.0;60.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>243</y>
+      <w>81</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[propertyIID]
+m1=1
+</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>360</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>PropertyRecord
+--
+*propertyRecordIID: long
+recordVersion: long
+isDefaultValue: boolean
+
+lw=2
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>234</y>
+      <w>171</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>BaseEntityClassifierLink
+--
+entityStartVersion: long
+entityEndVersion: long
+lw=2
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>981</x>
+      <y>270</y>
+      <w>63</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1278</x>
+      <y>585</y>
+      <w>126</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[baseLocaleID]
+m1=1
+baseLocale
+</panel_attributes>
+    <additional_attributes>50.0;150.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>585</y>
+      <w>108</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[baseType]
+m1=1
+baseType
+</panel_attributes>
+    <additional_attributes>40.0;150.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1566</x>
+      <y>234</y>
+      <w>225</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>UserSession
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1719</x>
+      <y>180</y>
+      <w>36</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>576</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>ContextTagRecord
+
+lw=2
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>495</y>
+      <w>117</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[propertyRecordIID]
+m1=0..1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>60.0;10.0;60.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>396</x>
+      <y>414</y>
+      <w>135</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>{when a context is attached to a value, then context tags can be also defined}
+style=wordwrap
+lw=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1278</x>
+      <y>720</y>
+      <w>135</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>LocaleConfig
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>486</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>propertyRecordIID
+fontsize=12
+halign=center
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>486</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>baseEntityIID
+fontsize=12
+halign=center
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>927</x>
+      <y>315</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>baseEntityIID
+fontsize=12
+halign=center
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>918</x>
+      <y>198</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>otherClassifierIID
+fontsize=12
+halign=center
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>369</x>
+      <y>657</y>
+      <w>198</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>TagValueConfig
+--
+tagValueID: String
+*tagValueIID: long
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>603</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[tagValueIID]
+m1=1..*
+
+</panel_attributes>
+    <additional_attributes>40.0;60.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>603</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[*tagValueIID]
+m1=1..*
+
+</panel_attributes>
+    <additional_attributes>40.0;60.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>639</x>
+      <y>693</y>
+      <w>117</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>PropertyConfig
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>684</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-[propertyIID]
+m1=1
+fg=red
+
+</panel_attributes>
+    <additional_attributes>130.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,105 @@
+
+[
+  {
+    "id": "asset_asset",
+    "translations": {
+      "en_US": {
+        "label": "Asset"
+      },
+      "es_ES": {
+        "label": "Activo"
+      },
+      "fr_FR": {
+        "label": "Atout"
+      },
+      "de_DE": {
+        "label": "Anlagegut"
+      }
+    }
+  },
+  {
+    "id": "attachment_asset",
+    "translations": {
+      "en_US": {
+        "label": "Attachment"
+      },
+      "es_ES": {
+        "label": "Adjunto archivo"
+      },
+      "fr_FR": {
+        "label": "Attachement"
+      },
+      "de_DE": {
+        "label": "Anhang"
+      }
+    }
+  },
+  {
+    "id": "document_asset",
+    "translations": {
+      "en_US": {
+        "label": "Document"
+      },
+      "es_ES": {
+        "label": "Documento"
+      },
+      "fr_FR": {
+        "label": "Document"
+      },
+      "de_DE": {
+        "label": "Dokument"
+      }
+    }
+  },
+  {
+    "id": "image_asset",
+    "translations": {
+      "en_US": {
+        "label": "Image"
+      },
+      "es_ES": {
+        "label": "Imagen"
+      },
+      "fr_FR": {
+        "label": "Image"
+      },
+      "de_DE": {
+        "label": "Bild"
+      }
+    }
+  },
+  {
+    "id": "smartdocument_asset",
+    "translations": {
+      "en_US": {
+        "label": "Smart Document"
+      },
+      "es_ES": {
+        "label": "Documento inteligente"
+      },
+      "fr_FR": {
+        "label": "Document intelligent"
+      },
+      "de_DE": {
+        "label": "Intelligentes Dokument"
+      }
+    }
+  },
+  {
+    "id": "video_asset",
+    "translations": {
+      "en_US": {
+        "label": "Multimedia"
+      },
+      "es_ES": {
+        "label": "Multimedia"
+      },
+      "fr_FR": {
+        "label": "Multimédia"
+      },
+      "de_DE": {
+        "label": "Multimedia"
+      }
+    }
+  }
+]

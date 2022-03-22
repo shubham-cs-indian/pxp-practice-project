@@ -1,0 +1,55 @@
+{
+	"mappings": [
+		{
+	       "id": "sso1",
+	       "type": "SAML",
+	       "label": "SAML - 1",
+	       "ipAddress": "http://adfspxp4.contentserv.com/",
+	       "url": "/saml/login/?idp=http://adfspxp4.contentserv.com/adfs/services/trust"
+	    },
+		{
+			"id": "ldap1",
+			"type": "LDAP",
+			"label": "ldap-1",
+			"url": "ldap://ldappune.contentserv.com:389",
+			"rootDn": "dc=ldappune,dc=contentserv,dc=com",
+			"baseDn": "ou=people",
+			"userIdField": "uid",
+			"managerDn": "cn=admin,dc=ldappune,dc=contentserv,dc=com",
+			"managerPassword": "C$Pune321"
+		},
+		{
+			"id": "ldap2",
+			"type": "LDAP",
+			"label": "ldap-2",
+			"url": "ldaps://ldappune.contentserv.com:636",
+			"rootDn": "dc=ldappune,dc=contentserv,dc=com",
+			"baseDn": "ou=people",
+			"userIdField": "uid",
+			"managerDn": "cn=admin,dc=ldappune,dc=contentserv,dc=com",
+			"managerPassword": "C$Pune321"
+		},
+		{
+			"id": "ldap3",
+			"type": "LDAP",
+			"label": "ldap-3",
+			"url": "ldap://ldappune.contentserv.com:389",
+			"rootDn": "dc=ldappune,dc=contentserv,dc=com",
+			"baseDn": "",
+			"userIdField": "uid",
+			"managerDn": "cn=admin,dc=ldappune,dc=contentserv,dc=com",
+			"managerPassword": "C$Pune321"
+		},
+		{
+			"id": "ldap4",
+			"type": "LDAP",
+			"label": "ldap-4",
+			"url": "ldaps://ldappune.contentserv.com:636",
+			"rootDn": "dc=ldappune,dc=contentserv,dc=com",
+			"baseDn": "",
+			"userIdField": "uid",
+			"managerDn": "cn=admin,dc=ldappune,dc=contentserv,dc=com",
+			"managerPassword": "C$Pune321"
+		}
+	]
+}

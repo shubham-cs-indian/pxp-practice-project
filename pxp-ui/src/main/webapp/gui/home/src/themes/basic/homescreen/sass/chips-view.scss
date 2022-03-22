@@ -1,0 +1,195 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+$chipHeight: 24px;
+$spacing: 10px;
+$border-radius: 20px;
+
+.chipsView {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+
+  .itemWrapper {
+    height: $chipHeight;
+    display: inline-block;
+
+    &.withLink {
+      .items {
+        margin: 0;
+      }
+    }
+
+    .connectionLink {
+      height: $chipHeight;
+      width: 11px;
+      display: inline-block;
+      vertical-align: top;
+      @include background-properties($image-CS-link-icon, 35px, 0 10px);
+    }
+
+    &:first-child {
+      .connectionLink {
+        display: none;
+      }
+    }
+  }
+
+  .items {
+    width: auto;
+    margin: 2px 5px 2px 0;
+    background-color: $color-light-5;
+    border-radius: $border-radius;
+    color: $color-dark-6;
+    cursor: auto;
+    display: inline-block;
+
+    .itemLabel {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 8px;
+      line-height: $chipHeight;
+      font-weight: 400;
+      font-size: $font-normal;
+      float: left;
+      max-width: 200px;
+    }
+
+    .imageFitToContainer {
+      height: 20px;
+      width: 20px;
+      float: left;
+      border-radius: 50%;
+      background-color: $color-light-12;
+    }
+
+    .selectedItemIcon {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      background-color: $color-light-12;
+      max-width: 100%;
+      opacity: 0.6;
+
+      &.articleIcon {
+        @include background-properties($image-CS-Product-menu, 16px);
+      }
+
+      &.assetIcon {
+        @include background-properties($image-CS-ImageFile, 16px);
+      }
+
+      &.supplierIcon {
+        @include background-properties($image-CS-Truck, 16px);
+      }
+
+      &.targetIcon {
+        @include background-properties($image-CS-Goal, 16px);
+      }
+
+      &.textAssetIcon {
+        @include background-properties($image-CS-Overview, 16px);
+      }
+
+      &.smartDocumentTemplateIcon {
+        @include background-properties($image-CS-smart-document-template-icon, 16px);
+      }
+
+      &.actionItemAttributionTaxonomy {
+        @include background-properties($image-CS-group-objects, 16px);
+      }
+
+    }
+
+
+    .selectedItemIcon {
+      height: $chipHeight;
+      width: $chipHeight;
+      border-radius: $border-radius;
+      overflow: hidden;
+      background-color: $color-light-6;
+      max-width: 100%;
+      opacity: 0.6;
+      float: left;
+
+      &.articleIcon {
+        @include background-properties($image-CS-Product-menu, 16px);
+      }
+
+      &.assetIcon {
+        @include background-properties($image-CS-ImageFile, 16px);
+      }
+
+      &.supplierIcon {
+        @include background-properties($image-CS-Truck, 16px);
+      }
+
+      &.targetIcon {
+        @include background-properties($image-CS-Goal, 16px);
+      }
+
+      &.textAssetIcon {
+        @include background-properties($image-CS-Overview, 16px);
+      }
+
+      &.smartDocumentTemplateIcon {
+        @include background-properties($image-CS-smart-document-template-icon, 16px);
+      }
+
+      &.actionItemAttributionTaxonomy {
+        @include background-properties($image-CS-group-objects, 16px);
+      }
+    }
+
+    .imageFitToContainer {
+      height: $chipHeight;
+      width: $chipHeight;
+      float: left;
+      border-radius: $border-radius;
+      position: relative;
+      background-color: $color-light-6;
+
+      img {
+        max-width: 60%;
+        max-height: 60%;
+      }
+    }
+
+    .removeItem {
+      height: $chipHeight;
+      width: 15px;
+      cursor: pointer;
+      margin-right: 3px;
+      transition: all .2s;
+      opacity: 0.5;
+      float: left;
+      @include background-properties($image-CS-Cross, 14px);
+    }
+
+    &:hover {
+      .removeItem {
+        opacity: 1;
+      }
+    }
+
+    &.isNature {
+      background-color: $color-dark-9;
+      color: $color-light-1;
+    }
+  }
+}
+
+.chipsWrapper {
+  &.instancesComparison {
+    .chipsView {
+      cursor: default;
+    }
+  }
+}

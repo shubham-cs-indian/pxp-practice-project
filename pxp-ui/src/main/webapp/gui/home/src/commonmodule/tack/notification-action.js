@@ -1,0 +1,22 @@
+export default {
+  comment: "comment",
+  attachmentUploaded: "attachmentUploaded",
+  attachmentDeleted: "attachmentDeleted",
+  dueDateChanged: "dueDateChanged",
+  startDateChanged: "startDateChanged",
+  overDueDateChanged: "overDueDateChanged",
+  usersAdded: "usersAdded",
+  usersDeleted: "usersDeleted",
+  taskDeleted: "taskDeleted",
+  taskModified: "taskModified",
+  statusChanged: "statusChanged",
+  priorityChanged: "priorityChanged",
+  subtaskAdded: "subtaskAdded",
+  subtaskDeleted: "subtaskDeleted",
+  assignedYou: "assignedYou",
+  removedYou: "removedYou",
+  commentWithAttachment: "commentWithAttachment",
+  privacyChanged: "privacyChanged",
+  labelChanged: "labelChanged",
+  descriptionChanged: "descriptionChanged"
+};

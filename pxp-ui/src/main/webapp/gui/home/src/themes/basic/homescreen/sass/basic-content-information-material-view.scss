@@ -1,0 +1,24 @@
+.contentInformationMaterialContainer {
+  width: 100%;
+
+  .wrapper {
+    width: 100%;
+    display: inline-block;
+
+    .element {
+      width: 100%;
+      padding: 5px;
+
+      &.noPadding {
+        padding: 0;
+      }
+    }
+
+    &.divideByTwo {
+      .element {
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+}

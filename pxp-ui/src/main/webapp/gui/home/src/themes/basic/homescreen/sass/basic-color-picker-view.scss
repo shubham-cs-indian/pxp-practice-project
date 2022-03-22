@@ -1,0 +1,94 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+.compactColorPickerView {
+  height: 265px;
+  width: 270px !important;
+  padding-top: 7px !important;
+  padding-left: 7px !important;
+
+  //flexbox-fix is library class
+  .flexbox-fix {
+    > div > span {
+      top: 2px !important;
+    }
+
+    > div:first-child {
+      top: 3px !important;
+      height: 12px !important;
+      width: 12px !important;
+    }
+
+    > div:nth-child(2) {
+      padding-left: 4px !important;
+    }
+  }
+}
+
+.colorPickerView {
+  height: 55px;
+
+  .editIcon {
+    height: 20px;
+    width: 20px;
+    float: left;
+    @include topInlineBlock();
+    @include background-properties($image-CS-Edit-32, 15px);
+    cursor: pointer;
+    opacity: 0.9999;
+  }
+
+  .currentColor {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    float: left;
+    margin: 0 0 0 10px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid $color-light-3;
+  }
+
+  .currentColorInfo {
+    height: 50px;
+    width: calc(100% - 70px);
+    padding: 5px 10px;
+    float: right;
+    margin: 0 0 0 10px;
+    display: inline-block;
+    overflow: hidden;
+    color: $color-dark-5;
+    .currentColorLabel {
+      font-size: $font-normal;
+      font-weight: 500;
+    }
+    .currentColorValue {
+      font-size: $font-normal;
+    }
+  }
+
+  .colorPickerNothingSelected {
+    @include ellipsis();
+    font-style: italic;
+    color: $color-dark-5;
+    padding: 10px 0;
+    line-height: 23px;
+    word-break: break-all;
+  }
+}
+
+.colorPickerSnackBarContainer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  padding: 7px;
+  background-color: $color-light-3;
+
+  .snackBarButton {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    float: right;
+  }
+}

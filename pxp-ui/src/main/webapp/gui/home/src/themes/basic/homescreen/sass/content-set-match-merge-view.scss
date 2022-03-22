@@ -1,0 +1,1318 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.contentSetMatchMergeViewContainer {
+  width: 100%;
+
+  .dropViewContainer {
+    min-height: 250px;
+    width: 100%;
+    !*overflow: auto;*!
+  }
+
+  .setTableWrapper {
+    overflow: auto;
+    width: 100%;
+    min-height: 250px;
+
+    thead {
+      .setRow {
+
+        .setCell {
+          background-color: #fdfdfd;
+        }
+      }
+    }
+
+    .setTable {
+      table-layout: fixed;
+      min-width: 100%;
+
+      hr, .customDatePickerEmptyButton {
+        display: none;
+      }
+    }
+
+    .setRow {
+
+      .setCell {
+        min-width: 180px;
+        box-shadow: 0 0 0 1px #eee;
+        background-color: #fff;
+        padding: 5px;
+        position: relative;
+
+        .comparisonRed{
+          background: #FFE6E6;
+          //border-radius: 5px;
+          //padding: 0 3px;
+          //border: 1px solid #ff8e90;
+          //color: #ff4444;
+          text-decoration: line-through;
+
+          &:empty{
+            display: none;
+          }
+        }
+
+        .comparisonGreen{
+          background: #E6FFE6;
+          //border-radius: 5px;
+          //padding: 0 3px;
+          //border: 1px solid #3fe63f;
+          //color: #3fe63f;
+
+          &:empty{
+            display: none;
+          }
+        }
+
+        &.noColor {
+
+          .comparisonGreen{
+            border: none;
+            background: none;
+            color: #333;
+            box-shadow: none;
+          }
+
+          .comparisonRed{
+            border: none;
+            background: none;
+            color: #333;
+            box-shadow: none;
+          }
+
+          .compIcon{
+            display: none;
+          }
+        }
+
+        &.headerCell {
+          font-weight: 500;
+          position: relative;
+
+          .removeContent {
+            position: absolute;
+            top: -1px;
+            right: 2px;
+            height: 15px;
+            width: 15px;
+            opacity: 0.6;
+            -webkit-background-size: 15px;
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-image: url($image-CS-Cancel-Black);
+          }
+        }
+
+        &:first-child {
+          font-weight: 500;
+          background-color: #fdfdfd;
+        }
+
+        .setCellChild{
+          border-bottom: 1px dotted #e6dfdf;
+          line-height: 27px;
+          width: 100%;
+          height: 27px;
+
+          &:last-child{
+            border-bottom: none;
+          }
+
+          .setCellChildLabel{
+            float: left;
+          }
+
+          .setCellChildRelevance{
+            float: right;
+            margin-right: 8%;
+          }
+
+          .matchValue{
+            float: right;
+          }
+        }
+
+        .setCellContentValueWrapper{
+          border-bottom: 1px dotted #e6dfdf;
+          line-height: 27px;
+          width: 100%;
+          height: 27px;
+
+          &:last-child{
+            border-bottom: none;
+          }
+
+          &:hover{
+            box-shadow: 0px 0px 1px;
+            cursor: pointer;
+            background-color: rgba(251, 247, 247, 0.12)
+          }
+
+          .setCellContentTagLabel{
+            float: left;
+          }
+
+          .setCellContentTagRelevance {
+            float: right;
+            margin-right: 15px;
+            height: 25px;
+            width: 25px;
+            text-align: center;
+          }
+
+          .contentElementTick{
+            margin-top: 2px;
+          }
+
+          &.comparisonRed{
+            padding: 2px 0px;
+            border: 1px solid #ff8e90;
+            box-shadow: 2px 0px 0px 0px #ff8e90 inset;
+          }
+
+          &.comparisonGreen{
+            padding: 2px 0px;
+            border: 1px solid #3fe63f;
+            box-shadow: 2px 0px 0px 0px #3fe63f inset;
+          }
+
+          &.comparisonWrapper{
+            background: none;
+            padding: 2px 6px;
+            line-height: 20px;
+            margin: 3px 0;
+            height: 26px;
+            border-radius: 3px;
+            color: #333;
+
+            .setCellContentTagRelevance{
+              margin-right: 0;
+            }
+          }
+
+          &.hideColor{
+
+            &.comparisonRed{
+              padding: 2px 0px;
+              border: none;
+              box-shadow:none;
+            }
+
+            &.comparisonGreen{
+              padding: 2px 0px;
+              border: none;
+              box-shadow:none;
+            }
+          }
+        }
+
+        .setMatchData {
+          border-bottom: 1px dotted #e6dfdf;
+          padding: 0px 2px 0px 0px;
+          float: left;
+          border-radius: 15px;
+          margin: 0 5px 5px 0;
+          line-height: 15px;
+          cursor: pointer;
+
+          .setMatchValueCount{
+            background: #aaa;
+            color: #fff;
+            padding: 2px 4px;
+            border-radius: 10px;
+            height: 20px;
+            display: inline-block;
+            line-height: 18px;
+            font-size: 10px;
+            float: right;
+            margin: 3px;
+          }
+
+          &:last-child{
+            border-bottom: none;
+          }
+
+          .matchValue{
+            float: left;
+            font-size: 11px;
+            line-height: 24px;
+            margin: 0 4px;
+            min-width: 28px;
+            text-align: center;
+            padding: 0px 5px 0 5px;
+            max-width: 150px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            p{
+              margin: 0;
+            }
+
+            .assetImageWrapper{
+              border-radius: 5px;
+              margin-top: 5px;
+            }
+          }
+
+          .sectionTagWrapper{
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 3px 2px 0px 0px;
+            float: none !important;
+
+
+            .sectionTagInnerCircle{
+              height: 16px;
+              width: 16px;
+              border-radius: 50%;
+              margin: 2px;
+              background-color: #fff;
+              position: relative;
+
+              .sectionTagLetter{
+                font-size: 10px !important;
+                text-align: center;
+                font-weight: bold !important;
+                color: #666;
+                position: absolute;
+                width: 100%;
+                line-height: 16px;
+
+                &.noShow{
+                  display: none;
+                }
+              }
+
+              .sectionTagIcon{
+                max-width: 12px;
+                max-height: 12px;
+                top: 2px;
+                left: 2px;
+                position: absolute;
+              }
+            }
+          }
+
+          .matchElementWrapper{
+            border: 1px solid #eee;
+            padding: 2px;
+            border-radius: 4px;
+            margin: 3px;
+            overflow: hidden;
+            float: left;
+            background: #fff;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover {
+              border: 1px solid #CCC;
+              box-shadow: 1px 1px 3px -2px #333;
+
+              .matchElementDelete {
+                width: 16px;
+              }
+            }
+
+
+            &.selected{
+              border: 1px solid #aaa;
+            }
+
+            .matchElementLabel{
+              float: left;
+              height: 24px;
+              line-height: 24px;
+              margin: 0 4px;
+              font-size: 10px;
+              word-break: break-all;
+            }
+
+            .matchElementClock{
+              float: right;
+              margin: 2px 0 -2px 0;
+            }
+          }
+        }
+
+        .contentElementTick{
+          @include background-properties-with-theme-white-color($image-CS-CheckMark-black);
+          background-position: 3px;
+          background-size: 16px;
+          background-repeat: no-repeat;
+          height: 22px;
+          width: 22px;
+          float: right;
+          opacity: .6;
+          display: none;
+          border-radius: 20px;
+
+          &.visible{
+            display: block;
+          }
+        }
+
+        .attributeMatchLinkIcon{
+          height: 15px;
+          width: 15px;
+          opacity: 0.7;
+          float: right;
+          margin-right: 5px;
+          -webkit-background-size: 13px;
+          background-size: 13px;
+          background-repeat: no-repeat;
+          background-image: url($image-CS-DefineLocation);
+
+          &:hover{
+            background-image: url($image-CS-DefineLocation);
+            cursor: pointer;
+          }
+        }
+
+        .matchRowWrapper{
+          border-bottom: 1px dotted #e6dfdf;
+          float: left;
+          width: 100%;
+
+          &.comparisonRowWrapper{
+
+            .setSummaryRelevanceLabel{
+              display: block;
+              color: #333;
+            }
+
+            .setSummaryAttributeSameCheck{
+              display: none;
+            }
+
+            .setSummaryAttributeMatch{
+              width: 164px;
+
+              &.comparisonRed{
+                padding: 2px 0px;
+                border: 1px solid #ff8e90;
+                background: none;
+                display: none;
+              }
+
+              &.comparisonGreen{
+                padding: 0px 0px;
+                border: 0px solid #3fe63f;
+                background: none;
+              }
+            }
+
+            .matchLabel{
+              margin-bottom: 10px;
+            }
+          }
+
+          &:last-child{
+            border-bottom: none;
+          }
+
+          .matchLabel{
+            text-align: center;
+            margin-bottom: 10px;
+          }
+
+          .setMatchData{
+            display: inline-block;
+            border-radius: 10px;
+            padding: 0;
+            margin: 0 5px 4px 5px;
+            clear: both;
+
+            .matchValue{
+              margin: 0 0px 0 2px;
+            }
+
+            .sectionTagWrapper{
+              margin-top: 2px;
+              margin-bottom: -2px;
+            }
+          }
+        }
+
+        .setMatchColMoveLeft, .setMatchColMoveRight{
+          height: 20px;
+          width: 16px;
+          background-repeat: no-repeat;
+          background-size: 8px;
+          float: left;
+          opacity: 0;
+          cursor: pointer;
+          transition: all .2s;
+
+          &:hover{
+            opacity: .8;
+          }
+        }
+
+        .setMatchColMoveLeft{
+          background-image: url($image-CS-triangle-west-25);
+          background-position: 1px;
+        }
+
+        .setMatchColMoveRight{
+          background-image: url($image-CS-triangle-east-25);
+          background-position: 6px;
+          float: right;
+        }
+
+        .setMatchColHeader{
+          width: calc(100% - 75px);
+          float: left;
+          line-height: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          .setMatchColHeaderLabel{
+            float: left;
+            margin-right: 10px;
+          }
+
+          .setMatchColHeaderLastModifiedWrapper{
+            font-weight: 100;
+            float: left;
+            color: #aaa;
+
+            * {
+              font-size: 10px;
+            }
+          }
+
+        }
+
+        .setMatchColDelete{
+          height: 20px;
+          width: 20px;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          background-position: 2px;
+          background-image: url($image-CS-Delete-Filled-32);
+          cursor: pointer;
+          float: right;
+          opacity: 0;
+          transition: all .2s;
+        }
+
+        .setMatchColCompare{
+          height: 20px;
+          width: 20px;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          background-position: 2px;
+          background-image: url($image-CS-icons8-compare);
+          cursor: pointer;
+          float: right;
+          opacity: 0;
+          transition: opacity .2s;
+        }
+
+        .comparisonEqual{
+
+          .compIcon{
+            background-size: 10px;
+            background-position: 3px;
+            background-color: #32ca32;
+            border-radius: 10px;
+            background-image: url($image-CS-EqualSign-52White);
+          }
+        }
+
+        .comparisonLesser{
+
+          .compIcon{
+            @include background-properties-with-theme-red-color($image-CS-CircledDown32);
+          }
+        }
+
+        .comparisonGreater{
+
+          .compIcon{
+            @include background-properties-with-theme-red-color($image-CS-CircledUp32);
+          }
+        }
+
+        .compVal{
+
+        }
+
+        .compIcon{
+          display: block;
+          position: absolute;
+          height: 16px;
+          width: 16px;
+          top: 4px;
+          right: 4px;
+          background-size: 16px;
+          background-repeat: no-repeat;
+          background-position: 0;
+        }
+
+        &:hover {
+
+          .setMatchColDelete {
+            opacity: .8;
+          }
+
+          .setMatchColCompare {
+            opacity: .8;
+          }
+
+          .setMatchColMoveLeft, .setMatchColMoveRight {
+            opacity: .5;
+
+            &.disabled{
+              opacity: .2;
+            }
+          }
+        }
+
+        .setImageWrapper {
+          position: relative;
+          overflow: hidden;
+
+          .setCellAutoIcon {
+            top: 14px;
+            right: 20px;
+          }
+
+          .removeImage {
+            background-image: url($image-CS-Cross);
+            background-size: 14px;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            right: 24px;
+            top: 1px;
+            cursor: pointer;
+          }
+
+        }
+
+        .assetImageWrapper {
+          width: 120px;
+          height: 98px;
+          float: left;
+          position: relative;
+          text-align: center;
+          background: $color-light-7;
+          margin: 1px;
+
+          &:hover{
+            cursor: pointer;
+          }
+
+          .assetImage {
+            object-fit: cover;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .setSummaryContainer{
+
+      .matchValue{
+        float: right;
+        margin: 0 2px;
+        font-size: 11px;
+        background: #dcdcdc;
+        border-radius: 3px;
+        line-height: 18px;
+        width: 90px;
+        text-align: center;
+        overflow: hidden;
+
+        .setSummaryRelevanceLabel{
+          font-size: 11px;
+          float: left;
+          background: #eee;
+          width: 70%;
+          display: block;
+        }
+
+        .setSummaryRelevance{
+          font-size: 11px;
+          background: #eee;
+          width: 30%;
+          float: left;
+
+          &.red{
+            color: #fff;
+            background: #e23535;
+          }
+
+          &.green{
+            color: #fff;
+            background: #11bd11;
+          }
+        }
+      }
+
+      .setSummaryRow{
+        //overflow: hidden;
+        border: 1px solid #eee;
+        display: flex;
+        margin: 10px 0;
+        background: #fff;
+
+        .froalaWrapperView{
+          margin-top: 15px;
+        }
+
+        hr, .customDatePickerEmptyButton {
+          display: none;
+        }
+
+        .setSummaryCell{
+          width: 50%;
+          float: left;
+          flex: 1;
+          border-right: 1px solid #eee;
+          padding: 5px;
+          position: relative;
+
+          .setCellAutoIcon{
+            right: 2px;
+
+            &.shiftLeft{
+              right: 20px;
+            }
+          }
+
+          .setCellChild{
+            overflow: hidden;
+            margin: 8px 0 0 0;
+          }
+
+          .setCellChildLabel{
+            float: left;
+          }
+
+          .matchRowWrapper{
+            margin-bottom: 7px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2px;
+            overflow: hidden;
+            //max-width: 180px;
+
+            .matchLabel{
+              float: left;
+            }
+
+            &:last-child{
+              border-bottom: none;
+            }
+          }
+
+          .setAssetsContainer{
+            .setImageWrapper {
+              position: relative;
+              overflow: hidden;
+
+              .assetImageWrapper{
+                float: left;
+              }
+
+              .setCellAutoIcon {
+                top: 14px;
+                right: 20px;
+              }
+
+              .removeImage {
+                float: left;
+                background-image: url($image-CS-Cross);
+                background-size: 14px;
+                height: 15px;
+                width: 15px;
+                top: 1px;
+                cursor: pointer;
+              }
+
+            }
+          }
+
+          .setMatchData{
+            box-shadow: none !important;
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+
+            .matchValue{
+              float: left;
+            }
+
+            .setSummaryAttributeDetails {
+              float: right;
+
+              .setSummaryAttributePerc {
+                float: left;
+                font-size: 11px;
+                line-height: 18px;
+                width: 30px;
+                text-align: center;
+                color: #fff;
+                border-radius: 3px;
+                margin: 0 2px;
+              }
+
+              .setSummaryAttributeCount {
+                float: left;
+                background: #aaa;
+                color: #fff;
+                font-size: 11px;
+                width: 30px;
+                text-align: center;
+                border-radius: 3px;
+                margin: 0 2px;
+                overflow: hidden;
+
+                .setMatchValueCount{
+                  font-size: 11px;
+                  line-height: 18px;
+
+                  &.level1{
+                    background: #76d26c;
+                  }
+
+                  &.level2{
+                    background: #4bb545;
+                  }
+
+                  &.level3{
+                    background: #149914;
+                  }
+                }
+              }
+
+              .setSummaryAttributeSameCheck {
+                height: 20px;
+                width: 20px;
+                float: left;
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                margin: 0 2px;
+
+                &.checked{
+                  background-image: url($image-CS-Checked-48);
+                }
+              }
+            }
+
+            &:hover {
+              cursor: pointer;
+
+              .setSummaryAttributeSameCheck {
+                background-image: url($image-CS-Checked-48Black);
+                opacity: .5;
+
+                &.checked {
+                  background-image: url($image-CS-Checked-48);
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          &:last-child{
+            border-right: none;
+          }
+
+          .setSummaryAttributeLabel{
+            font-size: 11px;
+            color: #aaa;
+            margin: 0;
+          }
+
+          .setSummaryAttributeValue{
+            margin-top: 10px;
+          }
+
+          .setSummaryAttributeMatch{
+            overflow: hidden;
+            margin: 3px 2px 3px 2px;
+            box-shadow: none !important;
+            cursor: pointer;
+            border-bottom: 1px solid #fafafa;
+            padding-bottom: 2px;
+
+            &:last-child{
+              border-bottom: none;
+            }
+
+            &.tagMatch{
+              border-bottom: none;
+
+              .matchValue{
+                float: right;
+                margin: 0 2px;
+                font-size: 11px;
+                background: #dcdcdc;
+                border-radius: 3px;
+                line-height: 18px;
+                width: 90px;
+                text-align: center;
+                overflow: hidden;
+
+                .setSummaryRelevanceLabel{
+                  font-size: 11px;
+                  float: left;
+                  background: #eee;
+                  width: 70%;
+                }
+
+                .setSummaryRelevance{
+                  font-size: 11px;
+                  background: #eee;
+                  width: 30%;
+                  float: left;
+                  color: #333;
+
+                  &.red{
+                    color: #fff;
+                    background: #e23535;
+                  }
+
+                  &.green{
+                    color: #fff;
+                    background: #11bd11;
+                  }
+                }
+              }
+
+              .setSummaryAttributeDetails{
+                float: right;
+              }
+            }
+
+            .setSummaryAttributeInnerValue{
+              float: left;
+
+              p{
+                margin: 0;
+              }
+            }
+
+            .setSummaryAttributeDetails {
+              float: right;
+
+              .setSummaryAttributePerc {
+                float: left;
+                font-size: 11px;
+                line-height: 18px;
+                width: 30px;
+                text-align: center;
+                color: #fff;
+                border-radius: 3px;
+                margin: 0 2px;
+              }
+
+              .setSummaryAttributeCount {
+                float: left;
+                background: #aaa;
+                color: #fff;
+                font-size: 11px;
+                width: 30px;
+                text-align: center;
+                border-radius: 3px;
+                margin: 0 2px;
+
+                .setMatchValueCount{
+                  font-size: 11px;
+                  line-height: 18px;
+                }
+              }
+
+              .setSummaryAttributeSameCheck {
+                height: 20px;
+                width: 20px;
+                float: left;
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                margin: 0 2px;
+
+                &.checked {
+                  background-image: url($image-CS-Checked-48);
+                }
+              }
+            }
+
+            &:hover {
+
+              .setSummaryAttributeSameCheck {
+                background-image: url($image-CS-Checked-48Black);
+                opacity: .5;
+
+                &.checked {
+                  background-image: url($image-CS-Checked-48);
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          .setMatchMergeAttributeWrapper{
+            margin-top: -20px;
+            padding-top: 20px;
+
+            .ruleViolationIconContainer{
+              margin-top: -14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filterBar {
+    height: 35px;
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 7px;
+
+    .filterDataContainer {
+      float: left;
+      margin: 0 4px;
+      opacity: .8;
+
+      .setFilterIcon{
+        height: 20px;
+        width: 20px;
+        background-size: 16px;
+        background-position: 0;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &.autoMerged{
+          background-image: url($image-Auto-Selected-50);
+
+          &.selected{
+            background-image: url($image-Auto-Selected-50);
+          }
+        }
+
+        &.manualMerged{
+          background-image: url($image-CS-WholeHand-50Black);
+
+          &.selected{
+            background-image: url($image-CS-WholeHand-50Black);
+          }
+        }
+
+        &.ambiguous{
+          background-image: url($image-CS-ShowAmbigous-Selected-50);
+
+          &.selected{
+            background-image: url($image-CS-ShowAmbigous-Selected-50);
+          }
+        }
+
+        &.red{
+          background-image: url($image-CS-ShowNotApplicable-Selected);
+
+          &.selected{
+            background-image: url($image-CS-ShowNotApplicable-Selected);
+          }
+        }
+
+        &.showEmpty{
+          background-image: url($image-HideEmptyAttributes-NotSelected);
+
+          &.selected{
+            background-image: url($image-HideEmptyAttributes-Selected);
+          }
+        }
+
+        &.showMatchedAttributes{
+          background-image: url($image-Row-50Black);
+
+          &.selected{
+            background-image: url($image-RowFilled-50Black);
+          }
+        }
+
+        &.showMatchedArticles{
+          background-image: url($image-Col-50Black);
+
+          &.selected{
+            background-image: url($image-ColFilled-50Black);
+          }
+        }
+      }
+
+      .filterLabel {
+        float: left;
+      }
+
+      .filterCheckbox {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .contentSetMatchRowShowHideIcon, .contentSetMatchColumnShowHideIcon{
+    width: 26px;
+    background-position: 4px;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: -38px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 3;
+    overflow: hidden;
+    box-shadow: 0px 1px 4px -1px #555;
+  }
+
+  .contentSetMatchRowShowHideIcon{
+    background-image: url($image-Rows-64Black);
+    right: 147px;
+  }
+
+  .contentSetMatchColumnShowHideIcon{
+    background-image: url($image-CS-Columns-64-Black);
+    right: 180px;
+  }
+
+}
+
+.setSummaryRelevanceLabel{
+  display: none;
+}
+
+.comparisonTable{
+
+  .setRow{
+
+    .setCell:nth-child(2){
+      background: #fffed1 !important;
+    }
+  }
+}
+
+.matchRowWrapper{
+  margin-bottom: 7px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2px;
+  overflow: hidden;
+
+  .matchLabel{
+    float: left;
+  }
+
+  &:last-child{
+    border-bottom: none;
+  }
+}
+
+.setSummaryAttributeMatch{
+  overflow: hidden;
+  margin: 3px 2px 3px 2px;
+  box-shadow: none !important;
+  cursor: pointer;
+  border-bottom: 1px solid #fafafa;
+  padding-bottom: 2px;
+
+  &:last-child{
+    border-bottom: none;
+  }
+
+  &.tagMatch{
+    border-bottom: none;
+
+    .matchValue{
+      float: right;
+      margin: 0 2px;
+      font-size: 11px;
+      background: #dcdcdc;
+      border-radius: 3px;
+      line-height: 18px;
+      width: 90px;
+      text-align: center;
+      overflow: hidden;
+
+      .setSummaryRelevanceLabel{
+        font-size: 11px;
+        float: left;
+        background: #eee;
+        width: 70%;
+      }
+
+      .setSummaryRelevance{
+        font-size: 11px;
+        background: #eee;
+        width: 30%;
+        float: left;
+        color: #333;
+
+        &.red{
+          color: #fff;
+          background: #e23535;
+        }
+
+        &.green{
+          color: #fff;
+          background: #11bd11;
+        }
+      }
+    }
+
+    .setSummaryAttributeDetails{
+      float: right;
+    }
+  }
+
+  .setSummaryAttributeInnerValue{
+    float: left;
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .setSummaryAttributeDetails {
+    float: right;
+
+    .setSummaryAttributePerc {
+      float: left;
+      font-size: 11px;
+      line-height: 18px;
+      width: 30px;
+      text-align: center;
+      color: #fff;
+      border-radius: 3px;
+      margin: 0 2px;
+    }
+
+    .setSummaryAttributeCount {
+      float: left;
+      background: #aaa;
+      color: #fff;
+      font-size: 11px;
+      width: 30px;
+      text-align: center;
+      border-radius: 3px;
+      margin: 0 2px;
+      overflow: hidden;
+
+      .setMatchValueCount{
+        font-size: 11px;
+        line-height: 18px;
+
+        &.level1{
+          background: #76d26c;
+        }
+
+        &.level2{
+          background: #4bb545;
+        }
+
+        &.level3{
+          background: #149914;
+        }
+      }
+    }
+
+    .setSummaryAttributeSameCheck {
+      height: 20px;
+      width: 20px;
+      float: left;
+      background-position: 0;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      margin: 0 2px;
+
+      &.checked{
+        background-image: url($image-CS-Checked-48);
+      }
+    }
+  }
+}
+
+.comparisonRow{
+
+  .comparisonWrapper{
+    margin: 0 0 2px 0;
+  }
+
+  .matchRowWrapper {
+    margin-bottom: 2px;
+    //border-bottom: 1px solid #eee;
+    padding-bottom: 1px;
+  }
+
+  .matchLabel{
+    margin-bottom: 0 !important;
+    text-align: center;
+    max-width: 65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 24px;
+  }
+
+  .setSummaryRelevance{
+    width: 28px !important;
+  }
+
+  .setSummaryRelevanceLabel{
+    display: none !important;
+  }
+
+  .matchValue{
+    width: auto !important;
+  }
+
+  .setSummaryAttributeMatch{
+    width: auto !important;
+  }
+}
+
+.setCellAutoIcon{
+  position: absolute;
+  height: 20px;
+  opacity: .6;
+  width: 20px;
+  background-image: url($image-Auto-Selected-50);
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: 2px;
+  top: 2px;
+  right: 2px;
+
+  &.shiftLeft{
+    right: 20px;
+  }
+}
+
+.setMatchMergeAttributeWrapper{
+  float: left;
+  width: 100%;
+  height: auto;
+
+  .sectionFroalaWrapper{
+    margin-top: 15px;
+  }
+
+  .customDatePickerWrapper{
+    margin-top: 15px;
+  }
+}*/

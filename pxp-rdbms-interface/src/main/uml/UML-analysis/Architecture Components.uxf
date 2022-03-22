@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>620</x>
+      <y>300</y>
+      <w>350</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+&lt;&lt;common services&gt;&gt;
+*Technical Services*
+--
+{projects}
+pxp-technical-services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>580</x>
+      <y>30</y>
+      <w>310</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*Background Process Component*
+--
+{projects}
+pxp-backgroundprocess-implementation</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>620</x>
+      <y>120</y>
+      <w>240</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>backgroundprocess-implementation
+--
+com.cs.core.bgprocess.rest.*
+com.cs.core.bgprocess.*
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>590</y>
+      <w>250</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+rdbms-interface
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>260</y>
+      <w>250</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>rdbms-implementation
+--
+com.cs.core.rdbms.*
+com.cs.core.eventqueue.*
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>340</y>
+      <w>250</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;SQL&gt;&gt;
+rdbms-implementation
+--
+SQL DDL + triggers
+SQL DML
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>160</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>360</x>
+      <y>520</y>
+      <w>460</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*RDBMS Interface*
+--
+{projects}
+pxp-rdbms-interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>390</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>technical-services
+--
+com.cs.core.*
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>340</y>
+      <w>190</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>170.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>0</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Architecture Components
+Gitlab projects
+17-Aug 2019
+
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>40</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+REST
+</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>80</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+ODB Client
+</panel_attributes>
+    <additional_attributes>20.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>120</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+WF Client
+</panel_attributes>
+    <additional_attributes>20.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>220</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>440</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+definitions</panel_attributes>
+    <additional_attributes>10.0;80.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>430</y>
+      <w>120</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+definitions</panel_attributes>
+    <additional_attributes>70.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>150</x>
+      <y>180</y>
+      <w>310</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*RDBMS Component*
+--
+{projects}
+pxp-rdbms-implementation</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

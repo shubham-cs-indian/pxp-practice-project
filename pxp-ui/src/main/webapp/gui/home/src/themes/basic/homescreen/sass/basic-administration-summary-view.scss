@@ -1,0 +1,77 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.administrationSummaryViewWrapper {
+  overflow: auto;
+  height: 100%;
+  .administrationSummaryTabView {
+    padding: 20px 10px;
+    width: 100%;
+    float: left;
+    height: calc(100% - 52px);
+    overflow: auto;
+    scrollbar-width: thin;
+    .administrationSummaryColumnOne,.administrationSummaryColumnTwo,.administrationSummaryColumnThree {
+      width: calc(33.33% - 16px);
+      float: left;
+      margin: 8px;
+      .administrationTileView {
+        padding: 10px;
+        border: 1px solid #D9D9D9;
+        border-radius: 3px;
+        float: left;
+        width:100%;
+        margin: 8px 0;
+        .administrationTileHeaderView {
+          .tileLabel {
+            color: #333;
+            width: calc(100% - 20px);
+            font-weight: 500;
+            float: left;
+          }
+          .expandIcon {
+            @include topInlineBlock();
+            @include background-properties($image-CS-expand-arrow-icon, 16px);
+            opacity: .4;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            &.expanded {
+              @include background-properties($image-CS-Collapse-Arrow-32, 16px);
+            }
+          }
+        }
+        .administrationSummaryViewItemWrapper {
+          .administrationItemData {
+            .administrationSubType {
+              display: flex;
+              justify-content: space-between;
+              padding: 0px 20px 0px 0;
+              .itemLabel {
+                padding-top: 4px;
+                &.bold {
+                  font-weight: 500;
+                  padding: 8px 0 0px;
+                }
+              }
+              .itemCount {
+                padding-top: 4px;
+                &.bold {
+                  font-weight: 500;
+                  padding: 8px 0 0px;
+                }
+              }
+            }
+            .administrationSubTypeItem {
+              display: flex;
+              justify-content: space-between;
+              padding: 3px 0 0 10px;
+              width: calc(100% - 20px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

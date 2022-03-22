@@ -1,0 +1,13 @@
+[
+  {
+    "cse": "[[@Create @line='3' en_US $type=Language]]",
+    "isStandard": true,
+    "isDataLanguage": true,
+    "isUserInterfaceLanguage": true,
+    "abbreviation": "en",
+    "localeId": "2057",
+    "numberFormat": "###,###,###.##",
+    "dateFormat": "DD/MM/YYYY HH:mm:ss",
+    "isDefaultLanguage": true
+  }
+]

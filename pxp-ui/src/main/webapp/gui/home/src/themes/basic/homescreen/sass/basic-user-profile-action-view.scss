@@ -1,0 +1,107 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.userTileMenuItem {
+  overflow: hidden;
+  transition: all .2s;
+  margin-left: 5px;
+  cursor: default;
+  width: 100%;
+
+  .userTileMenuHeader {
+    font-size: $font-sub-title;
+    color: #000;
+  }
+
+  .userTileMenuSubHeader {
+    font-size: $font-small;
+    color : $color-dark-4;
+  }
+}
+
+.userProfileViewContainer {
+  float: right;
+  display: flex;
+  align-items: center;
+  .userControl {
+    .userImageWrapper {
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      line-height: 26px;
+      color: #fff;
+      text-align: center;
+      margin: 0 9px;
+      //border-radius: 50%;
+      overflow: hidden;
+      //background: #fff;
+      //box-shadow: 0 0 0 1.2px #424242;
+      position: relative;
+
+      &.noImage{
+        @include background-properties($image-CS-menu-item-default-user);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 34px;
+      }
+
+      .userImage {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: initial;
+      }
+
+      .imageSimpleViewNoImage{
+        background-image: url($image-CS-menu-item-default-user);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px;
+      }
+    }
+  }
+  }
+
+.contextMenuItemViewWrapper.userProfilePopover {
+  .contextMenuSingleSelect.contextMenuView {
+    padding: 0;
+  }
+    .contextMenuList {
+      padding: 5px 0;
+      border-radius: 4px;
+      border: 1px solid $color-light-5;
+    }
+  //.contextMenuItem:last-child{
+  //  padding-bottom: 10px;
+  //}
+  .contextMenuItem {
+    border-bottom: unset;
+    margin-bottom: 1px;
+    &:hover {
+      background-color: #fafafa !important;
+    }
+
+    .contextMenuData {
+      font-size: $font-normal;
+    }
+
+    &.isSubHeader {
+      background-color: unset;
+      .contextMenuData {
+        font-size: $font-normal;
+      }
+    }
+  }
+}
+.contextMenuItemViewWrapper {
+  .contextMenuSingleSelect.contextMenuView {
+    .contextMenuList {
+      padding: 5px 0;
+    }
+    .contextMenuItem{
+      border: none;
+    }
+  }
+}
+
+
+

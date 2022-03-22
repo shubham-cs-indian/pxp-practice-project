@@ -1,0 +1,68 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+.endpointDialogContainerView {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .menuViewBlockerSection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 20;
+  }
+
+  .headerSection {
+    height: 50px;
+    border-bottom: 1px solid $color-light-3;
+    background-color: $color-light-2;
+
+    .backButtonContainer {
+      float: left;
+      overflow: hidden;
+      cursor: pointer;
+
+      .backArrowIcon {
+        margin: 10px 0 0 5px;
+        width: 30px;
+        height: 30px;
+        opacity: .7;
+        @include background-properties($image-CS-arrow-left, 18px);
+        float: left;
+      }
+
+      .backButton {
+        height: 100%;
+        line-height: 50px;
+        padding: 0 20px 0 0;
+        width: auto;
+        float: left;
+        opacity: .7;
+      }
+
+      &:hover {
+
+        .backArrowIcon, .backButton {
+          opacity: .8;
+        }
+      }
+    }
+  }
+
+  .contentScreenContainer {
+    height: calc(100% - 42px);
+    .contentTileListViewContainer {
+      padding: 0;
+      .contentTileListView{
+        padding: 0;
+      }
+    }
+    .filterSearchViewContainer {
+      position: absolute;
+      top: 6px;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.impactClassList{
+
+  .listItemViewContainer{
+    height: 30px;
+    padding: 5px;
+    transition: all .2s;
+
+    &.listItemSelected, &.listItemSelected:hover{
+      background: #d3d3d3;
+    }
+
+    .listViewCheckBox{
+
+      &.checkBoxUnChecked{
+        background: url($image-CS-Unchecked-Checkbox-48-Material) no-repeat;
+        background-size: 12px;
+        background-position: 3px 4px;
+      }
+
+      &.checkBoxPartialChecked{
+        background: url($image-checkbox-partial) no-repeat;
+        background-size: 12px;
+        background-position: 3px 4px;
+      }
+
+      &.checkBoxChecked{
+        background: url($image-CS-Checked-48Black) no-repeat;
+        background-size: 12px;
+        background-position: 3px 4px;
+      }
+    }
+
+    .listItemName{
+      float: left;
+      width: calc(100% - 60px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 100%;
+      line-height: 20px;
+      padding-left: 5px;
+    }
+
+    .listItemAttrCountContainer{
+      float: left;
+      height: 100%;
+      width: 40px;
+
+      .listItemAttrCountIcon{
+        background: url($image-CS-Edit-Property-Filled-32) no-repeat;
+        height: 20px;
+        width: 20px;
+        background-size: 15px;
+        background-position: 3px;
+        float: left;
+      }
+
+      .listItemAttrCount{
+        float: left;
+        padding: 2px 4px;
+      }
+    }
+
+    .listItemRelCountContainer{
+
+      &.listItemRelCountIcon{
+
+      }
+
+      &.listItemRelCount{
+
+      }
+    }
+  }
+
+  .listItemViewContainer:hover{
+    background-color: #f1f1f1;
+  }
+  .headClass{
+    background-color: darkturquoise;
+    font-weight: bolder;
+  }
+
+}*/

@@ -1,0 +1,701 @@
+@import "../../../../styleguide/mixin";
+@import "basic-tab-layout-view";
+@import "../../../../styleguide/style-guide";
+
+.dashboardScreenControllerWrapper {
+  height: calc(100% - 45px);
+  width: 100%;
+  flex: 1 0;
+  overflow: hidden;
+
+  .breadcrumbSection{
+    .breadcrumbViewContainer {
+      box-shadow: 0 0 0 1px #ddd;
+    }
+  }
+
+  .dashboardScreenController {
+    height: 100%;
+    width: 100%;
+    //background-color: #eee;
+    &.withoutEndpointContainer{
+      padding: 15px;
+      .tabLayoutView{
+        height: 100%;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px $color-light-4;
+        overflow: hidden;
+      }
+    }
+    &.withEndpointContainer{
+      .tabLayoutView{
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        margin: 10px;
+      }
+    }
+
+    .tabLayoutListContainer {
+      height: 38px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    .tabLayoutView {
+      $tabHeight: 32px;
+      //box-shadow: 0 0 0 1px #ddd;
+
+      .tabsSection {
+        @include tabsSectionHeight($tabHeight);
+        //background-color: #fff;
+        box-shadow: inset 0px -1px 0 #eee, 0px 0 0 #eee;
+        border-radius: 3px;
+
+        .tabsList {
+          height: inherit;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: inline-flex;
+
+          .tabItem {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #eee;
+            margin: 0 1px 1px 0;
+            padding: 0 14px;
+            float: right;
+
+            .tabCount {
+              height: 18px;
+              width: 18px;
+              border-radius: 9px;
+              background-color: $color-theme-accent;
+              border: 1px solid $color-theme-accent;;
+              float: right;
+              color: white;
+              line-height: 18px;
+              margin: 10px 0 10px 10px;
+              font-weight: 500;
+              font-size: 11px;
+            }
+
+            &.isActive {
+              box-shadow: 0 1px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 $color-theme-accent;
+            }
+
+            &:hover {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      .bodySection {
+        height: calc(100% - 38px);
+        background-color: #fff;
+        padding: 0;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        .dashboardScreenContainer {
+          height: 100%;
+          width: 100%;
+
+          .dataIntegrationMainViewWrapper {
+            height: 100%;
+            .dataIntegrationFilterViewWrapper {
+              background: #FBFBFB 0% 0% no-repeat padding-box;
+              border: 1px solid $color-light-8;
+              border-radius: 3px;
+              opacity: 1;
+              width: 100%;
+              display: flex;
+
+              .filterBlock1 {
+                width: calc(100% - 34%);
+                float: left;
+                min-width: 635px;
+                padding: 20px 10px 20px 10px;
+
+                .endpointDiv {
+                  width: 205px;
+                  float: left;
+                  padding-left: 10px;
+
+                  .RadioButtonViewCSS {
+                    width: auto;
+                    float: left;
+                    margin-bottom: 2px;
+                    margin-top: 30px;
+
+                    .radioButtonViewContainer {
+                      cursor: pointer;
+                    }
+                  }
+
+                  .endpoint {
+                    width: calc(100% - 25px);
+                    float: left;
+
+                    &.makeDivInactive {
+                      pointer-events: none;
+                      opacity: 0.5;
+                    }
+
+                  }
+                }
+
+                .workflowDiv {
+                  width: 205px;
+                  float: left;
+                  padding-left: 10px;
+
+                  .RadioButtonViewCSS {
+                    width: auto;
+                    float: left;
+                    margin-bottom: 2px;
+                    margin-top: 30px;
+                  }
+
+                  .workflow {
+                    width: calc(100% - 25px);
+                    float: left;
+
+                    &.makeDivInactive {
+                      pointer-events: none;
+                      opacity: 0.5;
+                    }
+                  }
+                }
+
+                .physicalCatalogDiv {
+                  width: 205px;
+                  float: left;
+                  padding-left: 10px;
+
+                  .RadioButtonViewCSS {
+                    width: auto;
+                    float: left;
+                    margin-bottom: 2px;
+                    margin-top: 30px;
+
+                    .radioButtonViewContainer {
+                      cursor: pointer;
+                    }
+                  }
+
+                  .physicalCatalog {
+                    width: calc(100% - 25px);
+                    float: left;
+                    padding-left: 10px;
+
+                    &.makeDivInactive {
+                      pointer-events: none;
+                      opacity: 0.5;
+                    }
+
+                    .entityType {
+                      width: 100%;
+
+                      .entityName {
+                        margin-bottom: 10px;
+                      }
+
+                      .mssViewBorder {
+                        float: left;
+                        border: $color-light-15 1px solid;
+                        width: 100%;
+                        height: 31px;
+                        background-color: white;
+
+                        .multiSelectSearchViewWrapper {
+                          .multiSelectSearchView {
+                            padding-right: 35px;
+                            .multiSelectSummary {
+                              .selectedItems {
+                                background-color: $color-theme-primary;
+                                margin-top: 3px;
+                                &.hideMe {
+                                  display: none;
+                                }
+                                .selectedItemLabel {
+                                  max-width: 75px;
+                                }
+                                .crossIcon {
+                                  width: 18px;
+                                }
+                              }
+                            }
+                            .moreSection {
+                              .moreLabel {
+                                background-color: $color-light-9;
+                              }
+                            }
+                            .multiSelectNothingSelected {
+                              background: white;
+                              border: none;
+                              color: #b6b6b6;
+                              font-style: normal;
+                              margin: 1px;
+                            }
+
+                            &::before {
+                              position: absolute;
+                              content: "";
+                              top: 50%;
+                              transform: translateY(-50%);
+                              width: 15px;
+                              height: 15px;
+                              right: 10px;
+                              opacity: 0.3;
+                              @include background-properties($image-CS-expand-arrow-icon, 15px)
+                            }
+                          }
+                          .contextMenuViewNewContainer {
+                            height: inherit;
+                            &.selected {
+                              box-shadow: 0px 0px 0px 1px $color-theme-accent;
+                            }
+                          }
+                        }
+
+                      }
+                    }
+                  }
+
+                }
+
+              }
+
+              .filterBlock2 {
+                border-left: 1px solid $color-light-4;
+                width: calc(100% - 64%);
+                min-width: 200px;
+                float: left;
+                padding: 20px 10px 20px 10px;
+
+                .userDivWrapper {
+                  float: left;
+                  width: 180px;
+                  margin-bottom: 12px;
+                }
+                .timestampDivWrapper {
+                  float: left;
+                  width: 180px;
+                  margin-left: 10px;
+                  margin-bottom: 12px;
+
+                  .timestampLabel {
+                    margin-bottom: 10px;
+                  }
+
+                  .timestampValue {
+                    caret-color: transparent;
+                    outline: none;
+                    width: 175px;
+                    height: 31px;
+                    background-color: white;
+                    border: 1px solid $color-light-15;
+                    padding: 5px;
+                    vertical-align: middle;
+                    line-height: 28px;
+                    font-size: 13px;
+                    font-style: normal;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:focus{
+                      box-shadow: 0px 0px 0px 1px $color-theme-accent;
+                      border: none;
+                    }
+
+
+                    &:placeholder-shown {
+                      overflow: visible;
+                      color: #b6b6b6;
+                    }
+
+                    &::before{
+                      position: absolute;
+                      content: "";
+                      top: 50%;
+                      transform: translateY(-50%);
+                      width: 15px;
+                      height: 15px;
+                      right: 10px;
+                      opacity: 0.3;
+                      @include background-properties($image-CS-expand-arrow-icon, 15px)
+                    }
+                  }
+                }
+              }
+              .filterBlock3{
+                width:286px;
+                min-width: 100px;
+                margin-top: 20px;
+                padding: 10px;
+                float: right;
+                height: fit-content;
+
+                .buttonWrapper {
+                  width: 80px;
+                  margin-top: 20px;
+                  margin-right: 20px;
+                  float: left;
+                }
+              }
+
+              .lazyDiv {
+                margin-left: 10px;
+
+                .lazyLabel {
+                  margin-bottom: 10px;
+                }
+
+                .lazyValue {
+                  float: left;
+                  background-color: white;
+                  height: 31px;
+                  width: 100%;
+                  overflow: hidden;
+
+                  .multiSelectSearchViewWrapper {
+                    .contextMenuViewNewContainer {
+                      height: inherit;
+                      border: 1px solid $color-light-15;
+                      &.selected {
+                        height: 29px;
+                        border: 1px solid $color-theme-accent;
+                      }
+                    }
+                    .multiSelectSearchView {
+                      .multiSelectSummary {
+                        .selectedItems {
+                          width: auto;
+                          height: 22px;
+                          background-color: $color-theme-primary;
+                          cursor: default;
+                          white-space: nowrap;
+                          display: inline-block;
+                          vertical-align: top;
+                          max-width: 100%;
+                          position: relative;
+                          border-radius: 12px;
+                          overflow: hidden;
+                          margin: 4px 1px 4px 1px;
+                        }
+                      }
+                    }
+                  }
+
+                  .multiSelectSearchViewWrapper {
+                    .multiSelectSearchView {
+                      padding-right: 35px;
+                      .moreSection {
+                        .moreLabel {
+                          background-color: $color-light-9;
+                        }
+                      }
+                    }
+                  }
+
+                  .multiSelectNothingSelected {
+                    background: white;
+                    border: none;
+                    color: #b6b6b6;
+                    font-style: normal;
+                    margin: 1px;
+                  }
+                }
+              }
+
+              .multiSelectSearchViewWrapper {
+                position: relative;
+
+                .multiSelectSearchView {
+                  .moreSection {
+                    right: 30px;
+                    margin: 2px 2px 0 0;
+                  }
+                }
+
+                .contextMenuViewNewContainer {
+                  &::before {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 15px;
+                    height: 15px;
+                    right: 10px;
+                    opacity: 0.3;
+                    @include background-properties($image-CS-expand-arrow-icon, 15px)
+                  }
+                }
+              }
+            }
+
+            .filteredProcessInstanceViewWrapper {
+              height: calc(100% - 30%);
+            }
+            .messageTypeDialogWrapper{
+              width: calc(100% - 70%);
+            }
+          }
+
+          .contentScreenContainer {
+            border-top: none;
+            height: 100%;
+            .contentThumbContainer {
+
+              .contentViewContainer {
+
+                .contentTileListViewContainer {
+
+                  &.withoutCollectionScreen {
+                    padding: 0;
+
+                    .contentTileListView {
+                      padding: 0;
+                      margin: 0;
+                      box-shadow: none;
+                      border-radius: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .gridView {
+            .gridViewUpperSection {
+              .upperSectionButtonsContainer {
+                .BGPServiceSelectorWrapper {
+                  .BGPServiceLabel {
+                    float: left;
+                    line-height: 32px;
+                  }
+                  .contextMenuViewNewContainer {
+                    float: left;
+
+                    .BGPServiceSelector {
+                      overflow: hidden;
+                      border: solid 1px $color-light-4;
+                      height: 32px;
+                      width: auto;
+                      border-radius: 3px;
+                      float: left;
+                      background-color: $color-light-1;
+                      cursor: pointer;
+                      margin: 0 5px 0 10px;
+
+                      .buttonLabel {
+                        padding: 0 10px;
+                        font-size: 11px;
+                        line-height: 32px;
+                        float: left;
+                        font-weight: 500;
+                        max-width: 120px;
+                        @include ellipsis()
+                      }
+
+                      .buttonIcon {
+                        float: right;
+                        height: 30px;
+                        width: 30px;
+                        @include background-properties($image-CS-expand-arrow-icon, 10px);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.messageTypeDialogBox {
+  width: calc(100% - 70%);
+  .entityType {
+    width: 100%;
+
+    .entityName {
+      margin-bottom: 10px;
+    }
+
+    .mssViewBorder {
+      float: left;
+      border: $color-light-15 1px solid;
+      width: 100%;
+      height: 31px;
+      background-color: white;
+
+      .multiSelectSearchViewWrapper {
+        .multiSelectSearchView {
+          padding-right: 35px;
+          .multiSelectSummary {
+            .selectedItems {
+              width: auto;
+              height: 22px;
+              background-color: $color-theme-primary;
+              cursor: default;
+              white-space: nowrap;
+              display: inline-block;
+              vertical-align: top;
+              max-width: 100%;
+              position: relative;
+              border-radius: 12px;
+              overflow: hidden;
+              margin-top: 3px;
+            }
+          }
+          .moreSection {
+            .moreLabel {
+              background-color: $color-light-9;
+            }
+          }
+          .multiSelectNothingSelected {
+            background: white;
+            border: none;
+            color: #b6b6b6;
+            font-style: normal;
+            margin: 1px;
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            right: 10px;
+            opacity: 0.3;
+            @include background-properties($image-CS-expand-arrow-icon, 15px)
+          }
+        }
+        .contextMenuViewNewContainer {
+          height: inherit;
+          &.selected {
+            box-shadow: 0px 0px 0px 1px $color-theme-accent;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.onBoardingFileMappingViewContainer {
+  min-height: 65vh;
+
+  .mappingView {
+
+    .tabLayoutView {
+      $tabHeight: 32px;
+      flex: 1 0;
+      box-shadow: 0 0 0 1px #ddd;
+
+      .tabsSection {
+        @include tabsSectionHeight($tabHeight);
+        box-shadow: inset 0px -1px 0 #eee, 0px 0 0 #eee;
+
+        .tabsList {
+          height: inherit;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: inline-flex;
+
+          .tabItem {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #eee;
+            margin: 0 1px 1px 0;
+            padding: 0 14px 0 6px;
+            float: right;
+            font-size: 12px;
+
+            .tabCount {
+              height: 18px;
+              width: 18px;
+              border-radius: 9px;
+              background-color: $color-theme-accent;
+              border: 1px solid $color-theme-accent;
+              float: right;
+              color: white;
+              line-height: 18px;
+              margin: 10px 0 10px 10px;
+              font-weight: 500;
+              font-size: 11px;
+            }
+
+            &.isActive {
+              box-shadow: 0 1px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 $color-theme-accent;
+            }
+
+            &:hover {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.onBoardingFileMappingViewContainer {
+  min-height: 65vh;
+
+  .mappingView {
+
+    .tabLayoutView {
+      $tabHeight: 32px;
+      flex: 1 0;
+
+      .tabsSection {
+        @include tabsSectionHeight($tabHeight);
+
+        .tabsList {
+          height: inherit;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: inline-flex;
+
+          .tabItem {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #eee;
+            margin: 0 1px 1px 0;
+            padding: 0 14px 0 6px;
+            float: right;
+            font-size: 12px;
+
+            .tabCount {
+              height: 18px;
+              width: 18px;
+              border-radius: 9px;
+              background-color: $color-theme-accent;
+              border: 1px solid $color-theme-accent;
+              float: right;
+              color: white;
+              line-height: 18px;
+              margin: 10px 0 10px 10px;
+              font-weight: 500;
+              font-size: 11px;
+            }
+
+            &.isActive {
+              box-shadow: 0 1px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 $color-theme-accent;
+            }
+
+            &:hover {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

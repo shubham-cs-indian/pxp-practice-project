@@ -1,0 +1,13 @@
+export default {
+  /**calendar specific*/
+  FORMAT_WITH_DATE_MONTH_NAME_YEAR_AND_TIME: 'Do MMM Y HH:mm',
+  DAY_SHORT_FORM: 'ddd',
+  TIME_HOURS: 'HH',
+  TIME_MINUTES: 'mm',
+  DATE_YEAR: 'YYYY',
+  DATE_MONTH_SHORT_FORM: 'M',
+  DATE_MONTH: 'MMM',
+  FORMAT_D: 'D',
+  FORMAT_MMMM: 'MMMM',
+  DATE_WITH_MONTH_NAME_SHORT_FORM: 'll', // MMM D, YYYY
+};

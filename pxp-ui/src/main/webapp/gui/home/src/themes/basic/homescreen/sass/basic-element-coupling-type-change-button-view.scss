@@ -1,0 +1,52 @@
+@import "./../../../../styleguide/style-guide";
+.elementCouplingTypeChangeButtonViewContainer{
+
+  .upperIcon{
+    float: left;
+    height: 30px;
+    width: 18px;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 2px;
+
+    &.clickEnable:hover{
+      opacity: .9;
+      cursor: pointer;
+    }
+
+    &.tightlyCoupled {
+      background-image: url($image-cs-dyn-coupled);
+    }
+
+    &.dynamicCoupled {
+      background-image: url($image-cs-dyn-coupled);
+    }
+
+    &.noCoupled {
+      background-image: url($image-cs-dyn-coupled);
+    }
+
+  }
+}
+
+.couplingTypesPopoverContainer{
+  padding: 5px;
+
+  .couplingTypeNode{
+    width: 130px;
+    line-height: 20px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.21);
+    opacity: .8;
+
+    &:hover{
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:last-child{
+      border: none;
+    }
+  }
+}

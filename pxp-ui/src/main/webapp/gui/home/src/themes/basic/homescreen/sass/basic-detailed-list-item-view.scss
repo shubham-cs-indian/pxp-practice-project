@@ -1,0 +1,2040 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$basic-z1-height : 40px;
+$basic-z2-height : 52px;
+$basic-z3-height : 86px;
+$basic-z4-height : 120px;
+$font-size-entity-name : 12px;
+$font-size-class-name : 10px;
+
+.listItemDrag {
+
+  &.dragViewContainer {
+    display: block;
+  }
+}
+
+.detailedListItemContainer{
+  //height: 80px;
+  margin: 0 10px 10px 0px;
+  border: 1px solid $color-light-3;
+  transition: all .2s;
+  overflow: hidden;
+  border-radius: 3px;
+
+  &.zoom_1 {
+    height: $basic-z1-height;
+  }
+  &.zoom_2 {
+    height: $basic-z2-height;
+    margin: 0 2px 10px 0;
+  }
+  &.zoom_3 {
+    height: $basic-z3-height;
+  }
+  &.zoom_4 {
+    height: $basic-z4-height;
+  }
+
+  //div {
+  //  transition: all .2s;
+  //}
+
+  &.thumbnailRelevanceRed {
+    .checkButton {
+      background-color: $color-relevance-red;
+      .checkButtonIcon {
+        @include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+      }
+    }
+  }
+
+  &.thumbnailRelevanceOrange {
+    .checkButton {
+      background-color: $color-relevance-orange;
+      .checkButtonIcon {
+        @include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+      }
+    }
+  }
+
+  &.thumbnailRelevanceYellow {
+    .basicTemplateContainerZoom1, .basicTemplateContainerZoom2, .basicTemplateContainerZoom3, .basicTemplateContainerZoom4 {
+      .checkButton {
+        background-color: $color-relevance-yellow;
+        .checkButtonIcon {
+          background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+        }
+      }
+
+    }
+  }
+
+  &.thumbnailRelevanceGreen {
+    .checkButton {
+      background-color: $color-relevance-green;
+      .checkButtonIcon {
+        @include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+      }
+    }
+  }
+
+  &.thumbnailRelevanceGray {
+    .checkButton {
+      background-color: $color-relevance-gray;
+      .checkButtonIcon {
+        @include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+      }
+    }
+  }
+
+/*  &.thumbnailRelevanceDarkGray {
+    .checkButton {
+      //background-color: $color-relevance-dark-gray;
+      .checkButtonIcon {
+        @include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+      }
+    }
+  }*/
+
+  .basicTemplateContainerZoom1 {
+    height: $basic-z1-height;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    //for theme - PIM
+    &.PIM {
+      background-color: #fff;
+
+      .checkButton {
+        //background-color: #111;
+        transition: all .2s;
+        height: 100%;
+        width: 35px;
+        float: left;
+        cursor: pointer;
+        opacity: .8;
+
+        &.visibilityHidden{
+          visibility: hidden;
+        }
+
+        &.isSelected {
+          //background-color: $color-theme-accent;
+          opacity: 1;
+
+          .checkButtonIcon {
+            @include background-properties-with-theme-color($image-cs-checkbox-checked, 20px);
+            opacity: 1;
+          }
+        }
+
+        .checkButtonIcon {
+          height: 100%;
+          width: 100%;
+          @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 20px);
+         /* opacity: .3;
+
+          &:hover {
+            opacity: .8;
+          }*/
+        }
+      }
+
+
+      .flexBox {
+        padding: 0 10px 0 10px;
+        transition: all .2s;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 35px);
+        position: relative;
+        height: 100%;
+
+        .primaryInformationSection {
+          float: left;
+          width: calc(100% - 250px);
+          padding: 0 10px 0 0;
+
+          .entityName {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 40px;
+            font-size: $font-size-entity-name;
+            font-weight: 500;
+            color: #000;
+            max-width: 290px;
+            height: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            float: left;
+          }
+
+          .className {
+            display: inline-block;
+            vertical-align: top;
+            font-size: $font-size-class-name;
+            line-height: 40px;
+            font-style: italic;
+            color: #999;
+            padding: 0 0 0 10px;
+            max-width: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+
+        .listViewIndicatorsWrapper {
+          width: 250px;
+          float:left;
+          height: 100%;
+
+          .listViewNewAndUpdatedFlagWrapper {
+            float: right;
+            padding: 10px 3px;
+            margin-right: 15px;
+            height: 100%;
+
+            .thumbnailInformationIndicators {
+              position: unset;
+
+            }
+
+            .newAndUpdatedIndicator {
+              position: unset;
+
+            }
+          }
+
+          .listViewActionItemsAndInformationViewWrapper {
+            float: right;
+            height: 100%;
+            padding: 7px 0;
+
+            .thumbnailActionItemAndInformationView {
+              overflow: hidden;
+              float: left;
+               width: auto;
+
+              .thumbnailActionItemWrapper {
+                float: right;
+                overflow: hidden;
+              }
+
+              .thumbnailInformationView {
+                float: right;
+                position: unset;
+                width: auto;
+                margin-right: 10px;
+
+                .thumbnailInformationContainer {
+                  position: unset;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+
+        .tagInformationContainer {
+          vertical-align: top;
+          max-height: 28px;
+          overflow: hidden;
+          max-width: 10%;
+          //padding: 0 0 0 10px;
+          float: left;
+
+          .tagList {
+            padding: 5px 0 5px 0;
+            height: $basic-z1-height;
+
+            .tagContainer {
+              display: inline-block;
+              vertical-align: top;
+              padding: 0 5px 0 0;
+
+              .tagIcon {
+                height: 18px;
+                width: 18px;
+                display: inline-block;
+                padding: 0;
+                border-radius: 50%;
+                background-color: #FFF;
+                box-shadow: 0 0 0 1px #eee inset;
+                .imageFitToContainer {
+                  position: relative;
+                  overflow: hidden;
+                  border-radius: 50%;
+                  z-index: 2;
+                  .imageFitToContainerImage {
+                    z-index: 1;
+                    height: initial;
+                  }
+                }
+
+                &:hover{
+                  cursor: context-menu;
+                }
+
+                &.greenBorder {
+                  border: 1px solid #25af2a;
+                }
+
+                &.redBorder {
+                  border: 1px solid #ff5d54
+                }
+              }
+              .tagColor {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                &:hover{
+                  cursor: context-menu;
+                }
+
+                &.greenBorder {
+                  border: 1px solid #25af2a;
+                }
+
+                &.redBorder {
+                  border: 1px solid #ff5d54
+                }
+              }
+
+              .tagValue {
+                font-size: 10px;
+                margin-bottom: 5px;
+                padding: 1px 5px;
+                border-radius: 2px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.75);
+
+                &.greenBorder {
+                  border: 1px solid #25af2a;
+                }
+
+                &.redBorder {
+                  border: 1px solid #ff5d54
+                }
+              }
+            }
+          }
+        }
+
+        .listViewButtonContainer {
+          height: $basic-z1-height;
+          float: right;
+          position: absolute;
+          right: 10px;
+          top: 0;
+
+          .thumbnailButton {
+            vertical-align: top;
+            background-color: #eee;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            margin: 3px 2px;
+            display: inline-block;
+            background-position: center;
+            background-size: 12px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &.checkButton {
+              background-image: url($image-CS-CheckMark-black);
+            }
+
+            &.viewButton {
+              background-image: url($image-CS-eye-black);
+            }
+
+            &.deleteButton {
+              @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 12px);
+            }
+
+            &.cloneButton {
+              background-image: url($image-CS-create-clone);
+            }
+
+            &.downloadButton {
+              @include background-properties-with-theme-white-color($image-CS-download-black, 12px);
+            }
+
+            &.removeButton{
+              background-image: url($image-CS-Cross);
+            }
+
+            &.relationshipObjectEditButton {
+              background-image: url($image-CS-Edit-Property);
+            }
+
+            &.editVariantButton{
+              background-image: url($image-CS-Edit-32);
+            }
+
+            &:hover {
+              filter: invert(100%);
+            }
+          }
+        }
+
+        .thumbnailActionItemAndInformationView {
+          overflow: hidden;
+          float: right;
+          width: 165px;
+        }
+      }
+    }
+  }
+
+  .basicTemplateContainerZoom2 {
+    height: $basic-z2-height;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    //for theme - PIM
+    &.PIM {
+      background-color: #fff;
+
+      .checkButton {
+        //background-color: #111;
+        transition: all .2s;
+        height: 100%;
+        width: 35px;
+        float: left;
+        cursor: pointer;
+        opacity: .8;
+
+        &.visibilityHidden{
+          visibility: hidden;
+        }
+
+        &.isSelected {
+          //background-color: $color-theme-accent;
+          opacity: 1;
+
+          .checkButtonIcon {
+            @include background-properties($image-cs-checkbox-checked, 20px);
+            opacity: 1;
+          }
+        }
+
+        .checkButtonIcon {
+          height: 100%;
+          width: 100%;
+          @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 20px);
+          /*opacity: .3;
+
+          &:hover {
+            opacity: .8;
+          }*/
+        }
+      }
+
+      //.thumbSelectOverlay {
+      //  background-color: rgb(51, 139, 217);
+      //  @include background-properties-with-theme-white-color($image-CS-CheckMark-black);
+      //  transition: all .2s;
+      //  height: 100%;
+      //  width: 25px;
+      //  background-repeat: no-repeat;
+      //  background-size: 18px;
+      //  background-position: 50%;
+      //  float: left;
+      //}
+
+      .entityImageContainer {
+        float: left;
+        height: $basic-z2-height;
+        width: $basic-z2-height;
+        //background-color: #fff;
+        padding: 10px;
+
+        .xlsIcon {
+          height: 100%;
+          width: 100%;
+          background: url($image-ic-xls) no-repeat center;
+        }
+
+        .imageWrapper {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          //border-radius: 50%;
+          background-color: #fff;
+          overflow: hidden;
+
+          .thumbnailImagePreview {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+          }
+        }
+      }
+
+      .flexBox {
+        display: flex;
+        justify-content: space-between;
+        height: $basic-z2-height;
+        align-items: center;
+        margin: 0 10px 0 0;
+        transition: all .2s;
+
+        .primaryInformationSection {
+          display: inline-block;
+          vertical-align: top;
+          height: $basic-z2-height;
+          width: calc(100% - 250px);
+
+          .entityName {
+            padding-top: 5px;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #000;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+          .className {
+            line-height: 20px;
+            font-size: $font-size-class-name;
+            color: #000;
+            max-width: 150px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          .tagInformationContainer {
+            display: inline-block;
+            vertical-align: top;
+            max-height: 18px;
+            //text-align: center;
+            overflow: hidden;
+            max-width: calc(100% - 150px);
+            padding-left: 10px;
+
+            .tagList {
+              //padding: 5px 0 5px 0;
+              max-height: 52px;
+
+              .tagContainer {
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 5px 0 0;
+
+                .tagIcon {
+                  height: 18px;
+                  width: 18px;
+                  display: inline-block;
+                  padding: 0;
+                  border-radius: 50%;
+                  background-color: #FFF;
+                  box-shadow: 0 0 0 1px #eee inset;
+                  .imageFitToContainer {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    z-index: 2;
+                    .imageFitToContainerImage {
+                      z-index: 1;
+                      height: initial;
+                    }
+                  }
+
+                  &:hover{
+                    cursor: context-menu;
+                  }
+
+                  &.greenBorder {
+                    border: 1px solid #25af2a;
+                  }
+
+                  &.redBorder {
+                    border: 1px solid #ff5d54
+                  }
+                }
+                .tagColor {
+                  width: 18px;
+                  height: 18px;
+                  border-radius: 50%;
+                  &:hover{
+                    cursor: context-menu;
+                  }
+
+                  &.greenBorder {
+                    border: 1px solid #25af2a;
+                  }
+
+                  &.redBorder {
+                    border: 1px solid #ff5d54
+                  }
+                }
+
+                .tagValue {
+                  //margin-bottom: 5px;
+                  font-size: 10px;
+                  margin-bottom: 5px;
+                  padding: 1px 5px;
+                  border-radius: 2px;
+                  color: white;
+                  background-color: rgba(0, 0, 0, 0.75);
+
+                  &.greenBorder {
+                    border: 1px solid #25af2a;
+                  }
+
+                  &.redBorder {
+                    border: 1px solid #ff5d54
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .listViewIndicatorsWrapper {
+          width: 250px;
+
+          .listViewNewAndUpdatedFlagWrapper {
+            float: right;
+            padding:3px;
+          ;
+            .thumbnailInformationIndicators {
+              position: unset;
+
+            }
+
+            .newAndUpdatedIndicator {
+              position: unset;
+
+            }
+          }
+
+          .listViewActionItemsAndInformationViewWrapper {
+            float: right;
+
+            .thumbnailActionItemAndInformationView {
+              overflow: hidden;
+              float: left;
+              width: auto;
+
+              .thumbnailActionItemWrapper {
+                float: right;
+                overflow: hidden;
+              }
+
+              .thumbnailInformationView {
+               float: right;
+                position: unset;
+                width: auto;
+                margin-right: 15px;
+
+                .thumbnailInformationContainer {
+                  position: unset;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+
+
+        .listViewButtonContainer {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          height: 30px;
+          //text-align: center;
+
+          .thumbnailButton {
+            vertical-align: top;
+            background-color: #eee;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            margin: 3px 2px;
+            display: inline-block;
+            background-position: center;
+            background-size: 16px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &.checkButton {
+              background-image: url($image-CS-CheckMark-black);
+            }
+
+            &.viewButton {
+              background-image: url($image-CS-eye-black);
+            }
+
+            &.deleteButton {
+              @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 12px);
+            }
+
+            &.cloneButton {
+              background-image: url($image-CS-create-clone);
+            }
+
+            &.downloadButton {
+              @include background-properties-with-theme-white-color($image-CS-download-black,12px);
+            }
+
+            &.removeButton{
+              background-image: url($image-CS-Cross);
+            }
+
+            &.relationshipObjectEditButton {
+              background-image: url($image-CS-Edit-Property);
+            }
+
+            &.editVariantButton{
+              background-image: url($image-CS-Edit-32);
+            }
+
+            &:hover {
+              filter: invert(100%);
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  /*.basicTemplateContainerZoom3 {
+    height: $basic-z3-height;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    //for theme - PIM
+    &.PIM {
+      background-color: #fff;
+
+      .checkButton {
+        //background-color: #111;
+        transition: all .2s;
+        height: 100%;
+        width: 25px;
+        background-size: 12px;
+        float: left;
+        cursor: pointer;
+        opacity: .8;
+
+        &.visibilityHidden{
+          visibility: hidden;
+        }
+
+        &.isSelected {
+          //background-color: $color-theme-accent;
+          opacity: 1;
+
+          .checkButtonIcon {
+            @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+            opacity: 1;
+          }
+        }
+
+        .checkButtonIcon {
+          height: 100%;
+          width: 100%;
+          //@include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+          background-size: 12px;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          opacity: .3;
+
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+
+      //.thumbSelectOverlay {
+      //  background-color: rgb(51, 139, 217);
+      //  @include background-properties-with-theme-white-color($image-CS-CheckMark-black);
+      //  transition: all .2s;
+      //  height: 100%;
+      //  width: 25px;
+      //  background-repeat: no-repeat;
+      //  background-size: 18px;
+      //  background-position: 50%;
+      //  float: left;
+      //}
+
+      .entityImageContainer {
+        float: left;
+        height: $basic-z3-height;
+        width: $basic-z3-height;
+        //background-color: #fff;
+        padding: 10px 10px 10px 10px;
+
+        .xlsIcon {
+          height: 100%;
+          width: 100%;
+          background: url($image-ic-xls) no-repeat center;
+        }
+
+        .imageWrapper {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          //border-radius: 50%;
+          background-color: #fff;
+          overflow: hidden;
+
+          .thumbnailImagePreview {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+          }
+        }
+      }
+
+      .flexBox {
+        display: flex;
+        justify-content: space-between;
+        height: $basic-z2-height;
+        align-items: center;
+        margin: 0 10px 0 0;
+        transition: all .2s;
+        box-shadow: 0 1px 0 0 #eee;
+
+        .primaryInformationSection {
+          display: inline-block;
+          vertical-align: top;
+          height: $basic-z2-height;
+          width: calc(100% - 250px);
+
+          .entityName {
+            padding-top: 5px;
+            line-height: 20px;
+            font-size: $font-size-entity-name;
+            font-weight: 500;
+            color: #000;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+          .className {
+            line-height: 20px;
+            font-size: $font-size-class-name;
+            color: #000;
+            max-width: 150px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          .tagInformationContainer {
+            display: inline-block;
+            vertical-align: top;
+            max-height: 18px;
+            //text-align: center;
+            overflow: hidden;
+            max-width: calc(100% - 150px);
+            padding-left: 10px;
+
+            .additionalInformationContainer {
+              padding: 0;
+
+              .tagList {
+                //padding: 5px 0 5px 0;
+                max-height: 52px;
+
+                .tagContainer {
+                  display: inline-block;
+                  vertical-align: top;
+                  padding: 0 5px 0 0;
+
+                  .tagIcon {
+                    height: 18px;
+                    width: 18px;
+                    display: inline-block;
+                    padding: 0;
+                    border-radius: 50%;
+                    background-color: #FFF;
+                    box-shadow: 0 0 0 1px #eee inset;
+                    .imageFitToContainer {
+                      position: relative;
+                      overflow: hidden;
+                      border-radius: 50%;
+                      z-index: 2;
+                      .imageFitToContainerImage {
+                        z-index: 1;
+                        height: initial;
+                      }
+                    }
+
+                    &:hover{
+                      cursor: context-menu;
+                    }
+
+                    &.greenBorder {
+                      border: 1px solid #25af2a;
+                    }
+
+                    &.redBorder {
+                      border: 1px solid #ff5d54
+                    }
+                  }
+                  .tagColor {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    &:hover{
+                      cursor: context-menu;
+                    }
+
+                    &.greenBorder {
+                      border: 1px solid #25af2a;
+                    }
+
+                    &.redBorder {
+                      border: 1px solid #ff5d54
+                    }
+                  }
+
+                  .tagValue {
+                    //margin-bottom: 5px;
+                    font-size: 10px;
+                    margin-bottom: 5px;
+                    padding: 1px 5px;
+                    border-radius: 2px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.75);
+
+                    &.greenBorder {
+                      border: 1px solid #25af2a;
+                    }
+
+                    &.redBorder {
+                      border: 1px solid #ff5d54
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .listViewIndicatorsWrapper {
+          width: 250px;
+
+          .listViewNewAndUpdatedFlagWrapper {
+            float: right;
+            padding:3px;
+          ;
+
+            .thumbnailInformationIndicators {
+              position: unset;
+
+            }
+
+            .newAndUpdatedIndicator {
+              position: unset;
+
+            }
+          }
+
+          .listViewActionItemsAndInformationViewWrapper {
+            float: right;
+
+            .thumbnailActionItemAndInformationView {
+              overflow: hidden;
+              float: left;
+               width: auto;
+
+              .thumbnailActionItemWrapper {
+                float: right;
+                overflow: hidden;
+              }
+
+              .thumbnailInformationView {
+                float: right;
+                position: unset;
+                width: auto;
+                margin-right: 10px;
+
+                .thumbnailInformationContainer {
+                  position: unset;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+
+
+        .listViewButtonContainer {
+          display: inline-block;
+          vertical-align: top;
+          height: 30px;
+          //text-align: center;
+
+          .thumbnailButton {
+            vertical-align: top;
+            background-color: #eee;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            margin: 3px 2px;
+            display: inline-block;
+            background-position: center;
+            background-size: 16px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &.checkButton {
+              background-image: url($image-CS-CheckMark-black);
+            }
+
+            &.viewButton {
+              background-image: url($image-CS-eye-black);
+            }
+
+            &.deleteButton {
+              @include background-properties($image-CS-delete-bin, 16px);
+            }
+
+            &.cloneButton {
+              background-image: url($image-CS-create-clone);
+            }
+
+            &.downloadButton {
+              background-image: url($image-CS-download);
+            }
+
+            &.removeButton{
+              background-image: url($image-CS-Cross);
+            }
+
+            &.relationshipObjectEditButton {
+              background-image: url($image-CS-Edit-Property);
+            }
+
+            &.editVariantButton{
+              background-image: url($image-CS-Edit-32);
+            }
+
+            &:hover {
+              filter: invert(100%);
+            }
+          }
+        }
+
+        .thumbnailActionItemAndInformationView {
+          overflow: hidden;
+          float: right;
+          width: 165px;
+        }
+      }
+
+      .additionalInformationContainer {
+        padding: 6px 10px 0 0;
+
+        .shortDescription {
+          height: 20px;
+          line-height: 20px;
+          font-size: 11px;
+          font-weight: 500;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .longDescription {
+          font-size: 10px;
+          line-height: 12px;
+          height: 24px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .basicTemplateContainerZoom4 {
+    height: $basic-z4-height;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    //for theme - PIM
+    &.PIM {
+      background-color: #fff;
+
+      .checkButton {
+        //background-color: #111;
+        transition: all .2s;
+        height: 100%;
+        width: 25px;
+        background-size: 12px;
+        float: left;
+        cursor: pointer;
+        opacity: .8;
+
+        &.visibilityHidden{
+          visibility: hidden;
+        }
+
+        &.isSelected {
+          //background-color: $color-theme-accent;
+          opacity: 1;
+
+          .checkButtonIcon {
+            @include background-properties-with-theme-white-color($image-CS-Checked-48Black);
+            opacity: 1;
+          }
+        }
+
+        .checkButtonIcon {
+          height: 100%;
+          width: 100%;
+          //@include background-properties-with-theme-white-color($image-CS-Unchecked-Checkbox-48-Material);
+          background-size: 12px;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          opacity: .3;
+
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+
+      //.thumbSelectOverlay {
+      //  background-color: rgb(51, 139, 217);
+      //  @include background-properties-with-theme-white-color($image-CS-CheckMark-black);
+      //  transition: all .2s;
+      //  height: 100%;
+      //  width: 25px;
+      //  background-repeat: no-repeat;
+      //  background-size: 18px;
+      //  background-position: 50%;
+      //  float: left;
+      //}
+
+      .entityImageContainer {
+        float: left;
+        height: $basic-z4-height;
+        width: $basic-z4-height;
+        //background-color: #fff;
+        padding: 10px 10px 10px 10px;
+
+        .xlsIcon {
+          height: 100%;
+          width: 100%;
+          background: url($image-ic-xls) no-repeat center;
+        }
+
+        .imageWrapper {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          //border-radius: 50%;
+          background-color: #fff;
+          overflow: hidden;
+
+          .thumbnailImagePreview {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+          }
+        }
+      }
+
+      .flexBox {
+        display: flex;
+        justify-content: space-between;
+        height: $basic-z2-height;
+        align-items: center;
+        margin: 0 10px 0 0;
+        transition: all .2s;
+        box-shadow: 0 1px 0 0 #eee;
+
+        .primaryInformationSection {
+          display: inline-block;
+          vertical-align: top;
+          height: $basic-z2-height;
+          width: calc(100% - 250px);
+
+          .entityName {
+            padding-top: 5px;
+            line-height: 20px;
+            font-size: $font-size-entity-name;
+            font-weight: 500;
+            color: #000;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+          .className {
+            line-height: 20px;
+            font-size: $font-size-class-name;
+            color: #000;
+            max-width: 150px;
+            display: inline-block;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+          .tagInformationContainer {
+            display: inline-block;
+            vertical-align: top;
+            max-height: 18px;
+            //text-align: center;
+            overflow: hidden;
+            max-width: calc(100% - 150px);
+            padding-left: 10px;
+
+            .additionalInformationContainer {
+              padding: 0;
+
+              .tagList {
+                //padding: 5px 0 5px 0;
+                max-height: 52px;
+
+                .tagContainer {
+                  display: inline-block;
+                  vertical-align: top;
+                  padding: 0 5px 0 0;
+
+                  .tagIcon {
+                    height: 18px;
+                    width: 18px;
+                    display: inline-block;
+                    padding: 0;
+                    border-radius: 50%;
+                    background-color: #FFF;
+                    box-shadow: 0 0 0 1px #eee inset;
+                    .imageFitToContainer {
+                      position: relative;
+                      overflow: hidden;
+                      border-radius: 50%;
+                      z-index: 2;
+                      .imageFitToContainerImage {
+                        z-index: 1;
+                        height: initial;
+                      }
+                    }
+
+                    &:hover{
+                      cursor: context-menu;
+                    }
+
+                    &.greenBorder {
+                      border: 1px solid #25af2a;
+                    }
+
+                    &.redBorder {
+                      border: 1px solid #ff5d54
+                    }
+                  }
+                  .tagColor {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    &:hover{
+                      cursor: context-menu;
+                    }
+
+                    &.greenBorder {
+                      border: 1px solid #25af2a;
+                    }
+
+                    &.redBorder {
+                      border: 1px solid #ff5d54
+                    }
+                  }
+
+                  .tagValue {
+                    //margin-bottom: 5px;
+                    font-size: 10px;
+                    margin-bottom: 5px;
+                    padding: 1px 5px;
+                    border-radius: 2px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.75);
+
+                    &.greenBorder {
+                      border: 1px solid #25af2a;
+                    }
+
+                    &.redBorder {
+                      border: 1px solid #ff5d54
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .listViewIndicatorsWrapper {
+          width: 250px;
+
+          .listViewNewAndUpdatedFlagWrapper {
+            float: right;
+            padding:3px;
+            margin-right: 15px;
+
+            .thumbnailInformationIndicators {
+              position: unset;
+
+            }
+
+            .newAndUpdatedIndicator {
+              position: unset;
+
+            }
+          }
+
+          .listViewActionItemsAndInformationViewWrapper {
+            float: right;
+
+            .thumbnailActionItemAndInformationView {
+              overflow: hidden;
+              float: left;
+               width: auto;
+
+              .thumbnailActionItemWrapper {
+                float: right;
+                overflow: hidden;
+              }
+
+              .thumbnailInformationView {
+                float: right;
+                position: unset;
+                width: auto;
+                margin-right: 10px;
+
+                .thumbnailInformationContainer {
+                  position: unset;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+
+        .listViewButtonContainer {
+          display: inline-block;
+          vertical-align: top;
+          height: 30px;
+
+          .thumbnailButton {
+            vertical-align: top;
+            background-color: #eee;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            margin: 3px 2px;
+            display: inline-block;
+            background-position: center;
+            background-size: 16px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &.checkButton {
+              background-image: url($image-CS-CheckMark-black);
+            }
+
+            &.viewButton {
+              background-image: url($image-CS-eye-black);
+            }
+
+            &.deleteButton {
+              @include background-properties($image-CS-delete-bin, 12px);
+            }
+
+            &.cloneButton {
+              background-image: url($image-CS-create-clone);
+            }
+
+            &.downloadButton {
+              background-image: url($image-CS-download);
+            }
+
+            &.removeButton {
+              background-image: url($image-CS-Cross);
+            }
+
+            &.relationshipObjectEditButton {
+              background-image: url($image-CS-Edit-Property);
+            }
+
+            &.editVariantButton{
+              background-image: url($image-CS-Edit-32);
+            }
+
+            &:hover {
+              filter: invert(100%);
+            }
+          }
+        }
+
+        .thumbnailActionItemAndInformationView {
+          overflow: hidden;
+          float: right;
+          width: 165px;
+        }
+      }
+
+      .additionalInformationContainer {
+        padding: 6px 10px 0 0;
+        max-height: calc(100% - 64px);
+        overflow: hidden;
+
+        //.tagList {
+        //  padding: 2px 0 0px 0;
+        //  max-height: $basic-z1-height;
+        //
+        //  .tagContainer {
+        //    display: inline-block;
+        //    vertical-align: top;
+        //    padding: 0 5px 0 0;
+        //
+        //    .tagValue {
+        //      //margin-bottom: 5px;
+        //      font-size: 10px;
+        //      margin-bottom: 5px;
+        //      padding: 1px 5px;
+        //      border-radius: 2px;
+        //      color: white;
+        //      background-color: rgba(0, 0, 0, 0.75);
+        //
+        //      &.greenBorder {
+        //        border: 1px solid #25af2a;
+        //      }
+        //
+        //      &.redBorder {
+        //        border: 1px solid #ff5d54
+        //      }
+        //    }
+        //  }
+        //}
+
+        .shortDescription {
+          height: 18px;
+          line-height: 18px;
+          font-size: 11px;
+          font-weight: 500;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .longDescription {
+          font-size: 10px;
+          line-height: 16px;
+          min-height: 42px;
+          overflow: hidden;
+        }
+      }
+    }
+  }*/
+
+  .basicTemplateContainerZoom1, .basicTemplateContainerZoom2, .basicTemplateContainerZoom3, .basicTemplateContainerZoom4 {
+
+        .listViewButtonContainer {
+          .thumbnailButton {
+            &.deleteButton {
+              float: right;
+            }
+          }
+        }
+    &.isOpenable {
+
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+  }
+  //.thumbUpperIconContainer{
+  //  top: 8px;
+  //  right: 8px;
+  //}
+  //
+  //.noTagsGrey{
+  //  display: none;
+  //}
+  //
+  //.detailedListItem{
+  //  height: 100%;
+  //  overflow: hidden;
+  //  background: #fff;
+  //  box-shadow: 1px 1px 4px -2px #333;
+  //  border-radius: 2px;
+  //  position: relative;
+  //
+  //  .detailedListItemCheckbox{
+  //    width: 40px;
+  //    height: 100%;
+  //    background-size: 16px;
+  //    background-repeat: no-repeat;
+  //    background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+  //    background-position: 11px;
+  //    float: left;
+  //    opacity: .6;
+  //    background-color: #fbfbfb;
+  //    cursor: pointer;
+  //    transition: all .2s;
+  //
+  //    &:hover{
+  //      background-color: #f0f0f0;
+  //    }
+  //
+  //    &.checked{
+  //      background-image: url($image-CS-CheckedCheckbox-2-30-Black);
+  //      background-color: #d6d6d6;
+  //      opacity: .8;
+  //    }
+  //  }
+  //
+  //  .detailedListItemImageContainer{
+  //    width: 80px;
+  //    height: 100%;
+  //    float: left;
+  //    position: relative;
+  //
+  //    .detailedListItemImage{
+  //      max-height: 100%;
+  //      max-width: 100%;
+  //      position: absolute;
+  //      top: 50%;
+  //      left: 50%;
+  //      transform: translate(-50%, -50%);
+  //
+  //      &.portrait{
+  //        width: 100%;
+  //        max-height: none;
+  //      }
+  //
+  //      &.landscape{
+  //        height: 100%;
+  //        max-width: none;
+  //      }
+  //    }
+  //
+  //    &.noImage{
+  //      background: url($image-CS-ImageFile) no-repeat 50% 50%;
+  //      background-size: 60%;
+  //      opacity: .4;
+  //    }
+  //  }
+  //
+  //  .detailedListItemInfoContainer{
+  //    width: calc(100% - 120px);
+  //    text-align: left;
+  //    float: left;
+  //    height: 100%;
+  //    background: #fbfbfb;
+  //    padding: 0 5px;
+  //
+  //    .imageFitToContainer{
+  //      position: relative;
+  //    }
+  //
+  //    .detailedListItemLabel{
+  //      margin: 5px 5px 2px 5px;
+  //      font-size: 14px;
+  //      overflow: hidden;
+  //      text-overflow: ellipsis;
+  //      white-space: nowrap;
+  //      width: calc(100% - 290px);
+  //    }
+  //
+  //    .detailedListItemType{
+  //      font-size: 11px;
+  //      color: #999;
+  //      margin: 4px 5px;
+  //    }
+  //
+  //    .detailedListItemTags {
+  //      height: 26px;
+  //      overflow: hidden;
+  //      max-width: 90%;
+  //      display: flex;
+  //      .tagsSummaryItemWrapper{
+  //        float: left;
+  //      }
+  //
+  //      .hitsContainer {
+  //        height: auto;
+  //        text-align: center;
+  //        width: 100%;
+  //
+  //        .searchInfo{
+  //          float: left;
+  //          display: inline-flex;
+  //          .searchTextWrapper {
+  //            height: 22px;
+  //            border-radius: 4px;
+  //            color: #fff;
+  //            border: 1px solid #20da20;
+  //            overflow: hidden;
+  //            margin: 2px;
+  //            text-shadow: 0px 1px 1px #000;
+  //            background: rgba(0, 0, 0, 0.5);
+  //            .searchedText {
+  //              float: left;
+  //              max-width: 45px;
+  //              overflow: hidden;
+  //              text-overflow: ellipsis;
+  //              height: 100%;
+  //              line-height: 20px;
+  //              font-size: 11px;
+  //              margin: 0 4px;
+  //              white-space: nowrap;
+  //            }
+  //          }
+  //          .foundIn {
+  //            font-size: 11px;
+  //            color: #FFF;
+  //            text-shadow: 0px 1px 0px #111;
+  //            line-height: 14px;
+  //          }
+  //        }
+  //      }/*.hitsContainer {
+  //        display: inline-flex;
+  //        color: #FFF;
+  //        text-align: left;
+  //        padding: 0 5px;
+  //        .searchInfo {
+  //          span {
+  //            color: #333;
+  //          }
+  //          .searchedText {
+  //            color: #FF9800;
+  //            line-height: 15px;
+  //            font-size: 11px;
+  //            padding-right: 3px;
+  //          }
+  //          .foundInText {
+  //            font-size: 10px;
+  //            line-height: 15px;
+  //            padding-right: 3px;
+  //            color: #333;
+  //          }
+  //          .foundIn {
+  //            line-height: 15px;
+  //            font-size: 11px;
+  //            color: #009e00;
+  //            padding-right: 3px;
+  //          }
+  //        }
+  //      }*/
+  //    }
+  //
+  //    .detailedListItemModifiedDetails{
+  //      position: absolute;
+  //      top: 50%;
+  //      transform: translateY(-50%);
+  //      right: 100px;
+  //
+  //      span{
+  //        font-size: 11px;
+  //        font-style: italic;
+  //        color: #999;
+  //      }
+  //
+  //      .detailedListItemDark{
+  //        color: #555;
+  //        font-weight: 500;
+  //      }
+  //    }
+  //
+  //    .detailedListItemTypeIcon{
+  //      background-size: 16px;
+  //      background-position: 2px 4px;
+  //      background-repeat: no-repeat;
+  //      height: 22px;
+  //      width: 22px;
+  //      opacity: .8;
+  //      border-radius: 50%;
+  //      float: left;
+  //      margin-right: 3px;
+  //      margin-top: 2px;
+  //      position: relative;
+  //      padding: 3px;
+  //
+  //      .imageFitToContainer{
+  //        .imageFitToContainerImage{
+  //          position: relative;
+  //        }
+  //      }
+  //
+  //      &.folderThumb{
+  //        background-image: url($image-CS-Books-52);
+  //      }
+  //
+  //      &.articleThumb{
+  //        background-image: url($image-CS-Book-52);
+  //      }
+  //
+  //      &.setFolderThumb{
+  //        background-image: url($image-CS-Books-52);
+  //      }
+  //
+  //      &.setThumb{
+  //        background-image: url($image-CS-Door-Sensor-Filled-50);
+  //      }
+  //
+  //      &.collectionThumb{
+  //        background-image: url($image-CS-Database-Grey-Filled-50);
+  //      }
+  //
+  //      &.collectionFolderThumb{
+  //        background-image: url($image-CS-Books-52);
+  //      }
+  //
+  //      &.imageAvailable{
+  //        background-image: none;
+  //      }
+  //    }
+  //  }
+  //}
+  //
+  //.detailedListItemToolbarContainer{
+  //  position: absolute;
+  //  top: 50%;
+  //  transform: translateY(-50%);
+  //  right: 15px;
+  //  height: 28px;
+  //
+  //  .detailedListItemTool{
+  //    height: 24px;
+  //    width: 24px;
+  //    border: 1px solid #555;
+  //    border-radius: 50%;
+  //    opacity: 0;
+  //    background-size: 14px;
+  //    background-repeat: no-repeat;
+  //    background-position: 4px;
+  //    cursor: pointer;
+  //    display: inline-block;
+  //    transition: opacity .2s;
+  //    margin: 2px;
+  //
+  //    &.tooItemView{
+  //      background-image: url($image-CS-eye-black);
+  //
+  //      &:hover{
+  //        background-image: url($image-CS-Visible-50White);
+  //      }
+  //    }
+  //
+  //    &.tooItemDelete{
+  //      background-image: url($image-CS-Delete-32);
+  //
+  //      &:hover{
+  //
+  //      }
+  //    }
+  //
+  //    &:hover{
+  //      background-color: #555;
+  //    }
+  //  }
+  //}
+  //
+  //&:hover{
+  //
+  //  .detailedListItemTool{
+  //    opacity: 1;
+  //  }
+  //}
+}
+
+.detailRuleViolationCounterContainer {
+  padding-top: 2px;
+  .colorViolationWrapper {
+    display: inline-block;
+    margin: 0px 7px;
+
+    .violationIcon {
+      float: left;
+      height: 13px;
+      width: 13px;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      margin: 3px 5px 0px 0px;
+
+      &.notificationIcon{
+        background-image: url($image-CS-High-Priority-Filled-white-50);
+      }
+
+      &.redIcon {
+        background-image: url($image-CS-Registered-Trademark-Filled-32);
+      }
+
+      &.orangeIcon {
+        background-color: #fff;
+        border-radius: 50%;
+        background-image: url($image-CS-Registered-Trademark-Filled-orange-32);
+      }
+
+      &.yellowIcon {
+        background-image: url($image-CS-Registered-Trademark-Filled-yellow);
+      }
+
+      &.greenIcon {
+        background-image: url($image-CS-Registered-Trademark-Filled-32-green);
+      }
+
+    }
+    .violationCount {
+      float: left;
+    }
+  }
+}
+
+.thumbUpperIconContainer{
+  position: absolute;
+  top: 63px;
+  right: 10px;
+  background-color: white;
+
+  .thumbMessageCounterContainer {
+    float: right;
+
+    .thumbCounterIconContainer {
+      height: 18px;
+      background-color: rgba(156, 156, 156, 0.69);
+      padding: 2px 2px;
+      border-radius: 50%;
+      float: left;
+      margin: 0px 1px;
+
+      .thumbCounterIcon {
+        float: left;
+        height: 13px;
+        width: 13px;
+        background-size: 13px;
+        background-repeat: no-repeat;
+
+        &.notification {
+          background-image: url($image-CS-High-Priority-Filled-white-50);
+        }
+
+        &.violation {
+
+          &.redIcon{
+            background-image: url($image-CS-Registered-Trademark-Filled-32);
+          }
+
+          &.orangeIcon{
+            background-color: #fff;
+            border-radius: 50%;
+            background-image: url($image-CS-Registered-Trademark-Filled-orange-32);
+          }
+
+          &.yellowIcon{
+            background-image: url($image-CS-Registered-Trademark-Filled-yellow);
+          }
+
+          &.greenIcon{
+            background-image: url($image-CS-Registered-Trademark-Filled-32-green);
+          }
+
+        }
+      }
+
+      .thumbCount {
+        float: left;
+        font-size: 12px;
+        margin: 0px 0px 0px 4px;
+        color: white;
+        line-height: 13px;
+      }
+    }
+  }
+
+  .thumbnailMiniIconContainer{
+    float: right;
+
+    .thumbnailMiniIcon{
+      height: 15px;
+      width: 15px;
+      float: right;
+      background-size: 14px;
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+      opacity: .5;
+      margin-top: 2px;
+
+      &.variantIcon{
+        background-image: url($image-CS-DNA-Helix);
+      }
+
+      &.branchIcon{
+        background-image: url($image-CS-Versions-64);
+      }
+    }
+  }
+
+}
+
+.detailedListItemContainer {
+  .listViewButtonContainer {
+    text-align: right;
+
+    .thumbnailInformationContainer {
+      display: inline-block;
+      position: relative;
+      margin: 1px 1px;
+      color: #fff;
+      opacity: 0.7;
+
+      .totalRuleViolation {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.detailedListItemContainer {
+  .basicTemplateContainerZoom1 {
+    .listViewButtonContainer {
+      .thumbnailAddToCollectionContainer {
+        background-color: #eee;
+        border-radius: 50%;
+        margin: 3px 2px;
+        display: inline-block;
+        vertical-align: top;
+        float: right;
+
+        .staticCollectionListContainer {
+          width: 22px;
+          height: 22px;
+          cursor: pointer;
+          background-image: url($image-CS-collection-static-collection-new);
+          background-size: 16px;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: all .2s;
+          opacity: 0.7;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          filter: invert(100%);
+        }
+      }
+      .thumbnailInformationContainer {
+        .cloneOfContainer  {
+          width: 22px;
+          height: 22px;
+          background-size: 16px;
+          margin: 3px 2px;
+        }
+
+        .ruleViolationCount{
+          margin: 3px 2px;
+
+          .totalRuleViolation{
+            width: 22px;
+            height: 22px;
+
+            .totalRuleViolationColor{
+              background-size: 22px;
+            }
+            .totalRuleViolationCount {
+              width: 22px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .basicTemplateContainerZoom2, .basicTemplateContainerZoom3, .basicTemplateContainerZoom4 {
+    .listViewButtonContainer {
+      .thumbnailAddToCollectionContainer {
+        background-color: #eee;
+        border-radius: 50%;
+        margin: 3px 2px;
+        display: inline-block;
+        vertical-align: top;
+        float: right;
+
+        .staticCollectionListContainer {
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          background-image: url($image-CS-collection-static-collection-new);
+          background-size: 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: all .2s;
+          opacity: 0.7;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          filter: invert(100%);
+        }
+      }
+      .thumbnailInformationContainer {
+        .mandatoryViolationCount {
+          width: 22px;
+          height: 22px;
+          .mandatoryViolation {
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+          }
+        }
+
+        .shouldViolationCount {
+          width: 22px;
+          height: 22px;
+          .shouldViolation {
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

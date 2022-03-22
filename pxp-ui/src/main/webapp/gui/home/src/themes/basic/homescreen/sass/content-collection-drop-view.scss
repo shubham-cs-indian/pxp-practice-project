@@ -1,0 +1,67 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.contentCollectionDropViewContainer{
+  height: 100%;
+
+  .droppableContainer {
+    height: calc(100% - 28px);
+
+    .dropViewContainer {
+      height: 100%;
+    }
+
+    .collectionDropThumbContainer{
+      float: left;
+
+      .thumbnailViewContainer {
+        .thumbNameInfo {
+          position: relative;
+
+          .thumbName {
+            margin-left: 20px;
+          }
+
+          .thumbIcon {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            height: 18px;
+            width: 18px;
+            display: block;
+            -webkit-background-size: 18px;
+            background-size: 18px;
+            background-repeat: no-repeat;
+          }
+
+        }
+
+        &.articleThumb {
+          .thumbIcon {
+            background-image: url($image-CS-Book-52);
+          }
+        }
+
+        &.setThumb {
+          .thumbIcon {
+            background-image: url($image-CS-Door-Sensor-Filled-50);
+          }
+        }
+
+      }
+
+      .collectionDropThumbClose{
+        height: 15px;
+        width: 15px;
+        margin-left: 290px;
+        background: url($image-CS-Cancel-Filled-Gray) no-repeat;
+        background-size: 15px;
+
+        &:hover{
+          background: url($image-CS-Cancel-2-Filled-30-Red) no-repeat;
+          background-size: 15px;
+        }
+      }
+    }
+  }
+
+}*/

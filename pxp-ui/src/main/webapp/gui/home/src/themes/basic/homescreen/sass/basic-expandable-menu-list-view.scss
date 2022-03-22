@@ -1,0 +1,154 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$toggleButtonSectionHeight: 40px;
+
+.expandableMenuListView {
+  height: 100%;
+  border: 1px solid $color-light-3;
+  background-color: $color-light-1;
+  transition: all .2s ease-out;
+
+  &.expanded {
+    width: 200px;
+  }
+
+  &.collapsed {
+    width: 60px;
+
+    .listItemsSection {
+
+      .listItem {
+
+        .labelSection {
+          width: 0;
+        }
+      }
+    }
+
+    .toggleButtonSectionIcon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .listItemsSection {
+    height: calc(100% - #{$toggleButtonSectionHeight});
+    width: 100%;
+    //overflow: hidden;
+
+    $listItemHeight: 40px;
+    $iconSectionWidth: 40px;
+
+    .listItem {
+      height: $listItemHeight;
+      width: calc(100% - 20px);
+      cursor: pointer;
+      margin: 0 10px;
+      border-radius: 2px;
+
+      &:first-child {
+        margin: 10px 10px 0 10px;
+      }
+
+      &.selected {
+        background-color: $color-light-3;
+
+        .iconSection {
+          opacity: 1;
+        }
+      }
+
+      .iconSection {
+        @include topInlineBlock();
+        width: $iconSectionWidth;
+        height: 100%;
+        line-height: $listItemHeight;
+        text-align: center;
+        opacity: .7;
+
+        .iconContainer {
+          height: calc(100% - 20px);
+          width: calc(100% - 20px);
+          position: relative;
+          margin: 10px;
+          overflow: hidden;
+        }
+
+        .itemInitials {
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: $font-large;
+          overflow: hidden;
+          color: $color-light-1;
+          margin: 8px;
+          line-height: 24px;
+          height: 24px;
+          background: #333;
+          border-radius: 2px;
+        }
+
+      }
+
+      .labelSection {
+        @include topInlineBlock();
+        @include ellipsis();
+        width: calc(100% - #{$iconSectionWidth});
+        height: 100%;
+        line-height: $listItemHeight;
+        overflow: hidden;
+        transition: all .2s ease-out;
+      }
+    }
+
+    .linkedItemButtonView {
+      height: $listItemHeight;
+      width: calc(100% - 20px);
+      margin: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+      line-height: 40px;
+      border: solid 1px $color-light-4;
+      padding: 0px 7px;
+
+      .linkedItemBtnLabel {
+        width: 100%;
+        font-size: $font-large;
+        text-align: center;
+        @include ellipsis();
+      }
+
+      .linkedItemBtnIcon {
+        height: 38px;
+        width: 20px;
+        float: right;
+        @include background-properties($image-CS-expand-arrow-icon, 12px);
+      }
+    }
+  }
+
+  .toggleButtonSection {
+    height: $toggleButtonSectionHeight;
+    width: 100%;
+    //border-top: 1px solid $color-light-3;
+
+
+    line-height: $toggleButtonSectionHeight;
+    cursor: pointer;
+    background: #fafafa;
+
+    .toggleButtonSectionIcon{
+      height: $toggleButtonSectionHeight;
+      width: $toggleButtonSectionHeight;
+      margin: 0 auto;
+      transition: all .4s;
+      opacity: .5;
+      @include background-properties($image-CS-double-left, 15px)
+    }
+
+    &:hover{
+      .toggleButtonSection{
+        opacity: .8;
+      }
+    }
+  }
+}

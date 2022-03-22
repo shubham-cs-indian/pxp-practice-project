@@ -1,0 +1,602 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      "tax11",
+      "tax21"
+    ],
+    "csid": "[c>Imp_minor_m1 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      "tax11",
+      "tax21"
+    ],
+    "label": "Imp_minor_m1",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "pricingPropertyCollection": [
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "listpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "sellingpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "minimumpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "maximumpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ],
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "pid_attribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "nameattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "sku_attribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 3,
+          "$code": "gtin_attribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "statustag",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "shortdescriptionattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "longdescriptionattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "parentCode": "-1",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>mtax11 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "mtax11",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Imp_minor_m1",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "tax11",
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>mtax21 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "mtax21",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Imp_minor_m1",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "tax11",
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>s_mtax11 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "s_mtax11",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "mtax11",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "tax21",
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>s_mtax21 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "s_mtax21",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "mtax21",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "tax21",
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      "Bud11",
+      "Bud22"
+    ],
+    "csid": "[c>Imp_major_M $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      "Bud11",
+      "Bud22"
+    ],
+    "label": "Imp_major_M",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "pricingPropertyCollection": [
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "listpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "sellingpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "minimumpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "maximumpriceattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ],
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "pid_attribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "nameattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "sku_attribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 3,
+          "$code": "gtin_attribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "statustag",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "shortdescriptionattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "longdescriptionattribute",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "parentCode": "-1",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Flower11 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Flower11",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Imp_major_M",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "Bud11",
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Flower22 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Flower22",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Imp_major_M",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "Bud11",
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Leaf11 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Leaf11",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Flower11",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "Bud22",
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Leaf22 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Leaf22",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Flower11",
+    "Jembeddedclasses": {
+      "Emb": {
+        "$couplings": [
+          
+        ],
+        "label": "Emb"
+      }
+    },
+    "contextcode": null,
+    "masterParentTag": "Bud22",
+    "taxonomytype": "majorTaxonomy"
+  }
+]

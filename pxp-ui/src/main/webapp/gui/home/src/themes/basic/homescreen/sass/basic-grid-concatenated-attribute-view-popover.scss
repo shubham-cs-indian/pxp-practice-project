@@ -1,0 +1,144 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.calculatedFormulaWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  .multiSelectSearchViewWrapper {
+    border-radius: 2px;
+    box-shadow: 0 0 1px;
+  }
+
+  .formulaGeneratorButtons {
+    height: 23px;
+
+    select {
+      margin: 1px auto;
+    }
+
+    .elementWithType {
+      margin-bottom: 2px;
+    }
+  }
+
+  .measurementTypeMSSViewWrapper {
+    width: 100%;
+    margin: 5px;
+
+    .measurementTypeTitle {
+      @include topInlineBlock();
+      color: #7a7a7a;
+      height: 30px;
+      padding: 3px 10px 0 0;
+    }
+
+    .multiSelectSearchViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+    }
+  }
+
+  .measurementUnitMSSViewWrapper {
+    width: 100%;
+    margin: 5px;
+
+    .measurementUnitTitle {
+      @include topInlineBlock();
+      color: #7a7a7a;
+      height: 30px;
+      padding: 3px 10px 0 0;
+    }
+
+    .multiSelectSearchViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+    }
+
+    .froalaViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+      padding: 2px 2px 0 2px;
+      border: 1px solid darkgray;
+    }
+  }
+
+  .calculatedFormulaViewWrapper {
+    width: 100%;
+
+    span {
+      margin: 5px;
+    }
+
+    .expressionWrapper {
+      width: 100%;
+      padding: 4px;
+      border: 1px solid darkgray;
+      outline: none;
+      min-height: 60px;
+    }
+
+    .operatorWrapper {
+      background-color: #b9b9b9;
+      display: inline-block;
+      vertical-align: top;
+      padding: 2px;
+      margin: 2px;
+
+      .operatorButtonWrapper {
+
+      }
+
+      .contextMenuViewNewContainer {
+        height: inherit;
+        overflow: hidden;
+
+        .triggerElement {
+
+          .elementWithType {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin: 2px 0 0 0;
+            color: #000000;
+            background-color: #ffffff;
+            border-radius: 3px;
+            padding: 0 25px 0 4px;
+            box-shadow: 0 0 0 1px #c0c0c0;
+            background-size: 16px;
+            position: relative;
+
+            .typeIcon {
+              height: 100%;
+              width: 22px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-repeat: no-repeat;
+              background-position: 50%;
+              opacity: 0.7;
+
+              &.attribute {
+                background-size: 14px;
+                background-image: url('./../images/Text Color Filled-50.svg');
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .nativeDropdownWrapper {
+
+      .nativeDropdown {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        width: 25%;
+      }
+    }
+  }
+
+}

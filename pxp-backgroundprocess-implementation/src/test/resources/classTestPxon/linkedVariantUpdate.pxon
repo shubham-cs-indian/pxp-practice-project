@@ -1,0 +1,102 @@
+ {
+    "Ltasks": [
+      
+    ],
+    "previewimage": "",
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>CFR1000 $iid=1000004 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "Lproductvariantcontextcode": [
+      
+    ],
+    "Lpromotionalversioncontextcode": [
+      "CTX1001"
+    ],
+    "label": "Base article",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag",
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      {
+        "enableaftersave": false,
+        "csid": "[code_919a05fc-53de-4618-bd9c-2dd928e1e044 $iid=1000005 $type=RELATIONSHIP]",
+        "relationshiptype": "productVariantRelationship",
+        "$isstandard": false,
+        "label": "Base Article: Base article",
+        "Jside1": {
+          "isvisible": true,
+          "$cardinality": "One",
+          "$classcode": "CFR1000",
+          "Lcouplings": [
+            {
+			  "code": "statustag",
+              "couplingType": "dynamicCoupled",
+              "id": "statustag",
+              "type": "tag"
+            },
+            {
+              "code": "standardMarketAssetRelationship",
+              "couplingType": "dynamicCoupled",
+              "id": "standardMarketAssetRelationship",
+              "type": "relationship"
+            },
+            {
+              "code": "standardArticleGoldenArticleRelationship",
+              "couplingType": "dynamicCoupled",
+              "id": "standardArticleGoldenArticleRelationship",
+              "type": "relationship"
+            }
+          ],
+          "contextcode": null,
+          "label": "Base article"
+        },
+        "Jside2": {
+          "isvisible": false,
+          "$cardinality": "Many",
+          "$classcode": "single_article",
+          "Lcouplings": [
+            
+          ],
+          "contextcode": null,
+          "label": "Single Article"
+        },
+        "$isnature": true
+      }
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "pidSku",
+    "parentCode": "product_types",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "$isnature": true
+  }

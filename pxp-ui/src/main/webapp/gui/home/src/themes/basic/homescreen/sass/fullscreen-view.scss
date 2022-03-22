@@ -1,0 +1,100 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+$headerFooterHeight: 50px;
+$padding: 5px;
+
+.fullScreenView {
+  width: 100%;
+  height: 100%;
+  transition: all .2s;
+
+  .fullScreenHeader {
+    height: 25px;
+
+    .fullScreenHeaderLabel {
+      float: left;
+      width: calc(100% - 50px);
+      font-size: 11px;
+      color: #838181;
+      @include ellipsis();
+    }
+  }
+  .fullScreenButtonContainer {
+    float: right;
+
+    .fullScreenButton {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      float: right;
+      @include background-properties($image-CS-expand-000-96, 12px);
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  .fullScreenBody {
+    width: 100%;
+    height: calc(100% - 25px);
+  }
+
+  &.fullScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    background: $color-light-1;
+
+    .fullScreenHeader {
+      height: $headerFooterHeight;
+      line-height: $headerFooterHeight;
+
+      .fullScreenHeaderLabel {
+        padding: 0 15px;
+        color: black;
+        font-size: $font-extra-large;
+        font-weight: 400;
+      }
+
+      .fullScreenButtonContainer {
+        .fullScreenButton{
+          margin: 10px;
+          width: 30px;
+          height: 30px;
+          @include background-properties($image-CS-Cross, 23px);
+        }
+      }
+    }
+
+    .fullScreenBody {
+      height: calc(100% - #{$headerFooterHeight});
+
+      .commonConfigSectionElementBody {
+        height: 100%;
+      }
+    }
+
+    .fullScreenFooter {
+      height: $headerFooterHeight;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: $padding;
+      background-color: $color-light-8;
+    }
+
+    &.withFooter {
+      .fullScreenHeader {
+        .fullScreenButtonContainer {
+          display: none;
+        }
+      }
+
+      .fullScreenBody {
+        height: calc(100% - #{$headerFooterHeight + $headerFooterHeight});
+      }
+    }
+  }
+}

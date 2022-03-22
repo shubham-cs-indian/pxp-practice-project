@@ -1,0 +1,63 @@
+@import "../../../../styleguide/style-guide";
+.numberLocaleViewContainer {
+  width: 100%;
+  .numberLocaleLabel {
+    font-size: 11px;
+    color: #777;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 50px);
+  }
+
+  .numberLocaleDescription {
+    font-size: 11px;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+
+  .numberLocaleInput {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    &:focus {
+      //box-shadow: 0 0 0 1px #dadada;
+    }
+
+    &.isDisabled {
+      background-color: #FFFFFF;
+      color: $color-dark-5;
+    }
+
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      opacity: 1;
+      color: $color-dark-5;
+      font-size: 13px;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      opacity: 1;
+      color: $color-dark-5;
+      font-size: 13px;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      opacity: 1;
+      color: $color-dark-5;
+      font-size: 13px;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      opacity: 1;
+      color: $color-dark-5;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+[{
+  "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+  "id": "attachment_asset",
+  "code": "attachment_asset",
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+    "id": "-1"   
+  },
+  "sections": [
+    {
+      "propertyCollectionId": "assetInformationPropertyCollection"     
+    },
+	{
+	   "propertyCollectionId": "metadataCollection"
+	}
+  ],
+  "isDefaultChild": true,
+  "isAbstract": true,
+  "natureType": "fileAsset",
+  "isStandard": true,
+  "isNature": true
+},
+{
+  "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+  "id": "asset_asset",
+  "code": "asset_asset",
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+    "id": "-1"   
+  },
+  "sections": [
+    {
+      "propertyCollectionId": "assetInformationPropertyCollection"     
+    },
+	{
+	   "propertyCollectionId": "metadataCollection"
+	}
+  ],
+  "isAbstract": true,
+  "isStandard": true,
+  "isNature": false,
+  "natureType": ""
+},
+{
+  "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+  "id": "image_asset",
+  "code": "image_asset",
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+    "id": "asset_asset"   
+  },
+  "isDefaultChild": true,
+  "natureType": "imageAsset",
+  "isStandard": true,
+  "isNature": true
+},
+{
+  "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+  "id": "video_asset",
+  "code": "video_asset",
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+    "id": "asset_asset"   
+  },
+  "isDefaultChild": true,
+  "natureType": "videoAsset",
+  "isStandard": true,
+  "isNature": true
+},
+{
+  "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+  "id": "document_asset",
+  "code": "document_asset",
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+    "id": "asset_asset"   
+  },
+  "isDefaultChild": true,
+  "natureType": "documentAsset",
+  "isStandard": true,
+  "isNature": true
+},
+{
+  "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+  "id": "smartdocument_asset",
+  "code": "smartdocument_asset",
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.Asset",
+    "id": "document_asset"   
+  },
+  "isDefaultChild": true,
+  "natureType": "documentAsset",
+  "isStandard": true,
+  "isNature": true
+}]

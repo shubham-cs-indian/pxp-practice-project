@@ -1,0 +1,30 @@
+#!/bin/sh
+LC_ALL=C
+IFS=
+echo "Checking commit message"
+#echo "$1"
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+#commit_message=$1
+
+#if [[ ! $commit_message =~ $valid_commit_message_regex ]]
+#then
+#  error=true
+#  message="${message} \n\nYour commit message either doesn't contain the required information in the required format or contains more text that expected. Please review and try commiting again"
+#fi
+branch_name_string="Branch: ${local_branch}"
+grep -qs "$branch_name_string" "$1" || echo "$branch_name_string" >> "$1"
+
+commit_regex="(^(JIRA Issue:)(\s?\S+\s*)(^#.*$\n*)*(Comments:)(.*\s*)(^#.*$\n*)*(Reviewer:)(.*\s*)|^(Merge branch.+into.+)\s*)(^#.*$\n*)*(Branch:)(\s?\S+\s*)(^#.*$\n*)*\z"
+
+
+error_msg="The commit message either doesn't contain the required information in the required format. \nPlease review and try commiting again"
+#test=$(grep -v '^#' $1 | grep .)
+#test=$(cat $1)
+#echo $test
+#if [[ ! $test =~ $commit_regex ]]; then
+#cat $1
+if ! pcregrep -Miq "$commit_regex" "$1"; then
+    echo "$error_msg" >&2
+    exit 1
+fi
+exit 0

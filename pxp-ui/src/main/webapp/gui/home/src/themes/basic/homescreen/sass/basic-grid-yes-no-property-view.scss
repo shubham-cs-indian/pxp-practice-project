@@ -1,0 +1,70 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$height: 100%;
+
+.gridYesNoPropertyView {
+  overflow: hidden;
+  margin-top: 3px;
+  .gridYesNoSwitch {
+    height: 22px;
+    width: 44px;
+    border-radius: 11px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: auto;
+    .gridYesNoSwitchButton {
+      position: absolute;
+      height: 22px;
+      padding: 2px 0;
+      top: 0;
+      background-color: $color-light-4;
+      transition: all .1s ease-out;
+      cursor: pointer;
+      &.no {
+        left: -22px;
+
+        &.disabled {
+          opacity: 0.5;
+          cursor: default;
+        }
+      }
+      &.yes {
+        background-color: $color-lighter-green;
+        left: 0;
+        &.disabled{
+          opacity: 0.5;
+        }
+      }
+      .textSection {
+        height: $height;
+        width: 24px;
+        text-align: center;
+        color: $color-light-1;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 18px;
+        display: inline-block;
+        vertical-align: top;
+        user-select: none;
+        -moz-user-select: none;
+        &.yes {
+          padding: 0 0 0 2px;
+        }
+        &.no {
+          padding: 0 2px 0 0;
+          color: $color-dark-11;
+        }
+      }
+      .circleSection {
+        background-color: $color-light-1;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+}

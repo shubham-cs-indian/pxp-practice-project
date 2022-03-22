@@ -1,0 +1,194 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+.gridEditablePropertiesConfigContainer {
+  height: 100%;
+  float: left;
+  width: 100%;
+
+  .gridEditableView {
+    height: 100%;
+
+    .gridEditableHeader {
+      margin: 24px 24px 0;
+      .searchBarContainer {
+        .simpleSearchBarView {
+          border: 1px solid #B6B6B6;
+          opacity: 0.8;
+          border-radius: 5px
+        }
+      }
+    }
+
+    .gridEditableBody {
+      height: calc(100% - 55px);
+      border-bottom: 1px solid #eee;
+      width: 100%;
+
+      .dragDropContextViewWrapper {
+        float: left;
+        width: 50%;
+
+        .messageWrapper {
+          font-size: 12px;
+          text-align: center;
+          color: #333333;
+          position: relative;
+          width: 100%;
+          padding: 0 10px;
+          .emptyPropertiesMessage {
+            font-size: 20px;
+            color: #9D9D9D;
+          }
+          .emptyPropertiesInfo {
+            font-size: 16px;
+            color: #9D9D9D;
+          }
+        }
+
+          .propertySequenceLabelWrapper {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 5px;
+
+            &:focus {
+              outline: 0;
+            }
+
+            &.highlight {
+              background-color: $color-light-9;
+            }
+
+          .gridEditIcon {
+            width: auto;
+            float: left;
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+          }
+
+          .gridEditLabel {
+            width: 100%;
+            float: right;
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+
+
+
+              .propertyGridLabelWrapper {
+                width: 100%;
+                float: left;
+
+              .propertyLabel {
+                margin-left: 0px;
+                padding: 3px 4px 4px 0px;
+                font-size: 12px;
+                color: $color-dark-6;
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: auto;
+                max-width: 45%;
+              }
+              .propertyCode {
+                padding: 3px 4px 4px 4px;
+                font-size: 12px;
+                color: $color-dark-7;
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: auto;
+                max-width: 45%;
+              }
+            }
+
+          }
+
+            .propertySequence {
+              float: left;
+              padding: 4px;
+              color: $color-dark-5;
+            }
+            .dragableIcon {
+              background-image: url($image-CS-expand-000-96);
+            }
+            .propertyIcon, .dragableIcon {
+              float: left;
+              background-size: 17px;
+              background-repeat: no-repeat;
+              width: 20px;
+              height: 20px;
+
+              opacity: 0.6;
+              background-color: $color-light-1;
+
+              &.Attribute {
+                @include background-properties($image-CS-Text-Color-Filled-50, 18px);
+
+              }
+              &.Tag {
+                @include background-properties($image-CS-Price-Tag-Filled-50, 18px);
+              }
+            &.Context {
+                @include background-properties($image-CS-tags-black-50, 18px);
+              }}
+            .propertySequence {
+              float: left;
+              margin-right: 5px;
+              padding: 4px;
+              color: $color-dark-8;
+              font-size: 11px;
+            }
+            .customIcon {
+              position: relative;
+              width: 15px;
+              float: left;
+              height: 15px;
+
+              .imageSimpleViewNoImage{
+                background-size: 12px;
+              }
+            }
+
+          .copyToClipboardButton {
+            float: right;
+            background-size: 17px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: 3px;
+            transition: all 0.2s;
+            background-color: $color-light-1;
+            background-image: url($image-CS-copy-to-clipboard);
+            cursor: pointer;
+            opacity: 0;
+          }
+          &:hover {
+            .copyToClipboardButton {
+              opacity: 0.5;
+            }
+          }
+        }
+
+        .gridEditablePropertiesViewLoadMore {
+          font-style: italic;
+          color: $color-dark-5;
+          padding: 5px;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+

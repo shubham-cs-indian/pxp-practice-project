@@ -1,0 +1,60 @@
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+version = "1.0.0"
+
+//sourceCompatibility = 11
+
+
+configurations {
+    includeJars
+    provided
+    compile.extendsFrom provided
+}
+
+def camundaVersion = "7.8.0"
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+ 
+dependencies {
+	provided 'com.orientechnologies:orientdb-graphdb:3.0.11'
+    compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
+    
+    // Uncomment the application dependency for deployment purpose
+	//compile(group: 'com.cs', name: 'pxp-core', version: '1.0.0')
+	
+	// Add the project dependency management
+	compile project(path: ':pxp-core')
+	compile project(path: ':pxp-di')
+	compile "org.camunda.bpm:camunda-engine:${camundaVersion}"
+	
+
+}
+
+configurations {
+	includeJars
+	provided
+	compile.extendsFrom provided
+
+	//runtime.exclude module: 'orientdb-graphdb'
+  //runtime.exclude module: 'commons-collections4'
+  //runtime.exclude module: 'pxp-core'
+}
+
+shadowJar {
+  zip64 true
+}
+

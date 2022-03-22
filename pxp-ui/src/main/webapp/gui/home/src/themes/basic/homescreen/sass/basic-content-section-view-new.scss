@@ -1,0 +1,1503 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+.sectionElementContainerNew {
+  padding: 0px 3px;
+  min-height: 25px;
+
+  &.disableBoxShadowOnHover{
+    .contentAttributeElementViewWrapper{
+      .contentConcatenatedAttributeContainer{
+        .disconnectedHTMLViewContainer{
+          &.disabledDisconnectedHTMLView{
+            text-align: left;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  //***********OVERRIDDEN CSS FOR ELEMENTS IN CONTENT OPEN VIEW*************
+
+  .contentAttributeElementViewWrapper{
+    .attributeContextView{
+      .showVariationsLabel{
+         margin-bottom: 0px;
+        padding: 5px 0 0 2px;
+      }
+    }
+    .attributeElementDateWrapper {
+      .customDatePickerWrapper {
+        .datePickerCustom {
+          border: none;
+          input {
+            margin-left: 4px;
+            height: unset !important;
+            color: #000;
+            opacity: 1;
+            font-style: normal;
+          }
+          &.emptyDate {
+            input {
+              color: $color-dark-5;
+              font-style: italic;
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .customTextFieldViewContainer{
+    margin-bottom: 2px;
+    margin-left: 3px;
+    width: inherit;
+    .customTextField {
+      font-size: 13px;
+      height:auto;
+      word-break: break-word;
+      &.isDisabled {
+        margin-top: 1px;
+      }
+    }
+    textarea:placeholder-shown {
+      font-style: italic;
+    }
+  }
+
+  .numberLocaleViewContainer{
+    margin-bottom: 3px;
+  }
+
+  .numberLocaleInput{
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 2px;
+  }
+
+  .tagsSectionBody{
+    padding-bottom: 1px;
+  }
+
+  .entityTagsSummaryView{
+    margin-bottom: 2px;
+    margin-top: 0px;
+  }
+
+  .tagsSectionBody{
+    padding-left: 0;
+
+    .noTagsGrey{
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0px;
+      padding: 2px 0;
+    }
+  }
+
+  .contentAttributeElementViewWrapper {
+    .contentMeasurementMetricsContainer{
+      margin-bottom: 2px;
+    }
+    .attributeElementFroalaWrapper {
+      .customFroalaView {
+        margin: 0px 0 0px 5px;
+        .froalaContainer {
+          .fr-wrapper {
+            .fr-placeholder{
+              padding-top: 3px !important;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-right: 50px !important;
+            }
+            .fr-disabled {
+              color: $color-dark-5;
+            }
+          }
+        }
+        .fr-inline.fr-box{
+          margin-bottom: 0px;
+          .fr-counter{
+            font-family: "Rubik";
+          }
+        }
+        .fr-inline{
+          margin-bottom: 3px;
+        }
+
+      }
+    }
+  }
+
+  .gridYesNoPropertyView{
+    float: left;
+    padding: 0px 4px 5px;
+  }
+
+  .numberLocaleViewContainer{
+    .numberLocaleInput{
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 4px 0 0 5px;
+    }
+    .numberLocaleInput:placeholder-shown {
+      font-style: italic;
+    }
+  }
+
+  .multiSelectSearchViewWrapper .multiSelectSearchView .multiSelectNothingSelected {
+    padding: 0 3px;
+  }
+  .customTextFieldLabel {
+    margin-bottom: 10px;
+  }
+
+  .multiSelectSearchViewWrapper {
+    margin-bottom: 1px;
+  }
+    .entityTagsSummaryView {
+      margin-bottom: 0px;
+      padding: 0 5px;
+      .tagsSummaryItemsContainer {
+        .selectedItems{
+          margin: 0px 5px 0px 2px;
+        }
+      }
+    }
+
+  .customDatePickerWrapper {
+    font-style: italic;
+    .customDatePickerDisabledValue{
+       margin-top: 0px;
+      margin-bottom: 3px;
+      color: $color-dark-5;
+      height: 22px;
+      margin-left: 5px;
+    }
+    .datePickerCustom {
+      input {
+        height: 50% !important;
+        //margin-top: 10px;
+        margin-left: 5px;
+      }
+    }
+    .dateActionItems {
+      top: 7px !important;
+    }
+  }
+
+  &:hover {
+    .numberLocaleInput {
+      // box-shadow: 0 0 0 1px #dadada;
+    }
+    .fr-element.fr-view, .customTextField, .measurementMetricInput {
+     // box-shadow: 0 0 0 1px #dadada;
+      &.isDisabled {
+        box-shadow: none;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    .triggerElement {
+      //box-shadow: 0 0 0 1px #dadada;
+      cursor: pointer;
+    }
+    .datePickerCustom {
+      input {
+       // box-shadow: 0 0 0 1px #dadada;
+      }
+    }
+    .entityTagsSummaryView {
+     // box-shadow: 0 0 0 1px #dadada;
+    }
+  }
+  &.disableBoxShadowOnHover {
+    &:hover {
+      .triggerElement {
+        box-shadow: none;
+      }
+      .numberLocaleInput {
+        box-shadow: none;
+      }
+
+      .entityTagsSummaryView {
+        box-shadow: none;
+      }
+    }
+    input {
+      &:focus {
+        box-shadow: none;
+      }
+      &:disabled {
+        background-color: inherit;
+      }
+    }
+  }
+
+  .multiClassificationSectionView{
+    border: none;
+    margin: 0;
+
+    .taxonomySwitchingView {
+      padding: 0 5px;
+
+      .editMultiClassificationIcon{
+        width:15px
+      }
+
+      .multiClassificationView{
+        padding-top:5px;
+      }
+    }
+  }
+}
+
+.unSelectedMask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.contentSectionNewLabel {
+  margin: 10px;
+  font-size: $font-sub-title;
+}
+
+.sectionWrapper {
+  .removeIcon {
+    position: absolute;
+    right: 26px;
+    width: 16px;
+    height: 16px;
+    top: 25px;
+    opacity: .7;
+    cursor: pointer;
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url($image-CS-Cross);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.sectionContainerNew {
+  width: 100%;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  //overflow: auto;
+
+  .maskedContainer {
+    position: relative;
+    overflow: hidden;
+
+    .maskedView {
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+    }
+  }
+
+  .sectionElementTaxonomyData {
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-top:none;
+    padding: 15px;
+    overflow: hidden;
+
+    .sectionTaxonomyDataElement {
+      margin: 10px;
+      font-size: $font-sub-title
+    }
+  }
+}
+
+.sectionElementNew {
+  width: calc(100% - 20px);
+  margin: 10px 10px 0 10px;
+  height: auto;
+  float: left;
+  transition: all .2s;
+  position: relative;
+  box-shadow: 0px 0px 0px 1px #ddd;
+  border-radius: 2px;
+  //flex: 1;
+
+  .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    display: none;
+    &.active {
+      display: block;
+      z-index: 4;
+    }
+  }
+
+  .headerView {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .headerLabel {
+      float: left;
+      // max-width: 50%;
+      padding: 0 8px;
+      line-height: 32px;
+      font-size: $font-normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: calc(100% - 50px);
+      font-weight: 500;
+
+      &.mandatoryField {
+        &:after {
+          color: red;
+          content: "*";
+          margin-left: 2px;
+        }
+      }
+    }
+
+    .upperIconsWrapper {
+      position: absolute;
+      overflow: hidden;
+      right: 2px;
+      background-color: #fff;
+      padding: 0 3px;
+      margin-top: 2px;
+    }
+
+    .customIcon {
+      width: 15px;
+      float: left;
+      height: 32px;
+      margin: 0 0 0 5px;
+
+      .imageFitToContainer{
+        display: flex;
+        align-items: center;
+        .imageFitToContainerImage{
+          position: relative;
+          top: unset;
+          left: unset;
+          transform: unset;
+        }
+        .imageSimpleViewNoImage{
+          background-size: 12px;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .sectionElementContainer {
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 4px 5px 0px 5px;
+    width: 100%;
+    flex: 1;
+    align-items: stretch;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .tagsGroupContainer {
+      .gridYesNoPropertyView {
+        padding: 7px 0;
+
+        .gridYesNoSwitch {
+          margin: 0;
+        }
+      }
+    }
+
+    &.relationshipSectionElementViewContainer {
+      min-height: 100px;
+    }
+
+    .verticalMenuViewInArticle {
+      top: 28px;
+
+      .addEntityButtonContainer {
+
+        .actionButton {
+          height: 34px;
+          width: 34px;
+          float: left;
+          background-position: 9px;
+          background-size: 16px;
+          background-repeat: no-repeat;
+          margin: 0 5px 2px;
+          cursor: pointer;
+          background-color: #616367;
+          border-radius: 50%;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+
+          &:hover {
+            opacity: .68;
+          }
+
+          &.addEntityButton {
+            @include background-properties-with-theme-white-color($image-CS-Plus-32-black,16px,9px);
+          }
+
+          &.setDefaultImage {
+            background-image: url($image-CS-CheckMark-black);
+
+            &.active {
+              @include background-properties-with-theme-white-color($image-CS-CheckMark-black,16px,9px);
+            }
+          }
+        }
+      }
+
+    }
+
+    .relationshipLabel {
+      background: transparent;
+      border: none;
+      font-weight: normal;
+      height: 20px;
+      font-size: 11px;
+      color: #838181;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      .couplingIconsContainer {
+        .upperIcon {
+          /*&.sectionElementDynamicCoupledIcon {
+            width: 15px;
+            transition: all ease .1s;
+          }
+
+          &.sectionElementTightCoupledIcon {
+            width: 15px;
+            transition: all ease .1s;
+          }*/
+        }
+      }
+    }
+
+    .searchBarContainer {
+      border-bottom: none;
+    }
+
+    .tagsSectionBody {
+      border-bottom: none;
+    }
+
+    hr {
+      display: none;
+    }
+
+
+    .textFieldDescription {
+      font-size: 11px;
+      color: #aaa;
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    .userDeletedAlert {
+      padding-bottom: 2px;
+
+      .userDeletedIcon {
+        background-image: url($image-CS-High-Priority-32);
+        background-size: cover;
+        height: 11px;
+        width: 11px;
+        display: inline-block;
+      }
+
+      .userDeletedMessage {
+        color: red;
+        font-size: 9px;
+        padding-top: 3px;
+        padding-left: 3px;
+        display: inline-block;
+        vertical-align: top;
+        > span {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  /*
+  .sectionAttributeUpperIconContainer {
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    top: 3px;
+    right: 3px;
+    z-index: 2;
+
+    .sectionAttributeVariantIcon, .sectionAttributeVersionIcon {
+      background-position: 2px;
+      background-size: 14px;
+      background-repeat: no-repeat;
+      height: 20px;
+      width: 20px;
+      z-index: 2;
+      float: right;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: all .2s;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    .sectionAttributeVariantIcon {
+      background-image: url($image-CS-DNA-Helix);
+      opacity: .7;
+    }
+
+    .sectionAttributeVersionIcon {
+      background-image: url($image-CS-Versions-64);
+      opacity: .7;
+    }
+  }
+  */
+
+  /*.sectionElementUpperToolbarContainer {
+    top: 0;
+    right: 0;
+  }*/
+
+  .sectionElementLowerToolbarContainer {
+    top: 20px;
+    right: 0;
+  }
+
+  .notificationIconContainer {
+    float: right;
+
+    .upperIcon {
+      height: 15px;
+      width: 15px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: inline-block;
+      transition: all .2s;
+      float: left;
+      margin: 0 2px;
+      opacity: 0.7;
+
+      &.sectionElementNotificationIcon {
+        /*background-image: url($image-CS-High-Priority-32);*/
+        /*background-image: url($image-CS-notification);*/
+        background-image: url($image-CS-notification-filled);
+
+        &.selected {
+          /*background-image: url($image-CS-High-Priority-Filled-32);*/
+          background-image: url($image-CS-notification-filled);
+        }
+
+        &:hover {
+          /*background-image: url($image-CS-High-Priority-Filled-32);*/
+          background-image: url($image-CS-notification-filled);
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .couplingIconsContainer {
+    float: right;
+    //margin: 0px 2px 0px 2px;
+    height: 15px;
+    overflow: hidden;
+    transition: all ease .1s;
+
+    .upperIcon {
+      height: 15px;
+      //background-position: 2px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: inline-block;
+      transition: all .2s;
+      float: left;
+      margin: 0 2px;
+      &.sectionElementDynamicCoupledIcon {
+        width: 15px;
+        opacity: 0.5;
+        transition: all ease .1s;
+        background-image: url($image-DynamicCoupled-333);
+      }
+
+      &.sectionElementTightCoupledIcon {
+        width: 15px;
+        opacity: 0.5;
+        transition: all ease .1s;
+        background-image: url($image-TightlyCoupled-333);
+      }
+    }
+  }
+
+  .ruleViolationIconContainer {
+    float: right;
+    //margin: 0px 2px 0px 2px;
+
+    .upperIcon {
+      height: 15px;
+      width: 15px;
+      //background-position: 2px;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      transition: all .2s;
+      float: left;
+
+      &.sectionElementRuleViolationIcon {
+        opacity: 0.56;
+        background-image: url($image-CS-Registered-Trademark-32);
+
+        &.selected {
+          opacity: 1;
+          background-image: url($image-CS-Registered-Trademark-Filled-32);
+        }
+
+        &:hover {
+          opacity: 1;
+          background-image: url($image-CS-Registered-Trademark-Filled-32);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .upperIconsWrapper {
+    .clickableIconsContainer {
+      float: left;
+      .contentSectionElementViewCrossIcon {
+        cursor: pointer;
+        margin: 0 2px;
+        height: 30px;
+        width: 18px;
+        opacity: 0.7;
+        background: url($image-CS-Cross) no-repeat no-repeat 50%;
+        background-size: 18px;
+      }
+      .editTasksButton {
+        height: 30px;
+      }
+      .clickableIcon {
+        float: right;
+        height: 30px;
+        width: 18px;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 2px;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 1;
+        }
+
+        &.conflictingIcon, &.conflictingSourcesWithValues, &.conflictingSources {
+          background-image: url($image-CS-conflict);
+        }
+
+        &.conflictingSources {
+          background-image: url($image-CS-Error-Conflict);
+        }
+
+        &.orange {
+          background-image: url($image-CS-Registered-Trademark-Orange-Filled);
+        }
+        &.red {
+          background-image: url($image-CS-Registered-Trademark-Filled-32);
+        }
+        &.yellow {
+          background-image: url($image-CS-Registered-Trademark-Yellow-Filled);
+        }
+
+        &.notificationIcon {
+          background-position: center;
+          background-size: 18px;
+          background-image: url($image-CS-Error-48);
+        }
+
+        &.editIcon {
+          background-image: url($image-CS-Edit-32);
+        }
+
+        &.tightlyCoupled {
+          background-image: url($image-tight-coupling);
+
+          &.applied {
+            background-image: url($image-tight-coupling-resolved);
+          }
+        }
+
+        &.dynamicCoupled {
+          background-image: url($image-dynamic-coupling);
+
+          &.applied {
+            background-image: url($image-dynamic-coupling-resolved);
+          }
+        }
+
+        &.readOnlyCoupled {
+          background-image: url($image-CS-lock);
+        }
+
+        &.propertyInfoIcon {
+          cursor: pointer;
+          margin: 0 2px;
+          height: 30px;
+          width: 18px;
+          @include background-properties($image-CS-menu-item-about, 18px);
+          opacity: 0.4;
+          position: relative;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+      }
+    }
+
+    .notClickableIconsContainer {
+      float: left;
+      opacity: 0.6;
+      .notClickableIcon {
+        float: left;
+        height: 30px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 0px;
+        //margin: 0 2px;
+        opacity: 0.7;
+
+        &.disabledIcon {
+          background-position: 1px;
+          background-size: 18px;
+          opacity: 1;
+          background-image: url($image-CS-Unavailable-48);
+        }
+
+        &.attribute {
+          background-image: url($image-CS-Text-Color-Filled-50);
+        }
+        &.role {
+          background-image: url($image-CS-Manager-Filled-50-Black);
+        }
+        &.tag {
+          background-image: url($image-CS-Price-Tag-Filled-50);
+        }
+        &.taxonomy {
+          background-image: url($image-CS-Multicast-Filled-50);
+        }
+
+        &.tightlyCoupled {
+          background-image: url($image-TightlyCoupled-333);
+        }
+
+        &.dynamicCoupled {
+          background-image: url($image-DynamicCoupled-333);
+        }
+
+        &.calculatedAttribute {
+          background-image: url($image-CS-Calculated);
+        }
+
+        &.concatenatedAttribute {
+          background-image: url($image-Concatenated);
+        }
+
+        &.translatableIcon {
+          background-image: url($image-geography);
+        }
+      }
+    }
+  }
+
+  .mandatoryElementIcon {
+    float: right;
+    height: 30px;
+    width: 16px;
+    background-image: url($image-CS-Brake-Warning-50);
+    background-size: cover;
+  }
+
+  .searchBarView {
+    width: inherit;
+    height: inherit;
+    position: inherit;
+  }
+
+  /*
+  .sectionElementTightlyCoupledBodyContainer {
+    border: 1px solid rgba(199, 193, 193, 0.4);
+    border-radius: 2px;
+    margin: 0px 0px 5px 0px;
+    padding: 0px 2px 4px 3px;
+
+    &.collapsed {
+      display: none;
+      transition: all ease 1s;
+    }
+
+    &.expanded {
+      display: block;
+      transition: all ease 1s;
+    }
+
+    border-top: 1px solid rgba(128, 128, 128, 0.33);
+    .valueWrapper {
+      display: inline-block;
+
+      .attributeNotificationWrapper {
+        margin: 7px 0px 6px;
+        word-break: break-all;
+      }
+
+      .roleNotificationWrapper {
+        .userLabel {
+          float: left;
+          border: 1px solid rgba(195, 189, 189, 0.63);
+          border-radius: 5px;
+          padding: 0 5px 0 5px;
+          margin: 5px 3px 3px 3px;
+        }
+      }
+    }
+
+    .buttonWrapper {
+      color: #838181;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+
+      .notificationConfirmation {
+        font-size: 11px;
+        color: rgba(232, 67, 67, 0.78);
+        margin-top: 3px
+      }
+
+      .notificationButtonContainer {
+        float: right;
+        margin: 3px 0px 1px 0px;
+
+        .button {
+          float: left;
+          margin: 0 5px;
+        }
+      }
+
+    }
+  }
+  */
+
+  .footerView {
+    float: left;
+    width: 100%;
+    //padding: 0 7px;
+    .alertsSection{
+      //margin-left: 8px;
+      margin-bottom: 2px;
+    }
+    .footerDescriptionWrapper {
+      font-size: 11px;
+      color: #424242;
+      font-style: italic;
+      background: #eee;
+      padding: 5px 5px 4px 9px;
+      border-radius: 0px 0px 2px 2px;
+      margin-top: 3px;
+
+      .footerDescription {
+        //padding: 3px 9px 9px 3px;
+        font-size: inherit;
+        word-break: break-all;
+      }
+
+      .calculatedFormula {
+        height: 60%;
+        width: 100%;
+        //padding: 3px 9px 9px 0px;
+        padding-top: 3px;
+        overflow: hidden;
+        font-size: inherit;
+
+        .calculatedFormulaHeader {
+          float: left;
+          line-height: 30px;
+          font-size: inherit;
+        }
+
+        .element {
+          float: left;
+          height: 20px;
+          line-height: 20px;
+          margin: 6px 0 0 6px;
+          background-color: $color-light-2;
+          border-radius: 3px;
+          padding: 0 4px 0 4px;
+          box-shadow: 0 0 0 1px #c0c0c0;
+          background-size: 16px;
+          position: relative;
+          font-size: inherit;
+        }
+
+        .elementWithType {
+          float: left;
+          height: 20px;
+          line-height: 20px;
+          margin: 6px 0 0 6px;
+          background-color: $color-light-2;
+          border-radius: 3px;
+          padding: 0 25px 0 4px;
+          box-shadow: 0 0 0 1px #c0c0c0;
+          background-size: 16px;
+          position: relative;
+          font-size: inherit;
+
+          .typeIcon {
+            height: 100%;
+            width: 22px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            opacity: 0.33;
+
+            &.string {
+              background-size: 16px;
+              background-image: url('./../images/Text Box Filled-50.svg');
+            }
+
+            &.attribute {
+              background-size: 14px;
+              background-image: url('./../images/Text Color Filled-50.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ruleViolationsBodyContainer {
+    //margin: auto 0px 15px 0px;
+    //padding: 2px 5px 1px 5px;
+    //border: 1px solid #d5d5d5;
+    //background: #f9f9f9;
+    border-radius: 0px 0px 2px 2px;
+    width: 100%;
+
+    &.collapsed {
+      display: none;
+      transition: all ease 1s;
+    }
+
+    &.expanded {
+      display: block;
+      transition: all ease 1s;
+    }
+
+    .ruleViolationLabel {
+      line-height: 25px;
+      color: #838181;
+      font-size: $font-small;
+      font-weight: 500;
+      display: none;
+    }
+
+    .ruleContainer {
+      padding: 5px;
+      background-color: #f9f9f9;
+      float: left;
+      width: 100%;
+      //margin-top: 3px;
+      //box-shadow: 0 0 1px rgba(128, 128, 128, 0.44);
+      //margin: 0px 5px 5px 5px;
+
+      .ruleColor {
+        z-index: 2;
+        border-radius: 50%;
+        float: left;
+        height: 15px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        background-size: 18px;
+
+        &.red {
+          background-image: url($image-CS-HighImportance-48Red);
+        }
+
+        &.orange {
+          background-image: url($image-CS-HighImportance-48Orange);
+        }
+
+        &.yellow {
+          background-image: url($image-CS-HighImportance-48Yellow);
+        }
+      }
+
+      .ruleDescription {
+        margin-left: 5px;
+        overflow: auto;
+        font-size: 11px;
+        color: #777;
+      }
+
+      .footerView {
+        float: left;
+        width: 100%;
+        .footerDescription {
+          font-size: 11px;
+          color: #777;
+          font-style: italic;
+          background: #eee;
+          padding: 5px 8px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .userDeletedAlert {
+    margin: 10px;
+  }
+
+  .defaultConflictContainer {
+    border: 1px solid #7a7a7a;
+    border-radius: 3px;
+    margin: 10px;
+
+    &.collapsed {
+      display: none;
+    }
+
+    &.expanded {
+      display: block;
+    }
+
+    .defaultConflictHeader {
+      background-color: #7a7a7a;
+      color: #fff;
+      font-weight: 500;
+      font-size: $font-small;
+      padding: 2px 5px;
+    }
+
+    .defaultConflictRow {
+      border-bottom: 1px solid #eee;
+      padding: 0 5px;
+      overflow: auto;
+      display: flex;
+
+      .defaultConflictValue {
+        float: left;
+        font-size: $font-normal;
+        line-height: 25px;
+        width: calc(100% - 130px);
+        div > p {
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .entityTagsSummaryView {
+          .noTagsGrey{
+            font-style: italic;
+            color: #d2d2d2;
+            padding: 0 0 0 10px;
+          }
+        }
+      }
+
+      .defaultConflictClass {
+        float: right;
+        font-style: italic;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin: 2px 7px 2px 2px;
+        padding: 0 5px;
+        max-width: 100px;
+        cursor: context-menu;
+        align-self: center;
+        .defaultConflictClassLabel {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: calc(100% - 22px);
+          float: right;
+        }
+        span {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: $font-small;
+          float: left;
+          padding: 2px 0px 2px 5px;
+          max-width: calc(100% - 25px);
+          &.conflictOccursIn {
+            width: 14px;
+            height: 14px;
+            margin: 2px 4px;
+            background-position: center;
+            background-size: 13px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &.inClass {
+              background-image: url($image-CS-Categorize-50-333);
+            }
+
+            &.inTaxonomy {
+              background-image: url($image-CS-Active-Directory-000);
+            }
+
+            &.inRelationship {
+              @include background-properties($image-CS-hub,13px);
+              opacity: 0.6;
+            }
+
+            &.inCollection {
+              background-image: url($image-CS-collection-static-collection-new);
+            }
+
+            &.inContext {
+              background-image: url($image-CS-tags-black-50);
+            }
+
+            &.inLanguage {
+              background-image: url($image-CS-icons8-google-translate);
+            }
+          }
+        }
+      }
+
+      .defaultConflictSelected {
+        float: right;
+        width: 16px;
+        height: 16px;
+        background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+        opacity: 0.3;
+        cursor: pointer;
+        align-self: center;
+
+        &.hideVisibility {
+          visibility: hidden;
+        }
+
+        &.selected {
+          background-image: url($image-CS-Checked-48);
+          opacity: 1;
+          background-size: 24px;
+        }
+      }
+    }
+  }
+
+  /*.sectionElementUpperToolbarContainer, .sectionElementLowerToolbarContainer {
+    top: 3px;
+    z-index: 4;
+    overflow: hidden;
+    float: right;
+
+    .sectionElementToolbarButton {
+      height: 15px;
+      width: 15px;
+      //background-position: 2px;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      opacity: .7;
+      transition: all .2s;
+      float: right;
+      box-shadow: 0px 0px 0px 1px #eee;
+
+      &.sectionElementVariantButton {
+        background-image: url($image-CS-DNA-Helix);
+        display: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.buttonSelected {
+          background-image: url($image-Variant-50White);
+          background-color: #777;
+          opacity: 1;
+        }
+
+        &.variantButtonGreen {
+          background-image: url($image-CS-DNAHelixFilled-50Green);
+        }
+      }
+
+      &.sectionElementVersionButton {
+        background-image: url($image-CS-Versions-64);
+        display: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.buttonSelected {
+          @include background-properties-with-theme-white-color($image-CS-Versions-64);
+          background-color: #777;
+          opacity: 1;
+        }
+
+        &.versionButtonGreen {
+          background-image: url($image-CS-VersionsFilled-50Green);
+        }
+      }
+
+      &.sectionElementAddVariantButton {
+        background-image: url($image-CS-Plus-32);
+        background-color: transparent;
+        box-shadow: none;
+        background-size: 22px;
+        background-position: 2px 1px;
+      }
+
+      &.sectionElementItemsAllowed {
+        border-radius: 10px;
+        background: #333;
+        color: #fff;
+        font-size: 11px;
+        height: 18px;
+        width: auto;
+        padding: 1px 4px;
+        text-align: center;
+        margin: 1px;
+        min-width: 18px;
+      }
+    }
+  }*/
+
+  &.selected {
+    box-shadow: 0px 0px 0px 2px $color-theme-accent;
+    border: none;
+    //border: solid 2px $color-theme-accent;
+  }
+
+  &.mandatoryViolated {
+    border-color: #ff3333;
+    box-shadow: 0px 0px 0px 1px #ff3333;
+  }
+
+  //&.mandatoryField {
+  //  .attributeElementFroalaHeader, .contextualAttributeLabel, .mssLabel, .numberLocaleLabel, .textFieldLabel, .customTextFieldLabel, .tagsSectionHeader, .attributeElementDateHeader {
+  //    &:after {
+  //      color: red;
+  //      content: "*";
+  //      margin-left: 2px;
+  //    }
+  //  }
+  //}
+
+  &.dynamicallyCoupled {
+
+  }
+
+  .textFieldLabel {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: inherit;
+    z-index: 1;
+    min-width: 40px;
+  }
+
+  .textFieldInput {
+    overflow: hidden;
+  }
+
+  .measurementMetricInputLabel {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: inherit;
+  }
+
+  .concatenatedAttributeInputLabel {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: inherit;
+  }
+
+  .multiSelectSearchLabel {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: initial;
+    min-width: 40px;
+  }
+
+  .tagsSectionHeader {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: inherit;
+    min-width: 40px;
+  }
+
+  .sectionElementValueWrapper {
+    float: left;
+    width: calc(100% - 45px);
+  }
+
+  .existingVersionsWrapper {
+    float: right;
+    width: 45px;
+    .existingVersionsLabel {
+      color: #888686;
+      font-size: $font-small;
+    }
+    .existingVersionsDropDown {
+      border: none;
+      margin: 4px auto;
+    }
+  }
+
+  .sectionElementVariantContainer {
+    position: relative;
+
+    .textFieldLabel {
+      display: none;
+    }
+
+    .sectionElementVariantDeleteButton {
+      @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+      background-size: 16px;
+      background-position: 0px 1px;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 14px;
+      right: 9px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &.taxonomyWithElements {
+  }
+
+}
+
+.conflictingSourcesContainer {
+  margin: 2px 7px 2px 2px;
+  cursor: context-menu;
+
+  .conflictSourceSelector {
+    float: right;
+    width: 14px;
+    height: 14px;
+    padding: 0 7px;
+    margin-left: 7px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    cursor: pointer;
+    filter: invert(100%);
+  }
+
+  .conflictSourceLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    width: calc(100% - 22px);
+    font-size: 11px;
+    padding: 2px 0px 2px 5px;
+    max-width: calc(100% - 25px);
+  }
+  .conflictOccursIn {
+    width: 14px;
+    height: 14px;
+    margin: 2px 4px;
+    padding: 0 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    cursor: pointer;
+    filter: invert(100%);
+
+    &.inClass {
+      background-image: url($image-CS-Categorize-50-333);
+    }
+
+    &.inTaxonomy {
+      background-image: url($image-CS-Active-Directory-000);
+    }
+
+    &.inRelationship {
+      @include background-properties-with-gray-color($image-CS-hub);
+      opacity: 0.6;
+    }
+
+    &.inCollection {
+      background-image: url($image-CS-collection-static-collection-new);
+    }
+
+    &.inContext {
+      background-image: url($image-CS-tags-black-50);
+    }
+  }
+
+  &.selected {
+    .conflictSourceLabel {
+      font-weight: 500;
+    }
+
+    .conflictSourceSelector {
+      background-image: url($image-CS-icons8-ok-filled);
+    }
+  }
+}
+
+.sectionElement {
+  display: flex;
+
+  .sectionElementWrapper {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .sectionElementNew {
+    flex: 1;
+    height: calc(100% - 10px);
+
+    &.readOnlySectionElement {
+      height: auto;
+    }
+  }
+}

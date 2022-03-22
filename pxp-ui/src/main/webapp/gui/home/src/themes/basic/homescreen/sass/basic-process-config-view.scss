@@ -1,0 +1,295 @@
+$primary-button-color: #2196F3;
+$secondary-button-color: white;
+$configHeaderHeight: 52px;
+@import "../../../../styleguide/mixin";
+
+/*
+.processConfigViewContainer {
+  height: 100%;
+
+  .processListViewContainer {
+    width: 275px;
+    height: calc(100% - #{$configHeaderHeight});
+    border-right: 1px solid #bbb;
+    float: left;
+  }
+
+  .processDetailedViewContainer {
+    width: calc(100% - 275px);
+    height: calc(100% - #{$configHeaderHeight});
+    display: inline-block;
+  }
+
+  .processHeader {
+    text-align: center;
+  }
+
+}
+*/
+
+.processDetailDialogContainer {
+  height: calc(100% - 122px)
+}
+
+.processDetailDialog {
+  max-height: none;
+  height: 80%;
+  left: 3%;
+  top: 10%;
+
+  > div {
+    height:100%;
+  }
+
+  .processDetailView {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    scrollbar-width: thin;
+    .commonConfigSectionViewContainer {
+      float: left;
+      width: 100%;
+      .commonConfigSection{
+        margin: 0px;
+        .commonConfigSectionBody{
+          .commonConfigSectionRow {
+            .commonConfigSectionElementWrapper{
+              .commonConfigSectionElement{
+                .commonConfigSectionElementBody{
+                  padding: 5px;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*
+    .stencil-container {
+      .joint-theme-modern {
+        background: none;
+      }
+
+      .groups-toggle {
+        display: none;
+      }
+
+      .search-wrap {
+        .search {
+          background: white;
+          border: none;
+          outline: none;
+          border-radius: 0;
+          color: #000;
+        }
+      }
+
+      .joint-stencil {
+        .content {
+          top: 48px;
+
+          .group {
+            .group-label {
+              background: #505050;
+              color: #fff;
+              font-weight: normal;
+            }
+          }
+        }
+
+      }
+    }
+    */
+  }
+
+  /*
+  .processInfoContainer {
+    height: 80px;
+    padding-top: 4px;
+    padding-left: 10px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin-bottom: 2px;
+
+    .processLabelContainer {
+      float: left;
+
+      .customTextFieldViewContainer {
+        min-width: 100px;
+        width: auto;
+        display: inline-block;
+        margin-left: 20px;
+        margin-bottom: 0;
+
+        .customTextField {
+          padding-left: 8px;
+          width: 400px;
+          height: 32px;
+        }
+      }
+    }
+
+    .processCodeContainer {
+      float: left;
+      margin-left: 50px;
+      width: calc(100% - 55px);
+      opacity: .5;
+
+      .processCode {
+        height: 32px;
+        min-width: 50%;
+        margin-left: 20px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        text-overflow: ellipsis;
+        resize: none;
+        font-size: 14px;
+        cursor: not-allowed;
+      }
+    }
+
+    .eventInfoContainer {
+      margin-left: 50px;
+      float: left;
+
+      .eventTypeInfo {
+        height: 32px;
+        margin-left: 20px;
+        border: none;
+        outline: none;
+      }
+    }
+
+  }
+  */
+
+  .processGraphContainer {
+    //height: calc(100% - 82px);
+    height: 50vh;
+    float: left;
+    width: 100%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+  }
+
+
+}
+/** moved from fullscreen-view to here **/
+.fullScreenView {
+  &.fullScreen {
+    .processGraphContainer{
+      height: calc(100% - 35px);
+
+      box-shadow: none;
+
+      .bpnmWrapperContainer {
+        .content {
+          .properties {
+            padding: 10px 8px 10px 0;
+          }
+        }
+      }
+      .bpp-properties-panel {
+        height: 100%;
+
+        .bpp-properties {
+          height: 100%;
+          overflow: auto;
+        }
+      }
+
+      .uploadBPMNButton {
+        top: 10px;
+        left: 120px;
+      }
+
+      .downloadBPMNButton {
+        top: 10px;
+        left: 165px;
+      }
+
+      .djs-palette {
+        left: 10px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.stencil-paper-drag{
+  z-index: 2000;
+}
+
+/*
+.searchCriteriaWrapper {
+  display: inline-flex;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  overflow: hidden;
+
+  .workFlowType {
+    padding: 10px;
+    display: flex;
+
+    .workFlowTypeName {
+      max-width: 200px;
+      line-height: 28px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 15px;
+      flex: 2;
+    }
+  }
+  .entityType {
+    padding: 10px;
+    display: flex;
+
+    .entityName {
+      line-height: 28px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      max-width: 200px;
+      line-height: 28px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 15px;
+      flex: 1;
+    }
+  }
+
+  .mssViewBorder {
+    border: 1px solid #eee;
+    max-width: 300px;
+    flex: 1;
+
+    .multiSelectSearchViewWrapper .multiSelectSearchView .multiSelectSummary .selectedItems {
+      width: auto;
+      height: 22px;
+      margin: 2px 5px 2px 2px;
+      background-color: #eee;
+      cursor: default;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: top;
+
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+
+    }
+  }
+}
+*/
+  .settingScreenContainerWrapper .settingScreenViewContainer .settingScreenBodyViewContainer .settingScreenTabBodyViewWrapper .rightSectionContainer .configGridViewContainer {
+    &.processConfigWrapper {
+      height: calc(100% );
+    }
+  }

@@ -1,0 +1,27 @@
+#loaderContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+  background-color: black;
+  z-index: 10000;
+  transition: opacity .2s;
+
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &.loaderInVisible {
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+
+    & > div{
+      display: none;
+    }
+  }
+}

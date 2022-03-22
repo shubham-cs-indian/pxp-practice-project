@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Camunda Modeler" exporterVersion="4.1.1" expressionLanguage="http://www.w3.org/1999/XPath" id="Definitions_d866b2c6-9749-4e14-b96c-0e3fe06b0014" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <bpmn:process id="Process_d866b2c6-9749-4e14-b96c-0e3fe06b0014" isClosed="false" isExecutable="true" processType="None">
+    <bpmn:startEvent camunda:asyncAfter="true" id="StartEvent_d866b2c6-9749-4e14-b96c-0e3fe06b0014" isInterrupting="true" parallelMultiple="false">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${camundaTask}" event="start"/>
+        <camunda:properties>
+          <camunda:property name="runtimeVariables" value="configPropertyType,exportMap,filePath,configPropertyType,configEntityCodes,exportType"/>
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>SequenceFlow_0edqqbp</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask camunda:delegateExpression="${camundaTask}" completionQuantity="1" id="Task_1lxth6j" implementation="##WebService" isForCompensation="false" name="Notification Task" startQuantity="1">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="NOTIFICATION_SUBJECT" parameterType="input">Exported PXON File for Job ID - ${jobId}</camunda:inputParameter>
+          <camunda:inputParameter name="NOTIFICATION_BODY" parameterType="input"><![CDATA[<p></p> <a href =  ${PROCESS_FILES_DOWNLOAD_URL}?downloadIndividual=true&filePath=${exportedFilePath}> Click here to download the file  </a></br></br></br><p><b>Note:</b> This email link can be accessed by anyone who has access to PXP. Please be mindful and conscious while forwarding this email.</p>]]></camunda:inputParameter>
+          <camunda:inputParameter name="NOTIFICATION" parameterType="input">
+            <camunda:list>
+              <camunda:value>email</camunda:value>
+              <camunda:value>user</camunda:value>
+            </camunda:list>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="TO_DEFAULT_USER" parameterType="input">true</camunda:inputParameter>
+          <camunda:inputParameter name="RECIPIENTS_TO" parameterType="input">
+            <camunda:list/>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="RECIPIENTS_CC" parameterType="input">
+            <camunda:list/>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="RECIPIENTS_BCC" parameterType="input">
+            <camunda:list/>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="taskId" parameterType="input">notificationTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">notificationTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">CustomServiceTask</camunda:inputParameter>
+          <camunda:inputParameter name="EXECUTION_STATUS" parameterType="output">notificationStatus</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0knwd0q</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0cins9g</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_1vsbh3g">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${camundaTask}" event="end"/>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0cins9g</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0cins9g" sourceRef="Task_1lxth6j" targetRef="EndEvent_1vsbh3g"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0edqqbp" sourceRef="StartEvent_d866b2c6-9749-4e14-b96c-0e3fe06b0014" targetRef="Task_0t4fdod"/>
+    <bpmn:callActivity calledElement="STD_PXON_EXPORT" completionQuantity="1" id="Task_0t4fdod" isForCompensation="false" name="PXON Export" startQuantity="1">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="PRIORITY" parameterType="input">medium</camunda:inputParameter>
+          <camunda:inputParameter name="EXPORT_TYPE" parameterType="input">entity</camunda:inputParameter>
+          <camunda:inputParameter name="CONFIG_PROPERTY_TYPE" parameterType="input">${configPropertyType}</camunda:inputParameter>
+          <camunda:inputParameter name="CONFIG_ENTITY_CODES" parameterType="input">${configEntityCodes}</camunda:inputParameter>
+          <camunda:inputParameter name="taskId" parameterType="input">PXONExportActivity</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">PXONExportActivity</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">customCallActivity</camunda:inputParameter>
+          <camunda:inputParameter name="JOB_ID" parameterType="output">jobId</camunda:inputParameter>
+          <camunda:inputParameter name="PXON_FILE_PATH" parameterType="output">filePath</camunda:inputParameter>
+          <camunda:inputParameter name="EXECUTION_STATUS" parameterType="output">PXONExportStatus</camunda:inputParameter>
+        </camunda:inputOutput>
+        <camunda:in variables="all"/>
+        <camunda:out variables="all"/>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0edqqbp</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1c3sx4d</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="SequenceFlow_0knwd0q" sourceRef="Task_0uxwuah" targetRef="Task_1lxth6j"/>
+    <bpmn:serviceTask camunda:delegateExpression="${camundaTask}" completionQuantity="1" id="Task_0uxwuah" implementation="##WebService" isForCompensation="false" name="Delivery Task" startQuantity="1">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="OUTPUT_METHOD" parameterType="input">hotFolder</camunda:inputParameter>
+          <camunda:inputParameter name="DESTINATION_PATH" parameterType="input">generated\</camunda:inputParameter>
+          <camunda:inputParameter name="MESSAGE_TYPE_LIST" parameterType="input">
+            <camunda:list>
+              <camunda:value>EXCEL</camunda:value>
+            </camunda:list>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="DATA_TO_EXPORT" parameterType="input">${exportMap}</camunda:inputParameter>
+          <camunda:inputParameter name="FILE_PREFIX" parameterType="input">${configPropertyType}${exportType}</camunda:inputParameter>
+          <camunda:inputParameter name="taskId" parameterType="input">deliveryTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">deliveryTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">CustomServiceTask</camunda:inputParameter>
+          <camunda:inputParameter name="IS_JMS_SERVICE_AVAILABLE" parameterType="output"/>
+          <camunda:inputParameter name="EXECUTION_STATUS" parameterType="output">deliveryStatus</camunda:inputParameter>
+          <camunda:inputParameter name="EXPORTED_FILE_PATH" parameterType="output">exportedFilePath</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_14e5l09</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0knwd0q</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1c3sx4d" sourceRef="Task_0t4fdod" targetRef="Task_12g1v46"/>
+    <bpmn:sequenceFlow id="SequenceFlow_14e5l09" sourceRef="Task_12g1v46" targetRef="Task_0uxwuah"/>
+    <bpmn:serviceTask camunda:delegateExpression="${camundaTask}" completionQuantity="1" id="Task_12g1v46" implementation="##WebService" isForCompensation="false" name="Config To Excel" startQuantity="1">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="PXON_FILE_PATH" parameterType="input">${filePath}</camunda:inputParameter>
+          <camunda:inputParameter name="taskId" parameterType="input">configPXONToExcelTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">configPXONToExcelTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">CustomServiceTask</camunda:inputParameter>
+          <camunda:inputParameter name="TRANSFORMED_DATA" parameterType="output">exportMap</camunda:inputParameter>
+          <camunda:inputParameter name="EXECUTION_STATUS" parameterType="output">transformationStatus</camunda:inputParameter>
+          <camunda:inputParameter name="FAILED_FILES" parameterType="output">failedFiles</camunda:inputParameter>
+          <camunda:inputParameter name="EXPORTED_TYPE" parameterType="output">exportType</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1c3sx4d</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_14e5l09</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_d866b2c6-9749-4e14-b96c-0e3fe06b0014">
+    <bpmndi:BPMNPlane bpmnElement="Process_d866b2c6-9749-4e14-b96c-0e3fe06b0014" id="BPMNPlane_d866b2c6-9749-4e14-b96c-0e3fe06b0014">
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0cins9g" id="SequenceFlow_0cins9g_di">
+        <di:waypoint x="760" y="109"/>
+        <di:waypoint x="795" y="109"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="0" x="877.5" y="87"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="StartEvent_d866b2c6-9749-4e14-b96c-0e3fe06b0014" id="_BPMNShape_StartEvent_d866b2c6-9749-4e14-b96c-0e3fe06b0014">
+        <dc:Bounds height="36" width="36" x="156" y="91"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20" width="90" x="229" y="127"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1lxth6j" id="ServiceTask_1t9lixt_di">
+        <dc:Bounds height="80" width="100" x="660" y="69"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_1vsbh3g" id="EndEvent_1vsbh3g_di">
+        <dc:Bounds height="36" width="36" x="795" y="91"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="0" x="913" y="130"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0edqqbp" id="SequenceFlow_0edqqbp_di">
+        <di:waypoint x="192" y="109"/>
+        <di:waypoint x="242" y="109"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="0" x="217" y="87.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_0t4fdod" id="CallActivity_1ft5b0f_di">
+        <dc:Bounds height="80" width="100" x="242" y="69"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0knwd0q" id="SequenceFlow_0knwd0q_di">
+        <di:waypoint x="624" y="109"/>
+        <di:waypoint x="660" y="109"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="90" x="597" y="87.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_0uxwuah" id="ServiceTask_0rnd4g1_di">
+        <dc:Bounds height="80" width="100" x="524" y="69"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1c3sx4d" id="SequenceFlow_1c3sx4d_di">
+        <di:waypoint x="342" y="109"/>
+        <di:waypoint x="392" y="109"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="0" x="367" y="87.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_14e5l09" id="SequenceFlow_14e5l09_di">
+        <di:waypoint x="492" y="109"/>
+        <di:waypoint x="524" y="109"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="0" x="508" y="87.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_12g1v46" id="ServiceTask_04roi4g_di">
+        <dc:Bounds height="80" width="100" x="392" y="69"/>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,261 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.thumbnailGoldenRecordBucketView {
+  @include topInlineBlock();
+  text-align: left;
+  height: 400px;
+  background-color: #fff;
+  margin: 4px 7px;
+  min-width: 250px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  $header-section-height: 55px;
+
+  .headerSection {
+    padding: 10px 10px 0 10px;
+    height: $header-section-height;
+    $merge-button-dimension: 24px;
+
+    .leftSection {
+      @include topInlineBlock();
+      width: calc(100% - #{$merge-button-dimension});
+      padding-right: 10px;
+
+      .headerLabel {
+        font-weight: 500;
+        color: $color-dark-4;
+        border-bottom: 1px solid $color-light-3;
+        padding: 0 0 3px 3px;
+        @include ellipsis();
+      }
+
+      .matches {
+        color: $color-dark-4;
+        padding: 5px 0 0 0;
+
+        .matchLabel {
+          @include topInlineBlock();
+          font-size: $font-small;
+          padding-left: 3px;
+        }
+
+        .matchCount {
+          @include topInlineBlock();
+          font-size: $font-small;
+          padding-left: 8px;
+          font-weight: 500;
+        }
+      }
+
+    }
+
+    .mergeButton {
+      @include topInlineBlock();
+      height: $merge-button-dimension;
+      width: $merge-button-dimension;
+      background-color: $color-light-4;
+      border-radius: 3px;
+      cursor: pointer;
+      @include background-properties($image-CS-icons8-compare, 16px);
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .mainSection {
+    height: calc(100% - #{$header-section-height});
+    //padding: 0 0 10px 0;
+
+    // OVERRIDING TabLayoutView CSS to make the tabItems stretch to fill space:
+    .tabLayoutView {
+      padding: 10px;
+      height: 100%;
+
+      .tabsSection {
+        box-shadow: none;
+
+        .tabsList {
+          width: 100%;
+
+          .tabItem {
+            flex: 1 0;
+            margin: 0 0 1px 0;
+          }
+        }
+      }
+
+      .bodySection {
+        padding: 10px 0 0 0;
+        height: calc(100% - 32px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        .propertyViewsList {
+          padding: 0 5px 0 0;
+
+          .propertyItem {
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+
+            .customIcon {
+              height: 15px;
+              width: 15px;
+              position: relative;
+              margin-right: 5px;
+
+              .imageSimpleViewNoImage{
+                background-size: cover;
+              }
+            }
+
+            &.isForAttribute {
+
+              .propertyLabel {
+                padding-top: 2px;
+
+                &:after {
+                  top: 2px;
+                }
+              }
+            }
+
+            .propertyLabel {
+              padding-right: 10px;
+              font-size: $font-small;
+              color: $color-dark-4;
+              font-weight: 500;
+              position: relative;
+
+              &:after {
+                content: ":";
+                position: absolute;
+                right: 4px;
+                top: -1px;
+              }
+            }
+
+            .propertyValue {
+              flex: 1 0;
+
+              .klassChipsContainer {
+
+                .klassChip {
+                  @include  klassChip($font-small);
+                }
+              }
+
+              .smallTaxonomyViewContainer {
+
+                .taxonomyLabel {
+                  padding: 0 10px;
+                  font-weight: normal;
+                }
+              }
+
+              .entityTagsSummaryView {
+                margin-bottom: 0;
+              }
+
+              .disconnectedHtml {
+
+                p {
+                  margin: 0;
+                }
+              }
+
+            }
+          }
+        }
+
+        .matchingContentThumbnail {
+          margin: 0 0 10px 0;
+          padding: 5px;
+          border-radius: 3px;
+          //box-shadow: 0 0 0 1px $color-light-4;
+          border: 1px solid $color-light-3;
+          $content-image-dimension: 50px;
+
+          .contentImageContainer {
+            @include topInlineBlock();
+            height: $content-image-dimension;
+            width: $content-image-dimension;
+            box-shadow: 1px 0 0 $color-light-3;
+            text-align: center;
+
+            .contentImage {
+              max-height: $content-image-dimension;
+              max-width: $content-image-dimension;
+            }
+          }
+
+          .contentDetails {
+            height: $content-image-dimension;
+            @include topInlineBlock();
+            width: calc(100% - #{$content-image-dimension});
+            padding: 0 0 0 10px;
+
+            .contentLabelContainer {
+              width: 100%;
+              display: flex;
+
+              .contentLabel {
+                @include ellipsis();
+                flex: 1 0;
+                font-size: $font-normal;
+                font-weight: 500;
+                color: $color-dark-3;
+              }
+
+              .entityInformationIcon {
+                  height: 15px;
+                  width: 19px;
+                  padding: 0 2px;
+                }
+
+              .goldenRecordIndicator {
+                height: 15px;
+                width: 19px;
+                @include background-properties($image-CS-crown);
+              }
+            }
+
+            .contentSupplier {
+              width: 100%;
+              @include ellipsis();
+              font-size: $font-small;
+              color: $color-dark-3;
+              position: relative;
+              padding: 0 0 0 18px;
+
+              &:before {
+                content: "";
+                height: 12px;
+                width: 15px;
+                position: absolute;
+                left: 0;
+                opacity: .6;
+                @include background-properties-with-theme-white-color($image-CS-Truck, 12px);
+              }
+            }
+
+            .contentKlassesAndTaxonomies {
+              width: 100%;
+              @include ellipsis();
+              color: $color-dark-4;
+              font-size: $font-small;
+              margin-top: 2px;
+              padding-top: 2px;
+              border-top: 1px solid $color-light-3;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

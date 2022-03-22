@@ -1,0 +1,1114 @@
+[
+  "bgp 1000342 started 2020-04-28T11:43:57",
+  "scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"CLASSIFIER\"],\"CLASSIFIER\":[]}",
+  "Classifier codes=All",
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>article $iid=20 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "Article",
+    "isabstract": true,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>CFR1000 $iid=1000109 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "sidclass",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>product_types $iid=1000441 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "demo_meet",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "$naturetype": "singleArticle",
+    "parentCode": "product_types",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>product_types $iid=21 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "Product Types",
+    "isabstract": true,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>attribute_classes $iid=1000115 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "sidind",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "Pro100156": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "$naturetype": "singleArticle",
+    "parentCode": "CFR1000",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>single_article $iid=1000248 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "KK ALL",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>attribute_classes $iid=22 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "Attribution Classes",
+    "isabstract": true,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>golden_article_klass $iid=1000250 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "KK EMB",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "KK_PC": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        }
+      ]
+    },
+    "$naturetype": "embedded",
+    "parentCode": "KK_ALL_art",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": "CTX1245",
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>single_article $iid=23 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "Single Article",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "pricingPropertyCollection": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ],
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "$naturetype": "singleArticle",
+    "parentCode": "product_types",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>marker $iid=1000251 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "KK INDI",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "KK_PC": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        }
+      ]
+    },
+    "$naturetype": "singleArticle",
+    "parentCode": "KK_ALL_art",
+    "Jembeddedclasses": {
+      "KK_EMB": {
+        "$couplings": [
+          
+        ],
+        "label": "KK EMB"
+      }
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>fileklass $iid=24 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "File",
+    "isabstract": true,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "singleArticle",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>product_types $iid=1000157 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "Sudha_NN",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>video_asset $iid=1000252 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "KK PID",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      {
+        "csid": "[code_07e35755-a5c6-4013-a4bc-c7308d9e8a8f $iid=1000253 $type=RELATIONSHIP]",
+        "relationshiptype": "productVariantRelationship",
+        "$isstandard": false,
+        "label": "Base Article: KK PID",
+        "Jside1": {
+          "isvisible": true,
+          "$cardinality": "One",
+          "$classcode": "KK_PID",
+          "Lcouplings": [
+            
+          ],
+          "contextcode": null,
+          "label": "KK PID"
+        },
+        "Jside2": {
+          "isvisible": false,
+          "$cardinality": "Many",
+          "$classcode": "KK_INDI",
+          "Lcouplings": [
+            
+          ],
+          "contextcode": null,
+          "label": "KK INDI"
+        },
+        "$isnature": true
+      }
+    ],
+    "Jsections": {
+      "KK_PC": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        }
+      ]
+    },
+    "$naturetype": "pidSku",
+    "parentCode": "KK_ALL_art",
+    "Jembeddedclasses": {
+      "KK_EMB": {
+        "$couplings": [
+          
+        ],
+        "label": "KK EMB"
+      }
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "promotionalversioncontextcode": [
+      "KK_Linked_Variant"
+    ],
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>golden_article_klass $iid=25 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "Golden Article",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>suppliers $iid=1000303 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "label": "New 5",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>marker $iid=26 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": true,
+    "label": "Version Class",
+    "isabstract": false,
+    "productvariantcontextcode": [
+      
+    ],
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "versioncontextcode": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "$naturetype": "",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": false,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "$isnature": false
+  },
+  "Classifier codes=All",
+  "bgp 1000342 ended 2020-04-28T11:43:57"
+]

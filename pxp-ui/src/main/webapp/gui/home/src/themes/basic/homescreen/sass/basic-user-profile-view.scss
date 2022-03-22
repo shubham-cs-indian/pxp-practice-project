@@ -1,0 +1,611 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.userInfoDefaultLanguageListItemContainer {
+  opacity: 1;
+  z-index: 20;
+  overflow-y: auto;
+  max-height: 500px;;
+  border-radius: 3px;
+  scrollbar-width: thin;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px #00000029;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  .userInfoDefaultLanguageListItem {
+    height: 34px;
+    cursor: pointer;
+    padding: 5px 5px 5px 2px;
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    letter-spacing: 0px;
+    display: flex;
+    .userInfoDefaultLanguageListItemIcon {
+      float: left;
+      width: 25px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 4px;
+      &.selectedIcon {
+        align-items: center;
+        margin: 0 5px 6px 2px;
+
+        .imageFitToContainer {
+          position: relative;
+
+          .imageFitToContainerImage {
+            &.imageSimpleViewImage {
+              max-height: 100%;
+              max-width: 100%;
+              position: unset;
+              top: unset;
+              left: unset;
+              transform: none;
+            }
+          }
+        }
+      }
+      &.default {
+        @include topInlineBlock();
+        @include background-properties-with-theme-black-color($image-CS-language, 18px);
+      }
+    }
+    .userInfoDefaultLanguageListItemLabel {
+      height: 20px;
+      width: calc(100% - 40px);
+      color: #373737;
+      font-size: 13px;
+      cursor: pointer;
+      overflow: hidden;
+      text-align: center;
+      white-space: nowrap;
+      letter-spacing: 0px;
+      display: flex;
+      text-overflow: ellipsis;
+    }
+    .userInfoDefaultLanguageListItemSelection {
+      width: 20px;
+      height: 20px;
+      &.selected {
+        @include topInlineBlock();
+        background-image: url($image-CS-CheckMark-blue-round);
+        background-position: center;
+        background-repeat: no-repeat;
+        @include background-properties-with-theme-blue-color($image-CS-CheckMark-blue-round, 20px);
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+    &:hover {
+      border-radius: 3px;
+      background-color: $color-dark-grey;
+    }
+  }
+}
+
+.userInformationView {
+  height: 100%;
+  width: 100%;
+  padding: 0 !important;
+
+  .userInfoContainer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .userInformationContainerLeftSection {
+      display: inline-block;
+      background: $color-blue;
+      border: none;
+      width: 300px;
+      overflow: hidden;
+      height: 100%;
+      padding: 12% 3% 10% 3%;
+
+      .userImageContainer {
+        width: 200px;
+        height: 200px;
+        vertical-align: top;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid $color-light-4;
+        margin: auto;
+
+        .imageContainer {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          border-bottom: none;
+
+          .imageWrapper {
+            border: none;
+            vertical-align: top;
+            height: 100%;
+            width: 100%;
+
+            &.defaultUserIcon {
+              color: $color-blue;
+              background: url($image-CS-admin-config-50) no-repeat;
+              background-size: 80px;
+              filter: invert(1);
+              opacity: 0.8;
+              background-position: center;
+            }
+          }
+        }
+      }
+      [data-initials]:before {
+        background: #FFFFFF;
+        color: $color-blue;
+        opacity: 1;
+        content: attr(data-initials);
+        display: block;
+        font-weight: 600;
+        line-height: 205px;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        vertical-align: top;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        margin: auto;
+        font-size: 80px;
+      }
+      .userInformationChangePictureWrapper {
+        overflow: hidden;
+        align-items: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 20px 30px 0px 40px;
+        .userInformationChangePictureIcon {
+          width: 25px;
+          height: 20px;
+          cursor: pointer;
+          display: inline-block;
+          background-size: 14px;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include background-properties-with-theme-white-color($image-CS-menu-item-default-user);
+        }
+        .userInformationChangePictureLabel {
+          height: 19px;
+          width: 116px;
+          color: #FFFFFF;
+          font-size: 14px;
+          cursor: pointer;
+          overflow: hidden;
+          padding-right: 5px;
+          padding-left: 5px;
+          text-align: center;
+          white-space: nowrap;
+          letter-spacing: 0px;
+          display: inline-block;
+          text-overflow: ellipsis;
+        }
+      }
+      .userInfoChangePicListItemContainer {
+        border-radius: 3px;
+        margin: 0px 30px 2px 40px;
+        box-sizing: border-box;
+        box-shadow: 0px 3px 6px #00000029;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        .userInfoChangePicListItem {
+          width: 100%;
+          height: 34px;
+          cursor: pointer;
+          padding: 5px 5px 5px 0px;
+          color: #FFFFFF;
+          text-align: center;
+          align-items: center;
+          white-space: nowrap;
+          letter-spacing: 0px;
+          display: flex;
+          .userInfoChangePicListItemIcon {
+            float: left;
+            width: 25px;
+            height: 20px;
+            cursor: pointer;
+            background-size: 17px;
+            background-position: 8px;
+            background-repeat: no-repeat;
+            &.removePicture {
+              background-image: url($image-CS-Cross);
+            }
+            &.uploadPicture {
+              background-image: url($image-CS-Upload-Black);
+            }
+          }
+          .userInfoChangePicListItemLabel {
+            width: calc(100% - 35px);
+            color: $color-dark-6;
+            font-size: 13px;
+            overflow: hidden;
+            text-align: center;
+            letter-spacing: 0px;
+            white-space: nowrap;
+            display: flex;
+            text-overflow: ellipsis;
+            padding-left: 5px;
+          }
+          &:hover {
+            border-radius: 3px;
+            background-color: $color-dark-grey;
+          }
+        }
+      }
+      .leftSectionExpandButton {
+        width: 20px;
+        height: 20px;
+        float: right;
+        cursor: pointer;
+        background-position: top;
+        @include topInlineBlock();
+        @include background-properties-with-theme-white-color($image-CS-expand-arrow-icon, 18px);
+        &.expanded {
+          @include background-properties-with-theme-white-color($image-CS-Collapse-Arrow-32, 18px);
+        }
+      }
+    }
+
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 300px $color-light-1 inset;
+    }
+
+    .userInformationContainerRightSection {
+      display: inline-block;
+      background: transparent;
+      vertical-align: top;
+      border: none;
+      width: calc(100% - 300px);
+      height: 100%;
+      overflow: hidden;
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .userInformationContainerRightSectionBody {
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        padding: 24px 25px 0px 25px;
+
+        .userInfoDefaultLanguagesContainer {
+          margin: 10px 20px 0 10px;;
+          .defaultLanguagesHeader {
+            width: 100%;
+            font-size: 18px;
+            overflow: hidden;
+            color: $color-blue;
+            margin-bottom: 10px;
+            letter-spacing: 0px;
+            white-space: nowrap;
+            display: inline-block;
+            text-overflow: ellipsis;
+          }
+          .userInfoDefaultLanguagesWrapper {
+            grid-gap: 5%;
+            display: grid;
+            padding-bottom: 5px;
+            grid-template-columns: 47% 47%;
+            .selectedUILanguageView {
+              display: inline-block;
+            }
+            .selectedUILanguageContainer {
+              display: inline-block;
+              .uiLanguageLabel {
+                opacity: 0.7;
+                margin-bottom: 5px;
+                font-size: 10px;
+              }
+              .selectedUILanguageWrapper {
+                height: 35px;
+                display: flex;
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 3px;
+                align-items: center;
+                border: 1px solid #D9D9D9;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                .selectedUILanguageIcon {
+                  width: 20px;
+                  height: 25px;
+                  .imageFitToContainer {
+                    position: relative;
+
+                    .imageFitToContainerImage {
+                      &.imageSimpleViewImage {
+                        max-height: 100%;
+                        max-width: 100%;
+                        position: unset;
+                        top: unset;
+                        left: unset;
+                        transform: none;
+                      }
+                    }
+                  }
+                  &.default {
+                    @include topInlineBlock();
+                    @include background-properties-with-theme-black-color($image-CS-language, 18px);
+                  }
+                }
+                .selectedUILanguageLabel {
+                  width: calc(100% - 50px);
+                  font-size: 13px;
+                  overflow: hidden;
+                  align-items: center;
+                  padding-left: 5px;
+                  letter-spacing: 0px;
+                  white-space: nowrap;
+                  display: inline-block;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+            .selectedDataLanguageContainer {
+              float: right;
+              display: inline-block;
+              .dataLanguageLabel {
+                opacity: 0.7;
+                font-size: 10px;
+                margin-bottom: 5px;
+              }
+              .selectedDataLanguageWrapper {
+                height: 35px;
+                display: flex;
+                padding: 5px;
+                cursor: pointer;
+                align-items: center;
+                border: 1px solid #D9D9D9;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border-radius: 3px;
+                .selectedDataLanguageIcon {
+                  width: 20px;
+                  height: 25px;
+                  .imageFitToContainer {
+                    position: relative;
+
+                    .imageFitToContainerImage {
+                      &.imageSimpleViewImage {
+                        max-height: 100%;
+                        max-width: 100%;
+                        position: unset;
+                        top: unset;
+                        left: unset;
+                        transform: none;
+                      }
+                    }
+                  }
+                  &.default {
+                    @include topInlineBlock();
+                    @include background-properties-with-theme-black-color($image-CS-language, 18px);
+                  }
+                }
+                .selectedDataLanguageLabel {
+                  width: calc(100% - 40px);
+                  font-size: 13px;
+                  overflow: hidden;
+                  align-items: center;
+                  padding-left: 5px;
+                  letter-spacing: 0px;
+                  white-space: nowrap;
+                  display: inline-block;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+          }
+          .defaultLanguageNotificationContainer {
+            width: calc(100% - 5px);
+            height: 30px;
+            padding: 5px;
+            align-items: center;
+            border-radius: 3px;
+            margin-right: 5px;
+            background: $color-light-8 0% 0% no-repeat padding-box;
+            .defaultLanguageNotificationIcon {
+              width: 18px;
+              height: 18px;
+              margin-left: 2px;
+              display: inline-block;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-image: url($image-CS-menu-item-about);
+              @include topInlineBlock();
+            }
+            .defaultLanguageNotificationLabel {
+              width: calc(100% - 35px);
+              color: $color-dark-6;
+              padding-left: 5px;
+              overflow: hidden;
+              letter-spacing: 0px;
+              white-space: nowrap;
+              display: inline-block;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+
+        .userDataInnerContainer {
+          margin: 10px 20px 0 10px;
+          .userDataInnerContainerRow {
+            display: grid;
+            grid-gap: 5%;
+            grid-template-columns: 47% 47%;
+          }
+        }
+        .elementContainer {
+          margin-top: 10px;
+
+          .mandatory {
+            color: $color-relevance-red;
+          }
+          .domWrapper {
+            margin-bottom: 1px;
+            min-height: 47px;
+            .labelWrapper {
+              font-size: 10px;
+              color: $color-relevance-gray;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .elementWrapper {
+              width: 100%;
+              height: auto;
+              min-height: 28px;
+              border-radius: 0;
+              background-color: transparent;
+              border: none;
+              box-shadow: none;
+              margin-top: 2px;
+            }
+            input, select {
+              width: 100%;
+              border: none;
+              outline: none;
+              background: $color-light-2;
+              padding: 5px;
+              font-size: 12px;
+            }
+          }
+
+          &.handler {
+            text-align: center;
+
+            .saveUserDeatils {
+              display: inline-block;
+              padding: 4px 10px;
+              background-color: $color-relevance-gray;
+              margin: 10px 5px;
+              cursor: pointer;
+              color: $color-light-1;
+              border-radius: 2px;
+              text-transform: uppercase;
+
+              &:hover {
+                background-color: $color-dark-3;
+              }
+            }
+          }
+          .errorMsg {
+            color: $color-relevance-red;
+            font-size: 10px;
+          }
+        }
+
+        .userInputFieldContainer {
+          display: inline-block;
+          vertical-align: top;
+          margin: 15px 0 15px 0;
+          div {
+            width: 100%;
+          }
+          .mandatoryFieldAsterisk {
+            position: relative;
+
+            label {
+              &:before {
+                position: absolute;
+                content: " *";
+                right: -10px;
+                font-size: 14px;
+                color: $color-red;
+                top: -3px;
+              }
+            }
+          }
+        }
+
+        .userActionButtonsContainer {
+          width: fit-content;
+          margin: auto;
+        }
+
+        .userInfoPersonalDetailsHeader {
+          width: 100%;
+          height: 20px;
+          font-size: 18px;
+          margin-top: 15px;
+          overflow: hidden;
+          color: $color-blue;
+          margin-left: 10px;
+          letter-spacing: 0px;
+          white-space: nowrap;
+          display: inline-block;
+          text-overflow: ellipsis;
+        }
+        .rightSectionExpandButton {
+          width: 20px;
+          height: 20px;
+          float: right;
+          background-position: top;
+          opacity: 0.6;
+          @include topInlineBlock();
+          @include background-properties-with-theme-gray-color($image-CS-expand-arrow-icon, 16px);
+          &.expanded {
+            @include background-properties-with-theme-gray-color($image-CS-Collapse-Arrow-32, 16px);
+          }
+        }
+      }
+
+      .changePasswordContainer {
+        height: 50px;
+        padding: 5px 50px 5px 5px;
+        align-items: center;
+        overflow: hidden;
+        .changePWDButtonIcon {
+          width: 22px;
+          height: 20px;
+          float: right;
+          margin-left: 2px;
+          cursor: pointer;
+          opacity: 0.8;
+          @include background-properties-with-theme-blue-color($image-CS-lock, 16px);
+          @include topInlineBlock();
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .btnChangePassword {
+          height: 20px;
+          padding-top: 1px;
+          float: right;
+          font-weight: 500;
+          font-size: 13px;
+          text-align: center;
+          display: inline-block;
+          color: $color-dark-blue;
+          cursor: pointer;
+          vertical-align: middle;
+          opacity: 0.8;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .userInformationContainerRightSectionFooter {
+        margin: 0px;
+        height: 43px;
+        padding: 7px 8px;
+        text-align: center;
+        border-radius: 3px 3px 0px 0px;
+        border-top: 1px solid rgb(221, 221, 221);
+        background: #F7F7F7 0% 0% no-repeat padding-box;
+        .userInformationRightSectionFooterButtons {
+          float: right;
+        }
+      }
+    }
+  }
+}

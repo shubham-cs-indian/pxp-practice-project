@@ -1,0 +1,12 @@
+[
+  {
+    "id": "-1",
+    "code": "-1",
+    "type": "internal",
+    "isStandard": true,
+    "roleIds": [
+      "adminrole",
+      "backgroundrolestandardorganization"
+    ]
+  }
+]

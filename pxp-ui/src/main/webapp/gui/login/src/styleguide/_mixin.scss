@@ -1,0 +1,92 @@
+//@import "./typography";
+//@import "./colors";
+
+$base-path: "../themes/basic/login/images/";
+
+//----- Brand Logo -----------------------------------------------------------------------------------------------------
+$image-brand-logo: '../images/contentsphere Logo_(200x40px).png' !default;
+$brand-logo-height: 34px !default;
+$brand-logo-width: 40px !default;
+$brand-logo-max-width: 110px !default;
+$brand-logo-background-size: 34px !default;
+
+@mixin brandLogo () {
+  max-height: $brand-logo-height;
+  max-width: $brand-logo-max-width;
+  background-size: $brand-logo-background-size;
+  //background-image: url($image-brand-logo);
+}
+
+@mixin defaultLogo(){
+  height: $brand-logo-height;
+  width: $brand-logo-width;
+  background-size: $brand-logo-background-size;
+  background-image: url($base-path + $image-brand-logo);
+}
+
+@mixin no_select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+
+@mixin background-linear-gradient($direction) {
+  background: -moz-linear-gradient(unquote($direction)); /* FF3.6-15 */
+  background: -webkit-linear-gradient(unquote($direction)); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(unquote($direction)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin topInlineBlock() {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin background-properties($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    background-image: url($base-path + $background-image);
+  }
+}
+
+@mixin background-properties-with-theme-white-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#ffffff), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin disabled($opacity: 0.5) {
+  opacity: $opacity;
+  cursor: default;
+  pointer-events: none;
+}
+

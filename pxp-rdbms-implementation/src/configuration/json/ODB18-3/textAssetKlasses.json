@@ -1,0 +1,18 @@
+[{
+  "type": "com.cs.config.interactor.entity.concrete.klass.textasset.TextAsset",
+  "id": "text_asset",
+  "code": "text_asset",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.config.interactor.entity.concrete.klass.textasset.TextAsset",
+    "id": "-1"   
+  },
+  "sections": [
+    {
+      "propertyCollectionId": "textassetGeneralInformationPropertyCollection"     
+    }
+  ],
+  "isAbstract": true,
+  "isNature": false,
+  "isDefaultChild": true
+}]	

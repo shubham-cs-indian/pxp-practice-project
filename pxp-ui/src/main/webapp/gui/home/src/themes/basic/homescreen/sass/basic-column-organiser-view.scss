@@ -1,0 +1,91 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+.columnOrganiserDialog {
+  .dragDropContextViewWrapper {
+    width: 50%;
+
+      .propertySequenceLabelWrapper {
+        overflow: hidden;
+        border-bottom: 1px solid $color-light-8;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 5px;
+
+        .gridEditIcon {
+          width: auto;
+          float: left;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+        }
+
+        .gridEditLabel {
+          width: 100%;
+          float: right;
+          display: flex;
+          align-items: center;
+          margin-left: 5px;
+
+          &.highlight {
+            background-color: $color-light-9;
+          }
+
+          .propertyGridLabelWrapper {
+            width: calc(100% - 55px);
+            float: left;
+
+            .propertyLabel {
+              margin-left: 0px;
+              padding: 3px 4px 4px 0px;
+              font-size: 12px;
+              color: $color-dark-6;
+              display: inline-block;
+              vertical-align: top;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              width: auto;
+              max-width: 45%;
+            }
+            .propertyCode {
+              padding: 3px 4px 4px 4px;
+              font-size: 12px;
+              color: $color-dark-7;
+              display: inline-block;
+              vertical-align: top;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              width: auto;
+              max-width: 45%;
+            }
+          }
+
+        }
+
+        .propertySequence {
+          float: left;
+          padding: 4px;
+          margin-left: 5px;
+          color: $color-dark-8;
+          font-size: 11px;
+        }
+        .customIcon {
+          position: relative;
+          width: 15px;
+          float: left;
+          height: 15px;
+
+          .imageSimpleViewNoImage{
+            background-size: 12px;
+          }
+        }
+
+      }
+  }
+}
+
+*/

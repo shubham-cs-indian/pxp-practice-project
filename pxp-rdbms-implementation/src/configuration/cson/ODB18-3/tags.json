@@ -1,0 +1,9 @@
+[{
+		"cse": "[@Create @line='2' statustag $id=statustag $iid=219]",
+		"isStandard": true,
+		"tagType": "tag_type_yes_neutral",
+		"tagValues": [
+			"[[@Create @line='6' enrichmenttag $id=enrichmenttag $iid=1001 $type=TagValue]]",
+			"[[@Create @line='9' qualitychecktag $id=qualitychecktag $iid=1002 $type=TagValue]]"],
+	}
+]

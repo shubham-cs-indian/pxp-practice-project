@@ -1,0 +1,82 @@
+.contentMeasurementMetricsContainer {
+  width: 100%;
+  //margin-bottom: 10px;
+  max-width: 280px;
+
+  .measurementMetricInputLabel {
+    font-size: 11px;
+    color: #777;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 50px);
+  }
+  .measurementMetricWrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+    align-items: center;
+
+    &.disableDefaultUnit{
+      display: block;
+      width: 100%;
+      float: left;
+    }
+
+    .measurementMetricElementWrapper {
+      display: inline-block;
+      width: 100%;
+      min-width: 80px;
+      float: left;
+      .measurementMetricInput {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        &:focus {
+          //box-shadow: 0 0 0 1px #dadada;
+        }
+        &.isDisabled {
+          box-shadow: none;
+          color: #aaa;
+        }
+      }
+    }
+    .measurementMetricElementListWrapper {
+      display: inline-block;
+      width: 100%;
+      min-width: 60px;
+      float: left;
+      .conversionList {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 0px;
+        background: #EEEEEE;
+        line-height: 22px;
+        padding-left: 5px;
+        height: 22px;
+        overflow: hidden;
+      }
+      .dangerouslySetHTMLWrapper{
+        line-height: 30px;
+        p{
+          margin: 0;
+        }
+      }
+    }
+  }
+  .measurementMetricInputDescription {
+    font-size: 11px;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+
+}

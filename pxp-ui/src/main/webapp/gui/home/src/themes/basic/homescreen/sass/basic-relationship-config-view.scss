@@ -1,0 +1,397 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$primary-button-color: #2196F3;
+$secondary-button-color: white;
+
+.relationshipConfigViewContainer {
+  height: 100%;
+  font-size: 12px;
+
+  .relationshipListViewContainer {
+    width: 25%;
+    height: calc(100% - 52px);
+    border-right: 1px solid #bbb;
+    float: left;
+  }
+
+}
+
+.codeText {
+  background-color: $secondary-button-color;
+  border: none;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.relationshipConfigDetail{
+  .relationshipDialogBody{
+    padding: 0;
+    overflow-y: auto;
+  }
+}
+
+.relationshipDetailedViewContainer {
+  width: 100%;
+  height: calc(100% - 52px);
+  float: left;
+
+  .relDetailedView {
+    height: 100%;
+    width: 100%;
+
+    .relDetailedViewForm {
+      height: 100%;
+      width: 100%;
+
+      .relLeftDetailViewContainer{
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        scrollbar-width: thin;
+
+        .commonConfigSectionViewContainer {
+          margin: 10px 24px;
+        }
+
+        .button {
+          margin: 5px;
+          padding: 7px;
+          text-align: center;
+          border-radius: 2px;
+          outline: none;
+          min-width: 75px;
+          background-color: white;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+          float: left;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($secondary-button-color, 10%);
+          }
+
+          &:active {
+            background-color: darken($secondary-button-color, 20%);
+          }
+        }
+
+        .saveRelationship {
+          background-color: $primary-button-color;
+          color: #ffffff;
+
+          &:hover {
+            background-color: lighten($primary-button-color, 10%);
+          }
+
+          &:active {
+            background-color: lighten($primary-button-color, 20%);
+          }
+        }
+
+        .relationshipButtonContainer {
+          float: right;
+        }
+
+        .sidesContainer{
+          float: left;
+          width:100%;
+          background-color: #fff;
+
+          .sideHeaders{
+            float: left;
+            width: 100%;
+            padding-bottom: 3px;
+
+            .side1Header{
+              float: left;
+              width: 40%;
+              text-align: center;
+              margin-left: 20%;
+            }
+            .side2Header{
+              float: left;
+              width: 40%;
+              text-align: center;
+            }
+          }
+
+          .sideLabelContainer{
+            float: left;
+            padding-bottom: 3px;
+            width: 100%;
+
+            .sideLabelLabel{
+              float: left;
+              width: 20%;
+              padding-left: 7px;
+              line-height: 28px;
+            }
+            .side1LabelContainer{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+
+              &.fullLength {
+                width: 80%;
+              }
+
+              .side1Input{
+                width: 100%;
+                border: none;
+                height: 28px;
+                border-radius: 3px;
+                padding-left: 4px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+                &.disabled{
+                  background-color: rgb(199, 199, 197);
+                }
+              }
+            }
+            .side2LabelContainer{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+
+              .side2Input{
+                width: 100%;
+                border: none;
+                height: 28px;
+                border-radius: 3px;
+                padding-left: 4px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+                &.disabled{
+                  background-color: rgb(199, 199, 197);
+                }
+              }
+            }
+          }
+
+          .sideDropDownContainer{
+            float: left;
+            width: 100%;
+            padding-bottom: 3px;
+
+            .sideDropDownLabel{
+              float: left;
+              width: 20%;
+              padding-left: 7px;
+              line-height: 28px;
+            }
+
+            .searchBarView {
+              width: 100%;
+              height: 100%;
+              border-radius: 5px;
+              position: relative;
+              min-height: 0px;
+
+              .searchBarContainer {
+                width: 100%;
+                height: auto;
+                min-height: 28px;
+                border-radius: 0;
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+                margin-top: 0px;
+
+                .multiSelectNothingSelected {
+                  font-style: italic;
+                  color: $color-dark-5;
+                  padding: 0 2px;
+                  margin-bottom: 3px;
+                  margin-top: 0px;
+                }
+              }
+            }
+
+            .side1DropDownContainer {
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+
+              &.fullLength {
+                width: 80%;
+              }
+
+              select{
+                width: 100%;
+                border: none;
+                height: 28px;
+
+                border-radius: 3px;
+                padding-left: 4px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+                &.disabled{
+                  background-color: rgb(199, 199, 197);
+                  box-shadow: none;
+                }
+              }
+            }
+            .side2DropDownContainer{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+
+              select{
+                width: 100%;
+                border: none;
+                height: 28px;
+
+                border-radius: 3px;
+                padding-left: 4px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+                &.disabled{
+                  background-color: rgb(199, 199, 197);
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+
+          .cardinalityContainer{
+            float: left;
+            width: 100%;
+            padding-bottom: 3px;
+            line-height: 28px;
+
+            .cardinalityHeader{
+              float: left;
+              width: 20%;
+              padding-left: 7px;
+            }
+            .cardinality1Container{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+
+              &.fullLength {
+                width: 80%;
+              }
+
+              select{
+                width: 100%;
+                border: none;
+                height: 28px;
+
+                border-radius: 3px;
+                padding-left: 4px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+                &.disabled{
+                  background-color: rgb(199, 199, 197);
+                  box-shadow: none;
+                }
+              }
+            }
+            .cardinality2Container{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+
+              select{
+                width: 100%;
+                border: none;
+                height: 28px;
+
+                border-radius: 3px;
+                padding-left: 4px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+                &.disabled{
+                  background-color: rgb(199, 199, 197);
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+
+          .visibilityContainer{
+            float: left;
+            width: 100%;
+            padding-bottom: 3px;
+            line-height: 28px;
+
+            .visibilityHeader{
+              float: left;
+              width: 20%;
+              padding-left: 7px;
+              padding-bottom: 6px;
+            }
+            .isVisible1DropDownContainer{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+              text-align: center;
+              height: 28px;
+
+              &.fullLength {
+                width: 80%;
+              }
+            }
+            .isVisible2DropDownContainer{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+              text-align: center;
+              height: 28px;
+            }
+          }
+
+
+          .relationshipVariantContainer{
+            float: left;
+            width: 100%;
+            padding-bottom: 3px;
+
+            .relationshipVariantHeader{
+              float: left;
+              width: 20%;
+              padding-left: 7px;
+              padding-bottom: 6px;
+            }
+
+            .relationshipVariantToggleContainer{
+              float: left;
+              width: 40%;
+              padding: 2px 10px;
+              height: auto;
+
+              &.fullLength {
+                width: 80%;
+              }
+
+              .relationshipContextToggleWrapper{
+                width: 100%;
+                border: none;
+                height: auto;
+                border-radius: 3px;
+                padding-bottom: 3px;
+                box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.56);
+              }
+
+            }
+
+          }
+        }
+
+        .sectionsWrapper {
+          float: left;
+          margin: 10px 50px 50px;
+          width: calc(100% - 100px);
+
+          .visualSectionElementContainer .sectionTileContainer {
+            .removePlaceholder {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

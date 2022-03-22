@@ -1,0 +1,5 @@
+export default {
+  EXPORT_EVENT: "exportevent",
+  BUSINESS_PROCESS_EVENT: "BUSINESS_PROCESS",
+  INTEGRATION: "INTEGRATION",
+};

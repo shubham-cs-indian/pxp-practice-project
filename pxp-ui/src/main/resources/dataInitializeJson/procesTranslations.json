@@ -1,0 +1,19 @@
+[
+  {
+    "id": "standard_transfer_process",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Transfer_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de transferencia estándar"
+      },
+      "fr_FR": {
+        "label": "Flux de travail de transfert standard"
+      },
+      "de_DE": {
+        "label": "Standard Transfer Workflow"
+      }
+    }
+  }
+]

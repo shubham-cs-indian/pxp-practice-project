@@ -1,0 +1,266 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.addEntityInRelationshipWrapper{
+  height: 100%;//calc(100% - 30px);
+
+  .headerViewWrapper{
+    padding: 2px 15px;
+    height: 30px;
+    background: #fff;
+
+    .okButtonContainer{
+      float: left;
+      padding: 3px;
+      margin-left: 12px;
+
+      .okButton{
+        height: 20px;
+        width: 34px;
+        float: left;
+        opacity: .5;
+        background-position: center;
+        background-size: 14px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.17), 0 2px 7px rgba(0, 0, 0, 0.45);
+
+        background-image: url($image-CS-arrow-left);
+
+        &:hover{
+          opacity: .68;
+        }
+      }
+
+    }
+
+    .entityLabel{
+      line-height: 27px;
+      text-align: center;
+    }
+
+    .backArrow{
+    }
+
+    .breadcrumbViewContainer{
+    }
+  }
+}
+
+.entityRelationshipAddContainer{
+  height: 100%;
+  padding: 10px;
+  overflow: hidden;
+
+  .contentTileListViewContainerWrapper {
+    float: left;
+    width: calc(100% - 400px);
+    margin-right: 10px;
+
+    .contentTileListViewContainer {
+      overflow: hidden;
+      border: solid 1px $color-light-4;
+      border-radius: 2px;
+
+      .moduleListViewContainer {
+        display: none;
+      }
+
+      .contentTilePaperView {
+        margin: 0;
+      }
+
+      .contentTileListView {
+        margin: 0;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .presentEntityContainer{
+    background: #fff;
+    height: 100%;
+    border: solid 1px $color-light-4;
+    width: 390px;
+    padding:10px;
+    border-radius: 2px;
+    float:left;
+
+    .paginationSection {
+      bottom: 25px;
+      right: 25px;
+    }
+
+    .sectionLabelContainer {
+      padding: 5px;
+    }
+
+    .relationshipLoadMoreContainer{
+      .navigationWrapper{
+        bottom: 11px;
+        right: 27px;
+      }
+    }
+
+    .upperBlockContainer{
+      border-radius: 2px;
+      width: 100%;
+      height: 30px;
+
+      .sectionLabelContainer{
+        float: left;
+        line-height: 34px;
+        margin: 0 5px;
+        font-size: 13px;
+        width: calc(100% - 145px);
+        cursor: context-menu;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
+
+      .okButtonContainer {
+        float: left;
+        border: solid 1px $color-light-4;
+        border-radius: 3px;
+        margin-right: 10px;
+        .okButton {
+          @include background-properties($image-CS-arrow-left, 19px);
+
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+
+      .deleteButtonContainer{
+        float: left;
+        border: solid 1px $color-light-4;
+        border-radius: 3px;
+        margin-right: 10px;
+        .button{
+          cursor: pointer;
+
+          &:hover{
+            opacity: .8;
+          }
+        }
+        .delete{
+          @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 16px);
+        }
+        .remove{
+          @include background-properties($image-CS-Cross, 16px);
+        }
+
+      }
+
+      .toolbarItemWrapper{
+        border: solid 1px $color-light-4;
+        margin-right: 10px;
+        border-radius: 3px;
+
+        .selectAllButton{
+          cursor: pointer;
+          @include background-properties($image-CS-Checked-48Black, 16px);
+
+          &:hover{
+            opacity: .8;
+          }
+        }
+
+      }
+    }
+
+    .lowerEntityListContainer{
+      height: calc(100% - 55px);
+      padding-top: 10px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      width: 100%;
+
+      .dropViewContainer{
+        height: 100%;
+        width: calc(100% - 10px);
+        //overflow: auto;
+        //overflow-x: hidden;
+        padding-bottom: 60px;
+
+        .thumbnailTemplateViewNewWrapper {
+          height: auto;
+          margin-bottom: 10px;
+
+          &.selected {
+            .thumbnailTemplateViewContainer {
+              .imageContainer {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+
+
+        .hoverMoreInfoContainer{
+          .hoverMoreInfo{
+            width: calc(100% + 20px);
+            overflow-x: hidden;
+
+            .additionalInformation{
+              width: calc(100% - 65px);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+@-webkit-keyframes entityRelationshipAddContainer {
+  100% { padding: 10px; }
+}
+
+@keyframes entityRelationshipAddContainer{
+  100% { padding: 10px; }
+}
+
+@-webkit-keyframes contentTileListViewContainer {
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes contentTileListViewContainer{
+  100% {
+    left: 10px;
+  }
+}
+
+@-webkit-keyframes presentEntityContainer {
+  100% {
+    width: calc(25% - 20px);
+  }
+}
+
+@keyframes presentEntityContainer{
+  100% {
+    width: calc(25% - 20px);
+  }
+}
+.smallArrow{
+  margin: 1px 5px;
+  width: 9px;
+  height: 9px;
+  background-image: url($image-CS-arrow-forward);
+  background-size: cover;
+  display: inline-block;
+}
+
+.tagToolTip {
+  .smallArrow {
+    filter: invert(100%);
+  }
+}

@@ -1,0 +1,62 @@
+.attributeAndTagSelectorContainer {
+
+  .attributeAndTagSelectorBoxContainer {
+    border-radius: 2px;
+    box-shadow: 0 0 1px;
+    margin-right: 10px;
+    float: left;
+
+    .attributeAndTagSelectorMSSContainer {
+      position: relative;
+
+      .searchBarView {
+        height: 33px;
+        width: 100%;
+        margin: 0 auto;
+        min-height: 35px;
+
+        .searchBarContainer {
+          border-bottom: none;
+          padding-left: 28px;
+          background-color: #fafafa;
+          border-radius: 2px;
+          box-shadow: 0 0 1px;
+
+          .multiSearchInputBox {
+            color: #555;
+            font-size: 13px;
+          }
+
+          .multiSelectNothingSelected {
+            margin-top: 0;
+            padding: 0;
+            margin-bottom: 0;
+            line-height: 27px;
+            font-size: 11px;
+          }
+        }
+
+        .dropDownListView {
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+          border: none;
+
+          .dropDownNodeContainer {
+            font-size: 13px;
+            color: #555;
+            padding-left: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+
+    }
+
+    &.attributeAndTagSelectorList {
+      width: 60%;
+    }
+
+  }
+
+}

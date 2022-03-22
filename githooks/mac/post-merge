@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# git hook to run a command after `git pull` if a specified file was changed
+# Run `chmod +x post-merge` to make it executable then put it into `.git/hooks/`.
+#echo "Running Post-Merge Hook"
+LC_ALL=C
+
+changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
+
+check_run() {
+  echo "$changed_files" | grep --quiet "$1" && eval "$2"
+}
+
+#Run installGitHooks if any of the githooks have been modified
+echo "Checking if hooks need to be reinstalled"
+check_run "githooks/*" "gradle installGitHooks"

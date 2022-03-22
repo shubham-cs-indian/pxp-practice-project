@@ -1,0 +1,88 @@
+[
+  "bgp 1000161 started 2020-09-09T11:19:11",
+  "scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"RULE\"],\"RULE\":[],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}",
+  "Rule codes=All",
+  {
+    "Ltags": [
+      
+    ],
+    "Llanguages": [
+      "en_US",
+      "fr_FR"
+    ],
+    "Ltaxonomies": [
+      
+    ],
+    "Lorganizations": [
+      
+    ],
+    "csid": "[R>language_Dependent_Rule]",
+    "Ltypes": [
+      "single_article"
+    ],
+    "Lruleviolations": [
+      
+    ],
+    "$isstandard": false,
+    "$islanguagedependent": true,
+    "label": "language_Dependent_Rule",
+    "Lrelationships": [
+      
+    ],
+    "Lphysicalcatalogids": [
+      "pim",
+      "dataIntegration",
+      "onboarding",
+      "offboarding"
+    ],
+    "$type": "standardization_and_normalization",
+    "Lattributes": [
+      {
+        "entitytype": "ATTRIBUTE",
+        "Lrules": [
+          {
+            "rulelistlinkid": null,
+            "Lvalues": [
+              "this is short"
+            ],
+            "Lklasslinkids": [
+              
+            ],
+            "attributelinkid": null,
+            "entitytype": "",
+            "$code": "Rul102752",
+            "comparewithsysdate": false,
+            "from": "0",
+            "to": "0",
+            "type": "contains"
+          }
+        ],
+        "entityattributetype": "HTML_ATTRIBUTE_TYPE",
+        "$code": "Att102751",
+        "entityid": "shortdescriptionattribute"
+      }
+    ],
+    "Lnormalizations": [
+      {
+        "calcattributeunit": "",
+        "Lattributeoperatorlist": [
+          
+        ],
+        "Lvalues": [
+          "concater"
+        ],
+        "$code": "Nor102753",
+        "calcattributeunitashtml": "",
+        "valueashtml": "<p>concater<\/p>",
+        "Ltagvalues": [
+          
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "entityid": "longdescriptionattribute",
+        "transformationtype": "value",
+        "$type": "attribute"
+      }
+    ]
+  },
+  "bgp 1000161 ended 2020-09-09T11:19:12"
+]

@@ -1,0 +1,1132 @@
+@import "./../../../../styleguide/style-guide";
+@import "./../../../../styleguide/mixin";
+.bulkEditRightPanelView{
+  .contentFilterItem {
+    box-shadow: 0px 1px 0px 0px #4A4A4A inset, 0px -1px 0px 0px #383838 inset;
+    padding: 5px 0 0 0;
+
+    .innerFilterViewWrapper {
+
+      .innerFilterViewHeader {
+        overflow: hidden;
+        margin: 0px 5px;
+
+        .innerFilterViewHeaderIcon {
+          height: 100%;
+          width: 40px;
+          background-repeat: no-repeat;
+          background-position: 9px;
+          background-size: 20px;
+          float: left;
+          opacity: .8;
+        }
+
+        .innerFilterViewHeaderText {
+          color: #ddd;
+          font-size: 11px;
+        }
+      }
+
+      .innerFilterViewBody {
+
+        .innerFilterSearchContainer {
+
+          .contentFilterMSSContainer {
+            position: relative;
+
+            .searchBarView {
+              width: calc(100% - 10px);
+              margin: 0 auto;
+              min-height: 40px;
+
+              .searchBarContainer {
+                border-bottom: none;
+                padding-left: 5px;
+                background-color: #f0f0f0;
+                border-radius: 2px;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+                padding-bottom: 1px;
+
+                .multiSearchInputBox {
+                  color: #555;
+                  font-size: 13px;
+                  //font-weight: 500;
+                }
+
+                .multiSelectNothingSelected {
+                  margin-top: 0;
+                  padding: 0;
+                  margin-bottom: 0;
+                  line-height: 27px;
+                  font-size: 11px;
+                }
+
+                .selectedItems{
+                  max-width: 90%;
+                }
+              }
+
+              .dropDownListView {
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+                border: none;
+
+                .dropDownNodeContainer {
+                  font-size: 13px;
+                  //font-weight: 500;
+                  color: #555;
+                  padding-left: 30px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+              }
+            }
+
+            .contentFilterMSSIcon {
+              height: 20px;
+              width: 20px;
+              @include background-properties($image-CS-SearchFilled-32,16px,2px);
+              position: absolute;
+              left: 10px;
+              top: 8px;
+              z-index: 2;
+            }
+          }
+        }
+
+        .innerFilterAttributeViewsContainer {
+
+        }
+      }
+    }
+
+    .attributeFilterViewWrapper {
+
+      .attributeFilterViewHeader {
+
+        .attributeFilterViewHeaderIcon {
+          background-image: url($image-CS-ViewDetails-50White);
+        }
+
+        .attributeFilterViewHeaderText {
+
+        }
+      }
+
+      .attributeFilterViewBody {
+
+      }
+    }
+
+   /* .userFilterViewWrapper {
+
+      .userFilterViewHeader {
+
+        .userFilterViewHeaderIcon {
+          background-image: url($image-CS-ViewDetails-50White);
+        }
+
+        .userFilterViewHeaderText {
+
+        }
+      }
+
+      .userFilterViewBody {
+
+      }
+    }*/
+
+    .tagFilterViewWrapper {
+
+      .tagFilterViewHeader {
+
+        .tagFilterViewHeaderIcon {
+          @include background-properties-with-theme-white-color($image-CS-PriceTag-32);
+        }
+
+        .tagFilterViewHeaderText {
+
+        }
+      }
+
+      .tagFilterViewBody {
+
+        .range-slider {
+
+          .sliderHandleWrapper {
+            position: absolute;
+            z-index: 4;
+            width: 13px;
+            margin-left: 5px;
+
+            .sliderHandle {
+              height: 13px;
+              z-index: 2;
+              width: 13px;
+              cursor: inherit;
+              border-radius: 50%;
+              background-color: #30a9a0;
+              box-shadow: 0px 0px 0px 1px #30a9a0;
+
+              &:hover {
+                box-shadow: 0px 0px 0px 1px #237B75;
+              }
+            }
+
+            .sliderHandleBase {
+              width: 25px;
+              height: 20px;
+              background-color: #eee;
+              font-size: 11px;
+              text-align: center;
+              margin-left: -4px;
+              line-height: 20px;
+              display: inline-block;
+              position: absolute;
+              border-radius: 4px;
+              top: -26px;
+            }
+            .sliderHandleBase:before {
+              border-top: 5px solid #eee;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              content: "";
+              height: 0;
+              left: 7px;
+              position: absolute;
+              bottom: -4px;
+              width: 0;
+            }
+          }
+
+          .doubleSliderHighlight {
+            background-color: #33bbb1;
+            position: absolute;
+            top: 5px;
+            height: 5px;
+          }
+        }
+      }
+    }
+
+    .attributeWrapper {
+      width: 80%;
+      border: none;
+      background: transparent;
+      margin: 0 5px 0px 5px;
+      border-radius: 2px;
+      box-shadow: none;
+
+      .attributeHeader {
+        overflow: hidden;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+        //border: 1px solid rgba(128, 128, 128, 0.19);
+        height: 40px;
+        background-color: #fff;
+
+        .attributeHeaderAndOrContainer{
+          float: left;
+          line-height: 40px;
+          width: 60px;
+          text-align: center;
+          background-color: #f7f7f7;
+          font-size: 10px;
+          font-weight: bold;
+          min-width: 60px;
+          min-height: 40px;
+        }
+
+        .attributeExpandCollapse {
+          height: 40px;
+          width: 30px;
+          background-repeat: no-repeat;
+          background-position: 8px;
+          background-size: 12px;
+          float: left;
+
+          &.collapsed {
+            background-image: url($image-CS-Collapse-Arrow-32);
+          }
+
+          &.expanded {
+            background-image: url($image-CS-expand-arrow-icon);
+          }
+        }
+
+        .attributeText {
+          height: 40px;
+          width: calc(100% - 170px);
+          float: left;
+          line-height: 40px;
+          color: #555;
+          font-size: 12px;
+          //font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .attributeAddCondition {
+          height: 40px;
+          width: 30px;
+          float: right;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          background-size: 12px;
+          background-image: url($image-CS-PlusStruct-32);
+          cursor: pointer;
+        }
+
+        .attributeDelete {
+          height: 40px;
+          width: 25px;
+          float: right;
+          background-repeat: no-repeat;
+          background-position: 8px;
+          background-image: url($image-CS-Cross);
+          cursor: pointer;
+          background-size: 15px;
+          opacity: .6;
+        }
+
+        .customIcon {
+          position: relative;
+          width: 15px;
+          height: 15px;
+          float: left;
+          margin:13px 5px 0 0;
+
+          .imageSimpleViewNoImage{
+            background-size: 12px;
+          }
+        }
+      }
+
+      .attributeBody {
+        overflow: initial;
+        padding-left: 28px;
+        padding-bottom: 10px;
+        margin-left: 30px;
+        border-left: 2px solid rgba(128, 128, 128, 0.29);
+
+        .attributeValueWrapper {
+          margin-bottom: 2px;
+          position: relative;
+
+          .attributeValueWrapperHeader {
+            color: #555;
+            font-size: 12px;
+            //font-weight: 500;
+            background: #f3f3f3;
+            padding: 6px 6px 6px 15px;
+          }
+
+          .attributeValueWrapperBody {
+
+            .attributeConditionOrBlock{
+              float: left;
+              width: 40px;
+              background: #f7f7f7;
+              text-align: center;
+              line-height: 40px;
+              font-size: 10px;
+              font-weight: bold;
+              height: 100%;
+              position: relative;
+            }
+
+            .attributeConditionWrapper {
+              overflow: hidden;
+              position: relative;
+              background-color: #fff;
+              min-height: 40px;
+              height: auto;
+              padding: 0;
+              box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+              display: grid;
+              grid-gap: 10px;
+              grid-template-columns: 8% 20% 65%;
+
+              .attributeMultipleInput {
+                overflow: hidden;
+                width: auto;
+                float: left;
+                margin: 8px 5px 8px 5%;
+
+                .attributeMultipleInputCell{
+                  width: 50%;
+                  float: left;
+                  overflow: hidden;
+                  display: grid;
+                  grid-template-columns: 30% 70%;
+
+                  .attributeMultipleInputLabel{
+                    float: left;
+                    text-align: right;
+                    padding: 2px 12px 2px 5px;
+                    font-size: 12px;
+                  }
+                }
+
+                .attributeMultipleInputLabel span{
+                  font-size: 11px;
+                }
+
+                .numberLocaleViewContainer {
+                  width: 100%;
+                  margin: 0;
+                  float: left;
+                }
+              }
+
+              .measurementAttributeMultipleInput{
+                overflow: hidden;
+                width: 100%;
+                float: left;
+                margin: 8px 5px 8px 2%;
+                .measurementAttributeMultipleInputCell:first-child {
+                  margin-bottom: 8px;
+                }
+                .measurementAttributeMultipleInputCell{
+                  width: 100%;
+                  float: left;
+                  overflow: hidden;
+                  display: grid;
+                  grid-template-columns: 15% 83%;
+
+                  .measurementAttributeMultipleInputLabel {
+                    float: left;
+                    text-align: right;
+                    padding:2px 3px 2px 0px;
+                    font-size: 12px;
+
+                    span {
+                      font-size: 11px;
+                    }
+                  }
+                  .filterWithMeasurementMetrics {
+                    float: left;
+                    width: 100%;
+                    margin-left: 0%;
+
+                    .contentMeasurementMetricsContainer{
+                      max-width: 100%;
+
+                      .textField{
+
+
+                        .measurementMetricInputLabel{
+                          display: none;
+                        }
+
+                        .measurementMetricWrapper{
+                          width: inherit;
+
+                          .measurementMetricElementWrapper {
+                            width: 100%;
+                            .numberLocaleViewContainer {
+                              margin: 0px 0px 0px 5%;
+                              float: left;
+                              width: 83%;
+                            }
+                            .measurementMetricInput{
+                              //width: 85%;
+                              //float: left;
+                              //background: transparent;
+                              //color: #555;
+                              //outline: none;
+                              margin: 0;
+                              //border: 1px inset rgba(241, 241, 241, 0.83);
+                              //border-radius: 4px;
+                              //padding: 0px 10px;
+                              //height: 22px;
+                              //text-align: right;
+                            }
+                          }
+
+                          .measurementMetricElementListWrapper {
+                            width: 98%;
+                            min-width: unset;
+
+                            select {
+                              margin: 0;
+                              //background: transparent;
+                              //color: #555;
+                              //width: 100%;
+                              //font-size: 11px;
+                              //outline: none;
+                              //height: 22px;
+                              //border: 1px solid #f1f1f1;
+                              //background: linear-gradient(to bottom, #ffffff 0%,rgba(229, 229, 229, 0.72) 100%);
+                              //border-radius: 4px;
+                              //padding-left: 10px;
+                            }
+                          }
+                        }
+
+                        .measurementMetricInputDescription{
+                          display: none;
+                        }
+                      }
+
+                    }
+                  }
+                }
+              }
+
+              .attributeMultipleInputDate {
+                width: auto;
+                max-height: 30px;
+                margin: 8px 4px 8px 5%;
+
+                .attributeMultipleInputDateOneSide{
+                  width: 50%;
+                  display: grid;
+                  grid-template-columns: 30% 70%;
+                  float: left;
+
+                  .customDatePicker{
+                    max-width: 100%;
+                    margin: 4px 0px 0px 0;
+                    border: 1px solid $color-light-3;
+                    border-radius: 3px;
+                  }
+                  .attributeMultipleInputDateLabel{
+                    padding: 2px 12px 2px 5px;
+                    float: left;
+                    //line-height: 30px;
+                    text-align: right;
+                  }
+
+                  .customDatePickerWrapper{
+                    float: left;
+                    width: auto;
+                    height: 25px;
+                    margin: 1px 2px;
+                    //border-bottom: 1px solid #ccc;
+                    .datePickerCustom{
+                      margin: 0px 0px 0px 0%;
+
+                      div{
+                        height: 22px !important;
+                        width: 100% !important;
+                        line-height: 22px !important;
+                      }
+                      &.textField{
+                        height: 22px;
+                        line-height: 21px;
+                      }
+
+                      .textFieldUnderLineHr{
+                        bottom: 3px;
+                      }
+                    }
+                  }
+
+                  & *{
+                    font-size: 12px;
+                    vertical-align: bottom;
+                  }
+                }
+
+
+                & *{
+                  font-size: 11px;
+
+                }
+
+                .customDatePickerWrapper{
+                  width: 90%;
+                }
+              }
+
+              .attributeConditionInput {
+                width: auto;
+                float: left;
+                background: transparent;
+                color: #555;
+                outline: none;
+                margin: 8px 4px 8px 10%;
+                border: 1px solid $color-light-5;
+                border-radius: 2px;
+                padding: 0px 10px;
+                height: 22px;
+              }
+
+              .attributeConditionSelect {
+                float: left;
+                margin: 8px 5px 8px 10%;
+                width: 100%;
+
+                select {
+                  background: transparent;
+                  color: #555;
+                  width: 100%;
+                  font-size: 11px;
+                  outline: none;
+                  height: 22px;
+                  border: 1px solid #f1f1f1;
+                  background: linear-gradient(to bottom, #ffffff 0%,rgba(229, 229, 229, 0.72) 100%);
+                  border-radius: 4px;
+                  padding-left: 0px;
+                }
+              }
+
+              .customDatePicker {
+                margin: 12px 10px 8px 10%;
+                //padding: 0px 10px;
+                height: 20px;
+                max-width: 100%;
+                div:before {
+                  border-bottom: none !important;
+                }
+                input {
+                  width: auto;
+                  float: left;
+                  background: transparent;
+                  color: #555;
+                  outline: none;
+                  /*  border: 1px solid $color-light-5;
+                    border-radius: 2px;*/
+                  height: 20px;
+                  padding: 0 0 0 5px;
+                  opacity: 1;
+                }
+              }
+
+              .attributeConditionUserInput {
+                width: 40%;
+                float: left;
+                margin: 8px 5px 8px 10%;
+
+                select {
+                  background: transparent;
+                  color: #555;
+                  width: 100%;
+                  font-size: 11px;
+                  outline: none;
+                  height: 22px;
+                  border: 1px solid #f1f1f1;
+                  background: linear-gradient(to bottom, #ffffff 0%,rgba(229, 229, 229, 0.72) 100%);
+                  border-radius: 4px;
+                  padding-left: 10px;
+                }
+              }
+
+              .attributeConditionDelete {
+                height: 20px;
+                width: 0px;
+                position: absolute;
+                right: 3px;
+                top: 10px;
+                background-repeat: no-repeat;
+                background-position: 1px;
+                background-size: 15px;
+                /* border-bottom: 1px solid #aaa; */
+                background-image: url($image-CS-Cross);
+                cursor: pointer;
+                opacity: .6;
+                transition: all .2s;
+              }
+
+              .customDatePickerWrapper{
+                width: auto;
+                float: left;
+                margin: 8px 10px 8px 10%;
+
+                .datePickerCustom{
+                  display: inline-block;
+                  width: auto;
+                  float: left;
+                  background: transparent;
+                  color: #555;
+                  outline: none;
+                  margin: 0;
+                  border: 1px solid $color-light-3;
+                  border-radius: 3px;
+                  padding: 0px 5px;
+                  height: 22px;
+                  div{
+                    height: 22px !important;
+                    width: 100% !important;
+
+                    div{
+                      display: none;
+                    }
+                  }
+                }
+
+                .customDatePickerEmptyButton{
+                  display: none;
+                }
+              }
+
+              .filterWithMeasurementMetrics {
+                width: 93%;
+                float: left;
+                margin-left: 7%;
+
+                .contentMeasurementMetricsContainer{
+                  width: auto;
+                  margin-bottom: 0;
+                  max-width: unset;
+
+                  .textField{
+                    width: inherit;
+
+                    .measurementMetricInputLabel{
+                      display: none;
+                    }
+
+                    .measurementMetricWrapper{
+                      width: inherit;
+                      grid-template-columns: 50% 50%;
+
+                      .measurementMetricElementWrapper{
+                        width: 100%;
+                        min-width: unset;
+                        .numberLocaleViewContainer{
+                          margin: 8px 0px 8px 5%;
+                          float: left;
+                          width: 83%;
+                        }
+                        .measurementMetricInput{
+                          width: 85%;
+                          float: left;
+                          background: transparent;
+                          color: #555;
+                          outline: none;
+                          margin: 8px 5px 8px 0;
+                          border: 1px inset rgba(241, 241, 241, 0.83);
+                          border-radius: 4px;
+                          padding: 0px 10px;
+                          height: 22px;
+                          text-align: right;
+                        }
+                      }
+
+                      .measurementMetricElementListWrapper {
+                        float: left;
+                        width: 84%;
+                        min-width: unset;
+
+                        select {
+                          background: transparent;
+                          color: #555;
+                          width: 100%;
+                          font-size: 11px;
+                          outline: none;
+                          height: 22px;
+                          border: 1px solid #f1f1f1;
+                          background: linear-gradient(to bottom, #ffffff 0%,rgba(229, 229, 229, 0.72) 100%);
+                          border-radius: 4px;
+                          padding-left: 10px;
+                        }
+                      }
+                    }
+
+                    .measurementMetricInputDescription{
+                      display: none;
+                    }
+                  }
+
+                }
+              }
+
+              .numberLocaleViewContainer{
+                width: auto;
+                margin: 8px 4px 8px 10%;
+                float: left;
+
+                .numberLocaleInput{
+                  width: 100%;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  float: left;
+                  background: transparent;
+                  color: #555;
+                  outline: none;
+                  border: 1px solid $color-light-5;
+                  border-radius: 2px;
+                  padding: 0px 10px;
+                  height: 22px;
+                }
+
+                .numberLocaleDescription{
+                  display: none;
+                }
+              }
+
+              &:hover {
+                .attributeConditionDelete {
+                  width: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        &.collapsed {
+          display: none;
+        }
+
+        .tagsSectionHeader, .multiSelectSearchLabel {
+          display: none;
+        }
+
+        .tagsSectionBody {
+          border-bottom: none;
+
+          .range-slider {
+            margin: 25px 10px 0;
+            width: calc(100% - 20px);
+          }
+
+          .customTreeNodeWrapper {
+            background: none;
+            overflow: hidden;
+            padding: 4px;
+            background: #fff;
+            margin: 4px 2px;
+            border: 1px solid #eee;
+            border-radius: 2px;
+          }
+
+          .tagName.fullLengthTagName {
+            width: 100%;
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 11px;
+            line-height: 11px;
+            background: none;
+            margin-top: 4px;
+          }
+        }
+
+        .searchBarView .searchBarContainer .multiSearchInputBox {
+          color: #555;
+        }
+
+        svg {
+          //fill: #eee !important;
+        }
+
+        .tagValueHeaderContainer.fullLengthTagValueHeader {
+          margin-top: 6px;
+        }
+
+        .contentFilterMSSContainer {
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+          height: auto;
+          min-height: 40px;
+          background-color: #fff;
+          padding: 7px 0;
+
+          .searchBarView {
+            width: calc(100% - 10px);
+            margin: 0 auto;
+            min-height: 40px;
+            padding: 1px 0;
+
+            .searchBarContainer {
+              min-height: 22px;
+              width: 80%;
+              padding-left: 5px;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 0px rgba(0, 0, 0, 0.12);
+              padding-bottom: 1px;
+              border: 1px solid #eee;
+              /* background: linear-gradient(to bottom, #ffffff 0%, rgba(229, 229, 229, 0.72) 100%); */
+              border-radius: 4px;
+              margin: 3px 5px 5px 10%;
+
+              .multiSearchInputBox {
+                color: #555;
+                font-size: 13px;
+                //font-weight: 500;
+              }
+
+              .multiSelectNothingSelected {
+                margin-top: 0;
+                padding: 0;
+                margin-bottom: 0;
+                line-height: 27px;
+                font-size: 11px;
+              }
+
+              .selectedItems{
+                max-width: 90%;
+              }
+
+              &:after{
+                content: '';
+                background-image: url($image-CS-triangle-south-25);
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-size: 25px;
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                top: 10px;
+                right: 70px;
+                opacity: .66;
+              }
+            }
+
+            .dropDownListView {
+              box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+              border: none;
+              width: 80%;
+              margin-left: 10%;
+
+              .dropDownNodeContainer {
+                font-size: 13px;
+                //font-weight: 500;
+                color: #555;
+                padding-left: 30px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+          }
+
+          .contentFilterMSSIcon {
+            display: none;
+          }
+        }
+
+        .contentTagItemViewContainer{
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+          height: auto;
+          min-height: 28px;
+          background-color: #fff;
+
+          .tagsGroupContainer{
+            .tagValueHeaderContainer{
+              &.fullLengthTagValueHeader{
+                width: 74%;
+                margin-left: 28%;
+                overflow: hidden;
+              }
+            }
+
+            .searchBarView {
+              width: calc(100% - 10px);
+              margin: 0 auto;
+              min-height: 40px;
+              padding: 1px 0;
+
+              .searchBarContainer {
+                min-height: 22px;
+                width: 80%;
+                padding-left: 5px;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+                padding-bottom: 1px;
+                border: 1px solid #f1f1f1;
+                background: linear-gradient(to bottom, #ffffff 0%, rgba(229, 229, 229, 0.72) 100%);
+                border-radius: 4px;
+                margin: 3px 5px 5px 10%;
+
+                .multiSearchInputBox {
+                  color: #555;
+                  font-size: 13px;
+                  //font-weight: 500;
+                }
+
+                .multiSelectNothingSelected {
+                  margin-top: 0;
+                  padding: 0;
+                  margin-bottom: 0;
+                  line-height: 27px;
+                  font-size: 11px;
+                }
+
+                .selectedItemsentityTagsSummaryView  {
+                  max-width: 90%;
+                }
+
+                &:after {
+                  content: '';
+                  background-image: url($image-CS-triangle-south-25);
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 25px;
+                  position: absolute;
+                  height: 20px;
+                  width: 20px;
+                  top: 10px;
+                  right: 62px;
+                  opacity: .66;
+                }
+              }
+
+              .dropDownListView {
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+                border: none;
+                width: 80%;
+                margin-left: 10%;
+
+                .dropDownNodeContainer {
+                  font-size: 13px;
+                  //font-weight: 500;
+                  color: #555;
+                  padding-left: 30px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+              }
+            }
+
+            .tagsSectionBody {
+              padding: 0;
+
+              .entityTagsSummaryView{
+                .tagsSummaryItemsContainer{
+                  .selectedItems{
+                    margin: 0px 0px 0px 10px;
+                  }
+                }
+              }
+
+              .tagChildNodeContainer {
+                box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.12), 0 0px 0px rgba(0, 0, 0, 0.12);
+
+                .tagConditionOrBlock {
+                  float: left;
+                  height: 40px;
+                  width: 40px;
+                  background: rgba(204, 204, 204, 0.35);
+                  text-align: center;
+                  line-height: 40px;
+                  font-size: 10px;
+                  font-weight: bold;
+                }
+
+                .customTreeNodeWrapper {
+                  background-color: #fff;
+                  height: 40px;
+                  padding: 0;
+                  margin: 0;
+                  border: none;
+                }
+
+                .customTreeParentNodeContainer{
+
+                  .customTreeNodeWrapper{
+                    .tagName{
+                      line-height: 40px;
+                    }
+
+                    .tagDetail{
+
+                      &.tagRadioGroupContainer{
+                        padding: 5px 0px;
+                      }
+
+                      &.doubleSlider{
+                        width: calc(100% - 160px);
+
+                        .doubleSliderViewContainer{
+                          height: 40px;
+                          padding: 2px;
+
+                          .doubleSliderClearButton{
+                            display: none;
+                          }
+
+                          .range-slider{
+                            width: calc(100% - 60px);
+                            margin: 18px 10px 0px 10px;
+
+                            .sliderHandleBase{
+                              height: 13px;
+                              top: -17px;
+                              line-height: 14px;
+                              font-size: 9px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .attributeBody{
+          padding-left: 30px;
+          border: none;
+        }
+      }
+
+      .tagBody {
+        overflow: visible;
+
+        .searchBarView {
+          padding: 5px;
+          height: auto;
+        }
+      }
+
+      .ownersWrapper {
+        margin: 0 5px 5px 5px;
+        background-color: #FAFAFA;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+        border-radius: 2px;
+
+        .ownersHeader {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+/*
+.filterButtonContainer {
+  text-align: center;
+
+  .filterButton {
+    height: 30px;
+    width: 42%;
+    margin: 20px 4%;
+    line-height: 30px;
+    text-align: center;
+    color: #696969;
+    background-color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: all .2s;
+    display: inline-block;
+
+    &.clearButton{
+      display: none;
+    }
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+}
+*/
+
+/*.contentFilterViewWrapper {
+  padding-bottom: 1px;
+
+  &.filterActive{
+
+    .clearButton{
+      display: inline-block;
+    }
+  }
+}
+
+.contentFilterViewWrapperVisibility {
+  display: none;
+}*/

@@ -1,0 +1,132 @@
+[
+  {
+    "Ltags": [
+      {
+        "Lcouplings": [
+          {
+            "Ltagvalues": [
+              {
+                "from": 100,
+                "to": 100,
+                "id": "regularlyavailable"
+              }
+            ],
+            "$type": "exact"
+          }
+        ],
+        "entityid": "availabilitytag"
+      },
+      {
+        "Lcouplings": [
+          {
+            "Ltagvalues": [
+              {
+                "from": 100,
+                "to": 100,
+                "id": "image_extension_format_jpg"
+              }
+            ],
+            "$type": "exact"
+          }
+        ],
+        "entityid": "imageextensiontag"
+      }
+    ],
+    "Llanguages": [
+      
+    ],
+    "Ltaxonomies": [
+      "R_Taxonomy1",
+      "R_taxonomy2"
+    ],
+    "Lorganizations": [
+      "-1"
+    ],
+    "csid": "[R>R_Rules206]",
+    "Ltypes": [
+      "single_article"
+    ],
+    "$isstandard": false,
+    "$islanguagedependent": false,
+    "label": "R_Rules206_Label",
+    "Lrelationships": [
+      
+    ],
+    "Lphysicalcatalogids": [
+      "pim",
+      "dataIntegration"
+    ],
+    "$type": "standardization_and_normalization",
+    "Lattributes": [
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              "abcd",
+              "pqr"
+            ],
+            "comparewithsysdate": false,
+            "type": "exact"
+          }
+        ],
+        "entityid": "descriptionattribute"
+      },
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              "abcd"
+            ],
+            "comparewithsysdate": false,
+            "type": "contains"
+          }
+        ],
+        "entityid": "addressattribute"
+      }
+    ],
+    "Lnormalizations": [
+      {
+        "Lvalues": [
+          "R_non_nature",
+          "R_non_nature2"
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "$type": "type"
+      },
+      {
+        "Lvalues": [
+          "R_Taxonomy1",
+          "R_taxonomy2"
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "$type": "taxonomy"
+      },
+      {
+        "Lvalues": [
+          "rosh"
+        ],
+		"valueashtml": "<b>rosh</b>"
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "entityid": "addressattribute",
+        "transformationtype": "value",
+        "$type": "attribute"
+      },
+      {
+        "Lvalues": [
+          
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "entityid": "availabilitytag",
+        "transformationtype": "value",
+        "$type": "tag",
+        "Ltagvalues": [
+          {
+            "from": 100,
+            "to": 100,
+            "id": "regularlyavailable"
+          }
+        ]
+      }
+    ]
+  }
+]

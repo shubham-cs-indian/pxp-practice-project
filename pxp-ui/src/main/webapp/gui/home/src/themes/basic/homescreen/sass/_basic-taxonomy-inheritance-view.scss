@@ -1,0 +1,44 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$primary-font-size: 11px;
+$max-width-for-labels: 250px;
+
+.taxonomyInheritanceDialog {
+  height: 100%;
+
+  .taxonomyInheritanceHeader {
+    padding: 0px 0px 18px 0px;
+  }
+  
+  .fixedIcon {
+    width: 45px;
+  }
+
+  .taxonomyInheritanceDialogBody {
+    overflow: hidden;
+    .chipsView {
+      .items {
+        cursor: default;
+        margin-top: 4px;
+        margin-bottom: 0px;
+    
+        .taxonomyIcon {
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-size: 15px;
+          background-image: url($image-CS-Ingredients-32);
+          background-color: #DDDDDD;
+        }
+
+        .itemLabel {
+          color: #333333;
+          opacity: 0.8;
+          max-width: 200px;
+          padding-left: 3px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

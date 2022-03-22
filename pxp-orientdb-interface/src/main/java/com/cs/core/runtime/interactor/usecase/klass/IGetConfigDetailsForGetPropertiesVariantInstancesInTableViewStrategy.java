@@ -1,0 +1,9 @@
+package com.cs.core.runtime.interactor.usecase.klass;
+
+import com.cs.core.config.strategy.configuration.base.IConfigStrategy;
+import com.cs.core.runtime.interactor.model.variants.IConfigDetailsForGetPropertiesVariantInstancesInTableViewModel;
+import com.cs.core.runtime.interactor.model.variants.IConfigDetailsForGetPropertiesVariantInstancesInTableViewStrategyRequestModel;
+
+public interface IGetConfigDetailsForGetPropertiesVariantInstancesInTableViewStrategy extends
+    IConfigStrategy<IConfigDetailsForGetPropertiesVariantInstancesInTableViewStrategyRequestModel, IConfigDetailsForGetPropertiesVariantInstancesInTableViewModel> {
+}

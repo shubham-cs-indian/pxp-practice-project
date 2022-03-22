@@ -1,0 +1,10 @@
+[
+"bgp 1000004 started 2020-09-14T10:46:39",
+"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"LANGUAGE\"],\"LANGUAGE\":[],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}","Language codes=All",
+{"isDataLanguage":true,"isUserInterfaceLanguage":true,"isStandard":false,"numberFormat":"###,###,###.##","csid":"[L>am_ET]","parentCode":"-1","dateFormat":"DD\/MM\/YYYY HH:mm:ss","label":"eng2","abbreviation":"am_ET","localeId":"1118","isDefaultLanguage":false},
+{"isDataLanguage":true,"isUserInterfaceLanguage":true,"isStandard":true,"numberFormat":"###,###,###.##","csid":"[L>en_US]","parentCode":"-1","dateFormat":"DD\/MM\/YYYY HH:mm:ss","label":"English","abbreviation":"en","localeId":"2057","isDefaultLanguage":false},
+{"isDataLanguage":true,"isUserInterfaceLanguage":true,"isStandard":true,"numberFormat":"### ### ###,##","csid":"[L>fr_FR]","parentCode":"-1","dateFormat":"DD\/MM\/YYYY HH:mm:ss","label":"French","abbreviation":"fr","localeId":"1036","isDefaultLanguage":false},
+{"isDataLanguage":true,"isUserInterfaceLanguage":true,"isStandard":true,"numberFormat":"###.###.###,##","csid":"[L>de_DE]","parentCode":"-1","dateFormat":"DD.MM.YYYY HH:mm:ss","label":"German","abbreviation":"de","localeId":"1031","isDefaultLanguage":false},
+{"isDataLanguage":true,"isUserInterfaceLanguage":true,"isStandard":true,"numberFormat":"###.###.###,##","csid":"[L>es_ES]","parentCode":"-1","dateFormat":"DD\/MM\/YYYY HH:mm:ss","label":"Spanish","abbreviation":"es","localeId":"3082","isDefaultLanguage":false},
+"bgp 1000004 ended 2020-09-14T10:46:40"
+]

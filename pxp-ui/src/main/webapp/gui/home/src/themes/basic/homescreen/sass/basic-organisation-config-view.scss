@@ -1,0 +1,128 @@
+.organisationConfigViewContainer {
+  height: 100%;
+  .configHeaderView{
+    float: right;
+    width:calc(100% - 235px)
+  }
+  .organisationConfigListViewContainer {
+    width: 235px;
+    height: 100%;
+    //border-right: 1px solid #bbb;
+    float: left;
+
+    .classListViewContainer {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .listNodeViewContainer {
+      &:hover {
+        .listViewWrapper {
+          .listNodeViewName {
+            flex: 0 0 calc(100% - 43px);
+            max-width: calc(100% - 43px);
+          }
+        }
+      }
+      .listViewWrapper {
+        .listNodeViewName {
+          .list-label {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  }
+  .organisationDetailedViewContainer {
+    width: calc(100% - 235px);
+    height: calc(100% - 52px);
+    display: inline-block;
+    background-image: linear-gradient(#f1f1f1, #f6f6f6);
+    .organisationDetailedViewBody {
+      height: 100%;
+
+      .organisationConfigDetailView {
+        height: inherit;
+
+        .tabLayoutView {
+          height: 100%;
+
+          .tabsSection{
+            height: 44px;
+            .parentScrollContainer{
+              height: 44px;
+              .tabsList{
+                height: 44px;
+                .tabItem{
+                  height:100%;
+                  line-height: 44px;
+                }
+              }
+            }
+          }
+
+          .bodySection {
+            padding-top: 0;
+            background-color: #fff;
+            height: calc(100% - 52px);
+
+            .organizationBasicInformationViewContainer {
+              height: 100%;
+              overflow: auto;
+              padding-bottom: 50px;
+              scrollbar-width: thin;
+            }
+
+            .roles {
+              height: 100%;
+
+              .rolePermissionContainerView {
+                overflow: hidden;
+                height: 100%;
+
+                .roleConfigView{
+                  .roleConfigViewContainer {
+                    .roleListViewContainer {
+                      height: calc(100% - 30px);
+                      .listViewContainer {
+                        height: calc(100% - 50px);
+                        .listView {
+                          max-height: 100%;
+                        }
+                      }
+                    }
+
+                    .roleDetailedViewContainer {
+                      .roleDetailInfoViewContiner {
+                        height: calc(100% - 45px);
+                      }
+                    }
+
+                    .listViewContainer {
+                      .listView {
+                        overflow: initial;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .ssoSettings {
+              background-color: #fff;
+              height: calc(100% - 44px);
+              box-shadow: 0 0 0 1px #ddd;
+              border-radius: 3px;
+              overflow: hidden;
+
+              .searchBarContainer{
+                flex: 2 1 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

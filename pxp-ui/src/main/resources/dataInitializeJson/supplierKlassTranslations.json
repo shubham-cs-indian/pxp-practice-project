@@ -1,0 +1,138 @@
+[
+  {
+    "id": "content_enrichment_agency",
+    "translations": {
+      "en_US": {
+        "label": "Content Enrichment Agency"
+      },
+      "es_ES": {
+        "label": "Agencia de enriquecimiento de contenido"
+      },
+      "fr_FR": {
+        "label": "Agence d'enrichissement de contenu"
+      },
+      "de_DE": {
+        "label": "Agentur für Inhaltsanreicherung"
+      }
+    }
+  },
+  {
+    "id": "digital_asset_agency",
+    "translations": {
+      "en_US": {
+        "label": "Digital Asset Agency"
+      },
+      "es_ES": {
+        "label": "Agencia de activos digitales"
+      },
+      "fr_FR": {
+        "label": "Agence d'actifs numériques"
+      },
+      "de_DE": {
+        "label": "Digital Asset Agency"
+      }
+    }
+  },
+  {
+    "id": "distributors",
+    "translations": {
+      "en_US": {
+        "label": "Distributors"
+      },
+      "es_ES": {
+        "label": "Distribuidores"
+      },
+      "fr_FR": {
+        "label": "Distributeurs"
+      },
+      "de_DE": {
+        "label": "Händler"
+      }
+    }
+  },
+  {
+    "id": "marketplaces",
+    "translations": {
+      "en_US": {
+        "label": "Marketplaces"
+      },
+      "es_ES": {
+        "label": "Mercados"
+      },
+      "fr_FR": {
+        "label": "Marchés"
+      },
+      "de_DE": {
+        "label": "Marktplätze"
+      }
+    }
+  },
+  {
+    "id": "supplier",
+    "translations": {
+      "en_US": {
+        "label": "Business Partners"
+      },
+      "es_ES": {
+        "label": "Socias comerciales"
+      },
+      "fr_FR": {
+        "label": "partenaires d'affaires"
+      },
+      "de_DE": {
+        "label": "Geschäftspartner"
+      }
+    }
+  },
+  {
+    "id": "suppliers",
+    "translations": {
+      "en_US": {
+        "label": "Business Partners"
+      },
+      "es_ES": {
+        "label": "Socias comerciales"
+      },
+      "fr_FR": {
+        "label": "partenaires d'affaires"
+      },
+      "de_DE": {
+        "label": "Geschäftspartner"
+      }
+    }
+  },
+  {
+    "id": "translation_agency",
+    "translations": {
+      "en_US": {
+        "label": "Translation Agency"
+      },
+      "es_ES": {
+        "label": "Agencia de traducción"
+      },
+      "fr_FR": {
+        "label": "Agence de traduction"
+      },
+      "de_DE": {
+        "label": "Übersetzungsbüro"
+      }
+    }
+  },
+  {
+    "id": "wholesalers",
+    "translations": {
+      "en_US": {
+        "label": "Wholesalers"
+      },
+      "es_ES": {
+        "label": "Mayoristas"
+      },
+      "fr_FR": {
+        "label": "Grossistes"
+      },
+      "de_DE": {
+        "label": "Großhändler"
+      }
+    }
+  }
+]

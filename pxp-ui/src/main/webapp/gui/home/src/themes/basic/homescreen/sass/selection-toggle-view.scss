@@ -1,0 +1,46 @@
+@import "../../../../styleguide/style-guide";
+.selectionToggleView {
+  padding: 5px 13px 2px;
+
+  & * {
+    font-size: $font-normal;
+  }
+
+  .tagListBody {
+    overflow: auto;
+    width: 100%;
+  }
+
+  .tagElement {
+    padding: 2px 5px;
+    overflow: hidden;
+    border: 1px solid $color-light-3;
+    color: $color-dark-5;
+    border-radius: 4px;
+    float: left;
+    margin: 2px;
+    cursor: pointer;
+    max-width: calc(50% - 4px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all .2s;
+
+    &:hover {
+      background: $color-light-1;
+      color: $color-dark-2;
+      border-color: $color-dark-4;
+      box-shadow: 0px 0px 0px 1px $color-dark-4 inset;
+    }
+
+    &.tagElementSelected {
+      background: $color-light-1;
+      color: $color-dark-2;
+      border-color: $color-theme-accent;
+      box-shadow: 0px 0px 0px 1px $color-theme-accent inset;
+    }
+
+    &.disabled {
+      background-color: #eee;
+    }
+  }
+}

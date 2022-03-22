@@ -1,0 +1,8 @@
+[
+	{
+		"id": "123",
+		"pluginName": "ConfigDummyMigration",
+		"createdOnAsString": "06/01/2018",
+		"description": "This is a Dummy migration for testing purpose. Please delete the node and make respected changes"
+	}
+]

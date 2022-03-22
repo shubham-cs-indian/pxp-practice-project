@@ -1,0 +1,233 @@
+{
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>individual_Article $iid=1000029 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "$isstandard": false,
+    "Lproductvariantcontextcode": [
+      
+    ],
+    "Lpromotionalversioncontextcode": [
+      
+    ],
+    "label": "individual_Article",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "pricingPropertyCollection": [
+        {
+          "isdisabled": false,
+          "defaultunit": "EUR",
+          "precision": 2,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "listpriceattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": "EUR",
+          "precision": 2,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "sellingpriceattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": "EUR",
+          "precision": 2,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "minimumpriceattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": "EUR",
+          "precision": 2,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "maximumpriceattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        }
+      ],
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "isdisabled": false,
+          "prefix": "",
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "hello",
+          "valueashtml": "",
+          "isversionable": true,
+          "suffix": "",
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "dynamicCoupled",
+          "$code": "pid_attribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": false
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "nameattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "sku_attribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "gtin_attribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultvalue": "",
+          "isversionable": false,
+          "isshould": false,
+          "tagtype": "tag_type_yes_neutral",
+          "$type": "tag",
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "statustag",
+          "Lselectedtagvalues": [
+            
+          ],
+          "ismultiselect": false,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "shortdescriptionattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        },
+        {
+          "isdisabled": false,
+          "defaultunit": null,
+          "precision": null,
+          "defaultvalue": "",
+          "valueashtml": "",
+          "isversionable": true,
+          "isshould": false,
+          "$type": "attribute",
+          "ismandatory": false,
+          "isidentifier": false,
+          "$couplingtype": "looselyCoupled",
+          "$code": "longdescriptionattribute",
+          "$attributevariantcontextcode": null,
+          "isskipped": false,
+          "$isinherited": true
+        }
+      ]
+    },
+    "$naturetype": "singleArticle",
+    "parentCode": "single_article",
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "isdefault": true,
+    "$isnature": true
+  }

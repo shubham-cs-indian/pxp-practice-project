@@ -1,0 +1,114 @@
+[
+	{
+		"eventType": "APPLICATION",
+		"id": "BULK_UPDATE",
+		"processType": "onboardingProcess",
+		"label": "Standard_Bulk_Update_Workflow",
+		"fileName": "BulkUpdateProcess.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "BULK_CLONING",
+		"processType": "onboardingProcess",
+		"label": "Standard_Bulk_Cloning_Workflow",
+		"fileName": "BulkCloningProcess.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "TRANSFER",
+		"processType": "onboardingProcess",
+		"label": "Standard_Transfer_Workflow",
+		"fileName": "StandardTransferWorkflow.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "ASSET_UPLOAD",
+		"processType": "onboardingProcess",
+		"label": "Standard_Asset_Bulk_Upload_Workflow",
+		"fileName": "StandardAssetBulkUpload.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "PXON_EXPORT",
+		"processType": "onboardingProcess",
+		"label": "Standard_PXON_EXPORT_WORKFLOW",
+		"fileName": "PXONExport.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "TAG_VALUE_DELETE",
+		"processType": "onboardingProcess",
+		"label": "Standard_Tag_Value_Delete_Workflow",
+		"fileName": "TagValueDelete.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "PROPERTY_DELETE",
+		"processType": "onboardingProcess",
+		"label": "Standard_Property_Delete_Workflow",
+		"fileName": "PropertyDelete.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "ASSET_LINK_SHARING",
+		"processType": "onboardingProcess",
+		"label": "Standard_Asset_Link_Sharing",
+		"fileName": "StandardAssetLinkSharing.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "PXON_IMPORT",
+		"processType": "onboardingProcess",
+		"label": "Standard_PXON_IMPORT_Workflow",
+		"fileName": "PXONImport.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "APPLICATION",
+		"id": "ICON_UPLOAD",
+		"processType": "onboardingProcess",
+		"label": "Standard_Bulk_Icon_Upload",
+		"fileName": "StandardBulkIconUpload.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "INTEGRATION",
+		"id": "CONFIG_EXPORT",
+		"processType": "onboardingProcess",
+		"label": "Standard_Config_Excel_Export",
+		"fileName": "StandardConfigExcelExport.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "INTEGRATION",
+		"id": "CONFIG_IMPORT",
+		"processType": "onboardingProcess",
+		"label": "Standard_Config_Excel_Import",
+		"fileName": "StandardConfigExcelImport.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "INTEGRATION",
+		"id": "EXPORT",
+		"processType": "onboardingProcess",
+		"label": "Standard_Runtime_Excel_Export",
+		"fileName": "StandardRuntimeExcelExport.bpmn",
+		"isXMLModified": true
+	},
+	{
+		"eventType": "INTEGRATION",
+		"id": "IMPORT",
+		"processType": "onboardingProcess",
+		"label": "Standard_Runtime_Excel_Import",
+		"fileName": "StandardRuntimeExcelImport.bpmn",
+		"isXMLModified": true
+	}
+]

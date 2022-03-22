@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.ActivityDiagramText</type>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>764</w>
+      <h>1163</h>
+    </coordinates>
+    <panel_attributes>title:Runtime Data
+Start
+While[more batch]
+	[Entity batch]
+	If 
+		[All Entities]
+		Select by catalog \ join Classifiers
+		
+		[Specified Entities]
+		Select by catalog + entlty list \ join Classifiers
+	EndIf
+	Select entity Contextual Object
+	If
+		[All properties]
+		Select Entity \ left join Property Records
+		
+		[Specified properties]
+		Select Properties \ [first iteration]
+		Select Entity \ join Property Records
+	EndIf
+		Select Tags Records
+
+		Select Value Records
+		Select Contextual Objects
+
+		Select Relation Records
+		Select Side Contextual Objects
+	Assemble Records
+[no more Batch]
+End
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.allinone.ActivityDiagramText</type>
+    <coordinates>
+      <x>790</x>
+      <y>10</y>
+      <w>1093</w>
+      <h>539</h>
+    </coordinates>
+    <panel_attributes>title:Configuration Data
+Start
+If
+	[Properties]
+	Select Property IDs
+	If
+		[Attributes]
+		Download Attributes (type)
+
+		[Tags]
+		Download Tags
+
+		[Relationship]
+		Download Relationships
+		
+	EndIf
+	
+	[Classifiers]
+	Select Classifier IDs
+	Download Classifiers
+
+	[Contexts]
+	Select Context IDs
+	Download Contexts
+	
+	[Hierarchies]
+	Select Hierarchy IDs
+	Download Hierarchies
+	Select nodes CSIDs
+	Assemble Hierarchies
+EndIf
+End
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>450</x>
+      <y>1010</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{PXON Base Entities (batch)}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1070</x>
+      <y>490</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{PXON Properties}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>470</x>
+      <y>740</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{Property Record IIDs}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>440</x>
+      <y>940</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{JSON Property Records}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>470</x>
+      <y>450</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{JSON Base Entities}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1570</x>
+      <y>480</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{PXON Contexts}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1710</x>
+      <y>70</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{&lt;100 hierarchies}
+style=wordwrap
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1730</x>
+      <y>480</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{PXON Hierarchies}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1370</x>
+      <y>480</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{PXON Classifiers}
+style=wordwrap
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1100</x>
+      <y>270</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{&lt;10000 tags}
+style=wordwrap
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1280</x>
+      <y>120</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{&lt;10,000 classifiers}
+style=wordwrap
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1610</x>
+      <y>110</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{&lt;1000 contexts}
+style=wordwrap
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>930</x>
+      <y>120</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>{&lt;5000 properties}
+style=wordwrap
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

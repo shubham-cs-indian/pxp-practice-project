@@ -1,0 +1,497 @@
+@import "./../../../../styleguide/style-guide";
+.entityTagsSummaryView {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 4px;
+  margin-top: 4px;
+ /* &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #dadada;
+  }*/
+
+  .tagsSummaryItemsContainer {
+    height: auto;
+    text-align: center;
+    width: 100%;
+
+    .tagsSummaryItemWrapper {
+      display: inline-block;
+
+      .sectionTagWrapper {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 2px;
+        float: left;
+
+        .sectionTagInnerCircle {
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          margin: 2px;
+          background-color: #fff;
+          position: relative;
+
+          .sectionTagLetter {
+            font-size: 11px !important;
+            padding: 0 5px 0 4px;
+            text-align: center;
+            font-weight: bold !important;
+            color: #666;
+            position: absolute;
+
+            &.noShow {
+              display: none;
+            }
+          }
+
+          .sectionTagIcon {
+            max-width: 12px;
+            max-height: 12px;
+            top: 2px;
+            left: 2px;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .selectedItems {
+      width: auto;
+      height: 22px;
+      margin-right: 5px;
+      background-color: #eee;
+      cursor: default;
+      white-space: nowrap;
+      /*display: inline-block;*/
+      max-width: 100%;
+      position: relative;
+      border-radius: 12px;
+      /*overflow: hidden;*/
+      float: left;
+
+      .tagContainer {
+        height: 100%;
+        position: relative;
+        .coloredIndicator {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          right: -2px;
+          top: -2px;
+          background-color: #FFF;
+          padding: 2px;
+          border-radius: 50px;
+          z-index: 2;
+          //box-shadow: 0 0 0 1px #eee;
+
+          &.greenBorder {
+            .relevanceFlag {
+              background-color: #25af2a;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          &.redBorder {
+            .relevanceFlag {
+              background-color: #ff5d54;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        .tagIconWrapper {
+          float: left;
+          height: 100%;
+          margin: 0;
+          .tagIcon {
+            height: 22px;
+            width: 22px;
+            display: inline-block;
+            padding: 0;
+            border-radius: 50%;
+            color: #797979;
+            background-color: #FFF;
+            box-shadow: 0 0 0 1px #eee inset;
+
+            .imageFitToContainer {
+              position: relative;
+              overflow: hidden;
+              border-radius: 50%;
+              z-index: 2;
+              .imageFitToContainerImage {
+                z-index: 1;
+                height: initial;
+                max-width: 12px;
+              }
+            }
+          }
+
+          .tagColor {
+            height: 22px;
+            width: 22px;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            border-radius: 50%;
+            background-color: #6eceb2;
+          }
+
+          .tagText {
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px 0 10px;
+            height: 100%;
+            line-height: 22px;
+            font-size: 11px;
+
+            &.hideMe {
+              display: none;
+            }
+
+          }
+
+          &:hover {
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+
+        .tagIcon {
+          height: 25px;
+          width: 25px;
+          display: inline-block;
+          padding: 0;
+          border-radius: 50%;
+          background-color: #FFF;
+          box-shadow: 0 0 0 1px #eee inset;
+          .imageFitToContainer {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            z-index: 2;
+            .imageFitToContainerImage {
+              z-index: 1;
+              height: initial;
+              max-width: 15px;
+            }
+          }
+
+          &:hover {
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+        .tagColor {
+          width: 25px;
+          height: 25px;
+          margin-bottom: 5px;
+          border-radius: 50%;
+          &:hover {
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+        .tagValue {
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 10px 0 10px;
+          height: 100%;
+          line-height: 22px;
+          font-size: 11px;
+
+          &.hideMe {
+            display: none;
+          }
+
+          &:hover {
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+
+        .crossIcon {
+          background: url($image-CS-Cross) no-repeat 0;
+          background-size: 12px;
+          display: inline-block;
+          transition: all .2s;
+          cursor: pointer;
+          width: 14px;
+          opacity: 0.6;
+          height: 100%;
+          margin-right: 5px;
+          //transform: scale(0);
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          .crossIcon {
+            opacity: 1;
+            //width: 14px;
+            //margin-right: 4px;
+            //transform: scale(1);
+          }
+        }
+      }
+
+      &.hideMe {
+        display: none;
+      }
+    }
+
+    .moreSection {
+      position: absolute;
+      /* top: calc(50% - 16px); */
+      margin: 0px 0px 0 0;
+      right: 0;
+
+      &.hideMe {
+        display: none;
+      }
+
+      .moreLabel {
+        float: left;
+        position: relative;
+        line-height: 20px;
+        font-size: 11px;
+        width: 22px;
+        padding: 0 0 0 7px;
+        background-color: #eee;
+        border-radius: 50%;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 22px;
+
+        &:before {
+          content: "+";
+          position: absolute;
+          top: 1px;
+          left: 5px;
+          transform: translate(-48%);
+        }
+      }
+    }
+
+    .noTagsGrey {
+      &.showEmptyTagGroupLabel {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        line-height: 22px;
+        font-size: 11px;
+        float: left;
+        font-style: italic;
+        margin: 2px 5px 0 5px;
+        opacity: .7;
+      }
+    }
+
+    .gridYesNoSwitch {
+      float: left;
+    }
+  }
+
+  .tagRelNewViewContainer {
+    height: 22px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #777;
+    overflow: hidden;
+    margin: 2px;
+    text-shadow: 0px 1px 1px #000;
+    background: rgba(0, 0, 0, 0.5);
+
+    &.redBorder {
+      border-color: #FF6B6B;
+    }
+
+    &.greyBorder {
+      border-color: #ddd;
+    }
+
+    &.greenBorder {
+      border-color: rgb(32, 218, 32);
+    }
+
+    .tagRelStrip {
+      height: 20px;
+      float: left;
+      color: #fff;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 20px;
+      text-shadow: 0px 1px 1px #555;
+      margin: 0px;
+      padding: 0 2px;
+      border-radius: 2px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &.redStrip {
+        background: rgba(218, 106, 16, 0.7);
+      }
+
+      &.greyStrip {
+        background: rgba(32, 32, 32, .7);
+      }
+
+      &.greenStrip {
+        background: rgba(32, 218, 32, .7);
+      }
+    }
+
+    .tagRelIconContainer {
+      float: left;
+      padding: 2px;
+
+      &.noShow {
+        display: none;
+      }
+
+      .tagRelIcon {
+        max-height: 18px;
+        float: left;
+      }
+    }
+
+    .tagRelText {
+      float: left;
+      max-width: 45px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 100%;
+      line-height: 20px;
+      font-size: 11px;
+      margin: 0 4px;
+      white-space: nowrap;
+
+      &.noShow {
+        display: none;
+      }
+    }
+  }
+
+  .tagsSummaryGroupContainer {
+    &.showEmptyTagGroupLabel {
+      float: left;
+      width: 100%;
+    }
+
+    .tagsSummaryGroupHeader {
+      font-size: 11px;
+      color: #777;
+      //text-shadow: 0px 1px 0px #111;
+      line-height: 14px;
+      float: left;
+      margin-top: 6px;
+      margin-right: 6px;
+    }
+
+    .tagsSummaryGroupBody {
+
+    }
+  }
+}
+
+.moreFilters {
+  width: 150px;
+
+  .moreFiltersItemContainer{
+    margin: 2px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+
+    &.hideMe {
+      display: none;
+    }
+
+    .moreFiltersItemLabel{
+      line-height: 20px;
+      width: calc(100% - 20px);
+      display: inline-block;
+      height: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 0 5px;
+    }
+    .crossIcon {
+      background-size: 10px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-position: 2px 2px;
+      background-image: url($image-CS-Cross);
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &.invisible {
+    display: none;
+  }
+}

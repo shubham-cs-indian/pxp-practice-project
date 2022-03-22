@@ -1,0 +1,7 @@
+{
+  "id": "createdEvent",
+  "code": "createdEvent",
+  "isStandard": true,
+  "type": "justInTime",
+  "description": "Time when instance is created."
+}

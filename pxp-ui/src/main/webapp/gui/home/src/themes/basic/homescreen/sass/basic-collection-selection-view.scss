@@ -1,0 +1,179 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.collectionSelectionViewContainer {
+  height: auto;
+  width: 220px;
+  //max-height: 300px;
+
+  .headerSectionContainer{
+    border-bottom: 1px solid #eee;
+
+    .collectionHeader {
+      padding: 4px 8px;
+      font-size: 9px;
+      color: #777;
+      text-transform: uppercase;
+      line-height: 20px;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+    }
+  }
+
+  .upperSectionContainer {
+
+    .userInputContainer {
+      padding: 7px;
+
+      .userInput {
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        padding: 2px 6px;
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+  }
+
+  .middleSectionContainer {
+    background: #eee;
+    overflow: hidden;
+
+    //TODO: possible merge
+    .showDynamicCollectionsButton {
+      height: 30px;
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url($image-CS-Bookmark-Ribbon-64);
+      background-size: 20px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #F5F5F5;
+      }
+    }
+
+    .showStaticCollectionsButton {
+      height: 30px;
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url($image-CS-collection-static-collection-new);
+      background-size: 20px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #F5F5F5;
+      }
+    }
+
+    .isSelected {
+      box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.25);
+      background-color: #ddd;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+
+  .lowerSectionContainer {
+    max-height: 300px;
+    overflow: auto;
+
+    .collectionListContainer {
+      padding-bottom: 7px;
+
+
+      .collectionItem {
+        padding: 0 8px;
+        transition: all .2s;
+        cursor: pointer;
+        overflow: hidden;
+
+        .collectionItemInformation {
+          display: inline-block;
+          vertical-align: top;
+          width: calc(100% - 24px);
+
+          .collectionItemImage {
+            display: inline-block;
+            vertical-align: top;
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            background-color: #ddd;
+            margin: 3px 6px 3px 0;
+          }
+
+          .collectionItemLabel {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 11px;
+            line-height: 24px;
+            width: calc(100% - 24px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        .collectionItemDelete {
+          height: 24px;
+          width: 24px;
+          display: inline-block;
+          vertical-align: top;
+          font-size: 11px;
+          line-height: 24px;
+          background-image: url($image-CS-delete-bin);
+          background-size: 12px;
+          background-position: 50%;
+          background-repeat: no-repeat;
+
+          &:hover {
+            background-size: 16px;
+          }
+        }
+
+        &:hover {
+          background: #eee;
+        }
+      }
+
+      .emptyListMessage {
+        padding: 0 8px 0 8px;
+        text-align: center;
+        font-style: italic;
+        font-size: 11px;
+        color: #aaa;
+        line-height: 24px;
+      }
+
+      .nothingFoundMessage {
+        padding: 0 8px 0 8px;
+        text-align: center;
+        font-size: 11px;
+        font-style: italic;
+        color: $color-dark-5;
+        line-height: 24px;
+      }
+    }
+
+    .toggleCreateModify {
+      padding: 7px;
+      text-decoration: underline;
+      font-size: 9px;
+      color: #999;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: #777;
+      }
+    }
+  }
+}*/

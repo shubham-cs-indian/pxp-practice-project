@@ -1,0 +1,351 @@
+[
+  {
+    "id": "articlegeneralInformationPropertyCollection",
+    "code": "articlegeneralInformationPropertyCollection",
+    "isStandard": true,
+    "propertySequenceIds": ["pid_attribute", "nameattribute", "sku_attribute", "gtin_attribute", "statustag", "shortdescriptionattribute", "longdescriptionattribute"],
+    "elements": [
+      {
+        "id": "pid_attribute",
+        "type": "attribute"
+      },
+      {
+        "id": "nameattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "sku_attribute",
+        "type": "attribute"
+      },
+      {
+        "id": "gtin_attribute",
+        "type": "attribute"
+      },
+      {
+        "id": "statustag",
+        "type": "tag"
+      },
+      {
+        "id": "longdescriptionattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "shortdescriptionattribute",
+        "type": "attribute"
+      }
+    ],
+    "icon" : "articlegeneralInformationPropertyCollection"
+  },
+  {
+    "id": "targetGeneralInformationPropertyCollection",
+    "code": "targetGeneralInformationPropertyCollection",
+    "propertySequenceIds": ["nameattribute", "longdescriptionattribute"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "nameattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "longdescriptionattribute",
+        "type": "attribute"
+      }
+    ],
+    "icon" : "targetGeneralInformationPropertyCollection"
+  },
+  {
+    "id": "UNIT_Default",
+    "code": "UNIT_Default",
+    "propertySequenceIds": ["isordertag", "issalestag", "isbaseunittag"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "isordertag",
+        "type": "tag"
+      },
+      {
+        "id": "issalestag",
+        "type": "tag"
+      },
+      {
+        "id": "isbaseunittag",
+        "type": "tag"
+      }
+    ]
+  },
+  {
+    "id": "pricingPropertyCollection",
+    "code": "pricingPropertyCollection",
+    "propertySequenceIds": ["listpriceattribute", "sellingpriceattribute", "minimumpriceattribute", "maximumpriceattribute"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "listpriceattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "sellingpriceattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "minimumpriceattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "maximumpriceattribute",
+        "type": "attribute"
+      }
+    ],
+    "icon" : "pricingPropertyCollection"
+  },
+  {
+    "id": "assetInformationPropertyCollection",
+    "code": "assetInformationPropertyCollection",
+    "propertySequenceIds": ["nameattribute", "longdescriptionattribute", "shortdescriptionattribute"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "nameattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "longdescriptionattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "shortdescriptionattribute",
+        "type": "attribute"
+      }
+    ],
+     "icon" : "assetInformationPropertyCollection"
+  },
+  {
+    "id": "supplierGeneralInformationPropertyCollection",
+    "code": "supplierGeneralInformationPropertyCollection",
+    "propertySequenceIds": ["nameattribute", "longdescriptionattribute"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "nameattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "longdescriptionattribute",
+        "type": "attribute"
+      }
+    ],
+      "icon" : "supplierGeneralInformationPropertyCollection"
+  },
+  {
+    "id": "textassetGeneralInformationPropertyCollection",
+    "code": "textassetGeneralInformationPropertyCollection",
+    "propertySequenceIds": ["nameattribute", "longdescriptionattribute"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "nameattribute",
+        "type": "attribute"
+      },
+      {
+        "id": "longdescriptionattribute",
+        "type": "attribute"
+      }
+    ],
+     "icon" : "textassetGeneralInformationPropertyCollection"
+  },
+  {
+    "id": "defaultXRayPropertyCollection",
+    "code": "defaultXRayPropertyCollection",
+    "propertySequenceIds": ["nameattribute"],
+    "isStandard": true,
+    "isForXRay": true,
+    "elements": [
+      {
+        "id": "nameattribute",
+        "type": "attribute"
+      }
+    ],
+     "icon" : "defaultXRayPropertyCollection"
+  },
+  {
+    "id": "metadataCollection",
+    "code": "metadataCollection",
+    "propertySequenceIds": ["I_META_FILE_NAME", "I_META_DOCUMENT_TYPE", "I_APPLICATION", "I_CREATE_DATE", "I_MODIFICATION_DATE", "I_META_FILE_SIZE",
+    "I_DIMENSIONS", "I_DIMENSION_IN_INCH", "I_RESOLUTION", "I_BIT_DEPTH", "I_COLOR_MODE", "I_COLOR_PROFILE", "I_META_CREATOR_AUTHOR", "I_META_CREATOR_STREET",
+    "I_META_CREATOR_LOCATION",  "I_META_CREATOR_STATE", "I_META_CREATOR_POSTAL_CODE", "I_META_CREATOR_COUNTRY", "I_META_CREATOR_TEL", "I_META_CREATOR_EMAIL",
+    "I_META_CREATOR_WWW", "I_META_HEADING", "I_META_DESCRIPTION", "I_META_KEYWORDS", "I_META_LOCATION_DETAIL", "I_META_LOCATION", "I_META_STATE", "I_META_COUNTRY",
+    "I_META_TITEL", "I_META_COPYRIGHT", "I_META_COPYRIGHT_STATUS", "I_META_EXPOSURE_INDEX", "I_META_FOCAL_RANGE", "I_META_MAX_BLINDING_VALUE", "I_META_RECORDING_DATE",
+    "I_META_EXPOSURE_CONTROLS", "I_META_LIGHT_SOURCE", "I_META_SENSOR_TYPE", "I_META_BRAND", "I_META_MODELL", "I_META_SERIAL_NUMBER", "I_META_PIXEL_X_DIMENSION",
+    "I_META_PIXEL_Y_DIMENSION", "I_META_HIGH_RESOLUTION", "I_META_WIDTH_RESOLUTION", "I_META_X_RESOLUTION", "I_META_Y_RESOLUTION"],
+    "isStandard": true,
+    "elements": [
+      {
+        "id": "I_META_FILE_NAME",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_DOCUMENT_TYPE",
+        "type": "attribute"
+      },{
+        "id": "I_APPLICATION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_CREATE_DATE",
+        "type": "attribute"
+      },{
+        "id": "I_MODIFICATION_DATE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_FILE_SIZE",
+        "type": "attribute"
+      },{
+        "id": "I_DIMENSIONS",
+        "type": "attribute"
+      },
+      {
+        "id": "I_DIMENSION_IN_INCH",
+        "type": "attribute"
+      },{
+        "id": "I_RESOLUTION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_BIT_DEPTH",
+        "type": "attribute"
+      },{
+        "id": "I_COLOR_MODE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_COLOR_PROFILE",
+        "type": "attribute"
+      },{
+        "id": "I_META_CREATOR_AUTHOR",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_CREATOR_STREET",
+        "type": "attribute"
+      },{
+        "id": "I_META_CREATOR_LOCATION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_CREATOR_STATE",
+        "type": "attribute"
+      },{
+        "id": "I_META_CREATOR_POSTAL_CODE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_CREATOR_COUNTRY",
+        "type": "attribute"
+      },{
+        "id": "I_META_CREATOR_TEL",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_CREATOR_EMAIL",
+        "type": "attribute"
+      },{
+        "id": "I_META_CREATOR_WWW",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_HEADING",
+        "type": "attribute"
+      },{
+        "id": "I_META_DESCRIPTION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_KEYWORDS",
+        "type": "attribute"
+      },{
+        "id": "I_META_LOCATION_DETAIL",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_LOCATION",
+        "type": "attribute"
+      },{
+        "id": "I_META_STATE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_COUNTRY",
+        "type": "attribute"
+      },{
+        "id": "I_META_TITEL",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_COPYRIGHT",
+        "type": "attribute"
+      },{
+        "id": "I_META_COPYRIGHT_STATUS",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_EXPOSURE_INDEX",
+        "type": "attribute"
+      },{
+        "id": "I_META_FOCAL_RANGE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_MAX_BLINDING_VALUE",
+        "type": "attribute"
+      },{
+        "id": "I_META_RECORDING_DATE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_EXPOSURE_CONTROLS",
+        "type": "attribute"
+      },{
+        "id": "I_META_LIGHT_SOURCE",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_SENSOR_TYPE",
+        "type": "attribute"
+      },{
+        "id": "I_META_BRAND",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_MODELL",
+        "type": "attribute"
+      },{
+        "id": "I_META_SERIAL_NUMBER",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_PIXEL_X_DIMENSION",
+        "type": "attribute"
+      },{
+        "id": "I_META_PIXEL_Y_DIMENSION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_HIGH_RESOLUTION",
+        "type": "attribute"
+      },{
+        "id": "I_META_WIDTH_RESOLUTION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_X_RESOLUTION",
+        "type": "attribute"
+      },
+      {
+        "id": "I_META_Y_RESOLUTION",
+        "type": "attribute"
+      }
+    ],
+     "icon" : "metadataCollection"
+  }
+]

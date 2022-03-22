@@ -1,0 +1,134 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$containerHeight: 200px;
+
+.assetUploadConfigurationSection {
+  position: relative;
+  background: #fff;
+  margin: 15px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+
+  .configurationSectionRow {
+    background-color: $color-whiteboard-left-menu-item-selected;
+    border-bottom: 1px solid #d3d3d3;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .assetExtensionConfigurationSectionContainer {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    margin: 15px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+    .extensionHeaderRow {
+      display: grid;
+      max-width: 100%;
+      grid-template-columns: 29% 29% 29% 13%;
+      background-color: $color-light-5;
+      padding: 5px 0;
+      border-bottom: 1px solid #d3d3d3;
+
+      .extensionColumnLabel {
+        font-weight: 500;
+        color: #444;
+        text-align: center;
+        white-space: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 12px;
+      }
+    }
+
+    .uploadExtensionSection {
+       .extensionRow {
+        display: flex;
+        flex-direction: row;
+
+        &:nth-child(odd) {
+          background-color: #f9f9f9;
+        }
+
+      }
+
+      .iconsWrapper {
+        flex: 0.5;
+        display: flex;
+      }
+
+      .removeIcon,.editIcon {
+        flex: 0.5;
+        opacity: .4;
+        @include background-properties($image-CS-delete-bin-black, 17px);
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+      .removeIcon {
+        @include background-properties($image-CS-delete-bin-black, 17px);
+      }
+
+      .editIcon {
+        @include background-properties($image-CS-Edit-32, 17px);
+      }
+
+      .extensionRowItem {
+        display: inline-block;
+        padding: 2px 5px;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1;
+
+        .customTextFieldViewContainer{
+          padding: 6px 0;
+          margin-left: 20px;
+          .customTextField {
+            border-radius: 2px;
+            box-shadow: 0px 0px 0px 1px #ccc;
+            border: none;
+            padding: 0 4px;
+            height: 24px;
+          }
+        }
+
+      }
+
+    }
+
+    .addNewExtensionContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+
+      .addNewExtensionSection {
+        @include background-properties($image-CS-Plus-32-black);
+        width: 20px;
+        height: 20px;
+        opacity: 0.4;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .addNewSection {
+        opacity: 0.4;
+        margin-top: 1.5px;
+        margin-left: 3px;
+      }
+    }
+
+
+  }
+
+
+}
+

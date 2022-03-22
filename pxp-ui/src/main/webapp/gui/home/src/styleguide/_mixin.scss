@@ -1,0 +1,312 @@
+//@import "./typography";
+//@import "./colors";
+
+$base-path: "../themes/basic/homescreen/images/";
+
+//----- Brand Logo -----------------------------------------------------------------------------------------------------
+$image-brand-logo: '../images/contentsphere Logo_(200x40px).png' !default;
+$brand-logo-height: 34px !default;
+$brand-logo-width: 40px !default;
+$brand-logo-max-width: 110px !default;
+$brand-logo-background-size: 34px !default;
+
+@mixin brandLogo () {
+  max-height: $brand-logo-height;
+  max-width: $brand-logo-max-width;
+  background-size: $brand-logo-background-size;
+  //background-image: url($image-brand-logo);
+}
+
+@mixin defaultLogo(){
+  height: $brand-logo-height;
+  width: $brand-logo-width;
+  background-size: $brand-logo-background-size;
+  background-image: url($base-path + $image-brand-logo);
+}
+
+@mixin no_select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+
+@mixin transform-style($property) {
+  -webkit-transform-style: $property;
+  -ms-transform-style: $property;
+  transform-style: $property;
+}
+
+@mixin perspective($property) {
+  -webkit-perspective: $property;
+  -ms-perspective: $property;
+  perspective: $property;
+}
+
+@mixin perspective_origin($property) {
+  -webkit-perspective-origin: $property;
+  -ms-perspective-origin: $property;
+  perspective-origin: $property;
+}
+
+@mixin background-linear-gradient($direction) {
+  background: -moz-linear-gradient(unquote($direction)); /* FF3.6-15 */
+  background: -webkit-linear-gradient(unquote($direction)); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(unquote($direction)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin topInlineBlock() {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin background-properties($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    background-image: url($base-path + $background-image);
+  }
+}
+
+@mixin background-properties-with-theme-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect($color-theme-accent), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-blue-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect($brand-icon-blue-color), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-gray-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#666), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-light-gray-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#8f8f8f), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-lighter-gray-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#b6b6b6), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-white-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#ffffff), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-red-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#ff0000), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-theme-green-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#2ecc71), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+
+@mixin background-properties-with-theme-black-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#000000), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-expandable-menu-with-theme-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect($brand-expandable-icon-color), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin background-properties-with-light-green-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#5AB833), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin disabled($opacity: 0.5) {
+  opacity: $opacity;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+@mixin klassChip($font-size: $font-normal) {
+  max-width: 150px;
+  @include ellipsis();
+  @include topInlineBlock();
+  padding: 0 6px;
+  height: 100%;
+  line-height: 20px;
+  font-size: $font-size;
+  background-color: $color-light-3;
+  border-radius: 10px;
+}
+
+@mixin noSelect() {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+@mixin grab() {
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+@mixin activeGrabbing(){
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+@mixin background-properties-with-gray-color($background-image, $background-size: cover, $background-position: center) {
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+  @if $background-image != "" {
+    $base-color: str-slice(inspect(#777), 2);
+    background-image: unquote('url("' + $base-path + $background-image + "?fill=%23" + $base-color +'")');
+  }
+}
+
+@mixin backButtonHeightStyle( $buttonHeight : 32px ) {
+  height: $buttonHeight;
+
+  .backButtonText {
+    line-height: $buttonHeight;
+  }
+}
+
+@mixin workFlowComponentStyle($strokeColor) {
+  stroke: $strokeColor !important;
+  stroke-width: 3px !important;
+}
+
+@mixin workFlowComponentStyleWithBorder($strokeColor , $strokeWidth) {
+  stroke: $strokeColor !important;
+  stroke-width: $strokeWidth !important;
+}
+
+@mixin modelerButton($left, $imageToShow) {
+  position: absolute;
+  top: 20px;
+  left: $left;
+  z-index: 500;
+  @include toolBarItem();
+  @include background-properties($imageToShow, 16px);
+}
+
+@mixin toolBarItem(){
+  height: 34px;
+  width: 34px;
+  float: left;
+  opacity: .7;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: $color-light-1;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  &:hover {
+    opacity: .9;
+  }
+}
+
+@mixin tabsSectionHeight( $tabSectionHeight : 37px) {
+  height: $tabSectionHeight;
+
+  .tabItem {
+    $tabItemHeight: calc(#{$tabSectionHeight} - 1px);
+    height: $tabItemHeight;
+    line-height: $tabItemHeight;
+    $tabIconImageLength: calc(#{$tabItemHeight} * 0.5);
+    $tabIconImageMargin: calc(#{$tabItemHeight} * 0.25);
+
+    .tabIconImage {
+      width: $tabIconImageLength;
+      height: $tabIconImageLength;
+      margin: $tabIconImageMargin;
+    }
+  }
+}

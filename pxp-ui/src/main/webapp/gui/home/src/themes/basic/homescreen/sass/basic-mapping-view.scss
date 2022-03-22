@@ -1,0 +1,294 @@
+@import "./../../../../styleguide/style-guide";
+/*
+.mappingConfigViewContainer {
+  height: 100%;
+
+  .mappingListViewContainer {
+    width: 25%;
+    height: calc(100% - 52px);
+    border-right: 1px solid #bbb;
+    float: left;
+  }
+
+  .mappingDetailedViewContainer {
+    width: 75%;
+    height: calc(100% - 52px);
+    display: inline-block;
+    background-image: linear-gradient(#f1f1f1, #f6f6f6);
+
+    .mappingDetailedViewBody {
+      height: 100%;
+      padding: 15px;
+      overflow: auto;
+      .mappingView {
+        .mappingNameWrapper {
+          border: 1px solid #ccc;
+          background: #fff;
+          .mappingNameElementWrapper {
+            margin: 5px;
+            position: relative;
+            .mappingNameElement {
+              padding: 4px 5px 5px 5px;
+              .mappingNameElementHeader {
+                font-size: 11px;
+                color: #838181;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-bottom: 5px;
+              }
+
+              .mappingNameElementBody {
+                .singleTextWrapper {
+                  border-bottom: 1px solid #eee;
+                  &.elementWrapper {
+
+                  }
+                  .singleText {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .mappingLinkedProcessViewWrapper{
+          border: 1px solid #ccc;
+          background: #fff;
+          width: 100%;
+          height: auto;
+          .mappingLinkedProcessElementWrapper {
+            margin: 5px;
+            position: relative;
+            .mappingLinkedProcessElement {
+              padding: 4px 5px 5px 5px;
+              .mappingLinkedProcessElementHeader {
+                font-size: 11px;
+                color: #838181;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-bottom: 5px;
+              }
+
+              .mappingLinkedProcessElementBody {
+
+                .selectionToggleView{
+                  padding: 5px 0px 2px;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+*/
+
+.mappingConfigDetail {
+  .tabLayoutView {
+
+    .tabsSection {
+      .tabsList {
+        .tabItem {
+          padding-top: 0px;
+          &.isActive {
+            box-shadow: 0 1px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 $color-theme-accent
+          }
+        }
+      }
+    }
+  }
+}
+
+.mappingSummary {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-top: none;
+
+  .summaryBlock {
+    width: 25%;
+    display: inline-block;
+    border-left: 1px solid #ccc;
+
+    &:first-child {
+      border: none;
+    }
+
+    .blockLabel {
+      font-size: 16px;
+      text-align: center;
+    }
+    .blockValue {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.mappingRows {
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow: auto;
+  height: calc(100% - 100px);
+
+  .addMappingRow {
+    @include background-properties($image-CS-Plus-32-black);
+    //position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .mappingRow {
+    padding: 10px;
+    position: relative;
+
+
+    .mappingCheckbox {
+      margin-right: 10px;
+    }
+
+    input, select {
+      padding: 4px 6px;
+      border: 1px solid #ddd;
+    }
+
+    .inputError {
+      border-color: red;
+    }
+
+    .fieldName {
+      display: inline-block;
+      width: 200px;
+    }
+    .mappingElement {
+      //display: inline-block;
+      margin: 0 20px;
+      width: 300px;
+
+      select{
+        width: 100%;
+      }
+    }
+    .isIgnored {
+      display: inline-block;
+      background-image: url($image-CS-Cancel-2-Filled-30);
+      background-size: cover;
+      width: 15px;
+      height: 15px;
+      vertical-align: middle;
+      cursor: pointer;
+
+      &.selected {
+        background-image: url($image-CS-Cancel-2-Filled-30-Red);
+      }
+    }
+
+    .addTagValue {
+      @include background-properties($image-CS-Plus-32-black);
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+      opacity: 0.5;
+      cursor: pointer;
+      vertical-align: middle;
+      margin-right: 5px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .deleteButton {
+      position: absolute;
+      right: 10px;
+      top: 16px;
+      background-image: url($image-CS-Cross);
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      opacity: 0;
+    }
+    &:hover {
+      .deleteButton {
+        opacity: 0.5;
+      }
+    }
+
+    .mappingTagValuesRow {
+      margin-left: 25px;
+      //margin-top: 10px;
+      display: inline-block;
+      width: calc(100% - 25px);
+      .tagValueRowWrapper {
+        float: left;
+        width: 100%;
+        margin-top: 5px;
+        position: relative;
+        .tagValueMappingCheckbox {
+          padding: 4px 6px;
+          border: 1px solid #ddd;
+          margin-right: 10px;
+          margin-top: 8px;
+          float: left;
+        }
+        .tagValuesWrapper {
+          width: 295px;
+          float: left;
+          .tagValueInputField {
+
+          }
+        }
+
+        .mappingElement {
+          float: left;
+        }
+
+        .isIgnored {
+          display: inline-block;
+          background-image: url($image-CS-Cancel-2-Filled-30);
+          background-size: cover;
+          width: 15px;
+          height: 15px;
+          vertical-align: middle;
+          cursor: pointer;
+
+          &.selected {
+            background-image: url($image-CS-Cancel-2-Filled-30-Red);
+          }
+        }
+
+        .deleteButton {
+          position: absolute;
+          right: 10px;
+          top: 7px;
+          background-image: url($image-CS-Cross);
+          background-size: cover;
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+          opacity: 0;
+        }
+        &:hover {
+          .deleteButton {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

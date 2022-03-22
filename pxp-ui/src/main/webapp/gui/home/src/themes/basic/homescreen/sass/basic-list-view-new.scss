@@ -1,0 +1,217 @@
+@import "./../../../../styleguide/style-guide";
+
+$listNodeHeight: 45px;
+@import "../../../../styleguide/mixin";
+@mixin rightListIcon($backgroundUrl) {
+  opacity: .5;
+  height: $listNodeHeight;
+  float: right;
+  @include background-properties-with-theme-white-color($backgroundUrl, 65%);
+  width: 20px;
+}
+
+.listViewNewContainer {
+  border-right: 1px solid $color-light-3;
+  width: 100%;
+  height: 100%;
+
+  .searchBarContainer{
+    background: #f7f7f7;
+    width: 100%;
+    float: left;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: inset 0 -1px 0 #eee;
+    flex: unset;
+
+    .simpleSearchBarView{
+      width: calc(100% - 20px);
+    }
+  }
+
+  .customHeaderView{
+    float: left;
+    height: 36px;
+    width: 100%;
+  }
+
+  .listView {
+    //border: 1px solid #F3F9FF;
+    width: 100%;
+    cursor: default;
+    overflow-y: auto;
+    height: calc(100% - 52px);
+    scrollbar-width: thin;
+    position: relative;
+
+    .listNodeViewContainer {
+      font-size: large;
+      padding: 0px 15px;
+      cursor: default;
+      overflow: hidden;
+      height: $listNodeHeight;
+      box-shadow: 0px 1px 0px 0px #f6f6f6;
+
+      .listViewIcon {
+        width: 13px;
+        height: 13px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 10px;
+        .imageFitToContainer {
+          .imageSimpleViewNoImage{
+            background-size: 100%;
+          }
+          .imageFitToContainerImage {
+            position: relative;
+            top: -2px;
+            left: unset;
+            transform: unset;
+          }
+        }
+      }
+
+      .deleteNodeIcon {
+        @include rightListIcon($image-CS-delete-bin-black);
+        display: none;
+        cursor: pointer;
+      }
+
+      &.listNodeSelected {
+        box-shadow: 0px 1px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+        background: #E0E1EE;
+      }
+
+      .listViewWrapper {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        width: calc(100% - 23px);
+        justify-content: space-between;
+
+        .listNodeViewName {
+          flex: 0 0 100%;
+          max-width: 100%;
+          .list-label {
+            font-size: 12px;
+            color: #333;
+            float: left;
+            width: calc(100% - 10px);
+            @include ellipsis
+          }
+          .nodeId {
+            margin: 0;
+            padding: 0;
+            font-style: normal;
+            border-radius: unset;
+            background: transparent;
+            width: calc(100% - 10px);
+            @include ellipsis
+          }
+        }
+
+        .listViewActionItemButtons {
+          flex: 0 0 auto;
+          align-items: center;
+          display: flex;
+        }
+
+        .nodeIconClass {
+          width: 20px;
+          height: 20px;
+          display: block;
+          float: right;
+          background-size: 16px;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0.8;
+          margin: 0 0 0 10px;
+
+          &.specialNode {
+            background-image: url($image-CS-glasses);
+          }
+        }
+        .copyToClipboard{
+          width: 15px;
+          height: 15px;
+          opacity: 0;
+          @include background-properties($image-CS-copy-to-clipboard, 16px);
+          flex: 0 0 15px;
+        }
+        .deleteOrganization {
+          width: 20px;
+          height: 20px;
+          opacity: 0;
+          @include background-properties($image-CS-delete-bin-black, 16px);
+          margin-right: 8px;
+          cursor: pointer;
+        }
+        .createClone{
+          width: 25px;
+          height: 20px;
+          opacity: 0;
+          @include background-properties($image-CS-create-clone, 16px);
+          margin-right: 8px;
+          cursor: pointer;
+        }
+
+      .listNodeViewNameInput {
+        width: calc(100% - 50px);
+        height: 18px;
+        border-radius: 2px;
+        padding-left: 2px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, 0);
+        float: left;
+      }
+
+      &:hover {
+        .deleteNodeIcon {
+          display: block;
+          &:hover {
+            opacity: .8;
+          }
+        }
+
+          .copyToClipboard {
+            opacity: 0.8;
+          }
+          .deleteOrganization {
+            opacity: 0.8;
+          }
+
+          .createClone {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .nothingFoundMessage {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #777;
+      font-style: normal;
+    }
+
+    &.LoadMoreAdded {
+      height: calc(100% - 82px);
+    }
+  }
+
+  .listViewLoadMore {
+    font-style: italic;
+    color: #777;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+}

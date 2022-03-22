@@ -1,0 +1,70 @@
+{
+    "Ltags": [
+      
+    ],
+    "Llanguages": [
+	  "fr_FR"
+    ],
+    "Ltaxonomies": [
+      
+    ],
+    "Lorganizations": [
+      "Sup1"
+    ],
+    "csid": "[R>LAng_Dep_2]",
+    "Ltypes": [
+      
+    ],
+    "Lruleviolations": [
+      {
+        "versionId": 1,
+        "code": "Rul102756",
+        "color": "red",
+        "entityType": "com.cs.core.config.interactor.entity.attribute.HTMLAttribute",
+        "description": "shortdesc",
+        "entityId": "shortdescriptionattribute",
+        "id": "Rul102756",
+        "type": "attribute"
+      }
+    ],
+    "$isstandard": false,
+    "$islanguagedependent": true,
+    "label": "LAng_Dep_2",
+    "Lrelationships": [
+      
+    ],
+    "Lphysicalcatalogids": [
+      "pim",
+      "dataIntegration"
+    ],
+    "$type": "violation",
+    "Lattributes": [
+      {
+        "entitytype": "ATTRIBUTE",
+        "Lrules": [
+          {
+            "rulelistlinkid": null,
+            "Lvalues": [
+              "2212"
+            ],
+            "Lklasslinkids": [
+              
+            ],
+            "attributelinkid": null,
+            "entitytype": "",
+            "$code": "Rul102755",
+            "comparewithsysdate": false,
+            "from": "0",
+            "to": "0",
+            "type": "contains"
+          }
+        ],
+        "entityattributetype": "HTML_ATTRIBUTE_TYPE",
+        "$code": "Att102754",
+        "entityid": "longdescriptionattribute"
+      }
+    ],
+    "Lnormalizations": [
+      
+    ]
+  }

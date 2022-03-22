@@ -1,0 +1,252 @@
+@import "../../../../styleguide/mixin";
+@import "basic-tab-layout-view";
+@import "../../../../styleguide/style-guide";
+
+.settingScreenContainerWrapper {
+  height: 100%;
+  width: 100%;
+  .settingScreenViewContainer {
+    width: 100%;
+    height: 100%;
+    //padding: 10px;
+    background-color: #eee;
+
+    .settingScreenBodyViewContainer {
+      height: 100%;
+      display: inline-flex;
+      width: 100%;
+      .linksContainer {
+        background: $color-dark-2;
+        .expandableMenuListView {
+          height: 100%;
+          background: $brand-expandable-menu-bg-color;
+          border: none;
+
+          &.expanded {
+            width: 180px;
+          }
+
+          &.collapsed {
+            width: 40px;
+          }
+
+          .listItemsSection {
+            padding: 5px 0px;
+
+            .listItem {
+              width: 100%;
+              margin: 0px;
+
+              .labelSection {
+                color: $brand-expandable-menu-label-color;
+                opacity: 0.7;
+                line-height: 41px;
+              }
+
+              .treeNodeIcon {
+                //filter: $brand-header-all-btn-color;
+                opacity: 0.7;
+                &.tabDataModel {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-module-filled-50);
+                }
+                &.tabPartnerAdmin {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-user-shield-50);
+                }
+                &.tabCollaboration {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-services-50);
+                }
+                &.tabDataGovernance {
+                  @include background-properties-expandable-menu-with-theme-color($image-Policy-Document-50);
+                }
+                &.tabDataIntegration {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-data-integration-000-50);
+                }
+                &.tabTranslationConfiguration {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-icons8-google-translate);
+                }
+                &.tabAdminConfiguration {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-admin-config-50);
+                }
+                &.tabMonitoring {
+                  @include background-properties-expandable-menu-with-theme-color($image-CS-monitoring);
+                }
+              }
+
+              &.selected {
+                background: $brand-expandable-menu-selected-bg-color;
+                position: relative;
+                opacity: 1;
+                &::after{
+                  content: "";
+                  width: 2px;
+                  height: 100%;
+                  background: $brand-sidebar-after-color;
+                  left: 0;
+                  position: absolute;
+                }
+              }
+            }
+          }
+
+          .toggleButtonSection {
+            background: $brand-expandable-menu-selected-bg-color;
+
+            .toggleButtonSectionIcon {
+              @include background-properties-with-theme-white-color($image-CS-double-left, 15px);
+              filter: $brand-header-all-btn-color;
+            }
+          }
+        }
+      }
+
+      .settingScreenTabBodyViewWrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        //padding: 10px;
+
+        .leftSectionContainer {
+          flex: 0 0;
+
+          .expandableMenuListView {
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+
+            .listItemsSection {
+              .listItem {
+                .iconSection {
+                  .iconContainer {
+                    .treeNodeIcon {
+                      //filter: invert(1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .rightSectionContainer {
+          flex: 1 0;
+          border: 1px solid #eee;
+          overflow: hidden;
+
+          .rightSectionBodyViewWrapper {
+            height: calc(100% - 45px);
+            padding: 15px;
+            .rightSectionBodyView {
+              background-color: #fff;
+              height: 100%;
+              box-shadow: 0 0 0 1px $color-light-4;
+              border-radius: 3px;
+              overflow: hidden;
+            }
+          }
+
+          .rightSectionBodyView {
+            .taxonomyMasterListConfigView {
+              .taxonomyMasterListHeaderContainer {
+                .configHeaderView {
+                  .customHeaderView {
+                    .tabsList {
+                      display: inline-block;
+                      .tabItem {
+                        background-color: #fff;
+                        border: 2px solid #3248A7;
+                        box-shadow: none;
+
+                        &.isActive {
+                          background-color: #3248A7;
+                          color: #fff;
+                          font-weight: 400;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.gridViewInside {
+            border: none;
+          }
+          .configGridViewContainer {
+            width: 100%;
+            height: 100%;
+
+            .gridView {
+              //padding: 20px 20px 0 20px;
+              padding: 0px;
+              height: 100%;
+
+              .gridViewMiddleSectionWrapper{
+                //overflow-x: auto;
+                //width: 100%;
+                //overflow-y: hidden;
+                //padding-bottom: 12px;
+
+                .gridViewTableContainerSibling{
+                  //bottom: 10px;
+                }
+                .gridViewTableContainer {
+                  .customTextFieldViewContainer {
+                    .customTextField {
+                      &.isDisabled {
+                        span {
+                          @include ellipsis();
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .gridViewLowerSection {
+                padding-right: 1px; //for showing pagination section's right box-shadow
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tabLayoutViewBasicWithDarkBackgound{
+    .tabLayoutView{
+      .tabsList {
+
+        .tabItem {
+          @include topInlineBlock();
+          @include ellipsis();
+          background-color: $color-light-3;
+          box-shadow: 0 0 0 1px $color-light-4;
+          color: $color-dark-4;
+
+          .tabIconImage {
+            float: left;
+            position: relative;
+            overflow: hidden;
+          }
+
+          &:hover {
+            color: $color-dark-2;
+            background-color: $color-light-2;
+          }
+
+          &.isActive {
+            box-shadow: 0 2px 0 0 $color-light-1, 0 0 0 1px $color-light-3, inset 0 3px 0 0 $color-theme-accent;
+            cursor: default;
+          }
+
+          &.isActive:hover {
+            background-color: $color-light-1;
+          }
+        }
+      }
+    }
+    .tabLayoutView .bodySection{
+      border: none;
+    }
+
+  }
+}

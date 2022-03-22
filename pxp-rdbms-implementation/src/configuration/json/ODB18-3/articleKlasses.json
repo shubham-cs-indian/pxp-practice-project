@@ -1,0 +1,107 @@
+[
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "article",
+    "code": "article",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "-1"
+    },
+    "isAbstract": true,
+    "natureType": "",
+    "isStandard": true,
+    "isNature": false,
+    "isAllowedAtTopLevel": true
+  },
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "product_types",
+    "code": "product_types",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "article"
+    },
+    "isAbstract": true,
+    "natureType": "",
+    "isStandard": true,
+    "isNature": false,
+    "isAllowedAtTopLevel": true
+  },
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "attribute_classes",
+    "code": "attribute_classes",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "article"
+    },
+    "isAbstract": true,
+    "natureType": "",
+    "isStandard": true,
+    "isNature": false,
+    "isAllowedAtTopLevel": true
+  },
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "single_article",
+    "code": "single_article",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "product_types"
+    },
+    "sections": [
+      {
+        "propertyCollectionId": "articlegeneralInformationPropertyCollection"
+      },
+      {
+        "propertyCollectionId": "pricingPropertyCollection"
+      }
+    ],
+    "isDefaultChild": true,
+    "natureType": "singleArticle",
+    "isStandard": true,
+    "isNature": true,
+    "isAllowedAtTopLevel": true
+  },
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "fileklass",
+    "code": "fileklass",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "-1"
+    },
+    "isAbstract": true,
+    "isDefaultChild": true,
+    "natureType": "singleArticle",
+    "isStandard": true,
+    "isNature": true,
+    "isAllowedAtTopLevel": true
+  },
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "golden_article_klass",
+    "code": "golden_article_klass",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "-1"
+    },
+    "natureType": "",
+    "isStandard": true,
+    "isNature": false,
+    "isAllowedAtTopLevel": true
+  },
+  {
+    "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+    "id": "marker",
+    "code": "marker",
+    "parent": {
+      "type": "com.cs.config.interactor.entity.concrete.klass.ProjectKlass",
+      "id": "-1"
+    },
+    "natureType": "",
+    "isStandard": true,
+    "isNature": false,
+    "isAllowedAtTopLevel": true
+  }
+]

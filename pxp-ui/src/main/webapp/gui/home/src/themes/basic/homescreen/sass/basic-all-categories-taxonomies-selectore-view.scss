@@ -1,0 +1,364 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$summaryWidth: 220;
+$allCategoriesWidth: ($summaryWidth + 10) + "px";
+.allCategoriesTaxonomiesWrapper {
+  height: 100%;
+  width: 100%;
+  float: left;
+  height: inherit;
+  .allCategoriesUpperView {
+    padding: 20px;
+    width: 100%;
+    float: left;
+    height: 444px;
+    .allCategoriesInnerWrapper {
+      border: 1px solid #d9d9d9;
+      border-radius: 3px;
+      width: calc(100% - #{$allCategoriesWidth});
+      margin: 0 10px 0px 0;
+      float: left;
+      height: 405px;
+
+      .treeSearchBarContainer {
+        background: #f7f7f7;
+        padding: 8px;
+
+        .simpleSearchBarView {
+          border: 1px solid #D9D9D9;
+
+          .simpleSearchBarClearButton{
+            @include background-properties-with-gray-color($image-CS-Cross, 15px);
+          }
+        }
+      }
+
+      .allCategoriesSearchViewWrapper {
+        height: calc(100% - 50px);
+        overflow: auto;
+        width: 100%;
+        scrollbar-width: thin;
+
+        .headerWrapper {
+          margin-left: 10px;
+          .header {
+            padding: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            height: 30px;
+            line-height: 30px;
+            @include ellipsis();
+          }
+          .nothingFoundMsg {
+            font-size: 13px;
+            font-weight: 500;
+            color: #9A9A9A;
+            padding: 5px;
+          }
+        }
+        .searchViewLeftSide {
+          width: 50%;
+          float: left;
+          height: fit-content;
+          border-right: 1px solid #d9d9d9;
+          min-height: 100%;
+        }
+         .searchViewRightSide {
+           width: 50%;
+           float: left;
+           min-height: 100%;
+           height: fit-content;
+         }
+        .treeViewWrapper {
+          border: none;
+          overflow: hidden;
+          height: auto;
+          min-height: 100px;
+          width: 100%;
+          .treeLevelContainer {
+            height: auto;
+            float: left;
+            min-height: inherit;
+            .treeWrapper {
+              width: 100%;
+              .treeLevel {
+                width: 100%;
+                margin: 0;
+                overflow: hidden;
+                .treeNode{
+                  .treeNodeIconLabelDOM{
+                    align-items: center;
+                  }
+                }
+              }
+            }
+            > .levelHeader {
+              font-size: 12px;
+              font-weight: 500;
+              height: 30px;
+              line-height: 30px;
+              padding: 10px 20px;
+            }
+            .nothingFoundInnerContainer{
+              top:unset;
+              transform: unset;
+              position: relative;
+              left:unset;
+              .nothingFoundIcon{
+                display: none;
+              }
+              .nothingFoundMsg{
+                font-size:13px;
+                font-weight: 500;
+                color:#9A9A9A
+              }
+            }
+          }
+        }
+      }
+
+      .allCategoriesTreeViewWrapper {
+        width: 100%;
+        float: left;
+        height: calc(100% - 48px);
+        overflow: auto hidden;
+        scrollbar-width: thin;
+
+        .allCategoriesScroll {
+          height: 100%;
+
+          .allCategories {
+            width: 180px;
+            float: left;
+            padding: 10px;
+            border-right: 1px solid #EBEBEB;
+            height: 100%;
+
+            .listCategories {
+              width: 100%;
+              padding: 8px;
+              font-weight: 500;
+              color: #5D5D5D;
+              cursor: pointer;
+
+              &.selected{
+                background-color: #E4E7F7;
+                @include background-properties-with-gray-color($image-CS-arrow-forward, 15px, center right 5px)
+              }
+            }
+          }
+        }
+
+        &.natureClasses, &.attributionClasses {
+          .allCategoriesScroll {
+            width: 100%;
+            .treeViewWrapper {
+              .treeLevelContainer {
+                .treeWrapper {
+                  width: 100%;
+                  .treeLevel {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.taxonomies {
+          .allCategoriesScroll {
+            width: max-content;
+            .treeViewWrapper {
+              .treeLevelContainer {
+                width: max-content;
+              }
+            }
+          }
+        }
+      }
+      .treeViewWrapper {
+        width: calc(100% - 180px);
+        float: left;
+        height: 100%;
+        border: none;
+
+        .treeLevelContainer {
+          overflow-x: hidden;
+          height: 100%;
+          .treeWrapper{
+            padding: 0px 0 0px 10px;
+            .treeLevel{
+              .levelHeader{
+                padding:5px;
+              }
+              .levelListItems{
+                .treeLevelView{
+                  .treeNode{
+                    .treeNodeIconLabelDOM{
+                      align-items: center;
+                      .treeNodeLabel{
+                        width:auto;
+                      }
+                      .showCount{
+                        margin-left: 4px;
+                        color: $color-dark-6;
+                        font-size: 12px;
+                        opacity: 1;
+                      }
+                    }
+                    .rightSideActionButton{
+                      .treeNodeIcon{
+                        &.treeLastNodeIcon{
+                          @include background-properties($image-CS-LastNode, 30px);
+                        }
+                      }
+                    }
+                  }
+                  .loadMore{
+                    transform: none;
+                    left: unset;
+                  }
+                }
+              }
+            }
+          }
+          .nothingFoundViewContainer {
+            .nothingFoundInnerContainer {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+    .summaryViewWrapper {
+      width: $summaryWidth + px;
+      float: right;
+      height: 405px;
+      border: 1px solid #d9d9d9;
+      border-radius: 3px;
+      background: #f7f7f7;
+      padding: 20px 0 20px 20px;;
+
+      .treeWrapperSummaryView {
+        height: 100%;
+        .treeViewSummary {
+          height: calc(100% - 40px);
+          overflow-y: auto;
+          padding-right: 20px;
+          .treeViewWrapper {
+            border: none;
+            height: auto;
+            .treeLevelContainer {
+              .nothingFoundViewContainer {
+                display: none;
+              }
+              .treeWrapper {
+                width: inherit;
+                padding: 0;
+                .treeLevel {
+                  width: inherit;
+                  margin-right: 0px;
+                  .levelHeader {
+                    padding: 0px;
+                    color: #5d5d5d;
+                    font-weight: bold;
+                  }
+                  .levelListItems {
+                    .treeLevelView {
+                      margin-right: 0px;
+                      .treeNode {
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        .treeNodeIconLabelDOM {
+                          display: block;
+                          width: calc(100% - 20px);
+                          float: left;
+                          .treeNodeLabel {
+                            width: calc(100% - 40px);
+                          }
+                          .treeNodeIcon{
+                            float: left;
+                          }
+                          .showCount {
+                            display: none;
+                            color: $color-dark-6;
+                            font-size: 12px;
+                            opacity: 1;
+                          }
+                        }
+                        .rightSideActionButton{
+                          width:16px;
+                          float: right;
+                          .treeNodeIcon{
+                            &.removeButtonIcon{
+                              @include background-properties-with-gray-color($image-CS-Cross, 16px);
+                              width: 16px;
+                              height:16px;
+                              opacity: 0;
+                            }
+                          }
+                        }
+                        &:hover{
+                          .rightSideActionButton {
+                            .treeNodeIcon {
+                              &.removeButtonIcon {
+                                opacity: 1;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .nothingFoundViewContainer {
+                .nothingFoundInnerContainer {
+                  position: relative;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .clearSelection{
+        width:calc(100% - 20px);
+      }
+      .summaryTitle{
+        font-weight: bold;
+        color:#5D5D5D;
+        padding-right: 20px;
+      }
+      .nothingFoundMsg{
+        font-size:12px;
+      }
+    }
+  }
+  .actionButtonView{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+    padding: 8px;
+
+    .okBtn{
+      float: right;
+    }
+    .organiseBtn{
+      float: right;
+    }
+    .cancel{
+      float: right;
+    }
+    .apply{
+      float: right;
+    }
+  }
+}
+
+div {
+  scrollbar-width: thin;
+}

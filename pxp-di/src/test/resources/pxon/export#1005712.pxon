@@ -1,0 +1,4 @@
+[
+"bgp 1005712 started 2020-02-05T19:20:37",
+"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"pim\",\"localeInheritance\":[\"DI\",\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":true,\"baseEntityIIDs\":[1014096]}","Base Entity Export batch 1 with batch size of 1",{"csid":"[e>FAM#4242 $iid=1014096 $nature=Article $catalog=pim $type=ARTICLE]","$baselocale":"fr_FR","_level":1,"$embdtype":"UNDEFINED","LEmbd":"","Lrecord":[],"LClassifier":""},"bgp 1005712 ended 2020-02-05T19:20:38"
+]

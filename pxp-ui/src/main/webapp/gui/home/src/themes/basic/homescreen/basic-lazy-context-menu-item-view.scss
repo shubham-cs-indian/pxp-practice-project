@@ -1,0 +1,10 @@
+.contextMenuView {
+
+  &.lazyContextMenuItemView {
+    max-width: 600px;
+    .contextMenuList {
+      max-height: none;
+      overflow: unset;
+    }
+  }
+}

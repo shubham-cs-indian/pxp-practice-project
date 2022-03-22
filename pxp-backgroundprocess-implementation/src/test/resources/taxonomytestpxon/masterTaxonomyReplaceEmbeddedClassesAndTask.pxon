@@ -1,0 +1,43 @@
+    [
+  {
+    "Ltasks": [
+      "R_Task2"
+    ],
+    "csid": "[c>R_Taxonomy_new_2 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "Watsap",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "Jembeddedclasses": {
+      "R_EMB2": {
+        "$couplings": [
+           {
+          "code": "addressattribute",
+          "couplingType": "tightlyCoupled",
+          "id": "addressattribute",
+          "type": "attribute"
+        }
+        ],
+        "label": "R_EMB2"
+      }
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "LLevelCode": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  }
+]

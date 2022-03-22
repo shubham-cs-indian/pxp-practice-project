@@ -1,0 +1,60 @@
+@import "./../../../../styleguide/style-guide";
+.imageSimpleViewImage{
+
+  &.hiddenImage{
+    opacity: 0;
+  }
+}
+
+.imageSimpleViewNoImage {
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+  opacity: .4;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url($image-CS-ImageFile);
+
+  &.imageWrapper {
+    opacity: 1;
+  }
+}
+
+.loadingWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imageAnnotationViewWrapper{
+  display: inline-block;
+  position: relative;
+  cursor: crosshair;
+  max-height: 100%;
+}
+
+.annotationTooltipHeader{
+  font-size: 16px;
+  margin: 2px;
+}
+
+.annotationTooltipText{
+  width : 100%;
+  text-align : left;
+  font-size: 12px;
+  margin: 2px;
+}
+
+.annotationTooltipValuesWrapper{
+  width : 100%;
+  text-align : left;
+  font-size: 8px;
+  margin: 2px;
+}
+
+.annotationTooltipTextValues{
+  font-style: italic;
+}
+

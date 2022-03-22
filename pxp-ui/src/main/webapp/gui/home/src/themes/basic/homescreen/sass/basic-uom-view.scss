@@ -1,0 +1,428 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.loadingAnimationContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 2;
+  //background: transparent;
+  opacity: 0.8;
+  background-color: #fff;
+
+  /*.loaderContainer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.8;
+    background-color: black;
+    z-index: 10000;
+    transition: opacity .2s;*/
+
+    & > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  //}
+}
+
+.uomView {
+  background-color: #fff;
+  //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 0 1px #eee;
+  border-radius: 2px;
+  padding: 10px;
+
+  .tableViewWrapper {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: #fff;
+    padding: 0;
+
+    .tableViewContainer {
+      clear: both;
+      margin: 10px 0 0 0;
+
+      .tableView {
+        padding-right: 0px;
+      }
+    }
+
+    .tableViewPagination {
+      padding: 5px 0;
+      position: relative;
+      height: 50px;
+    }
+  }
+  $columnOrganiserButtonHeight: 28px;
+
+  .columnOrganiserButton {
+    height: $columnOrganiserButtonHeight;
+    width: auto;
+    border-radius: 3px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #d6d6d6;
+    cursor: pointer;
+
+    .buttonLabel {
+      padding: 0 5px;
+      font-size: 11px;
+      line-height: $columnOrganiserButtonHeight;
+      float: left;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #7a7a7a;
+      max-width: 120px;
+      @include ellipsis();
+    }
+
+    .selectedColumnCount {
+      width: 20px;
+      float: left;
+      line-height: 20px;
+      background-color: rgb(235, 235, 235);
+      border-radius: 50%;
+      text-align: center;
+      margin: 5px;
+      @include ellipsis();
+    }
+
+    .buttonIcon {
+      height: $columnOrganiserButtonHeight;
+      width: 20px;
+      float: left;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      opacity: .8;
+      background-image: url($image-CS-expand-arrow-icon);
+    }
+
+    &.darkBlue {
+      background-color: $color-theme-accent;
+      .buttonLabel {
+        color: $color-light-1;
+      }
+      .buttonIcon {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .filterRowWrapper {
+    width: 100%;
+    min-height: 40px;
+    display: block;
+    .columnOrganiserButton {
+      float: right;
+    }
+  }
+  .uomGridViewWrapper {
+    height: 100%;
+
+    .gridView {
+      .gridViewUpperSection{
+        padding-top: 0;
+        .upperSectionButtonsContainer {
+          .headerButton {
+            box-shadow: none;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            width: 34px;
+            height: 26px;
+            background-color: transparent;
+
+            .headerButtonIcon{
+              &.organizeGridEditProperties{
+                @include background-properties($image-CS-grid-edit-view-black, 14px);
+              }
+            }
+          }
+        }
+      }
+      .gridViewMiddleSection {
+        .gridViewMiddleSectionWrapper {
+            .gridViewTableContainer {
+              border-left: 1px solid $color-light-3;
+              .gridViewTable {
+                .leftFixedSection, .centralScrollableSection, .rightFixedSection {
+                  //padding-bottom: 10px;
+                }
+                @-moz-document url-prefix() {
+                  .leftFixedSection ,.centralScrollableSection ,.rightFixedSection {
+                    padding-bottom: 0;
+                  }
+                }
+              }
+            }
+          @-moz-document url-prefix() {
+            .gridViewTableContainerSibling {
+              bottom: 20px;
+              position: relative;
+            }
+          }
+          .gridViewTableContainerSibling {
+            bottom:0
+          }
+        }
+      }
+    }
+
+    .numberLocaleInput {
+      &.isDisabled {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+  .gridView {
+    padding: 20px 0;
+    .gridPropertyView .gridTagView.disabled{
+      width:100%;
+    }
+    .gridPropertyView {
+     .multiClassificationSectionView {
+       border: none;
+       margin: 0px;
+     }
+    }
+  }
+  .gridViewTableContainerSibling {
+    height: 10px;
+  }
+}
+
+.tableOperationsView {
+  /*display: inline-block;
+  justify-content: flex-start;*/
+  width: 100%;
+  height: 30px;
+
+    /*.createButton, .createButtonDisabled {
+      float: left;
+      margin-right: 10px;
+      height: 30px;
+      width: 70px;
+      padding: 0 5px;
+      border-radius: 3px;
+      cursor: pointer;
+      background-color: #616367;
+      background-size: 16px;
+      //background-position: 50%;
+      //background-repeat: no-repeat;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+      //background-image: url('./../images/Plus-32_White.png');
+      color: #eee;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 30px;
+      font-size: 11px;
+      text-align: center;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }*/
+
+    /*.createButtonDisabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+      &:hover {
+        opacity: 0.6;
+      }
+    }*/
+
+    /*.saveButton {
+      float: right;
+      margin-right: 10px;
+      height: 30px;
+      width: 70px;
+      padding: 0 5px;
+      border-radius: 3px;
+      cursor: pointer;
+      background-color: #616367;
+      background-size: 16px;
+      //background-position: 50%;
+      //background-repeat: no-repeat;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+      //background-image: url('./../images/Plus-32_White.png');
+      color: #eee;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 30px;
+      font-size: 11px;
+      text-align: center;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }*/
+
+    /*.discardButton {
+      float: right;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 30px;
+      width: 70px;
+      padding: 0 5px;
+      border-radius: 3px;
+      cursor: pointer;
+      //background-color: #616367;
+      background-size: 16px;
+      //background-position: 50%;
+      //background-repeat: no-repeat;
+      //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+      //background-image: url('./../images/Plus-32_White.png');
+      //color: #eee;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 30px;
+      font-size: 11px;
+      text-align: center;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }*/
+
+  .simpleSearchBarView {
+    margin-right: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 5px;
+  }
+
+  .contextMenuViewNewContainer {
+    float: right;
+    /*margin-left: auto;*/
+    margin-right: 5px;
+  }
+
+
+  .dateRangeSelectorView {
+    float: left;
+    margin: 0 10px 0 0;
+    .customDatePickerDisabledValue{
+      font-size: 11px;
+      line-height: 26px;
+      height: 26px;
+      display: inline-block;
+      margin: 0;
+    }
+    .dateRangeSelector {
+      float: left;
+      border-radius: 3px;
+      background-color: #dfdfdf;
+      display: grid;
+      grid-template-columns: calc(50% - 13px) calc(50% - 13px) 22px;
+      grid-gap: 2px;
+      &.isSelected {
+        background-color: #606060;
+
+        .dateSelectorLabel {
+          color:#fff;
+        }
+        .currentDateSelectorIcon {
+          opacity: 1;
+          @include background-properties-with-theme-white-color($image-CS-Today-48, 18px, 50%)
+        }
+        .infinityButton {
+          @include background-properties($image-Infinity-Filled-32, 18px, 0 5px);
+          filter:invert(0);
+
+        }
+
+        &.addClearIcon {
+          grid-template-columns: calc(50% - 25px) calc(50% - 25px) 22px 22px;
+          grid-gap: 2px;
+        }
+      }
+
+      .infinityButton {
+        @include background-properties-with-gray-color($image-Infinity-Filled-32, 18px, 0 5px);
+        cursor: pointer;
+        opacity: 0.4;
+        filter:invert(1);
+        width: 20px;
+        height: 26px;
+        display: inline-block;
+        flex: 0 0 20px;
+      }
+
+      .dateSelector {
+        height: 30px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        vertical-align: top;
+        .dateSelectorLabel {
+          float: left;
+          display: inline-block;
+          vertical-align: top;
+          font-size: 11px;
+          padding: 0px 5px 0 10px;
+          text-transform: uppercase;
+          font-weight: 500;
+          line-height: 30px;
+          flex:auto;
+          min-width: 35px;
+        }
+        .datePicker {
+          display: inline-block;
+          vertical-align: top;
+          overflow: hidden;
+          padding-right: 0;
+          width: 75px;
+          flex: 0 0 75px;
+
+          .customDatePickerWrapper {
+            overflow: hidden;
+            line-height: 30px;
+
+            input {
+              color: #fff
+            }
+          }
+          .customDatePickerEmptyButton {
+            display: none;
+          }
+        }
+      }
+
+      .currentDateSelectorIcon {
+        height: 30px;
+        width: 22px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        @include background-properties-with-gray-color($image-CS-Today-48, 18px, 50%)
+      }
+
+      .selectedRangeClearButton {
+        color: #fff;
+        display: inline-block;
+        vertical-align: top;
+        height: 30px;
+        width: 22px;
+        @include background-properties-with-theme-white-color($image-CS-Cross, 16px, center);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .customMaterialButton {
+    float: left;
+  }
+  @-moz-document url-prefix() {
+    .customMaterialButton {
+      width: auto;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "./../../../../styleguide/style-guide";
+.tagSelectorView{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+
+  .addTagGroupView{
+    width: 100%;
+    float: left;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+
+    .addItemHandler {
+      height: 22px;
+      width: auto;
+      position: relative;
+      float: left;
+      display: inline-block;
+      background-size: 15px;
+      text-align: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      border: 1px solid #d2d2d2;
+      border-radius: 5px;
+      line-height: 18px;
+      padding: 0 10px 0 20px;
+      color: #9c9c9c;
+      font-size: 11px;
+
+      &:before {
+        content: '+';
+        width: 10px;
+        height: 10px;
+        font-size: 15px;
+        position: absolute;
+        left: 5px;
+        top: 0;
+        color: #aaa;
+      }
+
+      &:hover {
+        color: #808080;
+        border-color: #9a9a9a;
+
+        &:before {
+          color: #808080;
+        }
+      }
+    }
+  }
+
+  .selectedTagGroupsContainer{
+    width: 100%;
+    float: left;
+    display: inline-block;
+    padding: 2px;
+
+    .selectedTagContainerHeader{
+      float: left;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+
+    .selectedTagGroupsListView{
+      width: 100%;
+      padding: 2px;
+      float: left;
+      display: inline-block;
+
+      .selectedTagView{
+        float: left;
+        width: 100%;
+        padding: 0 2px;
+        display: flex;
+        border: 1px solid #e0dddd;
+        margin: 2px;
+        border-radius: 4px;
+        align-items: center;
+
+        .selectedTagLabel{
+          max-width: 300px;
+          padding: 2px;
+        }
+
+        .selectedTagMSSViewContainer{
+          flex-grow: 1;
+          padding: 2px;
+        }
+
+        .selectedTagRemoveButtonContainer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+          height: auto;
+
+          .selectedTagRemoveButton{
+            height: 25px;
+            width: 25px;
+            opacity: 0.5;
+            cursor: pointer;
+            @include background-properties($image-CS-Cross,75%,50%);
+
+            &:hover{
+              opacity: 1;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

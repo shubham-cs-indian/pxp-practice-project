@@ -1,0 +1,72 @@
+@import "../../../../styleguide/style-guide";
+
+.variantImageSelectionViewContainer {
+  /*padding: 20px;*/
+  padding: 0;
+  height: 100%;
+  background-color: #fafafa;
+  overflow: auto;
+
+  .variantImageContainer {
+    height: 190px;
+    width: 190px;
+    float: left;
+    margin: 10px;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+    background-color: $color-light-1;
+
+    .imageWrapper {
+      /*height: 100%;*/
+      height: calc(100% - 35px);
+      width: 100%;
+      position: relative;
+      //border-radius: 50%;
+      overflow: hidden;
+
+      .variantImage {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+      }
+    }
+
+    .imageLabel {
+      width: 100%;
+      font-size: 12px;
+      height: 35px;
+      color: #555;
+      padding: 2px;
+      font-weight: 500;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+
+    &.selected {
+      border: 1px solid orange;
+      border-radius: 2px;
+    }
+  }
+
+  .assets-not-found-container {
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    opacity: 0.7;
+    transform: translate(0, -50%);
+    .assets-not-found-message {
+      display: inline-block;
+      font-size: 25px;
+      text-align: center;
+      color: #777;
+    }
+  }
+}

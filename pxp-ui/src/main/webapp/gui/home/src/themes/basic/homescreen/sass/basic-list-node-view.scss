@@ -1,0 +1,164 @@
+@import "./../../../../styleguide/style-guide";
+$listNodeHeight:30px;
+
+@import "../../../../styleguide/mixin";
+@mixin rightListIcon($backgroundUrl) {
+  opacity: .5;
+  height: $listNodeHeight;
+  float: right;
+  background: url($backgroundUrl) 0 2px no-repeat;
+  width: 20px;
+  background-position: center;
+  background-size: 65%;
+}
+
+.listViewContainer {
+  border-right: 1px solid $color-light-3;
+  width: 100%;
+  height: calc(100% - 55px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  .listView {
+    width: 100%;
+    cursor: default;
+
+    .listNodeViewContainer {
+      font-size: large;
+      padding: 0px 6px;
+      cursor: default;
+      overflow: hidden;
+      height: $listNodeHeight;
+      box-shadow: 0px 1px 0px 0px #f6f6f6;
+
+      .rightIconContainer {
+        float: right;
+      }
+
+      .activeNodeIcon {
+        @include rightListIcon($image-CS-Edit-32);
+        display: block;
+      }
+
+      .deleteNodeIcon {
+        @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 65%);
+        display: none;
+        opacity: .5;
+        height: $listNodeHeight;
+        float: right;
+        width: 20px;
+        cursor: pointer;
+      }
+
+      .nodeIconClass {
+        width: 20px;
+        height: 20px;
+        display: block;
+        float: right;
+        background-size: 16px;
+        background-color: #ddd;
+        border-radius: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        margin-top: 5px;
+
+        &.specialNode {
+          background-image: url($image-CS-glasses);
+        }
+      }
+
+      &.listNodeSelected {
+        box-shadow: 0px 2px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+        background: rgba(99, 99, 99, 0.17);
+      }
+
+      .listViewCheckBox {
+        width: 18px;
+        height: 18px;
+        float: left;
+        opacity: .6;
+
+        &.listViewCheckBoxChecked {
+          background: url($image-CS-Checked-48Black) no-repeat 0px 4px;
+          background-size: 11px;
+        }
+        &.listViewCheckBoxUnChecked {
+          background: url($image-CS-Unchecked-Checkbox-48-Material) no-repeat 0px 4px;
+          background-size: 11px;
+        }
+      }
+
+      .listNodeViewName {
+        font-size: 12px;
+        color: #333;
+        float: left;
+        line-height: $listNodeHeight;
+        max-width: calc(100% - 20px);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
+
+      .listNodeViewNameInput {
+        width: calc(100% - 50px);
+        height: 18px;
+        border-radius: 2px;
+        padding-left: 2px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, 0);
+        float: left;
+      }
+
+      &:hover {
+        .deleteNodeIcon {
+          display: block;
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+    }
+
+    .nothingFoundMessage {
+      box-shadow: 0 1px 0 0 #f6f6f6;
+    }
+  }
+
+  .listViewLoadMore {
+    font-style: italic;
+    color: #777;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+.listSearchBar {
+  position: relative;
+  height: 35px;
+
+  .listSearchInput {
+    margin: 5px;
+    border-radius: 4px;
+    padding-left: 25px;
+    width: calc(100% - 10px);
+    height: 25px;
+    border: 1px solid #CCC;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+
+  .searchBarIcon {
+    background-image: url($image-CS-SearchFilled-32);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+  }
+}

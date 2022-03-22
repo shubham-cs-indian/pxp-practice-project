@@ -1,0 +1,2572 @@
+/*
+ ************************Please Dont modify this file***************************
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+$gridViewTableHeaderHeight: 32px;
+$gridViewTableHeaderHeightWithSubHeader: 44px;
+$gridViewTableHeaderHeightWithFilter: 65px;
+$gridViewSubHeaderAndFilterHeight: 80px;
+.processSaveAsDialog, .mappingSaveAsDialog, .endpointSaveAsDialog {
+  .gridView {
+    &.withoutUpperAndLowerSection {
+      .gridRowContainer {
+        &.gridViewRow:last-child {
+          margin-bottom: 10px;
+          @-moz-document url-prefix() {
+            .gridViewCell{
+              .gridPropertyView{
+                .customTextFieldViewContainer {
+                  min-height: 43px;
+                  padding: 5px 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.gridView {
+
+  &.gridViewContainer {
+    padding: 20px;
+    height: calc(100% - 28px); //28px for actionBarViewContainer
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    &.withoutUpperAndLowerSection {
+      display: block;
+    }
+
+    .gridViewUpperSection {
+      width: 100%;
+      height: 52px;
+      flex: 0 0 52px;
+      display: flex;
+      padding: 10px 10px 0px 10px;
+      border-bottom: none;
+      background-color: #fff;
+
+      .searchBarContainer {
+        flex: 1 1 0;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+
+        .simpleSearchBarView {
+          border-radius: 3px;
+          border: solid 1px $color-light-4;
+        }
+      }
+
+      .saveOrDiscardButton {
+        @include topInlineBlock();
+        margin-left: 10px;
+
+        &.save {
+          margin-right: 20px;
+        }
+      }
+
+      .upperSectionButtonsContainer {
+        flex: 5 1 0;
+        height: 100%;
+        display: inline-flex;
+        justify-content: flex-end;
+        vertical-align: top;
+
+        overflow: hidden;
+        .translationScreenActionButtonWrapper {
+          float: left;
+          display: flex;
+
+          .propertiesLabel {
+            float: left;
+            line-height: 32px;
+            margin-right: 5px;
+            margin-left: 5px;
+          }
+          .contextMenuViewNewContainer {
+            float: left;
+            .columnOrganiserButton {
+              $columnOrganiserButtonHeight: 32px;
+              overflow: hidden;
+              border: solid 1px $color-light-4;
+              height: $columnOrganiserButtonHeight;
+              width: auto;
+              border-radius: 3px;
+              float: left;
+              background-color: #fff;
+              cursor: pointer;
+              margin: 0 5px;
+
+              .buttonLabel {
+                padding: 0 5px;
+                font-size: 11px;
+                line-height: $columnOrganiserButtonHeight;
+                float: left;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: #7a7a7a;
+                max-width: 120px;
+                @include ellipsis();
+              }
+
+              .selectedColumnCount {
+                width: 20px;
+                float: left;
+                line-height: 20px;
+                background-color: rgb(235, 235, 235);
+                border-radius: 50%;
+                text-align: center;
+                margin: 5px;
+                @include ellipsis();
+              }
+
+              .buttonIcon {
+                height: $columnOrganiserButtonHeight;
+                width: 20px;
+                float: left;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                opacity: .8;
+                background-image: url($image-CS-expand-arrow-icon);
+              }
+            }
+          }
+        }
+
+        .headerButton {
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          vertical-align: top;
+          border-radius: 3px;
+          margin-left: 10px;
+          cursor: pointer;
+          background-color: #616367;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+          transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+          &:active {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+          }
+
+          .headerButtonIcon {
+            height: 100%;
+            width: 100%;
+            background-size: 18px;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.4);
+            }
+
+            &:active {
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            &.delete {
+              @include background-properties-with-theme-white-color($image-CS-delete-bin, 18px);
+              opacity: 0.7;
+              &:hover {
+                opacity: 1.0;
+              }
+              &.light {
+                @include background-properties($image-CS-delete-bin, 18px);
+              }
+            }
+
+            &.create {
+              @include background-properties-with-theme-white-color($image-CS-Plus-32, 18px);
+              &.light {
+                @include background-properties($image-CS-Plus-32, 18px);
+              }
+            }
+
+            &.columnOrganiser{
+              @include background-properties-with-theme-white-color($image-CS-grid-edit-view, 18px);
+              &.light{
+                @include background-properties($image-CS-grid-edit-view, 18px);
+                border-radius: 2px;
+              }
+            }
+
+            &.export {
+              @include background-properties-with-theme-white-color($image-CS-export-black, 18px);
+              &.light {
+                @include background-properties($image-CS-export-black, 18px);
+              }
+            }
+
+            &.import {
+              background-image: url($image-import);
+            }
+
+            &.refresh {
+              @include background-properties-with-theme-white-color($image-CS-Refresh-48-black, 18px);
+              &.light {
+                @include background-properties($image-CS-Refresh-48-black, 18px);
+              }
+            }
+
+            &.manageEntity {
+              @include background-properties-with-theme-white-color($image-CS-Manage-Entity, 15px);
+              &.light {
+                @include background-properties($image-CS-Manage-Entity, 18px);
+              }
+            }
+            &.copy {
+              @include background-properties-with-theme-white-color($image-CS-icons8-Copy-Filled-50, 18px);
+              &.light {
+                @include background-properties($image-CS-copy, 18px);
+              }
+            }
+
+            &.organizeGridEditProperties {
+              @include  background-properties-with-theme-white-color($image-CS-grid-edit-view, 17px);
+              &.light {
+                @include background-properties($image-CS-grid-edit-view, 17px);
+              }
+            }
+
+            &.sort {
+              @include background-properties-with-theme-white-color($image-CS-Sorting-Arrows-64, 18px);
+              &.light {
+                @include background-properties($image-CS-Sorting-Arrows-64, 18px);
+              }
+            }
+
+            &.reorder {
+              @include background-properties-with-theme-white-color($icons8-drag-reorder, 18px);
+              &.light {
+                @include background-properties($icons8-drag-reorder, 18px);
+              }
+            }
+
+            &.download {
+              @include background-properties-with-theme-white-color($image-CS-download, 20px);
+            }
+            &.filter {
+              @include background-properties-with-theme-white-color($image-CS-filter, 20px);
+
+              &.selected {
+                background-color: rgba(255, 255, 255, 0.4);
+              }
+            }
+            &.exportStatus {
+              @include background-properties-with-theme-white-color($image-CS-export-status, 19px);
+              &.light {
+                @include background-properties($image-CS-export-status, 19px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .gridViewMiddleSection {
+      width: 100%;
+      overflow: hidden;
+      flex: 1 0;
+      position: relative;
+
+      .gridViewMiddleSectionWrapper {
+        height: 100%;
+
+        .headerRowWrapper {
+          min-height: $gridViewTableHeaderHeight;
+          height: $gridViewTableHeaderHeight;
+
+          .gridViewRow {
+
+            &.selected {
+              background-color: $color-light-yellow;
+              .gridViewCell {
+                .gridPropertyView {
+                  .customTextFieldViewContainer {
+                    .customTextField {
+                      background: transparent;
+                    }
+                  }
+                  .contentMeasurementMetricsContainer {
+                    .textField {
+                      .measurementMetricWrapper {
+                        .measurementMetricElementWrapper {
+                          .measurementMetricInput {
+                            background: transparent;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .activeRow {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              z-index: 10;
+              background-color: rgba(255, 102, 36, .1);
+              border: 1px solid #ff6624;
+              pointer-events: none;
+            }
+
+            &.gridViewHeaderRow:last-child {
+              border-left: 2px solid #ebebeb;
+              box-shadow: -1px 0 0 0 #ebebeb inset;
+            }
+
+            &.gridViewHeaderRow {
+              display: inline-block;
+              width: 100%;
+              position: relative;
+              height: inherit;
+
+              .headerMiddle {
+                //position: absolute;
+                overflow: hidden;
+                z-index: 0;
+                left: 0px;
+                height: inherit;
+              }
+
+              .gridViewCell {
+
+                &.header {
+                  &.resize {
+                    overflow-x: auto;
+                    resize: horizontal;
+                    position: relative;
+                    overflow-y: hidden;
+
+                    &:after {
+                      content: "";
+                      bottom: 0;
+                      right: 0;
+                      cursor: e-resize;
+                      position: absolute;
+                      z-index: 9;
+                      width: 10px;
+                      height: 15px;
+                    }
+                  }
+                }
+
+                &.header {
+                  display: table-cell;
+                  box-shadow: inset -1px -1px 0 0 #ebebeb, inset 0px 1px 0 0 #ebebeb;
+                  background-color: #f7f6f6;
+                  padding: 7px 12px 7px 12px;
+                  color: #7a7a7a;
+                  float: left;
+                  height: inherit;
+                  position: relative;
+
+                  .headerLabel {
+                    font-size: 12px;
+                    @include ellipsis();
+                    font-weight: 500;
+                    width: calc(100% - 20px);
+                  }
+
+                  .headerSubLabel {
+                    font-size: 10px;
+                    @include ellipsis();
+                    font-weight: 400;
+                    height: 14px;
+                    min-height: 14px;
+                  }
+
+                  .gridViewFilterWrapper {
+                    margin-top: 8px;
+                    background-color: #fff;
+                    height: 26px;
+                    max-height: 26px;
+                    overflow: hidden;
+                    display: flex;
+                    border-radius: 3px;
+                    border: 1px solid $color-light-4;
+
+                    &.filterApplied {
+                      border-color: $color-blue;
+                    }
+                    .customTextFieldViewContainer {
+                      padding: 4px;
+                      .customTextField {
+                        &.gridFilterView {
+                          line-height: 15px;
+
+                          &.filterApplied {
+                            color: $color-dark-1;
+                          }
+                        }
+                      }
+                    }
+
+                    .clearTextAppliedFilter {
+                      width: 10px;
+                      height: 15px;
+                      cursor: pointer;
+                      opacity: 0.4;
+                      margin: 5px;
+                      @include background-properties($image-CS-Cross, 12px);
+                    }
+
+                    .contextMenuViewNewContainer {
+                      width: 100%;
+                      .triggerElement .selectedItemViewWrapper {
+                        width: 100%;
+                        //display: grid;
+                        //grid-template-columns: 90% 10%;
+                        height: inherit;
+                        .selectedItemView {
+                          margin: 5px;
+                          line-height: 17px;
+                          @include ellipsis();
+                          &.filterApplied {
+                            color: $color-dark-1;
+                          }
+                        }
+                      }
+                    }
+
+                    .dateRangePickerWrapper {
+                      width: 100%;
+
+                      .react-bootstrap-daterangepicker-container {
+                        display: inline-block;
+                        width: 100%;
+
+                        .gridCalenderSection {
+                          padding: 5px;
+                          cursor: pointer;
+                          display: grid;
+                          grid-template-columns: 92% 8%;
+                          height: 24px;
+
+                          .filterDateRangeSection {
+                            @include ellipsis();
+                            &.filterApplied {
+                              color: $color-dark-1;
+                            }
+                          }
+
+                          .expandButton {
+                            height: 100%;
+                            width: 10px;
+                            display: inline-block;
+                            opacity: .4;
+                            @include background-properties-with-gray-color($image-CS-expand-arrow-icon, 12px);
+                          }
+
+                        }
+                      }
+
+                    }
+
+                    .expandButton {
+                      height: 100%;
+                      width: 10px;
+                      display: inline-block;
+                      opacity: .4;
+                      @include background-properties-with-gray-color($image-CS-expand-arrow-icon, 12px);
+                    }
+                  }
+
+                  .gridFilterContainer {
+                    height: 26px;
+                    max-height: 26px;
+                  }
+
+                  .sortIndicator {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    background-position: center;
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+
+                    &.asc {
+                      background-image: url($image-CS-Sort-Ascending);
+                    }
+
+                    &.desc {
+                      background-image: url($image-CS-Sort-Descending);
+                    }
+
+                    &.isSortable {
+                      background-size: 16px;
+                      opacity: .3;
+                      background-image: url($image-CS-Sorting-Arrows-64);
+                    }
+                  }
+
+                  &.selectOption {
+                    width: 40px;
+                    position: relative;
+                    overflow: hidden;
+
+                    .selectIcon {
+                      position: relative;
+                    }
+                    .thumbnailCheckButtonIcon {
+                      margin: 1px auto 8px auto;
+                    }
+                  }
+
+                  .gridCellLabel {
+                    @include ellipsis();
+                    width: calc(100% - 20px);
+                    display: inline-block;
+                  }
+
+                  .columnActionItem {
+                    float: right;
+                    width: 12px;
+                    height: 12px;
+                    background-size: 12px;
+                    margin: 3px;
+                    cursor: pointer;
+
+                    &.deleteIcon {
+                      opacity: 0;
+                      background-image: url($image-CS-delete-bin);
+                    }
+                  }
+
+                  &:hover {
+                    .columnActionItem {
+                      &.deleteIcon {
+                        opacity: 0.6;
+                      }
+                    }
+                  }
+                }
+
+                &.selectOption {
+                  width: 40px;
+                  position: relative;
+
+                  .dirtyIndicator {
+                    position: absolute;
+                    height: 100%;
+                    width: 2px;
+                    left: 1px;
+                    top: 0;
+                    background-color: #25af2a;
+                  }
+
+                  .selectIcon {
+                    height: 20px;
+                    position: relative;
+                    //top: 2px;
+                    cursor: pointer;
+                    z-index: 1;
+                    background-color: transparent;
+                    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+                    &.isSelected {
+                      @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                    }
+
+                    &.partiallySelected {
+                      @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 15px);
+                    }
+
+                    &.disabled {
+                      background-image: none;
+                    }
+                  }
+
+                  .contentCheckButtonIcon {
+                    height: 35px;
+                    width: 35px;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    cursor: pointer;
+                    z-index: 1;
+                    background-color: transparent;
+                    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+                    &.isSelected {
+                      @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                    }
+
+                    &.partiallySelected {
+                      @include background-properties($image-cs-checkbox-partial-checked, 15px);
+                    }
+
+                    &.disabled {
+                      background-image: none;
+                    }
+                  }
+
+                  .contentRadioButtonIcon {
+                    color: #ddd;
+                    position: absolute;
+                    z-index: 1;
+                    top: 7px;
+                    left: 8px;
+                  }
+
+                }
+
+                &.actionItemsContainer {
+                  width: 130px;
+                  padding: 0 5px;
+
+                  .actionItemIcon {
+                    height: 32px;
+                    width: 36px;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    opacity: .4;
+                    cursor: pointer;
+                    float: left;
+                    margin-top: 2px;
+
+                    &.deleteIcon {
+                      background-size: 16px;
+                      background-image: url($image-CS-delete-bin);
+                    }
+
+                    &.manageEntity {
+                      background-size: 14px;
+                      background-image: url($image-CS-Manage-Entity);
+                    }
+
+                    &.viewIcon {
+                      background-size: 16px;
+                      background-image: url($image-CS-eye-black);
+                    }
+
+                    &.removeIcon {
+                      position: unset;
+                      background-size: 16px;
+                      background-image: url($image-CS-Cross);
+                    }
+
+                    &.extensionIcon {
+                      background-size: 16px;
+                      background-image: url($image-CS-Edit-Property);
+                    }
+
+                    &.refreshIcon {
+                      background-size: 14px;
+                      background-image: url("./../images/Restart-26.svg");
+                    }
+                    &.moveUpIcon {
+                      background-size: 18px;
+                      background-image: url($image-CS-Upload-Black);
+                    }
+
+                    &.createChildIcon {
+                      background-size: 18px;
+                      background-image: url($image-CS-Add-Row-26);
+                    }
+
+                    &.moveUpIcon {
+                      background-size: 18px;
+                      background-image: url($image-CS-arrow-up);
+                    }
+
+                    &.moveDownIcon {
+                      background-size: 18px;
+                      background-image: url($image-CS-arrow-down);
+                    }
+
+                    &.editIcon {
+                      background-size: 16px;
+                      background-image: url($image-CS-Edit-32);
+                    }
+
+                    &.changePasswordIcon {
+                      background-size: 20px;
+                      background-image: url("./../images/password-reset-26.svg");
+                    }
+
+                    &.revisionIcon {
+                      background-size: 16px;
+                      background-image: url($image-CS-revision-000);
+                    }
+
+                    &:hover {
+                      opacity: .6;
+                    }
+                  }
+                }
+
+                .gridElementDisabledMask {
+                  user-select: none;
+                  background: rgba(200, 200, 200, 0.2);
+
+                  &:hover {
+                    .copyToClipboard {
+                      opacity: 0.5;
+                    }
+                  }
+
+                  .copyToClipboard {
+                    top: 3px;
+                    right: 0;
+                    transition: all .2s;
+                    opacity: 0;
+                  }
+
+                  .numberLocaleInput {
+                    background-color: transparent;
+                  }
+                }
+              }
+
+              &.headerRowLeft {
+                border-right: 2px solid $color-light-5;
+              }
+            }
+          }
+
+          &.withFilterView {
+            min-height: $gridViewTableHeaderHeightWithFilter;
+            height: $gridViewTableHeaderHeightWithFilter;
+          }
+
+          &.withSubHeader {
+            min-height: $gridViewTableHeaderHeightWithSubHeader;
+            height: $gridViewTableHeaderHeightWithSubHeader;
+          }
+
+          .gridViewRow.gridViewHeaderRow::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .customScrollbarView {
+          height: calc(100% - 17px);
+          box-shadow: none;
+          & > div {
+            height: 100%;
+          }
+
+          .gridViewTableContainer {
+            width: 100%;
+            height: calc(100% - 32px);
+            max-height: 100%;
+            flex-shrink: 0;
+
+            .gridViewTable {
+              height: 100%;
+              text-align: center;
+
+              .leftFixedSection {
+                min-height: 100%;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding-top: 0;
+                padding-bottom: 42px;
+                border-right: 2px solid $color-light-5;
+                overflow-x: scroll;
+                overflow-y: hidden;
+
+                .gridViewRow {
+                  display: block;
+
+                  &.selected {
+                    background-color: rgb(254, 253, 233);
+                    .gridViewCell {
+                      .gridPropertyView {
+                        .customTextFieldViewContainer {
+                          .customTextField {
+                            background: transparent;
+                          }
+                        }
+
+                        .contentMeasurementMetricsContainer {
+                          .textField {
+                            .measurementMetricWrapper {
+                              .measurementMetricElementWrapper {
+                                .measurementMetricInput {
+                                  background: transparent;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .gridViewCell {
+                    display: inline-block;
+                    overflow: hidden;
+
+                    &.header {
+                      display: table-cell;
+
+                      &:first-child {
+                        box-shadow: inset -1px -1px 0 0 $color-light-5, inset 1px 1px 0 0 $color-light-5;
+                      }
+                    }
+                    .gridPropertyView {
+                      .customTextFieldViewContainer {
+                        .customTextField {
+                          line-height: 26px;
+                          &.isDisabled {
+                            width: 100%;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                &::-webkit-scrollbar {
+                  height: 0;
+                }
+              }
+
+              .centralScrollableSection {
+                min-height: 100%;
+                display: inline-block;
+                vertical-align: top;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                position: relative;
+                padding-top: 0;
+                padding-bottom: 42px;
+                z-index: 0;
+
+                .scrollableSheet {
+
+                  .gridViewRow {
+                    height: 0;
+
+                    .gridViewCell {
+                      .gridPropertyView {
+                        padding: 4px;
+                        display: inline-block;
+
+                        .froalaWrapperView {
+                          width: 100%;
+                          float: left;
+                          p {
+                            line-height: 23px;
+                            margin-top: 3px;
+                          }
+                        }
+                        .numberLocaleViewContainer {
+                          .numberLocaleInput {
+                            line-height: 24px;
+                            font-size: 13px;
+                          }
+                        }
+                        .customTextFieldViewContainer {
+                          padding: 9px 10px 2px 10px;
+                          textarea {
+                            font-size: 13px;
+                            overflow: hidden;
+                          }
+                        }
+
+                        .contentMeasurementMetricsContainer {
+                          padding: 2px 7px 2px 2px;
+                          .textField {
+                            .measurementMetricWrapper {
+                              .measurementMetricElementListWrapper {
+                                .conversionList {
+                                  height: 100%;
+                                }
+                              }
+                            }
+                          }
+                        }
+
+                        .customDatePickerWrapper {
+                          .customDatePicker.datePickerCustom {
+                            input {
+                              color: #000;
+                              font-size: 13px;
+                              line-height: normal;
+                              padding: 0px 0 7px;
+                            }
+                          }
+                          .customDatePickerEmptyButton {
+                            right: 10px;
+                            top: 50%;
+                            position: absolute;
+                            transform: translateY(-50%);
+                          }
+                          .customDatePickerDisabledValue {
+                            margin: 0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .nothingToDisplay {
+                  line-height: 35px;
+                  border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+                  font-weight: 500;
+                  color: $color-dark-5;
+                }
+
+                //&:after {
+                //  content: "";
+                //  position: absolute;
+                //  height: 32px;
+                //  box-shadow: 0px 0px 0px 1px $color-light-5 inset;
+                //  background-color: #f7f6f6;
+                //  top: 0;
+                //  width: 100%;
+                //  left: 0;
+                //}
+
+                &::-webkit-scrollbar {
+                  height: 0;
+                }
+              }
+
+              @-moz-document url-prefix() {
+                .leftFixedSection ,.centralScrollableSection ,.rightFixedSection {
+                  padding-bottom: 32px;
+                }
+              }
+              .rightFixedSection {
+                min-height: 100%;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding-top: 0;
+                padding-bottom: 42px;
+                border-left: 2px solid $color-light-5;
+                box-shadow: -1px 0 0 0 $color-light-5 inset;
+                overflow-x: scroll;
+                overflow-y: hidden;
+
+                &::-webkit-scrollbar {
+                  height: 0;
+                }
+              }
+
+              .gridViewRow {
+                min-height: 36px;
+                display: table;
+                position: relative;
+
+                &.selected {
+                  background-color: $color-light-yellow;
+                  .gridViewCell {
+                    .gridPropertyView {
+                      .customTextFieldViewContainer {
+                        .customTextField {
+                          background: transparent;
+                        }
+                      }
+                      .contentMeasurementMetricsContainer {
+                        .textField {
+                          .measurementMetricWrapper {
+                            .measurementMetricElementWrapper {
+                              .measurementMetricInput {
+                                background: transparent;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .activeRow {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 100%;
+                  width: 100%;
+                  z-index: 10;
+                  background-color: rgba(255, 102, 36, .1);
+                  border: 1px solid #ff6624;
+                  pointer-events: none;
+                }
+
+                .gridViewCell {
+                  display: table-cell;
+                  vertical-align: top;
+                  box-shadow: inset -1px -1px 0 0 $color-light-5;
+                  height: 100%;
+                  word-break: break-all;
+                  text-align: left;
+                  position: relative;
+                  min-width: 70px;
+
+                  &.activeCell {
+                    box-shadow: inset 0 0 0 1px $color-theme-accent;
+                  }
+
+                  &.selectOption {
+                    width: 40px;
+                    position: relative;
+                    float: left;
+                    min-width: auto;
+
+                    .dirtyIndicator {
+                      position: absolute;
+                      height: 100%;
+                      width: 2px;
+                      left: 1px;
+                      top: 0;
+                      background-color: #25af2a;
+                    }
+
+                    .selectIcon {
+                      height: 35px;
+                      width: 35px;
+                      position: relative;
+                      //top: 2px;
+                      left: 2px;
+                      cursor: pointer;
+                      z-index: 1;
+                      background-color: transparent;
+                      @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+                      &.isSelected {
+                        @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                      }
+
+                      &.partiallySelected {
+                        @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 15px);
+                      }
+
+                      &.disabled {
+                        background-image: none;
+                      }
+                    }
+
+                    .contentCheckButtonIcon {
+                      height: 35px;
+                      width: 35px;
+                      position: absolute;
+                      top: 2px;
+                      left: 2px;
+                      cursor: pointer;
+                      z-index: 1;
+                      background-color: transparent;
+                      @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+                      &.isSelected {
+                        @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                      }
+
+                      &.partiallySelected {
+                        @include background-properties($image-cs-checkbox-partial-checked, 15px);
+                      }
+
+                      &.disabled {
+                        background-image: none;
+                      }
+                    }
+
+                    .contentRadioButtonIcon {
+                      color: #ddd;
+                      position: absolute;
+                      z-index: 1;
+                      top: 7px;
+                      left: 8px;
+                    }
+
+                  }
+
+                  &.actionItemsContainer {
+                    width: 130px;
+                    padding: 0 5px;
+
+                    .actionItemIcon {
+                      height: 32px;
+                      width: 36px;
+                      background-position: 50%;
+                      background-repeat: no-repeat;
+                      opacity: .4;
+                      cursor: pointer;
+                      float: left;
+                      margin-top: 2px;
+
+                      &.deleteIcon {
+                        background-size: 16px;
+                        background-image: url($image-CS-delete-bin);
+                      }
+
+                      &.manageEntity {
+                        background-size: 14px;
+                        background-image: url($image-CS-Manage-Entity);
+                      }
+
+                      &.viewIcon {
+                        background-size: 16px;
+                        background-image: url($image-CS-eye-black);
+                      }
+
+                      &.removeIcon {
+                        position: unset;
+                        background-size: 16px;
+                        background-image: url($image-CS-Cross);
+                      }
+
+                      &.extensionIcon {
+                        background-size: 16px;
+                        background-image: url($image-CS-Edit-Property);
+                      }
+
+                      &.refreshIcon {
+                        background-size: 14px;
+                        background-image: url("./../images/Restart-26.svg");
+                      }
+                      &.moveUpIcon {
+                        background-size: 18px;
+                        background-image: url($image-CS-Upload-Black);
+                      }
+
+                      &.createChildIcon {
+                        background-size: 18px;
+                        background-image: url($image-CS-Add-Row-26);
+                      }
+
+                      &.moveUpIcon {
+                        background-size: 18px;
+                        background-image: url($image-CS-arrow-up);
+                      }
+
+                      &.moveDownIcon {
+                        background-size: 18px;
+                        background-image: url($image-CS-arrow-down);
+                      }
+
+                      &.editIcon {
+                        background-size: 16px;
+                        background-image: url($image-CS-Edit-32);
+                      }
+
+                      &.changePasswordIcon {
+                        background-size: 20px;
+                        background-image: url("./../images/password-reset-26.svg");
+                      }
+
+                      &.revisionIcon {
+                        background-size: 16px;
+                        background-image: url($image-CS-revision-000);
+                      }
+
+                      &.downloadIcon {
+                        background-size: 16px;
+                        background-image: url($image-CS-download);
+                      }
+
+                      &:hover {
+                        opacity: .6;
+                      }
+                    }
+                  }
+
+                  .gridElementDisabledMask {
+                    user-select: none;
+                    background: rgba(200, 200, 200, 0.2);
+
+                    &:hover {
+                      .copyToClipboard {
+                        opacity: 0.5;
+                      }
+                    }
+
+                    .copyToClipboard {
+                      top: 3px;
+                      right: 0;
+                      transition: all .2s;
+                      opacity: 0;
+                    }
+
+                    .numberLocaleInput {
+                      background-color: transparent;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.withNothingFountContainer {
+              box-shadow: inset 0 -1px 0 0 $color-light-5;
+            }
+          }
+        }
+
+        .gridViewTableContainerSibling {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          overflow-y: hidden;
+          z-index: 1;
+
+          .siblingSection {
+            display: inline-block;
+            overflow-x: scroll;
+            overflow-y: hidden;
+          }
+
+          .centralScrollableSectionSibling {
+            .centralScrollableSectionScroller {
+            }
+          }
+        }
+      }
+    }
+
+    .gridViewLowerSection {
+      width: 100%;
+      height: 50px;
+      flex: 0 0 50px;
+
+      .paginationView {
+        margin: 0px;
+        padding: 10px 10px 10px 10px;
+        float: right;
+      }
+    }
+
+    .gridRowContainer {
+      &.showDisabled {
+        background-color: $color-light-2;
+      }
+    }
+  }
+}
+
+.gridPropertyView {
+  height: 100%;
+  width: inherit;
+  position: relative;
+  min-width: inherit;
+
+  .customDatePickerWrapper {
+    .customDatePicker.datePickerCustom {
+      max-width: unset;
+      top: 3px;
+      left: 5px;
+      width: calc(100% - 10px);
+      border: none;
+
+      div:before, div:after {
+        content: unset;
+      }
+      .customDatePickerEmptyButton {
+        top: 0px;
+      }
+    }
+  }
+
+  &.rowLabel {
+    .customTextFieldViewContainer {
+      padding: 5px 5px 2px 20px;
+    }
+  }
+
+  .customTextField {
+    &.isDisabled {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .nativeDropdown {
+    border: 1px solid #ddd;
+    margin: 6px;
+    max-width: 135px;
+    outline: none;
+
+    &.lessWidth {
+      max-width: 100px;
+    }
+  }
+
+  .expandButton {
+    position: absolute;
+    width: 18px;
+    height: 32px;
+    top: 1px;
+    left: 1px;
+    cursor: pointer;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    pointer-events: all;
+    &.expanded {
+      background-image: url($image-CS-expand-arrow-icon);
+    }
+
+    &.collapsed {
+      background-image: url($image-CS-arrow-forward);
+    }
+  }
+
+  .multiSelectSearchViewWrapper {
+    padding: 5px 10px;
+    height: inherit;
+    //display: flex;
+    //align-items: center;
+
+    .contextMenuViewNewContainer {
+      //width: 100%;
+      height: inherit;
+
+      .triggerElement {
+
+        .multiSelectSearchView {
+          height: 26px;
+        }
+      }
+    }
+  }
+
+  .customTextFieldViewContainer, .userInputFieldContainer {
+    margin: 0;
+    padding: 5px 10px;
+    min-height: 36px;
+
+    .customTextFieldDescription {
+      margin: 0;
+    }
+  }
+
+  .numberLocaleViewContainer {
+    margin-bottom: 0;
+    padding: 7px 12px 2px 6px;
+
+    .numberLocaleInput {
+      margin: 0;
+      background-color: transparent;
+    }
+  }
+
+  .tagsGroupContainer {
+    float: left;
+    padding: 7px 5px 0 0;
+    width: 100%;
+    height: inherit;
+
+    .selectedItems{
+      margin-top: 0;
+    }
+
+    .gridYesNoPropertyView{
+      padding: 0;
+    }
+
+    .tagsSectionBody{
+      padding: 0px 3px 3px 3px;
+      height: inherit;
+      overflow: hidden;
+      .entityTagsSummaryView{
+        margin-top: 0;
+        height: inherit;
+
+        .greenBorder{
+          .selectedItems{
+            margin-top: 0;
+          }
+        }
+        .noTagsGrey{
+          margin-left: 0;
+          margin-top: 0;
+        }
+      }
+    }
+    .multiSelectSearchViewWrapper{
+      padding: 0px 5px 0 0;
+    }
+
+    .numberLocaleViewContainer {
+      padding: 0px 12px 2px 7px;
+    }
+  }
+
+  .froalaWrapperView {
+    padding: 0px 12px 0 6px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .contentMeasurementMetricsContainer {
+    margin: 0;
+    padding: 2px 7px 2px 7px;
+    overflow: hidden;
+
+    .measurementMetricElementWrapper {
+      width: 60%;
+
+      .measurementMetricInput {
+        margin: 0;
+      }
+    }
+
+    .measurementMetricElementListWrapper {
+
+      .conversionList {
+        margin: 0;
+      }
+    }
+
+    .measurementMetricInputDescription {
+      margin: 0;
+    }
+  }
+
+  .searchBarView {
+    padding: 7px;
+    min-height: 0;
+
+    .searchBarContainer {
+      margin: 0;
+      min-height: 0;
+
+      .multiSelectNothingSelected {
+        margin: 0;
+      }
+    }
+  }
+
+  .gridImagePropertyView {
+    padding: 3px;
+    overflow: hidden;
+    height: 35px;
+
+    .gridImageContainer {
+      height: 30px;
+      width: 30px;
+      border-radius: 3px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      border: 1px solid $color-light-5;
+
+      .imageSimpleViewNoImage {
+        background-size: 70%;
+      }
+
+      .gridImageClearButton {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .6);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-image: url($image-CS-Cancel-Black);
+        cursor: pointer;
+      }
+
+      &:hover {
+        .gridImageClearButton {
+          opacity: .9;
+        }
+      }
+    }
+
+    .gridImageActionIconContainer {
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 5px;
+
+      .gridImageActionIcon {
+        height: 100%;
+        width: 100%;
+        background-size: 18px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        opacity: .4;
+        cursor: pointer;
+
+        &.upload {
+          background-image: url($image-CS-Upload-Black);
+        }
+
+        &.replace {
+          background-image: url($image-CS-Replace-26);
+        }
+      }
+    }
+  }
+
+  .customDatePickerWrapper {
+    padding: 5px 10px 0 0;
+
+    hr {
+      display: none;
+    }
+
+    .customDatePickerEmptyButton {
+      right: 10px;
+      top: 12px;
+    }
+  }
+
+  .gridContextualAttributePropertyView {
+    height: 100%;
+    width: 100%;
+
+    .selectedTagsCount {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      color: #7a7a7a;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .collectionPlannerHeaderView {
+    position: relative;
+    margin-left: 20px;
+    display: inline-block;
+    height: 100%;
+    width: 90%;
+
+    .collectionPlannerTextFieldView {
+      float: left;
+      height: 100%;
+
+      .customTextFieldViewContainer {
+        padding: 0 5px 0 0;
+      }
+    }
+
+    .collectionPlannerToolBar {
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .filterButton {
+        width: 25px;
+        height: 25px;
+        background: url($image-CS-Filter-50) no-repeat center;
+        background-size: 14px;
+        filter: invert(1);
+        opacity: 0.8;
+        cursor: pointer;
+
+        &.active {
+          background-image: url($image-CS-FilterFilled-25);
+        }
+      }
+
+      .gridCountView {
+        border-radius: 50%;
+        height: 20px;
+        border: 1px solid rgba(255, 185, 0, 0.92);
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .dragViewContainer {
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .gridCalculatedAttributePropertyView {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    min-height: 36px;
+    margin-right: 3px;
+
+    .calculatedAttributeType {
+      margin-bottom: 2px;
+      height: 20%;
+      width: 100%;
+      color: #7a7a7a;
+      padding: 3px 9px 9px 3px;
+      overflow: hidden;
+    }
+
+    .calculatedAttributeUnit {
+      margin-bottom: 5px;
+      height: 20%;
+      width: 100%;
+      color: #7a7a7a;
+      padding: 3px 9px 9px 3px;
+      overflow: hidden;
+    }
+
+    .calculatedFormula {
+      height: 60%;
+      width: 100%;
+      color: #7a7a7a;
+      padding: 3px 9px 9px 3px;
+      overflow: hidden;
+
+      .calculatedFormulaHeader {
+        float: left;
+        line-height: 30px;
+      }
+
+      .element {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        margin: 6px 0 0 6px;
+        color: #444444;
+        background-color: $color-light-5;
+        border-radius: 3px;
+        padding: 0 4px 0 4px;
+        box-shadow: 0 0 0 1px #c0c0c0;
+        background-size: 16px;
+        position: relative;
+      }
+
+      .elementWithType {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        margin: 6px 0 0 6px;
+        color: #444444;
+        background-color: $color-light-5;
+        border-radius: 3px;
+        padding: 0 25px 0 4px;
+        box-shadow: 0 0 0 1px #c0c0c0;
+        background-size: 16px;
+        position: relative;
+
+        .typeIcon {
+          height: 100%;
+          width: 22px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          opacity: 0.7;
+
+          &.attribute {
+            background-size: 14px;
+            background-image: url('./../images/Text Color Filled-50.svg');
+          }
+        }
+      }
+    }
+
+  }
+
+  .gridMSSWithAdditionalList {
+    width: 100%;
+    height: 100%;
+
+    .multiSelectSearchViewWrapper {
+      width: calc(100% - 30px);
+    }
+
+    .contextMenuViewNewContainer {
+      &.gridContextMenuViewAdditionalList {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+      }
+
+      .mssAddButton {
+        background: url($image-CS-Plus-32);
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        opacity: 0.4;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .variantTagSummaryViewContainer {
+    padding: 1px;
+  }
+
+  .gridTagView {
+    float: left;
+    overflow: hidden;
+    width: inherit;
+    height: 100%;
+    &.disabled {
+      opacity: 0.8;
+    }
+  }
+
+  .gridPropertyTaxonomyView {
+    margin: 5px;
+    max-height: 110px;
+    overflow: auto;
+
+    .smallTaxonomyViewContainer {
+
+      .taxonomyDataWrapper {
+
+        .selectedTaxonomyWrapper {
+          width: 100%;
+          display: inline-block;
+          vertical-align: top;
+          border-bottom: 1px solid #f6f6f6;
+          padding-bottom: 3px;
+
+          .addedClassificationListWrapper {
+
+            .taxonomySelectionItem {
+
+              .taxonomyLabel {
+                font-size: 11px;
+                padding: 0 10px 0 10px;
+                font-weight: unset;
+                background-color: #eee;
+                border-radius: 50%;
+                color: $color-dark-5;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+  &.duplicateCode{
+    box-shadow: inset 0 0 0 1px #d32f2f;
+  }
+
+  .gridLinkedInstanceSummaryView{
+    float: left;
+    height: inherit;
+    padding: 7px 0 0;
+  }
+
+  .contentAttributeElementViewWrapper{
+    overflow: hidden;
+    padding: 8px;
+  }
+}
+
+.gridYesNoPropertyView {
+  padding: 7px;
+  overflow: hidden;
+
+  .gridYesNoSwitch {
+    height: 22px;
+    width: 44px;
+    border-radius: 11px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: auto;
+
+    .gridYesNoSwitchButton {
+      position: absolute;
+      height: 22px;
+      padding: 2px 0;
+      top: 0;
+      background-color: #ddd;
+      transition: all .1s ease-out;
+      cursor: pointer;
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      &.yes {
+        background-color: #4fbf77;
+        left: 0;
+      }
+
+      &.no {
+        left: -22px;
+      }
+
+      .textSection {
+        height: 100%;
+        width: 24px;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 18px;
+        display: inline-block;
+        vertical-align: top;
+        user-select: none;
+        -moz-user-select: none;
+
+        &.yes {
+          padding: 0 0 0 2px;
+        }
+
+        &.no {
+          padding: 0 2px 0 0;
+          color: #888;
+        }
+      }
+
+      .circleSection {
+        background-color: #fff;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        display: inline-block;
+        vertical-align: top;
+
+      }
+    }
+  }
+}
+
+.disabledWithEditButton {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: #f7f6f6;
+  margin: 1px;
+
+  .editButton {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    margin: 3px;
+    float: right;
+    opacity: 0.6;
+
+    .edit {
+      height: 100%;
+      width: 100%;
+      background-size: 15px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      background-image: url($image-CS-Edit-32);
+    }
+  }
+}
+
+//for gridContextualAttributePropertyView's popover :
+
+.attributeTagListsContainer {
+  width: calc(100% - 30px);
+  display: flex;
+  margin: 15px 15px 0 15px;
+  padding: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  background: #f9f9f9;
+
+  .allAttributeTagList {
+    width: 300px;
+    float: left;
+    max-width: calc(50% - 10px);
+    flex: 1;
+    height: 100%;
+    background-color: #e8e8e8;
+    border-right: 1px solid #cacaca;
+
+    .listTitle {
+      padding: 5px;
+      font-weight: 500;
+      text-align: center;
+      background-color: #d8d8d8;
+      height: 30px;
+    }
+
+    .listBody {
+      height: calc(100% - 30px);
+      overflow: auto;
+      .attributeContainer {
+        background: #fff;
+        margin: 1px 0px;
+        padding: 4px 10px;
+        position: relative;
+
+        > span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 270px;
+          white-space: nowrap;
+          display: block;
+        }
+
+        .attributeTagButton {
+          opacity: 0;
+          position: absolute;
+          right: 5px;
+          top: 7px;
+          width: 13px;
+          height: 13px;
+          background-size: cover;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .attributeTagButton {
+            opacity: 1;
+          }
+        }
+
+        .addButton {
+          background-image: url($image-CS-Plus-32);
+        }
+
+        .removeButton {
+          background-image: url($image-CS-Minus-32-Black);
+        }
+      }
+    }
+
+  }
+
+  .childAttributeTagsList {
+    width: calc(100% - 310px);
+    float: right;
+    background-color: #f2f2f2;
+    height: 100%;
+
+    .listTitle {
+      padding: 5px;
+      font-weight: 500;
+      text-align: center;
+      background-color: #d8d8d8;
+      height: 30px;
+    }
+
+    .listBody {
+      height: calc(100% - 30px);
+      overflow: auto;
+
+      .attributeTagChildContainer {
+        background: #fff;
+        padding: 5px;
+        position: relative;
+        margin: 10px;
+        box-shadow: 0 0 0 1px #e2e2e2;
+
+        .attributeTagButton {
+          opacity: 0;
+          position: absolute;
+          right: 5px;
+          top: 6px;
+          width: 15px;
+          height: 15px;
+          background-size: cover;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .attributeTagButton {
+            opacity: 1;
+          }
+        }
+
+        .removeButton {
+          background-image: url($image-CS-Minus-32-Black);
+        }
+
+        .tagListSelectAll {
+          height: 20px;
+          width: 20px;
+          background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+          background-position: 3px;
+          background-repeat: no-repeat;
+          float: left;
+          padding-right: 5px;
+          background-size: 14px;
+          opacity: .5;
+          cursor: pointer;
+          position: relative;
+          top: -1px;
+
+          &.checked {
+            background-image: url($image-CS-Checked-48Black);
+          }
+
+          &.partialChecked {
+            background-image: url($image-Indeterminate-Checkbox-48);
+          }
+
+        }
+
+        .attribute-tag-list-container {
+          & * {
+            font-size: 12px;
+          }
+
+          .tagListBody {
+            //max-height: 110px;
+            overflow: auto;
+            width: 100%;
+          }
+
+          .tagElement {
+            padding: 2px 5px;
+            overflow: hidden;
+            border: 1px solid #bbb;
+            color: #aaa;
+            border-radius: 4px;
+            float: left;
+            margin: 2px;
+            cursor: pointer;
+            max-width: calc(50% - 4px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: all .2s;
+
+            &:hover {
+              background: #fff;
+              color: #555;
+              border-color: #888;
+              box-shadow: 0px 0px 0px 1px #888 inset;
+            }
+
+            &.tagElementSelected {
+              background: #fff;
+              color: #555;
+              border-color: $color-theme-accent;
+              box-shadow: 0px 0px 0px 1px $color-theme-accent inset;
+            }
+          }
+        }
+      }
+
+      .attributeFormContainer {
+        width: calc(100% - 10px);
+        margin: 10px 6px;
+      }
+
+      .attributeListsContainer {
+        width: calc(100% - 20px);
+        height: 100%;
+        margin: 10px;
+        display: flex;
+
+        .childAttributesList {
+          margin-left: 10px;
+
+          > .dropViewContainer {
+            height: 100%;
+          }
+
+          .dropViewContainer {
+            transition: all 0.2s;
+
+            &.hoverActive {
+              padding-top: 30px;
+            }
+          }
+        }
+
+        .allAttributesList, .childAttributesList {
+          width: 300px;
+          float: left;
+          max-width: calc(50% - 10px);
+          flex: 1;
+
+          .dragViewContainer, .dropViewContainer {
+            width: 100%;
+
+            .dragHere {
+              display: none;
+            }
+          }
+
+          .listTitle {
+            font-weight: 500;
+            text-align: left;
+            background: none;
+          }
+
+          .attributeContainer {
+            background: #fff;
+            margin: 1px 0px;
+            padding: 4px 10px;
+            position: relative;
+
+            &.noEditableProperties {
+              opacity: 0.8;
+              text-align: center;
+            }
+
+            .editablePropertyButton {
+              opacity: 0;
+              position: absolute;
+              right: 5px;
+              top: 7px;
+              width: 13px;
+              height: 13px;
+              background-size: cover;
+              cursor: pointer;
+            }
+
+            &:hover {
+              .editablePropertyButton {
+                opacity: 1;
+              }
+            }
+
+            .addButton {
+              background-image: url($image-CS-Plus-32);
+            }
+
+            .removeButton {
+              background-image: url($image-CS-Minus-32-Black);
+            }
+
+            .upButton {
+              background-image: url($image-CS-Upload-Black);
+              right: 35px;
+              opacity: 0;
+            }
+
+            .downButton {
+              background-image: url($image-CS-arrow-down);
+              right: 20px;
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .fieldsListsContainer {
+    width: 100%;
+  }
+}
+
+//for gridConcatenatedAttributePropertyView's popover :
+
+.concatenatedFormulaWrapper {
+  overflow: hidden;
+
+  .concatenatedFormulaButtons {
+    float: left;
+    width: 100%;
+    .concatButton {
+      float: left;
+      background: #f1f1f1;
+      margin: 0 5px;
+      padding: 0 5px;
+      border-radius: 2px;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        background: #cacaca;
+        transition: all .1s ease;
+      }
+    }
+
+  }
+
+  .concatenatedFormulaBody {
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 0;
+    max-height: calc(100vh - 75px);
+    overflow: auto;
+
+    .inputDomWrapper {
+      display: inline-block;
+      .autoSizeContainer {
+        float: left;
+        .concatInput {
+          float: left;
+          color: #555;
+          outline: none;
+          margin: 8px 0px 8px 2px;
+          border: 1px inset rgba(241, 241, 241, 0.83);
+          border-radius: 4px;
+          padding: 0px 3px;
+          height: 22px;
+          min-width: 40px;
+        }
+      }
+
+      &:hover {
+        .crossIcon {
+          opacity: .5;
+        }
+      }
+    }
+
+    .froalaDomWrapper {
+      min-width: 40px;
+      display: inline-block;
+
+      .froalaWrapperView {
+        float: left;
+
+        .disconnectedHTMLViewContainer {
+          padding: 3px;
+          word-break: break-all;
+        }
+
+        .customFroalaView {
+          margin: 9px 0px 6px 2px;
+
+          .froalaContainer {
+            min-width: 80px;
+            border: inset 1px;
+            border-radius: 3px;
+            padding-right: 25px;
+            min-height: 18px;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        .fr-counter {
+          border: none;
+          background: #f7f7f7;
+          font-size: 12px;
+        }
+
+        .fr-inline {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:hover {
+        .crossIcon {
+          opacity: .5;
+        }
+      }
+    }
+
+    .selectDomWrapper {
+      display: inline-block;
+
+      .multiSelectSearchViewWrapper {
+        width: calc(100% - 15px);
+        float: left;
+        padding: 5px 0;
+      }
+
+      select {
+        float: left;
+        color: #555;
+        outline: none;
+        margin: 8px 0 8px 2px;
+        border-radius: 4px;
+        padding: 0 10px;
+        height: 23px;
+        max-width: 150px;
+        border: 1px solid #f1f1f1;
+        background: linear-gradient(to bottom, #ffffff 0%, rgba(208, 206, 206, 0.72) 100%);
+      }
+
+      &:hover {
+        .crossIcon {
+          opacity: .5;
+        }
+      }
+    }
+
+    .userDefinedTextContainer {
+      display: inline-block;
+
+      .customTextFieldViewContainer {
+        width: calc(100% - 15px);
+        float: left;
+        padding: 5px 0;
+        margin: 0;
+
+        .userDefinedText {
+          border: inset 1px;
+          border-radius: 3px;
+        }
+      }
+
+      .crossIcon {
+        margin: 5px 0;
+      }
+    }
+
+    .crossIconWrapper {
+      width: 15px;
+      float: left;
+      .crossIcon {
+        background: url($image-CS-Cross) no-repeat 0;
+        background-size: 16px;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+        opacity: 0.6;
+        transition: all .2s;
+        cursor: pointer;
+        height: 20px;
+        width: 14px;
+        margin: 9px 0 4px 0;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//for gridCalculatedAttributePropertyView's popover :
+
+.calculatedFormulaWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  .multiSelectSearchViewWrapper {
+    border-radius: 2px;
+    box-shadow: 0 0 1px;
+  }
+
+  .formulaGeneratorButtons {
+    height: 23px;
+
+    select {
+      margin: 1px auto;
+    }
+
+    .elementWithType {
+      margin-bottom: 2px;
+    }
+  }
+
+  .measurementTypeMSSViewWrapper {
+    width: 100%;
+    margin: 5px;
+
+    .measurementTypeTitle {
+      @include topInlineBlock();
+      color: #7a7a7a;
+      height: 30px;
+      padding: 3px 10px 0 0;
+    }
+
+    .multiSelectSearchViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+    }
+  }
+
+  .measurementUnitMSSViewWrapper {
+    width: 100%;
+    margin: 5px;
+
+    .measurementUnitTitle {
+      @include topInlineBlock();
+      color: #7a7a7a;
+      height: 30px;
+      padding: 3px 10px 0 0;
+    }
+
+    .multiSelectSearchViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+    }
+
+    .froalaViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+      padding: 2px 2px 0 2px;
+      border: 1px solid darkgray;
+    }
+  }
+
+  .calculatedFormulaViewWrapper {
+    width: 100%;
+
+    span {
+      margin: 5px;
+    }
+
+    .expressionWrapper {
+      width: 100%;
+      padding: 4px;
+      border: 1px solid darkgray;
+      outline: none;
+      min-height: 60px;
+    }
+
+    .operatorWrapper {
+      background-color: #b9b9b9;
+      display: inline-block;
+      vertical-align: top;
+      padding: 2px;
+      margin: 2px;
+
+      .operatorButtonWrapper {
+
+      }
+
+      .contextMenuViewNewContainer {
+        height: inherit;
+        overflow: hidden;
+
+        .triggerElement {
+
+          .elementWithType {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin: 2px 0 0 0;
+            color: #000000;
+            background-color: #ffffff;
+            border-radius: 3px;
+            padding: 0 25px 0 4px;
+            box-shadow: 0 0 0 1px #c0c0c0;
+            background-size: 16px;
+            position: relative;
+
+            .typeIcon {
+              height: 100%;
+              width: 22px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-repeat: no-repeat;
+              background-position: 50%;
+              opacity: 0.7;
+
+              &.attribute {
+                background-size: 14px;
+                background-image: url('./../images/Text Color Filled-50.svg');
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .nativeDropdownWrapper {
+
+      .nativeDropdown {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        width: 25%;
+      }
+    }
+  }
+
+}
+
+.gridConcatenatedAttributePropertyView {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  min-height: 36px;
+
+  .concatenationFormula {
+    width: 100%;
+    text-align: center;
+    color: #7a7a7a;
+    padding: 3px 9px 9px 3px;
+    overflow: hidden;
+    min-height: 36px;
+
+    .element {
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      margin: 6px 0 0 6px;
+      color: #444444;
+      background-color: $color-light-5;
+      border-radius: 3px;
+      padding: 0 25px 0 4px;
+      box-shadow: 0 0 0 1px #c0c0c0;
+      background-size: 16px;
+      position: relative;
+      max-width: 100%;
+      @include ellipsis();
+
+      .typeIcon {
+        height: 100%;
+        width: 22px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        opacity: 0.7;
+
+        &.string {
+          background-size: 16px;
+          background-image: url('./../images/Text Box Filled-50.svg');
+        }
+
+        &.attribute {
+          background-size: 14px;
+          background-image: url('./../images/Text Color Filled-50.svg');
+        }
+
+        &.tag {
+          background-size: 14px;
+          background-image: url($image-CS-Price-Tag-Filled-50);
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1275px) {
+  .gridView {
+    &.gridViewContainer {
+      .gridViewMiddleSection {
+        .gridViewMiddleSectionWrapper {
+          overflow-x: auto;
+          width: 100%;
+          overflow-y: hidden;
+          padding-bottom: 12px;
+
+          .gridViewTableContainerSibling {
+            position: relative;
+            bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+*/

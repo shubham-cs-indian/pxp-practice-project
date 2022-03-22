@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile 'org.eclipse.jetty:jetty-server:9.4.12.v20180830'
+	compile 'org.eclipse.jetty:jetty-servlet:9.4.12.v20180830'
+	compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.1'
+	compile group: 'com.sun.xml.ws', name: 'jaxws-ri', version: '3.0.0-M3'
+	
+	compile project(path: ':pxp-models')
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.cs.loadbalancer.inds.server.HTTPServer'
+        )
+    }
+    
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    
+	version=""    
+    zip64=true
+}
+

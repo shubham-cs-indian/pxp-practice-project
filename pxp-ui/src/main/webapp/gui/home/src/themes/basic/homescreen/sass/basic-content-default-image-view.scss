@@ -1,0 +1,249 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+.imageWrapper {
+  /******************************* Content *********************************/
+&.imageSimpleViewNoImage {
+  &.entityDefaultPreview {
+    background: url($image-CS-ImageFile) center no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+}
+  &.setDefaultPreview {
+    background: url($image-set-default-image) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.collectionDefaultPreview {
+    background: url($image-CS-collection-default-image) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  /*&.assetDefaultPreview {
+    background: url($image-CS-ImageFile) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.assetCollectionDefaultPreview {
+    background: url($image-set-default-image) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.targetDefaultPreview {
+    background: url($image-CS-ImageFile) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.targetCollectionDefaultPreview {
+    background: url($image-set-default-image) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }*/
+
+
+  /******************************* Document ********************************/
+
+  &.pptDefaultPreview {
+    background: url($image-ic-ppt) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.inddDefaultPreview {
+    background: url($image-ic-indd) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.pdfDefaultPreview {
+    background: url($image-ic-pdf) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.wordDefaultPreview {
+    background: url($image-ic-doc) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.xlsDefaultPreview {
+    background: url($image-ic-xls) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.objDefaultPreview {
+    background: url("../images/ic_obj.svg") center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.stpDefaultPreview {
+    background: url("../images/ic_stp.svg") center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.fbxDefaultPreview {
+    background: url("../images/ic_fbx.svg") center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+  }
+
+  /******************************* Video ********************************/
+
+  &.mpegDefaultPreview {
+    background: url($image-CS-MPG-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.flvDefaultPreview {
+    background: url($image-CS-FLV-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.movDefaultPreview {
+    background: url($image-CS-MOV-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.aviDefaultPreview {
+    @include background-properties-with-theme-color($image-Auto-Selected-50, center, no-repeat);
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.wmvDefaultPreview {
+    background: url($image-CS-Video-File-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.videoDefaultPreview {
+    background: url($image-CS-Video-File-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.documentDefaultPreview {
+    background: url($image-CS-Document) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  /******************************* Image ********************************/
+
+  &.psdDefaultPreview {
+    background: url($image-CS-PSD-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.aiDefaultPreview {
+    background: url($image-CS-ImageFile) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.epsDefaultPreview {
+    background: url($image-CS-EPS-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.icoDefaultPreview {
+    background: url($image-CS-EPS-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.pngDefaultPreview {
+    background: url($image-CS-PNG-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.jpegDefaultPreview {
+    background: url($image-CS-JPG-Filled-100) center no-repeat;
+    background-size: 40%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &.noImage {
+    background: url($image-CS-ImageFile) center no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  .imagePreview {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    float: left;
+  }
+
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_text_asset_1 $type=CLASS]",
+    "_subtype": "TEXT_ASSET_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_text_asset_1",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "text_asset",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  }
+]

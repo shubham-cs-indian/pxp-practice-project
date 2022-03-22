@@ -1,0 +1,61 @@
+{
+  "1.json": {
+    "relationships": [
+      
+    ],
+    "assets": [
+      
+    ],
+    "embeddedVariants": [
+      
+    ],
+    "natureRelationships": [
+      
+    ],
+    "content": [
+      {
+        "createdBy": "admin",
+        "lastModifiedBy": "admin",
+        "typeIds": [
+          "single_article"
+        ],
+        "id": "ART1000",
+        "label": "Single Article 1_en_US",
+        "lastModified": "2021-03-23",
+        "languageCode": "en_US",
+        "taxonomyIds": [
+          
+        ],
+        "createdOn": "2021-03-23",
+        "properties": {
+          "attributes": {
+            "sku_attribute": "101010",
+            "maximumpriceattribute": "",
+            "minimumpriceattribute": "",
+            "pid_attribute": "",
+            "longdescriptionattribute": "",
+            "gtin_attribute": "",
+            "listpriceattribute": "",
+            "nameattribute": "Single Article 1_en_US",
+            "sellingpriceattribute": "",
+            "shortdescriptionattribute": ""
+          },
+          "attributeVariants": [
+            
+          ],
+          "tags": {
+            "statustag": [
+              
+            ],
+            "listingstatustag": [
+              "listing_status_catlog"
+            ],
+            "lifestatustag": [
+              "life_status_inbox"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.rolePermissionContainerView {
+
+  .roleOperationsSection {
+    width: calc(100% - 225px);
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    float:right;
+    height: 52px;
+    background: #f7f7f7;
+
+
+    .permissionsToggle {
+      float: right;
+      cursor: pointer;
+      line-height: 22px;
+      padding: 5px;
+      margin: 10px 14px 10px 10px;
+      font-size: 11px;
+      border-radius: 3px;
+      box-shadow: 0 0 0 1px $color-theme-accent;
+      color:$color-theme-accent;
+      background: #fff;
+
+    &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.variantConfigurationContainer {
+  width: 100%;
+  float: left;
+  height: 100%;
+
+  .variantWrapper{
+    height: calc(100% - 40px);
+    width: 100%;
+    float: left;
+    .variantConfigurationBodyContainer {
+      width: 50%;
+      float: left;
+      padding: 15px;
+      margin: 20px;
+      box-shadow: 0px 1px 6px rgba(0,0,0,0.3);
+      border-radius: 3px;
+      background: $color-light-11;
+      max-width: 500px;
+
+      .variantLabel{
+        margin-bottom: 10px;
+      }
+      .variantConfigurationButtonView {
+        padding: 10px 40px 30px 40px;
+        background: $color-light-1;
+        border-radius: 2px;
+
+        .buttonLabel {
+          text-align: center;
+          margin-bottom: 20px;
+          color: $color-dark-8;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .snackBarView {
+    width: 100%;
+    transition: height 0.5s;
+    overflow: hidden;
+    height: 40px;
+    padding: 5px;
+    background-color: $color-light-6;
+    text-align: right;
+
+    > button{
+      float:right
+    }
+  }
+
+}

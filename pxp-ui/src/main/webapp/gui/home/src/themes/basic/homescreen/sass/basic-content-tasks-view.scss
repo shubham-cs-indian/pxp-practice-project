@@ -1,0 +1,194 @@
+@import "./../../../../styleguide/style-guide";
+.contentTasksViewContainer {
+  overflow: auto;
+  width: 100%;
+  float: left;
+  height: 100%;
+  position: relative;
+
+  .contentTasksView {
+    margin: 3px 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    background: #fcfcfc;
+    height: 100%;
+
+    .tasksHeader {
+      height: 32px;
+      border-bottom: 1px solid #eee;
+      display: none;
+
+      .tasksTitle {
+        font-size: 15px;
+        display: inline-block;
+        padding: 4px 0;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+
+    }
+
+    .tasksBody {
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+
+      .taskListByLevelContainer {
+        width: 210px;
+        height: 100%;
+        overflow-y: auto;
+        border-right: 1px solid #eee;
+        background-color: #fafafa;
+
+        .taskByLevelList {
+          cursor: pointer;
+          padding: 0 8px 0 15px;
+          line-height: 25px;
+          overflow: hidden;
+          width: calc(100% - 20px);
+          border-radius: 0px 2px 2px 0;
+          margin-top: 12px;
+
+          &.selected {
+            background-color: #eee;
+            text-transform: uppercase;
+            //margin-top: 12px;
+          }
+
+          &:hover {
+            background-color: rgba(238, 238, 238, 0.63);
+          }
+
+          &.header {
+            text-transform: uppercase;
+            margin-top: 12px;
+            line-height: 25px;
+
+            .taskByLevelListItem {
+              font-size: 11px;
+              font-weight: 500;
+              color: #777;
+            }
+
+            .taskCount{
+              margin: 3px 0;
+            }
+
+            &.workFlowProductHeader{
+              cursor: default;
+              background-color: initial;
+            }
+          }
+
+          .taskByLevelListItem {
+            float: left;
+            font-size: 11px;
+            width: calc(100% - 40px);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #333;
+            font-weight: 500;
+            color: #777;
+            text-transform: uppercase;
+          }
+          .expansionStatus{
+            float: right;
+            width: 20px;
+            height: 25px;
+            opacity: 0.5;
+            cursor: pointer;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-image: url($image-CS-Collapse-Arrow-32);
+            &.expanded{
+              background-image: url($image-CS-expand-arrow-icon);
+            }
+          }
+
+          .taskCount {
+            float: right;
+            min-width: 18px;
+            height: 18px;
+            font-size: 10px;
+            line-height: 18px;
+            border-radius: 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #aaa;
+            text-align: center;
+            margin: 6px 0;
+            padding: 0 4px;
+          }
+        }
+
+        .searchBar{
+          display: grid;
+          grid-template-columns: 20px calc(100% - 20px);
+
+          .searchIcon{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-image: url($image-CS-SearchFilled-32);
+            opacity: .6;
+            height: 100%;
+            width: 20px;
+            background-color: #fff;
+          }
+
+          .customTextFieldViewContainer{
+            margin-bottom: 0px;
+          }
+        }
+
+        .contextMenuViewNewContainer {
+          .triggerElement {
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+            height: 100%;
+
+            .templateButton {
+              padding: 10px;
+
+              .customMaterialButton{
+                span{
+                  line-height: 18px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      .taskDetails {
+        width: 75%;
+        height: 100%;
+        float: left;
+        min-height: 250px;
+        padding: 15px;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      &.withoutLeftPanel {
+        .taskListViewContainer {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .loadMoreMessage {
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    cursor: pointer;
+  }
+}

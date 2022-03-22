@@ -1,0 +1,274 @@
+[
+  {
+    "id": "assetInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Asset Information"
+      },
+      "es_ES": {
+        "label": "Información de activos"
+      },
+      "fr_FR": {
+        "label": "Informations sur les actifs"
+      },
+      "de_DE": {
+        "label": "Asset-Informationen"
+      }
+    }
+  },
+  {
+    "id": "defaultXRayPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Default X-Ray Collection"
+      },
+      "es_ES": {
+        "label": "Colección de rayos X predeterminada"
+      },
+      "fr_FR": {
+        "label": "Collection de rayons X par défaut"
+      },
+      "de_DE": {
+        "label": "Standard-Röntgensammlung"
+      }
+    }
+  },
+  {
+    "id": "dtpDocumentTemplateInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Document Template Information"
+      },
+      "es_ES": {
+        "label": "Información de la plantilla de documento"
+      },
+      "fr_FR": {
+        "label": "Informations sur le modèle de document"
+      },
+      "de_DE": {
+        "label": "Informationen zur DokumentvorlageE"
+      }
+    }
+  },
+  {
+    "id": "articlegeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "General Information"
+      },
+      "es_ES": {
+        "label": "Información general"
+      },
+      "fr_FR": {
+        "label": "Informations générales"
+      },
+      "de_DE": {
+        "label": "Allgemeine Information"
+      }
+    }
+  },
+  {
+    "id": "campaignGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "General Information"
+      },
+      "es_ES": {
+        "label": "General Information__es_ES"
+      },
+      "fr_FR": {
+        "label": "Campaign General Information__fr_FR"
+      },
+      "de_DE": {
+        "label": "General Information__de_DE"
+      }
+    }
+  },
+  {
+    "id": "targetGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Market General Information"
+      },
+      "es_ES": {
+        "label": "Información general del mercado"
+      },
+      "fr_FR": {
+        "label": "Informations générales sur le marché"
+      },
+      "de_DE": {
+        "label": "Allgemeine Marktinformationen"
+      }
+    }
+  },
+  {
+    "id": "metadataCollection",
+    "translations": {
+      "en_US": {
+        "label": "Metadata"
+      },
+      "es_ES": {
+        "label": "Metadatos"
+      },
+      "fr_FR": {
+        "label": "Métadonnées"
+      },
+      "de_DE": {
+        "label": "Metadaten"
+      }
+    }
+  },
+  {
+    "id": "personaGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Persona General Information"
+      },
+      "es_ES": {
+        "label": "Persona General Information__es_ES"
+      },
+      "fr_FR": {
+        "label": "Persona General Information__fr_FR"
+      },
+      "de_DE": {
+        "label": "Persona General Information__de_DE"
+      }
+    }
+  },
+  {
+    "id": "pricingPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Pricing"
+      },
+      "es_ES": {
+        "label": "Precios"
+      },
+      "fr_FR": {
+        "label": "Tarification"
+      },
+      "de_DE": {
+        "label": "Preisgestaltung"
+      }
+    }
+  },
+  {
+    "id": "promotionGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Promotion General Information"
+      },
+      "es_ES": {
+        "label": "Promotion General Information__es_ES"
+      },
+      "fr_FR": {
+        "label": "Promotion General Information__fr_FR"
+      },
+      "de_DE": {
+        "label": "Promotion General Information__de_DE"
+      }
+    }
+  },
+  {
+    "id": "situationGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Situation General Information"
+      },
+      "es_ES": {
+        "label": "Situation General Information__es_ES"
+      },
+      "fr_FR": {
+        "label": "Situation General Information__fr_FR"
+      },
+      "de_DE": {
+        "label": "Situation General Information__de_DE"
+      }
+    }
+  },
+  {
+    "id": "supplierGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Supplier General Information"
+      },
+      "es_ES": {
+        "label": "Información general del proveedor"
+      },
+      "fr_FR": {
+        "label": "Informations générales du fournisseur"
+      },
+      "de_DE": {
+        "label": "Allgemeine Informationen des Lieferanten"
+      }
+    }
+  },
+  {
+    "id": "dtpTemplateFileInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Template File Information"
+      },
+      "es_ES": {
+        "label": "Información del archivo de plantilla"
+      },
+      "fr_FR": {
+        "label": "Informations sur le fichier de modèle"
+      },
+      "de_DE": {
+        "label": "Informationen zur Vorlagendatei"
+      }
+    }
+  },
+  {
+    "id": "dtpTemplateGenaralInfomationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Template General Information"
+      },
+      "es_ES": {
+        "label": "Información general de la plantilla"
+      },
+      "fr_FR": {
+        "label": "Informations générales sur le modèle"
+      },
+      "de_DE": {
+        "label": "Vorlage Allgemeine Informationen"
+      }
+    }
+  },
+  {
+    "id": "textassetGeneralInformationPropertyCollection",
+    "translations": {
+      "en_US": {
+        "label": "Text-Asset General Information"
+      },
+      "es_ES": {
+        "label": "Texto: información general del activo"
+      },
+      "fr_FR": {
+        "label": "Texto: información general del activo"
+      },
+      "de_DE": {
+        "label": "Text - Allgemeine Informationen zu Assets"
+      }
+    }
+  },
+  {
+    "id": "UNIT_Default",
+    "translations": {
+      "en_US": {
+        "label": "Unit Information"
+      },
+      "es_ES": {
+        "label": "Unit Information__es_ES"
+      },
+      "fr_FR": {
+        "label": "Unit Information__fr_FR"
+      },
+      "de_DE": {
+        "label": "Unit Information__de_DE"
+      }
+    }
+  }
+]

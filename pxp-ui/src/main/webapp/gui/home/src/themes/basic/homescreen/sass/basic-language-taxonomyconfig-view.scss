@@ -1,0 +1,141 @@
+@import "./../../../../styleguide/style-guide";
+
+$saveBarHeight: 40px;
+.languageTaxonomyConfigContainerWrapper {
+  height: 100%;
+  .languageTaxonomyConfigContainer {
+    //border: 1px solid #eee;
+    display: flex;
+    &.withHeader {
+      height: calc(100% - 52px);
+    }
+    .languageListContainer {
+      max-width: 50%;
+      height: 100%;
+      float: left;
+      border-right: 1px solid #bbb;
+
+      &.propertyCollection {
+        width: 25%;
+      }
+
+      .contentHierarchyTreeViewContainer {
+        width: 100%;
+        border-right: none;
+
+        .contentHorizontalTreeGroupHeader {
+          padding: 0 5px 8px 10px !important;
+
+          .levelLabel {
+            width: calc(100% - 30px);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            float: left;
+            font-size: 11px;
+          }
+
+          .levelActionItem {
+            float: right;
+            width: 12px;
+            height: 12px;
+            background-size: cover;
+            cursor: pointer;
+            margin: 4px 10px 0px 0px;
+
+            &.create {
+              @include background-properties-with-gray-color($image-CS-Plus-32-black);
+            }
+
+            &.delete {
+              @include background-properties-with-gray-color($image-CS-delete-bin-black);
+            }
+          }
+        }
+      }
+    }
+
+    .levelActionItem {
+      float: right;
+      width: 12px;
+      height: 12px;
+      background-size: cover;
+      cursor: pointer;
+      margin: 4px 10px 0px 0px;
+
+      &.create {
+        @include background-properties-with-gray-color($image-CS-Plus-32-black);
+      }
+
+      &.delete {
+        @include background-properties-with-gray-color($image-CS-delete-bin-black);
+      }
+    }
+
+    .languagesDetailViewContainer {
+      //height: 100%;
+      padding: 0px;
+      min-width: 50%;
+      float: left;
+      flex: 1 0;
+      width: 100%;
+
+
+      .commonConfigSectionViewContainer {
+        width: 100%;
+        position: relative;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: auto;
+        height: 100%;
+        scrollbar-width: thin;
+
+        &.dirty {
+          height: calc(100% - #{$saveBarHeight});
+        }
+
+        .commonConfigSection {
+          .commonConfigSectionBody {
+            .commonConfigSectionRow {
+              .commonConfigSectionElementWrapper {
+                .commonConfigSectionElement {
+                  .commonConfigSectionElementBody {
+                    .iconContainer {
+                      position: relative;
+
+                      .iconWrapper {
+                        position: relative;
+
+                        .icon {
+                          position: absolute;
+                        }
+
+                        &.defaultIcon {
+                          background: url($image-CS-language) no-repeat;
+                          background-size: 100%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .snackBar {
+        height: $saveBarHeight;
+        padding: 5px;
+        width: 100%;
+        background-color: #cccccc;
+        float: left;
+
+        .saveBarButtonsWrapper {
+          float: right;
+        }
+      }
+
+    }
+  }
+}

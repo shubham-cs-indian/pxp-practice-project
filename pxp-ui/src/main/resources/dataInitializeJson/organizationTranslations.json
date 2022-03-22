@@ -1,0 +1,19 @@
+[
+  {
+    "id": "-1",
+    "translations": {
+      "en_US": {
+        "label": "Standard Organization"
+      },
+      "es_ES": {
+        "label": "Organización estándar"
+      },
+      "fr_FR": {
+        "label": "Organisation standard"
+      },
+      "de_DE": {
+        "label": "Standardorganisation"
+      }
+    }
+  }
+]

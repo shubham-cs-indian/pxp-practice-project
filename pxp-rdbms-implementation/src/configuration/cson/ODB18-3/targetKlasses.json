@@ -1,0 +1,20 @@
+[
+	{
+		"type": "com.cs.config.interactor.entity.concrete.klass.Market",
+		"id": "market",
+		"code": "market",
+		"isStandard": true,
+		"parent": {
+			"type": "com.cs.config.interactor.entity.concrete.klass.Market",
+			"id": "-1"
+		},
+		"sections": [
+			{
+				"propertyCollectionId": "targetGeneralInformationPropertyCollection"
+			}
+		],
+		"isAbstract": true,
+		"isDefaultChild": true,
+		"isNature": false
+	}
+]	

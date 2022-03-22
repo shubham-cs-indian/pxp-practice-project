@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+compileJava.options.encoding = 'UTF-8'
+
+version = "1.0.0"	
+sourceCompatibility = 11
+
+repositories {
+	mavenCentral ()
+    mavenLocal()
+	
+    maven { url "https://repo.spring.io/libs-snapshot" }
+	maven { url "https://jitpack.io" }        
+    jcenter()
+}
+dependencies {
+
+	compile project(path: ':pxp-models')
+	compile project(path: ':pxp-orientdb-interface')
+	compile project(path: ':pxp-rdbms-interface')
+	compile project(path: ':pxp-exception')
+
+def springFrameworkVersion = "5.2.1.RELEASE"
+      
+	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+	compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.1.RELEASE'
+	}

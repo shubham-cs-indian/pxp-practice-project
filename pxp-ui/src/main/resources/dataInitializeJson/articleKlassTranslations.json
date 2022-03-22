@@ -1,0 +1,121 @@
+[
+  {
+    "id": "article",
+    "translations": {
+      "en_US": {
+        "label": "Article"
+      },
+      "es_ES": {
+        "label": "Artículo"
+      },
+      "fr_FR": {
+        "label": "Article"
+      },
+      "de_DE": {
+        "label": "Artikel"
+      }
+    }
+  },
+  {
+    "id": "attribute_classes",
+    "translations": {
+      "en_US": {
+        "label": "Attribution Classes"
+      },
+      "es_ES": {
+        "label": "Clases de atribución"
+      },
+      "fr_FR": {
+        "label": "Classes d'attribution"
+      },
+      "de_DE": {
+        "label": "Attributionsklassen"
+      }
+    }
+  },
+  {
+    "id": "channel_classes",
+    "translations": {
+      "en_US": {
+        "label": "Channel Classes"
+      },
+      "es_ES": {
+        "label": "Clases de canal"
+      },
+      "fr_FR": {
+        "label": "Classes de chaînes"
+      },
+      "de_DE": {
+        "label": "Kanalklassen"
+      }
+    }
+  },
+  {
+    "id": "fileklass",
+    "translations": {
+      "en_US": {
+        "label": "File"
+      },
+      "es_ES": {
+        "label": "Expediente"
+      },
+      "fr_FR": {
+        "label": "Fichier"
+      },
+      "de_DE": {
+        "label": "Datei"
+      }
+    }
+  },
+  {
+    "id": "golden_article_klass",
+    "translations": {
+      "en_US": {
+        "label": "Golden Article"
+      },
+      "es_ES": {
+        "label": "Artículo dorado"
+      },
+      "fr_FR": {
+        "label": "Article d'or"
+      },
+      "de_DE": {
+        "label": "Goldener Artikel"
+      }
+    }
+  },
+  {
+    "id": "product_types",
+    "translations": {
+      "en_US": {
+        "label": "Product Types"
+      },
+      "es_ES": {
+        "label": "Tipos de producto"
+      },
+      "fr_FR": {
+        "label": "Types de produits"
+      },
+      "de_DE": {
+        "label": "Produkttypen"
+      }
+    }
+  },
+  {
+    "id": "single_article",
+    "translations": {
+      "en_US": {
+        "label": "Single Article"
+      },
+      "es_ES": {
+        "label": "articulo UNICO"
+      },
+      "fr_FR": {
+        "label": "Article unique"
+      },
+      "de_DE": {
+        "label": "Einzelner Artikel"
+      }
+    }
+  }
+]

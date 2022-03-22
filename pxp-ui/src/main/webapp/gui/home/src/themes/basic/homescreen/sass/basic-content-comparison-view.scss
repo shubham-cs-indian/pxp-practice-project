@@ -1,0 +1,207 @@
+/*
+.contentComparisonViewContainer {
+  height: 100%;
+  width: 100%;
+
+  .comparisonTableWrapper {
+    overflow: auto;
+    height: calc(100% - 28px);
+
+    .comparisonTableContainer {
+      overflow: auto;
+      margin: 15px;
+      padding: 10px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+      border-radius: 2px;
+      background: linear-gradient(45deg, white, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3));
+
+      thead{
+        .comparisonRow{
+
+          .comparisonCell{
+            background-color: #fdfdfd;
+          }
+        }
+      }
+
+      .comparisonTable{
+        table-layout: fixed;
+        min-width: 100%;
+      }
+
+      .comparisonRow {
+
+        .comparisonCell {
+          min-width: 150px;
+          box-shadow: 0 0 0 1px #eee;
+          background-color: #fff;
+          padding: 5px;
+
+          &.comparisonHeader{
+            font-weight: 500;
+
+            .comparisonVersionNumber{
+              float: right;
+              margin-right: 10px;
+            }
+          }
+
+          &:first-child{
+            font-weight: 500;
+            background-color: #fdfdfd;
+          }
+
+          .setMatchData {
+            padding: 0px 4px 0px 0px;
+            float: left;
+            border-radius: 15px;
+            margin: 0 5px 5px 0;
+            line-height: 15px;
+            cursor: pointer;
+
+            .matchValue{
+              float: left;
+              font-size: 11px;
+              line-height: 14px;
+              margin: 6px 8px -1px 5px;
+            }
+
+            .sectionTagWrapper{
+              height: 20px;
+              width: 20px;
+              border-radius: 50%;
+              display: inline-block;
+              margin: 4px 0px 0px 0px;
+              float: none !important;
+
+              .sectionTagInnerCircle{
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                margin: 2px;
+                background-color: #fff;
+                position: relative;
+
+                .sectionTagLetter{
+                  font-size: 10px !important;
+                  text-align: center;
+                  font-weight: bold !important;
+                  color: #666;
+                  position: absolute;
+                  width: 100%;
+                  line-height: 16px;
+
+                  &.noShow{
+                    display: none;
+                  }
+                }
+
+                .sectionTagIcon{
+                  max-width: 12px;
+                  max-height: 12px;
+                  top: 2px;
+                  left: 2px;
+                  position: absolute;
+                }
+              }
+            }
+
+            .matchElementWrapper{
+              border: 1px solid #eee;
+              padding: 2px;
+              border-radius: 4px;
+              margin: 3px;
+              overflow: hidden;
+              float: left;
+              background: #fff;
+              cursor: pointer;
+              transition: all .2s;
+
+              &:hover {
+                border: 1px solid #CCC;
+                box-shadow: 1px 1px 3px -2px #333;
+
+                .matchElementDelete {
+                  width: 16px;
+                }
+              }
+
+
+              &.selected{
+                border: 1px solid #aaa;
+              }
+
+              .matchElementLabel{
+                float: left;
+                height: 24px;
+                line-height: 24px;
+                margin: 0 4px;
+                font-size: 10px;
+                word-break: break-all;
+              }
+
+              .matchElementClock{
+                float: right;
+                margin: 2px 0 -2px 0;
+              }
+            }
+          }
+
+          .comparisonCellTagRowContainer{
+            border-bottom: 1px solid rgba(234, 228, 228, 0.58);
+            padding-top: 8px;
+            overflow: auto;
+
+            &:last-child{
+              border-bottom: none;
+            }
+
+            .comparisonCellTagRowLabel{
+              display: inline-block;
+            }
+
+            .comparisonCellTagRowBody{
+              float: right;
+              margin-right: 10%;
+              margin-top: -3px;
+              text-align: end;
+
+              .setMatchData{
+
+                .matchValue{
+                  vertical-align: top;
+                  float: none;
+                  display: inline-block;
+                }
+
+                .sectionTagWrapper {
+                  margin: 3px 0px 0px 0px;
+                }
+              }
+            }
+          }
+
+          .contentTagCellWrapper{
+            float: left;
+            border: 1px solid #c3bdbd;
+            border-radius: 5px;
+            padding: 0 5px 0 5px;
+            margin: 0 1px;
+
+            .contentTagLabel{
+              float: left;
+              border-right: 1px solid #c3bdbd;
+              padding-right: 5px;
+            }
+
+            .contentTagValue{
+              float: left;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+*/

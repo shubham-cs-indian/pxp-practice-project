@@ -1,0 +1,56 @@
+@import "./../../../../styleguide/style-guide";
+.matchAndMergeCellView {
+
+  &.image {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .equalCell {
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 10px;
+    right: 10px;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-color: #32ca32;
+    border-radius: 10px;
+    background-image: url($image-CS-EqualSign-52White);
+  }
+
+  .chipsWrapper {
+    width: 100%;
+    display: block;
+    padding: 5px 5px 0 5px;
+    overflow: hidden;
+
+    &:last-child {
+      padding-bottom: 5px;
+    }
+  }
+
+  .mnmrImageContainer{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .mnmrIcon {
+      max-width: 80px;
+      max-height: 80px;
+    }
+  }
+}
+
+.mnmTableCell {
+  &.image {
+    height: 160px;
+  }
+}

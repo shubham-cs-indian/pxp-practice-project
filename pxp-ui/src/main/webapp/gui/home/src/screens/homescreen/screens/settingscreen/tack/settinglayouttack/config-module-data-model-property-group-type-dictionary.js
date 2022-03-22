@@ -1,0 +1,16 @@
+export default {
+  "HTML": "html",
+  "TEXT": "text",
+  "NUMBER": "number",
+  "DATE": "date",
+  "CALCULATED": "calculated",
+  "CONCATENATED": "concatenated",
+  "MEASUREMENT": "measurement",
+  "PRICE": "price",
+  "STANDARD": "standard",
+  "MASTER": "master",
+  "LOV": "lov",
+  "STATUS": "status",
+  "BOOLEAN": "boolean",
+  "LANGUAGE": "language",
+};

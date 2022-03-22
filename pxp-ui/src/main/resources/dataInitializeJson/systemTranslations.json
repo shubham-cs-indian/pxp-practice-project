@@ -1,0 +1,19 @@
+[
+  {
+    "id": "-1",
+    "translations": {
+      "en_US": {
+        "label": "Standard System"
+      },
+      "es_ES": {
+        "label": "Sistema estándar"
+      },
+      "fr_FR": {
+        "label": "Système standard"
+      },
+      "de_DE": {
+        "label": "Standardsystem"
+      }
+    }
+  }
+]

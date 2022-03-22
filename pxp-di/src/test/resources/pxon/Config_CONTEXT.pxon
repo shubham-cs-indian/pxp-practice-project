@@ -1,0 +1,175 @@
+[
+  "bgp 1000281 started 2020-05-14T14:44:30",
+  "scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"CONTEXT\"],\"CONTEXT\":[]}",
+  "Context codes=All",
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      "imageextensiontag": [
+        "image_extension_format_jpg",
+        "image_extension_format_png",
+        "image_extension_format_original"
+      ],
+      "resolutiontag": [
+        "resolution_150P",
+        "resolution_300P",
+        "resolution_72P"
+      ]
+    },
+    "islimitedobject": null,
+    "tab": "rendition_tab",
+    "csid": "[X>CTX1009 $type=IMAGE_VARIANT]",
+    "isduplicatevariantallowed": true,
+    "Luniqueselectors": [
+      
+    ],
+    "$classcode": "CFR1008",
+    "$isstandard": null,
+    "Lentities": null,
+    "label": "TIV",
+    "istimeenabled": false
+  },
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      "SL_LOV": [
+        "SL_N",
+        "SL_No",
+        "SL_Y"
+      ]
+    },
+    "islimitedobject": false,
+    "csid": "[X>CTX1230 $type=LINKED_VARIANT]",
+    "isduplicatevariantallowed": false,
+    "$classcode": "d91f9bb1-ec4c-3e8c-a0e3-38a4b1e9d1ab",
+    "defaultstarttime": null,
+    "$isstandard": false,
+    "Lentities": [
+      
+    ],
+    "label": "sidlinkedvariant",
+    "iscurrenttime": null,
+    "Luniqueselectors": [
+      
+    ],
+    "defaultendtime": null,
+    "istimeenabled": true
+  },
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      
+    },
+    "islimitedobject": false,
+    "csid": "[X>CTX1070 $type=LINKED_VARIANT]",
+    "isduplicatevariantallowed": false,
+    "Luniqueselectors": [
+      
+    ],
+    "$classcode": "bb29170e-a8bf-3bc0-9005-bbe9bc226a11",
+    "$isstandard": null,
+    "Lentities": [
+      
+    ],
+    "label": "New 20",
+    "istimeenabled": false
+  },
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      "availabilitytag": [
+        "dropshipping",
+        "onrequest",
+        "onstock",
+        "regularlyavailable"
+      ]
+    },
+    "islimitedobject": false,
+    "csid": "[X>AttributeContext $type=ATTRIBUTE_CONTEXT]",
+    "isduplicatevariantallowed": true,
+    "$classcode": null,
+    "defaultstarttime": 1589481000000,
+    "$isstandard": false,
+    "Lentities": [
+      
+    ],
+    "label": "AttributeContext",
+    "iscurrenttime": null,
+    "Luniqueselectors": [
+      
+    ],
+    "defaultendtime": 1590604200000,
+    "istimeenabled": true
+  },
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      "isbaseunittag": [
+        "isbaseunittagvalue"
+      ]
+    },
+    "islimitedobject": false,
+    "csid": "[X>LinkedVariant $type=LINKED_VARIANT]",
+    "isduplicatevariantallowed": false,
+    "$classcode": null,
+    "defaultstarttime": null,
+    "$isstandard": false,
+    "Lentities": [
+      
+    ],
+    "label": "LinkedVariant",
+    "iscurrenttime": true,
+    "Luniqueselectors": [
+      
+    ],
+    "defaultendtime": null,
+    "istimeenabled": true
+  },
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      "issalestag": [
+        "issalestagvalue"
+      ],
+      "availabilitytag": [
+        "dropshipping",
+        "onrequest",
+        "onstock",
+        "regularlyavailable"
+      ]
+    },
+    "islimitedobject": false,
+    "csid": "[X>Relationship_Variant $type=RELATIONSHIP_VARIANT]",
+    "isduplicatevariantallowed": false,
+    "Luniqueselectors": [
+      
+    ],
+    "$classcode": null,
+    "$isstandard": false,
+    "Lentities": [
+      
+    ],
+    "label": "Relationship_Variant",
+    "istimeenabled": false
+  },
+  {
+    "isautocreate": false,
+    "Jtagcodes": {
+      
+    },
+    "islimitedobject": false,
+    "csid": "[X>VersionContext $type=VERSION_CONTEXT]",
+    "isduplicatevariantallowed": false,
+    "Luniqueselectors": [
+      
+    ],
+    "$classcode": null,
+    "$isstandard": null,
+    "Lentities": [
+      
+    ],
+    "label": "VersionContext",
+    "istimeenabled": false
+  },
+  "bgp 1000281 ended 2020-05-14T14:44:30"
+]

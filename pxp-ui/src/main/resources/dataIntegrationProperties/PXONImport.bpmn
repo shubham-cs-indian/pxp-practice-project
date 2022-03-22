@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Camunda Modeler" exporterVersion="3.5.0" expressionLanguage="http://www.w3.org/1999/XPath" id="Definitions_8f365df5-8cdb-439c-adbc-063b3e39b024" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <bpmn:process id="STD_PXON_IMPORT" isClosed="false" isExecutable="true" name="STD_PXON_IMPORT" processType="None">
+    <bpmn:startEvent id="StartEvent_1wospkl" isInterrupting="true" parallelMultiple="false">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${camundaTask}" event="start"/>
+      <camunda:properties>
+          <camunda:property name="runtimeVariables" value=""/>
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>SequenceFlow_152b7u7</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:manualTask completionQuantity="1" id="Task_1ewej9u" isForCompensation="false" name="Manual Task" startQuantity="1">
+      <bpmn:incoming>SequenceFlow_07txb3h</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_06jxxsv</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ogmfnz</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0ogmfnz" sourceRef="Task_1ewej9u" targetRef="EndEvent_0epozj2"/>
+    <bpmn:exclusiveGateway default="SequenceFlow_0wegzeh" gatewayDirection="Unspecified" id="ExclusiveGateway_1lgvy29">
+      <bpmn:incoming>SequenceFlow_1fqcmmr</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_07txb3h</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1mn8x43</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0wegzeh</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_07txb3h" name="Exception" sourceRef="ExclusiveGateway_1lgvy29" targetRef="Task_1ewej9u">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${status == 'EXCEPTION' }]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1rmkfq0" sourceRef="IntermediateThrowEvent_0nz8wpp" targetRef="Task_0lokzpd"/>
+    <bpmn:sequenceFlow id="SequenceFlow_152b7u7" sourceRef="StartEvent_1wospkl" targetRef="customId"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1mn8x43" name="Success" sourceRef="ExclusiveGateway_1lgvy29" targetRef="EndEvent_0epozj2">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${status == 'SUCCESS' }]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:intermediateCatchEvent id="IntermediateThrowEvent_0nz8wpp" name="CallBack Event Message" parallelMultiple="false">
+      <bpmn:incoming>SequenceFlow_1y7z5q5</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1rmkfq0</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0hfsfof"/>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:endEvent id="EndEvent_0epozj2">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${camundaTask}" event="end"/>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0wegzeh</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1mn8x43</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0ogmfnz</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0wegzeh" name="Default" sourceRef="ExclusiveGateway_1lgvy29" targetRef="EndEvent_0epozj2"/>
+    <bpmn:serviceTask camunda:delegateExpression="${camundaTask}" completionQuantity="1" id="customId" implementation="##WebService" isForCompensation="false" name="PXON Import Task" startQuantity="1">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="taskId" parameterType="input">PXONImportTask</camunda:inputParameter>
+          <camunda:inputParameter name="bypassValidation">true</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_152b7u7</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_08nxg28</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_08nxg28" sourceRef="customId" targetRef="ExclusiveGateway_1klqsbc"/>
+    <bpmn:exclusiveGateway gatewayDirection="Unspecified" id="ExclusiveGateway_1klqsbc" name="BGP Started">
+      <bpmn:incoming>SequenceFlow_08nxg28</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1y7z5q5</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_06jxxsv</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1y7z5q5" name="Yes" sourceRef="ExclusiveGateway_1klqsbc" targetRef="IntermediateThrowEvent_0nz8wpp">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${PXONImportTask_status == 'SUCCESS' }]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_06jxxsv" name="No" sourceRef="ExclusiveGateway_1klqsbc" targetRef="Task_1ewej9u">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${PXONImportTask_status == 'EXCEPTION' }]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1fqcmmr" sourceRef="Task_0lokzpd" targetRef="ExclusiveGateway_1lgvy29"/>
+    <bpmn:serviceTask camunda:delegateExpression="${camundaTask}" completionQuantity="1" id="Task_0lokzpd" implementation="##WebService" isForCompensation="false" name="BGPStatusTask" startQuantity="1">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="taskId">bgpStatusTask</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1rmkfq0</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1fqcmmr</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmn:signal id="Signal_0wda8pa" name="CallBackURL"/>
+  <bpmn:signal id="Signal_1hyky69" name="PXON_EXPORT"/>
+  <bpmn:message id="Message_0hfsfof" name="PXON_IMPORT"/>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_8f365df5-8cdb-439c-adbc-063b3e39b024">
+    <bpmndi:BPMNPlane bpmnElement="STD_PXON_IMPORT" id="BPMNPlane_8f365df5-8cdb-439c-adbc-063b3e39b024">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1wospkl" id="StartEvent_1wospkl_di">
+        <dc:Bounds height="36" width="36" x="161" y="157"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="184" y="137"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1ewej9u" id="ManualTask_1l488mh_di">
+        <dc:Bounds height="80" width="100" x="775" y="210"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0ogmfnz" id="SequenceFlow_0ogmfnz_di">
+        <di:waypoint x="875" y="250"/>
+        <di:waypoint x="964" y="250"/>
+        <di:waypoint x="964" y="193"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="874.5" y="229"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_1lgvy29" id="ExclusiveGateway_1lgvy29_di" isMarkerVisible="true">
+        <dc:Bounds height="50" width="50" x="663" y="150"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="693" y="68"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_07txb3h" id="SequenceFlow_07txb3h_di">
+        <di:waypoint x="688" y="200"/>
+        <di:waypoint x="688" y="250"/>
+        <di:waypoint x="775" y="250"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="49" x="685" y="233"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1rmkfq0" id="SequenceFlow_1rmkfq0_di">
+        <di:waypoint x="526" y="175"/>
+        <di:waypoint x="541" y="175"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="488.5" y="154"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_152b7u7" id="SequenceFlow_152b7u7_di">
+        <di:waypoint x="197" y="175"/>
+        <di:waypoint x="283" y="175"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="195" y="94"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1mn8x43" id="SequenceFlow_1mn8x43_di">
+        <di:waypoint x="688" y="175"/>
+        <di:waypoint x="688" y="103"/>
+        <di:waypoint x="964" y="103"/>
+        <di:waypoint x="964" y="157"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="43" x="686" y="86"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="IntermediateThrowEvent_0nz8wpp" id="IntermediateCatchEvent_0uckhut_di">
+        <dc:Bounds height="36" width="36" x="490" y="157"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="27" width="76" x="470" y="204"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_0epozj2" id="EndEvent_0epozj2_di">
+        <dc:Bounds height="36" width="36" x="946" y="157"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="1042" y="109"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0wegzeh" id="SequenceFlow_0wegzeh_di">
+        <di:waypoint x="713" y="175"/>
+        <di:waypoint x="946" y="175"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="36" x="812" y="154"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="customId" id="ServiceTask_08t4ekh_di">
+        <dc:Bounds height="80" width="100" x="283" y="135"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_08nxg28" id="SequenceFlow_08nxg28_di">
+        <di:waypoint x="383" y="175"/>
+        <di:waypoint x="404" y="175"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="348.5" y="154"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_1klqsbc" id="ExclusiveGateway_1klqsbc_di" isMarkerVisible="true">
+        <dc:Bounds height="50" width="50" x="404" y="150"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="63" x="400" y="127"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1y7z5q5" id="SequenceFlow_1y7z5q5_di">
+        <di:waypoint x="454" y="175"/>
+        <di:waypoint x="490" y="175"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="13" width="19" x="463" y="153"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_06jxxsv" id="SequenceFlow_06jxxsv_di">
+        <di:waypoint x="429" y="200"/>
+        <di:waypoint x="429" y="250"/>
+        <di:waypoint x="775" y="250"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="15" x="437" y="218"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1fqcmmr" id="SequenceFlow_1fqcmmr_di">
+        <di:waypoint x="641" y="175"/>
+        <di:waypoint x="663" y="175"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="652" y="154"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_0lokzpd" id="ServiceTask_0wuhery_di">
+        <dc:Bounds height="80" width="100" x="541" y="135"/>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,80 @@
+package com.cs.core.runtime.interactor.model.goldenrecord;
+
+import com.cs.core.runtime.interactor.entity.datarule.IConflictingValue;
+import com.cs.core.runtime.interactor.entity.language.ILanguageKlassInstance;
+import com.cs.core.runtime.interactor.model.configuration.IModel;
+import com.cs.core.runtime.interactor.model.templating.IGetConfigDetailsForCustomTabModel;
+
+import java.util.List;
+import java.util.Map;
+
+public interface ISaveGoldenRecordStrategyModel extends IModel {
+  
+  public static final String GOLDEN_RECORD_ID      = "goldenRecordId";
+  public static final String BUCKET_ID             = "bucketId";
+  
+  public static final String ATTRIBUTES            = "attributes";
+  public static final String DEPENDENT_ATTRIBUTES  = "dependentAttributes";
+  public static final String TAGS                  = "tags";
+  
+  public static final String LANGUAGE_INSTANCES    = "languageInstances";
+  public static final String RELATIONSIP_INFO      = "relationshipInfo";
+  public static final String CONFIG_DETAILS        = "configDetails";
+  
+  public static final String KLASS_IDS             = "klassIds";
+  public static final String TAXONOMY_IDS          = "taxonomyIds";
+  public static final String SELECTED_TAXONOMY_IDS = "selectedTaxonomyIds";
+  public static final String SOURCE_IDS            = "sourceIds";
+  
+  public String getGoldenRecordId();
+  
+  public void setGoldenRecordId(String goldenRecordId);
+  
+  public String getBucketId();
+  
+  public void setBucketId(String bucketId);
+  
+  public List<IRelationshipIdSourceModel> getRelationshipInfo();
+  
+  public void setRelationshipInfo(List<IRelationshipIdSourceModel> relationshipInfo);
+  
+  public IGetConfigDetailsForCustomTabModel getConfigDetails();
+  
+  public void setConfigDetails(IGetConfigDetailsForCustomTabModel configDetails);
+  
+  public List<ILanguageKlassInstance> getLanguageInstances();
+  
+  public void setLanguageInstances(List<ILanguageKlassInstance> languageInstances);
+  
+  // key : attributeId
+  public Map<String, List<IConflictingValue>> getAttributes();
+  
+  public void setAttributes(Map<String, List<IConflictingValue>> attributes);
+  
+  // key:languageCode
+  public Map<String, Map<String, List<IConflictingValue>>> getDependentAttributes();
+  
+  public void setDependentAttributes(
+      Map<String, Map<String, List<IConflictingValue>>> dependentAttributes);
+  
+  // Key : tagId
+  public Map<String, List<IConflictingValue>> getTags();
+  
+  public void setTags(Map<String, List<IConflictingValue>> tags);
+  
+  public List<String> getKlassIds();
+  
+  public void setKlassIds(List<String> klassIds);
+  
+  public List<String> getTaxonomyIds();
+  
+  public void setTaxonomyIds(List<String> taxonomyIds);
+  
+  public List<String> getSelectedTaxonomyIds();
+  
+  public void setSelectedTaxonomyIds(List<String> selectedTaxonomyIds);
+  
+  public List<String> getSourceIds();
+  
+  public void setSourceIds(List<String> sourceIds);
+}

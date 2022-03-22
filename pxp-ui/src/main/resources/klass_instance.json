@@ -1,0 +1,122 @@
+{
+	"dynamic": "true",
+	"properties": {
+		"id": {
+			"type": "keyword"
+		},
+		"contextID": {
+			"type": "keyword"
+		},
+		"baseEntityIid": {
+			"type": "long"
+		},
+		"baseentityid": {
+			"type": "keyword"
+		},
+		"classIds": {
+			"type": "keyword"
+		},
+		"taxonomyIds": {
+			"type": "keyword"
+		},
+		"catalogCode": {
+			"type": "keyword"
+		},
+		"organisationCode": {
+			"type": "keyword"
+		},
+		"contextStartTime": {
+			"type": "long"
+		},
+		"contextEndTime": {
+			"type": "long"
+		},
+		"baseType": {
+			"type": "keyword"
+		},
+		"parentIID": {
+			"type": "long"
+		},
+		"topParentIID": {
+			"type": "long"
+		},
+		"isRoot": {
+			"type": "boolean"
+		},
+		"endpointCode": {
+			"type": "keyword"
+		},	
+		"collectionIds" :{
+			"type" : "keyword"
+		},
+		"red": {
+			"type": "keyword"
+		},
+		"orange": {
+			"type": "keyword"
+		},
+		"yellow": {
+			"type": "keyword"
+		},
+		"propertyObjects": {
+			"type": "nested",
+			"properties": {
+				"identifier": {
+					"type": "keyword"
+				},
+				"attribute": {
+					"type": "object",
+					"properties": {
+						"independent": {
+							"type": "object"
+						}
+					}
+				},
+				"tag": {
+					"type": "object"
+				}
+			}
+		}
+	},
+	"dynamic_templates": [
+		{
+          "long_template": {
+            "path_match": "propertyObjects.attribute.*.i_*",
+            "mapping": {
+              "fields": {
+                "raw": {
+                  "type": "keyword"
+                }
+              },
+              "type": "double"
+            }
+          }
+        },
+		{
+			"text_template": {
+				"path_match": "propertyObjects.attribute.*.t_*",
+				"mapping": {
+					"type": "text",
+					"analyzer":"searchable",
+					"fields": {
+						"raw": {
+							"type": "keyword"
+						},
+						"rawlowercase":{
+							"type": "keyword",
+							"normalizer":"lowercase"
+						}
+					}
+				}
+			}
+		},
+		{
+			"tag_template": {
+				"path_match": "propertyObjects.tag.*",
+				"mapping": {
+					"type": "keyword"
+				}
+			}
+		}
+	]
+}

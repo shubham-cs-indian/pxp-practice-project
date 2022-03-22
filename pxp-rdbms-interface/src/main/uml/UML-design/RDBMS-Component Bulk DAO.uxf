@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>90</y>
+      <w>580</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IBaseObjectBulkDAO
+--
+getAll( catalogID, superType, Locale, modifierByUserID=null): ICursor&lt;IBaseObjectDTO&gt;
+getByName( catalogID, superType, Locale, nameLike): ICursor&lt;IBaseObjectDTO&gt;
+save( List&lt;IBaseObjectDTO&gt;, comment= "")
+delete( catalogID, List&lt;&gt; objectIDs)
+
+
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>260</y>
+      <w>540</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IBaseEntityBulkDAO
+--
+getAll( superType, classifierID): ICursor&lt;IBaseEntityDTO&gt;
+getValueRecords( propIDs, Locale): List&lt;IValueRecordDTO&gt;
+saveValueRecords( List&lt;IValueRecordDTO&gt;, Locale)
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>210</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=gray</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>60</x>
+      <y>30</y>
+      <w>220</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RDBMS Component Bulk DAO
+Batch 1 target
+TO BE REVIEWED
+bg=red
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>120</y>
+      <w>480</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ILocaleCatalogBulkDAO
+--
+getAll( superType, modifierByUserID=null): ICursor&lt;IBaseObjectDTO&gt;
+getByNameLike( superType, nameLike): ICursor&lt;IBaseObjectDTO&gt;
+
+
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

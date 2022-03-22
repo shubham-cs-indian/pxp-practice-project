@@ -1,0 +1,53 @@
+@import "../../../../styleguide/style-guide";
+.dropDownListView {
+
+  &.dropDownItemHidden {
+    display: none;
+  }
+
+  position: absolute;
+  width: calc(100% - 2px);
+  color: $color-light-4;
+  background-color: $color-light-1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  cursor: default;
+  font-size: $font-normal;
+  margin-top: -1px;
+  outline: none;
+  padding: 6px 0;
+  margin-left: 1px;
+  z-index: 10;
+  overflow: auto;
+  text-align: left;
+
+  .dropDownNodeContainer {
+    height: auto;
+    line-height: normal;
+    color: $color-dark-2;
+    padding: 5px;
+    position: relative;
+
+    .dropDownNodeColorBox{
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      border-radius: 4px;
+      box-shadow: 0px 0px 7px -4px $color-dark-1 inset;
+    }
+
+    &.activeNode {
+      background-color: $color-light-3;
+    }
+
+    input[type="checkbox"] {
+      position: relative;
+      top: 1px;
+      margin-right: 5px;
+    }
+
+  }
+}
+

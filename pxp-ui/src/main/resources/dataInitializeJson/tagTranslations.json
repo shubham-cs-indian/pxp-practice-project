@@ -1,0 +1,1464 @@
+[
+  {
+    "id": "T_CAMPAIGN_GOALS",
+    "translations": {
+      "en_US": {
+        "label": null
+      },
+      "es_ES": {
+        "label": null
+      },
+      "fr_FR": {
+        "label": null
+      },
+      "de_DE": {
+        "label": null
+      }
+    }
+  },
+  {
+    "id": "languagetag",
+    "translations": {
+      "en_US": {
+        "label": "Language"
+      },
+      "es_ES": {
+        "label": "Sprache"
+      },
+      "fr_FR": {
+        "label": "Langue"
+      },
+      "de_DE": {
+        "label": "Idioma"
+      }
+    }
+  },
+  {
+    "id": "availabilitytag",
+    "translations": {
+      "en_US": {
+        "label": "Availability"
+      },
+      "es_ES": {
+        "label": "Disponibilidad"
+      },
+      "fr_FR": {
+        "label": "Disponibilité"
+      },
+      "de_DE": {
+        "label": "Verfügbarkeit"
+      }
+    }
+  },
+  {
+    "id": "imageextensiontag",
+    "translations": {
+      "en_US": {
+        "label": "Image Extension"
+      },
+      "es_ES": {
+        "label": "Extensión de imagen"
+      },
+      "fr_FR": {
+        "label": "Extension d'image"
+      },
+      "de_DE": {
+        "label": "Bilderweiterung"
+      }
+    }
+  },
+  {
+    "id": "isbaseunittag",
+    "translations": {
+      "en_US": {
+        "label": "isBaseUnit"
+      },
+      "es_ES": {
+        "label": "Es la unidad base"
+      },
+      "fr_FR": {
+        "label": "Est l'unité de base"
+      },
+      "de_DE": {
+        "label": "Ist Basiseinheit"
+      }
+    }
+  },
+  {
+    "id": "isordertag",
+    "translations": {
+      "en_US": {
+        "label": "isOrder"
+      },
+      "es_ES": {
+        "label": "Es orden"
+      },
+      "fr_FR": {
+        "label": "Est l'ordre"
+      },
+      "de_DE": {
+        "label": "Ist Ordnung"
+      }
+    }
+  },
+  {
+    "id": "issalestag",
+    "translations": {
+      "en_US": {
+        "label": "isSales"
+      },
+      "es_ES": {
+        "label": "Es ventas"
+      },
+      "fr_FR": {
+        "label": "Est des ventes"
+      },
+      "de_DE": {
+        "label": "Ist Verkauf"
+      }
+    }
+  },
+  {
+    "id": "T_CAMP_TYPE",
+    "translations": {
+      "en_US": {
+        "label": "Kampagnen-Typ"
+      },
+      "es_ES": {
+        "label": "Kampagnen-Typ__es_ES"
+      },
+      "fr_FR": {
+        "label": "Kampagnen-Typ__fr_FR"
+      },
+      "de_DE": {
+        "label": "Kampagnen-Typ__de_DE"
+      }
+    }
+  },
+  {
+    "id": "lifestatustag",
+    "translations": {
+      "en_US": {
+        "label": "Life Cycle Status"
+      },
+      "es_ES": {
+        "label": "Estado del ciclo de vida"
+      },
+      "fr_FR": {
+        "label": "État du cycle de vie"
+      },
+      "de_DE": {
+        "label": "Lebenszyklusstatus"
+      }
+    }
+  },
+  {
+    "id": "listingstatustag",
+    "translations": {
+      "en_US": {
+        "label": "Listing Status"
+      },
+      "es_ES": {
+        "label": "Estado de listado"
+      },
+      "fr_FR": {
+        "label": "Statut de la liste"
+      },
+      "de_DE": {
+        "label": "Listungsstatus"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT",
+    "translations": {
+      "en_US": {
+        "label": "Projektstatus"
+      },
+      "es_ES": {
+        "label": "Projektstatus"
+      },
+      "fr_FR": {
+        "label": "Projektstatus"
+      },
+      "de_DE": {
+        "label": "Projektstatus"
+      }
+    }
+  },
+  {
+    "id": "resolutiontag",
+    "translations": {
+      "en_US": {
+        "label": "Resolution"
+      },
+      "es_ES": {
+        "label": "Resolución"
+      },
+      "fr_FR": {
+        "label": "Résolution"
+      },
+      "de_DE": {
+        "label": "AuflÃƒÂ¶sung"
+      }
+    }
+  },
+  {
+    "id": "statustag",
+    "translations": {
+      "en_US": {
+        "label": "Status"
+      },
+      "es_ES": {
+        "label": "Estado"
+      },
+      "fr_FR": {
+        "label": "Statut"
+      },
+      "de_DE": {
+        "label": "Status"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM",
+    "translations": {
+      "en_US": {
+        "label": "Status"
+      },
+      "es_ES": {
+        "label": "Estado"
+      },
+      "fr_FR": {
+        "label": "Statut"
+      },
+      "de_DE": {
+        "label": "Status"
+      }
+    }
+  },
+  {
+    "id": "taskstatustag",
+    "translations": {
+      "en_US": {
+        "label": "Task-Status"
+      },
+      "es_ES": {
+        "label": "Estado de la tarea"
+      },
+      "fr_FR": {
+        "label": "État de la tâche"
+      },
+      "de_DE": {
+        "label": "Aufgabenstatus"
+      }
+    }
+  },
+  {
+    "id": "dropshipping",
+    "translations": {
+      "en_US": {
+        "label": "Drop Shipping"
+      },
+      "es_ES": {
+        "label": "Envío de la gota"
+      },
+      "fr_FR": {
+        "label": "Livraison directe"
+      },
+      "de_DE": {
+        "label": "Drop Shipping"
+      }
+    }
+  },
+  {
+    "id": "onrequest",
+    "translations": {
+      "en_US": {
+        "label": "On Request"
+      },
+      "es_ES": {
+        "label": "Bajo pedido"
+      },
+      "fr_FR": {
+        "label": "Sur demande"
+      },
+      "de_DE": {
+        "label": "Auf Anfrage"
+      }
+    }
+  },
+  {
+    "id": "onstock",
+    "translations": {
+      "en_US": {
+        "label": "On Stock"
+      },
+      "es_ES": {
+        "label": "En inventario"
+      },
+      "fr_FR": {
+        "label": "En stock"
+      },
+      "de_DE": {
+        "label": "Auf Lager"
+      }
+    }
+  },
+  {
+    "id": "regularlyavailable",
+    "translations": {
+      "en_US": {
+        "label": "Regularly Available"
+      },
+      "es_ES": {
+        "label": "Regularmente disponible"
+      },
+      "fr_FR": {
+        "label": "Régulièrement disponible"
+      },
+      "de_DE": {
+        "label": "Regelmäßig erhältlich"
+      }
+    }
+  },
+  {
+    "id": "image_extension_format_jpg",
+    "translations": {
+      "en_US": {
+        "label": "jpg"
+      },
+      "es_ES": {
+        "label": "jpg"
+      },
+      "fr_FR": {
+        "label": "jpg"
+      },
+      "de_DE": {
+        "label": "jpg"
+      }
+    }
+  },
+  {
+    "id": "image_extension_format_original",
+    "translations": {
+      "en_US": {
+        "label": "original"
+      },
+      "es_ES": {
+        "label": "Original"
+      },
+      "fr_FR": {
+        "label": "Original"
+      },
+      "de_DE": {
+        "label": "Original"
+      }
+    }
+  },
+  {
+    "id": "image_extension_format_png",
+    "translations": {
+      "en_US": {
+        "label": "png"
+      },
+      "es_ES": {
+        "label": "png"
+      },
+      "fr_FR": {
+        "label": "png"
+      },
+      "de_DE": {
+        "label": "png"
+      }
+    }
+  },
+  {
+    "id": "T_CAMP_TYPE_CATALINA",
+    "translations": {
+      "en_US": {
+        "label": "Catalina"
+      },
+      "es_ES": {
+        "label": "Catalina"
+      },
+      "fr_FR": {
+        "label": "Catalina"
+      },
+      "de_DE": {
+        "label": "Catalina"
+      }
+    }
+  },
+  {
+    "id": "T_CAMP_TYPE_DCARD",
+    "translations": {
+      "en_US": {
+        "label": "DeutschlandCard"
+      },
+      "es_ES": {
+        "label": "DeutschlandCard"
+      },
+      "fr_FR": {
+        "label": "DeutschlandCard"
+      },
+      "de_DE": {
+        "label": "DeutschlandCard"
+      }
+    }
+  },
+  {
+    "id": "T_CAMP_TYPE_SUPPLIER",
+    "translations": {
+      "en_US": {
+        "label": "Lieferant"
+      },
+      "es_ES": {
+        "label": "Lieferant"
+      },
+      "fr_FR": {
+        "label": "Lieferant"
+      },
+      "de_DE": {
+        "label": "Lieferant"
+      }
+    }
+  },
+  {
+    "id": "T_CAMP_TYPE_NATIONAL",
+    "translations": {
+      "en_US": {
+        "label": "National"
+      },
+      "es_ES": {
+        "label": "Nacional"
+      },
+      "fr_FR": {
+        "label": "nationale"
+      },
+      "de_DE": {
+        "label": "National"
+      }
+    }
+  },
+  {
+    "id": "T_CAMP_TYPE_REGIONAL",
+    "translations": {
+      "en_US": {
+        "label": "Regional"
+      },
+      "es_ES": {
+        "label": "Regional"
+      },
+      "fr_FR": {
+        "label": "Régional"
+      },
+      "de_DE": {
+        "label": "Regional"
+      }
+    }
+  },
+  {
+    "id": "life_status_active",
+    "translations": {
+      "en_US": {
+        "label": "Active"
+      },
+      "es_ES": {
+        "label": "Activo"
+      },
+      "fr_FR": {
+        "label": "Actif"
+      },
+      "de_DE": {
+        "label": "Aktiv"
+      }
+    }
+  },
+  {
+    "id": "life_status_activebanned",
+    "translations": {
+      "en_US": {
+        "label": "Active - Banned"
+      },
+      "es_ES": {
+        "label": "Activo - Prohibido"
+      },
+      "fr_FR": {
+        "label": "Actif - Interdit"
+      },
+      "de_DE": {
+        "label": "Aktiv - Verboten"
+      }
+    }
+  },
+  {
+    "id": "life_status_activeblocked",
+    "translations": {
+      "en_US": {
+        "label": "Active - Blocked"
+      },
+      "es_ES": {
+        "label": "Activo - Bloqueado"
+      },
+      "fr_FR": {
+        "label": "Actif - Bloqué"
+      },
+      "de_DE": {
+        "label": "Blockiert"
+      }
+    }
+  },
+  {
+    "id": "life_status_archived",
+    "translations": {
+      "en_US": {
+        "label": "Archived"
+      },
+      "es_ES": {
+        "label": "Archivado"
+      },
+      "fr_FR": {
+        "label": "Archivé©"
+      },
+      "de_DE": {
+        "label": "Archiviert"
+      }
+    }
+  },
+  {
+    "id": "life_status_deleted",
+    "translations": {
+      "en_US": {
+        "label": "Deleted"
+      },
+      "es_ES": {
+        "label": "Eliminado"
+      },
+      "fr_FR": {
+        "label": "Supprimé"
+      },
+      "de_DE": {
+        "label": "Gelöscht"
+      }
+    }
+  },
+  {
+    "id": "life_status_inbox",
+    "translations": {
+      "en_US": {
+        "label": "Inbox"
+      },
+      "es_ES": {
+        "label": "Bandeja de entrada"
+      },
+      "fr_FR": {
+        "label": "Boîte de réception"
+      },
+      "de_DE": {
+        "label": "Posteingang"
+      }
+    }
+  },
+  {
+    "id": "life_status_nointerest",
+    "translations": {
+      "en_US": {
+        "label": "No Interest"
+      },
+      "es_ES": {
+        "label": "No hay interés"
+      },
+      "fr_FR": {
+        "label": "Pas d'intérêt"
+      },
+      "de_DE": {
+        "label": "Kein Interesse"
+      }
+    }
+  },
+  {
+    "id": "life_status_preparation",
+    "translations": {
+      "en_US": {
+        "label": "Preparation"
+      },
+      "es_ES": {
+        "label": "Preparación"
+      },
+      "fr_FR": {
+        "label": "Préparation"
+      },
+      "de_DE": {
+        "label": "Vorbereitung"
+      }
+    }
+  },
+  {
+    "id": "life_status_retired",
+    "translations": {
+      "en_US": {
+        "label": "Retired"
+      },
+      "es_ES": {
+        "label": "Retirado"
+      },
+      "fr_FR": {
+        "label": "Retraité"
+      },
+      "de_DE": {
+        "label": "Im Ruhestand"
+      }
+    }
+  },
+  {
+    "id": "listing_status_catlog",
+    "translations": {
+      "en_US": {
+        "label": "Catalog"
+      },
+      "es_ES": {
+        "label": "Catalogar"
+      },
+      "fr_FR": {
+        "label": "Catalogue"
+      },
+      "de_DE": {
+        "label": "Katalog"
+      }
+    }
+  },
+  {
+    "id": "listing_status_ignored",
+    "translations": {
+      "en_US": {
+        "label": "Ignored"
+      },
+      "es_ES": {
+        "label": "Ignorado"
+      },
+      "fr_FR": {
+        "label": "Ignoré"
+      },
+      "de_DE": {
+        "label": "Ignoriert"
+      }
+    }
+  },
+  {
+    "id": "listing_status_listed",
+    "translations": {
+      "en_US": {
+        "label": "Listed"
+      },
+      "es_ES": {
+        "label": "Listado"
+      },
+      "fr_FR": {
+        "label": "Listé"
+      },
+      "de_DE": {
+        "label": "Gelistet"
+      }
+    }
+  },
+  {
+    "id": "listing_status_onboardingpool",
+    "translations": {
+      "en_US": {
+        "label": "Onboarding Pool"
+      },
+      "es_ES": {
+        "label": "Piscina de incorporación"
+      },
+      "fr_FR": {
+        "label": "Piscine d'accueil"
+      },
+      "de_DE": {
+        "label": "In Vorbereitung"
+      }
+    }
+  },
+  {
+    "id": "listing_status_recommended",
+    "translations": {
+      "en_US": {
+        "label": "Recommended"
+      },
+      "es_ES": {
+        "label": "Recomendado"
+      },
+      "fr_FR": {
+        "label": "conseillé"
+      },
+      "de_DE": {
+        "label": "Empfohlen"
+      }
+    }
+  },
+  {
+    "id": "listing_status_rejected",
+    "translations": {
+      "en_US": {
+        "label": "Rejected"
+      },
+      "es_ES": {
+        "label": "Rechazado"
+      },
+      "fr_FR": {
+        "label": "Rejeté"
+      },
+      "de_DE": {
+        "label": "Abgelehnt"
+      }
+    }
+  },
+  {
+    "id": "listing_status_shadowassortment",
+    "translations": {
+      "en_US": {
+        "label": "Shadow Assortment"
+      },
+      "es_ES": {
+        "label": "Surtido de sombras"
+      },
+      "fr_FR": {
+        "label": "Assortiment d'ombre"
+      },
+      "de_DE": {
+        "label": "Schattensortiment"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_USING ALLOWED",
+    "translations": {
+      "en_US": {
+        "label": null
+      },
+      "es_ES": {
+        "label": null
+      },
+      "fr_FR": {
+        "label": null
+      },
+      "de_DE": {
+        "label": null
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_CANCELED",
+    "translations": {
+      "en_US": {
+        "label": "abgebrochen"
+      },
+      "es_ES": {
+        "label": "abgebrochen"
+      },
+      "fr_FR": {
+        "label": "abgebrochen"
+      },
+      "de_DE": {
+        "label": "abgebrochen"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_COMPLETE",
+    "translations": {
+      "en_US": {
+        "label": "abgeschlossen"
+      },
+      "es_ES": {
+        "label": "abgeschlossen"
+      },
+      "fr_FR": {
+        "label": "abgeschlossen"
+      },
+      "de_DE": {
+        "label": "erledigt"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_ERROR_PROCESSING",
+    "translations": {
+      "en_US": {
+        "label": "Fehler bearbeiten"
+      },
+      "es_ES": {
+        "label": "Fehler bearbeiten"
+      },
+      "fr_FR": {
+        "label": "Fehler bearbeiten"
+      },
+      "de_DE": {
+        "label": "Fehler gehört"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_IN_PLANNING",
+    "translations": {
+      "en_US": {
+        "label": "In Planung"
+      },
+      "es_ES": {
+        "label": "En Planung"
+      },
+      "fr_FR": {
+        "label": "À Planung"
+      },
+      "de_DE": {
+        "label": "In Planung"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_LICENSE_MISSING",
+    "translations": {
+      "en_US": {
+        "label": "Lizenz fehlt"
+      },
+      "es_ES": {
+        "label": "Lizenz fehlt"
+      },
+      "fr_FR": {
+        "label": "Lizenz fehlt"
+      },
+      "de_DE": {
+        "label": "Lizenz fehlt"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_QUALITY_CHECK",
+    "translations": {
+      "en_US": {
+        "label": "QualitÃ¤t sichern"
+      },
+      "es_ES": {
+        "label": "QualitÃƒÂ¤t sichern"
+      },
+      "fr_FR": {
+        "label": "QualitÃƒÂ¤t sichern"
+      },
+      "de_DE": {
+        "label": "QualitÃƒÂ¤t sichern"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_PROJECT_REWORK",
+    "translations": {
+      "en_US": {
+        "label": "zur Ãœberarbeitung"
+      },
+      "es_ES": {
+        "label": "zur ÃƒÅ“berarbeitung"
+      },
+      "fr_FR": {
+        "label": "zur ÃƒÅ“berarbeitung"
+      },
+      "de_DE": {
+        "label": "zur ÃƒÅ“berarbeitung"
+      }
+    }
+  },
+  {
+    "id": "resolution_720P",
+    "translations": {
+      "en_US": {
+        "label": "720 dpi"
+      },
+      "es_ES": {
+        "label": "720 dpi"
+      },
+      "fr_FR": {
+        "label": "720 dpi"
+      },
+      "de_DE": {
+        "label": "720 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_1080P",
+    "translations": {
+      "en_US": {
+        "label": "1080 dpi"
+      },
+      "es_ES": {
+        "label": "1080 dpi"
+      },
+      "fr_FR": {
+        "label": "1080 dpi"
+      },
+      "de_DE": {
+        "label": "1080 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_1440P",
+    "translations": {
+      "en_US": {
+        "label": "1440 dpi"
+      },
+      "es_ES": {
+        "label": "1440 dpi"
+      },
+      "fr_FR": {
+        "label": "1440 dpi"
+      },
+      "de_DE": {
+        "label": "1440 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_2160P",
+    "translations": {
+      "en_US": {
+        "label": "2160 dpi"
+      },
+      "es_ES": {
+        "label": "2160 dpi"
+      },
+      "fr_FR": {
+        "label": "2160 dpi"
+      },
+      "de_DE": {
+        "label": "2160 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_4380P",
+    "translations": {
+      "en_US": {
+        "label": "4280 dpi"
+      },
+      "es_ES": {
+        "label": "4280 dpi"
+      },
+      "fr_FR": {
+        "label": "4280 dpi"
+      },
+      "de_DE": {
+        "label": "4280 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_150P",
+    "translations": {
+      "en_US": {
+        "label": "150_dpi"
+      },
+      "es_ES": {
+        "label": "150 dpi"
+      },
+      "fr_FR": {
+        "label": "150 dpi"
+      },
+      "de_DE": {
+        "label": "150 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_300P",
+    "translations": {
+      "en_US": {
+        "label": "300_dpi"
+      },
+      "es_ES": {
+        "label": "300 dpi"
+      },
+      "fr_FR": {
+        "label": "300 dpi"
+      },
+      "de_DE": {
+        "label": "300 dpi"
+      }
+    }
+  },
+  {
+    "id": "resolution_72P",
+    "translations": {
+      "en_US": {
+        "label": "72_dpi"
+      },
+      "es_ES": {
+        "label": "72 dpi"
+      },
+      "fr_FR": {
+        "label": "72 dpi"
+      },
+      "de_DE": {
+        "label": "72 dpi"
+      }
+    }
+  },
+  {
+    "id": "approvaltag",
+    "translations": {
+      "en_US": {
+        "label": "Approval"
+      },
+      "es_ES": {
+        "label": "Aprobación"
+      },
+      "fr_FR": {
+        "label": "Approbation"
+      },
+      "de_DE": {
+        "label": "Die Genehmigung"
+      }
+    }
+  },
+  {
+    "id": "blockedfromplanning",
+    "translations": {
+      "en_US": {
+        "label": "Blocked from planning"
+      },
+      "es_ES": {
+        "label": "Bloqueado de la planificación"
+      },
+      "fr_FR": {
+        "label": "Bloqué de la planification"
+      },
+      "de_DE": {
+        "label": "Von der Planung ausgeschlossen"
+      }
+    }
+  },
+  {
+    "id": "enrichmenttag",
+    "translations": {
+      "en_US": {
+        "label": "Enrichment"
+      },
+      "es_ES": {
+        "label": "Enriquecimiento"
+      },
+      "fr_FR": {
+        "label": "Enrichissement"
+      },
+      "de_DE": {
+        "label": "Anreicherung"
+      }
+    }
+  },
+  {
+    "id": "productivetag",
+    "translations": {
+      "en_US": {
+        "label": "Productive"
+      },
+      "es_ES": {
+        "label": "Productivo"
+      },
+      "fr_FR": {
+        "label": "Productif"
+      },
+      "de_DE": {
+        "label": "Produktiv"
+      }
+    }
+  },
+  {
+    "id": "qualitychecktag",
+    "translations": {
+      "en_US": {
+        "label": "Quality Check"
+      },
+      "es_ES": {
+        "label": "Control de calidad"
+      },
+      "fr_FR": {
+        "label": "Contrôle qualité"
+      },
+      "de_DE": {
+        "label": "Qualitätsprüfung"
+      }
+    }
+  },
+  {
+    "id": "translationtag",
+    "translations": {
+      "en_US": {
+        "label": "Translation"
+      },
+      "es_ES": {
+        "label": "Traducción"
+      },
+      "fr_FR": {
+        "label": "Traduction"
+      },
+      "de_DE": {
+        "label": "Übersetzung"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_ACTIV",
+    "translations": {
+      "en_US": {
+        "label": "Aktiv"
+      },
+      "es_ES": {
+        "label": "Aktiv"
+      },
+      "fr_FR": {
+        "label": "Aktiv"
+      },
+      "de_DE": {
+        "label": "Aktiv"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_ARCHIVED",
+    "translations": {
+      "en_US": {
+        "label": "Archiviert"
+      },
+      "es_ES": {
+        "label": "Archiviert"
+      },
+      "fr_FR": {
+        "label": "Archiviert"
+      },
+      "de_DE": {
+        "label": "Archiviert"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_DELETED",
+    "translations": {
+      "en_US": {
+        "label": "GelÃ¶scht"
+      },
+      "es_ES": {
+        "label": "GelÃƒÂ¶scht"
+      },
+      "fr_FR": {
+        "label": "GelÃƒÂ¶scht"
+      },
+      "de_DE": {
+        "label": "GelÃƒÂ¶scht"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_BLOCKED",
+    "translations": {
+      "en_US": {
+        "label": "Gesperrt"
+      },
+      "es_ES": {
+        "label": "Gesperrt"
+      },
+      "fr_FR": {
+        "label": "Gesperrt"
+      },
+      "de_DE": {
+        "label": "Gesperrt"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_INACTIV",
+    "translations": {
+      "en_US": {
+        "label": "Inaktiv"
+      },
+      "es_ES": {
+        "label": "Inaktiv"
+      },
+      "fr_FR": {
+        "label": "Inaktiv"
+      },
+      "de_DE": {
+        "label": "Inaktiv"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_NEW",
+    "translations": {
+      "en_US": {
+        "label": "Neu"
+      },
+      "es_ES": {
+        "label": "Neu"
+      },
+      "fr_FR": {
+        "label": "Neu"
+      },
+      "de_DE": {
+        "label": "Neu"
+      }
+    }
+  },
+  {
+    "id": "T_STATUS_SYSTEM_PREPARE",
+    "translations": {
+      "en_US": {
+        "label": "Vorbereitung"
+      },
+      "es_ES": {
+        "label": "Vorbereitung"
+      },
+      "fr_FR": {
+        "label": "Vorbereitung"
+      },
+      "de_DE": {
+        "label": "Vorbereitung"
+      }
+    }
+  },
+  {
+    "id": "taskdeclined",
+    "translations": {
+      "en_US": {
+        "label": "Declined"
+      },
+      "es_ES": {
+        "label": "Rechazado"
+      },
+      "fr_FR": {
+        "label": "Diminué"
+      },
+      "de_DE": {
+        "label": "Abgelehnt"
+      }
+    }
+  },
+  {
+    "id": "taskdone",
+    "translations": {
+      "en_US": {
+        "label": "Done"
+      },
+      "es_ES": {
+        "label": "Hecho"
+      },
+      "fr_FR": {
+        "label": "Terminé"
+      },
+      "de_DE": {
+        "label": "Getan"
+      }
+    }
+  },
+  {
+    "id": "taskinprogress",
+    "translations": {
+      "en_US": {
+        "label": "In_Progress"
+      },
+      "es_ES": {
+        "label": "En progreso"
+      },
+      "fr_FR": {
+        "label": "En cours"
+      },
+      "de_DE": {
+        "label": "In Bearbeitung"
+      }
+    }
+  },
+  {
+    "id": "taskplanned",
+    "translations": {
+      "en_US": {
+        "label": "Planned"
+      },
+      "es_ES": {
+        "label": "Planificado"
+      },
+      "fr_FR": {
+        "label": "Prévu"
+      },
+      "de_DE": {
+        "label": "Geplant"
+      }
+    }
+  },
+  {
+    "id": "taskready",
+    "translations": {
+      "en_US": {
+        "label": "Ready"
+      },
+      "es_ES": {
+        "label": "Listo"
+      },
+      "fr_FR": {
+        "label": "Prêt"
+      },
+      "de_DE": {
+        "label": "Bereit"
+      }
+    }
+  },
+  {
+    "id": "tasksignedoff",
+    "translations": {
+      "en_US": {
+        "label": "Signed_Off"
+      },
+      "es_ES": {
+        "label": "Firmado"
+      },
+      "fr_FR": {
+        "label": "Signé"
+      },
+      "de_DE": {
+        "label": "Abgemeldet"
+      }
+    }
+  },
+  {
+    "id": "taskverified",
+    "translations": {
+      "en_US": {
+        "label": "Verified"
+      },
+      "es_ES": {
+        "label": "Verificado"
+      },
+      "fr_FR": {
+        "label": "Vérifié"
+      },
+      "de_DE": {
+        "label": "Verifiziert"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_tag",
+    "translations": {
+      "en_US": {
+        "label": "Campaign Status"
+      },
+      "es_ES": {
+        "label": "Estado de la campaña"
+      },
+      "fr_FR": {
+        "label": "État de la campagne"
+      },
+      "de_DE": {
+        "label": "Kampagnenstatus"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_in_preparation",
+    "translations": {
+      "en_US": {
+        "label": "In preparation"
+      },
+      "es_ES": {
+        "label": "En la preparación de"
+      },
+      "fr_FR": {
+        "label": "En préparation"
+      },
+      "de_DE": {
+        "label": "In Vorbereitung"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_released",
+    "translations": {
+      "en_US": {
+        "label": "Released"
+      },
+      "es_ES": {
+        "label": "Publicado"
+      },
+      "fr_FR": {
+        "label": "Libéré"
+      },
+      "de_DE": {
+        "label": "Veröffentlicht"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_stopped",
+    "translations": {
+      "en_US": {
+        "label": "Stopped"
+      },
+      "es_ES": {
+        "label": "Detenido"
+      },
+      "fr_FR": {
+        "label": "Arrêté"
+      },
+      "de_DE": {
+        "label": "Gestoppt"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_review",
+    "translations": {
+      "en_US": {
+        "label": "Review"
+      },
+      "es_ES": {
+        "label": "revisión"
+      },
+      "fr_FR": {
+        "label": "La revue"
+      },
+      "de_DE": {
+        "label": "Rezension"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_approved",
+    "translations": {
+      "en_US": {
+        "label": "Approved"
+      },
+      "es_ES": {
+        "label": "Aprobado"
+      },
+      "fr_FR": {
+        "label": "Approuvé"
+      },
+      "de_DE": {
+        "label": "Genehmigt"
+      }
+    }
+  },
+  {
+    "id": "campaign_status_delete",
+    "translations": {
+      "en_US": {
+        "label": "Delete"
+      },
+      "es_ES": {
+        "label": "Eliminar"
+      },
+      "fr_FR": {
+        "label": "Supprimer"
+      },
+      "de_DE": {
+        "label": "Löschen"
+      }
+    }
+  }
+]

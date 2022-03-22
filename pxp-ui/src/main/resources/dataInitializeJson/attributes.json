@@ -1,0 +1,627 @@
+[
+	{
+	  "id": "nameattribute",
+	  "code": "nameattribute",
+      "isStandard": true,
+      "isTranslatable": true,
+      "isVersionable": true,
+	  "type": "com.cs.core.config.interactor.entity.standard.attribute.NameAttribute",
+	  "propertyIID": 200,
+	  "icon": "nameattribute"
+	},
+	{
+	  "id": "createdbyattribute",
+	  "code": "createdbyattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.standard.attribute.CreatedByAttribute",
+	  "propertyIID": 201,
+	  "icon": "createdbyattribute"
+	},
+	{
+	  "id": "createdonattribute",
+	  "code": "createdonattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.standard.attribute.CreatedOnAttribute",
+	  "propertyIID": 202,
+	  "icon": "createdonattribute"
+	},
+	{
+	  "id": "lastmodifiedbyattribute",
+	  "code": "lastmodifiedbyattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.standard.attribute.LastModifiedByAttribute",
+	  "propertyIID": 203,
+	  "icon": "lastmodifiedbyattribute"
+	},
+	{
+	  "id": "lastmodifiedattribute",
+	  "code": "lastmodifiedattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.standard.attribute.LastModifiedAttribute",
+	  "propertyIID": 204,
+	  "icon": "lastmodifiedattribute"
+	},
+	{
+	  "id": "assetcoverflowattribute",
+	  "code": "assetcoverflowattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+      "isVersionable": true,
+	  "type": "com.cs.core.config.interactor.entity.standard.attribute.ImageCoverflowAttribute",
+	  "propertyIID": 205,
+	  "icon": "assetcoverflowattribute"
+	},
+	{
+	  "id": "addressattribute",
+	  "code": "addressattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.HTMLAttribute",
+	  "propertyIID": 206,
+	  "icon": "addressattribute"
+	},
+	{
+	  "id": "descriptionattribute",
+	  "code": "descriptionattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.HTMLAttribute",
+	  "propertyIID": 207,
+	  "icon": "descriptionattribute"
+	},
+	{
+	  "id": "longdescriptionattribute",
+	  "code": "longdescriptionattribute",
+      "isStandard": true,
+      "isTranslatable": true,
+	  "type": "com.cs.core.config.interactor.entity.attribute.HTMLAttribute",
+	  "propertyIID": 208,
+	  "icon": "longdescriptionattribute"
+	},
+	{
+	  "id": "shortdescriptionattribute",
+	  "code": "shortdescriptionattribute",
+      "isStandard": true,
+      "isTranslatable": true,
+	  "type": "com.cs.core.config.interactor.entity.attribute.HTMLAttribute",
+	  "propertyIID": 209,
+	   "icon": "shortdescriptionattribute"
+	},
+	{
+	  "id": "duedateattribute",
+	  "code": "duedateattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.DateAttribute",
+	  "propertyIID": 210,
+	   "icon": "duedateattribute"
+	},
+	{
+	  "id": "discountattribute",
+	  "code": "discountattribute",
+	  "precision": 2,
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.NumberAttribute",
+	  "propertyIID": 211,
+	   "icon": "discountattribute"
+	},
+	{
+	  "id": "gtin_attribute",
+	  "code": "gtin_attribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.NumberAttribute",
+	  "propertyIID": 212,
+	  "icon": "gtin_attribute"
+	},
+	{
+	  "id": "listpriceattribute",
+	  "code": "listpriceattribute",
+	  "precision": 2,
+	  "defaultUnit": "EUR",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.PriceAttribute",
+	  "propertyIID": 213,
+	   "icon": "listpriceattribute"
+	},
+	{
+	  "id": "maximumpriceattribute",
+	  "code": "maximumpriceattribute",
+	  "precision": 2,
+	  "defaultUnit": "EUR",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.PriceAttribute",
+	  "propertyIID": 214,
+	   "icon": "maximumpriceattribute"
+	},
+	{
+	  "id": "minimumpriceattribute",
+	  "code": "minimumpriceattribute",
+	  "precision": 2,
+	  "defaultUnit": "EUR",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.PriceAttribute",
+	  "propertyIID": 215,
+	  "icon": "minimumpriceattribute"
+	},
+	{
+	  "id": "sellingpriceattribute",
+	  "code": "sellingpriceattribute",
+	  "precision": 2,
+	  "defaultUnit": "EUR",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.PriceAttribute",
+	  "propertyIID": 216,
+	   "icon": "sellingpriceattribute"
+	},
+	{
+	  "id": "firstnameattribute",
+	  "code": "firstnameattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.TextAttribute",
+	  "propertyIID": 217,
+	  "icon": "firstnameattribute"
+	},
+	{
+	  "id": "lastnameattribute",
+	  "code": "lastnameattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.TextAttribute",
+	  "propertyIID": 218,
+	  "icon": "lastnameattribute"
+	},
+	{
+	  "id": "pid_attribute",
+	  "code": "pid_attribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.TextAttribute",
+	  "propertyIID": 219
+	},
+	{
+	  "id": "pincodeattribute",
+	  "code": "pincodeattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.TextAttribute",
+	  "propertyIID": 220,
+	  "icon": "pincodeattribute"
+	},
+	{
+	  "id": "sku_attribute",
+	  "code": "sku_attribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.TextAttribute",
+	  "propertyIID": 221,
+	  "icon": "sku_attribute"
+	},
+	{
+	  "id": "telephonenumberattribute",
+	  "code": "telephonenumberattribute",
+      "isStandard": true,
+      "isTranslatable": false,
+	  "type": "com.cs.core.config.interactor.entity.attribute.TextAttribute",
+	  "propertyIID": 222,
+	  "icon": "telephonenumberattribute"
+	},
+	
+  {
+    "id": "I_META_FILE_NAME",
+    "code": "I_META_FILE_NAME",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 223
+  },
+  {
+    "id": "I_META_DOCUMENT_TYPE",
+    "code": "I_META_DOCUMENT_TYPE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 224
+  },
+  {
+    "id": "I_APPLICATION",
+    "code": "I_APPLICATION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 225
+  },
+  {
+    "id": "I_CREATE_DATE",
+    "code": "I_CREATE_DATE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 226
+  },
+  {
+    "id": "I_MODIFICATION_DATE",
+    "code": "I_MODIFICATION_DATE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 227
+  },
+  {
+    "id": "I_META_FILE_SIZE",
+    "code": "I_META_FILE_SIZE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 228
+  },
+  {
+    "id": "I_DIMENSIONS",
+    "code": "I_DIMENSIONS",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 229
+  },
+  {
+    "id": "I_DIMENSION_IN_INCH",
+    "code": "I_DIMENSION_IN_INCH",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 230
+  },
+  {
+    "id": "I_RESOLUTION",
+    "code": "I_RESOLUTION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 231
+  },
+  {
+    "id": "I_BIT_DEPTH",
+    "code": "I_BIT_DEPTH",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 232
+  },
+  {
+    "id": "I_COLOR_MODE",
+    "code": "I_COLOR_MODE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 233
+  },
+  {
+    "id": "I_COLOR_PROFILE",
+    "code": "I_COLOR_PROFILE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 234
+  },
+  {
+    "id": "I_META_CREATOR_AUTHOR",
+    "code": "I_META_CREATOR_AUTHOR",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 235
+  },
+  {
+    "id": "I_META_CREATOR_STREET",
+    "code": "I_META_CREATOR_STREET",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 236
+  },
+  {
+    "id": "I_META_CREATOR_LOCATION",
+    "code": "I_META_CREATOR_LOCATION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 237
+  },
+  {
+    "id": "I_META_CREATOR_STATE",
+    "code": "I_META_CREATOR_STATE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 238
+  },
+  {
+    "id": "I_META_CREATOR_POSTAL_CODE",
+    "code": "I_META_CREATOR_POSTAL_CODE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 239
+  },
+  {
+    "id": "I_META_CREATOR_COUNTRY",
+    "code": "I_META_CREATOR_COUNTRY",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 240
+  },
+  {
+    "id": "I_META_CREATOR_TEL",
+    "code": "I_META_CREATOR_TEL",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 241
+  },
+  {
+    "id": "I_META_CREATOR_EMAIL",
+    "code": "I_META_CREATOR_EMAIL",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 242
+  },
+  {
+    "id": "I_META_CREATOR_WWW",
+    "code": "I_META_CREATOR_WWW",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 243
+  },
+  {
+    "id": "I_META_HEADING",
+    "code": "I_META_HEADING",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 244
+  },
+  {
+    "id": "I_META_DESCRIPTION",
+    "code": "I_META_DESCRIPTION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 245
+  },
+  {
+    "id": "I_META_KEYWORDS",
+    "code": "I_META_KEYWORDS",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 246
+  },
+  {
+    "id": "I_META_LOCATION_DETAIL",
+    "code": "I_META_LOCATION_DETAIL",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 247
+  },
+  {
+    "id": "I_META_LOCATION",
+    "code": "I_META_LOCATION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 248
+  },
+  {
+    "id": "I_META_STATE",
+    "code": "I_META_STATE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 249
+  },
+  {
+    "id": "I_META_COUNTRY",
+    "code": "I_META_COUNTRY",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 250
+  },
+  {
+    "id": "I_META_TITEL",
+    "code": "I_META_TITEL",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 251
+  },
+  {
+    "id": "I_META_COPYRIGHT",
+    "code": "I_META_COPYRIGHT",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 252
+  },
+  {
+    "id": "I_META_COPYRIGHT_STATUS",
+    "code": "I_META_COPYRIGHT_STATUS",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 253
+  },
+  {
+    "id": "I_META_EXPOSURE_INDEX",
+    "code": "I_META_EXPOSURE_INDEX",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 254
+  },
+  {
+    "id": "I_META_FOCAL_RANGE",
+    "code": "I_META_FOCAL_RANGE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 255
+  },
+  {
+    "id": "I_META_MAX_BLINDING_VALUE",
+    "code": "I_META_MAX_BLINDING_VALUE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 256
+  },
+  {
+    "id": "I_META_RECORDING_DATE",
+    "code": "I_META_RECORDING_DATE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 257
+  },
+  {
+    "id": "I_META_EXPOSURE_CONTROLS",
+    "code": "I_META_EXPOSURE_CONTROLS",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 258
+  },
+  {
+    "id": "I_META_LIGHT_SOURCE",
+    "code": "I_META_LIGHT_SOURCE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 259
+  },
+  {
+    "id": "I_META_SENSOR_TYPE",
+    "code": "I_META_SENSOR_TYPE",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 260
+  },
+  {
+    "id": "I_META_BRAND",
+    "code": "I_META_BRAND",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 261
+  },
+  {
+    "id": "I_META_MODELL",
+    "code": "I_META_MODELL",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 262
+  },
+  {
+    "id": "I_META_SERIAL_NUMBER",
+    "code": "I_META_SERIAL_NUMBER",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 263
+  },
+  {
+    "id": "I_META_PIXEL_X_DIMENSION",
+    "code": "I_META_PIXEL_X_DIMENSION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 264
+  },
+  {
+    "id": "I_META_PIXEL_Y_DIMENSION",
+    "code": "I_META_PIXEL_Y_DIMENSION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 265
+  },
+  {
+    "id": "I_META_HIGH_RESOLUTION",
+    "code": "I_META_HIGH_RESOLUTION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 266
+  },
+  {
+    "id": "I_META_WIDTH_RESOLUTION",
+    "code": "I_META_WIDTH_RESOLUTION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 267
+  },
+  {
+    "id": "I_META_X_RESOLUTION",
+    "code": "I_META_X_RESOLUTION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 268
+  },
+  {
+    "id": "I_META_Y_RESOLUTION",
+    "code": "I_META_Y_RESOLUTION",
+    "isStandard": true,
+    "isTranslatable": false,
+    "type": "com.cs.core.config.interactor.entity.standard.attribute.AssetMetadataAttribute",
+	"propertyIID": 269
+  },
+  {
+    "id": "schedulestartattribute",
+    "code": "schedulestartattribute",
+    "isStandard": true,
+    "isTranslatable": false,
+    "isFilterable": true,
+    "type": "com.cs.core.config.interactor.entity.attribute.DateAttribute",
+	"propertyIID": 270,
+	"icon":"schedulestartattribute"
+  },	
+  {
+    "id": "scheduleendattribute",
+    "code": "scheduleendattribute",
+    "isStandard": true,
+    "isTranslatable": false,
+    "isFilterable": true,
+    "type": "com.cs.core.config.interactor.entity.attribute.DateAttribute",
+	"propertyIID": 271,
+	"icon":"scheduleendattribute"
+  },
+  {
+  	"id": "assetdownloadcountattribute",
+  	"code": "assetdownloadcountattribute",
+	"isStandard": true,
+	"isTranslatable": false,
+	"isVersionable": false,
+	"isFilterable": true,
+	"type": "com.cs.core.config.interactor.entity.attribute.NumberAttribute",
+	"propertyIID": 272,
+	"icon":"assetdownloadcountattribute"
+  }
+]

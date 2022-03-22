@@ -1,0 +1,28 @@
+let mimeTypes = {
+  ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  ".xls": "application/vnd.ms-excel",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".png": "image/png",
+  ".ico": "image/x-icon",
+  ".eps": "application/postscript",
+  ".ai": "application/postscript",
+  ".psd": "image/vnd.adobe.photoshop",
+  ".tif": "image/tiff",
+  ".tiff": "image/tiff",
+  ".wmv": "video/x-ms-wmv",
+  ".avi": "video/x-msvideo",
+  ".mov": "video/quicktime",
+  ".flv": "video/x-flv",
+  ".mpeg": "video/mpeg",
+  ".mpg": "video/mpeg",
+  ".mp4": "video/mp4",
+  ".pdf": "application/pdf",
+  ".ppt": "application/vnd.ms-powerpoint",
+  ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  ".doc": "application/msword",
+  ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ".zip": "application/x-zip-compressed",
+  ".indd": ""
+};
+export default mimeTypes;

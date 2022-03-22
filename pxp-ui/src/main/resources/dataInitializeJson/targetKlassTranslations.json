@@ -1,0 +1,53 @@
+[
+  {
+    "id": "market",
+    "translations": {
+      "en_US": {
+        "label": "Market"
+      },
+      "es_ES": {
+        "label": "mercado"
+      },
+      "fr_FR": {
+        "label": "marché"
+      },
+      "de_DE": {
+        "label": "Markt"
+      }
+    }
+  },
+  {
+    "id": "persona",
+    "translations": {
+      "en_US": {
+        "label": "Persona"
+      },
+      "es_ES": {
+        "label": "persona"
+      },
+      "fr_FR": {
+        "label": "personnage"
+      },
+      "de_DE": {
+        "label": "Persona"
+      }
+    }
+  },
+  {
+    "id": "situation",
+    "translations": {
+      "en_US": {
+        "label": "Situation"
+      },
+      "es_ES": {
+        "label": "situación"
+      },
+      "fr_FR": {
+        "label": "Situation"
+      },
+      "de_DE": {
+        "label": "Lage"
+      }
+    }
+  }
+]

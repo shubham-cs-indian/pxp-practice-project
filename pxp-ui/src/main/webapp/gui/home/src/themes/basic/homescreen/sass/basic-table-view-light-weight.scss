@@ -1,0 +1,34 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+.tableViewLightWeightWrapper {
+  margin: 10px;
+
+  .tableViewLightWeight {
+    width: 100%;
+    table-layout: fixed;
+
+    .headerRow {
+      background: #eee;
+
+      .headerCell {
+        height: 32px;
+        padding: 0px 10px;
+        border: 1px #ddd solid;
+        @include ellipsis();
+      }
+    }
+
+    .tableCell {
+      padding: 0px 10px;
+      border: 1px #ddd solid;
+      height: 35px;
+      @include ellipsis();
+
+      .nativeDropdown {
+        border: unset;
+      }
+    }
+  }
+}*/

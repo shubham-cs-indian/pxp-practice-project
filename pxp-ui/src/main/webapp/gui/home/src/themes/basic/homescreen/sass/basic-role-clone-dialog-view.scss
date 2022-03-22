@@ -1,0 +1,250 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$max-width: 17px;
+
+.createRoleCloneDialog {
+  .roleCloneWizardView {
+    display: grid;
+    grid-template-rows: 40px calc(100% - 40px);
+    grid-gap: 6px;
+    max-width: 710px;
+
+    .cloneHeaderView {
+      border: 1px solid $color-light-15;
+      background: $color-dark-grey;
+      border-radius: 2px;
+      width: 100%;
+      float: left;
+      padding: 0px 10px;
+      display: grid;
+      grid-template-columns: calc(50% - 55px) calc(50% - 55px) 100px;
+      max-width: inherit;
+
+      .cloneHeader {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        height: 100%;
+
+        &.code {
+          border-left: 1px solid $color-light-15;
+          padding-left: 10px;
+        }
+      }
+
+      .titleBox {
+        max-width: 30%;
+        width: auto;
+        float: left;
+        color: $color-light-24;
+        margin-right: 10px;
+        font-weight: 500;
+        @include ellipsis();
+      }
+
+      .labelBox {
+        max-width: calc(70% - 40px);
+        float: left;
+        @include ellipsis();
+        color: $color-light-24;
+      }
+
+      .customTextFieldViewContainer {
+        max-width: calc(70% - 40px);
+        float: left;
+      }
+
+      .editLabelValueIcon {
+        height: 14px;
+        width: 14px;
+        cursor: pointer;
+        opacity: .7;
+        @include background-properties($image-CS-Edit-32, 14px);
+        float: left;
+        margin-left: 10px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .exactCloneView {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        float: right;
+        @include ellipsis();
+
+        .cloneWizardCheckButton {
+          float: left;
+          height: 17px;
+          width: 17px;
+          background-size: cover;
+          cursor: pointer;
+          background-color: transparent;
+          @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 17px);
+
+          &.checkedItem {
+            @include background-properties($image-checked-checkbox-without-border-radius, 17px);
+          }
+        }
+
+        .exactCloneLabel {
+          width: auto;
+          float: left;
+          margin-left: 10px;
+          color: $color-dark-8;
+        }
+      }
+    }
+
+    .roleFormContainer {
+      height: 100%;
+      width: 100%;
+      border: 1px solid $color-light-15;
+      padding: 20px;
+      background: $color-light-11;
+      border-radius: 2px;
+
+      .parentContainer {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        .titleBox {
+          width: 30%;
+          padding: 5px;
+          float: left;
+          line-height: 28px;
+          font-size: 12px;
+
+        }
+
+        .roleValueContainer {
+          width: 70%;
+          padding: 5px;
+          float: left;
+          background-color: $color-light-5;
+          border: 1px solid $color-light-5;
+          min-height: 40px;
+          margin-bottom: 4px;
+
+          .gridYesNoPropertyView {
+            float: left;
+
+            .gridYesNoSwitchButton {
+
+              &.no {
+                background-color: $color-dark-12;
+              }
+            }
+          }
+
+          .smallTaxonomyViewContainer {
+            .taxonomyDataWrapper {
+              .selectedTaxonomyWrapper {
+                .addedClassificationListWrapper {
+                  .taxonomySelectionItem {
+                    max-width: 100%;
+                    position: relative;
+                    border-radius: 12px;
+                    overflow: hidden;
+
+                    .taxonomyIcon {
+                      height: 22px;
+                      width: 22px;
+                      background-color: $color-light-15;
+                    }
+
+                    .taxonomyLabel {
+                      font-size: 12px;
+                      font-weight: normal;
+                      line-height: 22px;
+                      background-color: $color-dark-grey;
+                      display: inline-block;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .multiSelectSearchViewWrapper {
+            .selectedItemIcon {
+              padding: 0;
+
+              .imageFitToContainer {
+                background-color: $color-light-12;
+
+                .imageFitToContainerImage {
+                  padding: 3px;
+                }
+              }
+            }
+
+            .multiSelectSummary{
+              margin-top: 3px;
+            }
+
+            .selectedItems {
+              margin: 0px 5px 2px 0px;
+              background-color: $color-dark-grey;
+
+              .selectedItemIcon {
+                background-color: $color-light-15;
+              }
+            }
+          }
+
+          .moduleListItemsContainer {
+            width: 55%;
+            float: left;
+          }
+
+          .moduleRightContainer {
+            @include no_select();
+
+            .modulePermission {
+              border: 1px solid $color-light-4;
+              border-radius: 5px;
+              float: left;
+              font-size: 12px;
+              margin-right: 10px;
+              margin-top: 5px;
+              padding: 5px;
+              cursor: pointer;
+
+              &.selected {
+                border-color: $color-theme-accent;
+              }
+
+              &.disabled {
+                background-color: $color-light-3;
+              }
+            }
+          }
+        }
+
+        .itemCheckbox {
+          float: left;
+          height: 15px;
+          width: 15px;
+          margin-right: 5px;
+          cursor: pointer;
+          @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 18px);
+
+          &.checkedItem {
+            //opacity: 0.8;
+            @include background-properties($image-checked-checkbox-without-border-radius, 18px);
+
+            &.isDisabled {
+              opacity: 0.6;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

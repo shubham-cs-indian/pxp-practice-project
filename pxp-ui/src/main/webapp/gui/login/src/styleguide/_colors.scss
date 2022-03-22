@@ -1,0 +1,64 @@
+@import "./theme-selector";
+
+//theme colors - general:
+$color-theme-primary: #fff !default; //bar
+$color-theme-secondary: #353535 !default; //menu accent color
+$color-theme-accent: #152078 !default; //accent color
+
+//theme colors - brand:
+$color-brand-primary-background: #fff !default;
+$color-brand-secondary-background: #353535 !default;
+$color-brand-primary-text: #000 !default;
+$color-brand-secondary-text: #fff !default;
+$color-brand-login-screen-background: #fff !default;
+
+//basic colors:
+$color-dark-1: #000 !default;
+$color-dark-2: #424242 !default;
+$color-dark-3: #616161 !default;
+$color-dark-4: #616367 !default;
+$color-dark-5: #777777;
+$color-dark-6: #333333;
+$color-dark-7: #9D9D9D;
+$color-dark-8: #8F8F8F;
+$color-dark-9: #444444;
+$color-dark-10: #666666;
+$color-dark-11: #888888;
+
+$color-light-1: #fff !default;
+$color-light-2: #f6f6f6 !default;
+$color-light-3: #eee !default;
+$color-light-4: #ddd !default;
+$color-light-5: #ebebeb !default;
+$color-light-6: #cccccc;
+$color-light-7: #e4e4e4;
+$color-light-8: #EBEBEB;
+$color-light-9: #E0E1EE;
+$color-light-10: #aaaaaa;
+$color-light-11: #f7f7f7;
+$color-light-12: #d6d6d6;
+$color-light-13: #fdfcfc;
+$color-light-14: #e2e2e2;
+$color-light-15: #d9d9d9;
+$color-light-16: #A2A2A2;
+$color-light-17: #EAEAEA;
+$color-light-18: #EDEDED;
+$color-light-19: #FFFFFFF5;
+$color-light-19: #7a7a7a;
+$color-light-20: #f7f6f6;
+$color-light-21: #b9b9b9;
+$color-light-22: #c0c0c0;
+
+//other colors:
+$color-light-green: #25af2a; // Usage: 1) To represent dirty row/column in variant table view.
+$color-light-yellow: #fefde9; // To represent Unmapped row in Endpoint Mapping View.
+$color-orange: #f38310;   // Usage: to show the recently updated content flag
+$color-grey: #fafafa;
+$color-red: #D32F2F;
+$color-blue: #152078;
+$color-dark-blue: #3248A7;
+$color-dark-grey: #F7F7F7;
+$color-yellow: #F3E8AC;
+$color-cyan: #F8D2AC;
+$color-light-blue: #E4E7F7;
+$color-lighter-green: #4fbf77;

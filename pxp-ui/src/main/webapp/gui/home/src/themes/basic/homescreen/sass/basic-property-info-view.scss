@@ -1,0 +1,130 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.propertyInfoListViewContainer {
+  max-height: 375px;
+  max-width: 300px;
+
+  .customHeaderView {
+    line-height: 15px;
+    width: 100%;
+    color: $color-dark-1;
+    padding: 10px 15px 0;
+    font-weight: 500;
+  }
+
+  .propertyInfoListView {
+    width: 100%;
+
+    .propertyInfoListNodeViewContainer {
+      padding: 8px 15px;
+      border-bottom: 1px solid $color-light-8;
+      width: 100%;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .listNodeViewLabelWrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .listViewIcon {
+          width: 14px;
+          height: 14px;
+          margin-right: 5px;
+
+          &.propertyTooltip {
+            @include background-properties($image-property-info-tooltip, 12px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-tooltip,12px);
+            }
+          }
+
+          &.code {
+            @include background-properties($image-property-info-property-code,14px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-property-code,14px);
+            }
+          }
+
+          &.isIdentifier {
+            @include background-properties($image-property-info-product-identifier,14px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-product-identifier,14px);
+            }
+          }
+
+          &.isVersionable {
+            @include background-properties($image-property-info-revision,14px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-revision,14px);
+            }
+          }
+
+          &.isGridEditable {
+            @include background-properties($image-property-info-grid-editable,16px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-grid-editable,16px);
+            }
+          }
+
+          &.isSearchable {
+            @include background-properties($image-property-info-searchable,14px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-searchable,14px);
+            }
+          }
+
+          &.isSortable {
+            @include background-properties($image-property-info-sortable,14px);
+
+            &.yes {
+              @include background-properties-with-light-green-color($image-property-info-sortable,14px);
+            }
+          }
+
+        }
+      }
+
+      .label {
+        font-size: 12px;
+        color: $color-dark-8;
+        line-height: 18px;
+        max-width: calc(100% - 17px);
+        @include ellipsis();
+      }
+    }
+
+    .listNodeViewValueWrapper {
+      display: flex;
+      margin-left: 20px;
+
+      .value {
+        color: $color-dark-6;
+        max-width: calc(100% - 17px);
+        @include ellipsis();
+        font-size: 10px;
+        cursor: pointer;
+      }
+      .copyToClipboard {
+        margin-left: 5px;
+        width: 12px;
+        height: 12px;
+        @include background-properties($image-CS-copy-to-clipboard, 12px);
+
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

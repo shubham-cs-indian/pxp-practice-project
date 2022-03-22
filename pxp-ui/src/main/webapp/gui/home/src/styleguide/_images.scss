@@ -1,0 +1,410 @@
+@import "./theme-selector";
+
+$base-path: "../themes/basic/homescreen/images/";
+
+//---------About Dialog Logo -------------------------------------------------------------------------------------------
+$brand-about-logo-height: 68px !default;
+$brand-about-logo-width: 300px !default;
+$brand-about-logo-background-size: 280px !default;
+$brand-about-logo-image: '../images/contentserv_Blue.svg' !default;
+
+//----- Menu Bar Windows Icons -------------------------------------------------------------------------------------------------
+$image-CS-menu-item-dashboard: '../images/icons8-Dashboard.svg' !default;
+$image-CS-menu-item-default-user: '../images/icons8-user.svg' !default;
+
+//----- Menu Bar Icons Windows (active) ----------------------------------------------------------------------------------------
+$image-dada-language-filled-gray: '../images/icons8-form-666666-100.svg';
+$image-ui-language-filled-gray: '../images/icons8-accessibility.svg';
+
+//--------- Login Screen Logo ------------------------------------------------------------------------------------------
+$brand-logo-login-screen-height: 100px !default;
+$brand-logo-login-screen-width: 320px !default;
+$brand-logo-login-screen-background-size: 240px !default;
+$top-logo-login-screen-margin: 80px !default;
+$left-logo-login-screen-margin: 80px !default;
+
+//--------- Physical catalog top,left margins --------------------------------------------------------------------------
+$left-physical-catalog-selector-view-margin: 48px !default;
+
+//--------- Physical Catalog Windows Icons -------------------------------------------------------------------------------------
+$image-CS-physical-catalog-pim : '../images/pim.svg' !default;;
+$image-CS-physical-catalog-onboarding : '../images/onboarding.svg' !default;;
+$image-CS-physical-catalog-offboarding : '../images/offboarding.svg' !default;
+$image-CS-physical-catalog-pimArchival : '../images/pimArchival.svg' !default;
+
+//--------- Collection Specific Windows Icons ----------------------------------------------------------------------------------
+$image-CS-collection-static-collection-blue: '../images/pin-filled-4688f1-100.svg';
+$image-CS-collection-static-collection-new : '../images/icons8-pin.svg';
+
+//--------- Generic Icons ----------------------------------------------------------------------------------------------
+$image-CS-checked-checkbox-icon: '../images/checked-checkbox-000-100.svg';
+
+//--------- Windows Arrows -----------------------------------------------------------------------------------------------------
+$image-CS-expand-arrow-icon: '../images/icons8-arrowDownward.svg';
+$image-CS-arrow-left-grey: '../images/arroe-left-cccccc-100.svg';
+$image-CS-arrow-right-grey: '../images/arrow-right-cccccc-100.svg';
+$image-CS-double-right-arrow: '../images/icons8-doubleRight.svg';
+$image-CS-arrow-right: '../images/icons8-arrowRight.svg';
+$image-CS-arrow-left: '../images/icons8-arrowLeft.svg';
+$image-CS-arrow-forward: '../images/icons8-arrowForward.svg';
+$image-CS-arrow-backward: '../images/icons8-arrowBackward.svg';
+
+//-------- toolbar Windows Icons -----------------------------------------------------------------------------------------------
+$image-import-black: '../images/import-black.svg';
+$image-download-contents : '../images/icons8-download-filled.svg';
+$image-CS-export-csv: '../images/icons8-exportCSV.svg';
+$image-CS-delete-bin-black: '../images/icons8-DeleteBin-black.svg';
+$image-CS-Manage-Entity-black: '../images/icon8-Manage-Entity-black.svg';
+$image-CS-glasses: '../images/icons8-glasses.svg';
+$image-CS-hash-tag-list: '../images/icons8-Hashtags.svg';
+$image-zoom-in-filled: '../images/icons8-zoom-in-filled.svg';
+$image-zoom-out-filled: '../images/icons8-zoom-out-filled.svg';
+$image-CS-merge-files: '../images/icons8-merge-files.svg';
+
+//--------- Coupling Icons ---------------------------------------------------------------------------------------------
+$image-tight-coupling: '../images/icons8-disconnected.svg';
+$image-dynamic-coupling: '../images/icons8-connected.svg';
+$image-tight-coupling-resolved: '../images/disconnected-green.svg';
+$image-dynamic-coupling-resolved: '../images/connected-green.svg';
+
+//--------- Other Icons ---------------------issue---------------------------------------------------------------------------
+$image-filter-hierarchy-blue: '../images/filter-filled-4688f1-100.svg';
+$image-CS-mapped-handshake-black: '../images/icons8-mapped.svg';
+$image-CS-unmapped-handshake-black: '../images/icons8-unmapped.svg';
+$image-CS-ignored-black: '../images/ignored-000-100.svg';
+$image-CS-eye-black: '../images/icons8-eye.svg';
+$image-CS-ellipsis-filled: '../images/icons8-Ellipsis.svg';
+$image-acrolinx-logo: '../images/acrolinx-logo.jpg';
+$image-broken-link-black: '../images/icons8-brokenLink.svg';
+$image-CS-bar-chart-filled-red: '../images/bar-chart-filled-ff0000-50.svg';
+$image-CS-revision-000: '../images/image-CS-revision-000.svg';
+
+//--------------------- Class Config Icons -----------------------------------------------------------------------------
+$image-CS-language: "../images/icons8-globeFilled.svg";
+$image-CS-target-icon-filled-black: "../images/icons8-user-filled-000-50.svg";
+$image-CS-text-asset-filled-black: "../images/icons8-overview-filled-000-50.svg";
+$image-CS-catalog-icon-filled-black: "../images/icons8-moleskine.svg";
+$image-technical-image-icon-filled-black: "../images/Technical-Image-Filled-000.svg";
+$image-CS-product-virtual-catalog-icon-filled-black: "../images/Product-Virtual-Catalog-000.svg";
+$image-CS-media-virtual-catalog-icon-filled-black: "../images/Media-Virtual-Catalog-000.svg";
+
+//--------- Flag Icons ------------------------------------------------------------------------------------------------
+$image-flag-france: '../images/icons8-france.svg';
+$image-flag-germany: '../images/icons8-germany.svg';
+$image-flag-uk: '../images/icons8-great-britain.svg';
+$image-flag-usa: '../images/icons8-usa.svg';
+$image-flag-spain: '../images/icons8-spain.svg';
+
+//-----------------------------------General------------------------------------------------------------------------
+
+$image-alert: '../images/icons8-alert.svg';
+$image-checkbox-partial: '../images/checkbox-partial.png';
+$image-Class-32: '../images/icons8-category.svg';
+$image-combi-ticket-50: '../images/icons8-two-tickets.svg';
+$image-Concatenated: '../images/Concatenated.png';
+$image-Corner-Ribbon: '../images/Corner-Ribbon.png';
+$image-DontDelete: '../images/DontDelete.png';
+$image-DynamicCoupled-333: '../images/DynamicCoupled_333.png';
+$image-Infinity-Filled-32: '../images/Infinity Filled-32.png';
+$image-Letter-M-26: '../images/Letter-M-26.png';
+$image-loading-icon: '../images/loading-icon.gif';
+$image-Policy-Document-50: '../images/icons8-policy-documents.svg';
+$image-rollback-version1: '../images/rollback-version1.png';
+$image-Rows-64Black: '../images/Rows-64Black.png';
+$image-set-default-image: '../images/set-default-image.png';
+$image-shapes-Black: '../images/shapes_Black.png';
+$image-spiffygif-68x68: '../images/spiffygif_68x68.gif';
+$image-tabs-50: '../images/icons8-close-all-tabs.svg';
+$image-TightlyCoupled-333: '../images/TightlyCoupled_333.png';
+$image-user-removed: '../images/user_removed.png';
+$image-Variant: '../images/Variant.png';
+$image-Variation-Filled-50: '../images/Variation Filled-50.png';
+$image-CS-settings: '../images/settings.svg';
+$image-geography: "../images/icons8-geography.svg";
+$image-CS-help-button: '../images/image-help-000-100.svg';
+
+//--------- Windows Icons --------------------------------------------------------------------------------------------------
+$image-CS-create-clone: '../images/icons8-createClone.svg';
+
+//--------- Windows Toolbar Icons --------------------------------------------------------------------------------------
+$image-CS-download-black: '../images/icons8-download-black.svg';
+$image-CS-grid-edit: '../images/icons8-gridEdit.svg';
+$image-CS-presentation-black: '../images/presentation-000-96-black.svg';
+$image-CS-group-objects: '../images/icons8-groupObjects.svg';
+$image-CS-left-arrow: '../images/left-arrow-000-96.svg';
+$image-CS-paste: '../images/paste-000-96.svg';
+$image-CS-cut: '../images/icons8-cut.svg';
+$image-CS-data-transfer: '../images/icons8-dataTransfer.svg';
+$image-CS-notification-button : "../images/notification-000-96.svg"!default;
+$image-CS-smart-document-generate: '../images/smart_document_generate.svg';
+$image-thumbnail-checked-checkbox : '../images/thumbnail-checked-checkbox-4688f1-100.svg';
+$image-checked-checkbox-without-border-radius: '../images/icons8-checked-checkbox.svg';
+$image-checked-checkbox-line: '../images/icons8-indeterminate-checkbox.svg';
+$image-thumbnail-unchecked-checkbox : '../images/thumbnail-unchecked-checkbox-ccc-96.svg';
+
+//--------------------------------VIDHI Windows Icon Changes------------------------------------------
+
+$image-CS-Advertising-Black: '../images/icons8-AdvertisingFilled.svg';
+$image-CS-Active-Directory-000: '../images/icons8-active Directory.svg';
+$image-CS-Activity-Grid-2-52: '../images/Activity Grid 2-52.svg';
+$icons8-CS-Grid: '../images/icons8-ActivityGrid.svg';
+$image-CS-Add-Row-26: '../images/icons8-addRow.svg';
+$image-CS-add-user: '../images/add_user.svg';
+$image-CS-AdministrativeTools-30: '../images/icons8-administrative-tools.svg';
+$image-CS-Administrator-32: '../images/icons8-administrator-male.svg';
+$image-CS-Approval-50: '../images/Approval-50.svg';
+$image-CS-arrow-down: '../images/icons8-arrowDown.svg';
+$image-CS-arrow-up: '../images/icons8-arrowUp.svg';
+$image-CS-attachment: '../images/icons8-AttachFilled.svg';
+$image-Auto-Selected-50: '../images/icons8-AutoSelected.svg';
+$image-CS-Book-52: '../images/Book-52.svg';
+$image-CS-Bookmark-Ribbon-64: '../images/icons8-BookmarkRibbon.svg';
+$image-CS-Books-52: '../images/Books-52.svg';
+$image-CS-Box-Filled-Filled-50-Black: '../images/icons8-LetterBox.svg';
+$image-CS-Brake-Warning-50: '../images/icons8-BrakeWarning.svg';
+$image-CS-bulkShareBlack: '../images/icons8-link-share.svg';
+$image-CS-bulkUpload: '../images/icons8-bulkUpload.svg';
+$image-CS-Calculated: '../images/icons8-calculated.svg';
+$image-CS-Calendar-Filled-50-Black: '../images/icons8-Calendar.svg';
+$image-CS-Camera: '../images/icons8-Camera.svg';
+$image-CS-Cancel-2-Filled-30-Red: '../images/Cancel-48.svg';
+$image-CS-Cancel-2-Filled-30: '../images/Cancel 2 Filled-30.svg';
+$image-CS-Cancel-Black: '../images/icons8-Cancel.svg';
+$image-CanNotAdd: '../images/icons8-CanNotAdd.png';
+$image-CS-Cardboard-Box-Filled-50-Black: '../images/icons8-CardboardBox.svg';
+$image-CS-Categorize-50-333: '../images/icons8-Categorize.svg';
+$image-CS-Checked-48: '../images/Checked-48.svg';
+$image-CS-Checked-48Black: '../images/icons8-Checked.svg';
+$image-CS-CheckMark-black: '../images/icons8-CheckMark.svg';
+$image-CS-CheckMark-round: '../images/icons8-ok.svg';
+$image-CS-CheckMark-blue-round: '../images/blue_checkmark.svg';
+$image-CS-Christmas-Star-50: '../images/icons8-ChristmasStar.svg';
+$image-CS-Circled-Dot-64: '../images/icons8-CircledDot.svg';
+$image-CS-CircledDown32: '../images/icons8-CircledDown.svg';
+$image-CS-CircledUp-26: '../images/CircledUp-26.svg';
+$image-CS-Collapse-Arrow-32: '../images/icons8-arrowUpward.svg';
+$image-CS-collapse-000-96: '../images/collapse-000.svg';
+$image-CS-collection-default-image: '../images/icons8-collectionDefault.svg';
+$image-CS-Columns-64-Black: '../images/icons8-Columns.svg';
+$image-CS-comment: '../images/comment.svg';
+$image-CS-conflict: '../images/conflict.svg';
+$image-CS-content-tab: '../images/icons8-video-editing.svg';
+$image-CS-Cross: '../images/icons8-Cross.svg';
+$image-cs-dyn-coupled: '../images/icons8-coupled.svg';
+$image-CS-data-integration-000-50: '../images/icons8-data-integration.svg';
+$image-CS-Database-Grey-Filled-50: '../images/Database-Grey-Filled-50.svg';
+$image-CS-DatabaseFilled-50FOlder: '../images/DatabaseFilled-50FOlder.svg';
+$image-CS-DNA-Helix: '../images/icons8-DNAHelix.svg';
+$image-CS-Document: '../images/icons8-Document.svg';
+$image-CS-Door-Sensor-Filled-50: '../images/Door Sensor Filled-50.svg';
+$image-CS-double-left: '../images/icons8-doubleLeft.svg';
+$image-CS-Edit-Property: '../images/icons8-EditProperty.svg';
+$image-CS-Edit-32: '../images/icons8-Edit.svg';
+$image-CS-EditColumn-50: '../images/EditColumn-50.svg';
+$image-CS-EPS-Filled-100: '../images/icons8-EPS.svg';
+$image-CS-EqualSign-52White: '../images/EqualSign-52White.svg';
+$image-CS-Error-48: '../images/Error-48.svg';
+$image-CS-Error-Conflict: '../images/icons8-ErrorConflict.svg';
+$image-CS-expand-000-96: '../images/expand-000.svg';
+$image-CS-Expired-Filled-50: '../images/Expired Filled-50.svg';
+$image-CS-FLV-Filled-100: '../images/icons8-FLV.svg';
+$image-CS-Form-30White: '../images/Form-30White.svg';
+$image-CS-Forward-Arrow-Filled-48: '../images/icons8-forward-arrow.svg';
+$image-CS-Gender-Neutral-User-32: '../images/icons8-customer.svg';
+$image-CS-Generic-Text-32: '../images/icons8-text-color.svg';
+$image-CS-Google-News: '../images/icons8-GoogleNews.svg';
+$image-CS-GTIN: '../images/icons8-GTIN.svg';
+$image-CS-Goal: '../images/icons8-goal.svg';
+$image-CS-High-Priority-Filled-white-50: '../images/High Priority Filled-white-50.svg';
+$image-CS-High-Priority-32: '../images/High Priority-32.svg';
+$image-CS-HighImportance-48Orange: '../images/HighImportance-48Orange.svg';
+$image-CS-HighImportance-48Red: '../images/HighImportance-48Red.svg';
+$image-CS-HighImportance-48Yellow: '../images/HighImportance-48Yellow.svg';
+$image-CS-Home: '../images/icons8-Home.svg';
+$image-CS-hub: '../images/icons8-hub.svg';
+$image-CS-icons8-50-filled: '../images/icons8-50-filled.svg';
+$image-CS-icons8-asterisk: '../images/icons8-asterisk.svg';
+$image-CS-icons8-bar-chart-filled: '../images/icons8-bar-chart-filled.svg';
+$image-CS-icons8-compare: '../images/icons8-compare.svg';
+$image-CS-icons8-Copy-Filled-50: '../images/icons8-Copy Filled-50.svg';
+$image-CS-icons8-doughnut-chart-filled: '../images/icons8-doughnut-chart-filled.svg';
+$image-CS-icons8-google-translate: '../images/icons8-google-translate.svg';
+$image-CS-icons8-linked-variant: '../images/icons8-linkedVariant.svg';
+$image-CS-icons8-ok-filled: '../images/icons8-ok-filled.svg';
+$image-CS-icons8-unit-50: '../images/icons8-unit.svg';
+$image-CS-icons8-User-96: '../images/icons8-user.svg';
+$image-CS-icons8-user: '../images/icons8-user.svg';
+$image-CS-icons8-Watch-Filled-50: '../images/icons8-Watch Filled-50.svg';
+$image-ic-doc: '../images/ic_doc.png';
+$image-ic-indd: '../images/ic_indd.png';
+$image-ic-pdf: '../images/ic_pdf.png';
+$image-ic-ppt: '../images/ic_ppt.png';
+$image-ic-xls: '../images/ic_xls.svg';
+$image-CS-ImageFile: '../images/icons8-ImageFile.svg';
+$image-CS-Theme-Change-Filled-64: '../images/icons8-change-theme-filled.svg';
+$image-CS-View-Configuration: '../images/view-configuration-000.svg';
+$image-CS-Ingredients-32: '../images/icons8-ingredients.svg';
+$image-CS-Invisibility-32: '../images/Invisibility-32.svg';
+$image-CS-JPG-Filled-100: '../images/JPG Filled-100.svg';
+$image-CS-Left2Filled-25: '../images/Left2Filled-25.svg';
+$image-CS-Letter-M--small: '../images/Letter M- small.svg';
+$image-CS-List-50Black: '../images/icons8-List.svg';
+$image-CS-List-64: '../images/List-64.svg';
+$image-CS-lock: '../images/lock.svg';
+$image-CS-Manager-Filled-50-Black: '../images/Manager Filled-50_Black.svg';
+$image-CS-map: '../images/icons8-map.svg';
+$image-CS-MediumIcons: '../images/icons8-MediumIcons.svg';
+$image-CS-Menu-2-Filled-50: '../images/Menu 2 Filled-50.svg';
+$image-CS-Minus-32-Black: '../images/Minus-32_Black.svg';
+$image-CS-MinusBlack: '../images/icons8-Minus.svg';
+$image-CS-module-filled-50: '../images/icons8-module.svg';
+$image-CS-MOV-Filled-100: '../images/MOV Filled-100.svg';
+$image-CS-MPG-Filled-100: '../images/MPG Filled-100.svg';
+$image-CS-Multicast-Filled-50: '../images/Multicast Filled-50.svg';
+$image-CS-MulticastFilled-30: '../images/icons8-multicast.svg';
+$image-CS-News-32: '../images/News-32.svg';
+$image-CS-No-Edit-26: '../images/No Edit-26.svg';
+$image-CS-notification-filled: '../images/notification_filled.svg';
+$image-CS-Ok-48: '../images/Ok-48.svg';
+$image-CS-Ok-blue: '../images/ok-4688f1-96.svg';
+$image-CS-Ok-50: '../images/Ok-50.svg';
+$image-CS-ok-lite-green: '../images/ok-lite-green.svg';
+$image-CS-ok-lite-grey: '../images/ok-lite-grey.svg';
+$image-CS-OpenFolderFilled-50: '../images/OpenFolderFilled-50.svg';
+$image-CS-organisation-50: '../images/icons8-user-groups.svg';
+$image-CS-Overview: '../images/icons8-text-box.svg';
+$image-CS-Page-Overview: '../images/icons8-file.svg';
+$image-CS-password-reset-26: '../images/password-reset-26.svg';
+$image-CS-persona: '../images/icons8-persona.svg';
+$image-CS-Pin-Filled-Gray-50: '../images/Pin Filled-Gray-50.svg';
+$image-CS-Planned-Task: '../images/icons8-planned-tasks.svg';;
+$image-CS-Plus-32-black: '../images/icons8-Plus-black.svg';
+$image-CS-PlusStruct-32: '../images/PlusStruct-32.svg';
+$image-CS-Product-menu:'../images/icons8-product.svg';
+$image-CS-PNG-Filled-100: '../images/PNG Filled-100.svg';
+$image-CS-Previous-48-disabled: '../images/Previous-48-disabled.svg';
+$image-CS-Price-Tag-Filled-50: '../images/Price Tag Filled-50.svg';
+$image-CS-Price-Tag-35-Plus: '../images/icons8-price-tag-add-overlay-64.svg';
+$image-CS-PriceTag-32: '../images/icons8-price-tag.svg';
+$image-CS-priority: '../images/priority.svg';
+$image-CS-PropertyTime-64: '../images/PropertyTime-64.svg';
+$image-CS-PSD-Filled-100: '../images/PSD Filled-100.svg';
+$image-CS-Purchase-Order-32: '../images/Purchase Order-32.svg';
+$image-CS-Refresh-48-black: '../images/icons8-refresh-black.svg';
+$image-CS-Reset-48: '../images/icons8-reset.svg';
+$image-CS-Registered-Trademark-Filled-32-green: '../images/Registered Trademark Filled-32-green.svg';
+$image-CS-Registered-Trademark-Filled-32: '../images/Registered Trademark Filled-32.svg';
+$image-CS-Registered-Trademark-Filled-orange-32: '../images/Registered Trademark Filled-orange-32.svg';
+$image-CS-Registered-Trademark-Filled-yellow: '../images/Registered Trademark Filled-yellow.svg';
+$image-CS-Registered-Trademark-Orange-Filled: '../images/Registered Trademark Orange Filled.svg';
+$image-CS-Registered-Trademark-Yellow-Filled: '../images/Registered Trademark Yellow Filled.svg';
+$image-CS-Registered-Trademark-32: '../images/Registered Trademark-32.svg';
+$image-CS-Relationships: '../images/Relationships.svg';
+$image-CS-Relationships-Inheritance: '../images/Relationship-Inheritance.svg';
+$image-CS-RenewSubscription-64: '../images/RenewSubscription-64.svg';
+$image-CS-Replace-26: '../images/Replace-26.svg';
+$image-CS-Reply-All-Arrow-filled-48: '../images/icons8-reply-all-arrow.svg';
+$image-CS-Reply-Arrow-filled-48: '../images/icons8-reply-arrow.svg';
+$image-CS-Restart-26: '../images/Restart-26.svg';
+$image-CS-Rules-Filled-32: '../images/icons8-rules.svg';
+$image-CS-Save-as-Filled-white-32: '../images/Save as Filled-white-32.svg';
+$image-CS-SaveFilled-50Black: '../images/SaveFilled-50Black.svg';
+$image-CS-SearchFilled-32: '../images/SearchFilled-32.svg';
+$image-CS-services-50: '../images/icons8-services.svg';
+$image-CS-Settings-48: '../images/Settings-48.svg';
+$image-CS-sing-default-user-icon: '../images/sing_default_user_icon.svg';
+$image-CS-smart-document-icon: '../images/icons8-smartDocument.svg';
+$image-CS-smart-document-preset-icon: '../images/smart_document_preset.svg';
+$image-CS-smart-document-template-icon: '../images/smart_document_template.svg';
+$image-CS-Sort-Ascending: '../images/icons8-SortAscending.svg';
+$image-CS-Sort-Descending: '../images/icons8-DescendingSorting.svg';
+$image-CS-Sorting-Arrows-64: '../images/Sorting Arrows-64.svg';
+$icons8-drag-reorder: '../images/icons8-drag-reorder.svg';
+$image-CS-Speech-Bubble-64: '../images/Speech Bubble-64.svg';
+$image-CS-Split-48: '../images/Split-48.svg';
+$image-CS-status: '../images/status.svg';
+$image-CS-subtitles-50: '../images/icons8-subtitles.svg';
+$image-CS-Truck: '../images/icons8-truck.svg';
+$image-CS-table-black-50: '../images/icons8-table.svg';
+$image-CS-tags-black-50: '../images/icons8-tags.svg';
+$image-CS-Template-Filled-32: '../images/icons8-template.svg';
+$image-CS-Text-Box-Filled-50: '../images/Text Box Filled-50.svg';
+$image-CS-Text-Color-Filled-50: '../images/Text Color Filled-50.svg';
+$image-CS-Text-Color-35-Plus: '../images/attribute-add-overlay-64.svg';
+$image-CS-Prices-Config: '../images/icons8-expensive-price.svg';
+$image-CS-Prices-Runtime: '../images/icons8-expensive-price-runtime.svg';
+$image-CS-Timeline-52: '../images/Timeline-52.svg';
+$image-CS-Today-48: '../images/Today-48.svg';
+$image-CS-Todo-List-Filled-30: '../images/icons8-todo-list.svg';
+$image-CS-Control-Panel: '../images/icons8-control-panel.svg';
+$image-CS-Tree-Structure-Black-32: '../images/icons8-TreeStructure.svg';
+$image-CS-triangle-east-25: '../images/icons8-Right.svg';
+$image-CS-Triangle-Orange-Radius: '../images/Triangle_Orange_Radius.svg';
+$image-CS-Triangle-Red-Radius: '../images/Triangle_Red_Radius.svg';
+$image-CS-triangle-south-25: '../images/icons8-Down.svg';
+$image-CS-Triangle-Yellow-Radius: '../images/Triangle_Yellow_Radius.svg';
+$image-CS-Unavailable-48: '../images/Unavailable-48.svg';
+$image-CS-Unchecked-Checkbox-48-Material: '../images/icons8-UncheckedCheckbox.svg';
+$image-CS-unlock: '../images/unlock.svg';
+$image-CS-Up-52: '../images/icons8-Up.svg';
+$image-CS-Upload-Black: '../images/icons8-upload-filled.svg';
+$image-CS-Urgent-Property-64: '../images/Urgent Property-64.svg';
+$image-CS-user-shield-50: '../images/icons8-user-shield.svg';
+$image-CS-Versions-64: '../images/icons8-Versions.svg';
+$image-CS-VersionsFilled-50Green: '../images/VersionsFilled-50Green.svg';
+$image-CS-Video-File-Filled-100: '../images/Video File Filled-100.svg';
+$image-CS-ViewDetails-50White: '../images/ViewDetails-50White.svg';
+$image-CS-Wedding-Rings-52: '../images/Wedding Rings-52.svg';
+$image-CS-windows-defragmenter-50: '../images/icons8-windows-defragmenter.svg';
+$image-CS-Workflow: '../images/icons8-WorkflowFilled.svg';
+$image-exchange-slots: '../images/whiteboard-exchange-slots-000-26.png';
+$image-CS-admin-config-50: '../images/icons8-admin-config.svg';
+$image-CS-expiry-asset-status: '../images/asset_Expiry_Icon.svg';
+$image-CS-pdf-reactor-configuration: '../images/pdf-reactor-icon.svg';
+$image-CS-grid-edit-view-black: '../images/Grid_config_icon-black.svg';
+$image-CS-audit-log: '../images/icons8-activity-history.svg';
+$image-CS-link-icon: '../images/link_item_icon.svg';
+$image-CS-download-tracker: '../images/download_tracker_icon.svg';
+$image-CS-filter: '../images/filter_icon.svg';
+$image-CS-monitoring: '../images/monitoring_icon.svg';
+$image-CS-transfer-markets: '../images/transfer-markets-000-96.svg';
+$image-CS-export-status: '../images/image-export-status-icon.svg';
+$image-CS-icon-library: '../images/icons8-image-gallery.svg';
+$image-CS-duplicate-asset-status: '../images/duplicate-icon_2.svg';
+$image-CS-crown: '../images/icons8-crown.svg';
+
+//--------- Windows Toolbar Icons --------------------------------------------------------------------------------------
+$image-CS-export-black: '../images/icons8-export-black.svg';
+$image-CS-add-link-black: '../images/icons8-addLink-black.svg';
+$image-CS-train-track-black: '../images/train-track-000-96-black.svg';
+$image-CS-menu-list: '../images/list-000-96.svg';
+$image-CS-notification-button : "../images/notification-000-96.svg"!default;
+$image-CS-menu-item-about: '../images/icons8-information.svg' !default;
+$image-CS-menu-item-logout: '../images/log-out.svg';
+$image-CS-menu-item-support: '../images/Support.svg';
+$image-CS-menu-item-my_account: '../images/my_account.svg';
+$image-CS-ok-filled-green: "../images/icons8-tick-filled-green-96.svg";
+$image-CS-copy-to-clipboard: '../images/icons8-copy-to-clipboard.svg';
+$image-CS-Filter: '../images/icons8-filter.svg';
+$image-CS-LastNode: '../images/node.svg';
+$image-CS-Create: '../images/icons8-create.svg';
+$image-CS-Update: '../images/icons8-update-file.svg';
+$image-CS-view-sources: '../images/view_sources.svg';
+$image-CS-administration-summary: '../images/icons8-change-theme.svg';
+
+//------------------------------------- New Icons For Checkbox --------------------------------------------------------
+
+$image-cs-checkbox-unchecked : '../images/checkbox-unchecked-000.svg';
+$image-cs-checkbox-checked : '../images/checkbox-checked-000.svg';
+$image-cs-checkbox-partial-checked : '../images/checkbox-partial-checked-000.svg';
+$image-CS-Variant-Configuration: '../images/icons-Variant_Configuration.svg';
+
+// ---------------------------------Property Info Icons -----------------------------
+
+$image-property-info-tooltip : '../images/icons8-property-info-tooltip.svg';
+$image-property-info-property-code : '../images/icons8-property-info-property-code.svg';
+$image-property-info-product-identifier : '../images/icons8-property-info-product-identifier.svg';
+$image-property-info-revision : '../images/icons8-property-info-revision.svg';
+$image-property-info-grid-editable : '../images/icons8-property-info-grideditable.svg';
+$image-property-info-searchable : '../images/icons8-property-info-serachable.svg';
+$image-property-info-sortable : '../images/icons8-property-info-sortable.svg';

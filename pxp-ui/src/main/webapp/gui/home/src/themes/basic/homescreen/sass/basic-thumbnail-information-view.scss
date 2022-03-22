@@ -1,0 +1,245 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.thumbnailInformationContainer {
+  /*position: absolute;
+  right: 0;
+  top: 0;*/
+  color: #fff;
+
+  .thumbInfo {
+    float: left;
+  }
+
+  .mdmInstanceDeleted {
+    height: 25px;
+    width: 20px;
+    @include background-properties($image-broken-link-black, 15px, 50% 60%);
+  }
+
+  .mandatoryViolationCount{
+    margin: 2px 2px 2px 0;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f82f31;
+
+    .mandatoryViolation {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 11px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .shouldViolationCount {
+    margin: 2px 2px 2px 0;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f28251;
+
+    .shouldViolation {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 11px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .expiredAssetsIndicatorWrapper{
+    float: left;
+    .expiredAssetsIndicator {
+      margin: 2px 2px 2px 0;
+      float: left;
+      width: 22px;
+      height: 22px;
+      @include background-properties($image-CS-expiry-asset-status, 22px);
+    }
+  }
+
+  .duplicateAssetIndicatorWrapper{
+    float: left;
+    .duplicateAssetIndicator {
+      margin: 2px 2px 2px 0;
+      float: left;
+      width: 22px;
+      height: 22px;
+      @include background-properties($image-CS-duplicate-asset-status, 22px);
+    }
+  }
+
+  .staticCollectionListContainer{
+    float: left;
+    margin: 1px 2px 2px 0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-image: url($image-CS-collection-static-collection-new);
+    background-size: 20px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    &:hover {
+      filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+      -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .ruleViolationCount{
+    float: left;
+    margin: 2px 2px 2px 0;
+
+    .totalRuleViolation {
+      position: relative;
+      width: 25px;
+      height: 25px;
+
+      .totalRuleViolationColor {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        /*filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.4));
+        -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.4));*/
+
+        &.red {
+           background-image: url($image-CS-Triangle-Red-Radius);
+         }
+
+        &.orange {
+          background-image: url($image-CS-Triangle-Orange-Radius);
+        }
+
+        &.yellow {
+          background-image: url($image-CS-Triangle-Yellow-Radius);
+        }
+      }
+      .totalRuleViolationCount {
+        position: absolute;
+        top: 0px;
+        width: 25px;
+        padding: 0px 5px;
+        font-size: 11px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 25px;
+
+        &.yellow {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.ruleViolationIndicatorContainer {
+  padding: 2px;
+  min-width: 176px;
+  overflow: hidden;
+
+  .ruleViolationTooltipHeader {
+    float: left;
+    font-size: 11px;
+  }
+
+  .individualRuleViolationCount {
+    color: #fff;
+    overflow: hidden;
+    padding: 0 2px;
+    display: flex;
+    justify-content: space-around;
+    float: right;
+
+    .ruleViolationIndicator {
+      margin-left: 2px;
+      width: 17px;
+      height: 17px;
+
+      .ruleViolationCircle {
+        float: left;
+        width: inherit;
+        height: inherit;
+        font-size: 11px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #fff;
+
+        &.ruleViolationRedColor {
+          background-color: red;
+        }
+
+        &.ruleViolationOrangeColor {
+          background-color: orange;
+        }
+
+        &.ruleViolationYellowColor {
+          background-color: yellow;
+          color: #000;
+        }
+      }
+
+
+
+      /*&:last-child {
+        margin-right: 0;
+        color: #000;
+      }*/
+    }
+  }
+
+}
+
+.primaryInformationSection {
+  .cloneOfContainer{
+    opacity: 0.8;
+  }
+}
+
+/*
+.entityDetailsSection{
+  .entityInformationContainer{
+    .thumbnailInformationContainer{
+      .cloneOfContainer{
+        opacity: 0.8;
+      }
+    }
+  }
+}
+*/
+.listViewButtonContainer{
+  .cloneOfContainer{
+    opacity: 0.7;
+  }
+}
+
+.cloneOfLabelTooltip {
+  padding: 2px;
+  text-align: left;
+
+  .cloneOf {
+    font-size: 10px;
+  }
+  .entityLabel {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

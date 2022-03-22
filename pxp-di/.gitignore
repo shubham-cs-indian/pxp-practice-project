@@ -1,0 +1,11 @@
+/.gradle
+/bin/
+/build/
+/.settings
+.classpath
+.project
+.iml
+/logs/
+/ExportedFiles/
+/UploadSourceFiles
+/pxp-di.iml

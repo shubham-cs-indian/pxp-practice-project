@@ -1,0 +1,106 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$chipHeight: 22px;
+$spacing: 10px;
+$border-radius: 3px;
+
+.multiClassificationSectionView {
+  border: 1px solid $color-light-4;
+  margin: $spacing $spacing 0 $spacing;
+}
+
+.multiClassificationDialogView {
+  overflow: hidden;
+  height: 100%;
+
+  .selectedClassificationView {
+    border: 1px solid $color-light-4;
+    border-radius: $border-radius;
+    background: $color-light-11;
+    height: 150px;
+    position: relative;
+
+    .toolbarViewContainer {
+      padding: 0;
+      float: right;
+      position: absolute;
+      right: $spacing;
+      top: $spacing - 2px;
+
+      .multiClassificationToolbar {
+        float: right;
+        margin: 0;
+
+        &.clubbedButtonsWrapper {
+          //border: solid 1px $color-dark-blue;
+          border-radius: 4px;
+
+          .customButtonContainer {
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+
+            .customButton {
+              .iconTextWrapper {
+                overflow: hidden;
+
+                .textContent.light {
+                  //color: $color-dark-blue;
+                  height: 28px;
+                  line-height: 28px;
+                  font-weight: 500;
+                }
+              }
+
+              &.active {
+                .textContent.light {
+                  //color: $color-light-1;
+                  //background-color: $color-dark-blue
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .multiClassificationTreeView {
+    margin-top: 24px; // dialog spacing
+    height: calc(100% - 174px); //selectedClassificationView + margin-top (160+24 = 184)
+  }
+
+  &.disableFirstCheckBox{
+    .treeViewWrapper {
+      .treeLevelContainer {
+        .treeWrapper {
+          .treeLevel {
+            .treeNode {
+              .treeNodeIcon {
+                &.leftSideButton {
+                  &.isDisabled{
+                    display: none;
+                  }
+                }
+              }
+              .rightSideActionButton {
+                .treeNodeIcon {
+                  &.rightSideButton {
+                    &.treeLastNodeIcon{
+                      @include background-properties($image-CS-LastNode, 30px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .treeViewWrapper .treeLevelContainer .treeWrapper .treeLevel .treeNode .rightSideActionButton .treeLastNodeIcon{
+    @include background-properties($image-CS-LastNode, 30px);
+  }
+}

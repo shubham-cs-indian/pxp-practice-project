@@ -1,0 +1,29 @@
+@import "./../../../../styleguide/style-guide";
+.imageSimpleViewImage{
+
+  &.hiddenImage{
+    opacity: 0;
+  }
+}
+
+.imageSimpleViewNoImage {
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+  opacity: .4;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url($image-CS-ImageFile);
+
+  &.imageWrapper {
+    opacity: 1;
+  }
+}
+
+.loadingWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

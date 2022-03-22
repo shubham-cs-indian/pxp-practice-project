@@ -1,0 +1,219 @@
+@import "../../../../styleguide/mixin";
+
+.tagsGroupContainer {
+  margin-bottom: 1px;
+  height: inherit;
+  float: left;
+  width: 100%;
+
+  & * {
+    @include no_select();
+  }
+
+  .multiSelectSearchLabel{
+    width: calc(100% - 20px) !important;
+  }
+}
+
+.sliderContainer {
+  padding: 0 5px 0 5px;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+}
+
+.sliderValue {
+  color: #555;
+  padding: 7px 2px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 9px;
+  text-align: center;
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  &.negativeTagRelevance {
+    color: rgb(255, 255, 255);
+    border-color: rgb(198, 96, 86);
+    background: rgb(216, 132, 124);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .3);
+  }
+
+  &.positiveTagRelevance {
+    color: rgb(255, 255, 255);
+    border-color: rgb(24, 168, 24);
+    background: rgb(45, 216, 45);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
+  }
+}
+
+.sliderViewNumberLocaleContainer {
+  float: left;
+  color: #555;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 9px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  .numberLocaleViewContainer {
+    height: 100%;
+    margin: 0;
+
+    .numberLocaleInput {
+      text-align: center;
+      font-size: 9px;
+      background: transparent !important;
+      height: 100% !important;
+      padding: 0;
+      margin: 0;
+      line-height: 24px;
+    }
+  }
+
+  &.negativeTagRelevance {
+    color: rgb(255, 255, 255);
+    border-color: rgb(198, 96, 86);
+    background: rgb(216, 132, 124);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .3);
+  }
+
+  &.positiveTagRelevance {
+    color: rgb(255, 255, 255);
+    border-color: rgb(24, 168, 24);
+    background: rgb(45, 216, 45);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
+  }
+}
+
+/*------------------New Slider-------------------*/
+
+.doubleSliderViewContainer {
+  //height: 44px;
+  position: relative;
+
+  .doubleSliderClearButton{
+    position: absolute;
+    top: -45px;
+    right: 5px;
+    font-size: 10px;
+    color: #aaa;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+      color: #888;
+    }
+  }
+}
+
+.range-slider {
+  //margin-top: 5px;
+  height: 14px;
+  //margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  margin: 5px 10px;
+
+  .sliderHandle {
+    height: 13px;
+    position: absolute;
+    z-index: 2;
+    top: 1px;
+    width: 13px;
+    cursor: inherit;
+    border-radius: 50%;
+    background-color: #30a9a0;
+    box-shadow: 0px 0px 0px 1px #30a9a0;
+    margin-left: 2px;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 1px #237B75;
+    }
+  }
+
+  .doubleSliderHighlight {
+    background-color: #33bbb1;
+    position: absolute;
+    top: 5px;
+    height: 5px;
+    margin-left: 2px;
+  }
+}
+
+.range-slider:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e3e3e3;
+  box-sizing: border-box;
+}
+
+.sliderValueContainer {
+  float: left;
+}
+
+.tagsSectionBody {
+  font-weight: normal;
+  font-size: 11px;
+
+  .noTagsGrey {
+    //margin-top: 4px;
+    font-style: italic;
+    color: $color-dark-5;
+    padding: 2px;
+    margin-bottom: 3px;
+    //margin-left: 8px;
+  }
+
+  .relevanceString {
+    display: inline-block;
+    width: auto;
+    padding: 2px 5px;
+    height: 22px;
+    margin: 0px 2px 3px 2px;
+    cursor: default;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #333;
+
+    &.relevanceGroup1 {
+      background-color: #00b700;
+      color: #fff;
+    }
+
+    &.relevanceGroup2 {
+      background-color: lightgreen;
+    }
+
+    &.relevanceGroup3 {
+      background-color: grey;
+      color: #fff;
+    }
+
+    &.relevanceGroup4 {
+      background-color: orange;
+    }
+
+    &.relevanceGroup5 {
+      background-color: #ff5956;
+      color: #fff;
+    }
+  }
+}
+
+.sliderHandle {
+  margin-left: 5px;
+}

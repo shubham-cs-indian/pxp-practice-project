@@ -1,0 +1,13 @@
+/.gradle/
+/.nb-gradle/
+/bin/
+/build/
+/.settings
+.classpath
+.project
+/logs/
+/ExportedFiles/
+/UploadSourceFiles
+.gradle
+.nb-gradle
+

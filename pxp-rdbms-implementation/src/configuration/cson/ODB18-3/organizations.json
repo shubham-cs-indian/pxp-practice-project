@@ -1,0 +1,16 @@
+[
+  {
+    "cse": "[[@Create internal $type=Organization]]",
+    "type": "internal",
+    "isStandard": true,
+    "roleIds": [
+      "accountablerole",
+      "consultedrole",
+      "informedrole",
+      "verifyrole",
+      "signoffrole",
+      "responsiblerole",
+      "adminrole"
+    ]
+  }
+]

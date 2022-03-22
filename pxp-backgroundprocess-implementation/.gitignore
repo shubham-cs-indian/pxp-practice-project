@@ -1,0 +1,15 @@
+/bgprocess-logs/
+/.gradle/
+.gradle
+/nbproject/
+/rdbms-logs/
+/src/test/bgprocess.properties
+/.nb-gradle/
+/bin
+/build
+/html/
+/.classpath
+/.project
+/.settings/
+/build.log
+/gradlew.bat

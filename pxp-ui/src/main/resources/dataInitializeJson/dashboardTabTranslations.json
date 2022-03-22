@@ -1,0 +1,53 @@
+[
+  {
+    "id": "dashboardtab",
+    "translations": {
+      "en_US": {
+        "label": "DefaultDashboardTab"
+      },
+      "es_ES": {
+        "label": "Tablero"
+      },
+      "fr_FR": {
+        "label": "Tableau de bord"
+      },
+      "de_DE": {
+        "label": "Instrumententafel"
+      }
+    }
+  },
+  {
+    "id": "onboardTab",
+    "translations": {
+      "en_US": {
+        "label": "Onboard"
+      },
+      "es_ES": {
+        "label": "A bordo" 
+      },
+      "fr_FR": {
+        "label": "A bord"
+      },
+      "de_DE": {
+        "label": "Am Bord" 
+      }
+    }
+  },
+  {
+    "id": "publishTab",
+    "translations": {
+      "en_US": {
+        "label": "Publish"
+      },
+      "es_ES": {
+        "label": "Publicar"
+      },
+      "fr_FR": {
+        "label": "publier"
+      },
+      "de_DE": {
+        "label": "Veroffentlichen"
+      }
+    }
+  }
+]

@@ -1,0 +1,1143 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.commonConfigSectionViewContainer{
+
+  .commonConfigSection{
+    margin: 15px 15px 15px 15px;
+    padding: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    //background: linear-gradient(45deg, white, rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3));
+    background: #f9f9f9;
+
+    .commonConfigSectionBody{
+
+      .commonConfigSectionRow{
+        display: flex;
+
+        .commonConfigSectionElementWrapper {
+          margin: 5px;
+          flex: 1;
+          align-content: stretch;
+          border: 1px solid #eee;
+          background: #fff;
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+
+          .commonConfigOverlay {
+            width: 100%;
+            height: 100%;
+            background: white;
+            position: absolute;
+            opacity: 0.5;
+            z-index: 10;
+          }
+
+          .commonConfigSectionElement {
+            padding: 4px 5px 5px 5px;
+
+            .searchBarView{
+              min-height: 0;
+            }
+
+            .commonConfigSectionElementHeader {
+              font-size: 11px;
+              color: #838181;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              padding: 5px 8px;
+            }
+
+            .commonConfigSectionElementBody {
+              padding: 0 8px;
+
+              .sidePanelContainer {
+                display: flex;
+                justify-content: center;
+                padding: 10px 0 10px 0;
+
+                .centerContent {
+                  width: 250px;
+                  justify-content: space-between;
+                  display: flex;
+
+                  .component {
+                    display: inline-block;
+
+                    .element {
+                      display: inline-block;
+
+                      &.rightMargin {
+                        margin-right: 5px;
+                      }
+
+                      span {
+                        margin-top: -3px;
+                      }
+
+
+                    }
+                  }
+                }
+              }
+
+              .customTextFieldViewContainer {
+                .customTextField {
+                  &.isDisabled {
+                    margin-top: 0;
+                  }
+                }
+              }
+
+              .multiSelectSearchViewWrapper {
+                .multiSelectSearchView {
+                  .multiSelectNothingSelected {
+                    padding: 2px 1px;
+                    line-height: 18px;
+                  }
+
+                  .multiSelectSummary {
+                    .imageFitToContainer {
+                      background-color: $color-light-12;
+                    }
+                    .selectedItems {
+                      margin: 2px 5px 2px 2px;
+                      .selectedItemIcon {
+                        padding: 0;
+                        .imageFitToContainer {
+                          .imageFitToContainerImage {
+                            padding: 3px;
+                          }
+                        }
+                      }
+
+                      .selectedItemLabel{
+                       // margin: 0 7px 0 7px;
+                      }
+                    }
+                  }
+                  &.singleSelect {
+                    .multiSelectSummary{
+                      .selectedItems{
+                        margin:0
+                      }
+                    }
+                  }
+                }
+              }
+              .selectionToggleView {
+                padding: 5px 0px 2px;
+              }
+              .elementWrapper{
+                &.iconDetailRow {
+                  .iconControlContainer {
+                    .iconChangeImage {
+                      background-position: center left -2px;
+                    }
+                  }
+                }
+              }
+
+              .smallTaxonomyViewContainer {
+                .taxonomyLabel {
+                  font-size: $font-normal;
+                  font-weight: normal;
+                  line-height: 22px;
+                }
+
+                .taxonomyIcon {
+                  height: 22px;
+                  width: 22px;
+                }
+              }
+              .yesNoViewWrapper{
+                .gridYesNoPropertyView{
+                  padding: 7px;
+                  overflow: hidden;
+
+                  .gridYesNoSwitch {
+                    height: 22px;
+                    width: 44px;
+                    border-radius: 11px;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+                    margin: auto;
+
+                    .gridYesNoSwitchButton {
+                      position: absolute;
+                      height: 22px;
+                      padding: 2px 0;
+                      top: 0;
+                      background-color: #ddd;
+                      transition: all .1s ease-out;
+                      cursor: pointer;
+                      &.no {
+                        left: -22px;
+                      }
+                      &.yes {
+                        background-color: #4fbf77;
+                        left: 0;
+                      }
+                      .textSection {
+                        height: 100%;
+                        width: 24px;
+                        text-align: center;
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 18px;
+                        display: inline-block;
+                        vertical-align: top;
+                        user-select: none;
+                        -moz-user-select: none;
+                        &.yes {
+                          padding: 0 0 0 2px;
+                        }
+                        &.no {
+                          padding: 0 2px 0 0;
+                          color: #888;
+                        }
+                      }
+                      .circleSection {
+                        background-color: #fff;
+                        border-radius: 50%;
+                        height: 18px;
+                        width: 18px;
+                        display: inline-block;
+                        vertical-align: top;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .uploadAndDownloadTemplateViewWrapper{
+               margin: 0 auto;
+               display: flex;
+               justify-content: center;
+
+              .templateIcon {
+                vertical-align: top;
+                height: 35px;
+                width: 35px;
+                border-radius: 3px;
+                overflow: hidden;
+                position: relative;
+                border: 1px solid $color-light-5;
+
+                &.uploadTemplateView {
+                  .uploadTemplateActionIcon{
+                    height: 100%;
+                    width: 100%;
+                    opacity: .4;
+                    cursor: pointer;
+
+                    &.upload {
+                      @include background-properties($image-CS-Upload-Black, 18px);
+                    }
+
+                    &.replace {
+                      @include background-properties($image-CS-Replace-26, 18px);
+                    }
+                  }
+                }
+
+                &.downloadTemplateView {
+                  margin-left: 5px;
+                  .iconDownloadImage {
+                    height: 100%;
+                    width: 100%;
+                    float: left;
+                    @include background-properties($image-CS-download-black, 18px);
+                    opacity: 0.4;
+
+                    &:hover {
+                      @include background-properties($image-CS-download-black, 18px);
+                    }
+                  }
+                }
+
+              }
+            }
+
+            .commonConfigSectionElementBody {
+
+              .defaultFromDateViewWrapper{
+                .currentDateSelectorWrapper{
+                  margin-top: 10px;
+                  display: flex;
+                  align-items: center;
+
+                  input[type="checkbox"]{
+                    margin: 0px 4px 0px;
+                  }
+                }
+
+                .customDatePickerWrapper{
+                  border-bottom: 1px solid $color-light-4;
+                  .customDatePicker{
+                    width: 100%;
+                    line-height: 22px;
+                    &.datePickerCustom {
+                      input{
+                        padding-bottom: 0;
+                      }
+                    }
+                  }
+                  .customDatePickerEmptyButton{
+                    left: 80px;
+                  }
+                  .infinityButton{
+                    position: absolute;
+                    right: 0;
+                    background-position: center;
+                  }
+                  .customDatePickerDisabledValue{
+                    margin-top: 6px;
+                    margin-bottom: 0;
+                    font-size: 12px;
+                  }
+                  &.disabled{
+                    .infinityButton{
+                      top: -6px;
+                    }
+                  }
+                }
+              }
+
+              .defaultDateViewWrapper{
+                .customDatePickerWrapper{
+                  .customDatePicker{
+                    border-bottom: 1px solid $color-light-4;
+                  }
+                }
+              }
+
+              .side1DropDownContainer, .side2DropDownContainer{
+                .klassSelectorContainer{
+                  width:100%;
+                  .klassSelectorBoxContainer{
+                    width: auto;
+                  }
+                }
+              }
+
+              .klassSelectorContainer{
+                float: left;
+                padding: 5px 0;
+                width:100%;
+
+                .klassSelectorBoxContainer{
+                  border-radius: 2px;
+                  box-shadow: 0 0 1px;
+                  width: auto;
+                  float: left;
+                  margin: 2px;
+                  max-width: 100%;
+
+                  .multiSelectNothingSelected{
+                    padding: 2px 5px;
+                    line-height: 23px;
+                  }
+
+                  .multiSelectSearchViewWrapper .multiSelectSearchView .multiSelectSummary {
+                    width: 100%;
+                    .selectedItems {
+                      margin: 2px 0;
+                      //width: 100%;
+                      .selectedItemLabel {
+                        margin: 0 7px 0 7px;
+                      }
+                    }
+                  }
+
+                }
+
+              }
+
+              .elementWrapper {
+
+                &.singleTextWrapper {
+
+                  .singleText {
+                    &:not(.isDisabled) {
+                      width: 100%;
+                    }
+                    border: none;
+                    outline: none;
+                    text-overflow: ellipsis;
+                  }
+
+                }
+
+                &.inputButtonWrapper {
+
+                  .inputButton{
+                    margin: 2px;
+                  }
+
+                }
+
+                &.expressionWrapper {
+                  width: 100%;
+                  padding: 4px;
+                  border: 1px solid darkgray;
+                  outline: none;
+                  min-height: 60px;
+                }
+
+                &.operatorWrapper {
+                  background-color: #b9b9b9;
+                  display: inline-block;
+                  vertical-align: top;
+                  padding: 2px;
+                  margin: 2px;
+
+                  .operatorButtonWrapper{
+
+                  }
+
+                }
+
+                &.nativeDropdownWrapper {
+
+                  .nativeDropdown {
+                    margin-top: 10px;
+                    border: none;
+                    outline: none;
+                    width: 25%;
+
+                    &:disabled {
+                      color: #aaa;
+                      background-color: #f6f6f6;
+                    }
+                  }
+                }
+
+                &.multiTextWrapper {
+
+                  .multiText{
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                  }
+
+                  .customDatePickerWrapper{
+                    .customDatePickerEmptyButton{
+                      top:0;
+                    }
+                  }
+                }
+
+                &.yesNoViewWrapper{
+                  .radioGroupContainer{
+                    float: left;
+                    width: 50%;
+
+                    .radioLabel{
+                      display: inline-block;
+                      vertical-align: super;
+                      width: 15%;
+                    }
+
+                    .radioButtonContainer{
+                    }
+                  }
+
+                }
+
+                &.yesNoBothViewWrapper{
+                  .checkboxGroupContainer{
+                    float: left;
+                    margin-right: 18px;
+                    padding: 8px;
+                    margin-bottom: 10px;
+                    .checkboxLabel {
+                      float: left;
+                      .pimCheckBoxContainer {
+                        float: left;
+                        margin-left: 10px;
+                      }
+                      .mamCheckBoxContainer {
+                        float: left;
+                        margin-left: 10px;
+                      }
+                      .targetCheckBoxContainer {
+                        float: left;
+                        margin-left: 10px;
+                      }
+                      .editorialCheckBoxContainer {
+                        float: left;
+                        margin-left: 10px;
+                      }
+                    }
+                  }
+                }
+
+                &.rangeTypeWrapper{
+                  padding-left: 15%;
+
+                  .singleTextWrapper{
+                    display: inline-block;
+                    width: 50%;
+
+                    .singleText{
+                      float: left;
+                    }
+                    .singleTextInput{
+                      float: left;
+                      outline: none;
+                      border: none;
+                      width: 50%;
+                      padding-left: 7px;
+                    }
+                  }
+                }
+
+                &.customTypeWrapper{
+                  .singleTextWrapper{
+                    display: inline-block;
+                    width: 50%;
+
+                    .singleText{
+                      float: left;
+                    }
+                    .singleTextInput{
+                      float: left;
+                      outline: none;
+                      border: none;
+                      width: 50%;
+                      padding-left: 7px;
+                    }
+                  }
+                }
+
+                &.iconDetailRow {
+                  position: relative;
+
+                  .iconControlContainer {
+                    float: left;
+
+                    .iconChangeImage{
+                      height: 20px;
+                      width: 20px;
+                      float: left;
+                      background: url($image-CS-Upload-Black) no-repeat;
+                      background-size: 15px;
+                      opacity: 0.9999;
+
+                      &:hover{
+                        background: url($image-CS-Upload-Black) no-repeat;
+                        background-size: 15px;
+                      }
+                    }
+
+                    .iconDownloadImage{
+                      height: 20px;
+                      width: 20px;
+                      float: left;
+                      opacity: 0.9999;
+                      background-size: 15px;
+                      background-repeat: no-repeat;
+                      background-image: url($image-CS-download-black);
+
+                      &:hover{
+                        background-size: 15px;
+                        background-repeat: no-repeat;
+                        background-image: url($image-CS-download-black);
+                      }
+
+                      &.dispN {
+                        display: none;
+                      }
+                    }
+
+                    .iconRemoveImage{
+                      height: 20px;
+                      width: 20px;
+                      float: left;
+                      background: url($image-CS-Cancel-Black) no-repeat;
+                      background-size: 15px;
+                      opacity: 0.5;
+                      position: absolute;
+                      left: calc(10% + 75px);
+
+                      &.dispN {
+                        display: none;
+                      }
+
+                      &:hover{
+                        opacity: 0.9;
+                        background: url($image-CS-Cancel-Black) no-repeat;
+                        background-size: 15px;
+                      }
+                    }
+
+                  }
+
+                  .iconContainer {
+                    float: left;
+                    height: 70px;
+                    width: 65px;
+                    position: relative;
+                    margin-left: 10%;
+
+                    .iconWrapper {
+                      border: none;
+                      vertical-align: top;
+                      height: 60px;
+                      width: 60px;
+
+                      &.defaultIcon {
+                        background: url($image-CS-ImageFile) no-repeat;
+                        background-size: 100%;
+                        opacity: 0.4;
+                      }
+
+                      .icon {
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        max-width: 60px;
+                        max-height: 60px;
+                      }
+                    }
+
+                    .iconChange {
+                      bottom: 0;
+                      color: #fff;
+                      font-size: 11px;
+                      left: 0;
+                      line-height: 15px;
+                      position: absolute;
+                      padding: 2px 0;
+                      text-align: center;
+                      width: 100%;
+                      background: rgba(0, 0, 0, 0.24);
+                      &:hover {
+                        background: rgba(0, 0, 0, 0.50);
+                        cursor: pointer;
+                      }
+                    }
+
+                    .iconRemoveImage{
+                      height: 15px;
+                      width: 15px;
+                      background: url($image-CS-Cancel-Black) no-repeat;
+                      background-size: 15px;
+                      opacity: 0.5;
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+
+                      &.dispN {
+                        display: none;
+                      }
+
+                      &:hover{
+                        opacity: 0.9;
+                        background: url($image-CS-Cancel-Black) no-repeat;
+                        background-size: 15px;
+                      }
+                    }
+                  }
+                }
+
+                &.ynWrapper{
+                  padding: 4px 2px 2px 5px;
+                  .singleTextWrapper{
+                    width: 50%;
+                    float: left;
+                    .singleText{
+                      float: left;
+                    }
+
+                    .singleTextInput{
+                      border: none;
+                      outline: none;
+                      width: 50%;
+                      float: left;
+                      padding-left: 7px;
+                    }
+                  }
+                }
+
+                &.ynnWrapper{
+                  padding: 4px 2px 2px 5px;
+                  .singleTextWrapper{
+                    width: 33%;
+                    float: left;
+                    .singleText{
+                      float: left;
+                    }
+
+                    .singleTextInput{
+                      border: none;
+                      outline: none;
+                      width: 50%;
+                      float: left;
+                      padding-left: 7px;
+                    }
+                  }
+
+                }
+
+                &.singleTextNumberWrapper{
+                  overflow: hidden;
+
+                  .singleText{
+                    width: 35%;
+                    float: left;
+                    border: none;
+                    outline: none;
+                  }
+                  .singleTextInput{
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    float: left;
+                    padding-left: 7px;
+
+                    &.disabled{
+                      opacity: .5;
+                      border-bottom: 2px dotted rgba(0, 0, 0, 0.76);
+                      background: #fff;
+                    }
+                  }
+                }
+
+                &.mssWrapper{
+                  &.color{
+                    width:80%;
+                    float: right;
+                  }
+                }
+
+                &.colorDisplayBlock{
+                  height: 20px;
+                  width: 30px;
+                  float: left;
+                  border-radius: 5px;
+                  margin: 3px 2px 2px 8px;
+                }
+
+                .contentMeasurementMetricsContainer {
+                  .measurementMetricInputDescription {
+                    display: none;
+                  }
+                }
+
+                &.concatenatedFormulaWrapper{
+                  .concatenatedFormulaButtons{
+                    float: left;
+                    width: 100%;
+                    .concatButton{
+                      float: left;
+                      background: #f1f1f1;
+                      margin: 0 5px;
+                      padding: 0 5px;
+                      border-radius: 2px;
+                      text-align: center;
+
+                      &:hover{
+                        cursor: pointer;
+                        background: #cacaca;
+                        transition: all .1s ease;
+                      }
+                    }
+
+                  }
+
+                  .concatenatedFormulaBody{
+                    float: left;
+                    width: 100%;
+                    min-height: 30px;
+
+                    .inputDomWrapper{
+                      display: inline-block;
+                      .autoSizeContainer{
+                        float: left;
+                        .concatInput{
+                          float: left;
+                          //background: rgba(144, 87, 87, 0.08);
+                          color: #555;
+                          outline: none;
+                          margin: 8px 0px 8px 2px;
+                          border: 1px inset rgba(241, 241, 241, 0.83);
+                          border-radius: 4px;
+                          padding: 0px 3px;
+                          height: 22px;
+                          min-width: 40px;
+                        }
+                      }
+
+                      &:hover {
+                        .crossIcon {
+                          //width: 14px;
+                          opacity: .5;
+                        }
+                      }
+                    }
+
+                    .froalaDomWrapper {
+                      min-width: 40px;
+                      display: inline-block;
+
+                      .froalaWrapperView{
+                        float: left;
+
+                        .disconnectedHTMLViewContainer {
+                          padding: 3px;
+                          word-break: break-all;
+                        }
+
+                        .customFroalaView {
+                          margin: 7px 0px 8px 2px;
+
+                          .froalaContainer{
+                            min-width: 80px;
+                            border: inset 1px;
+                            border-radius: 3px;
+                            padding-right: 25px;
+                            min-height: 23px;
+
+                            p {
+                              margin: 0;
+                            }
+                          }
+                        }
+
+                        .fr-counter{
+                          border: none;
+                          background: #f7f7f7;
+                          font-size: 12px;
+                          //font-family: "Open Sans";
+                        }
+                      }
+
+                      &:hover {
+                        .crossIcon {
+                          //width: 14px;
+                          opacity: .5;
+                        }
+                      }
+                    }
+
+                    .selectDomWrapper{
+                      display: inline-block;
+                      select {
+                        float: left;
+                        color: #555;
+                        outline: none;
+                        margin: 8px 0 8px 2px;
+                        border-radius: 4px;
+                        padding: 0 10px;
+                        height: 23px;
+                        max-width: 150px;
+                        border: 1px solid #f1f1f1;
+                        background: linear-gradient(to bottom, #ffffff 0%, rgba(208, 206, 206, 0.72) 100%);
+                      }
+
+                      &:hover {
+                        .crossIcon {
+                          //width: 14px;
+                          opacity: .5;
+                        }
+                      }
+                    }
+
+
+                    .crossIconWrapper{
+                      width: 15px;
+                      float: left;
+                      .crossIcon {
+                        background: url($image-CS-Cross) no-repeat 0;
+                        background-size: 16px;
+                        background-position: center;
+                        display: inline-block;
+                        position: relative;
+                        opacity: 0.6;
+                        transition: all .2s;
+                        cursor: pointer;
+                        height: 20px;
+                        width: 14px;
+                        margin: 9px 0 4px 0;
+
+                        &:hover {
+                          opacity: 1;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .copyToClipboard {
+                  top: 0px;
+                  left: calc(100% - 22px);
+                  transition: all .2s;
+                  opacity: 0;
+                  height: 100%;
+                }
+              }
+
+              .relationshipInheritanceWrapper {
+                width: calc(100% - 10px);
+                margin: 5px;
+                border: 1px solid $color-light-3;
+                overflow: auto;
+
+                .relationshipInheritanceSideWrapper {
+                  width: 100%;
+                  display: inline-block;
+                  min-width: 250px;
+
+                  .sideHeader {
+                    text-align: center;
+                    border-bottom: 1px solid;
+                    padding: 8px;
+                    border-bottom-color: $color-light-3;
+                    color: $color-dark-5;
+                  }
+
+                  .sideContainer {
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    padding-top: 35px;
+                  }
+
+                  .otherSideHeader {
+                    float: left;
+                    width: 100%;
+                    padding: 10px 10px 5px 10px;
+                    color: $color-dark-5;
+                    @include ellipsis();
+                  }
+
+                  .addRelationshipViewContainer {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    left: 10px;
+
+                    &.addRelationship {
+                      width: 20px;
+                      margin-right: 5px;
+                      float: left;
+
+                      .addRelationship {
+                        width: 20px;
+                        height: 20px;
+                        background: url($image-CS-Relationships-Inheritance) no-repeat center;
+                        background-size: cover;
+                        float: left;
+                        cursor: pointer;
+                        margin-right: 5px;
+                      }
+                    }
+                  }
+
+                  .sideDropDownContainer {
+                    float: left;
+                    width: 100%;
+                    padding: 5px 10px 14px 10px;
+
+                    .propertyCouplingContainer {
+                      border: 1px solid $color-light-5;
+                      .propertyCouplingHeader {
+                        overflow: auto;
+                        background-color: #F7F7F7;
+                        // border-bottom: 1px solid #d3d3d3;
+                        padding: 5.5px 15px;
+                        .propertyName {
+                          width: 40%;
+                          float: left;
+                          font-weight: 500
+                        }
+
+                        .propertyCoupling {
+                          width: calc(60% - 30px);
+                          padding: 0 26px;
+                          float: left;
+                          font-weight: 500
+                        }
+                      }
+
+                      .relationshipPropertyCouplingWrapper {
+                        overflow: auto;
+                        padding: 5px 15px;
+                        .relationshipPropertyLabel {
+                          width: 40%;
+                          flex: 1.2;
+                          overflow: hidden;
+                          float: left;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                          line-height: 28px;
+                        }
+
+                        .relationshipPropertyContainer {
+                          width: calc(60% - 30px);
+                          display: inline-block;
+                          padding: 2px 15px 2px 24px;
+                          font-size: 12px;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                          flex: 1;
+                          float: left;
+
+                          select {
+                            width: 85%;
+                            height: 22px;
+                            border: 1px solid #D9D9D9;
+                            border-radius: 3px;
+                          }
+                        }
+
+                        .removeProperty {
+                          position: inherit;
+                          margin-right: 0;
+                          float: right;
+                          height: 25px;
+                          width: 25px;
+                          cursor: pointer;
+                          transition: all .2s;
+                          opacity: 0.5;
+                          @include background-properties($image-CS-delete-bin-black, 17px);
+
+                          &:hover {
+                            opacity: 0.8;
+                          }
+                        }
+
+                        &:nth-child(odd) {
+                          background-color: #FDFCFC;
+                        }
+                        &:nth-child(even) {
+                          background-color: $color-light-1;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .dataTransferWrapper {
+                width: calc(100% - 10px);
+                margin: 5px;
+                border: 1px solid $color-light-3;
+                //display: table;
+                overflow: auto;
+                display: flex;
+
+                .dataTransferSideWrapper {
+                  width: 100%;
+                  display: inline-block;
+                  min-width: 250px;
+
+                  &.leftSide  {
+                    width: 50%;
+                    box-shadow: inset -1px 0 0 0px $color-light-3;
+                  }
+
+                  .sideHeader {
+                    text-align: center;
+                    border-bottom: 1px solid $color-light-3;
+                    padding: 8px;
+                    color: $color-dark-5;
+                    word-break: break-all;
+                    @include ellipsis();
+                  }
+
+                  .otherSideContainer {
+                    float: left;
+                    width: 100%;
+                    position: relative;
+
+                    .otherSideHeader {
+                      float: left;
+                      width: 100%;
+                      padding: 10px 10px 5px 10px;
+                      color: $color-dark-5;
+                      word-break: break-all;
+                      @include ellipsis();
+                    }
+
+                    .addPropertyViewContainer {
+                      position: absolute;
+                      right: 10px;
+                      top: 10px;
+
+                      .addAttribute, .addTag {
+                        margin-right: 5px;
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                        cursor: pointer;
+                      }
+
+                      .addAttribute {
+                        /**Todo : To Add White Plus Overlay Icon For Attribute. Author Garry **/
+                        @include background-properties($image-CS-Text-Color-35-Plus);
+                      }
+
+                      .addTag {
+                        @include background-properties($image-CS-Price-Tag-35-Plus);
+                      }
+                    }
+
+                    .sideDropDownContainer {
+                      float: left;
+                      width: 100%;
+                      padding: 5px 10px 20px 10px;
+
+                      .multiSelectSearchViewWrapper {
+                        height: 35px;
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .fullScreenButton {
+              position: absolute;
+              top: 0;
+              right: 0;
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              @include background-properties($image-CS-expand-000-96, 12px);
+
+              &:hover {
+                opacity: .68;
+              }
+            }
+
+            .fullScreenView {
+              &.fullScreen {
+                .fullScreenButton{
+                  margin: 15px;
+                  width: 30px;
+                  height: 30px;
+                  @include background-properties($image-CS-Cross, 23px);
+                }
+               }
+            }
+          }
+          &:hover > .commonConfigSectionElement > .commonConfigSectionElementBody > .elementWrapper .copyToClipboard {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

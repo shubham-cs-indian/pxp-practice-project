@@ -1,0 +1,131 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply from: 'gretty.plugin'
+
+compileJava.options.encoding = 'UTF-8'
+
+gretty {
+  httpPort = 8091
+  debugPort = 9788
+  debugSuspend = false
+  inplaceMode="hard"
+  servletContainer= "jetty9.4"
+  //jvm args
+  jvmArgs = ['-DDATABASE_PROPERTIES=classpath*:databaseProperties/*.properties','-DDATA_INTEGRATION_PROPERTIES=classpath*:dataIntegrationProperties/*.properties', '-DAUDIT_LOG_PROPERTIES=classpath*:auditLogProperties/*.properties','-DPXP_LOG_PROPERTIES=classpath*:pxpLogProperties/*.properties']   
+  //jvmArgs = ['-DDATABASE_PROPERTIES=classpath*:databaseProperties/*.properties','-DDATA_INTEGRATION_PROPERTIES=classpath*:dataIntegrationProperties/*.properties', '-DSAML=classpath*:saml/*.properties','-DAUDIT_LOG_PROPERTIES=classpath*:auditLogProperties/*.properties','-DPXP_LOG_PROPERTIES=classpath*:pxpLogProperties/*.properties']   
+
+}
+
+
+version = "1.0.0"	
+sourceCompatibility = 11
+
+repositories {
+
+  mavenCentral ()
+  mavenLocal()
+  maven { url "https://build.shibboleth.net/nexus/content/repositories/releases/" }
+  maven { url "https://repo.spring.io/libs-snapshot" }
+  maven { url "https://jitpack.io" }        
+  jcenter()
+}
+
+configurations.all {
+    //exclude group: "org.slf4j", module: "slf4j-log4j12"
+    //exclude group: "log4j", module: "log4j"
+   exclude group: "javax.ws.rs", module:"jsr311-api"
+}
+
+if(!gradle.startParameter.taskNames.contains("war") && !gradle.startParameter.taskNames.contains("eclipse")){ 
+
+    print "\n\n[DEV RUN] Adding properties to the classpath\n\n" 
+
+    sourceSets.main.resources.srcDirs = ['src/main/externalizedProperties', 'src/main/resources']; 
+
+  } else { 
+
+    print "\n\n[War Build] Externalised properties need to be configured correctly.\n\n" 
+
+  } 
+
+dependencies {
+    def springFrameworkVersion = "5.2.1.RELEASE"
+	def jacksonVersion = "2.10.1"
+	def camundaVersion = "7.8.0"
+   // Add the project dependency management
+	compile project(path: ':pxp-core')
+	compile project(path: ':pxp-di')
+	compile project(path: ':pxp-rdbms-interface')
+	compile project(path: ':pxp-technical-services')
+	compile project(path: ':di-workflow-api')
+
+	compile "commons-fileupload:commons-fileupload:1.3.1"
+    compile group: 'com.orientechnologies', name: 'orientdb-graphdb', version: '3.0.11'
+    compile group: 'com.orientechnologies', name: 'orientdb-server', version: '3.0.11'
+    compile group: 'com.orientechnologies', name: 'orientdb-etl', version: '3.0.11'
+
+    compile group: 'com.healthmarketscience.sqlbuilder', name: 'sqlbuilder', version: '2.1.7'
+    compile "org.apache.poi:poi-ooxml:3.11"
+	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+	compile 'com.github.spullara.mustache.java:compiler:0.9.1'
+	compile 'org.eclipse.jetty.websocket:websocket-client:9.3.0.v20150612'
+	compile 'org.eclipse.jetty.websocket:websocket-api:9.3.0.v20150612'
+	compile 'javax.servlet:javax.servlet-api:3.1.0'
+	compile 'org.aspectj:aspectjtools:1.8.5'
+	compile 'org.aspectj:aspectjrt:1.8.5'
+	compile "org.springframework.kafka:spring-kafka:1.1.2.RELEASE"
+	compile 'org.apache.curator:curator-test:3.2.1'
+	compile 'org.apache.curator:curator-framework:3.2.1'
+	compile group: 'javax.websocket', name: 'javax.websocket-api', version: '1.1'
+	compile 'org.jsoup:jsoup:1.7.2'
+	compile 'org.apache.commons:commons-collections4:4.0'
+	compile 'org.javers:javers-core:1.4.3'
+	compile 'com.fasterxml.jackson.core:jackson-core:${jacksonVersion}'
+	compile 'com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}'
+	compile "org.springframework:spring-jdbc:${springFrameworkVersion}"
+    compile "org.springframework:spring-web:${springFrameworkVersion}"
+	compile "org.springframework:spring-webmvc:${springFrameworkVersion}"
+	compile "org.springframework:spring-orm:${springFrameworkVersion}"
+	compile "org.springframework:spring-aop:${springFrameworkVersion}"
+	compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.13.Final'
+	compile group: 'org.jboss.resteasy', name: 'resteasy-servlet-initializer', version: '3.0.13.Final'
+	compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.13'
+	
+	compile group: 'org.apache.httpcomponents', name: 'httpasyncclient', version: '4.1.2'
+	compile 'org.im4java:im4java:1.4.0'
+	compile 'org.imgscalr:imgscalr-lib:4.2'
+	compile 'com.googlecode.json-simple:json-simple:1.1.1'
+	compile 'net.bramp.ffmpeg:ffmpeg:0.6'
+	compile 'org.docx4j:docx4j:3.2.1'
+	compile 'com.itextpdf:itextpdf:5.5.6'
+	compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    compile group: 'org.springframework', name: 'spring-jms', version: '4.3.5.RELEASE'
+	compile group: 'commons-io', name: 'commons-io', version: '2.6'
+	
+	compile group: 'com.orientechnologies', name: 'orientdb-distributed', version: '3.0.11'
+	compile group: 'commons-digester', name: 'commons-digester', version: '2.1'
+	compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+	compile group: 'org.apache.velocity', name: 'velocity-tools', version: '2.0'
+	compile 'org.eclipse.jetty:jetty-server:9.4.24.v20191120'
+	compile 'org.eclipse.jetty:jetty-servlet:9.4.24.v20191120'
+	compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: jacksonVersion
+	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+	compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+	
+	
+		// Adding the spring security dependency from below here
+	compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.1.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.2.1.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.2.1.RELEASE'
+	compile group: 'org.springframework.security.extensions', name: 'spring-security-saml2-core', version: '1.0.9.RELEASE'
+	compile group: 'org.springframework.security', name: 'spring-security-ldap', version: '5.2.1.RELEASE'
+	
+}
+
+war{
+	archiveName= warName + '-' + project.version.toString() + '.war'
+}

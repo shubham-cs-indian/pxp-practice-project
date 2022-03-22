@@ -1,0 +1,229 @@
+/*
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+.ImageGalleryViewContainer {
+  margin-bottom: 5px;
+  min-height: 72px;
+
+  & > input {
+    height: 0;
+    width: 0;
+  }
+
+  &.showNavigation {
+    .image-gallery-left-nav {
+      display: none;
+    }
+
+    .image-gallery-right-nav {
+      display: none;
+    }
+
+    .imageGalleryToolbarRight {
+      display: block;
+    }
+  }
+
+  .dropViewContainer {
+    min-height: 75px;
+  }
+
+  .image-gallery-right-nav {
+    text-decoration: none;
+    right: 40px;
+  }
+
+  .image-gallery-left-nav {
+    text-decoration: none;
+    left: 40px;
+  }
+
+  .imageGalleryImageWrapper {
+    cursor: pointer;
+    .imageGalleryNoImageWrapper {
+      height: 150px;
+      width: auto;
+      background: url($image-CS-ImageFile) no-repeat 50% 50%;
+      opacity: .4;
+    }
+  }
+
+  .imageGalleryToolbar {
+    //position: absolute;
+    //top: 1px;
+    overflow: hidden;
+    z-index: 5;
+
+    .imageGalleryViewButtonWrapper {
+      border: solid 1px $color-light-4;
+      overflow: hidden;
+      float: left;
+      margin: 5px;
+      border-radius: 3px;
+      .addNew {
+        @include background-properties($image-CS-Upload-Black, 20px);
+      }
+
+      .download {
+        @include background-properties($image-CS-download, 20px);
+      }
+
+      .viewer {
+        @include background-properties($image-CS-eye-black, 20px);
+      }
+
+      .delete {
+        @include background-properties($image-CS-delete-bin, 20px);
+      }
+    }
+
+    .bulkDownloadContainer {
+      height: 0;
+      width: 0;
+    }
+
+    .coverflowControl {
+      //position: absolute;
+      !*top: 1px;
+      z-index: 8;
+      height: 30px;
+      width: 30px;
+      background-color: #616367;
+      margin: 5px 4px;
+      border-radius: 20px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+      background-repeat: no-repeat;
+      background-position: 8px;
+      background-size: 14px;*!
+
+      !*&:hover {
+        transform: none;
+        background-color: #76787c;
+      }*!
+
+      &[disabled] {
+        &:hover {
+        }
+      }
+
+      !*&.addNew {
+        @include background-properties($image-CS-bulkUpload, 20px);
+      }*!
+
+      &.remove {
+        @include background-properties-with-theme-white-color($image-CS-MinusBlack);
+      }
+
+     !* &.viewer {
+        @include background-properties($image-CS-eye-black, 20px);
+      }
+
+      &.download {
+        @include background-properties($image-CS-bulkDownloadBlack, 20px);
+      }*!
+
+      &.default {
+        background-image: url($image-CS-CheckMark-black);
+
+        &.defaultImageCancelButton {
+          @include background-properties-with-theme-white-color($image-CS-CheckMark-black);
+        }
+      }
+
+      &.dispN {
+        display: none;
+      }
+    }
+  }
+
+  .imageGalleryToolbarRight {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    z-index: 5;
+    transform: translateY(-50%);
+    display: none;
+
+    .coverflowControl {
+      top: 1px;
+      z-index: 8;
+      height: 30px;
+      width: 30px;
+      background-color: #616367;
+      margin: 8px 4px;
+      border-radius: 20px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+      background-repeat: no-repeat;
+      background-position: 8px;
+      background-size: 14px;
+
+      &:hover {
+        transform: none;
+        background-color: #76787c;
+      }
+
+      &[disabled] {
+        &:hover {
+        }
+      }
+
+      &.left {
+        @include background-properties-with-theme-white-color($image-CS-arrow-backward);
+      }
+
+      &.right {
+        background-image: url($image-CS-More-Than-Filled-50);
+      }
+    }
+  }
+
+  .image-gallery-bullets {
+    bottom: 5px;
+  }
+
+  .image-gallery-image {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    min-height: 152px;
+
+    .imageWrapper {
+      background-size: 20%;
+    }
+  }
+
+  .coverflowCTRLBtn {
+    height: 25px;
+  }
+
+  .image-gallery-slides {
+    width: 100%;
+    //min-height: 152px;
+  }
+
+  .image-gallery-slide {
+    width: 100%;
+  }
+
+  .image-gallery-thumbnails-container {
+    text-align: center;
+    height: 100px;
+  }
+
+  .image-gallery-slide img {
+    max-width: 100%;
+    max-height: 350px;
+    width: auto;
+   }
+
+  .image-gallery-thumbnail img {
+    max-width: 80px;
+    max-height: 80px;
+    width: auto;
+  }
+
+  .coverflowCTRLBtn {
+    display: none;
+  }
+}
+*/

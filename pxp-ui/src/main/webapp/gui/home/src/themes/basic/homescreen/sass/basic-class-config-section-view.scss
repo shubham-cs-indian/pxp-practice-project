@@ -1,0 +1,868 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.classSectionContainer {
+  height: 100%;
+
+  .classSectionHeader {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: #ccc;
+
+    .classSectionHeaderButton {
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      background-size: 20px;
+      background-position: 0;
+      background-repeat: no-repeat;
+      margin: 5px 2px;
+    }
+
+    .classSectionHeaderTitle {
+      width: 100px;
+      display: inline-block;
+      color: #333;
+    }
+
+
+
+    .addTemplate {
+      @include background-properties($image-CS-PlusStruct-32,16px);
+      float: right;
+
+      &:hover {
+        @include background-properties-with-theme-white-color($image-CS-Plus-32-black,16px);
+      }
+
+      &.noShow{
+        display: none;
+      }
+    }
+    .actionItemDelete {
+      @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+      &:hover {
+        @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+      }
+    }
+
+    .deleteTemplate {
+      @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 16px);
+      float: right;
+
+      &:hover {
+        @include background-properties-with-gray-color($image-CS-delete-bin-black);
+      }
+
+      &.noShow{
+        display: none;
+      }
+    }
+  }
+
+  .classElementListContainer {
+    width: 250px;
+    float: left;
+    height: calc(100% - 30px);
+    padding-top: 1px;
+
+    .sectionAvailableLists{
+      height: calc(100% - 35px);
+      overflow: auto;
+    }
+
+    .sectionAvailableSearchBar{
+      position: relative;
+      height: 35px;
+
+      .sectionAvailableSearchBarInput{
+        margin: 5px;
+        border-radius: 4px;
+        padding-left: 25px;
+        width: calc(100% - 10px);
+        height: 25px;
+        border: 1px solid #CCC;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      }
+
+      .sectionAvailableSearchBarIcon{
+        background-image: url($image-CS-SearchFilled-32);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: 10px;
+        top: 8px;
+      }
+
+      .sectionAvailableClearSearch{
+        background-image: url($image-CS-Cross);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+        opacity: 0.4;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .dragViewContainer {
+      display: block;
+    }
+
+    .listView {
+      .listNodeViewContainer {
+        .listNodeViewName {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .availableDragElBody {
+      color: #333;
+      max-height: 100px;
+      overflow: auto;
+
+      .availableListItem {
+        padding: 6px 8px;
+        border-bottom: 1px solid #eee;
+      }
+    }
+
+    .expandCollapseIcon {
+      margin: 3px 5px;
+      height: 15px;
+      width: 15px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 10px;
+      border-radius: 2px;
+      cursor: pointer;
+      float: left;
+      background-image: url($image-CS-expand-arrow-icon);
+
+      &.collapsed {
+        background-image: url($image-CS-arrow-forward);
+      }
+    }
+
+    .itemBody {
+      height: inherit;
+
+      &.collapsed {
+        display: none;
+      }
+    }
+    .availableDragElHeader {
+      padding: 3px 8px;
+      background: #fafafa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .listNodeViewContainer{
+      padding: 4px 15px;
+    }
+
+    .listLoadMore {
+      font-style: italic;
+      color: #777;
+      padding: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .nothingToDisplay{
+      font-style: italic;
+      color: $color-dark-5;
+      padding: 5px;
+    }
+  }
+
+  .classSectionListContainer {
+    width: calc(100% - 250px);
+    float: left;
+    height: calc(100% - 30px);
+    overflow: auto;
+    border-left: 1px solid #E5E5E5;
+
+    .dropViewContainer {
+      width: 100%;
+      height: 100%;
+    }
+
+    .visualSectionContainer {
+      width: calc(100% - 8px);
+      box-shadow: 0 0 1px 1px #dfdfdf inset;
+      margin: 4px;
+      padding-bottom: 1px;
+      position: relative;
+
+      &.selected {
+        //border: 2px solid blue;
+      }
+
+      .visualSectionHeader {
+        height: 40px;
+        background: #F0F0F0;
+        position: relative;
+
+        .visualSectionColCountWrapper, .visualSectionRowCountWrapper {
+          display: inline-block;
+          float: left;
+          margin: 9px 5px;
+
+          .visualSectionDrDnLabel {
+            display: inline-block;
+            margin: 2px;
+            height: 20px;
+            width: 20px;
+            background-position: 0;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            opacity: .6;
+            float: left;
+
+            &.rows {
+              background-image: url($image-Rows-64Black);
+            }
+
+            &.columns {
+              background-image: url($image-CS-Columns-64-Black);
+            }
+          }
+
+          .visualSectionColCountInput, .visualSectionRowCountInput {
+            border: none;
+            height: 22px;
+            border-radius: 2px;
+            background: #fff;
+            padding: 0 0 0 6px;
+            margin: 0 4px;
+            width: 40px;
+          }
+        }
+
+        .visualSectionToolbar {
+          float: right;
+          overflow: hidden;
+          padding: 7px;
+
+          .visualSectionToolbarIcon{
+            height: 26px;
+            width: 26px;
+            background-position: 6px;
+            background-size: 14px;
+            background-repeat: no-repeat;
+            opacity: .4;
+            transition: all .2s;
+            float: right;
+
+            &:hover{
+              opacity: .8;
+            }
+          }
+
+          .visualSectionDeleteIcon {
+            background-image: url($image-CS-Cancel-2-Filled-30-Red);
+          }
+
+          .visualSectionMoveUpIcon {
+            background-image: url($image-CS-Upload-Black);
+          }
+
+          .visualSectionMoveDownIcon {
+            background-image: url($image-CS-arrow-down);
+          }
+
+          .visualSectionLock{
+            height: 22px;
+            width: 22px;
+            background-position: 4px;
+            background-color: #777;
+            margin: 2px 5px;
+            border-radius: 4px;
+            box-shadow: 0px 1px 1px 0px #333 inset;
+            opacity: .8;
+            display: none;
+
+            &.locked, &.unlocked{
+              display: block;
+            }
+
+            &.locked{
+              @include background-properties-with-theme-white-color($image-cs-dyn-coupled);
+            }
+
+            &.unlocked{
+             @include background-properties-with-theme-white-color($image-CS-Box-Filled-Filled-50-Black);
+            }
+          }
+        }
+
+        .visualSectionTitle {
+          display: inline-block;
+          text-align: center;
+          margin: 9px 3px;
+          float: left;
+
+          input {
+            padding: 0 6px;
+            border: none;
+            height: 22px;
+            border-radius: 2px;
+            background: #fff;
+          }
+        }
+
+        .visualSectionUploadImageIconContainer {
+          height: 40px;
+          width: 45px;
+          float: left;
+          position: relative;
+
+          .visualSectionIconContainer {
+            float: left;
+            margin: 4px;
+            height: 32px;
+            width: 32px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            position: relative;
+
+            .classIcon {
+              max-width: 100%;
+              max-height: 100%;
+              top: 50%;
+              position: absolute;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          .visualSectionUploadImageIcon {
+            height: 25px;
+            width: 25px;
+            margin: 7px;
+            background: url($image-CS-Upload-Black) no-repeat;
+            background-size: 16px;
+            background-position: 5px;
+            opacity: .7;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+          }
+
+          .visualSectionUploadImageNoIcon{
+            height: 25px;
+            width: 25px;
+            display: inline-block;
+            float: right;
+            margin: 7px;
+            opacity: .7;
+            border-radius: 50%;
+            position: absolute;
+          }
+
+          .iconRemoveImage{
+            height: 20px;
+            width: 20px;
+            background: url($image-CS-Cancel-Black) no-repeat;
+            background-size: 15px;
+            opacity: 0.2;
+            position: absolute;
+            right: -9px;
+
+            &.dispN {
+              display: none;
+            }
+
+            &:hover{
+              opacity: 0.9;
+              background: url($image-CS-Cancel-Black) no-repeat;
+              background-size: 15px;
+            }
+          }
+        }
+
+        .xrayDefaultCheckBoxContainer{
+          display: inline-block;
+          float: left;
+          margin: 9px 5px;
+          padding-top: 1px;
+
+          .checkBoxLabel{
+            float: left;
+            margin: 2px 5px;
+            font-size: 11px;
+          }
+
+          .xrayDefaultCheckBox{
+
+          }
+        }
+      }
+
+      .sectionBlocker{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: none;
+        background-color: rgba(220,220,220, 0.4);
+        top: 0;
+        left: 0;
+
+        &.sectionBlockerActive{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.visualSectionBody {
+
+  .visualSectionRowsWrapper {
+
+    .visualSectionElementsWrapper {
+      overflow: hidden;
+      width: calc(100% - 6px);
+      margin: 3px;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+
+      .dropViewContainer, .visualSectionElementDiv {
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        float: left;
+        align-items: stretch;
+        min-height: 60px;
+        display: inline-block;
+
+        .visualSectionElementContainer {
+
+        }
+      }
+    }
+  }
+}
+
+.visualSectionElementContainer {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  .dragViewContainer {
+    width: 100%;
+  }
+
+  .sectionTileContainer {
+    margin: 2px;
+    //          border: 1px dashed #ddd;
+    position: relative;
+    overflow: hidden;
+
+    .section-element-tag-list-container{
+      overflow: hidden;
+    }
+
+    .tileHeader {
+      height: 26px;
+      background: #eee;
+
+      .tileType {
+        color: #ACACAC;
+        text-align: center;
+        /* padding: 7px; */
+        font-size: 11px;
+        float: left;
+        line-height: 25px;
+      }
+
+      .tileValue {
+        color: #777;
+        font-size: 13px;
+        float: left;
+        padding: 0 3px;
+        width: calc(100% - 80px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 500;
+        line-height: 26px;
+        white-space: nowrap;
+      }
+
+      .tileIcon{
+        float: left;
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: 3px;
+        width: 20px;
+        height: 20px;
+        opacity: .6;
+        margin: 3px;
+        transition: all 0.2s;
+        background-color: #fff;
+        box-shadow: 0 0 0 1px #999;
+        border-radius: 3px;
+
+        &.tileIconAttribute{
+          background-image: url($image-CS-Text-Color-Filled-50);
+        }
+
+        &.tileIconTag{
+          background-image: url($image-CS-Price-Tag-Filled-50);
+        }
+
+        &.tileIconRelationship{
+          @include background-properties-with-gray-color($image-CS-hub);
+        }
+
+        &.tileIconRole{
+          background-image: url($image-CS-Manager-Filled-50-Black);
+        }
+
+        &.tileIconTaxonomy{
+          background-image: url($image-CS-Multicast-Filled-50);
+        }
+      }
+
+      .visualElementLock{
+        height: 22px;
+        width: 22px;
+        background-position: 4px;
+        background-size: 14px;
+        background-repeat: no-repeat;
+        transition: all .2s;
+        float: right;
+        background-color: #777;
+        box-shadow: 0px 1px 1px 0px #333 inset;  opacity: .8;
+        border-radius: 4px;
+        margin: 2px;
+        display: none;
+
+        &.locked, &.unlocked{
+          display: block;
+        }
+
+        &.locked{
+          @include background-properties-with-theme-white-color($image-cs-dyn-coupled);
+        }
+
+        &.unlocked{
+          @include background-properties-with-theme-white-color($image-CS-Box-Filled-Filled-50-Black);
+        }
+      }
+    }
+
+    .removePlaceholder {
+      float: right;
+      background-image: url($image-CS-Cancel-2-Filled-30-Red);
+      background-size: 14px;
+      width: 25px;
+      height: 25px;
+      opacity: .4;
+      background-repeat: no-repeat;
+      transition: all 0.2s;
+      top: 1px;
+      background-position: 5px;
+      right: 1px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .sectionTileForm {
+      float: left;
+      width: 100%;
+
+      & * {
+        font-size: 12px;
+      }
+
+      .sectionTileFieldWrapper {
+        padding: 2px;
+        height: 24px;
+        line-height: 20px;
+
+        .sectionTileFieldKey {
+          float: left;
+          width: 50%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .sectionTileFieldValue {
+          width: 45%;
+          margin: 1px 0px 1px 5%;
+          height: 22px;
+          border: none;
+          float: left;
+          background: #f8f8f8;
+          padding: 0 5px;
+
+          &[type="checkbox"]{
+            height: 14px;
+            margin-top: 5px;
+            width: auto;
+          }
+        }
+
+        .customDatePickerWrapper {
+          width: 45%;
+          margin: 1px 0px 1px 5%;
+          height: 22px;
+          border: none;
+          float: left;
+          background: #f8f8f8;
+          padding: 0 5px;
+
+          .customDatePickerEmptyButton {
+            top: 0;
+          }
+        }
+
+        .isInheritedCheck {
+
+        }
+
+        .checked {
+
+        }
+      }
+      .contentMeasurementMetricsContainer {
+        width: 50%;
+        padding-left: 5%;
+        margin-bottom: 0;
+        float: left;
+
+        .measurementMetricInputLabel {
+          display: none;
+        }
+
+        .measurementMetricWrapper {
+          display: inline-block;
+
+          .measurementMetricElementWrapper {
+            display: inline-block;
+            width: 70%;
+            min-width: 0;
+            float: none;
+
+            .measurementMetricInput {
+              background-color: #f8f8f8;
+              border: none;
+              outline: none;
+              width: 100%;
+              font-size: 12px;
+              margin-top: 0;
+              padding: 0 5px;
+              margin-bottom: 0;
+              &:focus {
+                outline: 1px solid #82c4f8;
+              }
+            }
+          }
+          .measurementMetricElementListWrapper {
+            display: inline-block;
+            width: calc(30% - 3px);
+            float: right;
+            overflow: hidden;
+            margin-left: 3px;
+            min-width: 0;
+
+            .conversionList {
+              background-color: #f8f8f8;
+              border: none;
+              outline: none;
+              width: 100%;
+              font-size: 12px;
+              margin-top: 0;
+              margin-bottom: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        .measurementMetricInputDescription{
+          display: none;
+        }
+      }
+    }
+
+    .section-element-tag-list-container , .section-element-filter-search-list-container{
+      float: left;
+      width: 100%;
+
+      & * {
+        font-size: 12px;
+      }
+
+      .tagListHeader, .filterOrSearchHeader{
+        padding: 2px;
+        overflow: hidden;
+
+        .tagListHeaderText, .filterOrSearchHeaderText{
+          width: 50%;
+          float: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .tagListSelectAll, .filterOrSearchCheckBox{
+          margin-left: 5%;
+          float: left;
+
+          .tagListCheckAll, .filterOrSearchCheckAll{
+          }
+        }
+      }
+
+      .tagListBody{
+        max-height: 110px;
+        overflow: auto;
+      }
+
+
+      .tagElement {
+        padding: 2px 5px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        color: #ccc;
+        border-radius: 4px;
+        float: left;
+        margin: 2px;
+        cursor: pointer;
+        max-width: calc(50% - 4px);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all .2s;
+
+        &:hover{
+          background: #fff;
+          color: #555;
+          border-color: #888;
+          box-shadow: 0px 0px 0px 1px #888 inset;
+        }
+
+        &.tagElementSelected{
+          background: #fff;
+          color: #555;
+          border-color: $color-theme-accent;
+          box-shadow: 0px 0px 0px 1px $color-theme-accent inset;
+        }
+      }
+    }
+
+    .relationshipSectionContainer {
+      border: none;
+      height: auto;
+
+      .blockContainer {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+
+        &.relationshipSectionLabelContainer {
+          border-right: none;
+        }
+
+        .blockLabel {
+          text-align: left;
+        }
+
+        .inputContainer {
+          width: 50%;
+
+          .input {
+            text-align: left;
+            padding: 0 7px;
+            width: 100%;
+            font-size: 12px;
+
+
+            &[disabled] {
+              background-color: #f8f8f8;
+            }
+          }
+        }
+      }
+    }
+
+    .elementBlocker{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      display: none;
+      background-color: rgba(220,220,220, 0.4);
+      top: 0;
+      left: 0;
+
+      &.elementBlockerActive{
+        display: block;
+      }
+    }
+  }
+}
+
+.classConfigPropertyCollection {
+  padding: 5px;
+
+  .classPropertyCollectionHeader {
+    position: relative;
+    padding: 5px;
+
+    .classPropertyCollectionLabel {
+      font-weight: 500;
+    }
+
+    .classPropertyCollectionIconContainer{
+      float: right;
+      margin-top: 2px;
+      .classPropertyCollectionIcon{
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+        opacity: 0.4;
+        float: left;
+        margin: 0 5px;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.remove {
+          background-image: url($image-CS-Cancel-2-Filled-30-Red);
+        }
+
+        &.moveUp {
+          background-image: url($image-CS-Upload-Black);
+        }
+
+        &.moveDown{
+          background-image: url($image-CS-arrow-down);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,113 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+/*.languageInfoView > div {
+  height: 100%;*/
+
+  .languageInfoViewModel {
+    height: 100%;
+    width: 100%;
+
+    .languagePreferencesContainer {
+      height: 100%;
+      width: 100%;
+      background: $color-light-1;
+      vertical-align: top;
+      border: none;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      .languagePreferencesView {
+        .languagePreferencesViewMessageSection {
+          padding: 10px;
+          .languageNode {
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid $color-light-4;
+            border-radius: 4px;
+            white-space: normal;
+            display: inline-block;
+            background-color: $color-light-2;
+
+            &.isSelected {
+              border-color: $color-theme-accent;
+              background-color: $color-light-1;
+            }
+
+            &:hover {
+              background-color: $color-light-1;
+            }
+
+            .languageLabel {
+              @include ellipsis();
+              height: 100%;
+              width: calc(100% - 45px);
+              font-weight: 500;
+              vertical-align: top;
+              align-items: center;
+              display: inline-block;
+              line-height: 38px;
+            }
+
+            .languageIcon {
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              margin: 7px;
+              border-radius: 50%;
+              overflow: hidden;
+              box-shadow: 0 0 0 1px $color-light-4;
+
+              .languageIconImage {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                vertical-align: top;
+                background-position: center;
+
+                &.en_UK {
+                  background-image: url($image-flag-uk);
+                }
+
+                &.en_US {
+                  background-image: url($image-flag-usa);
+                }
+
+                &.de_DE {
+                  background-image: url($image-flag-germany);
+                }
+
+                &.fr_FR {
+                  background-image: url($image-flag-france);
+                }
+
+                &.es_ES {
+                  background-image: url($image-flag-spain);
+                }
+              }
+            }
+          }
+          .languageWarningMessageView {
+            font-weight: 400;
+            margin: 10px;
+            font-size: 15px;
+          }
+        }
+        .languageDialogButtonContainer {
+          padding: 7px 8px;
+          width: 100%;
+          text-align: right;
+          margin-top: 0px;
+          height: 46px;
+          border-top: 1px solid rgb(221, 221, 221);
+          background-color: rgb(238, 238, 238);
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+//}

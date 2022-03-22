@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.2">
+  <bpmn:process id="Process_JMS" isExecutable="true">
+    <bpmn:sequenceFlow id="SequenceFlow_01wagrw" sourceRef="StartEvent_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc" targetRef="Task_16wlzbk" />
+    <bpmn:startEvent id="StartEvent_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc" camunda:asyncAfter="true">
+      <bpmn:outgoing>SequenceFlow_01wagrw</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EndEvent_0xyqzg2">
+      <bpmn:incoming>SequenceFlow_18eixsv</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_18eixsv" sourceRef="Task_16wlzbk" targetRef="EndEvent_0xyqzg2" />
+    <bpmn:serviceTask id="Task_16wlzbk" name="Receiver Task" camunda:delegateExpression="${camundaTask}">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="INPUT_METHOD">jms</camunda:inputParameter>
+          <camunda:inputParameter name="CLASS_PATH_IP">tcp://192.168.137.139</camunda:inputParameter>
+          <camunda:inputParameter name="PORT">61616</camunda:inputParameter>
+          <camunda:inputParameter name="QUEUE_NAME">SopanDemoQ</camunda:inputParameter>
+          <camunda:inputParameter name="ACKNOWLEDGEMENT">true</camunda:inputParameter>
+          <camunda:inputParameter name="ACKNOWLEDGEMENT_QUEUE_NAME">SopanDemoQAck</camunda:inputParameter>
+          <camunda:inputParameter name="MESSAGE_TYPE_LIST">
+            <camunda:list>
+              <camunda:value>JSON</camunda:value>
+              <camunda:value>EXCEL</camunda:value>
+            </camunda:list>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="JMS_DATA">${data}</camunda:inputParameter>
+          <camunda:inputParameter name="taskId">receiverTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">receiverTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">CustomServiceTask</camunda:inputParameter>
+          <camunda:inputParameter name="RECEIVED_DATA" />
+          <camunda:inputParameter name="EXECUTION_STATUS" />
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_01wagrw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_18eixsv</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc">
+    <bpmndi:BPMNPlane id="BPMNPlane_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc" bpmnElement="Process_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc">
+      <bpmndi:BPMNEdge id="SequenceFlow_01wagrw_di" bpmnElement="SequenceFlow_01wagrw">
+        <di:waypoint x="335" y="109" />
+        <di:waypoint x="390" y="109" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="317.5" y="87.5" width="90" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="StartEvent_12h8b0c_di" bpmnElement="StartEvent_9f7cdfff-94be-4ddd-b2aa-f30783aaabfc">
+        <dc:Bounds x="299" y="91" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="227" y="127" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_074fak7_di" bpmnElement="EndEvent_0xyqzg2">
+        <dc:Bounds x="545" y="91" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="473" y="130" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_18eixsv_di" bpmnElement="SequenceFlow_18eixsv">
+        <di:waypoint x="490" y="109" />
+        <di:waypoint x="545" y="109" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="472.5" y="88" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_17xnd50_di" bpmnElement="Task_16wlzbk">
+        <dc:Bounds x="390" y="69" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

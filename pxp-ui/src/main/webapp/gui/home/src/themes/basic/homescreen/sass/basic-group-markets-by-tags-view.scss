@@ -1,0 +1,241 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$paginationSectionHeight: 40px;
+
+.groupMarketsByTagsView {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fcfcfc;
+  box-shadow: inset 0 0 0 1px $color-light-5;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  //text-align: center;
+
+  .filterOptionsSection {
+    //display: flex;
+    width: 100%;
+    border-bottom: 1px solid $color-light-5;
+    padding-bottom: 10px;
+    //justify-content: space-between;
+    $sortBySectionWidth: 300px;
+
+    .tagSelectorSection {
+      //min-height: 50px;
+      //border-bottom: 1px solid $color-light-5;
+      display: inline-flex;
+      width: calc(100% - #{$sortBySectionWidth});
+
+      .addTagButton {
+        //@include topInlineBlock();
+        //float: left;
+        //height: 32px;
+        //width: 80px;
+        //border-radius: 3px;
+        //background-color: grey;
+        //color: #fff;
+      }
+
+      .selectedTagsContainer {
+        //@include topInlineBlock();
+        //float: left;
+        padding: 0 10px;
+
+      }
+
+      .applySelectionButton {
+        //@include topInlineBlock();
+        //float: right;
+        //height: 32px;
+        //width: 80px;
+        //border-radius: 3px;
+        //background-color: grey;
+        //color: #fff;
+        margin-left: auto; //makes this element align to right in a flex-box
+      }
+    }
+
+    .sortBySection {
+      //width: 100%;
+      height: 32px;
+      //min-height: 50px;
+      //border-bottom: 1px solid $color-light-5;
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: $sortBySectionWidth;
+
+      .sortByLabel {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        color: #7a7a7a;
+      }
+
+      .sortByItem {
+        height: 28px;
+        margin-left: 10px;
+        border-radius: 3px;
+        box-shadow: inset 0 0 0 1px $color-light-5;
+        padding: 5px 10px;
+        background-color: #fff;
+        cursor: pointer;
+
+        &.isActive {
+          box-shadow: 0 0 2px 1px orange;
+        }
+      }
+    }
+  }
+
+  .marketGroupContainer {
+    width: 100%;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .individualGroupsContainer, .combinationGroupsContainer {
+
+      .combinationGroupsLabel {
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 11px;
+        color: #7a7a7a;
+        border-bottom: 1px solid $color-light-5;
+        margin-bottom: 10px;
+      }
+
+      .marketGroupThumbnailView {
+        $marketThumbnailHeight: 150px;
+        $marketThumbnailWidth: 150px;
+        $marketInformationSectionInitialHeight: 32px;
+        $showMarketListButtonWidth: $marketInformationSectionInitialHeight;
+
+        width: $marketThumbnailWidth;
+        height: $marketThumbnailHeight;
+        background-color: #fff;
+        box-shadow: 0 0 0 1px #d6d6d6;
+        border-radius: 3px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px 20px 0;
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+
+        //&:hover {
+        //
+        //  .marketListSection {
+        //    visibility: visible;
+        //  }
+        //}
+
+        .relevanceIndicatorSection {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+        }
+
+        .marketInformationSection {
+          height: $marketInformationSectionInitialHeight;
+          width: 100%;
+          overflow: hidden;
+          box-shadow: 0 1px 0 0 #d6d6d6;
+          transition: all .2s;
+
+          &.isExpanded {
+            height: 100%;
+
+            .showMarketListButton {
+              background-image: url($image-CS-Up-52);
+            }
+          }
+
+          .marketCountSection {
+            @include topInlineBlock();
+            height: $marketInformationSectionInitialHeight;
+            width: calc(100% - #{$showMarketListButtonWidth});
+            text-align: left;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+          .showMarketListButton {
+            @include topInlineBlock();
+            height: $showMarketListButtonWidth;
+            width: $showMarketListButtonWidth;
+            cursor: pointer;
+            background-image: url($image-CS-expand-arrow-icon);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 16px;
+            opacity: .4;
+
+            &:hover {
+              opacity: .8;
+            }
+          }
+
+          .marketListSection {
+            //height: calc(100% - #{$marketInformationSectionInitialHeight});
+            height: $marketThumbnailHeight - $marketInformationSectionInitialHeight;
+            width: 100%;
+            //position: absolute;
+            //top: 0;
+            //left: 0;
+            background-color: #fff;
+            //visibility: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 0 0 0 15px;
+
+            .marketLabel {
+              padding: 2px 0;
+            }
+          }
+        }
+
+
+        .tagListSection {
+          padding: 10px;
+          height: $marketThumbnailHeight - $marketInformationSectionInitialHeight;
+          width: 100%;
+          overflow-x: hidden;
+          overflow-y: auto;
+
+          .tagItem {
+            @include topInlineBlock();
+            margin: 4px 0 4px 5px;
+            border-radius: 3px;
+            padding: 0 3px 0 3px;
+            background-color: #ddd;
+            line-height: 22px;
+            font-size: 11px;
+          }
+        }
+
+      }
+    }
+  }
+
+  .paginationSection {
+    width: auto;
+    height: $paginationSectionHeight;
+    //padding: 5px;
+
+    .paginationView {
+      float: right;
+    }
+  }
+
+}*/

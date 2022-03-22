@@ -1,0 +1,19 @@
+[
+  {
+    "id": "smartdocument",
+    "translations": {
+      "en_US": {
+        "label": "Smart Document"
+      },
+      "es_ES": {
+        "label": "Documento inteligente"
+      },
+      "fr_FR": {
+        "label": "Document intelligent"
+      },
+      "de_DE": {
+        "label": "Intelligentes Dokument"
+      }
+    }
+  }
+]

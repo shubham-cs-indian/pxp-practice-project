@@ -1,0 +1,23 @@
+.jobComponentStatusPanelContainer{
+  height: inherit;
+  width: 20%;
+  float: left;
+
+  .panelHeader{
+    height: 30px;
+    width: 100%;
+    background: #f6f6f6;
+    .panelLabel{
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  .panelBody{
+    height: calc(100% - 30px);
+    width: 100%;
+    overflow: auto;
+  }
+}

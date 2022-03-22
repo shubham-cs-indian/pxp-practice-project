@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+compileJava.options.encoding = 'UTF-8'
+version = "1.0.0"
+//sourceCompatibility = 11
+
+repositories {
+    mavenLocal()
+	mavenCentral ()
+    maven { url "https://repo.spring.io/libs-snapshot" }
+	maven { url "https://jitpack.io" }        
+    jcenter()
+}
+
+dependencies {
+	def springFrameworkVersion = "5.2.1.RELEASE"
+	def camundaVersion = "7.8.0"
+	def jacksonVersion = "2.10.1"
+	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+	compile 'org.aspectj:aspectjtools:1.8.5'
+	compile 'org.slf4j:slf4j-log4j12:1.7.21'
+    compile "org.springframework:spring-web:${springFrameworkVersion}"
+	compile "org.springframework:spring-webmvc:${springFrameworkVersion}"
+	compile "org.camunda.bpm:camunda-engine:${camundaVersion}"
+	compile "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+	compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+	}
+
+configurations.all {
+    //exclude group: "org.slf4j", module: "slf4j-log4j12"
+    //exclude group: "log4j", module: "log4j"
+}
+
+task allDeps(type: DependencyReportTask) {}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+configurations {
+    runtime.exclude module: 'aspectjtools'
+    runtime.exclude module: 'spring-web'
+    runtime.exclude module: 'spring-webmvc'
+}

@@ -1,0 +1,8 @@
+[
+"bgp 1000013 started 2020-05-26T10:35:07",
+"scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"TASK\"],\"TASK\":[],\"entityType\":\"UNDEFINED\",\"sortLanguage\":\"\",\"sortBy\":\"\"}","Task codes=All",
+{"prioritytag":"AAA","color":"#603D20","csid":"[K>M_TASK $type=PUBLIC]","icon":"ASS1011","$statustag":"taskstatustag","label":"M_TASK"},
+{"csid":"[K>TSK1006 $type=PUBLIC]","icon":"","$statustag":"taskstatustag","label":"New 605"},
+{"csid":"[K>TSK1007 $type=PUBLIC]","icon":"","$statustag":"taskstatustag","label":"New 606"},
+"bgp 1000013 ended 2020-05-26T10:35:07"
+]

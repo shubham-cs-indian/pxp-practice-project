@@ -1,0 +1,10 @@
+[{
+	"id": "standard_transfer_process",
+	"code": "standard_transfer_process",
+	"eventType": "ENDPOINT_EVENT",
+	"processType": "onboardingProcess",
+	"label": "Standard_Transfer_Workflow",
+	"fileName":"transferProcess.bpmn",
+	"isXMLModified":false
+}
+]

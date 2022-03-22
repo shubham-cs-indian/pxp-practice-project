@@ -1,0 +1,113 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.smallTileCarouselViewContainer {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid $color-light-3;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+
+  .scrollButton {
+    height: 50px;
+    width: 20px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    background-color: white;//#fafafa
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 30px;
+    background-size: 20px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+
+    &.left {
+      left: 0px;
+      box-shadow: 1px 0 5px rgba(66, 66, 66, 0.25), inset 0 -1px 0 #eee;
+      background-image: url($image-CS-Previous-48-disabled);
+    }
+
+    &.right {
+      right: 0px;
+      box-shadow: -1px 0 5px rgba(66, 66, 66, 0.25), inset 0 1px 0 #eee;
+      background-image: url($image-CS-Previous-48-disabled);
+      transform: rotate(180deg);
+      visibility: visible;
+    }
+  }
+
+  .tileContainerLabel {
+    height: 13px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  .containerExpandCollapse {
+    background-size: 13px;
+    height: 13px;
+    width: 13px;
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    background-image: url($image-CS-expand-arrow-icon);
+
+    &.collapse {
+      transform: rotate(180deg);
+    }
+
+    &.expand {
+
+    }
+  }
+
+
+  .smallTileInnerContainer {
+    display: inline-flex;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+
+    .singleTileViewContainer {
+      float: left;
+      width: 200px;
+      margin: 15px 15px 15px 0px;
+
+      .tileImageContainer {
+        width: 25%;
+        height: 50px;
+        float: left;
+        text-align: center;
+
+        .tileImage {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      .tileInfo {
+        float: left;
+        height: 100%;
+        width: 60%;
+        padding: 0px 10px 10px 10px;
+
+        .propertyLabel {
+          font-size: 11px;
+        }
+
+        .propertyValue {
+          font-weight: 500;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+}

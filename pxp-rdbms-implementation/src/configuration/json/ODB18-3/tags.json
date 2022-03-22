@@ -1,0 +1,571 @@
+[
+	{
+		"id": "statustag",
+		"code": "statustag",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"children": [
+			{
+				"code": "enrichmenttag",
+				"id": "enrichmenttag",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "qualitychecktag",
+				"id": "qualitychecktag",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "translationtag",
+				"id": "translationtag",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "approvaltag",
+				"id": "approvaltag",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "productivetag",
+				"id": "productivetag",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "blockedfromplanning",
+				"id": "blockedfromplanning",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "availabilitytag",
+		"code": "availabilitytag",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"type": "com.cs.config.interactor.entity.Tag",
+		"children": [
+			{
+				"code": "onrequest",
+				"id": "onrequest",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "onstock",
+				"id": "onstock",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "regularlyavailable",
+				"id": "regularlyavailable",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "dropshipping",
+				"id": "dropshipping",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		]
+	},
+	{
+		"id": "languagetag",
+		"code": "languagetag",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"children": [
+			{
+				"code": "english",
+				"id": "english",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "german",
+				"id": "german",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "spanish",
+				"id": "spanish",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "italian",
+				"id": "italian",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "french",
+				"id": "french",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "portugese",
+				"id": "portugese",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "swedish",
+				"id": "swedish",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "lifestatustag",
+		"code": "lifestatustag",
+        "isStandard": true,
+        "tagType": "tag_type_lifecycle_status",
+		"children": [
+			{
+				"code": "life_status_inbox",
+				"id": "life_status_inbox",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_nointerest",
+					"life_status_preparation"
+				]
+				
+			},
+			{
+				"code": "life_status_nointerest",
+				"id": "life_status_nointerest",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_archived",
+					"life_status_preparation"
+				]
+			},
+			{
+				"code": "life_status_preparation",
+				"id": "life_status_preparation",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_nointerest",
+					"life_status_active"
+				]
+			},
+			{
+				"code": "life_status_active",
+				"id": "life_status_active",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_activeblocked",
+					"life_status_activebanned",
+					"life_status_retired"
+				]
+			},
+			{
+				"code": "life_status_activeblocked",
+				"id": "life_status_activeblocked",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_active",
+					"life_status_activebanned"
+				]
+			},
+			{
+				"code": "life_status_activebanned",
+				"id": "life_status_activebanned",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_active",
+					"life_status_activeblocked"
+				]
+			},
+			{
+				"code": "life_status_retired",
+				"id": "life_status_retired",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_preparation",
+					"life_status_archived"
+				]
+			},
+			{
+				"code": "life_status_archived",
+				"id": "life_status_archived",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"life_status_deleted"
+				]
+			},
+			{
+				"code": "life_status_deleted",
+				"id": "life_status_deleted",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "listingstatustag",
+		"code": "listingstatustag",
+        "isStandard": true,
+        "tagType": "tag_type_listing_status",
+		"children": [
+			{
+				"code": "listing_status_catlog",
+				"id": "listing_status_catlog",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"listing_status_ignored",
+					"listing_status_ignored",
+					"listing_status_onboardingpool"
+				]
+			},
+			{
+				"code": "listing_status_ignored",
+				"id": "listing_status_ignored",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"listing_status_catlog"
+				]
+			},
+			{
+				"code": "listing_status_rejected",
+				"id": "listing_status_rejected",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"listing_status_catlog"
+				]
+			},
+			{
+				"code": "listing_status_onboardingpool",
+				"id": "listing_status_onboardingpool",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"listing_status_catlog",
+					"listing_status_recommended",
+					"listing_status_shadowassortment",
+					"listing_status_listed"
+				]
+				
+			},
+			{
+				"code": "listing_status_recommended",
+				"id": "listing_status_recommended",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"listing_status_onboardingpool",
+					"listing_status_shadowassortment",
+					"listing_status_listed"
+				]
+			},
+			{
+				"code": "listing_status_shadowassortment",
+				"id": "listing_status_shadowassortment",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"allowedTags": [
+					"listing_status_listed"
+				]
+			},
+			{
+				"code": "listing_status_listed",
+				"id": "listing_status_listed",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "T_STATUS_SYSTEM",
+		"code": "T_STATUS_SYSTEM",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"color": "#D2D2D2",
+		"children": [
+			{
+				"code": "T_STATUS_SYSTEM_NEW",
+				"id": "T_STATUS_SYSTEM_NEW",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_SYSTEM_INACTIV",
+				"id": "T_STATUS_SYSTEM_INACTIV",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_SYSTEM_ACTIV",
+				"id": "T_STATUS_SYSTEM_ACTIV",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_SYSTEM_ARCHIVED",
+				"id": "T_STATUS_SYSTEM_ARCHIVED",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_SYSTEM_DELETED",
+				"id": "T_STATUS_SYSTEM_DELETED",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_SYSTEM_PREPARE",
+				"id": "T_STATUS_SYSTEM_PREPARE",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_SYSTEM_BLOCKED",
+				"id": "T_STATUS_SYSTEM_BLOCKED",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "resolutiontag",
+		"code": "resolutiontag",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"children": [
+			{
+				"code": "resolution_300P",
+				"id": "resolution_300P",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"imageResolution": 300
+			},
+			{
+				"code": "resolution_150P",
+				"id": "resolution_150P",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"imageResolution": 150
+			},
+			{
+				"code": "resolution_72P",
+				"id": "resolution_72P",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true,
+				"imageResolution": 72
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "imageextensiontag",
+		"code": "imageextensiontag",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"children": [
+			{
+				"code": "image_extension_format_jpg",
+				"id": "image_extension_format_jpg",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"imageExtension": "jpg",
+				"isStandard": true
+			},
+			{
+				"code": "image_extension_format_png",
+				"id": "image_extension_format_png",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"imageExtension": "png",
+				"isStandard": true
+			},
+			{
+				"code": "image_extension_format_original",
+				"id": "image_extension_format_original",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"imageExtension": "original",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "T_STATUS_PROJECT",
+		"code": "T_STATUS_PROJECT",
+		"color": "#D2D2D2",
+        "isStandard": false,
+        "tagType": "tag_type_yes_neutral",
+		"children": [
+			{
+				"code": "T_STATUS_PROJECT_IN_PLANNING",
+				"id": "T_STATUS_PROJECT_IN_PLANNING",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_CANCELED",
+				"id": "T_STATUS_PROJECT_CANCELED",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_COMPLETE",
+				"id": "T_STATUS_PROJECT_COMPLETE",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_REWORK",
+				"id": "T_STATUS_PROJECT_REWORK",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_QUALITY_CHECK",
+				"id": "T_STATUS_PROJECT_QUALITY_CHECK",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_ERROR_PROCESSING",
+				"id": "T_STATUS_PROJECT_ERROR_PROCESSING",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_USING ALLOWED",
+				"id": "T_STATUS_PROJECT_USING ALLOWED",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "T_STATUS_PROJECT_LICENSE_MISSING",
+				"id": "T_STATUS_PROJECT_LICENSE_MISSING",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "taskstatustag",
+		"code": "taskstatustag",
+		"color": "#D2D2D2",
+        "isStandard": true,
+        "tagType": "tag_type_yes_neutral",
+		"children": [
+			{
+				"code": "taskplanned",
+				"id": "taskplanned",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "taskready",
+				"id": "taskready",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "taskdeclined",
+				"id": "taskdeclined",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "taskinprogress",
+				"id": "taskinprogress",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "taskdone",
+				"id": "taskdone",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "taskverified",
+				"id": "taskverified",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			},
+			{
+				"code": "tasksignedoff",
+				"id": "tasksignedoff",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "isordertag",
+		"code": "isordertag",
+        "isStandard": true,
+        "tagType": "tag_type_boolean",
+		"children": [
+			{
+				"code": "isordertagvalue",
+				"id": "isordertagvalue",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "issalestag",
+		"code": "issalestag",
+        "isStandard": true,
+        "tagType": "tag_type_boolean",
+		"children": [
+			{
+				"code": "issalestagvalue",
+				"id": "issalestagvalue",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	},
+	{
+		"id": "isbaseunittag",
+		"code": "isbaseunittag",
+        "isStandard": true,
+        "tagType": "tag_type_boolean",
+		"children": [
+			{
+				"code": "isbaseunittagvalue",
+				"id": "isbaseunittagvalue",
+				"type": "com.cs.config.interactor.entity.Tag",
+				"isStandard": true
+			}
+		],
+		"type": "com.cs.config.interactor.entity.Tag"
+	}
+]

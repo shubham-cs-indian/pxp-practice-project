@@ -1,0 +1,476 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.dashboardView {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  //background: #eee;
+
+  .dashboardViewSection {
+    margin: 20px;
+
+    .dashboardSectionContainer {
+      width: 100%;
+      height: 403px;
+      position: relative;
+      overflow: hidden;
+
+      .dashboardSectionHeader {
+        text-transform: UPPERCASE;
+        font-weight: 500;
+        padding: 0 0 10px 0px;
+        font-size: 15px;
+      }
+
+      .dashboardTilesContainerWrapper {
+        width: 100%;
+        height: 100%;
+
+        .parentScrollContainer {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+        }
+
+          .dashboardTilesContainer {
+            display: inline-flex;
+            overflow: hidden;
+            position: absolute;
+            padding: 1px;
+          }
+
+          .scrollButton {
+            height: 100px;
+            width: 30px;
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+            cursor: pointer;
+            background-color: #fafafa;
+            top: 150px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+
+            &.left {
+              left: 0px;
+              box-shadow: 3px 0 20px rgba(66, 66, 66, 0.25), inset 0 -1px 0 #eee;
+              @include background-properties($image-CS-Previous-48-disabled,20px);
+            }
+
+            &.right {
+              right: 0px;
+              box-shadow: -3px 0 20px rgba(66, 66, 66, 0.25), inset 0 1px 0 #eee;
+              @include background-properties($image-CS-Previous-48-disabled,20px);
+              transform: rotate(180deg);
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+.outboundEndpointTileWrapper {
+  padding: 5px 0;
+}
+
+.dashboardTile {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #ddd;
+  //box-shadow: 0px 3px 4px 0px rgba(0,0,0,.3);
+  border-radius: 3px;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  $dashboardHeaderHeight: 36px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 4px 20px 7px 0;
+  position: relative;
+
+  .loadingAnimationContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 2;
+    opacity: 0.8;
+    background-color: #fff;
+
+    & > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  .dashboardKPIDialogOpenButton {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    right: 11px;
+    bottom: 13px;
+    background: url($image-CS-expand-000-96);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      background-size: 15px;
+    }
+  }
+
+  .dashboardOpenKpiContentExplorerButton {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    right: 36px;
+    bottom: 13px;
+    background: url($image-CS-Activity-Grid-2-52);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-size: 14px;
+    }
+  }
+
+  .dashboardKpiRefreshButton, .refreshEndpoint {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    right: 62px;
+    bottom: 13px;
+    @include background-properties-with-theme-gray-color($image-CS-Refresh-48-black, 14px);
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-size: 14px;
+    }
+  }
+
+  .refreshEndpoint {
+    right: 11px;
+  }
+
+  .dashboardTileHeader {
+    width: 100%;
+    padding: 0px 10px;
+    justify-self: start;
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+
+    .dashboardTileHeaderIcon {
+      height: 30px;
+      width: 25px;
+      opacity: 0.6;
+      @include background-properties($image-CS-map,20px,0px);
+    }
+
+    .customIcon {
+      height: 20px;
+      width: 20px;
+      opacity: 0.6;
+
+      .imageFitToContainer {
+        .imageFitToContainerImage  {
+          max-height: 100%;
+          max-width: 100%;
+          position: unset;
+          vertical-align: baseline;
+          transform: none;
+        }
+      }
+    }
+
+    .dashboardTileHeaderLabel {
+      font-size: 12px;
+      font-weight: 500;
+      flex: 1 0;
+      line-height: 30px;
+      color: #555;
+      @include ellipsis();
+    }
+
+    .dashboardTileType {
+      //flex: 0 0;
+      border-radius: 3px;
+      background-color: #616367;
+      color: #EEEEEE;
+      font-weight: 500;
+      font-size: 10px;
+      height: 18px;
+      margin: 6px;
+      text-transform: uppercase;
+      padding: 2px 5px;
+      box-shadow: 0 0 0 1px #9E9E9E;
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dashboardTileModeSelectorWrapper {
+
+      .dashboardTileModeSelector {
+        border: none;
+        margin: 5px 0 0 5px;
+        cursor: pointer;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .dashboardChartContainer {
+    //height: calc(100% - #{$dashboardHeaderHeight});
+    width: 100%;
+    padding: 10px 15px 15px 15px;
+    flex: 1 0;
+    max-height: calc(100% - 44px); //todo: need to verify
+    border-top: 1px solid #ddd;
+    color: #666;
+  }
+
+  .endpointTileBody {
+    height: calc(100% - 30px);
+    padding: 10px;
+    border-top: 1px solid #ddd;
+
+    .inboundEndpointBody, .outboundEndpointTileBody {
+        height: 100%;
+
+      .informationElement {
+        padding: 3px 0;
+        //box-shadow: 0 1px 0 #eee;
+        display: flex;
+
+        &:last-child {
+          box-shadow: none;
+        }
+
+        .element {
+          display: flex;
+          width: 45%;
+
+          .elementLabel {
+            color: $color-dark-4;
+            @include ellipsis();
+
+            &.outbound {
+              @include ellipsis();
+            }
+          }
+
+          .elementIcon {
+            width: 12px;
+            height: 12px;
+            margin: 3px;
+            border-radius: 6px;
+
+            &.red {
+              background: $color-violation-red;
+            }
+            &.orange {
+              background: $color-violation-orange;
+            }
+            &.yellow {
+              background: $color-violation-yellow;
+            }
+          }
+        }
+
+        .elementValue {
+          align-self: flex-end;
+          margin-left: 5px;
+          max-width: 45%;
+          @include ellipsis();
+
+          &.downloadButton {
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            @include background-properties-with-theme-white-color($image-CS-download-black);
+            opacity: .6;
+
+            &.outbound {
+              position: absolute;
+              right: 10px;
+              opacity: 1;
+            }
+
+            &:hover {
+              opacity: .8;
+            }
+          }
+        }
+
+        .elementGraph {
+          margin-left: 25px;
+          width: 170px;
+        }
+      }
+
+      .headerLabel {
+        padding: 10px 0;
+        color: $color-dark-4;
+      }
+
+      .totalCountInfoContainer {
+        color: $color-dark-4;
+      }
+    }
+
+  }
+
+  .bulkUploadIconWrapper {
+
+    .bulkUploadContainer {
+
+      .assetBulkUpload {
+        opacity: 0.5;
+        cursor: pointer;
+        box-shadow: none;
+        background: none;
+        position: absolute;
+        right: 30px;
+        height: 18px;
+        width: 15px;
+        bottom: 12px;
+        @include background-properties($image-CS-Upload-Black, 14px);
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .dashboardTileBreadcrumbContainer {
+    padding: 5px 18px 5px 3px;
+    box-shadow: 0px -11px 0 -10px #E0E0E0;
+    justify-self: end;
+    flex: 0 0;
+
+    .breadcrumbViewContainer {
+      height: unset;
+      margin-left: 7px;
+      //width: calc(100% - 75px);
+      box-shadow: none;
+      max-height: 22px;
+      .breadCrumbView {
+        height: 22px;
+        line-height: 22px;
+        margin-left: 0;
+        .breadcrumbItem {
+          .breadcrumbLabel {
+            &:first-child {
+              text-decoration: none;
+              cursor: default;
+              text-shadow: 0px 0px 0px #777;
+              font-weight: 500;
+
+              .breadcrumbLabel {
+                max-width: none;
+              }
+            }
+          }
+          &::after {
+            top: 7px;
+          }
+        }
+      }
+      .upperSectionToolbarContainer {
+        height: 22px;
+        padding: 0px;
+      }
+    }
+
+    .tileButton {
+      //position: absolute;
+      //top: 4px;
+      height: 24px;
+      width: 20px;
+      cursor: pointer;
+      opacity: 0.4;
+      z-index: 11;
+      float: right;
+      margin-left: 5px;
+
+      &.previous {
+        border-radius: 0 2px 2px 0;
+        //right: 30px;
+        @include background-properties($image-CS-arrow-left,22px);
+      }
+      &.next {
+        border-radius: 2px 0 0 2px;
+        //right: 7px;
+        @include background-properties($image-CS-arrow-right,22px);
+      }
+      &.previous,&.next{
+        &:hover {
+          opacity: 0.9;
+        }
+        &.disabled {
+          opacity: 0.1;
+          &:hover {
+            opacity: 0.1;
+          }
+        }
+      }
+
+    }
+    .invertChartIcon{
+      width: 18px;
+      height: 18px;
+      float: right;
+      opacity: 0.5;
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include background-properties-with-theme-color($image-CS-bar-chart-filled-red);
+
+      &.invert{
+        @include background-properties-with-theme-red-color($image-CS-bar-chart-filled-red);
+      }
+    }
+  }
+}
+
+.KPIDialogContentContainer {
+  height: 600px;
+
+
+  .dashboardTileContainer {
+    height: 100%;
+    .dashboardTile {
+      width: calc(100% - 100px);
+      height: 100%;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24), 0 -1px 4px rgba(0, 0, 0, 0.12);
+      margin: 1px auto 0 auto;
+    }
+  }
+}

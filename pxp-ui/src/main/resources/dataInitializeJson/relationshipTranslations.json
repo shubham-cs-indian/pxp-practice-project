@@ -1,0 +1,452 @@
+[
+  {
+    "id": "standardArticleAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Article-Asset Relationship",
+        "side1Label": "Articles",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Artículo - Relación de activos",
+        "side1Label": "Artículos",
+        "side2Label": "Imagenes"
+      },
+      "fr_FR": {
+        "label": "Article - Relation patrimoniale",
+        "side1Label": "Des articles",
+        "side2Label": "Images"
+      },
+      "de_DE": {
+        "label": "Artikel - Vermögensbeziehung",
+        "side1Label": "Artikel",
+        "side2Label": "Bilder"
+      }
+    }
+  },
+  {
+    "id": "standardArticleGoldenArticleRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Article-GoldenArticle Relationship",
+        "side1Label": "Articles",
+        "side2Label": "Golden Article"
+      },
+      "es_ES": {
+        "label": "Artículo - Relación artículo dorado",
+        "side1Label": "Artículos",
+        "side2Label": "Artículo dorado"
+      },
+      "fr_FR": {
+        "label": "Article - Relation Article d'Or",
+        "side1Label": "Des articles",
+        "side2Label": "Article d'or"
+      },
+      "de_DE": {
+        "label": "Artikel - Goldene Artikel Beziehung",
+        "side1Label": "Artikel",
+        "side2Label": "Goldener Artikel"
+      }
+    }
+  },
+  {
+    "id": "standardArticleMarketRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Article - Market Relationship",
+        "side1Label": "Articles",
+        "side2Label": "Market"
+      },
+      "es_ES": {
+        "label": "Artículo - Relación con el mercado",
+        "side1Label": "Artículos",
+        "side2Label": "Mercado"
+      },
+      "fr_FR": {
+        "label": "Article - Relation de marché",
+        "side1Label": "Des articles",
+        "side2Label": "Marché"
+      },
+      "de_DE": {
+        "label": "Artikel - Marktbeziehung",
+        "side1Label": "Artikel",
+        "side2Label": "Markt"
+      }
+    }
+  },
+  {
+    "id": "standardCampaignAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Campaign-Asset Relationship",
+        "side1Label": "Campaign",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Campaign-Asset Relationship__es_ES",
+        "side1Label": "Campaign__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "Campaign-Asset Relationship__fr_FR",
+        "side1Label": "Campaign__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "Campaign-Asset Relationship__de_DE",
+        "side1Label": "Campaign__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardCampaignCampaignRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Campaign-Campaign Relationship",
+        "side1Label": "Campaign",
+        "side2Label": "Campaign"
+      },
+      "es_ES": {
+        "label": "Campaign-Campaign Relationship__es_ES",
+        "side1Label": "Campaign__es_ES",
+        "side2Label": "Campaign__es_ES"
+      },
+      "fr_FR": {
+        "label": "Campaign-Campaign Relationship__fr_FR",
+        "side1Label": "Campaign__fr_FR",
+        "side2Label": "Campaign__fr_FR"
+      },
+      "de_DE": {
+        "label": "Campaign-Campaign Relationship__de_DE",
+        "side1Label": "Campaign__de_DE",
+        "side2Label": "Campaign__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardMakeupAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Makeup - Asset Relationship",
+        "side1Label": "Makeup",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Makeup - Asset Relationship__es_ES",
+        "side1Label": "Makeup__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "Makeup - Asset Relationship__fr_FR",
+        "side1Label": "Makeup__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "Makeup - Asset Relationship__de_DE",
+        "side1Label": "Makeup__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardMakeupMarketRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Makeup - Market Relationship",
+        "side1Label": "Makeup",
+        "side2Label": "Market"
+      },
+      "es_ES": {
+        "label": "Makeup - Market Relationship__es_ES",
+        "side1Label": "Makeup__es_ES",
+        "side2Label": "Target_es"
+      },
+      "fr_FR": {
+        "label": "Makeup - Market Relationship__fr_FR",
+        "side1Label": "Makeup__fr_FR",
+        "side2Label": "Market__fr_FR"
+      },
+      "de_DE": {
+        "label": "Makeup - Market Relationship__de_DE",
+        "side1Label": "Makeup__de_DE",
+        "side2Label": "Target_de"
+      }
+    }
+  },
+  {
+    "id": "standardMakeupPersonaRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Makeup - Persona Relationship",
+        "side1Label": "Makeup",
+        "side2Label": "Persona"
+      },
+      "es_ES": {
+        "label": "Makeup - Persona Relationship__es_ES",
+        "side1Label": "Makeup__es_ES",
+        "side2Label": "Persona__es_ES"
+      },
+      "fr_FR": {
+        "label": "Makeup - Persona Relationship__fr_FR",
+        "side1Label": "Makeup__fr_FR",
+        "side2Label": "Persona__fr_FR"
+      },
+      "de_DE": {
+        "label": "Makeup - Persona Relationship__de_DE",
+        "side1Label": "Makeup__de_DE",
+        "side2Label": "Personen"
+      }
+    }
+  },
+  {
+    "id": "standardMakeupSituationRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Makeup - Situation Relationship",
+        "side1Label": "Makeup",
+        "side2Label": "Situations"
+      },
+      "es_ES": {
+        "label": "Makeup - Situation Relationship__es_ES",
+        "side1Label": "Makeup__es_ES",
+        "side2Label": "Situations__es_ES"
+      },
+      "fr_FR": {
+        "label": "Makeup - Situation Relationship__fr_FR",
+        "side1Label": "Makeup__fr_FR",
+        "side2Label": "Situations__fr_FR"
+      },
+      "de_DE": {
+        "label": "Makeup - Situation Relationship__de_DE",
+        "side1Label": "Makeup__de_DE",
+        "side2Label": "Situations__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardMarketAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Market-Asset Relationship",
+        "side1Label": "Market",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Relación mercado-activo",
+        "side1Label": "Mercado",
+        "side2Label": "Imagenes"
+      },
+      "fr_FR": {
+        "label": "Relation marché - actif",
+        "side1Label": "Marché",
+        "side2Label": "Images"
+      },
+      "de_DE": {
+        "label": "Markt-Asset-Beziehung",
+        "side1Label": "Markt",
+        "side2Label": "Bilder"
+      }
+    }
+  },
+  {
+    "id": "standardMarketingArticleAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "MarketingArticle - Asset Relationship",
+        "side1Label": "Marketing Product",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "MarketingArticle - Asset Relationship__es_ES",
+        "side1Label": "Marketing Product__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "MarketingArticle - Asset Relationship__fr_FR",
+        "side1Label": "Marketing Product__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "MarketingArticle - Asset Relationship__de_DE",
+        "side1Label": "Marketing Product__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardMarketingBundleAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "MarketingBundle - Asset Relationship",
+        "side1Label": "Marketing Bundle",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "MarketingBundle - Asset Relationship__es_ES",
+        "side1Label": "Marketing Bundle__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "MarketingBundle - Asset Relationship__fr_FR",
+        "side1Label": "Marketing Bundle__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "MarketingBundle - Asset Relationship__de_DE",
+        "side1Label": "Marketing Bundle__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardPersonaAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Persona-Asset Relationship",
+        "side1Label": "Persona",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Persona-Asset Relationship__es_ES",
+        "side1Label": "Persona__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "Persona-Asset Relationship__fr_FR",
+        "side1Label": "Persona__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "Persona-Asset Relationship__de_DE",
+        "side1Label": "Persona__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardPresetTemplateAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Preset - Asset Relationship",
+        "side1Label": "Preset",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Preset - Asset Relationship__es_ES",
+        "side1Label": "Preset__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "Preset - Asset Relationship__fr_FR",
+        "side1Label": "Preset__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "Preset - Asset Relationship__de_DE",
+        "side1Label": "Preset__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardPromotionAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Promotion-Asset Relationship",
+        "side1Label": "Promotion",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Promotion-Asset Relationship__es_ES",
+        "side1Label": "Promotion__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "Promotion-Asset Relationship__fr_FR",
+        "side1Label": "Promotion__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "Promotion-Asset Relationship__de_DE",
+        "side1Label": "Promotion__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardSituationAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Situation-Asset Relationship",
+        "side1Label": "Situations",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Situation-Asset Relationship__es_ES",
+        "side1Label": "Situations__es_ES",
+        "side2Label": "Images__es_ES"
+      },
+      "fr_FR": {
+        "label": "Situation-Asset Relationship__fr_FR",
+        "side1Label": "Situations__fr_FR",
+        "side2Label": "Images__fr_FR"
+      },
+      "de_DE": {
+        "label": "Situation-Asset Relationship__de_DE",
+        "side1Label": "Situations__de_DE",
+        "side2Label": "Images__de_DE"
+      }
+    }
+  },
+  {
+    "id": "standardSupplierAssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "Supplier-Asset Relationship",
+        "side1Label": "Supplier",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Relación proveedor - activo",
+        "side1Label": "Proveedor",
+        "side2Label": "Imagenes"
+      },
+      "fr_FR": {
+        "label": "Relation fournisseur - actif",
+        "side1Label": "Fournisseur",
+        "side2Label": "Images"
+      },
+      "de_DE": {
+        "label": "Lieferanten-Asset-Beziehung",
+        "side1Label": "Lieferant",
+        "side2Label": "Bilder"
+      }
+    }
+  },
+  {
+    "id": "standardTextAsset-AssetRelationship",
+    "translations": {
+      "en_US": {
+        "label": "TextAsset-Asset Relationship",
+        "side1Label": "TextAsset",
+        "side2Label": "Images"
+      },
+      "es_ES": {
+        "label": "Activo de texto - Relación de activo",
+        "side1Label": "Activo de texto",
+        "side2Label": "Imagenes"
+      },
+      "fr_FR": {
+        "label": "Actif textuel - Relation d'actif",
+        "side1Label": "Élément textuel",
+        "side2Label": "Images"
+      },
+      "de_DE": {
+        "label": "Text Asset - Asset-Beziehung",
+        "side1Label": "Text Asset",
+        "side2Label": "Bilder"
+      }
+    }
+  }
+]

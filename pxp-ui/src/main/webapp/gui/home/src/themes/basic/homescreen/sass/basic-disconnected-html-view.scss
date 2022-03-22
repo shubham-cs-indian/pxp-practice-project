@@ -1,0 +1,28 @@
+/**
+   The following classes are meant for styling the elements such that they look same as of froala view.
+   Tip: removing this styles may lose from disconnectedHTMLView.
+ */
+.disconnectedHTMLViewContainer {
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-align: center;
+
+  span,
+  em, strong, u, s,
+  blockquote, sub, sup,
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  p {
+    padding: 5px 0;
+    margin: 0;
+  }
+}
+
+.disabledDisconnectedHTMLView {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

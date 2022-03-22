@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+compileJava.options.encoding = 'UTF-8'
+
+version = "1.0.0"	
+sourceCompatibility = 11
+
+repositories {
+	mavenCentral ()
+    mavenLocal()
+	
+    maven { url "https://repo.spring.io/libs-snapshot" }
+	maven { url "https://jitpack.io" }        
+    jcenter()
+}
+
+dependencies {
+	compile project(path: ':pxp-models')
+	compile project(path: ':pxp-shared-services')
+}

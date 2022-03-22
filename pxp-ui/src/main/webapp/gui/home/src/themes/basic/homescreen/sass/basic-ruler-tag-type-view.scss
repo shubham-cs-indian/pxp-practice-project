@@ -1,0 +1,114 @@
+@import "./../../../../styleguide/style-guide";
+.rulerTagTypeView{
+
+  .rulerTagIconLabel{
+    float: left;
+    width: auto;
+    height: 22px;
+    margin: 0px 5px 4px 5px;
+    background-color: #eee;
+    cursor: pointer;
+    white-space: nowrap;
+    max-width: 100%;
+    position: relative;
+    border-radius: 12px;
+    //transition: all .2s;
+    color: #000 !important;
+
+    &.rulerTagIconLabelSelected {
+      color: #000 !important;
+      box-shadow: 0px 0px 2px 1px $color-theme-accent;
+    }
+
+    &.enabledNode{
+      &:hover {
+        color: #555;
+        box-shadow: 0px 0px 2px 1px #bbb9b9;
+      }
+    }
+
+    &.disabledNode{
+      cursor: not-allowed;
+      color: #aaa;
+    }
+
+    .rulerTagIconWrapper {
+      height: 22px;
+      width: 22px;
+      display: inline-block;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px $color-light-3 inset;
+      background-color: #cccccc;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      .imageSimpleViewNoImage {
+        height: 22px;
+        width: 22px;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        border-radius: 50%;
+        float: left;
+      }
+    }
+  }
+
+  .rulerTagIconColorWrapper{
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  .rulerTagIconLabel {
+    &.disabledNode {
+      .rulerTagLabel {
+        color: $color-relevance-gray;
+      }
+    }
+  }
+
+  .rulerTagIcon{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 12px;
+  }
+
+  .rulerTagLabel{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px 0 7px;
+    height: 100%;
+    line-height: 22px;
+    font-size: 11px;
+    float: left;
+  }
+
+  .rulerTagIconTick {
+    float: right;
+    opacity: 0.6;
+    width: 20px;
+    height: 20px;
+    background-image: url($image-CS-icons8-ok-filled);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    margin-left: -6px;
+    margin-right: 1px;
+    margin-top: 1px;
+  }
+}
+
+

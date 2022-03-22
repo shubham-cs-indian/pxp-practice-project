@@ -1,0 +1,1416 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$paddingForWrapper: 5px 10px;
+$gridViewTableHeaderHeight: 32px;
+$gridViewTableHeaderHeightWithSubHeader: 44px;
+$gridViewTableHeaderHeightWithFilter: 65px;
+$gridViewSubHeaderAndFilterHeight: 80px;
+$height: 100%;
+$width: 100%;
+$marginLeft: 5px;
+
+.processSaveAsDialog, .mappingSaveAsDialog, .endpointSaveAsDialog {
+  .gridView {
+    &.withoutUpperAndLowerSection {
+      .gridRowContainer {
+        &.gridViewRow:last-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      .gridViewMiddleSection {
+        .gridViewMiddleSectionWrapper {
+          @-moz-document url-prefix() {
+            .gridViewTableContainerSibling {
+              bottom: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .gridViewLabel {
+    font-size: 12px;
+    color: $color-dark-4;
+    font-weight: 500;
+  }
+}
+
+.gridView {
+  padding: 0;
+  height: $height;
+  &.gridViewContainer {
+    width: $width;
+    background-color: $color-light-1;
+    display: flex;
+    flex-direction: column;
+
+    &.withoutUpperAndLowerSection {
+      display: block;
+    }
+
+    .gridViewUpperSection {
+      width: $width;
+      height: 52px;
+      flex: 0 0 52px;
+      display: flex;
+      padding: 10px 10px 0px 10px;
+      border-bottom: none;
+      background-color: $color-light-1;
+      .searchBarContainer {
+        flex: 1 1 0;
+        height: $height;
+        display: inline-block;
+        vertical-align: top;
+        .simpleSearchBarView {
+          border-radius: 3px;
+          border: solid 1px $color-light-4;
+          height: 32px;
+          max-width: $width;
+          background-color: $color-light-1;
+          .simpleSearchBarSearchIcon {
+            height: $height;
+            width: 32px;
+            @include topInlineBlock();
+            @include background-properties($image-CS-SearchFilled-32, 16px);
+            opacity: .6;
+            .simpleSearchBarInput {
+              height: $height;
+              width: calc(100% - 64px);
+              outline: none;
+              border: none;
+              background: transparent;
+              @include topInlineBlock();
+            }
+          }
+        }
+      }
+      .upperSectionButtonsContainer {
+        flex: 5 1 0;
+        height: $height;
+        display: inline-flex;
+        justify-content: flex-end;
+        vertical-align: top;
+        overflow: hidden;
+        .headerButton {
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          vertical-align: top;
+          border-radius: 3px;
+          margin-left: $marginLeft;
+          cursor: pointer;
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+          transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+          background-color: $color-dark-4;
+          .headerButtonIcon {
+            height: $height;
+            width: $width;
+            transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+            background-color: $color-dark-4;
+            &.light{
+              color: $color-dark-1;
+              background-color: $color-light-1;
+              &:hover {
+                background-color: $color-light-1;
+              }
+            }
+            &.refresh {
+              @include background-properties-with-theme-white-color($image-CS-Refresh-48-black, 18px);
+            }
+            &.organizeGridEditProperties {
+              @include background-properties-with-theme-white-color($image-CS-grid-edit-view-black, 14px);
+            }
+            &.import {
+              @include background-properties-with-theme-white-color($image-import-black, 18px)
+            }
+            &.export {
+              @include background-properties-with-theme-white-color($image-CS-export-black, 18px);
+            }
+            &.delete {
+              @include background-properties-with-theme-white-color($image-CS-delete-bin-black, 18px);
+            }
+            &.manageEntity {
+              @include background-properties-with-theme-white-color($image-CS-Manage-Entity-black, 15px);
+            }
+            &.create {
+              @include background-properties-with-theme-white-color($image-CS-Plus-32-black, 18px);
+            }
+            &:hover {
+              opacity: 1.0;
+              background-color: rgba(255, 255, 255, 0.4);
+            }
+            &.sort {
+              @include background-properties($image-CS-Sorting-Arrows-64, 18px);
+            }
+            &.reorder {
+              @include background-properties($icons8-drag-reorder, 18px);
+            }
+            &.download {
+              @include background-properties-with-theme-white-color($image-CS-download-black, 20px);
+            }
+            &.filter {
+              @include background-properties($image-CS-filter, 20px);
+              &.selected {
+                background-color: rgba(255, 255, 255, 0.4);
+              }
+            }
+            &.copy {
+              @include background-properties-with-theme-white-color($image-CS-icons8-Copy-Filled-50, 18px);
+            }
+            &.columnOrganiser {
+              @include background-properties-with-theme-white-color($image-CS-grid-edit-view-black, 18px);
+            }
+            &.exportStatus {
+              @include background-properties($image-CS-export-status, 19px);
+            }
+            &:active {
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+        .translationScreenActionButtonWrapper {
+          float: left;
+          display: flex;
+          .propertiesLabel {
+            float: left;
+            line-height: 32px;
+            margin-right: 5px;
+            margin-left: $marginLeft;
+          }
+          .contextMenuViewNewContainer {
+            float: left;
+            .columnOrganiserButton {
+              $columnOrganiserButtonHeight: 32px;
+              overflow: hidden;
+              border: solid 1px $color-light-4;
+              height: 32px;
+              width: auto;
+              border-radius: 3px;
+              float: left;
+              background-color: $color-light-1;
+              cursor: pointer;
+              margin: 0 5px;
+              .buttonLabel {
+                padding: 0 5px;
+                font-size: 11px;
+                line-height: $columnOrganiserButtonHeight;
+                float: left;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $color-light-19;
+                max-width: 120px;
+                @include ellipsis();
+              }
+              .selectedColumnCount {
+                width: 20px;
+                float: left;
+                line-height: 20px;
+                background-color: rgb(235, 235, 235);
+                border-radius: 50%;
+                text-align: center;
+                margin: 5px;
+                @include ellipsis();
+              }
+              .buttonIcon {
+                height: $columnOrganiserButtonHeight;
+                width: 20px;
+                float: left;
+                background-size: 16px;
+                opacity: .8;
+                @include background-properties($image-CS-expand-arrow-icon, 16px)
+              }
+            }
+          }
+        }
+        .saveOrDiscardButton {
+          @include topInlineBlock();
+          margin-left: $marginLeft;
+        }
+      }
+    }
+
+    .gridViewMiddleSection {
+      width: $width;
+      overflow: hidden;
+      flex: 1 0;
+      position: relative;
+      .gridViewMiddleSectionWrapper {
+        height: $height;
+        position: relative;
+        .headerRowWrapper {
+          min-height: $gridViewTableHeaderHeight;
+          height: $gridViewTableHeaderHeight;
+          position: relative;
+          width: $width;
+          top: 0;
+          z-index: 2;
+
+          &.withFilterView {
+            min-height: $gridViewTableHeaderHeightWithFilter;
+            height: $gridViewTableHeaderHeightWithFilter;
+
+            ~ .gridScrollWrapper {
+              padding-top: $gridViewTableHeaderHeightWithFilter;
+            }
+          }
+
+          &.withSubHeader {
+            min-height: $gridViewTableHeaderHeightWithSubHeader;
+            height: $gridViewTableHeaderHeightWithSubHeader;
+          }
+
+          .gridViewRow.gridViewHeaderRow::-webkit-scrollbar {
+            display: none;
+          }
+          .gridViewRow{
+            .gridViewCell{
+              &.selectOption{
+                .selectIcon{
+                  height: 32px;
+                }
+              }
+            }
+          }
+          .DummyScrollbarDOM{
+            height: $gridViewTableHeaderHeight;
+            float:left;
+            background: #f7f7f7;
+            z-index: 2;
+            position: relative;
+            border-left: 1px solid #ebebeb;
+          }
+        }
+        .gridScrollWrapper {
+          padding-top: 0px;
+          height: calc(100% - #{$gridViewTableHeaderHeight});
+          scrollbar-width:thin;
+          margin-bottom: 10px;
+          & > div {
+            height: $height;
+          }
+          .gridViewTableContainer {
+            width: $width;
+            height: $height;
+            max-height: $height;
+            flex-shrink: 0;
+            .gridViewTable {
+              height: $height;
+              text-align: center;
+              .leftFixedSection {
+                border-right: 2px solid $color-light-5;
+                float: left;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                min-height: $height;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding-top: 0;
+                width: $width;
+                scrollbar-width: thin;
+
+                .leftBody{
+                  overflow: hidden;
+                }
+              }
+              .centralScrollableSection {
+                float: left;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                min-height: $height;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding-top: 0;
+                width: $width;
+                scrollbar-width: thin;
+
+                .gridViewRow{
+                  display: flex;
+                }
+              }
+              .rightFixedSection {
+                border-left: 2px solid $color-light-5;
+                box-shadow: -1px 0 0 0 $color-light-5 inset;
+                float: left;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                min-height: $height;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding-top: 0;
+                scrollbar-width: thin;
+                //width: $width;
+                .gridViewCell {
+                  min-width: auto;
+                }
+              }
+              .gridViewCell {
+              }
+            }
+          }
+        }
+        .gridViewTableContainerSibling {
+          position: absolute;
+          bottom: 0px;
+          //width: $width;
+          overflow-y: hidden;
+          z-index: 1;
+          scrollbar-width:thin;
+
+          .leftFixedSectionSibling{
+            border-right: 2px solid $color-light-5;
+          }
+          .rightFixedSectionSibling {
+            border-left: 2px solid $color-light-5;
+            box-shadow: -1px 0 0 0 $color-light-5 inset;
+          }
+
+          @-moz-document url-prefix() {
+            .gridViewTableContainerSibling {
+              bottom: 6px;
+            }
+          }
+
+          .siblingSection {
+            display: inline-block;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            height:10px;
+            scrollbar-width:thin;
+          }
+        }
+        .gridViewRow {
+          min-height: 36px;
+          position: relative;
+          &.gridViewHeaderRow {
+            display: inline-block;
+            position: relative;
+            height: inherit;
+            width: $width;
+            min-height: unset;
+            &.headerRowLeft {
+              border-right: 2px solid $color-light-5;
+              z-index: 2;
+              float: left;
+              .headerWrapper{
+                float: left;
+                display: table-cell;
+                position: relative;
+                height: inherit;
+              }
+            }
+            &.headerRowScrollable {
+             z-index: 1;
+              float: left;
+              .headerMiddle {
+                position: absolute;
+                z-index: 0;
+                left: 0;
+                height: inherit;
+                .headerWrapper {
+                  float: left;
+                  display: table-cell;
+                  position: relative;
+                  height: inherit;
+                  .resizableHeader {
+                    background-color: transparent;
+                    color: transparent;
+                    box-shadow: none;
+                    padding: 0;
+                    &.resize {
+                      overflow-x: auto;
+                      resize: horizontal;
+                      overflow-y: hidden;
+                      height: 100%;
+                      position: absolute;
+                      padding: 0;
+                      width: 100%;
+                      &:after {
+                        content: "";
+                        bottom: 0;
+                        right: 0;
+                        cursor: e-resize;
+                        position: absolute;
+                        z-index: 9;
+                        width: 8px;
+                        height: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.headerRowRight {
+              border-left: 2px solid $color-light-5;
+              box-shadow: -1px 0 0 0 $color-light-5 inset;
+              z-index: 2;
+              float: left;
+            }
+            .gridViewCell {
+              background-color: $color-light-20;
+              color: $color-light-19;
+              padding: $paddingForWrapper;
+              float: left;
+              box-shadow: inset -1px 1px 0px 0px $color-light-5, inset -1px -1px 0px 0px $color-light-5;
+
+              .gridViewFilterWrapper {
+                background-color: $color-light-1;
+                height: 26px;
+                max-height: 26px;
+                overflow: hidden;
+                display: flex;
+                border-radius: 3px;
+                border: 1px solid $color-light-4;
+                z-index: 101;
+                position: relative;
+
+                .customTextFieldViewContainer {
+                  padding: 4px;
+                  .customTextField {
+                    &.gridFilterView {
+                      line-height: 15px;
+
+                      &.filterApplied {
+                        color: $color-dark-1;
+                      }
+                    }
+                  }
+                }
+
+                .clearTextAppliedFilter {
+                  width: 10px;
+                  height: 15px;
+                  cursor: pointer;
+                  opacity: 0.4;
+                  margin: 5px;
+                  @include background-properties($image-CS-Cross, 12px);
+                }
+
+                .contextMenuViewNewContainer {
+                  width: $width;
+                  .triggerElement .selectedItemViewWrapper {
+                    width: $width;
+                    height: inherit;
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+                    .selectedItemView {
+                      margin: 5px;
+                      line-height: 17px;
+                      @include ellipsis();
+                      &.filterApplied {
+                        color: $color-dark-1;
+                      }
+                    }
+                    .expandButton {
+                      height: $height;
+                      width: 10px;
+                      display: inline-block;
+                      opacity: .4;
+                      @include background-properties-with-gray-color($image-CS-expand-arrow-icon, 12px);
+                    }
+                  }
+                }
+
+                .dateRangePickerWrapper {
+                  width: $width;
+
+                  .gridCalenderSection {
+                      padding: 5px;
+                      cursor: pointer;
+                      display: grid;
+                      grid-template-columns: 92% 8%;
+                      height: 24px;
+
+                      .filterDateRangeSection {
+                        @include ellipsis();
+                        &.filterApplied {
+                          color: $color-dark-1;
+                        }
+                      }
+
+                      .expandButton {
+                        height: $height;
+                        width: 10px;
+                        display: inline-block;
+                        opacity: .4;
+                        @include background-properties-with-gray-color($image-CS-expand-arrow-icon, 12px);
+                      }
+
+                    }
+
+                }
+              }
+              .headerSubLabel{
+                @include ellipsis();
+              }
+            }
+          }
+          .gridViewCell {
+            display: table-cell;
+            vertical-align: top;
+            box-shadow: inset -1px -1px 0 0 $color-light-5;
+            height: inherit;
+            word-break: break-all;
+            text-align: left;
+            position: relative;
+            float: left;
+            &.header {
+              .headerLabel {
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 500;
+                width: calc(100% - 20px);
+                line-height: 22px;
+                height: auto;
+                min-width: 30px;
+              }
+              &.actionItemsContainer {
+
+              }
+              .sortIndicator {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                opacity: 0.3;
+                &.asc {
+                  @include background-properties($image-CS-Sort-Ascending, 20px);
+                }
+                &.desc {
+                  @include background-properties($image-CS-Sort-Descending, 20px);
+                }
+                &.isSortable {
+                  @include background-properties-with-gray-color($image-CS-Sorting-Arrows-64, 16px);
+                }
+              }
+            }
+            &.selectOption {
+              width: 40px;
+              position: relative;
+              min-width: unset;
+              padding: 0 10px;
+              .selectIcon {
+                height: 36px;
+                position: relative;
+                cursor: pointer;
+                z-index: 1;
+                background-color: transparent;
+                @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+
+                &.isSelected {
+                  @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                }
+
+                &.partiallySelected {
+                  @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 15px);
+                }
+
+                &.disabled {
+                  background-image: none;
+                }
+              }
+
+              .thumbnailCheckButtonIcon {
+                margin: 1px auto 8px auto;
+              }
+              .contentCheckButtonIcon {
+                height: 35px;
+                width: 35px;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                cursor: pointer;
+                z-index: 1;
+                background-color: transparent;
+                @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+                &.isSelected {
+                  @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                }
+
+                &.partiallySelected {
+                  @include background-properties($image-cs-checkbox-partial-checked, 15px);
+                }
+
+                &.disabled {
+                  background-image: none;
+                }
+              }
+
+              .contentCheckButtonIcon {
+                    height: 35px;
+                    width: 35px;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    cursor: pointer;
+                    z-index: 1;
+                    background-color: transparent;
+                    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 15px);
+                    &.isSelected {
+                      @include background-properties-with-theme-color($image-cs-checkbox-checked, 15px);
+                    }
+
+                    &.partiallySelected {
+                      @include background-properties($image-cs-checkbox-partial-checked, 15px);
+                    }
+
+                    &.disabled {
+                      background-image: none;
+                    }
+                  }
+
+                  .contentRadioButtonIcon {
+                color: $color-light-4;
+                position: absolute;
+                z-index: 1;
+                top: 7px;
+                left: 8px;
+              }
+
+              .dirtyIndicator {
+                position: absolute;
+                height: $height;
+                width: 2px;
+                left: 1px;
+                top: 0;
+                background-color: $color-light-green;
+              }
+            }
+            &.actionItemsContainer {
+              padding: 0 5px;
+              .actionItemIcon {
+                height: 24px;
+                width: 36px;
+                opacity: .4;
+                cursor: pointer;
+                float: left;
+                &.manageEntity {
+                  @include background-properties($image-CS-Manage-Entity-black, 14px)
+                }
+                &.editIcon {
+                  @include background-properties($image-CS-Edit-32, 16px)
+                }
+                &.deleteIcon {
+                  @include background-properties($image-CS-delete-bin-black, 16px)
+                }
+                &.viewIcon {
+                  @include background-properties($image-CS-eye-black, 16px)
+                }
+                &.removeIcon {
+                  @include background-properties($image-CS-Cross, 16px)
+                }
+                &.extensionIcon {
+                  @include background-properties($image-CS-Edit-Property, 16px)
+                }
+                &.refreshIcon {
+                  @include background-properties($image-CS-Restart-26, 14px)
+                }
+                &.moveUpIcon {
+                  @include background-properties($image-CS-arrow-up, 18px)
+                }
+                &.createChildIcon {
+                  @include background-properties($image-CS-Add-Row-26, 18px)
+                }
+                &.moveDownIcon {
+                  @include background-properties($image-CS-arrow-down, 18px)
+                }
+                &.changePasswordIcon {
+                  @include background-properties($image-CS-password-reset-26, 18px)
+                }
+                &.revisionIcon {
+                  @include background-properties($image-CS-revision-000, 16px)
+                }
+                &.downloadIcon {
+                  @include background-properties($image-CS-download-black, 16px)
+                }
+                &.hover {
+                  opacity: 0.6;
+                }
+              }
+              .bulkDownloadContainer{
+                display: none;
+              }
+            }
+            &.activeCell {
+              box-shadow: inset 0 0 0 1px $color-theme-accent;
+            }
+            .gridPropertyView {
+              height: $height;
+              width: inherit;
+              position: relative;
+              padding: $paddingForWrapper;
+              min-width: inherit;
+              display: inline-block;
+              float: left;
+              &.rowLabel {
+                .expandButton {
+                  position: absolute;
+                  width: 22px;
+                  height: 25px;
+                  left: 0;
+                  cursor: pointer;
+                  z-index: 1;
+                  pointer-events: all;
+                  &.expanded {
+                    @include background-properties($image-CS-expand-arrow-icon, 12px);
+                  }
+
+                  &.collapsed {
+                    @include background-properties($image-CS-arrow-forward, 12px);
+                  }
+                }
+                .customTextFieldViewContainer {
+                  margin-left: 15px;
+                  width: calc(100% - 15px);
+                }
+              }
+              &.duplicateCode{
+                box-shadow: inset 0 0 0 1px #d32f2f;
+              }
+              .gridMSSWithAdditionalList {
+                height: 100%;
+              }
+              .gridImagePropertyView {
+                //overflow: hidden;
+                height: auto;
+                .gridImageContainer {
+                  height: 25px;
+                  width: 25px;
+                  border-radius: 3px;
+                  overflow: hidden;
+                  display: inline-block;
+                  vertical-align: top;
+                  position: relative;
+                  border: 1px solid $color-light-5;
+                  .imageFitToContainer {
+                    height: inherit;
+                    width: $width;
+                    .imageSimpleViewNoImage {
+
+                    }
+                  }
+                }
+                .gridImageActionIconContainer {
+                  height: 25px;
+                  width: 25px;
+                  display: inline-block;
+                  vertical-align: top;
+                  margin-left: 4px;
+                  .gridImageActionIcon {
+                    height: $height;
+                    width: $width;
+                    opacity: .4;
+                    cursor: pointer;
+                    &.upload {
+                      @include background-properties($image-CS-Upload-Black, 20px);
+                    }
+                    &.replace {
+                      @include background-properties($image-CS-Replace-26, 20px);
+                    }
+                  }
+                }
+                input[type="file"] {
+                  display: block;
+                }
+
+                .gridImageClearButton {
+                  height: 100%;
+                  width: 100%;
+                  opacity: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: rgba(0,0,0,0.8);
+                  @include background-properties-with-theme-white-color($image-CS-Cancel-Black, 16px);
+                  cursor: pointer;
+                }
+
+                &:hover {
+                  .gridImageClearButton {
+                    opacity: .9;
+                  }
+                }
+              }
+              .customTextFieldViewContainer {
+                width: $width;
+                line-height: 18px;
+                position: relative;
+                .customTextField {
+                  resize: none;
+                  border: none;
+                  outline: none;
+                  width: $width;
+                  font-size: 13px;
+                  margin: 0;
+                  &.isDisabled {
+                    background: transparent;
+                    color: $color-dark-5;
+                    cursor: context-menu;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                    width: $width;
+                    span {
+                      float: left;
+                      width: calc(100% - 5px);
+                    }
+                    .copyToClipboard {
+                      height: 20px;
+                      width: 20px;
+                      position: absolute;
+                      float: right;
+                      cursor: pointer;
+                      top: 0px;
+                      right: -10px;
+                      transition: all .2s;
+                      @include background-properties($image-CS-copy-to-clipboard, 16px);
+                    }
+                  }
+                }
+                textarea {
+                  height: $height;
+                  overflow: hidden;
+                  padding-top: 0px;
+                }
+              }
+              .multiSelectSearchViewWrapper {
+                .contextMenuViewNewContainer {
+                  height: inherit;
+                  .triggerElement {
+                    .multiSelectSearchView {
+                      .multiSelectSummary {
+                        .selectedItems {
+                          height: 26px;
+                          .selectedItemLabel {
+                            line-height: 26px;
+                            margin: 0;
+                            &.disabled {
+                            }
+                          }
+                          .crossIcon {
+                            background-size: 14px;
+                            float: right;
+                            transition: all .2s;
+                            cursor: pointer;
+                            width: 14px;
+                            opacity: 0.6;
+                            height: inherit;
+                            @include background-properties($image-CS-Cross, 14px);
+                            margin-right: 4px;
+                            &:hover {
+                              opacity: 1;
+                            }
+                          }
+                          .selectedItemColor {
+                            height: 26px;
+                            width: 26px;
+                            display: inline-block;
+                            margin-bottom: 3px;
+                            margin-left: 0px;
+                            border-radius: 50%;
+                          }
+                        }
+                      }
+                      .moreSection {
+                        &.hideMe {
+
+                        }
+                        .moreLabel {
+
+                        }
+                      }
+                      .multiSelectNothingSelected {
+                        line-height: normal;
+                      }
+                      &.singleSelect {
+                        .multiSelectSummary {
+                          .selectedItems {
+                            display: inline-flex;
+                            .selectedItemColor{
+                              flex: 0 0 26px;
+                            }
+                            .crossIcon{
+                              flex: 0 0 14px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .gridYesNoPropertyView {
+                overflow: hidden;
+                .gridYesNoSwitch {
+                  height: 22px;
+                  width: 44px;
+                  border-radius: 11px;
+                  position: relative;
+                  overflow: hidden;
+                  z-index: 1;
+                  margin: auto;
+                  .gridYesNoSwitchButton {
+                    position: absolute;
+                    height: 22px;
+                    padding: 2px 0;
+                    top: 0;
+                    background-color: $color-light-4;
+                    transition: all .1s ease-out;
+                    cursor: pointer;
+                    &.no {
+                      left: -22px;
+                    }
+                    &.yes {
+                      background-color: $color-lighter-green;
+                      left: 0;
+                    }
+                    .textSection {
+                      height: $height;
+                      width: 24px;
+                      text-align: center;
+                      color: $color-light-1;
+                      font-weight: 500;
+                      font-size: 11px;
+                      line-height: 18px;
+                      display: inline-block;
+                      vertical-align: top;
+                      user-select: none;
+                      -moz-user-select: none;
+                      &.yes {
+                        padding: 0 0 0 2px;
+                      }
+                      &.no {
+                        padding: 0 2px 0 0;
+                        color: $color-dark-11;
+                      }
+                    }
+                    .circleSection {
+                      background-color: $color-light-1;
+                      border-radius: 50%;
+                      height: 18px;
+                      width: 18px;
+                      display: inline-block;
+                      vertical-align: top;
+                    }
+                  }
+                }
+              }
+              .numberLocaleViewContainer {
+                width: auto;
+                margin-right: 10px;
+                .numberLocaleInput {
+                }
+              }
+              .gridCalculatedAttributePropertyView {
+                height: $height;
+                width: $width;
+                cursor: pointer;
+                overflow: hidden;
+                .gridCalculatedAttributeProperties {
+                  height: inherit;
+                  .calculatedAttributeType, .calculatedAttributeUnit, .calculatedFormula {
+                    width: $width;
+                    color: $color-light-19;
+                    overflow: hidden;
+                    padding: 5px;
+                  }
+                  .calculatedFormula {
+                    display: flex;
+                    align-items: center;
+                    .calculatedFormulaHeader {
+                      float: left;
+                      line-height: 30px;
+                    }
+                    .elementWithType {
+                      height: 20px;
+                      line-height: 20px;
+                      margin: 0px 0 0 5px;
+                      color: $color-dark-9;
+                      background-color: $color-light-5;
+                      border-radius: 3px;
+                      box-shadow: 0 0 0 1px silver;
+                      position: relative;
+                      float: left;
+                      padding: 0 30px 0 5px;
+                      .typeIcon {
+                        height: $height;
+                        width: 22px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        opacity: 0.7;
+
+                        &.attribute {
+                          @include background-properties($image-CS-Text-Color-Filled-50, 16px);
+                        }
+                      }
+                    }
+                    .element {
+                      padding: 0 4px 0 8px;
+                      line-height: 20px;
+                    }
+                  }
+                }
+              }
+              .gridConcatenatedAttributePropertyView {
+                .concatenationFormula {
+                  .element {
+                    margin: 0px 0 6px 6px;
+                    .typeIcon {
+                      &.string {
+
+                      }
+                      &.tag {
+
+                      }
+                    }
+                  }
+                }
+              }
+              .customDatePickerWrapper {
+                height: inherit;
+                .customDatePicker {
+                  &.datePickerCustom {
+                    height: inherit;
+                    max-width: unset;
+                    width: calc(100% - 30px);
+                    > div {
+                      width: 100%;
+                    }
+                    input {
+                      padding: 0px 0 7px;
+                    }
+                  }
+                }
+                .customDatePickerEmptyButton {
+                  position: absolute;
+                  right: 10px;
+                  background-position: center;
+                  &.noShow {
+
+                  }
+                }
+                .customDatePickerDisabledValue {
+                  margin: 0;
+                }
+              }
+              .froalaWrapperView {
+                height: $height;
+                .customFroalaView {
+                  height: inherit;
+                  .fr-box {
+                    height: $height;
+                    .fr-wrapper {
+                      height: $height;
+                      .fr-element {
+                        height: $height;
+                      }
+                      .fr-placeholder {
+
+                      }
+                    }
+                  }
+                }
+              }
+              .contentMeasurementMetricsContainer {
+                .measurementMetricWrapper {
+                  grid-template-columns: 40% 60%;
+                  .measurementMetricElementWrapper {
+                    overflow: hidden;
+                    min-width: auto;
+                  }
+                  .measurementMetricElementListWrapper {
+                    overflow: hidden;
+                    min-width: auto;
+                    .conversionList {
+                      margin-top: 0;
+                    }
+                  }
+                }
+              }
+              .userInputFieldContainer {
+
+              }
+              .gridPropertyTaxonomyView {
+                .smallTaxonomyViewContainer {
+                  .taxonomyDataWrapper {
+
+                  }
+                }
+              }
+              .gridTagView {
+                overflow: hidden;
+                height: inherit;
+                margin-top: 3px;
+                .tagNodeWrapper {
+                  height: 100%;
+                }
+                .tagsGroupContainer {
+                  height: $height;
+                  .multiSelectSearchViewWrapper {
+                    .contextMenuViewNewContainer {
+                      .triggerElement {
+                        .tagsSectionBody {
+                          height: inherit;
+                          overflow: hidden;
+                          padding: 0;
+                          .entityTagsSummaryView {
+                            height: inherit;
+                            margin-top: 0;
+                            .tagsSummaryItemsContainer {
+                              .selectedItems {
+                                margin-right: 5px;
+                              }
+                            }
+                            .noTagsGrey {
+                              margin: 0;
+                              padding: 0;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .rulerTagTypeView {
+                    height: inherit;
+                    margin-left: 2px;
+
+                    .rulerTagIconLabel {
+                      margin: 2px 5px 5px 0;
+                      overflow: hidden;
+                      &.rulerTagIconLabelSelected {
+                      }
+                    }
+                  }
+                  .tagsSectionBody {
+                    height: $height;
+                    .entityTagsSummaryView {
+                      height: $height;
+                      .tagsSummaryItemsContainer {
+                        height: $height;
+                      }
+                    }
+                  }
+                }
+              }
+              .contentAttributeElementViewWrapper {
+                overflow: hidden;
+                .attributeContextView {
+                  .variantMaxMinInfo {
+
+                  }
+                }
+              }
+              &.gridElementDisabledMask {
+                user-select: none;
+                background: rgba(200, 200, 200, .2);
+                .copyToClipboard {
+                  opacity: 0;
+                }
+                &:hover {
+                  .copyToClipboard {
+                    opacity: 0.5;
+                  }
+                }
+                .customFroalaView {
+                  .fr-disabled{
+                    background: transparent;
+                  }
+                }
+                .numberLocaleViewContainer{
+                  .numberLocaleInput.isDisabled{
+                    background: transparent;
+                  }
+                }
+                .contentMeasurementMetricsContainer {
+                  .measurementMetricWrapper{
+                    .measurementMetricElementListWrapper {
+                      .conversionList{
+                        background: transparent;
+                      }
+                    }
+                  }
+                }
+              }
+              .customDateTimePickerWrapper {
+              }
+              .gridScrollWrapper{
+                padding-top: 0;
+              }
+
+              .chipsViewWrapper {
+                width: calc(100% - 20px);
+                .groupActiveChips {
+                  position: absolute;
+                  width: inherit;
+                  .groupChips.hideMe {
+                    display: none;
+                  }
+                  .groupChips {
+                    z-index: 2;
+                    width: auto;
+                    height: 22px;
+                    margin: 2px 5px 2px 2px;
+                    background-color: #eee;
+                    cursor: default;
+                    white-space: nowrap;
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 100px;
+                    position: relative;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    min-width: 30px;
+                    text-align: center;
+                    cursor: pointer;
+
+                    .selectedItemLabel {
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      display: inline-block;
+                      vertical-align: top;
+                      margin: 0 7px 0 7px;
+                      height: 100%;
+                      line-height: 22px;
+                      font-size: 12px;
+                      cursor: pointer;
+                      width: calc(100% - 30px);
+                    }
+
+                    .crossIcon {
+                      background-size: 14px;
+                      display: inline-block;
+                      transition: all .2s;
+                      cursor: pointer;
+                      width: 14px;
+                      opacity: 0.6;
+                      height: 100%;
+                      background-repeat: no-repeat;
+                      background-position: 0 4px;
+                      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHZlcnNpb249IjEuMSIgd2lkdGg9Ijk2cHgiIGhlaWdodD0iOTZweCI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIHN0eWxlPSIgIiBkPSJNIDguNzE4NzUgNy4yODEyNSBMIDcuMjgxMjUgOC43MTg3NSBMIDE0LjU2MjUgMTYgTCA3LjI4MTI1IDIzLjI4MTI1IEwgOC43MTg3NSAyNC43MTg3NSBMIDE2IDE3LjQzNzUgTCAyMy4yODEyNSAyNC43MTg3NSBMIDI0LjcxODc1IDIzLjI4MTI1IEwgMTcuNDM3NSAxNiBMIDI0LjcxODc1IDguNzE4NzUgTCAyMy4yODEyNSA3LjI4MTI1IEwgMTYgMTQuNTYyNSBaICIvPgo8L2c+Cjwvc3ZnPgo=);
+                      margin-right: 4px;
+                    }
+                  }
+                }
+              }
+              .editMultiClassificationIcon {
+                height: 25px;
+                width: 25px;
+                cursor: pointer;
+                opacity: .7;
+                float: right;
+                @include background-properties($image-CS-Edit-32, 15px);
+              }
+            }
+            @-moz-document url-prefix() {
+              .gridPropertyView {
+                height: auto;
+                min-height: 100%;
+
+                .gridMSSWithAdditionalList {
+                  height: 100%;
+                  flex: 1;
+                }
+                .multiSelectSearchViewWrapper {
+                  flex: 1;
+                  min-height: inherit;
+                  .contextMenuViewNewContainer {
+                    height: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    .triggerElement {
+                      flex: 1;
+                    }
+                  }
+                }
+                .gridCalculatedAttributePropertyView {
+                  flex: 1;
+                  min-height: inherit;
+                  .gridCalculatedAttributeProperties {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: inherit;
+                  }
+                }
+                .gridConcatenatedAttributePropertyView {
+                  flex: 1;
+                  min-height: inherit;
+                }
+                .customDatePickerWrapper {
+                  height: inherit;
+                  flex: 1;
+                  min-height: inherit;
+                  .customDatePicker {
+                    &.datePickerCustom {
+                      display: flex;
+                      flex-direction: column;
+                      min-height: inherit;
+                    }
+                  }
+                  .customDatePickerEmptyButton{
+                    top: 0;
+                  }
+                }
+                .gridTagView{
+                  flex: 1;
+                  min-height: 23px;
+                  ~ .gridPropertyView {
+                    display: flex;
+                  }
+                  .tagsGroupContainer, .multiSelectSearchViewWrapper, .contextMenuViewNewContainer, .triggerElement, .tagsSectionBody, .entityTagsSummaryView{
+                    min-height: inherit;
+                  }
+                  .tagNodeWrapper, .triggerElement, .tagsGroupContainer, .tagsSectionBody, .entityTagsSummaryView{
+                    min-height: inherit;
+                  }
+                }
+                &.gridElementDisabledMask{
+                  height: 100%;
+                }
+              }
+            }
+
+            .customIcon {
+              width: 15px;
+              height: 15px;
+              float: left;
+              margin-right: 5px;
+              margin-top: 4px;
+
+              .imageFitToContainer{
+                .imageFitToContainerImage{
+                  position: relative;
+                  padding: 0 0 2px 0;
+                  top: unset;
+                  left: unset;
+                  transform: unset;
+                }
+                .imageSimpleViewNoImage{
+                  background-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .gridViewLowerSection {
+      width: $width;
+      height: 50px;
+      flex: 0 0 50px;
+      .paginationView {
+        margin: 0;
+        padding: 10px;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,241 @@
+[
+  {
+    "id": "BULK_UPDATE",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Bulk_Update_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de actualización masiva estándar"
+      },
+      "fr_FR": {
+        "label": "Flux de travail de mise à jour en masse standard"
+      },
+      "de_DE": {
+        "label": "Standard-Bulk-Update-Workflow"
+      }
+    }
+  },
+  {
+    "id": "BULK_CLONING",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Bulk_Cloning_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de clonación masiva estándar"
+      },
+      "fr_FR": {
+        "label": "Flux de travail de clonage en masse standard"
+      },
+      "de_DE": {
+        "label": "Standard-Bulk-Cloning-Workflow"
+      }
+    }
+  },
+  {
+    "id": "ASSET_UPLOAD",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Asset_Bulk_Upload_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de carga masiva de activos estándar"
+      },
+      "fr_FR": {
+        "label": "Flux de travail de téléchargement groupé des éléments standard"
+      },
+      "de_DE": {
+        "label": "tandard-Workflow zum Massen-Upload von Assets"
+      }
+    }
+  },
+  {
+    "id": "PXON_EXPORT",
+    "translations": {
+      "en_US": {
+        "label": "Standard_PXON_EXPORT_WORKFLOW"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de exportación PXON estándar"
+      },
+      "fr_FR": {
+        "label": "Flux de travail d'exportation PXON standard"
+      },
+      "de_DE": {
+        "label": "Standard PXON Export Workflow"
+      }
+    }
+  },
+  {
+    "id": "TAG_VALUE_DELETE",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Tag_Value_Delete_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de eliminación de valor de etiqueta estándar"
+      },
+      "fr_FR": {
+        "label": "Workflow de suppression de valeur de balise standard"
+      },
+      "de_DE": {
+        "label": "Standard-Tag-Wert Workflow löschen"
+      }
+    }
+  },
+  {
+    "id": "PROPERTY_DELETE",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Property_Delete_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de eliminación de propiedad estándar"
+      },
+      "fr_FR": {
+        "label": "Workflow de suppression de propriété standard"
+      },
+      "de_DE": {
+        "label": "Workflow zum Löschen von Standardeigenschaften"
+      }
+    }
+  },
+  {
+    "id": "TRANSFER",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Transfer_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo de transferencia estándar"
+      },
+      "fr_FR": {
+        "label": "Flux de travail de transfert standard"
+      },
+      "de_DE": {
+        "label": "Standard Transfer Workflow"
+      }
+    }
+  },
+  {
+    "id": "ASSET_LINK_SHARING",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Asset_Link_Sharing"
+      },
+      "es_ES": {
+        "label": "Uso compartido de enlaces de activos estándar"
+      },
+      "fr_FR": {
+        "label": "Partage de lien d'actif standard"
+      },
+      "de_DE": {
+        "label": "Standard Asset Link Sharing"
+      }
+    }
+  },
+  {
+    "id": "PXON_IMPORT",
+    "translations": {
+      "en_US": {
+        "label": "Standard_PXON_IMPORT_Workflow"
+      },
+      "es_ES": {
+        "label": "Flujo de trabajo estándar de PXON IMPORT"
+      },
+      "fr_FR": {
+        "label": "Flux de travail standard PXON IMPORT"
+      },
+      "de_DE": {
+        "label": "Standard PXON IMPORT Workflow"
+      }
+    }
+  }, 
+  {
+    "id": "ICON_UPLOAD",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Bulk_Icon_Upload"
+      },
+      "es_ES": {
+        "label": "Carga estándar de íconos masivos"
+      },
+      "fr_FR": {
+        "label": "Téléchargement d'icônes en masse standard"
+      },
+      "de_DE": {
+        "label": "Standard Bulk Icon Upload"
+        }
+      }
+   },
+  {
+    "id": "CONFIG_EXPORT",
+    "translations": {
+      "en_US": {
+        "label": "Standard_Config_Excel_Export"
+      },
+      "es_ES": {
+        "label": "Exportación de Excel de configuración estándar"
+      },
+      "fr_FR": {
+        "label": "Exportation Excel de configuration standard"
+      },
+      "de_DE": {
+        "label": "Standardkonfiguration Excel-Export"
+  }
+  }
+  },
+  {
+    "id": "CONFIG_IMPORT",
+     "translations": {
+      "en_US": {
+       "label": "Standard_Config_Excel_Import"
+      },
+      "es_ES": {
+        "label": "Importación de Excel de configuración estándar"
+      },
+      "fr_FR": {
+        "label": "Importation Excel de configuration standard"
+      },
+      "de_DE": {
+        "label": "Standardkonfiguration Excel-Import"
+      }
+    }
+  },
+  {
+    "id": "EXPORT",
+     "translations": {
+      "en_US": {
+       "label": "Standard_Runtime_Excel_Export"
+      },
+      "es_ES": {
+        "label": "Exportación estándar de Excel en tiempo de ejecución"
+      },
+      "fr_FR": {
+        "label": "Exportation Excel d'exécution standard"
+      },
+      "de_DE": {
+        "label": "Standard Runtime Excel Export"
+      }
+    }
+  }
+  ,
+  {
+    "id": "IMPORT",
+     "translations": {
+      "en_US": {
+       "label": "Standard_Runtime_Excel_Import"
+      },
+      "es_ES": {
+        "label": "Importación de Excel en tiempo de ejecución estándar"
+      },
+      "fr_FR": {
+        "label": "Importation Excel d'exécution standard"
+      },
+      "de_DE": {
+        "label": "Standard Runtime Excel Import"
+      }
+    }
+  }
+]

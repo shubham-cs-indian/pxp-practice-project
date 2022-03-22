@@ -1,0 +1,113 @@
+.settingScreenContainer {
+    height: 100%;
+    overflow: hidden;
+
+    .configGridViewContainer {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+.actionItemTag {
+  //background: url('../images/SettingsFilled-25.png'), url("../images/PriceTag-25.png");
+  background-position: 15px 16px, 1px 3px;
+  background-size: 10px, 80%;
+  background-repeat: no-repeat;
+
+  &.selected {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/PriceTagFilled-25.png");
+    background-position: 15px 16px, 1px 3px;
+    background-size: 10px, 80%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/PriceTagFilled-25.png");
+    background-position: 15px 16px, 1px 3px;
+    background-size: 10px, 80%;
+    background-repeat: no-repeat;
+  }
+}
+
+.actionItemAttribute {
+  //background: url('../images/SettingsFilled-25.png'), url("../images/TextColor-25.png");
+  background-position: 14px 15px, 0px 3px;
+  background-size: 10px, 80%;
+  background-repeat: no-repeat;
+
+  &.selected {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/TextColorFilled-25.png");
+    background-position: 14px 15px, 0px 3px;
+    background-size: 10px, 80%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/TextColorFilled-25.png");
+    background-position: 14px 15px, 0px 3px;
+    background-size: 10px, 80%;
+    background-repeat: no-repeat;
+  }
+}
+
+.actionItemClass {
+  //background: url('../images/SettingsFilled-25.png'), url("../images/Class-25.png");
+  background-position: 15px 15px, 0px 3px;
+  background-size: 10px, 80%;
+  background-repeat: no-repeat;
+
+  &.selected {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/ClassFilled-25.png");
+    background-position: 15px 15px, 0px 3px;
+    background-size: 10px, 80%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/ClassFilled-25.png");
+    background-position: 15px 15px, 0px 3px;
+    background-size: 10px, 80%;
+    background-repeat: no-repeat;
+  }
+}
+
+.actionItemRelationship {
+  //background: url('../images/SettingsFilled-25.png'), url("../images/Hub-25.png");
+  background-position: 14px 15px, 0px 5px;
+  background-size: 10px, 72%;
+  background-repeat: no-repeat;
+  // #REVIEW
+ /* display: none;*/
+
+  &.selected {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/HubFilled-25.png");
+    background-position: 14px 15px, 0px 5px;
+    background-size: 10px, 72%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    //background: url('../images/SettingsFilled-25.png'), url("../images/HubFilled-25.png");
+    background-position: 14px 15px, 0px 5px;
+    background-size: 10px, 72%;
+    background-repeat: no-repeat;
+  }
+}
+
+.actionItemReference{
+  background-position: 14px 15px, 0px 5px;
+  background-size: 10px, 72%;
+  background-repeat: no-repeat;
+
+  &.selected {
+    background-position: 14px 15px, 0px 5px;
+    background-size: 10px, 72%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-position: 14px 15px, 0px 5px;
+    background-size: 10px, 72%;
+    background-repeat: no-repeat;
+  }
+}

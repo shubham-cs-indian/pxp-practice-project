@@ -1,0 +1,29 @@
+/* R20
+.classConfigContextContainer{
+  height: 100%;
+
+  .classConfigContextsContainerHeader{
+    width: 100%;
+    background-color: #ccc;
+    text-align: center;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  .classConfigContextsBody{
+
+    .contextListContainer{
+      .contextLabel{
+        background-color: #F5F4F4;
+        border: 1px solid #e9e9e9;
+        text-align: center;
+        color: #5d5d5d;
+
+        &.selected{
+          background-color: #999;
+        }
+      }
+    }
+  }
+}*/

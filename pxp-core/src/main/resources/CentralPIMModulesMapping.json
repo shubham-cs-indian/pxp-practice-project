@@ -1,0 +1,202 @@
+{
+  "id": "",
+  "logo": "",
+  "type": "main",
+  "screens": [
+    {
+      "id": "runtime",
+      "name": "Runtime",
+      "title": "EXPLORE",
+      "icon": "",
+      "isVisible": true,
+      "isDefault": true,
+      "canFilter": true,
+      "canSort": true,
+      "canFilterTaxonomy": true,
+      "isBookmarkEnabled": true,
+      "isStaicCollectionEnabled": true,
+      "type": "home",
+      "modules": [
+      {
+          "id": "allmodule",
+          "label": "ALL_TAB",
+          "className": "allModule",
+          "entities": [
+            "ArticleInstance",
+            "AssetInstance",
+            "SupplierInstance",
+            "MarketInstance",
+            "TextAssetInstance"
+          ],
+          "defaultView": "tile_mode",
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+		{
+          "id": "dashboard",
+          "label": "DASHBOARD_TITLE",
+          "className": "dashboardModule",
+          "entities": [
+            "ArticleInstance",
+            "AssetInstance",
+            "SupplierInstance",
+            "MarketInstance",
+            "TextAssetInstance"
+          ],
+          "defaultView": "tile_mode",
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "pimmodule",
+          "label": "PRODUCTS_TAB",
+          "className": "pimModule",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "ArticleInstance"
+          ]
+        },
+        {
+          "id": "mammodule",
+          "label": "DAM_TAB",
+          "className": "mamModule",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "AssetInstance"
+          ]
+        },
+        {
+          "id": "suppliermodule",
+          "label": "SUPPLIER_TAB",
+          "className": "supplierModule",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "SupplierInstance"
+          ]
+        },
+        {
+          "id": "targetmodule",
+          "label": "CHANNELS",
+          "className": "marketModule",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "MarketInstance"
+          ]
+        },
+        {
+          "id": "textassetmodule",
+          "label": "TEXTASSET_TAB",
+          "className": "textassetModule",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "TextAssetInstance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "setting",
+      "name": "Settings",
+      "title": "ADMINISTRATION_MENU_ITEM_TITLE",
+      "icon": "",
+      "isVisible": true,
+      "isDefault": false,
+      "type": "setting",
+      "entities": [
+        "users",
+        "tags",
+        "attributes",
+        "context",
+        "events",
+        "propertycollections",
+        "relationships",
+        "rules",
+        "ruleList",
+        "taxonomyMasterList",
+        "classesclone",
+        "tasks",
+        "templates",
+        "attributionTaxonomy",
+        "translations",
+        "profile",
+        "processevent",
+        "mapping",
+		"organization",
+		"tabs"
+      ]
+    }
+  ]
+}

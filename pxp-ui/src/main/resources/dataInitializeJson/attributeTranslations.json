@@ -1,0 +1,1328 @@
+[
+	{
+		"id": "addressattribute",
+		"translations": {
+			"en_US": {
+				"label": "Address"
+			},
+			"es_ES": {
+				"label": "Habla a"
+			},
+			"fr_FR": {
+				"label": "Adresse"
+			},
+			"de_DE": {
+				"label": "Adresse"
+			}
+		}
+	},
+	{
+		"id": "createdbyattribute",
+		"translations": {
+			"en_US": {
+				"label": "Created By"
+			},
+			"es_ES": {
+				"label": "Creado por"
+			},
+			"fr_FR": {
+				"label": "Créé par"
+			},
+			"de_DE": {
+				"label": "Erstellt von"
+			}
+		}
+	},
+	{
+		"id": "createdonattribute",
+		"translations": {
+			"en_US": {
+				"label": "Created On"
+			},
+			"es_ES": {
+				"label": "Creado en"
+			},
+			"fr_FR": {
+				"label": "Créé sur"
+			},
+			"de_DE": {
+				"label": "Erstellt am"
+			}
+		}
+	},
+	{
+		"id": "dtpdeltaattribute",
+		"translations": {
+			"en_US": {
+				"label": "Delta"
+			},
+			"es_ES": {
+				"label": "Delta"
+			},
+			"fr_FR": {
+				"label": "Delta"
+			},
+			"de_DE": {
+				"label": "Delta"
+			}
+		}
+	},
+	{
+		"id": "descriptionattribute",
+		"translations": {
+			"en_US": {
+				"label": "Description"
+			},
+			"es_ES": {
+				"label": "Descripción"
+			},
+			"fr_FR": {
+				"label": "La description"
+			},
+			"de_DE": {
+				"label": "Beschreibung"
+			}
+		}
+	},
+	{
+		"id": "discountattribute",
+		"translations": {
+			"en_US": {
+				"label": "Discount (%)"
+			},
+			"es_ES": {
+				"label": "Descuento (%)"
+			},
+			"fr_FR": {
+				"label": "Remise (%)"
+			},
+			"de_DE": {
+				"label": "DRabatt (%)"
+			}
+		}
+	},
+	{
+		"id": "duedateattribute",
+		"translations": {
+			"en_US": {
+				"label": "Due Date"
+			},
+			"es_ES": {
+				"label": "Fecha de vencimiento"
+			},
+			"fr_FR": {
+				"label": "Date d'échéance"
+			},
+			"de_DE": {
+				"label": "Geburtstermin"
+			}
+		}
+	},
+	{
+		"id": "schedulestartattribute",
+		"translations": {
+			"en_US": {
+				"label": "Start Date"
+			},
+			"es_ES": {
+				"label": "Fecha de inicio"
+			},
+			"fr_FR": {
+				"label": "Date de début"
+			},
+			"de_DE": {
+				"label": "Anfangsdatum"
+			}
+		}
+	},
+	{
+		"id": "scheduleendattribute",
+		"translations": {
+			"en_US": {
+				"label": "End Date"
+			},
+			"es_ES": {
+				"label": "Fecha final"
+			},
+			"fr_FR": {
+				"label": "Date de fin"
+			},
+			"de_DE": {
+				"label": "Endtermin"
+			}
+		}
+	},
+	{
+		"id": "dtperrormarginattribute",
+		"translations": {
+			"en_US": {
+				"label": "Error margin"
+			},
+			"es_ES": {
+				"label": "Margen de error"
+			},
+			"fr_FR": {
+				"label": "Marge d'erreur"
+			},
+			"de_DE": {
+				"label": "Fehlergrenze"
+			}
+		}
+	},
+	{
+		"id": "assetcoverflowattribute",
+		"translations": {
+			"en_US": {
+				"label": "File Preview"
+			},
+			"es_ES": {
+				"label": "Vista previa del documento"
+			},
+			"fr_FR": {
+				"label": "Aperçu du fichier"
+			},
+			"de_DE": {
+				"label": "Dateivorschau"
+			}
+		}
+	},
+	{
+		"id": "firstnameattribute",
+		"translations": {
+			"en_US": {
+				"label": "First Name"
+			},
+			"es_ES": {
+				"label": "Nombre de pila"
+			},
+			"fr_FR": {
+				"label": "Prénom"
+			},
+			"de_DE": {
+				"label": "Vorname"
+			}
+		}
+	},
+	{
+		"id": "gtin_attribute",
+		"translations": {
+			"en_US": {
+				"label": "GTIN"
+			},
+			"es_ES": {
+				"label": "GTIN"
+			},
+			"fr_FR": {
+				"label": "GTIN"
+			},
+			"de_DE": {
+				"label": "GTIN"
+			}
+		}
+	},
+	{
+		"id": "I_APPLICATION",
+		"translations": {
+			"en_US": {
+				"label": "I_APPLICATION"
+			},
+			"es_ES": {
+				"label": "I_Solicitud"
+			},
+			"fr_FR": {
+				"label": "I_APPLICATION"
+			},
+			"de_DE": {
+				"label": "I_Anwendung"
+			}
+		}
+	},
+	{
+		"id": "I_BIT_DEPTH",
+		"translations": {
+			"en_US": {
+				"label": "I_BIT_DEPTH"
+			},
+			"es_ES": {
+				"label": "I_Profundidad de bits"
+			},
+			"fr_FR": {
+				"label": "I_Peu profond"
+			},
+			"de_DE": {
+				"label": "I_Bittiefe"
+			}
+		}
+	},
+	{
+		"id": "I_COLOR_MODE",
+		"translations": {
+			"en_US": {
+				"label": "I_COLOR_MODE"
+			},
+			"es_ES": {
+				"label": "I_Modo de color"
+			},
+			"fr_FR": {
+				"label": "I_Mode de couleur"
+			},
+			"de_DE": {
+				"label": "I_Farbmodus"
+			}
+		}
+	},
+	{
+		"id": "I_COLOR_PROFILE",
+		"translations": {
+			"en_US": {
+				"label": "I_COLOR_PROFILE"
+			},
+			"es_ES": {
+				"label": "I_Perfil de color"
+			},
+			"fr_FR": {
+				"label": "I_Profil de couleur"
+			},
+			"de_DE": {
+				"label": "I_Farbprofil"
+			}
+		}
+	},
+	{
+		"id": "I_CREATE_DATE",
+		"translations": {
+			"en_US": {
+				"label": "I_CREATE_DATE"
+			},
+			"es_ES": {
+				"label": "I_Fecha de Creación"
+			},
+			"fr_FR": {
+				"label": "I_créer un rendez-vous"
+			},
+			"de_DE": {
+				"label": "I_Erstellungsdatum"
+			}
+		}
+	},
+	{
+		"id": "I_DIMENSION_IN_INCH",
+		"translations": {
+			"en_US": {
+				"label": "I_DIMENSION_IN_INCH"
+			},
+			"es_ES": {
+				"label": "I_Dimensión en pulgadas"
+			},
+			"fr_FR": {
+				"label": "I_Dimension en pouces"
+			},
+			"de_DE": {
+				"label": "I_Dimension in Zoll"
+			}
+		}
+	},
+	{
+		"id": "I_DIMENSIONS",
+		"translations": {
+			"en_US": {
+				"label": "I_DIMENSIONS"
+			},
+			"es_ES": {
+				"label": "I_Dimensiones"
+			},
+			"fr_FR": {
+				"label": "I_Dimensions"
+			},
+			"de_DE": {
+				"label": "I_Maße"
+			}
+		}
+	},
+	{
+		"id": "I_META_BRAND",
+		"translations": {
+			"en_US": {
+				"label": "I_META_BRAND"
+			},
+			"es_ES": {
+				"label": "I_Marca Meta"
+			},
+			"fr_FR": {
+				"label": "I_Marque Meta"
+			},
+			"de_DE": {
+				"label": "I_Meta Brand"
+			}
+		}
+	},
+	{
+		"id": "I_META_COPYRIGHT",
+		"translations": {
+			"en_US": {
+				"label": "I_META_COPYRIGHT"
+			},
+			"es_ES": {
+				"label": "I_Meta Copyright"
+			},
+			"fr_FR": {
+				"label": "I_Meta Copyright"
+			},
+			"de_DE": {
+				"label": "I_Meta Copyright"
+			}
+		}
+	},
+	{
+		"id": "I_META_COPYRIGHT_STATUS",
+		"translations": {
+			"en_US": {
+				"label": "I_META_COPYRIGHT_STATUS"
+			},
+			"es_ES": {
+				"label": "I_Estado meta de copyright"
+			},
+			"fr_FR": {
+				"label": "I_Statut Meta Copyright"
+			},
+			"de_DE": {
+				"label": "I_Meta Copyright Status"
+			}
+		}
+	},
+	{
+		"id": "I_META_COUNTRY",
+		"translations": {
+			"en_US": {
+				"label": "I_META_COUNTRY"
+			},
+			"es_ES": {
+				"label": "I_Meta país"
+			},
+			"fr_FR": {
+				"label": "I_Meta Country"
+			},
+			"de_DE": {
+				"label": "I_Meta-Land"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_AUTHOR",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_AUTHOR"
+			},
+			"es_ES": {
+				"label": "I_Autor de Meta Creator"
+			},
+			"fr_FR": {
+				"label": "I_Auteur de Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator Autor"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_COUNTRY",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_COUNTRY"
+			},
+			"es_ES": {
+				"label": "I_País del meta creador"
+			},
+			"fr_FR": {
+				"label": "I_Pays de Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator Land"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_EMAIL",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_EMAIL"
+			},
+			"es_ES": {
+				"label": "I_Correo electrónico de Meta Creator"
+			},
+			"fr_FR": {
+				"label": "I_E-mail de Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator E-Mail"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_LOCATION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_LOCATION"
+			},
+			"es_ES": {
+				"label": "I_Ubicación de Meta Creator"
+			},
+			"fr_FR": {
+				"label": "I_Emplacement de Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator-SpeicherortE"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_POSTAL_CODE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_POSTAL_CODE"
+			},
+			"es_ES": {
+				"label": "I_Código postal de Meta Creator"
+			},
+			"fr_FR": {
+				"label": "I_Code postal de Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator Postleitzahl"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_STATE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_STATE"
+			},
+			"es_ES": {
+				"label": "I_Estado del meta creador"
+			},
+			"fr_FR": {
+				"label": "I_État de Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator State"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_STREET",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_STREET"
+			},
+			"es_ES": {
+				"label": "I_Calle Meta Creator"
+			},
+			"fr_FR": {
+				"label": "I_Rue Meta Creator"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator Street"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_TEL",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_TEL"
+			},
+			"es_ES": {
+				"label": "I_Meta Creator Tel"
+			},
+			"fr_FR": {
+				"label": "I_Meta Creator Tel"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator Tel"
+			}
+		}
+	},
+	{
+		"id": "I_META_CREATOR_WWW",
+		"translations": {
+			"en_US": {
+				"label": "I_META_CREATOR_WWW"
+			},
+			"es_ES": {
+				"label": "I_Meta Creator WWW"
+			},
+			"fr_FR": {
+				"label": "I_Meta Creator WWW"
+			},
+			"de_DE": {
+				"label": "I_Meta Creator WWW"
+			}
+		}
+	},
+	{
+		"id": "I_META_DESCRIPTION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_DESCRIPTION"
+			},
+			"es_ES": {
+				"label": "I_Metadescripción"
+			},
+			"fr_FR": {
+				"label": "I_MMeta Description"
+			},
+			"de_DE": {
+				"label": "I_Meta Beschreibung"
+			}
+		}
+	},
+	{
+		"id": "I_META_DOCUMENT_TYPE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_DOCUMENT_TYPE"
+			},
+			"es_ES": {
+				"label": "I_Tipo de metadocumento"
+			},
+			"fr_FR": {
+				"label": "I_Type de méta-document"
+			},
+			"de_DE": {
+				"label": "I_Metadokumenttyp"
+			}
+		}
+	},
+	{
+		"id": "I_META_EXPOSURE_CONTROLS",
+		"translations": {
+			"en_US": {
+				"label": "I_META_EXPOSURE_CONTROLS"
+			},
+			"es_ES": {
+				"label": "I_Controles de metaexposición"
+			},
+			"fr_FR": {
+				"label": "I_Contrôles d'exposition méta"
+			},
+			"de_DE": {
+				"label": "I_Meta-Belichtungssteuerung"
+			}
+		}
+	},
+	{
+		"id": "I_META_EXPOSURE_INDEX",
+		"translations": {
+			"en_US": {
+				"label": "I_META_EXPOSURE_INDEX"
+			},
+			"es_ES": {
+				"label": "I_Índice de metaexposición"
+			},
+			"fr_FR": {
+				"label": "I_Meta Exposure Index"
+			},
+			"de_DE": {
+				"label": "I_Meta Exposure Index"
+			}
+		}
+	},
+	{
+		"id": "I_META_FILE_NAME",
+		"translations": {
+			"en_US": {
+				"label": "I_META_FILE_NAME"
+			},
+			"es_ES": {
+				"label": "I_Nombre de archivo meta"
+			},
+			"fr_FR": {
+				"label": "I_Nom du fichier méta"
+			},
+			"de_DE": {
+				"label": "I_Name der Metadatei"
+			}
+		}
+	},
+	{
+		"id": "I_META_FILE_SIZE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_FILE_SIZE"
+			},
+			"es_ES": {
+				"label": "I_Tamaño de archivo meta"
+			},
+			"fr_FR": {
+				"label": "I_Taille du fichier méta"
+			},
+			"de_DE": {
+				"label": "I_Größe der Metadatei"
+			}
+		}
+	},
+	{
+		"id": "I_META_FOCAL_RANGE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_FOCAL_RANGE"
+			},
+			"es_ES": {
+				"label": "I_Rango meta focal"
+			},
+			"fr_FR": {
+				"label": "I_Gamme Meta Focal"
+			},
+			"de_DE": {
+				"label": "I_Meta-Fokusbereich"
+			}
+		}
+	},
+	{
+		"id": "I_META_HEADING",
+		"translations": {
+			"en_US": {
+				"label": "I_META_HEADING"
+			},
+			"es_ES": {
+				"label": "I_En-tête Meta"
+			},
+			"fr_FR": {
+				"label": "I_En-tête Meta"
+			},
+			"de_DE": {
+				"label": "I_Meta-Überschrift"
+			}
+		}
+	},
+	{
+		"id": "I_META_HIGH_RESOLUTION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_HIGH_RESOLUTION"
+			},
+			"es_ES": {
+				"label": "I_Meta alta resolución"
+			},
+			"fr_FR": {
+				"label": "I_Méta haute résolution"
+			},
+			"de_DE": {
+				"label": "I_Meta Hohe Auflösung"
+			}
+		}
+	},
+	{
+		"id": "I_META_KEYWORDS",
+		"translations": {
+			"en_US": {
+				"label": "I_META_KEYWORDS"
+			},
+			"es_ES": {
+				"label": "I_Meta palabras clave"
+			},
+			"fr_FR": {
+				"label": "I_Mots-clés Meta"
+			},
+			"de_DE": {
+				"label": "I_Meta-Keywords"
+			}
+		}
+	},
+	{
+		"id": "I_META_LIGHT_SOURCE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_LIGHT_SOURCE"
+			},
+			"es_ES": {
+				"label": "I_Fuente de luz meta"
+			},
+			"fr_FR": {
+				"label": "I_Meta Light Source"
+			},
+			"de_DE": {
+				"label": "I_Meta-Lichtquelle"
+			}
+		}
+	},
+	{
+		"id": "I_META_LOCATION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_LOCATION"
+			},
+			"es_ES": {
+				"label": "I_Meta ubicación"
+			},
+			"fr_FR": {
+				"label": "I_Meta Location"
+			},
+			"de_DE": {
+				"label": "I_Meta-Standort"
+			}
+		}
+	},
+	{
+		"id": "I_META_LOCATION_DETAIL",
+		"translations": {
+			"en_US": {
+				"label": "I_META_LOCATION_DETAIL"
+			},
+			"es_ES": {
+				"label": "I_Detalle de la meta ubicación"
+			},
+			"fr_FR": {
+				"label": "I_Détail de la méta localisation"
+			},
+			"de_DE": {
+				"label": "I_Meta-Standortdetail"
+			}
+		}
+	},
+	{
+		"id": "I_META_MAX_BLINDING_VALUE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_MAX_BLINDING_VALUE"
+			},
+			"es_ES": {
+				"label": "I_Valor de cegamiento meta máx"
+			},
+			"fr_FR": {
+				"label": "I_Valeur aveuglante Meta Max"
+			},
+			"de_DE": {
+				"label": "I_Meta Max Blinding Value"
+			}
+		}
+	},
+	{
+		"id": "I_META_MODELL",
+		"translations": {
+			"en_US": {
+				"label": "I_META_MODELL"
+			},
+			"es_ES": {
+				"label": "I_Meta modelo"
+			},
+			"fr_FR": {
+				"label": "I_Méta modèle"
+			},
+			"de_DE": {
+				"label": "I_Metamodell"
+			}
+		}
+	},
+	{
+		"id": "I_META_PIXEL_X_DIMENSION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_PIXEL_X_DIMENSION"
+			},
+			"es_ES": {
+				"label": "I_Dimensión Meta Pixel X"
+			},
+			"fr_FR": {
+				"label": "I_Dimension Meta Pixel X"
+			},
+			"de_DE": {
+				"label": "I_Meta Pixel X Dimension"
+			}
+		}
+	},
+	{
+		"id": "I_META_PIXEL_Y_DIMENSION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_PIXEL_Y_DIMENSION"
+			},
+			"es_ES": {
+				"label": "I_Dimensión Meta Pixel Y"
+			},
+			"fr_FR": {
+				"label": "I_Dimension méta-pixel Y"
+			},
+			"de_DE": {
+				"label": "I_Metapixel Y-Dimension"
+			}
+		}
+	},
+	{
+		"id": "I_META_RECORDING_DATE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_RECORDING_DATE"
+			},
+			"es_ES": {
+				"label": "I_Fecha de meta grabación"
+			},
+			"fr_FR": {
+				"label": "I_Date d'enregistrement méta"
+			},
+			"de_DE": {
+				"label": "I_Datum der Metaaufnahme"
+			}
+		}
+	},
+	{
+		"id": "I_META_SENSOR_TYPE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_SENSOR_TYPE"
+			},
+			"es_ES": {
+				"label": "I_Tipo de meta sensor"
+			},
+			"fr_FR": {
+				"label": "I_Type de capteur de méta"
+			},
+			"de_DE": {
+				"label": "I_Metasensortyp"
+			}
+		}
+	},
+	{
+		"id": "I_META_SERIAL_NUMBER",
+		"translations": {
+			"en_US": {
+				"label": "I_META_SERIAL_NUMBER"
+			},
+			"es_ES": {
+				"label": "I_Número de serie meta"
+			},
+			"fr_FR": {
+				"label": "I_Numéro de série Meta"
+			},
+			"de_DE": {
+				"label": "I_Meta-Seriennummer"
+			}
+		}
+	},
+	{
+		"id": "I_META_STATE",
+		"translations": {
+			"en_US": {
+				"label": "I_META_STATE"
+			},
+			"es_ES": {
+				"label": "I_Estado meta"
+			},
+			"fr_FR": {
+				"label": "I_État méta"
+			},
+			"de_DE": {
+				"label": "I_Meta-Status"
+			}
+		}
+	},
+	{
+		"id": "I_META_TITEL",
+		"translations": {
+			"en_US": {
+				"label": "I_META_TITEL"
+			},
+			"es_ES": {
+				"label": "I_Meta título"
+			},
+			"fr_FR": {
+				"label": "I_Meta Title"
+			},
+			"de_DE": {
+				"label": "I_Meta-Titel"
+			}
+		}
+	},
+	{
+		"id": "I_META_WIDTH_RESOLUTION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_WIDTH_RESOLUTION"
+			},
+			"es_ES": {
+				"label": "I_Resolución de ancho meta"
+			},
+			"fr_FR": {
+				"label": "I_Résolution méta-largeur"
+			},
+			"de_DE": {
+				"label": "I_Meta-Breitenauflösung"
+			}
+		}
+	},
+	{
+		"id": "I_META_X_RESOLUTION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_X_RESOLUTION"
+			},
+			"es_ES": {
+				"label": "I_Resolución Meta X"
+			},
+			"fr_FR": {
+				"label": "I_Résolution Meta X"
+			},
+			"de_DE": {
+				"label": "I_Meta X-Auflösung"
+			}
+		}
+	},
+	{
+		"id": "I_META_Y_RESOLUTION",
+		"translations": {
+			"en_US": {
+				"label": "I_META_Y_RESOLUTION"
+			},
+			"es_ES": {
+				"label": "I_Resolución Meta Y"
+			},
+			"fr_FR": {
+				"label": "I_Résolution Meta Y"
+			},
+			"de_DE": {
+				"label": "I_Meta Y-Auflösung"
+			}
+		}
+	},
+	{
+		"id": "I_MODIFICATION_DATE",
+		"translations": {
+			"en_US": {
+				"label": "I_MODIFICATION_DATE"
+			},
+			"es_ES": {
+				"label": "I_Fecha de modificación"
+			},
+			"fr_FR": {
+				"label": "I_Date de modification"
+			},
+			"de_DE": {
+				"label": "I_Änderungsdatum"
+			}
+		}
+	},
+	{
+		"id": "I_RESOLUTION",
+		"translations": {
+			"en_US": {
+				"label": "I_RESOLUTION"
+			},
+			"es_ES": {
+				"label": "I_Resolución"
+			},
+			"fr_FR": {
+				"label": "I_Résolution"
+			},
+			"de_DE": {
+				"label": "I_Auflösung"
+			}
+		}
+	},
+	{
+		"id": "lastmodifiedattribute",
+		"translations": {
+			"en_US": {
+				"label": "Last Modified"
+			},
+			"es_ES": {
+				"label": "Última modificación"
+			},
+			"fr_FR": {
+				"label": "Dernière modification"
+			},
+			"de_DE": {
+				"label": "Zuletzt geändert"
+			}
+		}
+	},
+	{
+		"id": "lastmodifiedbyattribute",
+		"translations": {
+			"en_US": {
+				"label": "Last Modified By"
+			},
+			"es_ES": {
+				"label": "ultima modificacion por"
+			},
+			"fr_FR": {
+				"label": "Dernière modification par"
+			},
+			"de_DE": {
+				"label": "Zuletzt geändert durch"
+			}
+		}
+	},
+	{
+		"id": "lastnameattribute",
+		"translations": {
+			"en_US": {
+				"label": "Last Name"
+			},
+			"es_ES": {
+				"label": "Apellido"
+			},
+			"fr_FR": {
+				"label": "Nom de famille"
+			},
+			"de_DE": {
+				"label": "Nachname"
+			}
+		}
+	},
+	{
+		"id": "listpriceattribute",
+		"translations": {
+			"en_US": {
+				"label": "List Price"
+			},
+			"es_ES": {
+				"label": "Precio de lista"
+			},
+			"fr_FR": {
+				"label": "Liste des prix"
+			},
+			"de_DE": {
+				"label": "Listenpreis"
+			}
+		}
+	},
+	{
+		"id": "longdescriptionattribute",
+		"translations": {
+			"en_US": {
+				"label": "Long Description"
+			},
+			"es_ES": {
+				"label": "descripción larga"
+			},
+			"fr_FR": {
+				"label": "longue description"
+			},
+			"de_DE": {
+				"label": "Lange Beschreibung"
+			}
+		}
+	},
+	{
+		"id": "dtpmaxslotsattribute",
+		"translations": {
+			"en_US": {
+				"label": "Maximum Number of Slots"
+			},
+			"es_ES": {
+				"label": "Número máximo de ranuras"
+			},
+			"fr_FR": {
+				"label": "Nombre maximum d'emplacements"
+			},
+			"de_DE": {
+				"label": "Maximale Anzahl von Steckplätzen"
+			}
+		}
+	},
+	{
+		"id": "maximumpriceattribute",
+		"translations": {
+			"en_US": {
+				"label": "Maximum Price"
+			},
+			"es_ES": {
+				"label": "Precio máximo"
+			},
+			"fr_FR": {
+				"label": "Prix ​​maximum"
+			},
+			"de_DE": {
+				"label": "Maximaler Preis"
+			}
+		}
+	},
+	{
+		"id": "minimumpriceattribute",
+		"translations": {
+			"en_US": {
+				"label": "Minimum Price"
+			},
+			"es_ES": {
+				"label": "Prix ​​minimum"
+			},
+			"fr_FR": {
+				"label": "Prix ​​minimum"
+			},
+			"de_DE": {
+				"label": "Minimaler Preis"
+			}
+		}
+	},
+	{
+		"id": "dtpminimumslotheightattribute",
+		"translations": {
+			"en_US": {
+				"label": "Minimum Slot Height"
+			},
+			"es_ES": {
+				"label": "Altura mínima de la ranura"
+			},
+			"fr_FR": {
+				"label": "Hauteur minimale de la fente"
+			},
+			"de_DE": {
+				"label": "Minimale Schlitzhöhe"
+			}
+		}
+	},
+	{
+		"id": "dtpminimumslotwidthattribute",
+		"translations": {
+			"en_US": {
+				"label": "Minimum Slot Width"
+			},
+			"es_ES": {
+				"label": "Ancho mínimo de ranura"
+			},
+			"fr_FR": {
+				"label": "Largeur minimale de la fente"
+			},
+			"de_DE": {
+				"label": "Minimale Steckplatzbreite"
+			}
+		}
+	},
+	{
+		"id": "nameattribute",
+		"translations": {
+			"en_US": {
+				"label": "Name"
+			},
+			"es_ES": {
+				"label": "Nombre"
+			},
+			"fr_FR": {
+				"label": "Nom"
+			},
+			"de_DE": {
+				"label": "Name"
+			}
+		}
+	},
+	{
+		"id": "pid_attribute",
+		"translations": {
+			"en_US": {
+				"label": "PID"
+			},
+			"es_ES": {
+				"label": "PID"
+			},
+			"fr_FR": {
+				"label": "PID"
+			},
+			"de_DE": {
+				"label": "PID"
+			}
+		}
+	},
+	{
+		"id": "pincodeattribute",
+		"translations": {
+			"en_US": {
+				"label": "Pin Code"
+			},
+			"es_ES": {
+				"label": "Código PIN"
+			},
+			"fr_FR": {
+				"label": "Code PIN"
+			},
+			"de_DE": {
+				"label": "Geheimzahl"
+			}
+		}
+	},
+	{
+		"id": "sellingpriceattribute",
+		"translations": {
+			"en_US": {
+				"label": "Selling Price"
+			},
+			"es_ES": {
+				"label": "Precio de venta"
+			},
+			"fr_FR": {
+				"label": "Prix ​​de vente"
+			},
+			"de_DE": {
+				"label": "Verkaufspreis"
+			}
+		}
+	},
+	{
+		"id": "shortdescriptionattribute",
+		"translations": {
+			"en_US": {
+				"label": "Short Description"
+			},
+			"es_ES": {
+				"label": "Breve descripción"
+			},
+			"fr_FR": {
+				"label": "Sbrève description"
+			},
+			"de_DE": {
+				"label": "kurze Beschreibung"
+			}
+		}
+	},
+	{
+		"id": "sku_attribute",
+		"translations": {
+			"en_US": {
+				"label": "SKU"
+			},
+			"es_ES": {
+				"label": "SKU"
+			},
+			"fr_FR": {
+				"label": "SKU"
+			},
+			"de_DE": {
+				"label": "Artikelnummer"
+			}
+		}
+	},
+	{
+		"id": "telephonenumberattribute",
+		"translations": {
+			"en_US": {
+				"label": "Telephone Number"
+			},
+			"es_ES": {
+				"label": "Número de teléfono"
+			},
+			"fr_FR": {
+				"label": "Numéro de téléphone"
+			},
+			"de_DE": {
+				"label": "Telefonnummer"
+			}
+		}
+	},
+	{
+		"id": "assetdownloadcountattribute",
+		"translations": {
+			"en_US": {
+				"label": "Asset Download Count"
+			},
+			"es_ES": {
+				"label": "Recuento de descargas de activos"
+			},
+			"fr_FR": {
+				"label": "Nombre de téléchargements d'actifs"
+			},
+			"de_DE": {
+				"label": "Anzahl der Asset-DownloadsE"
+			}
+		}
+	}
+]

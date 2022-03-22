@@ -1,0 +1,86 @@
+@import "./../../../../styleguide/style-guide";
+.ruleViolationIconContainer {
+  float: right;
+
+  .upperIcon {
+    height: 15px;
+    width: 15px;
+    background-size: 13px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    transition: all .2s;
+    float: left;
+
+    &.sectionElementRuleViolationIcon {
+      opacity: 0.56;
+      background-image: url($image-CS-Registered-Trademark-32);
+
+      &.selected {
+        opacity: 1;
+        background-image: url($image-CS-Registered-Trademark-Filled-32);
+      }
+
+      &:hover {
+        opacity: 1;
+        background-image: url($image-CS-Registered-Trademark-Filled-32);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ruleViolationsBodyContainer {
+
+  &.collapsed {
+    display: none;
+    transition: all ease 1s;
+  }
+
+  &.expanded {
+    display: block;
+    transition: all ease 1s;
+  }
+
+  .ruleViolationLabel {
+    line-height: 25px;
+    color: #838181;
+    font-size: 10px;
+    font-weight: 500;
+    display: none;
+  }
+
+  .ruleContainer {
+    padding: 5px 0;
+
+    .ruleColor {
+      z-index: 2;
+      border-radius: 50%;
+      float: left;
+      height: 15px;
+      width: 20px;
+      background-repeat: no-repeat;
+      background-position: 0px;
+      background-size: 18px;
+
+      &.red {
+        background-image: url($image-CS-HighImportance-48Red);
+      }
+
+      &.orange {
+        background-image: url($image-CS-HighImportance-48Orange);
+      }
+
+      &.yellow {
+        background-image: url($image-CS-HighImportance-48Yellow);
+      }
+    }
+
+    .ruleDescription {
+      margin-left: 5px;
+      overflow: auto;
+      font-size: 11px;
+      color: #777;
+    }
+  }
+}
+

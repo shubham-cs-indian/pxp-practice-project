@@ -1,0 +1,118 @@
+[{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "supplier",
+  "code": "supplier",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "-1"   
+  },
+  "sections": [
+    {
+      "propertyCollectionId": "supplierGeneralInformationPropertyCollection"     
+    }
+  ],
+  "isDefaultChild": true,
+  "isNature": false,	
+  "isAbstract": true,
+  "natureType": "",
+  "classifierIID": 34
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "suppliers",
+  "code": "suppliers",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 35
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "marketplaces",
+  "code": "marketplaces",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 36
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "distributors",
+  "code": "distributors",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 37
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "wholesalers",
+  "code": "wholesalers",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 38
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "translation_agency",
+  "code": "translation_agency",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 39
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "content_enrichment_agency",
+  "code": "content_enrichment_agency",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 40 
+},
+{
+  "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+  "id": "digital_asset_agency",
+  "code": "digital_asset_agency",
+  "isStandard": true,
+  "parent": {
+    "type": "com.cs.core.config.interactor.entity.supplier.Supplier",
+    "id": "supplier"   
+  },
+  "isAllowedAtTopLevel": true,
+  "isNature": true,
+  "natureType": "supplier",
+  "classifierIID": 41
+}]

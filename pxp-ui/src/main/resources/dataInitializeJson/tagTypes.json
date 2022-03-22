@@ -1,0 +1,148 @@
+[
+  {
+    "label": "Yes Neutral",
+    "id": "tag_type_yes_neutral",
+    "code": "tag_type_yes_neutral",
+    "tagValues": [
+      {
+        "label": "Neutral",
+        "code": "Neutraltag_type_yes_neutral",
+        "relevance" : 0
+      },
+      {
+        "label": "Yes",
+        "code": "Yestag_type_yes_neutral",
+        "relevance" : 100
+      }
+    ]
+  },
+  {
+    "label": "Yes Neutral No",
+    "id": "tag_type_yes_neutral_no",
+    "code": "tag_type_yes_neutral_no",
+    "tagValues": [
+      {
+        "label": "No",
+        "code": "Notag_type_yes_neutral_no",
+        "relevance" : -100
+      },
+      {
+        "label": "Neutral",
+        "code": "Neutraltag_type_yes_neutral_no",
+        "relevance" : 0
+      },
+      {
+        "label": "Yes",
+        "code": "Yestag_type_yes_neutral_no",
+        "relevance" : 100
+      }
+    ]
+  },
+  {
+    "label": "Range",
+    "id": "tag_type_range",
+    "code": "tag_type_range",
+    "tagValues": [
+      {
+        "label": "From",
+        "code": "Fromtag_type_range",
+        "relevance" : -100
+      },
+      {
+        "label": "To",
+        "code": "Totag_type_range",
+        "relevance" : 100
+      }
+    ],
+    "isRange": true
+  },
+  {
+    "label": "Custom",
+    "id": "tag_type_custom",
+    "code": "tag_type_custom",
+    "tagValues": [
+      {
+        "label": "From",
+        "code": "Fromtag_type_custom",
+        "relevance" : -100
+      },
+      {
+        "label": "To",
+        "code": "Totag_type_custom",
+        "relevance" : 100
+      }
+    ],
+    "isRange": true
+  },
+  {
+    "label": "Ruler",
+    "id": "tag_type_ruler",
+    "code": "tag_type_ruler"
+  },
+  {
+    "label": "Lifecycle Status",
+    "id": "tag_type_lifecycle_status",
+    "code": "tag_type_lifecycle_status"
+  },
+  {
+    "label": "Listing Status",
+    "id": "tag_type_listing_status",
+    "code": "tag_type_listing_status"
+  },
+  {
+    "label": "Status",
+    "id": "tag_type_status",
+    "code": "tag_type_status"
+  },
+  {
+    "label": "Boolean",
+    "id": "tag_type_boolean",
+    "code": "tag_type_boolean",
+    "tagValues": [
+      {
+        "label": "Yes",
+        "code": "Yestag_type_boolean",
+        "relevance" : 100
+      },
+      {
+        "label": "No",
+        "code": "Notag_type_boolean",
+        "relevance" : -100
+      }
+    ]
+  },
+  {
+    "label": "Master",
+    "id": "tag_type_master",
+    "code": "tag_type_master",
+    "tagValues": [
+      {
+        "label": "Neutral",
+        "code": "Neutraltag_type_master",
+        "relevance" : 0
+      },
+      {
+        "label": "Yes",
+        "code": "Yestag_type_master",
+        "relevance" : 100
+      }
+    ]
+  },
+  {
+    "label": "Language",
+    "id": "tag_type_language",
+    "code": "tag_type_language",
+    "tagValues": [
+      {
+        "label": "Neutral",
+        "code": "Neutraltag_type_language",
+        "relevance" : 0
+      },
+      {
+        "label": "Yes",
+        "code": "Yestag_type_language",
+        "relevance" : 100
+      }
+    ]
+  }
+]

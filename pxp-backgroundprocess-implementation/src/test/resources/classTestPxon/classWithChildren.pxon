@@ -1,0 +1,233 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Chandrani_1 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Chandrani_1",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "singleArticle",
+    "Jsections": {
+      
+    },
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Ch_PC_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Ch_PC_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "promotionalCollection",
+    "Jsections": {
+      
+    },
+    "parentCode": "Chandrani_1",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": true,
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Ch_SOP_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Ch_SOP_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "setOfProducts",
+    "Jsections": {
+      
+    },
+    "parentCode": "Chandrani_1",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": true,
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Chandrani_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Chandrani_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Chandrani_3 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Chandrani_3",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "Chandrani_2",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Chandrani_4 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Chandrani_4",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "Chandrani_2",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Chandrani_5 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Chandrani_5",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "Chandrani_4",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  }
+]

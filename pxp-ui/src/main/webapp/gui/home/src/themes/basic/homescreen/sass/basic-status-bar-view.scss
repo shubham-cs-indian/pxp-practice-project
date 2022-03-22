@@ -1,0 +1,27 @@
+@import "../../../../styleguide/style-guide";
+
+.statusBarContainer {
+  width: 100%;
+  height: calc(100% - 20px);
+  position: relative;
+  margin: 10px;
+
+  .statusBar {
+    width: 100%;
+    height: 15px;
+    background-color: $color-light-4;
+    border-radius: 7px;
+  }
+  .statusBarIndicator {
+    //width: 60%;
+    height: 15px;
+    background-color: $color-theme-accent;
+    position: absolute;
+    //top: 0;
+    transition: width 1s cubic-bezier(0.070, 0.475, 0.395, 0.985);
+    border-radius: 7px;
+   /* &:hover {
+      width: calc(100% - 20px)
+    }*/
+  }
+}

@@ -1,0 +1,31 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.contentTileListViewContainerWrapper {
+  .contentTileListViewContainer{
+    .tabLayoutView{
+      .contentTileListViewWrapper{
+        .contentHierarchyPreviewWrapper{
+          .taxonomySectionsViewContainer{
+            .tabLayoutView{
+              width: 100%;
+              margin: 0;
+
+              .tabItem{
+                padding: 0 6px;
+              }
+
+              .bodySection {
+                padding: 0;
+
+                .contentTileListView {
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

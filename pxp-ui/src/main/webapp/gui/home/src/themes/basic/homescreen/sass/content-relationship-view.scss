@@ -1,0 +1,194 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.relationshipViewContainer {
+  outline: 1px solid #BBBBBB;
+  margin: 5px 5px 15px 5px;
+  position: relative;
+  .relInfoContainer {
+    height: 30px;
+    background: #DEDEDE;
+    margin-bottom: 5px;
+    .relationshipContainer {
+      float: left;
+      margin: 0 2px 0 2px;
+      width: calc(100% - 200px);
+      height: 100%;
+      .relative1 {
+        height: 25px;
+        padding: 0 5px 0 5px;
+        margin: 1px 5px 1px 5px;
+        float: left;
+        position: relative;
+        top: 1px;
+        font-weight: bold;
+        outline: 1px solid #999;
+        line-height: 25px;
+      }
+
+      .cardinalityBar {
+        float: left;
+        position: relative;
+        top: 5px;
+        .cardinalityLeft {
+          float: left;
+          line-height: 20px;
+        }
+
+        .cardinality {
+          height: 15px;
+          float: left;
+          width: 100px;
+          position: relative;
+          top: -5px;
+          text-align: center;
+          border-bottom: 1px solid #777;
+        }
+
+        .cardinalityRight {
+          float: left;
+          line-height: 20px;
+        }
+
+        .showCardinalityIcon {
+          visibility: visible;
+        }
+
+      }
+
+      .relative2 {
+        height: 25px;
+        padding: 0 5px 0 5px;
+        margin: 1px 0px;
+        float: left;
+        position: relative;
+        top: 1px;
+        line-height: 25px;
+      }
+    }
+
+    .relationshipHeaderControls {
+      float: right;
+      .deleteRelationship {
+        text-align: center;
+        background: url($image-CS-Cancel-2-Filled-30-Red);
+        background-size: 15px;
+        width: 15px;
+        height: 15px;
+        opacity: .4;
+        margin: 5px;
+        float: right;
+        transition: all 0.2s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .relContentContainer {
+    position: relative;
+    max-height: 180px;
+    overflow: auto;
+    margin-bottom: 3px;
+    .relRelatedContents {
+      overflow: auto;
+    }
+
+    .relSelectedContents {
+      overflow: hidden;
+      min-height: 90px;
+    }
+
+  }
+
+  .relAvailableContentsContainer {
+    margin-top: 5px;
+    background-color: #F9F9F4;
+    .relAvailableContents {
+      min-height: 75px;
+      overflow: auto;
+      max-height: 255px;
+    }
+
+    .relAvailableContentsControls {
+      min-height: 30px;
+      line-height: 30px;
+      text-align: right;
+      padding-right: 10px;
+      button {
+        margin: 5px;
+        padding: 5px 10px;
+        border: 1px solid #aaa;
+        border-radius: 1px;
+        outline: none;
+        background-color: #fff;
+        color: #614F4F;
+        font-weight: bold;
+
+        &:hover {
+          border-color: #787878;
+        }
+
+        &:active {
+          background-color: #eee;
+        }
+      }
+
+      button[disabled] {
+        background-color: #aaaaaa;
+      }
+    }
+
+  }
+
+  .relationshipControls {
+    width: 100%;
+    position: absolute;
+    height: 20px;
+    bottom: 0;
+
+    .previewWrapper {
+
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 49%;
+      top: 7px;
+      background: #fff;
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 0px 2px 2px 0px #aaa;
+
+      .preview {
+        background: #FFFFFF url($image-CS-CircledDown32) no-repeat;
+        background-size: 25px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        opacity: .5;
+        transition: all .2s;
+        &:hover {
+          opacity: .8;
+        }
+        &.previewOpen {
+          background: #FFFFFF url($image-CS-CircledUp32) no-repeat;
+          background-size: 25px;
+        }
+      }
+    }
+  }
+
+  .contentRelWrapperInvisible {
+    display: none;
+  }
+
+  .relAvailableContents {
+    padding: 5px 0 5px 0;
+    min-height: 90px;
+    max-height: 180px;
+    overflow: auto;
+    border-top: 1px solid #ddd;
+    background-color: #F9F9F9;
+  }
+
+}*/

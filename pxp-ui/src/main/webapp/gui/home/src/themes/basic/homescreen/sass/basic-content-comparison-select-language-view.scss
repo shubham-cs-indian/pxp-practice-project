@@ -1,0 +1,102 @@
+@import "../../../../styleguide/style-guide";
+
+.contentComparisonSelectLanguageViewContainer {
+  .goldenRecordMatchPropertyContainer {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .gridView {
+    &.gridViewContainer {
+      padding: 0;
+      .gridViewMiddleSection {
+        .gridViewMiddleSectionWrapper {
+          padding-top: 44px;
+          .gridScrollWrapper {
+            padding-top:0;
+            .gridViewTableContainer {
+              .gridViewTable {
+                .leftFixedSection {
+                  border-left: 1px solid $color-light-5;
+                  border-right: 1px solid $color-light-5;
+                  box-shadow: none !important;
+                  .gridViewRow {
+                    .gridViewCell {
+                      &.header {
+                        &:first-child {
+                          box-shadow: inset -1px -1px 0 0 $color-light-5, inset 0px 1px 0 0 $color-light-5;
+                        }
+                      }
+                      float: none;
+                    }
+                  }
+                }
+                .gridRowContainer {
+                  &.gridViewRow {
+                    &.selected {
+                      background-color: $color-light-1;
+                    }
+                  }
+                }
+                .gridViewRow .gridViewCell {
+                  &.selectOption {
+                    &.disabled {
+                      background-color: $color-light-2;
+                    }
+                  }
+                  .header .headerLabel {
+                    font-size: $font-large;
+                    font-weight: normal;
+                  }
+                }
+              }
+            }
+          }
+          .gridViewTableContainerSibling {
+            //position: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.selectLanguageSummary {
+  margin-top: 15px;
+  .selectedLanguagesHeader {
+    font-size: $font-large;
+    float: left;
+  }
+  .chipsView {
+    .items {
+      margin: 2px 9px 2px 0;
+      position: relative;
+      .itemLabel {
+        font-size: $font-normal;
+        font-weight: 400;
+      }
+      .coloredIndicator {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          right: -2px;
+          top: -2px;
+          background-color: $color-light-1;
+          padding: 2px;
+          border-radius: 50px;
+          z-index: 2;
+            .relevanceFlag {
+              background-color: $color-light-green;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+          }
+       }
+    }
+  }
+}

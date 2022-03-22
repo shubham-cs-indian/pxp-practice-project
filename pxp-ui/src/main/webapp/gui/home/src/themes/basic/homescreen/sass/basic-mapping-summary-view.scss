@@ -1,0 +1,336 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.mappingSummaryView, .mappingView {
+
+  .mappingSummaryBlock {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+
+    .summaryBlock {
+      width: 25%;
+      display: inline-block;
+      border-left: 1px solid #ccc;
+
+      &:first-child {
+        border: none;
+      }
+
+      .blockLabel {
+        font-size: 16px;
+        text-align: center;
+      }
+      .blockValue {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .mappingRows {
+    padding: 0px;
+    background-color: #fff;
+    position: relative;
+    border: none;
+    overflow: auto;
+    height: calc(100% - 100px);
+
+    .addMappingRow {
+      @include background-properties($image-CS-Plus-32-black);
+      width: fit-content;
+      width: -moz-fit-content;
+      position: relative;
+      height: 26px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 2px;
+      border: 1px solid #ddd;
+      /*width: 120px;*/
+      margin: 20px;
+      background: #eee;
+      .addMappingIcon {
+        @include background-properties($image-CS-Plus-32-black, 16px);
+        background-image: url($image-CS-Plus-32-black);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        width: 22px;
+        height: 22px;
+        float: left;
+      }
+
+      .addMappingText {
+        font-size: 12px;
+        float: left;
+        line-height: 22px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    .addedRows {
+      //max-height: 450px;
+      //max-height: 360px;
+      //overflow: auto;
+      padding: 5px 20px;
+
+      .headerForInboundMapping {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        margin-bottom: 15px;
+        grid-gap: 10px;
+      }
+      .headerForOutboundMapping {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-bottom: 15px;
+        grid-gap: 10px;
+      }
+
+      &.outBound {
+        .mappingRow {
+          display: grid;
+          grid-template-columns: 43% 5% 43% 5%;
+          grid-gap: 10px;
+          align-items: center;
+
+          .mappingElement {
+            width: 100%;
+            margin: 0;
+
+            .multiSelect {
+              margin: 0;
+            }
+          }
+
+          .fieldName {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .mappingRow {
+      padding: 5px 10px;
+      position: relative;
+
+      &:nth-child(even){
+        background: #fafafa;
+      }
+
+      .mappingCheckbox {
+        margin-right: 10px;
+      }
+
+      input, select {
+        padding: 4px 6px;
+        border: 1px solid #ddd;
+      }
+
+      .inputError {
+        border-color: red;
+      }
+
+      .fieldName {
+        display: inline-block;
+        width: 41%;
+      }
+
+      .fieldNameLabel{
+        line-height: 30px;
+        font-weight: 500;
+      }
+
+      .mappingElement {
+        display: inline-block;
+        margin: 0 20px;
+        width: 41%;
+        vertical-align: top;
+
+        .mappedElement {
+          //content: "Mapped Element";
+          font-size: 12px;
+          margin-right: 5px;
+          line-height: 27px;
+          position: absolute;
+          max-width: 110px;
+          @include ellipsis()
+        }
+        .multiSelect{
+          border: 1px solid #eee;
+          border-radius: 5px;
+          margin-left: 110px;
+          .multiSelectSearchViewWrapper{
+            min-height: 26px;
+          }
+        }
+
+        .disabled {
+          background-color: $color-light-5;
+          box-shadow: none;
+        }
+
+        .lazyMSSContainer{
+          .multiSelectSearchView{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+          }
+        }
+
+        .attributeTagSelectorContainer{
+
+        }
+
+      }
+
+      .multiSelect{
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin-left: 76px;
+      }
+
+      .isIgnored {
+        display: inline-block;
+        background-image: url($image-CS-Cancel-2-Filled-30);
+        background-size: 15px;
+        width: 26px;
+        height: 16px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: .5;
+
+        &.selected {
+          background-image: url($image-CS-Cancel-2-Filled-30-Red);
+          opacity: 1;
+        }
+      }
+
+      .addTagValue {
+        @include background-properties($image-CS-Plus-32-black,19px);
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        opacity: 0.5;
+        cursor: pointer;
+        vertical-align: middle;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .deleteButton {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background-image: url($image-CS-Cross);
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        opacity: 0;
+      }
+      &:hover {
+        .deleteButton {
+          opacity: 0.5;
+        }
+      }
+
+      .mappingTagValuesRow {
+        margin-left: 25px;
+        //margin-top: 10px;
+        display: inline-block;
+        width: calc(100% - 25px);
+        .tagValueRowWrapper {
+          float: left;
+          width: 100%;
+          margin-top: 5px;
+          position: relative;
+          .tagValueMappingCheckbox {
+            padding: 4px 6px;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            margin-top: 8px;
+            float: left;
+          }
+          .tagValuesWrapper {
+            float: left;
+            width: 41%;
+            .tagValueInputField {
+
+            }
+          }
+
+          .mappingElement {
+            float: left;
+            width: 34%;
+
+            .multiSelect{
+              width: 135px;
+            }
+          }
+
+          .ignoreCaseWrapper {
+            padding: 4px;
+            width: auto;
+            float: left;
+
+            .checkbox {
+              float: left;
+              width: 20px;
+            }
+
+            .checkboxLabel {
+              float: left;
+              font-size: 12px;
+              margin-top: 2px;
+              margin-left: 3px;
+            }
+          }
+
+          .isIgnored {
+            display: inline-block;
+            background-image: url($image-CS-Cancel-2-Filled-30);
+            background-size: cover;
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+            cursor: pointer;
+
+            &.selected {
+              background-image: url($image-CS-Cancel-2-Filled-30-Red);
+            }
+          }
+
+          .deleteButton {
+            position: absolute;
+            right: 0px;
+            top: 7px;
+            background-image: url($image-CS-Cross);
+            background-size: cover;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            opacity: 0;
+          }
+          &:hover {
+            .deleteButton {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+
+    .nothingFoundViewContainer {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+    }
+  }
+}

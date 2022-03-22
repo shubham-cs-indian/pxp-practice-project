@@ -1,0 +1,182 @@
+{
+  "content": [
+    {
+      "id": "123968",
+      "label": "sas",
+      "languageCode": "en_US",
+      "typeIds": [
+        "single_article"
+      ],
+      "taxonomyIds": [
+        
+      ],
+      "properties": {
+        "attributes": {
+          "pid_attribute": "hfg",
+          "sellingpriceattribute": "12"
+        },
+        "tags": {
+          
+        },
+        "attributeVariants": [
+          {
+            "variantId": "var968",
+            "contentId": "123968",
+            "parentId": "",
+            "context": {
+              "contextId": "attr_var",
+              "parentContextId": "",
+              "tags": {
+                "t2": [
+                  "3"
+                ]
+              },
+              "timeRange": {
+                "from": "",
+                "to": ""
+              }
+            },
+            "properties": {
+              "attributes": { 
+                "shortdescriptionattribute": "123"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "abc124",
+      "label": "darticle1",
+      "languageCode": "en_US",
+      "typeIds": [
+        "single_article"
+      ],
+      "taxonomyIds": [
+        
+      ],
+      "properties": {
+        "attributes": {
+          
+        },
+        "tags": {
+          
+        },
+        "attributeVariants": [
+          
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "111222",
+      "label": "dasset",
+      "languageCode": "en_US",
+      "typeIds": [
+        "image_asset"
+      ],
+      "fileSource": "fromFolder",
+      "filePath": "",
+      "taxonomyIds": [
+        
+      ],
+      "properties": {
+        "attributes": {
+          "longdescriptionattribute": "sfsdnjvnsjkdfsv"
+        },
+        "tags": {
+          
+        }
+      }
+    }
+  ],
+  "embeddedVariants": [
+    {
+      "variantId": "em1",
+      "contentId": "123968",
+      "languageCode": "en_US",
+      "parentId": "",
+      "typeIds": [
+        "embed1"
+      ],
+      "taxonomyIds": [
+        
+      ],
+      "context": {
+        "contextId": "c959260a-b499-4186-aedd-915e22686533",
+        "parentContextId": "",
+        "tags": {
+          "prc": [
+            "low"
+          ]
+        },
+        "timeRange": {
+          "from": "",
+          "to": ""
+        }
+      },
+      "properties": {
+        "attributes": {
+          "listpriceattribute": "1"
+        },
+        "tags": {
+          
+        },
+        "attributeVariants": [
+          
+        ]
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "side1Id": "123968",
+      "side2Id": "111222",
+      "languageCode": "en_US",
+      "relationshipId": "standardArticleAssetRelationship",
+      "optional": {
+        "context": {
+          "contextId": "",
+          "tags": {
+            
+          },
+          "timeRange": {
+            "from": "",
+            "to": ""
+          }
+        }
+      }
+    }
+  ],
+  "references": [
+    {
+      "id": "ref1",
+      "referenceId": "sArAsRef",
+      "side1Id": "123968",
+      "side2Id": "111222"
+    }
+  ],
+  "natureRelationships": [
+    {
+      "side1Id": "123968",
+      "side2Id": "abc124",
+      "languageCode": "en_US",
+      "relationshipId": "9306afbc-850a-4efb-8c7f-e4459c59ef90",
+      "optional": {
+        "context": {
+          "contextId": "Nrel",
+          "tags": {
+            "prc": [
+              "low"
+            ]
+          },
+          "timeRange": {
+            "from": "",
+            "to": ""
+          }
+        }
+      }
+    }
+  ]
+}

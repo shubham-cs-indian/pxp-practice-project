@@ -1,0 +1,862 @@
+[
+  {
+    "Jsections": {
+      "Test_PC": [
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "Hr_Calculated",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_Date",
+          "defaultvalue": "aaaaaaaaa",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_HTML_RV",
+          "defaultvalue": "aaaaaaaaa",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 1,
+          "$code": "Hr_Measurement",
+          "defaultvalue": "111.1234",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "Hr_Number",
+          "defaultvalue": "111.1234",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 1,
+          "$code": "Hr_Price",
+          "defaultvalue": "111.1234",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_Text_NV",
+          "defaultvalue": "ABC",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_HTML2",
+          "defaultvalue": "ABC",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_T_dependent",
+          "defaultvalue": "A",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": true,
+          "isidentifier": false,
+          "$code": "Hr_H_dependent",
+          "defaultvalue": "XYZ",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": true,
+          "isidentifier": false,
+          "$code": "Hr_Conact",
+          "defaultvalue": "XY",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": true,
+          "isidentifier": false,
+          "$code": "Hr_HTML_test",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_HTML_new",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Bool1",
+          "ismultiselect": true,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Master1",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test__LOV1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Unit1",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Range1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Ruler1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_YNeuNo1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Status1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        }
+      ]
+    },
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      "Hr11",
+      "Hr22",
+      "Hr33"
+    ],
+    "csid": "[c>Test_Major_Taxonomy_New $type=HIERARCHY]",
+    "parentCode": "-1",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      "Hr11",
+      "Hr22",
+      "Hr33"
+    ],
+    "Jembeddedclasses": {
+      
+    },
+    "label": "Test_Major_Taxonomy_New",
+    "LRelationships": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T101_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T101_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Test_Major_Taxonomy_New",
+    "masterParentTag": "Hr11",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T102_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T102_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Test_Major_Taxonomy_New",
+    "masterParentTag": "Hr11",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T103_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T103_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Test_Major_Taxonomy_New",
+    "masterParentTag": "Hr11",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T104_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T104_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T101_New",
+    "masterParentTag": "Hr22",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T105_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T105_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T101_New",
+    "masterParentTag": "Hr22",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T106_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T106_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T104_New",
+    "masterParentTag": "Hr33",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T107_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T107_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T102_New",
+    "masterParentTag": "Hr22",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T108_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T108_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T103_New",
+    "masterParentTag": "Hr22",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T109_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T109_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T107_New",
+    "masterParentTag": "Hr33",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>T110_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "T110_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "T108_New",
+    "masterParentTag": "Hr33",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "majorTaxonomy"
+  },
+  {
+    "Jsections": {
+      "Test_PC": [
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 0,
+          "$code": "Hr_Calculated",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_Date",
+          "defaultvalue": "aaaaaaaaa",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_HTML_RV",
+          "defaultvalue": "aaaaaaaaa",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 1,
+          "$code": "Hr_Measurement",
+          "defaultvalue": "111.1234",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 2,
+          "$code": "Hr_Number",
+          "defaultvalue": "111.1234",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "precision": 1,
+          "$code": "Hr_Price",
+          "defaultvalue": "111.1234",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_Text_NV",
+          "defaultvalue": "ABC",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_HTML2",
+          "defaultvalue": "ABC",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_T_dependent",
+          "defaultvalue": "A",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": true,
+          "isidentifier": false,
+          "$code": "Hr_H_dependent",
+          "defaultvalue": "XYZ",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": true,
+          "isidentifier": false,
+          "$code": "Hr_Conact",
+          "defaultvalue": "XY",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": true,
+          "isidentifier": false,
+          "$code": "Hr_HTML_test",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Hr_HTML_new",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "attribute"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Bool1",
+          "ismultiselect": true,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Master1",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test__LOV1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Unit1",
+          "ismultiselect": false,
+          "isversionable": true,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Range1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": true,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Ruler1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_YNeuNo1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "$istranslatable": false,
+          "isidentifier": false,
+          "$code": "Test_Status1",
+          "ismultiselect": false,
+          "isversionable": false,
+          "isskipped": false,
+          "$isinherited": false,
+          "$type": "tag"
+        }
+      ]
+    },
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      "Hr44",
+      "Hr55"
+    ],
+    "csid": "[c>Hr_minor_New $type=HIERARCHY]",
+    "parentCode": "-1",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      "Hr44",
+      "Hr55"
+    ],
+    "Jembeddedclasses": {
+      
+    },
+    "label": "Hr_minor_New",
+    "LRelationships": [
+      
+    ],
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Hr_minor11_New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Hr_minor11_New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Hr_minor_New",
+    "masterParentTag": "Hr44",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "minorTaxonomy"
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Hr_minor21__New $type=HIERARCHY]",
+    "_subtype": "HIERARCHY_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Hr_minor21__New",
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "parentCode": "Hr_minor11_New",
+    "masterParentTag": "Hr55",
+    "Jembeddedclasses": {
+      
+    },
+    "taxonomytype": "minorTaxonomy"
+  }
+]

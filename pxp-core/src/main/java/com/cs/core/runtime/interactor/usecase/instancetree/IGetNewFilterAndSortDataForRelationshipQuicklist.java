@@ -1,0 +1,8 @@
+package com.cs.core.runtime.interactor.usecase.instancetree;
+
+import com.cs.core.runtime.interactor.model.instancetree.IGetFilterAndSortDataForRelationshipQuicklistRequestModel;
+import com.cs.core.runtime.interactor.model.instancetree.IGetNewFilterAndSortDataForRQResponseModel;
+import com.cs.core.runtime.interactor.usecase.base.IRuntimeInteractor;
+
+public interface IGetNewFilterAndSortDataForRelationshipQuicklist extends IRuntimeInteractor<IGetFilterAndSortDataForRelationshipQuicklistRequestModel, IGetNewFilterAndSortDataForRQResponseModel> {
+}

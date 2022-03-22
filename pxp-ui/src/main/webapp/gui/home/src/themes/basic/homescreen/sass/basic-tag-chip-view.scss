@@ -1,0 +1,48 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.tagChipView {
+  @include topInlineBlock();
+
+  .tagChip {
+    //display: inline-flex;
+    @include topInlineBlock();
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 0 4px 4px 4px;
+    border-radius: 3px;
+    min-height: 30px;
+    background-color: #f6f6f6;
+    box-shadow: inset 0 0 0 1px $color-light-5;
+    cursor: pointer;
+    overflow: hidden;
+
+    .tagGroupLabel {
+      font-weight: 500;
+      line-height: 22px;
+      padding-top: 4px;
+      font-size: 11px;
+      color: #555;
+      @include topInlineBlock();
+    }
+
+    .tagChild {
+      margin: 4px 0 0px 5px;
+      border-radius: 3px;
+      padding: 0 3px 0 3px;
+      background-color: #ddd;
+      @include topInlineBlock();
+
+      &.light {
+        opacity: .5;
+      }
+
+      .tagChildLabel {
+        line-height: 22px;
+        font-size: 11px;
+        @include ellipsis();
+      }
+    }
+  }
+}*/

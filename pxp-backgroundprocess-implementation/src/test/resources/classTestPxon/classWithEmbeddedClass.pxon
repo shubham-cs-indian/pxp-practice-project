@@ -1,0 +1,194 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_article $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_article",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_IND_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_IND_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "singleArticle",
+    "Jsections": {
+      
+    },
+    "parentCode": "new_article",
+    "Jembeddedclasses": {
+      "new_Unit_2": {
+        "$couplings": [
+          {
+            "code": "statustag",
+            "couplingType": "tightlyCoupled",
+            "id": "statustag",
+            "type": "tag"
+          }
+        ],
+        "label": "new_Unit_2"
+      },
+      "new_Embedded_2": {
+        "$couplings": [
+          {
+            "code": "statustag",
+            "couplingType": "tightlyCoupled",
+            "id": "statustag",
+            "type": "tag"
+          }
+        ],
+        "label": "new_Embedded_2"
+      }
+    },
+    "isdefault": true,
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_Unit_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_Unit_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "unit",
+    "Jsections": {
+      
+    },
+    "parentCode": "new_article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_PID_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_PID_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "pidSku",
+    "Jsections": {
+      
+    },
+    "parentCode": "new_article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": true,
+    "$isnature": true
+  },
+  {
+    "Ltasks": [
+      
+    ],
+    "Levents": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_Embedded_2 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_Embedded_2",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 10,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "embedded",
+    "Jsections": {
+      
+    },
+    "parentCode": "new_article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": true
+  }
+]

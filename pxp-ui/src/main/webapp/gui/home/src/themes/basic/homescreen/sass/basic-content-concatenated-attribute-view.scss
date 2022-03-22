@@ -1,0 +1,105 @@
+@import "./../../../../styleguide/style-guide";
+.contentConcatenatedAttributeContainer{
+  .concatenatedUpperIconContainer{
+    height: 16px;
+    float: right;
+
+    .modeIcon{
+      height: 16px;
+      width: 16px;
+      background-size: cover;
+      cursor: pointer;
+      margin: 0 2px;
+      opacity: .7;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      float: right;
+
+      &:hover {
+        opacity: .95;
+      }
+
+      &.editIcon{
+        background-image: url($image-CS-Edit-32);
+        background-size: 12px;
+      }
+
+      &.previewIcon{
+        background-image: url($image-CS-eye-black);
+      }
+    }
+  }
+  .concatenatedAttributeEditableWrapper{
+    float: left;
+    margin-left: 5px;
+    width: calc(100% - 25px);
+    .textFieldLabel {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: inherit;
+      z-index: 1;
+      min-width: 40px;
+    }
+
+    .concatenatedAttributeInputLabel{
+      font-size: 11px;
+      color: #333;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: calc(100% - 50px);
+    }
+
+    .concatenatedAttributeElementWrapper{
+      margin: 0;
+      span{
+        word-wrap: break-word;
+      }
+      .froalaWrapperView{
+        margin: 5px 0;
+        //display: inline-block;
+        .customFroalaView {
+          border: none;
+          word-wrap: break-word;
+
+          p{
+            margin: 0;
+            word-break: break-all;
+          }
+
+          .fr-counter{
+            display: none;
+          }
+        }
+      }
+
+      .expressionStringInput{
+        border: none;
+        margin: 5px 0;
+        &:focus{
+          outline: none;
+        }
+
+        &.disabled{
+          background-color: transparent;
+          color: rgb(191, 185, 185);
+          font-weight: 500;
+          font-style: italic;
+          width:100%;
+        }
+      }
+    }
+
+    .concatenatedAttributeInputDescription{
+
+      &.textFieldDescription{
+        font-size: 11px;
+        color: #aaa;
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

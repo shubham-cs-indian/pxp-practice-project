@@ -1,0 +1,105 @@
+[
+	
+	{
+		"code": "adminrole",
+		"id": "adminrole",
+		"roleType": "admin",
+        "isStandard": true,
+        "isMultiselect": true,
+		"type": "com.cs.core.config.interactor.entity.standard.role.AdminRole",
+		"users": [
+			{
+				"id": "admin",
+				"type": "com.cs.core.config.interactor.entity.user.User"
+			}
+		]
+	},
+	{
+		"code": "approverrole",
+		"id": "approverrole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.core.config.interactor.entity.klass.ProjectKlass",
+					"com.cs.core.config.interactor.entity.task.Task",
+					"com.cs.core.config.interactor.entity.klass.Asset",
+					"com.cs.core.config.interactor.entity.klass.Market"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.ApproverRole"
+	},
+	{
+		"code": "ownerrole",
+		"id": "ownerrole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.config.interactor.entity.klass.ProjectKlass",
+					"com.cs.core.config.interactor.entity.task.Task",
+					"com.cs.core.config.interactor.entity.klass.Asset",
+					"com.cs.core.config.interactor.entity.klass.Market"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.OwnerRole"
+	},
+	{
+		"code": "subscriberrole",
+		"id": "subscriberrole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.config.interactor.entity.klass.ProjectKlass",
+					"com.cs.core.config.interactor.entity.task.Task",
+					"com.cs.core.config.interactor.entity.klass.Asset",
+					"com.cs.core.config.interactor.entity.klass.Market"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.SubscriberRole"
+	},
+	{
+		"code": "contributorrole",
+		"id": "contributorrole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.config.interactor.entity.klass.ProjectKlass",
+					"com.cs.core.config.interactor.entity.task.Task",
+					"com.cs.core.config.interactor.entity.klass.Asset",
+					"com.cs.core.config.interactor.entity.klass.Market"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.ContributorRole"
+	},
+	{
+		"code": "reviewerrole",
+		"id": "reviewerrole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.config.interactor.entity.klass.ProjectKlass",
+					"com.cs.core.config.interactor.entity.task.Task",
+					"com.cs.core.config.interactor.entity.klass.Asset",
+					"com.cs.core.config.interactor.entity.klass.Market"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.VerifyRole"
+	},
+	{
+		"code": "seniormanagerrole",
+		"id": "seniormanagerrole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.config.interactor.entity.klass.ProjectKlass",
+					"com.cs.core.config.interactor.entity.task.Task",
+					"com.cs.core.config.interactor.entity.klass.Asset",
+					"com.cs.core.config.interactor.entity.klass.Market"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.SeniorManagerRole"
+	},
+	{
+		"code": "assigneerole",
+		"id": "assigneerole",
+        "isStandard": true,
+        "isMultiselect": false,
+		"klassType": ["com.cs.core.config.interactor.entity.task.Task"],
+		"type": "com.cs.core.config.interactor.entity.standard.role.VerifyRole"
+	},
+	{
+		"code": "backgroundrolestandardorganization",
+		"id": "backgroundrolestandardorganization",
+        "isStandard": true,
+        "isMultiselect": false,
+        "isBackgroundRole":true,
+		"type": "com.cs.core.config.interactor.entity.standard.role.BackgroundRole",
+		"users": [
+			{
+				"id": "backgrounduserstandardorganization",
+				"type": "com.cs.core.config.interactor.entity.user.User"
+			}
+		]
+	}
+]

@@ -1,0 +1,71 @@
+package com.cs.core.initialize;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.cs.core.config.interactor.model.configdetails.IListModel;
+import com.cs.core.runtime.interactor.model.configuration.ApplicationStatusForMigration;
+import com.cs.core.runtime.interactor.model.configuration.IIdsListParameterModel;
+import com.cs.core.runtime.interactor.model.configuration.IMigrationModel;
+import com.cs.core.runtime.interactor.model.configuration.IdsListParameterModel;
+import com.cs.core.runtime.interactor.model.configuration.ListModel;
+import com.cs.core.runtime.interactor.model.configuration.MigrationModel;
+import com.cs.core.runtime.strategy.usecase.migration.IMigrationExecutedStrategy;
+import com.cs.core.runtime.strategy.usecase.migration.IMigrationStrategy;
+import com.cs.core.runtime.strategy.usecase.migration.ISaveMigrationStrategy;
+import com.cs.core.runtime.strategy.utils.ObjectMapperUtil;
+import com.fasterxml.jackson.core.type.TypeReference;
+
+@Component
+public class InitializeRuntimeMigrationService implements IInitializeRuntimeMigrationService {
+  
+  @Autowired
+  protected IMigrationExecutedStrategy    runtimeCheckMigrationExecutedStrategy;
+  
+  @Autowired
+  protected IMigrationStrategy            runtimeMigrationStrategy;
+  
+  @Autowired
+  protected ISaveMigrationStrategy        runtimeSaveMigrationStrategy;
+  
+  @Autowired
+  protected ApplicationStatusForMigration applicationStatus;
+  
+  @Override
+  public void execute() throws Exception
+  {
+    InputStream stream = InitializeRuntimeMigrationService.class.getClassLoader()
+        .getResourceAsStream("runtimemigration.json");
+    List<IMigrationModel> migrations = ObjectMapperUtil.readValue(stream,
+        new TypeReference<List<MigrationModel>>()
+        {
+        });
+    if (applicationStatus.isCleanInstallation()) {
+      IListModel<IMigrationModel> model = new ListModel<>();
+      model.setList(migrations);
+      runtimeSaveMigrationStrategy.execute(model);
+    }
+    else {
+      List<String> ids = new ArrayList<>();
+      for (IMigrationModel migration : migrations) {
+        String id = migration.getId();
+        ids.add(id);
+      }
+      IIdsListParameterModel model = new IdsListParameterModel();
+      model.setIds(ids);
+      
+      IIdsListParameterModel response = runtimeCheckMigrationExecutedStrategy.execute(model);
+      List<String> migrationToBeSaved = response.getIds();
+      for (IMigrationModel migration : migrations) {
+        String migrationId = migration.getId();
+        if (migrationToBeSaved.contains(migrationId)) {
+          runtimeMigrationStrategy.execute(migration);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import "./../../../../styleguide/style-guide";
+.systemsSelectionViewContainer {
+  box-shadow: 0 0 0 1px #cacaca;
+  margin: 10px 15px 10px 15px;
+  border-radius: 2px;
+  //width: 97%;
+  height: auto;
+  //float: left;
+
+  &.role {
+    margin-right: 7px;
+  }
+
+  .systemsSelectionViewHeaderContainer {
+    text-align: center;
+    background: #ccc;
+    line-height: 35px;
+    overflow: auto;
+    position: relative;
+
+    .systemsSelectionViewHeaderLabel{
+      width: calc(100% - 34px);
+      float: left;
+    }
+
+    .systemsSelectionAddSystems {
+      height: 34px;
+      width: 34px;
+      opacity: 0.6;
+      position: relative;
+      float: right;
+      @include background-properties($image-CS-Plus-32-black, 25px);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .systemsSelectionViewBodyContainer {
+    height: auto;
+    min-height: 100px;
+
+    .endpointsSelectionViewContainer {
+      box-shadow: 0 0 0 1px #cacaca;
+      margin: 10px;
+      border-radius: 2px;
+      height: auto;
+
+      .systemsSelectionViewHeaderLabel {
+        text-align: center;
+      }
+
+      .endpointsSelectionHeaderContainer {
+        position: relative;
+        box-shadow: 0 0 0 1px #ccc;;
+        background-color: #fff;
+        overflow: hidden;
+      }
+
+      .button {
+        margin: 8px;
+        height: 15px;
+        width: 15px;
+        float: left;
+        opacity: 0.4;
+        cursor: pointer;
+        border-radius: 2px;
+        background-size: 15px;
+        background-repeat: no-repeat;
+
+        &.endpointsSelectionHeaderCheckbox {
+          margin: 8px 0 8px 8px;
+
+          &.zero {
+            background-image: url($image-CS-Unchecked-Checkbox-48-Material);
+          }
+
+          &.one {
+            background-image: url($image-checkbox-partial);
+          }
+
+          &.two {
+            background-image: url($image-CS-Checked-48Black);
+          }
+
+          &.notDisabled {
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        &.endpointsSelectionHeaderCrossButton {
+          position: absolute;
+          background-image: url($image-CS-Cross);
+          top: 0;
+          right: 0;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .endpointsSelectionHeaderLabel {
+        line-height: 30px;
+        float: left;
+        font-weight: 500;
+        margin-left: 8px;
+      }
+    }
+
+    .endpointsSelectionBodyContainer {
+      padding: 5px 10px;
+
+      .disabledSelectionToggle {
+        .tagElement {
+          cursor: not-allowed;
+
+          &.tagElementSelected {
+            background: #fff;
+            color: #555;
+            border-color: $color-theme-accent;
+            box-shadow: 0px 0px 0px 1px $color-theme-accent inset;
+
+            &:hover {
+              background: #fff;
+              color: #555;
+              border-color: $color-theme-accent;
+              box-shadow: 0px 0px 0px 1px $color-theme-accent inset;
+            }
+          }
+
+          &:hover {
+            background: none;
+            color: #aaa;
+            border-color: #bbb;
+            box-shadow: none;
+          }
+        }
+      }
+
+      .groupLabel {
+        float: left;
+        width: 140px;
+        overflow: hidden;
+        line-height: 35px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .groupValueSelector {
+        float: left;
+        width: calc(100% - 140px);
+      }
+    }
+  }
+}

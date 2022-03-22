@@ -1,0 +1,25 @@
+[
+  "bgp 1000486 started 2020-04-08T10:05:28",
+  "scope={\"csidFormat\":\"SYSTEM\",\"catalogCode\":\"pim\",\"localeInheritance\":[\"en_US\"],\"allEntities\":false,\"includeEmbeddedEntities\":false,\"itemTypes\":[\"USER\"],\"USER\":[]}",
+  "User Names=All",
+  {
+    "firstname": "admin",
+    "$username": "admin",
+    "csid": "[U>\"admin\" $iid=10]",
+    "$code": "admin",
+    "$isbackgrounduser": false,
+    "email": "kontentsphere@gmail.com",
+    "lastname": ""
+  },
+  {
+    "firstname": "Standard Organization",
+    "$username": "BackgroundUser_StandardOrganization",
+    "csid": "[U>\"BackgroundUser_StandardOrganization\" $iid=1000000]",
+    "$code": "backgrounduserstandardorganization",
+    "$isstandard": true,
+    "$isbackgrounduser": true,
+    "email": "kontentsphere@gmail.com",
+    "lastname": "Background User"
+  },
+  "bgp 1000486 ended 2020-04-08T10:05:28"
+]

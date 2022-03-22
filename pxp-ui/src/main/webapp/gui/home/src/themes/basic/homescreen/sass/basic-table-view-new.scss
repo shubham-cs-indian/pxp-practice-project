@@ -1,0 +1,226 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.tableWrapper {
+  width: 100%;
+  float: left;
+  height: inherit;
+  border: 1px solid $color-light-15;
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+  .tableHeaderData {
+    background: $color-light-11;
+    height:70px;
+
+    .rowView {
+      .gridCellWrapper{
+        .showLabel{
+          font-size: 11px;
+          margin-bottom: 10px;
+          &.eyeIcon{
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-eye-black, 16px, left 10px center)
+          }
+          &.editIcon{
+            padding-left: 30px;
+            @include background-properties-with-gray-color($image-CS-Edit-32, 16px, left 10px center)
+          }
+          &.addIcon{
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-Plus-32-black, 16px, left 10px center)
+          }
+          &.removeIcon{
+            padding-left: 18px;
+            @include background-properties-with-gray-color($image-CS-delete-bin-black, 16px, left 0px center);
+          }
+        }
+        .tableLabel{
+          margin-top:30px;
+          font-weight: 500;
+        }
+      }
+      .gridCellWrapper:first-child {
+        .permissionLabel {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .tableRowData{
+    .rowView{
+      &:first-child{
+        border-top: 1px solid $color-light-15;
+      }
+    }
+  }
+  .rowView {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    border-bottom: 1px solid $color-light-15;
+
+    .gridCellWrapper {
+      min-height: 40px;
+      height:100%;
+      display: flex;
+      width: 100%;
+      float: left;
+      align-items: center;
+      border-right: 1px solid $color-light-4;
+      justify-content: center;
+      padding: 0 10px;
+
+      .tableCellWrapper {
+        padding: 3px 0;
+        .tableLabel {
+          @include ellipsis();
+          font-size: 12px;
+          line-height: 14px;
+
+          &.propertyCollection {
+            padding-left: 40px;
+            @include background-properties($image-CS-table-black-50, 16px, left 15px bottom 10px);
+            position: relative;
+            height: 50px;
+            margin-top: 10px;
+
+            .showLabel {
+              font-size: 13px;
+              margin-bottom: 8px;
+              line-height: 15px;
+              margin-left: -40px;
+            }
+            .collapsed {
+              @include background-properties($image-CS-arrow-forward, 14px, left);
+              width: 12px;
+              height: 100%;
+              float: left;
+              position: absolute;
+              left: -5px;
+              top: 65%;
+              transform: translateY(-50%);
+              cursor: pointer;
+            }
+
+            .expanded {
+              @include background-properties($image-CS-expand-arrow-icon, 12px, left);
+              width: 12px;
+              height: 100%;
+              float: left;
+              position: absolute;
+              left: -1px;
+              top: 65%;
+              transform: translateY(-50%);
+              cursor: pointer;
+            }
+          }
+
+          &.attribute {
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-Text-Color-Filled-50, 14px, left 15px center);
+          }
+          &.tag {
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-PriceTag-32, 14px, left 15px center);
+          }
+          &.taxonomy {
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-Letter-M--small, 12px, left 15px center);
+          }
+          &.eyeIcon {
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-eye-black, 16px, left 10px center)
+          }
+          &.addIcon {
+            padding-left: 35px;
+            @include background-properties-with-gray-color($image-CS-Plus-32-black, 16px, left 10px center)
+          }
+          &.removeIcon {
+            padding-left: 18px;
+            @include background-properties-with-gray-color($image-CS-delete-bin-black, 16px, left 0px center);
+          }
+          &.editIcon {
+            padding-left: 18px;
+            @include background-properties-with-gray-color($image-CS-Edit-32, 16px, left 0px center);
+          }
+        }
+
+        .tableCellShowCodeContainer {
+          width: 100%;
+          display: flex;
+          .tableCode {
+            @include ellipsis();
+            font-size: 10px;
+            line-height: 14px;
+            color: $color-light-25;
+            padding: 3px 0;
+            flex: 1;
+
+            &.addPadding {
+              padding-left: 35px;
+            }
+          }
+
+          .copyToClipboard {
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            @include background-properties($image-CS-copy-to-clipboard, 16px, left 0px center);
+          }
+        }
+
+        &:hover {
+          .copyToClipboard {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .tableCheckbox {
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+        width: 30px;
+
+        &.checked {
+          @include background-properties-with-theme-color($image-cs-checkbox-checked, 20px);
+        }
+        &.unchecked {
+          @include background-properties-with-theme-color($image-cs-checkbox-unchecked, 20px);
+        }
+        &.disabled{
+          pointer-events: none;
+          @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 20px);
+        }
+      }
+      .tableBoolean {
+        &.partial{
+          .gridYesNoSwitch{
+            .gridYesNoSwitchButton{
+              background: #E7A526;
+              width: 44px;
+              text-align: center;
+              left: 0;
+              .textSection{
+                display: none;
+              }
+            }
+          }
+        }
+        &.disabled{
+          pointer-events: none;
+        }
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

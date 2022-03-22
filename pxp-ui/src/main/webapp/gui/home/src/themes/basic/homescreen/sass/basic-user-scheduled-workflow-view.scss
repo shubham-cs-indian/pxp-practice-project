@@ -1,0 +1,191 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.workflowViewContainer {
+  width: calc(100% - 210px);
+  height: 100%;
+
+  .workflowToolbar{
+    height: 35px;
+    padding: 0 10px;
+    background-color: white;
+    border-bottom: 1px solid $color-light-3;
+
+    .workflowTitle {
+      float: left;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 35px;
+    }
+  }
+
+  .workflowView {
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 35px);
+    background-color: white;
+
+    .workflowWrapper{
+      width: 100%;
+      float: left;
+      height: inherit;
+      position: relative;
+      overflow: hidden;
+
+      .toolBarContainer{
+        width: 100%;
+        float: left ;
+        .leftToolBar{
+          width: 100%;
+          padding: 10px;
+          float: left;
+          display: flex;
+          align-items: center;
+
+          .allTaskCheckbox{
+            height: 30px;
+            width: 14px;
+            opacity: .7;
+            cursor: pointer;
+            @include background-properties($image-CS-Unchecked-Checkbox-48-Material, 14px, center);
+            margin-right: 10px;
+
+            &:hover {
+              opacity: 0.8;
+            }
+            &.checked {
+              background-image: url($image-CS-Checked-48Black);
+            }
+          }
+          .searchBar{
+            border: 1px solid #ccc;
+
+            .simpleSearchBarView{
+              height: 32px;
+              max-width: 100%;
+              background-color: #fff;
+
+              .simpleSearchBarSearchIcon {
+                height: 100%;
+                width: 32px;
+                display: inline-block;
+                vertical-align: top;
+                @include background-properties($image-CS-SearchFilled-32, 16px);
+                opacity: .6;
+              }
+
+              .simpleSearchBarInput {
+                height: 100%;
+                width: calc(100% - 64px);
+                outline: none;
+                border: none;
+                background: transparent;
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+          }
+          .deleteTasks{
+            float: right;
+            height: 30px;
+            width: 20px;
+            cursor: pointer;
+            transition: all .2s;
+            @include background-properties($image-CS-delete-bin-black, 17px);
+            opacity: 0.4;
+            margin-left: 10px;
+          }
+        }
+        .rightToolBar{
+          float: right;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .workflowDetails{
+        width: 100%;
+        float: left;
+        padding: 0 10px;
+
+        .workflowListCheck {
+          float: left;
+          margin-right: 11px;
+          height: 30px;
+          width: 14px;
+          opacity: .7;
+          cursor: pointer;
+          @include background-properties($image-CS-Unchecked-Checkbox-48-Material, 14px, center);
+
+          &:hover {
+            opacity: 0.8;
+          }
+          &.checked {
+            background-image: url($image-CS-Checked-48Black);
+          }
+        }
+        .workflowListLabel{
+          float: left;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          word-break: break-all;
+          line-height: 32px;
+          max-width: calc(100% - 185px);
+          min-width: 50px;
+        }
+
+        .workflowActionDetails{
+          width: auto;
+          float: right;
+          display: flex;
+          align-items: center;
+
+          .scheduleWorkflow{
+            width: auto;
+            float: left;
+            margin-right: 10px;
+          }
+          .deleteWorkflow{
+            float: right;
+            height: 30px;
+            width: 20px;
+            cursor: pointer;
+            transition: all .2s;
+            @include background-properties($image-CS-delete-bin-black, 17px);
+            opacity: 0.4;
+          }
+        }
+
+        &:hover{
+         background : $color-light-3;
+        }
+      }
+
+      .nothingFoundViewContainer{
+        width: 100%;
+        float: left;
+      }
+
+      .workflowWrapperHeaderRow {
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+
+      .workflowWrapperView {
+        height: calc(100% - 54px);
+        float: left;
+        width: 100%;
+        overflow-y: auto;
+        scrollbar-width: thin;
+      }
+
+      .nothingFoundViewContainer {
+        position: unset;
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,148 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+//todo: change remaining font sizes and images with constants
+
+$primary-font-size: 11px;
+$max-width-for-labels: 250px;
+$table-header-background-color: #f7f6f6;
+
+.genericTable {
+  height: calc(100% - 37px);
+
+  .tableContainer {
+    height: 100%;
+    border: 1px solid $color-light-8;
+
+    .tableHead {
+      height: 30px;
+      min-height: 25px;
+      .tableRow {
+        display: flex;
+        height: 28px;
+        border-bottom: 1px solid $color-light-8;
+
+        .tableCell {
+          width: 50%;
+          padding: 4px 7px 0px 7px;
+          background-color: $table-header-background-color;
+          color: $color-dark-6;
+          border-right: 1px solid $color-light-8;
+          border-bottom: none;
+
+          .headerCellContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .headerCellLabel {}
+
+            .headerCellAction {
+              margin-top: -4px;
+            }
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .tableBody {
+      height: calc(100% - 6%);
+      display: table-row;
+
+      .tableRow {
+        display: flex;
+        height: auto;
+        border-bottom: 1px solid $color-light-8;
+
+        .tableCell {
+          width: 50%;
+          padding: 0 7px;
+          height: auto;
+          border-right: 1px solid $color-light-8;
+          border-bottom: none;
+
+          .bodyCellContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .bodyCellLabel {
+              .icons.isDisabled {
+                opacity: 0.4;
+              }
+
+            }
+
+            .bodyCellAction {}
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .icons {
+
+      .revertAllIcon,
+      .adaptAllIcon {
+        height: 25px;
+        width: 20px;
+        cursor: pointer;
+        margin: 0 2px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        float: right;
+        background-size: 15px;
+      }
+
+      .revertAllIcon {
+        background-image: url($image-CS-Reply-All-Arrow-filled-48);
+      }
+
+      .adaptAllIcon {
+        background-image: url($image-CS-Reply-All-Arrow-filled-48);
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scalex(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+
+        &.disabled {
+          cursor: auto;
+          opacity: 0.4;
+        }
+      }
+
+      .revertIcon,
+      .adaptIcon,
+      .inheritedIcon {
+        height: 26px;
+        width: 18px;
+        margin: 0 2px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        float: right;
+        background-size: 12px;
+      }
+
+      .revertIcon {
+        cursor: pointer;
+        background-image: url($image-CS-Reply-Arrow-filled-48);
+      }
+
+      .adaptIcon {
+        cursor: pointer;
+        background-image: url($image-CS-Forward-Arrow-Filled-48);
+      }
+
+      .inheritedIcon {
+        background-image: url($image-CS-ok-lite-green);
+      }
+    }
+  }
+}

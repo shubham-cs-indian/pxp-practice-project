@@ -1,0 +1,266 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.conflictOuterContainer {
+  width: 100%;
+  height: 265px;
+  overflow: auto;
+
+  .conflictGroupContainer {
+    margin-bottom: 10px;
+    &.conflictRelationshipInstance {
+      padding: 5px;
+      margin-bottom: 0px;
+
+    }
+
+    .conflictGroupContainerHeader {
+      height: 30px;
+      background: #eee;
+      padding: 8px 10px;
+      transition: all .2s;
+      line-height: 16px;
+    }
+
+    .conflictGroupContainerBody {
+      box-shadow: 0px 0px 0px 1px #eee inset;
+
+      .entityOuterContainer {
+        height: 60px;
+        width: calc(100% - 10px);
+        margin: 5px 5px -4px 5px;
+        background: #fafafa;
+        display: inline-block;
+
+        .entityBody {
+          height: 100%;
+          width: 100%;
+
+          .entityRightIconContainer {
+            height: 100%;
+            width: 60px;
+            float: left;
+          }
+
+          .entityLeftIconContainer {
+            height: 100%;
+            width: 150px;
+            float: left;
+            display: table;
+          }
+
+          .entityLabel {
+            color: #333;
+            vertical-align: middle;
+            display: table-cell;
+            padding: 10px;
+          }
+
+          .alertIconContainer {
+            background-image: url($image-CS-High-Priority-Red-64);
+            background-size: 30px;
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            display: none;
+
+            &.resolved {
+              background-image: url($image-CS-Medium-Priority-Yellow-64);
+            }
+
+            &.iconVisible {
+              display: block;
+            }
+          }
+
+          .undoIconContainer {
+            background-image: url($image-CS-Undo-64);
+            background-size: 25px;
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            transition: background-image .1s;
+            display: none;
+
+            &:hover {
+              background-image: url($image-CS-Undo-64);
+            }
+
+            &.iconVisible {
+              display: block;
+            }
+          }
+
+          .entityMiddleSectionContainer {
+            width: calc(100% - 210px);
+            height: 100%;
+            float: left;
+
+            .entityLeftValueContainer {
+              width: calc(50% - 10px);
+              box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+            }
+
+            .entitySpannedValueContainer {
+              width: 100%;
+            }
+
+            .entityValueContainer {
+              display: inline-block;
+              float: left;
+              margin: 10px 0 0 0;
+              padding: 5px 10px;
+              background: #fff;
+              height: 40px;
+            }
+
+            .entityRightValueContainer {
+              width: calc(50% - 10px);
+              box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+              margin-left: 20px;
+            }
+
+            .entityValueContainerSelected {
+              box-shadow: 0 0 0px 1px rgba(73, 174, 79, .5), 0px 3px 1px -1px #49AE4F;
+            }
+
+            .entityNameValueWrapper {
+              width: calc(100% - 30px);
+              float: left;
+            }
+
+            .entityInfoContainer {
+              font-size: 10px;
+              color: #888;
+              margin-bottom: -2px;
+              height: 10px;
+
+              &.infoHidden {
+                display: none;
+              }
+
+              .infoIcon {
+                background-image: url($image-CS-Info-32);
+                width: 12px;
+                height: 12px;
+                background-size: 12px;
+                opacity: .8;
+                float: left;
+              }
+
+              .infoText {
+                font-size: 10px;
+                height: 12px;
+                float: left;
+                margin-left: 4px;
+              }
+
+              &.largeIcon {
+                font-size: 10px;
+                margin-bottom: -2px;
+                height: 10px;
+                margin-top: 5px;
+                .infoIcon {
+                  background-image: url($image-CS-Info-32);
+                  width: 20px;
+                  height: 20px;
+                  background-size: 20px;
+                  opacity: .8;
+                  float: left;
+
+                }
+
+                .infoText {
+                  font-size: 12px;
+                  height: 12px;
+                  float: left;
+                  margin-left: 4px;
+                  margin-top: 2px;
+
+                }
+
+              }
+            }
+
+            .entityValueContainerSelected .entityValueSelectionIcon {
+              display: inline-block;
+            }
+
+            .entityValueSelectionIcon {
+              background-image: url($image-CS-OkFilled-32);
+              background-size: 25px;
+              height: 25px;
+              width: 25px;
+              margin-top: 3px;
+              float: right;
+              display: none;
+            }
+
+            .entityValue {
+              height: 15px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              margin-top: 7px;
+
+              .entityRemovedText {
+                font-weight: bold;
+                color: #999;
+              }
+            }
+          }
+        }
+      }
+
+      .entityOuterContainer:last-child {
+        margin: 5px 5px 1px 5px;
+      }
+    }
+
+    &.conflictSectionCollapsed {
+      .conflictGroupContainerHeader {
+        background: #fff;
+        color: #888;
+        box-shadow: 0px 0px 0px 1px #eee inset;
+        &:hover {
+          color: #333;
+          box-shadow: 0px 0px 0px 1px #aaa inset;
+        }
+      }
+
+      .conflictGroupContainerBody {
+        display: none;
+      }
+    }
+  }
+}
+
+.conflictDialogHeader {
+  overflow: hidden;
+  margin-bottom: 2px;
+
+  .conflictDialogHeaderWorking {
+    width: 34%;
+    text-align: center;
+    margin-left: 21%;
+    float: left;
+    box-shadow: 0px -2px 0px 0px #B5B5B5 inset;
+    padding: 5px;
+  }
+
+  .conflictDialogHeaderRemote {
+    width: 34%;
+    text-align: center;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 0px -2px 0px 0px #B5B5B5 inset;
+    padding: 5px;
+  }
+}
+
+.conflictDialogContent > div:first-child > div:first-child {
+  max-height: 430px !important;
+}*/

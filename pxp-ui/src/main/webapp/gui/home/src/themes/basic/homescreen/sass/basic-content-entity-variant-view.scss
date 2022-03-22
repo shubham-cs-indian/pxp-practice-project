@@ -1,0 +1,33 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.entityVariantListWrapper{
+  .entityVariantWrapper{
+    min-height: 50px;
+    margin: 7px 5px 10px 5px;
+    box-shadow: 0px 0px 1px gray;
+
+    .entityVariantHeader{
+      float: left;
+      width: 100%;
+      background-color: #eee;
+      .entityVariantNumber {
+        padding: 2px 10px;
+        float: left;
+      }
+
+      .entityVariantDelete{
+        height: 20px;
+        width: 20px;
+        float: right;
+        background-repeat: no-repeat;
+        background-position: 2px;
+        background-size: 16px;
+        background-image: url($image-CS-delete-bin);
+      }
+    }
+
+    .entityVariantLabel{
+      padding: 2px 10px;
+    }
+  }
+}*/

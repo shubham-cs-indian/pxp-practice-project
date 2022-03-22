@@ -1,0 +1,128 @@
+.classRelationshipContainer {
+  //margin: 14px;
+  //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+  .classRelationshipHeader {
+    .classSectionHeaderTitle {
+      background-color: #ccc;
+      text-align: center;
+      padding: 5px;
+    }
+  }
+
+  .commonConfigSection {
+    margin: initial;
+    //box-shadow: none;
+
+    .nativeDropdown {
+      margin-top: 0!important;
+      //width: auto!important;
+    }
+
+    .sectionsWrapper {
+      box-shadow: none;
+      margin: initial;
+
+      .classSectionHeader {
+        display: none;
+      }
+
+      .contextMenuViewNewContainer {
+        top: -12px;
+      }
+
+      .visualSectionElementContainer .sectionTileContainer .removePlaceholder, .moveUp, .moveDown {
+        display: none;
+      }
+    }
+  }
+
+  /*
+  .classRelationshipBody {
+    min-height: 40px;
+    display: inline-block;
+    width: 100%;
+
+    .sideHeaders {
+      float: left;
+      width: 100%;
+      line-height: 50px;
+      margin-left: 20%;
+
+      .sideHeader {
+        float: left;
+        width: 40%;
+        text-align: center;
+      }
+    }
+
+    .relationshipRow {
+      float: left;
+      width: 100%;
+      padding: 10px;
+
+      &:nth-child(even) {
+        background-color: #f6f6f6;
+      }
+
+      .sideLabel {
+        float: left;
+        width: 10%;
+        padding-left: 7px;
+        line-height: 33px;
+      }
+
+      .sidePropertyContainer {
+        float: left;
+        width: 40%;
+        padding: 2px 10px;
+        text-align: center;
+
+        &.fullLength {
+          width: 80%;
+        }
+
+        select {
+          width: 100%;
+          border: none;
+          height: 28px;
+
+          border-radius: 3px;
+          padding-left: 4px;
+          box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+          &.disabled {
+            background-color: #e9e9e9;
+            box-shadow: none;
+          }
+        }
+
+        .sideInput {
+          width: 100%;
+          border: none;
+          height: 28px;
+          border-radius: 3px;
+          padding-left: 8px;
+          box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.26);
+
+          &.disabled {
+            background-color: rgb(199, 199, 197);
+          }
+        }
+      }
+    }
+
+    .sectionsWrapper {
+      float: left;
+      margin: 5px 50px 5px;
+      width: calc(100% - 100px);
+
+      .visualSectionElementContainer .sectionTileContainer {
+        .removePlaceholder {
+          display: none;
+        }
+      }
+    }
+  }
+  */
+}

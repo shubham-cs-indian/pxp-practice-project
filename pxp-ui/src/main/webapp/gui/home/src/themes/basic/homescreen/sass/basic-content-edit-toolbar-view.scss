@@ -1,0 +1,59 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.contentEditToolbarViewContainer{
+  float: right;
+
+  .button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    cursor: pointer;
+    border-radius: 2px;
+
+    &.spacing {
+      margin: 1px 4px;
+    }
+  }
+
+  .moreOptions {
+    opacity: 0.8;
+    @include background-properties($image-CS-ellipsis-filled, 16px);
+    background-color: $color-light-1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .toolbarCommentInputBox {
+    width: 200px;
+    height: 27px;
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 0 0 0 10px;
+    opacity: 0.9;
+    border: none
+  }
+
+  .toolbarCommentInputBox:focus {
+    outline-width: 0;
+  }
+
+  .toolbarButton{
+    display: inline-block;
+    float: right;
+    border: solid 1px $color-light-6;
+    border-radius: 3px;
+    margin: 0 5px;
+
+    .contextMenuViewNewContainer {
+      overflow: hidden;
+    }
+
+    &.noBorder{
+      border: none;
+    }
+
+  }
+}

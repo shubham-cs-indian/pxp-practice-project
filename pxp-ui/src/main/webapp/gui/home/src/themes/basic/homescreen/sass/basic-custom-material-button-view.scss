@@ -1,0 +1,24 @@
+@import "./../../../../styleguide/style-guide";
+
+.customMaterialButton {
+  min-height: 24px;
+  margin: 0 10px;
+  border-radius: 2px !important;
+  background-color: #ededed ;
+  > span {
+    font-size: $font-normal;
+    font-weight: 500;
+    line-height: 30px;
+    display: block;
+    padding: 0 5px;
+  }
+}
+.raisedButton{
+  background-color: $brand-material-btn-color;
+}
+
+//deleteButtonWithRedColor has to be after raisedButton
+.deleteButtonWithRedColor {
+  //background-color: $color-red !important;
+  margin-right: auto !important;
+}

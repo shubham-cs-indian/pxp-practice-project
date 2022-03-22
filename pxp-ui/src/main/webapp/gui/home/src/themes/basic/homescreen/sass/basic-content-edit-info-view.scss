@@ -1,0 +1,1139 @@
+@import "../../../../styleguide/mixin";
+@import "basic-tab-layout-view";
+@import "../../../../styleguide/style-guide";
+
+.contentEditViewContainer {
+  height: 100%;
+  box-shadow: 0px 0px 0px 1px $color-light-4;
+
+  /*.upperSectionToolbarContainer {
+    .filterViewWrapper {
+      height: 26px;
+      margin: 7px;
+      padding: 0;
+      display: inline-flex;
+
+      .multiSelectSearchViewWrapper {
+        box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+        border-radius: 2px;
+        background-color: #fff;
+        &.disabled {
+          .selectedItems {
+            opacity: 0.5;
+          }
+        }
+        .triggerElement {
+          position: relative;
+          height: 100%;
+          display: inline-flex;
+          .multiSelectSearchIcon {
+            height: 26px;
+            width: 37px;
+            margin: 0 1px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 14px;
+            background-image: url($image-CS-eye-black);
+            cursor: pointer;
+          }
+          .multiSelectSearchView {
+            .multiSelectSummary .selectedItems {
+              background-color: #fff;
+              cursor: pointer;
+              &.disabled {
+                cursor: default;
+              }
+              .selectedItemIcon{
+                margin: 2px;
+                background-size: 17px;
+                opacity: 1;
+                width: 18px;
+                height: 18px;
+                background-position: center;
+                &.allPropertyIcon{
+                  background-image: url($image-CS-eye-black);
+                }
+                &.completePropertyIcon{
+                  background-image: url($image-CS-icons8-ok-filled);
+                }
+                &.incompletePropertyIcon{
+                  background-image: url($image-CS-icons8-50-filled);
+                }
+                &.violatedPropertyIcon{
+                  background-image: url($image-CS-icons8-error);
+                }
+                &.mandatoryPropertyIcon{
+                  background-image: url($image-CS-icons8-asterisk);
+                }
+
+              }
+              .selectedItemLabel{
+                margin: 0 7px 0 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .backButtonView {
+      height: 26px;
+      margin: 7px;
+      background-color: #ffffff;
+      border-radius: 2px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+
+      .backButtonText {
+        line-height: 26px;
+      }
+    }
+
+    .backButtonSection {
+      @include topInlineBlock();
+      margin: 0 0 0 5px;
+      width: 40px;
+      height: 40px;
+      opacity: .7;
+      background-position: center;
+      background-size: 18px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      background-image: url($image-CS-arrow-left);
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .refreshButton {
+      @include topInlineBlock();
+      width: 20px;
+      height: 40px;
+      opacity: .7;
+      background-position: center;
+      background-size: 18px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      background-image: url($image-CS-Refresh-48);
+      margin: 5px;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .sectionViewOptions {
+      float: right;
+
+      .toggleEditScreenModeButton {
+        height: 32px;
+        width: 54px;
+        @include topInlineBlock();
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url($image-CS-Edit-Property);
+        background-size: 18px;
+        transition: all .2s;
+        cursor: pointer;
+        opacity: 0.6;
+
+        &.selected {
+          background-image: url($image-CS-Edit-Property-Filled-50);
+        }
+
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+
+    .acrolinxToggleButton {
+      height: 26px;
+      width: 26px;
+      margin: 7px;
+      cursor: pointer;
+      background-color: $color-light-1;
+      border-radius: 3px;
+      padding: 0 8px 0 5px;
+      line-height: 26px;
+      text-transform: uppercase;
+      color: $color-dark-3;
+      font-size: $font-small;
+      font-weight: 500;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+      @include background-properties($image-acrolinx-logo, 18px);
+      filter: grayscale(100%);
+
+      &.isActive {
+        filter: none;
+      }
+    }
+  }*/
+
+  .linkedContentsAndPanelWrapper {
+    //height: calc(100% - 45px) !important;
+    height: 100%;
+    padding: 15px;
+
+    .templateDropDownContainer {
+      overflow: hidden;
+      margin-left: 20px;
+      float: left;
+
+      .templateListContainer {
+        height: 24px;
+        width: auto;
+        position: relative;
+        float: left;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        line-height: 24px;
+        padding-right: 6px;
+        border-radius: 15px;
+        background-color: #f1f1f1;
+
+        .templateIcon {
+          float: left;
+          border-radius: 50%;
+          height: 24px;
+          width: 24px;
+          cursor: pointer;
+          background-size: 14px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #ddd;
+          background-image: url($image-CS-glasses);
+          opacity: 0.7;
+          filter: invert(1);
+        }
+
+        .activeTemplateLabel {
+          float: left;
+          font-size: 10px;
+          margin-left: 5px;
+          max-width: 200px;
+        }
+
+        .changeTemplateDropDownButton {
+          float: left;
+          background-image: url($image-CS-expand-arrow-icon);
+          background-repeat: no-repeat;
+          background-size: 10px;
+          width: 15px;
+          height: 15px;
+          position: relative;
+          background-position: center;
+          margin: 3px 0px 5px 5px;
+          filter: invert(70%);
+        }
+
+        &:hover {
+          background-color: #ccc;
+        }
+
+        &.disabled {
+          cursor: default;
+
+          &:before {
+            content: none;
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+
+          .changeTemplateDropDownButton {
+            display: none;
+          }
+
+        }
+
+      }
+    }
+
+    .contentDetailsWrapper {
+      display: inline-flex;
+      height: 100%;
+      width: 100%;
+      transition: all .2s;
+
+      .contentInformationSidebarViewContainer {
+        //position: relative;
+        width: 302px;
+        background: white;
+        //padding: 20px;
+        padding: 12px 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        transition: all .2s;
+        box-shadow: 0 0 0 1px #ddd;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .contentNameContainer {
+          //overflow: hidden;
+          height: 50px;
+          //padding-bottom: 6px;
+          flex: 0 0 30px;
+          margin-bottom: 4px;
+          display: flex;
+          align-items: center;
+
+          .versionInfoContainer {
+            display: inline-flex;
+            float: left;
+            transition: all .2s ease-out;
+
+            &.collapsed {
+              top: 135px;
+            }
+
+            .entityInformationIconIndicator {
+              padding: 2px;
+              color: #fff;
+              border-radius: 3px;
+              margin-right: 3px;
+
+              .entityInformationIcon {
+                height: 21px;
+                width: 21px;
+                background-size: 100%;
+              }
+            }
+
+          }
+
+          .contentName {
+            font-size: 19px;
+            //margin-bottom: 5px;
+            //height: 100%;
+            float: left;
+            line-height: 29px;
+            max-width: calc(100% - 44px);
+            @include ellipsis();
+            flex: 1;
+          }
+
+          .contentNameInput {
+            font-size: 19px;
+            //margin-bottom: 5px;
+            display: inline-block;
+            line-height: 24px;
+            border: none;
+            box-shadow: 0 0 0 1px #ddd;
+            height: 24px;
+            padding: 0 0 0 3px;
+            outline: none;
+            width: 100%;
+            border-radius: 3px;
+          }
+
+          .contentNameEditButton {
+            height: 28px;
+            width: 24px;
+            background-image: url($image-CS-Edit-32);
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-left: 20px;
+            float: left;
+            opacity: .5;
+            cursor: pointer;
+
+            &:hover {
+              opacity: .7;
+            }
+          }
+        }
+
+        .imageAndVersionContainer {
+          position: relative;
+          padding: 0px 0;
+          position: relative;
+          display: inline-block;
+          box-shadow: 0 0 0 1px #ddd;
+          border-radius: 3px;
+
+          .defaultImageIconContainer{
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            border: solid 1px $color-dark-1;
+            /*background-image: url($image-star-unfilled-black);
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: center;*/
+            z-index: 1;
+
+            &:hover{
+              cursor: pointer;
+            }
+
+            &.disabled {
+              @include disabled(0.5);
+            }
+
+            &.default{
+              @include background-properties($image-CS-CheckMark-round);
+              background-size: 24px;
+              background-repeat: no-repeat;
+              background-position: center;
+              border: none;
+            }
+          }
+
+
+
+          .contentImageContainer {
+            //width: 260px;
+            //height: 260px;
+            padding: 0px 0;
+            position: relative;
+            display: inline-block;
+            //box-shadow: 0 0 0 1px $color-light-4;
+            border-radius: 3px;
+
+            &.unitDetailViewPresent {
+              width: 80px;
+              height: 80px;
+            }
+
+            &:hover {
+              .setDefaultImage {
+                width: 30px;
+                height: 30px;
+              }
+            }
+
+            .contentImageWrapper {
+              transition: all .2s ease-out;
+              position: relative;
+              width: 260px;
+              height: 260px;
+              border-radius: 2px;
+
+              &.collapsed {
+                height: 120px;
+                .noImage{
+                  background-size: auto;
+                }
+                .imageWrapper {
+                  .thumbnailImagePreview {
+                    &.imageSimpleViewImage {
+                    padding-top: 10px;
+                      padding-bottom: 5px;
+                    }
+                  }
+                }
+              }
+              .imageWrapper {
+                width: 100%;
+                height: calc(100% - 30px);
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+
+                .thumbnailImagePreview {
+                  max-height: 100%;
+                  max-width: 100%;
+                  margin: auto;
+                }
+
+                &.noImage {
+                  margin-top: 20px;
+                }
+
+                &.imageSimpleViewNoImage {
+                  background-size: 65%;
+                }
+              }
+
+              .contentImageWrapperIconSection {
+                height: 30px;
+                padding: 0 10px 10px 10px;
+
+                .contentImageWrapperIconRightSection {
+                  float: right;
+                  margin-top: 5px;
+
+                  .expandCollapseIcon, .setDefaultImage, .previewImage, .downloadImage, .shareImage, .editImage, .setAssetImage {
+                    height: 15px;
+                    width: 15px;
+                    background-size: 15px;
+                    opacity: 0.7;
+                    cursor: pointer;
+                    float: left;
+                    margin-left: 5px;
+                  }
+
+                  .expandCollapseIcon {
+                    background-image: url($image-CS-collapse-000-96);
+
+                    &.collapsed {
+                      background-image: url($image-CS-expand-000-96);
+                    }
+                  }
+
+                  .bulkDownloadContainer {
+                    height: 0;
+                    width: 0;
+                  }
+
+                  .setDefaultImage {
+                    background-image: url($image-CS-Replace-26);
+
+                    &.disabled {
+                      @include disabled(0.5);
+                    }
+                  }
+
+                  .previewImage {
+                    background-image: url($image-CS-eye-black);
+                  }
+
+                  .downloadImage {
+                    background-image: url($image-CS-download-black);
+                  }
+
+                  .shareImage {
+                    background-image: url($image-CS-bulkShareBlack);
+                  }
+
+                  .editImage {
+                    background-image: url($image-CS-Edit-32);
+                  }
+
+                  .setAssetImage {
+                    background-image: url($image-CS-Upload-Black);
+                  }
+
+                  .uploadImage {
+                    float: left;
+                  }
+                }
+
+                .variantIndicator {
+                  height: 24px;
+                  width: 24px;
+                  border-radius: 50%;
+                  background-color: #fff;
+                  box-shadow: 0px 0px 0px 2px #fff;
+                  border: 2px solid rgba(0, 0, 0, .1);
+                  float: left;
+
+                  .variantIcon {
+                    height: 100%;
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 14px;
+                    background-image: url($image-CS-Split-48);
+                    opacity: .6;
+                  }
+                }
+
+                .miniThumbnailCircularTagsContainer {
+                  position: absolute;
+                  height: 50px;
+                  width: 50px;
+                  bottom: 14px;
+                  left: 14px;
+                }
+              }
+            }
+          }
+
+          .versionInfoContainer {
+            display: inline-block;
+            padding: 5px 0 0 0;
+            float: right;
+            transition: all .2s ease-out;
+            position: absolute;
+            //top: 400px;
+            //left: 220px;
+            top: 305px;
+            right: 18px;
+
+            &.collapsed {
+              top: 135px;
+            }
+
+            .promotionalVersionIndicator {
+              float: right;
+              background-color: #666;
+              color: #fff;
+              border-radius: 3px;
+              padding: 2px 2px;
+              margin: 2px;
+
+              .promotionalVersion {
+                text-align: center;
+                font-size: 10px;
+                margin: 0 5px;
+                float: left;
+                line-height: 19px;
+                font-weight: 500;
+              }
+              .informationIcon {
+                float: left;
+                filter: invert(100%);
+                width: 14px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 10px;
+                margin-right: 2px;
+                background-image: url($image-CS-menu-item-about);
+              }
+            }
+
+            .iconContainer {
+              height: 25px;
+              width: 25px;
+              position: absolute;
+              right: -75px;
+              background-size: 80%;
+              background-repeat: no-repeat;
+              background-position: center;
+              opacity: 0.7;
+
+              &.cloneContextIcon {
+                background-image: url($image-CS-icons8-Copy-Filled-50);
+              }
+            }
+
+            .templateDropDownContainer {
+              position: relative;
+              top: 0;
+              right: 0;
+              margin: 2px;
+              float: right;
+            }
+
+            .openVersionMatchAndMerge {
+              float: right;
+              background-color: #666;
+              color: #fff;
+              border-radius: 3px;
+              padding: 2px 7px;
+              margin: 3px 2px;
+              text-align: center;
+              font-size: 10px;
+              line-height: 19px;
+              font-weight: 500;
+              text-transform: uppercase;
+              cursor: pointer;
+            }
+
+            .createCloneButton {
+              float: right;
+              background-color: #666;
+              color: #fff;
+              border-radius: 3px;
+              padding: 2px 7px;
+              margin: 3px 2px;
+              text-align: center;
+              font-size: 10px;
+              line-height: 19px;
+              font-weight: 500;
+              text-transform: uppercase;
+              cursor: pointer;
+            }
+          }
+
+          .imageSliderView {
+            height: 50px;
+            //box-shadow: 0 0.5px 0 1px $color-light-4;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+
+            .sliderImageWrapper {
+              /*width: 50px;
+              height: 50px;*/
+
+              .sliderImage {
+                max-width: 40px;
+                max-height: 40px;
+
+              }
+            }
+          }
+        }
+
+
+        .contentInformation {
+          //margin: 5px 0px 10px 0px;
+          //padding-top: 5px;
+          width: 100%;
+          overflow-y: auto;
+          flex: 1 0;
+          scrollbar-width: thin;
+
+          .contentInformationSectionWrapper {
+            padding: 20px 0 0 0;
+            overflow: hidden;
+
+            .contentInformationSection {
+              margin: 6px 0px 0px 0px;
+              overflow: hidden;
+              .selectedTaxonomyWrapper {
+                margin: 0;
+              }
+
+              .templateDropDownContainer {
+                margin-left: 0px;
+              }
+            }
+
+            .assetSchedulerSectionView {
+              margin: 0;
+              box-shadow: none;
+              border-radius: 0;
+              background: transparent;
+              /*
+              .startAndEndDatePickerView {
+                .sectionTitle {
+                  font-size: 13px;
+                  font-weight: inherit;
+                  padding: 0;
+                  text-transform: none;
+                }
+                .startAndEndDateViewWrapper {
+                  .repeatHandlerWrapper {
+                    padding: 0;
+                    .startEndDateFieldGroup {
+                      display: block;
+                      .eventField {
+                        padding: 0;
+                        border: none;
+
+                        .fieldLabel {
+                          width: 35px;
+                          float: left;
+                          padding: 8px 5px 0 0;
+                        }
+                        .value {
+                          margin-top: 0;
+                          width: calc(100% - 35px);
+                          float: left;
+
+                          .dateTimePickerContainer {
+                            .customDatePickerWrapper {
+                              height: 24px !important;
+                              .customDatePickerDisabledValue {
+                                color: $color-dark-5;
+                                margin: 0;
+                                font-size: 12px;
+                                height: 30px;
+                                line-height: 30px;
+                              }
+                              .datePickerCustom {
+                                input {
+                                  font-size: 12px !important;
+                                }
+                                div > div {
+                                  bottom: 5px !important;
+                                  font-size: 12px !important;
+                                }
+                              }
+                            }
+                            .customTimePickerWrapper {
+                              height: 24px !important;
+                              .customTimePickerDisabledValue {
+                                color: #aaa;
+                                margin: 0;
+                                font-size: 12px;
+                                height: 30px;
+                                line-height: 30px;
+                              }
+                              input {
+                                font-size: 12px !important;
+                                height: 34px !important;
+                              }
+                              div > div > div {
+                                bottom: 5px !important;
+                                font-size: 12px !important;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                }
+              }
+              */
+            }
+
+            .customIcon {
+              position: relative;
+              width: 15px;
+              height: 15px;
+              float: left;
+              margin-right: 5px;
+
+              .imageSimpleViewNoImage{
+                background-size: 13px;
+              }
+            }
+          }
+
+          .classSwitchingView, .taxonomySwitchingView {
+            padding: 15px 0 0 0;
+
+            .sectionTitle {
+              font-size: 13px;
+              font-weight: 400;
+            }
+
+            .multiClassificationView {
+              padding-top: 0;
+            }
+          }
+
+          .entityKlassName {
+            width: 100%;
+            font-size: 11px;
+            font-weight: 500;
+            color: grey;
+            @include ellipsis();
+          }
+
+          .lifecycleTagsContainer {
+            display: inline-block;
+            width: 100%;
+            padding: 2px 0;
+            //padding: 8px 0 0 0;
+
+            .tagsGroupContainer {
+              width: 100%;
+              float: left;
+              margin: 0;
+
+              .tagsSectionBody {
+                padding: 0 0 0 4px;
+                .entityTagsSummaryView {
+                  margin-bottom: 0;
+                  .selectedItems, .moreSection {
+                    height: auto;
+                    margin: 0 4px 0 0;
+                  }
+                }
+              }
+
+            /*  .tagsSectionHeader {
+                float: left;
+                width: auto;
+                margin: 0 10px 0 1px;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 24px;
+              }*/
+
+              .rulerTagTypeView {
+                float: left;
+                //margin: 6px 0px 12px 0px;
+                margin: 5px 0 0 0;
+
+                .rulerTagIconLabel {
+                  height: 22px;
+                  margin: 3px 3px 3px 2px;
+                }
+
+                .rulerTagIcon {
+                }
+
+                .rulerTagLabel {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+
+        .linkSharingContainer {
+          display: grid;
+          grid-template-columns: 80% 10% 10%;
+          border-radius: 3px;
+          box-shadow: 0 0 0 1px $color-light-4;
+          margin-top: 10px;
+          max-height: 28px;
+          background: $color-light-2;
+          .assetLink {
+            padding: 6px 2px 6px 6px;
+            width: 100%;
+            @include ellipsis();
+          }
+
+          .copyToClipboard {
+            height: 30px;
+            width: 20px;
+            cursor: pointer;
+            opacity: 0.4;
+            @include background-properties($image-CS-copy-to-clipboard, 16px);
+          }
+
+          .deleteGeneratedLink {
+            height: 30px;
+            width: 20px;
+            cursor: pointer;
+            opacity: 0.4;
+            @include background-properties($image-CS-delete-bin-black, 16px);
+          }
+        }
+
+        .normal {
+            font-size: 11px;
+            margin-right: 4px;
+          display: inline-block;
+
+            &.on {
+              text-transform: lowercase;
+            }
+          }
+
+          .highlighted {
+            font-weight: 500;
+            font-size: 11px;
+            margin-right: 4px;
+            color: #353535;
+            display: inline-block;
+          }
+
+        .eventsViewButton {
+          position: absolute;
+          top: 20px;
+          right: 105px;
+          background-image: url($image-CS-Calendar-Filled-50-Black);
+          background-size: cover;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          opacity: 0.7;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          .eventsCount {
+            background: #716cff;
+            display: inline-block;
+            /* padding: 2px 3px; */
+            font-size: 10px;
+            color: #fff;
+            padding: 1px 4px;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            border-radius: 50%;
+            border: 1px solid white;
+          }
+        }
+
+        .contextSection {
+          position: absolute;
+          bottom: -25px;
+          right: 100px;
+
+          .context {
+            height: 40px;
+            width: 40px;
+            vertical-align: top;
+            display: inline-flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 5px;
+            margin: 5px 0 5px 15px;
+            cursor: pointer;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+
+            &.isSelected {
+              background-color: #ddd;
+
+              &:hover {
+                background-color: #ddd;
+              }
+            }
+
+            &:hover {
+              background-color: #eee;
+            }
+
+            .contextIcon {
+              max-height: 100%;
+              max-width: 100%;
+              height: 40px;
+              width: 40px;
+              overflow: hidden;
+              border-radius: 50%;
+              position: relative;
+
+              &.demoContextIcon {
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: .7;
+                background-size: 18px;
+                background-image: url($image-CS-Workflow);
+              }
+            }
+
+            .contextInitials {
+              line-height: 30px;
+              font-size: 14px;
+              font-weight: 500;
+              text-align: center;
+            }
+
+            .activeContextIndicator {
+              background-color: #7acc00;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              position: absolute;
+              top: 1px;
+              right: 3px;
+            }
+          }
+
+          .timelineIcon {
+            height: 32px;
+            width: 54px;
+            @include topInlineBlock();
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18px;
+            background-image: url($image-CS-Timeline-52);
+            transition: all .2s;
+            cursor: pointer;
+            opacity: 0.6;
+
+            &:hover {
+              background-color: #eee;
+            }
+          }
+        }
+      }
+
+      .contentDetailViewContainer {
+        margin: 0 0 0 15px;
+        //width: calc(100% - 320px);
+        flex: 1 0;
+        overflow: hidden;
+        transition: all .2s;
+        box-shadow: 0 0 0 1px #ddd;
+        border-radius: 3px;
+
+        .tabLayoutView {
+          height: 100%;
+          width: 100%;
+          margin: 0;
+
+          $tabHeight: 38px;
+
+          .tabsSection {
+            @include tabsSectionHeight($tabHeight);
+            background-color: #fff;
+
+            .tabsList {
+              height: inherit;
+              position: absolute;
+              left: 0;
+              top: 0;
+              display: inline-flex;
+            }
+
+            .tabItem {
+              background-color: #fff;
+              box-shadow: 0 0 0 1px #eee;
+              //margin: 0 0 1px 1px;
+              padding: 0 14px;
+              float: right;
+
+              .tabCount {
+                height: 18px;
+                width: 18px;
+                border-radius: 9px;
+                background-color: $color-theme-accent;
+                border: 1px solid $color-theme-accent;
+                float: right;
+                color: white;
+                line-height: 18px;
+                margin: 10px 0 10px 10px;
+                font-weight: 500;
+                font-size: 11px;
+              }
+
+              &.isActive {
+                box-shadow: 0 3px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 $color-theme-accent;
+              }
+
+              &:hover {
+                background-color: #fff;
+              }
+            }
+          }
+
+          .bodySection {
+            //height: calc(100% - #{$tabHeight});
+            height: calc(100% - 44px);
+            background-color: #fff;
+            padding: 0;
+            //border-left: 1px solid $color-light-3;
+
+            .contentLinkedSectionsView {
+              padding: 0px 0 0 0;
+
+              .linkedSectionsContainer {
+                border: none;
+                //border-top: 1px solid $color-light-3;
+
+                &.withBorder{
+                  border-left: 1px solid $color-light-3;
+                }
+
+                .toolbarViewContainer{
+                  padding: 10px 10px;
+                }
+
+               /* .relationshipSectionGridViewContainer {
+                  .toolbarViewContainer {
+                    padding: 10px 10px 0 0;
+                  }
+                }*/
+                //required to override the border
+              }
+            }
+
+            .contentEditTimelineViewContainer {
+              background: #eee;
+              margin: 7px 15px 15px 15px;
+              height: calc(100% - 22px);
+
+              .comparisonBody {
+                background: #FFFFff;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+              }
+            }
+
+            .contentEditConfigurationContainer {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

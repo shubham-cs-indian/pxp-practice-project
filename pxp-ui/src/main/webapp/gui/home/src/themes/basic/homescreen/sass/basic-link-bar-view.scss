@@ -1,0 +1,100 @@
+/*
+.linkBar {
+  overflow: hidden;
+  color: #F4ECEC;
+  height: 30px;
+  background-color: #7d909c;
+
+  .linkBarSection {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .linkBarLeftSectionContainer {
+    float: left;
+    width: 40%;
+    padding: 0 5px;
+
+    .actionItemOpenFolder {
+      //background-image: url("../images/OpenedFolder-25.png");
+      &:hover {
+        //background-image: url("../images/OpenedFolderFilled-25.png");
+      }
+    }
+
+    .actionItemVisible {
+      //background-image: url("../images/Visible-25.png");
+      &:hover {
+        //background-image: url("../images/VisibleFilled-25.png");
+      }
+    }
+  }
+
+  .linkBarMiddleSectionContainer {
+    float: left;
+    width: 20%;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
+  }
+
+  .linkBarRightSectionContainer {
+    width: 40%;
+    padding: 0 5px;
+    display: inline-block;
+    text-align: right;
+
+    .actionItemPlus {
+      //background-image: url("../images/Plus-25.png");
+      &:hover {
+        //background-image: url("../images/PlusFilled-25.png");
+      }
+    }
+
+    .actionItemCopy {
+      //background-image: url("../images/Copy-25.png");
+      &:hover {
+        //background-image: url("../images/CopyFilled-25.png");
+      }
+    }
+
+    .actionItemDelete {
+      //background-image: url("../images/Delete-25.png");
+      &:hover {
+        //background-image: url("../images/DeleteFilled-25.png");
+      }
+    }
+
+    .actionItemSaveAs {
+      //background-image: url("../images/SaveAs-25.png");
+      &:hover {
+        //background-image: url("../images/SaveAsFilled-25.png");
+      }
+    }
+
+    .actionItemEdit {
+      //background-image: url("../images/Edit-25.png");
+      &:hover {
+        //background-image: url("../images/Edit-25.png");
+      }
+    }
+
+    .actionItemCompare {
+      //background-image: url("../images/Compare-25.png");
+      &:hover {
+        //background-image: url("../images/Compare-25.png");
+      }
+    }
+
+    .actionContentTag {
+      //background-image: url("../images/PriceTag-25.png");
+      &:hover {
+        //background-image: url("../images/PriceTagFilled-25.png");
+      }
+    }
+  }
+}
+*/

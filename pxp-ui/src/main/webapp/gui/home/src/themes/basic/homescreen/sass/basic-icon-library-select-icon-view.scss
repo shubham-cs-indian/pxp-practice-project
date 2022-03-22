@@ -1,0 +1,80 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.selectIconViewWrapper {
+  padding: 10px 20px 0 !important;
+  .iconLibraryViewContainer{
+    .configHeaderView{
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .iconLibrarySection{
+      height: calc(100% - 54px);
+      padding-bottom: 0;
+      overflow-y: hidden;
+      .iconLibrarySectionBody{
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        grid-template-rows: repeat(auto-fill, 50px);
+        padding: 0 0 50px;
+
+        .iconLibrarySectionElement {
+          height: 51px;
+          min-height: 51px;
+          min-width: 110px;
+          cursor: pointer;
+
+          .iconLibrarySectionElementBody{
+            border-bottom: 0;
+
+            .iconLibrarySectionElementIcon {
+              width: 30px;
+              height: 30px;
+
+              .icon {
+                max-width: 30px;
+                max-height: 30px;
+              }
+            }
+
+            .iconLibrarySectionElementDetails {
+              max-width: 60px;
+
+              .iconLibrarySectionElementName {
+                font-size: 10px;
+              }
+
+              .iconLibrarySectionElementCodeContainer {
+              }
+            }
+          }
+
+          &:hover {
+            .iconElementHeaderView {
+              .iconElementCheckButton {
+                opacity: 0;
+              }
+            }
+          }
+
+        }
+      }
+
+      .paginationSection {
+        position: absolute;
+        bottom: 5px;
+        right: 0px;
+      }
+    }
+  }
+
+  .iconElementHeaderView {
+    .iconElementCheckButton {
+      &.isSelected {
+        opacity: 0;
+      }
+    }
+  }
+}

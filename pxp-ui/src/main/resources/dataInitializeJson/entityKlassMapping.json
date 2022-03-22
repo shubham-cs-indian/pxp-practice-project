@@ -1,0 +1,9 @@
+{
+	"article": "ArticleInstance",
+	"asset_asset": "AssetInstance",
+	"market": "MarketInstance",
+	"supplier": "SupplierInstance",
+	"text_asset": "TextAssetInstance",
+	"golden_article_klass": "ArticleInstance",
+	"smartdocument_asset": "AssetInstance"
+}

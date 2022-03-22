@@ -1,0 +1,279 @@
+[
+  {
+    "type": "com.cs.core.config.interactor.entity.klass.Asset",
+    "id": "attachment_asset",
+    "code": "attachment_asset",
+    "parent": {
+      "type": "com.cs.core.config.interactor.entity.klass.Asset",
+      "id": "-1"
+    },
+    "sections": [
+      {
+        "propertyCollectionId": "assetInformationPropertyCollection"
+      },
+      {
+        "propertyCollectionId": "metadataCollection"
+      }
+    ],
+    "isDefaultChild": true,
+    "isAbstract": true,
+    "natureType": "fileAsset",
+    "isStandard": true,
+    "isNature": true,
+    "classifierIID": 27
+  },
+  {
+    "type": "com.cs.core.config.interactor.entity.klass.Asset",
+    "id": "asset_asset",
+    "code": "asset_asset",
+    "parent": {
+      "type": "com.cs.core.config.interactor.entity.klass.Asset",
+      "id": "-1"
+    },
+    "sections": [
+      {
+        "propertyCollectionId": "assetInformationPropertyCollection"
+      },
+      {
+        "propertyCollectionId": "metadataCollection"
+      }
+    ],
+    "isAbstract": true,
+    "isStandard": true,
+    "isNature": false,
+    "natureType": "",
+    "classifierIID": 28
+  },
+  {
+    "type": "com.cs.core.config.interactor.entity.klass.Asset",
+    "id": "image_asset",
+    "code": "image_asset",
+    "parent": {
+      "type": "com.cs.core.config.interactor.entity.klass.Asset",
+      "id": "asset_asset"
+    },
+    "isDefaultChild": true,
+    "natureType": "imageAsset",
+    "isStandard": true,
+    "isNature": true,
+    "classifierIID": 29,
+    "extensionConfiguration": [
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "jpg"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "jpeg"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "png"
+      },
+      {
+        "extractMetadata": false,
+        "extractRendition": true,
+        "extension": "ico"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "eps"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "ai"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "psd"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "tif"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "tiff"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "gif"
+      }
+    ]
+  },
+  {
+    "type": "com.cs.core.config.interactor.entity.klass.Asset",
+    "id": "video_asset",
+    "code": "video_asset",
+    "parent": {
+      "type": "com.cs.core.config.interactor.entity.klass.Asset",
+      "id": "asset_asset"
+    },
+    "isDefaultChild": true,
+    "natureType": "videoAsset",
+    "isStandard": true,
+    "isNature": true,
+    "classifierIID": 30,
+    "extensionConfiguration": [
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "wmv"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "avi"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "mov"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "flv"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "mpeg"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "mpg"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "mp4"
+      }
+    ]
+  },
+  {
+    "type": "com.cs.core.config.interactor.entity.klass.Asset",
+    "id": "document_asset",
+    "code": "document_asset",
+    "parent": {
+      "type": "com.cs.core.config.interactor.entity.klass.Asset",
+      "id": "asset_asset"
+    },
+    "isDefaultChild": true,
+    "natureType": "documentAsset",
+    "isStandard": true,
+    "isNature": true,
+    "classifierIID": 31,
+    "extensionConfiguration": [
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "pdf"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "ppt"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "pptx"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "doc"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "docx"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": false,
+        "extension": "xls"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": false,
+        "extension": "xlsx"
+      },
+      {
+        "extractMetadata": false,
+        "extractRendition": false,
+        "extension": "obj"
+      },
+      {
+        "extractMetadata": false,
+        "extractRendition": false,
+        "extension": "stp"
+      },
+      {
+        "extractMetadata": false,
+        "extractRendition": false,
+        "extension": "fbx"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": false,
+        "extension": "zip"
+      },
+      {
+        "extractMetadata": false,
+        "extractRendition": false,
+        "extension": "xtex"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "indd"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "idms"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "idml"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "indt"
+      },
+      {
+        "extractMetadata": true,
+        "extractRendition": true,
+        "extension": "idlk"
+      }
+    ]
+  },
+  {
+    "type": "com.cs.core.config.interactor.entity.klass.Asset",
+    "id": "smartdocument_asset",
+    "code": "smartdocument_asset",
+    "parent": {
+      "type": "com.cs.core.config.interactor.entity.klass.Asset",
+      "id": "document_asset"
+    },
+    "isDefaultChild": true,
+    "natureType": "documentAsset",
+    "isStandard": true,
+    "isNature": true,
+    "classifierIID": 32
+  }
+]

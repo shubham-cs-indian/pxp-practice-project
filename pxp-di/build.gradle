@@ -1,0 +1,103 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+compileJava.options.encoding = 'UTF-8'
+version = "1.0.0"
+//sourceCompatibility = 11
+
+repositories {
+    mavenLocal()
+	mavenCentral ()
+    maven { url "https://repo.spring.io/libs-snapshot" }
+	maven { url "https://jitpack.io" }        
+    jcenter()
+}
+
+dependencies {
+    // Uncomment the application dependency for deployment purpose
+	//compile(group: 'com.cs', name: 'pxp-core', version: '1.0.0')
+	//compile(group: 'com.cs', name: 'pxp-dam', version: '1.0.0')
+	//compile(group: 'com.cs', name: 'pxp-pim', version: '1.0.0')
+	
+	// Add the project dependency management
+	compile project(path: ':pxp-core')
+	compile project(path: ':pxp-workflow')
+	compile project(path: ':pxp-dam')
+	compile project(path: ':pxp-pim')
+	compile project(path: ':pxp-rdbms-implementation')
+	compile project(path: ':pxp-rdbms-interface')    
+	compile project(path: ':pxp-technical-services')
+	compile project(path: ':pxp-exception')
+	
+	def springFrameworkVersion = "5.2.1.RELEASE"
+	def camundaVersion = "7.8.0"
+    compile "org.apache.poi:poi-ooxml:3.11"
+	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+	compile 'org.aspectj:aspectjtools:1.8.5'
+	compile "org.springframework.kafka:spring-kafka:1.1.2.RELEASE"
+	compile 'org.slf4j:slf4j-log4j12:1.7.21'
+	//compile "org.slf4j:log4j-over-slf4j:1.7.13"
+	compile 'org.javers:javers-core:1.4.3'
+    compile "org.springframework:spring-web:${springFrameworkVersion}"
+	compile "org.springframework:spring-webmvc:${springFrameworkVersion}"
+	compile "org.camunda.bpm:camunda-engine:${camundaVersion}"
+	compile group: 'com.netflix.ribbon', name: 'ribbon-httpclient', version: '2.2.5'
+    compile group: 'org.apache.activemq', name: 'activemq-spring', version: '5.14.3'
+    compile group: 'org.springframework', name: 'spring-jms', version: '4.3.5.RELEASE'
+	compile group: 'commons-io', name: 'commons-io', version: '2.6'
+	compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.13'
+	compile "junit:junit:4.12"
+	//Provides mock helpers to register delegate/listener mocks while testing processes	
+	testCompile group: 'org.jmockit', name: 'jmockit', version: '1.21'
+	//testCompile "io.rest-assured:rest-assured:3.1.0"
+	testCompile group: 'com.h2database', name: 'h2', version: '1.4.190'//'1.0.60'		
+	//added as per standalone flow
+	compile "org.camunda.bpm:camunda-bom:7.12.0"//${version.camunda}"
+	compile "org.camunda.bpm.assert:camunda-bpm-assert:5.0.0"
+	compile "org.camunda.bpm:camunda-engine-plugin-spin:7.8.0"
+	compile "org.camunda.bpm:camunda-engine-plugin-connect:7.8.0"
+	testCompile "org.assertj:assertj-core:3.13.2"
+	testCompile "org.springframework:spring-test:${springFrameworkVersion}"	//@ContextConfiguration added
+    //for power mock
+    testCompile "org.powermock:powermock-module-junit4:2.0.2"
+    testCompile "org.powermock:powermock-api-mockito2:2.0.2"
+    compile "com.netflix.ribbon:ribbon-loadbalancer:2.2.5"
+
+	}
+
+configurations.all {
+    //exclude group: "org.slf4j", module: "slf4j-log4j12"
+    //exclude group: "log4j", module: "log4j"
+}
+
+task allDeps(type: DependencyReportTask) {}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+configurations {
+    runtime.exclude module: 'poi-ooxml'
+    //runtime.exclude module: 'spring-context' //removed for JUNIT to work
+    //runtime.exclude module: 'spring-core'	   //removed for JUNIT to work
+    runtime.exclude module: 'aspectjtools'
+    runtime.exclude module: 'spring-kafka'
+    runtime.exclude module: 'log4j-over-slf4j'
+    runtime.exclude module: 'javers-core'
+    runtime.exclude module: 'spring-web'
+    runtime.exclude module: 'spring-webmvc'
+ 	//runtime.exclude module: 'camunda-engine'  //removed for JUNIT to work
+ 	runtime.exclude module: 'ribbon-httpclient'
+ 	runtime.exclude module: 'activemq-spring'
+ 	runtime.exclude module: 'spring-jms'
+	runtime.exclude module: 'commons-io'
+	
+}
+
+test {
+    ignoreFailures = true
+}

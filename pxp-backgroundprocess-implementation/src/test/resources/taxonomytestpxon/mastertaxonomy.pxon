@@ -1,0 +1,96 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "csid": "[c>R_Taxonomy_new_1 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_Taxonomy_new_1",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      "articlegeneralInformationPropertyCollection": [
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "pid_attribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "nameattribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "sku_attribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "gtin_attribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "statustag",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "tag"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "shortdescriptionattribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        },
+        {
+          "ismandatory": false,
+          "$couplingtype": "looselyCoupled",
+          "isdisabled": false,
+          "$code": "longdescriptionattribute",
+          "isshould": false,
+          "$isinherited": false,
+          "$type": "attribute"
+        }
+      ]
+    },
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ]"LLevelCode": [
+      
+    ],
+    "taxonomytype": "majorTaxonomy"
+  }
+]

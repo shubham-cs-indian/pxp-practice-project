@@ -1,0 +1,11 @@
+package com.cs.core.config.strategy.usecase.klass;
+
+import com.cs.core.config.interactor.model.configdetails.IGetDefaultKlassesModel;
+import com.cs.core.config.interactor.model.configdetails.IListModel;
+import com.cs.core.config.strategy.configuration.base.IConfigStrategy;
+import com.cs.core.runtime.interactor.model.typeswitch.IGetAllowedTypesForModulesModel;
+
+public interface IGetDefaultKlassesForModulesStrategy
+    extends IConfigStrategy<IListModel<IGetAllowedTypesForModulesModel>, IGetDefaultKlassesModel> {
+  
+}

@@ -1,0 +1,20 @@
+  export default {
+    COMPLETENESS_BLOCK: "completenessBlock",
+    UNIQUENESS_BLOCK: "uniquenessBlock",
+    ACCURACY_BLOCK: "accuracyBlock",
+    CONFORMITY_BLOCK: "conformityBlock",
+    PERCENTAGE: "percentage",
+    COUNT: "count",
+    ACCURACY_RULES: "accuracy",
+    UNIQUENESS_RULES: "uniqueness",
+    CONFORMITY_RULES: "conformity",
+    COMPLETENESS_RULES: "completeness",
+    FREQUENCY: "frequency",
+    KPI_INFORMATION: "kpiInformation",
+    ROLES: "roles",
+    LEVELS: "levels",
+    TARGET: "target",
+    LOWER: "lower",
+    UPPER: "upper",
+    PARTNERS: "partners"
+  };

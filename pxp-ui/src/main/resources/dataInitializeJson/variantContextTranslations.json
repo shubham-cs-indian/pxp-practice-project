@@ -1,0 +1,19 @@
+[
+	{
+    "id": "price_context",
+    "translations": {
+      "en_US": {
+        "label": "Price Context"
+      },
+      "es_ES": {
+        "label": "Contexto de precios"
+      },
+      "fr_FR": {
+        "label": "Contexte des prix"
+      },
+      "de_DE": {
+        "label": "Preiskontext"
+      }
+    }
+  }
+]

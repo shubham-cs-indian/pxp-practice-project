@@ -1,0 +1,436 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.iconLibraryViewContainerWrapper {
+  height: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.iconImageInformation{
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 0 1px 1px #dedede;
+
+  img{
+    height: 100px;
+    width: 100px;
+    margin-left: 25px;
+    margin-top: 25px;
+
+  }
+
+  .editIconDialogActionButton {
+    height: 16px;
+    width: 16px;
+    opacity: .4;
+    cursor: pointer;
+    float: right;
+    margin-right: 6px;
+
+    &.replace {
+      @include background-properties($image-CS-Replace-26, 16px);
+    }
+  }
+}
+
+.iconInformation{
+  height: 150px;
+  width: 72%;
+  display: inline-block;
+  vertical-align: top;
+
+  h4{
+    margin: 2px 2px 2px 20px;
+    text-align: left;
+    font-size: 13px;
+    font-family: Rubik;
+    letter-spacing: 0px;
+    color: #0f1110;
+    opacity: 1;
+  }
+
+  input{
+    height: 40px;
+    width: 90%;
+    margin: 5px 2px 15px 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    font-size: 13px;
+  }
+
+  .codeName {
+    background-color: $color-dark-grey;
+  }
+}
+
+.tabDetailsDialog {
+  padding-top: 10px;
+  .iconTable {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin-bottom: 5px;
+    .iconTableHeader {
+      border: none;
+
+      h5{
+        margin-top: 3px;
+      }
+      .iconImageContainer {
+        border-bottom: none;
+      }
+      .tableHeaderName1, .tableHeaderName2 {
+        border-bottom: none;
+      }
+      .tableHeaderName2 {
+        padding-left: 50px;
+      }
+      .tableHeaderName1 {
+        padding-left: 5px;
+      }
+    }
+    .validImage {
+      box-shadow: 0 0 1px 1px #dedede;
+      border-radius: 2px;
+      .iconImageContainer {
+        width: 75px;
+        border-bottom: none;
+        padding: 5px 0px 5px 5px;
+        .iconImage {
+          height: 18px;
+          width: 27px;
+          padding-left: 10px;
+          top: 182px;
+        }
+      }
+      .iconName {
+        width: 200px;
+        height: 15px;
+        padding: 5px 5px 5px 5px;
+
+      }
+      .sectionInputDataTag {
+        padding: 5px 0 5px 50px;
+        .sectionInput {
+          width: 140px;
+          border: none;
+        }
+      }
+    }
+    .invalidImage {
+      background-color: rgba(255, 14, 26, 0.1);
+      border-radius: 2px;
+      box-shadow: 0 0 1px 1px #e63709;
+      .iconImageContainer {
+        width: 75px;
+        border-bottom: none;
+        padding: 5px 0px 5px 5px;
+        .iconImage {
+          height: 18px;
+          width: 27px;
+          padding-left: 10px;
+          top: 182px;
+        }
+      }
+      .iconName {
+        width: 200px;
+        height: 15px;
+        padding: 5px 5px 5px 5px;
+        .sectionInput {
+          border: none;
+          background-color: inherit;
+
+        }
+      }
+      .sectionInputDataTag {
+        padding: 5px 0 5px 50px;
+        .sectionInput {
+          border: none;
+          background-color: inherit;
+        }
+      }
+      td{
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.iconLibraryViewContainer {
+  height: 100%;
+
+  .iconLibrarySection {
+    width: 100%;
+    height: calc(100% - 68px);
+    position: relative;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    .iconLibraryHeaderLabel {
+      font-size: $font-normal;
+      font-weight: 500;
+      margin: 0 15px;
+      @include ellipsis();
+    }
+
+    .iconLibrarySectionBody {
+      display: grid;
+      grid-column-gap: 13px;
+      grid-row-gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+      grid-template-rows: repeat(auto-fill, 77px);
+      background-color: #fff;
+      padding: 20px 20px 40px;
+
+      .iconLibrarySectionElement {
+        position: relative;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        height: 15%;
+        min-height: 76px;
+        min-width: 186px;
+
+        .iconLibrarySectionElementBody {
+          padding: 10px;
+          border-bottom: 1.5px solid #eee;
+          height: 53px;
+          display: flex;
+
+          .iconLibrarySectionElementIcon {
+            width: 32px;
+            height: 32px;
+
+            .icon {
+              position: relative;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              max-width: 32px;
+              max-height: 32px;
+            }
+          }
+
+          .iconLibrarySectionElementDetails {
+            flex: 1;
+            margin: 0 5px;
+            max-width: 154px;
+            padding-right: 10px;
+
+            .iconLibrarySectionElementName {
+              font-size: 11px;
+              font-family: Rubik;
+              color: #5D5D5D;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .iconLibrarySectionElementCodeContainer {
+              display: flex;
+
+              .iconLibrarySectionElementCode {
+                font-family: Rubik;
+                font-size: 10px;
+                color: #8F8F8F;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+              .copyToClipboard {
+                height: 12px;
+                width: 9px;
+                cursor: pointer;
+                opacity: 0;
+                margin-left: 10px;
+                @include background-properties($image-CS-copy-to-clipboard, 12px, top);
+              }
+            }
+          }
+        }
+
+        .iconLibrarySectionActions {
+          height: 23px;
+
+          .gridImageActionIconContainer {
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-top: 5px;
+
+            .gridImageActionIcon {
+              height: 100%;
+              width: 100%;
+              opacity: .4;
+              cursor: pointer;
+
+              &.replace {
+                @include background-properties($image-CS-Replace-26, 16px);
+              }
+
+              &.edit {
+                @include background-properties($image-CS-Edit-32, 16px);
+              }
+
+              &.delete {
+                @include background-properties($image-CS-delete-bin-black, 16px);
+              }
+
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+              }
+
+              &:active {
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .iconElementHeaderView {
+            .iconElementCheckButton {
+              opacity: 1;
+            }
+          }
+          .iconLibrarySectionElementBody {
+            .iconLibrarySectionElementDetails {
+              .iconLibrarySectionElementCodeContainer {
+                .copyToClipboard {
+                  opacity: 0.4;
+                }
+              }
+            }
+          }
+        }
+
+        &.selected {
+          border: solid 1px $color-theme-accent;
+        }
+      }
+    }
+
+    .paginationSection {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    .fileDragDropViewContainerWrapper, .fileDragDropViewContainer {
+      height: 100%;
+      overflow-y: auto;
+      .iconLibrarySectionBody {
+        overflow-y: auto;
+        height: 100%;
+        scrollbar-width: thin;
+      }
+      .iconLibraryNothingToDisplayContainer {
+        height: 100%;
+        background-color: $color-light-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #aaa;
+        .nothingToDisplay {
+          padding: 0 8px;
+          text-align: center;
+          line-height: 19px;
+          font-size: $font-sub-title;
+          color: #8F8F8F;
+        }
+      }
+    }
+  }
+}
+
+.iconElementHeaderView {
+
+  overflow: hidden;
+  background-color: $color-light-1;
+
+  .iconElementCheckButton {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    background-color: transparent;
+    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 20px);
+
+    &:hover {
+    }
+
+    &.isSelected {
+      box-shadow: none;
+      opacity: 1;
+      @include background-properties($image-cs-checkbox-checked, 20px);
+      background-color: $color-light-1;
+
+      &:hover {
+      }
+    }
+  }
+}
+
+.selectIcon {
+  height: 36px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+  @include background-properties-with-theme-white-color($image-cs-checkbox-unchecked, 15px);
+
+  &.isSelected {
+    @include background-properties-with-theme-white-color($image-cs-checkbox-checked, 15px);
+  }
+
+  &.partiallySelected {
+    @include background-properties-with-theme-white-color($image-cs-checkbox-partial-checked, 15px);
+  }
+
+  &.disabled {
+    background-image: none;
+  }
+
+  .selectedItemCount {
+    background: #F33;
+    font-size: $font-small;
+    color: $color-light-1;
+    position: absolute;
+    top: -5px;
+    left: 25px;
+    border: 1px solid $color-light-1;
+    display: inline-block;
+    border-radius: 50%;
+    min-width: 15px;
+    height: 15px;
+    line-height: 16px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.crossIconForIconLibrary{
+  top: 535px;
+  left: 979px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  @include background-properties-with-gray-color($image-CS-Cross, 15px);
+}

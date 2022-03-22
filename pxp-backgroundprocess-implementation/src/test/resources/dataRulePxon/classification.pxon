@@ -1,0 +1,53 @@
+[
+  {
+    "Ltags": [
+      
+    ],
+    "Llanguages": [
+      
+    ],
+    "Ltaxonomies": [
+      "R_Taxonomy1",
+      "R_taxonomy2"
+    ],
+    "Lorganizations": [
+      "-1"
+    ],
+    "csid": "[R>R_Rules503]",
+    "Ltypes": [
+      "single_article"
+    ],
+    "$isstandard": false,
+    "$islanguagedependent": false,
+    "label": "R_Rules103_Label",
+    "Lrelationships": [
+      
+    ],
+    "Lphysicalcatalogids": [
+      "pim",
+      "dataIntegration"
+    ],
+    "$type": "classification",
+    "Lattributes": [
+      
+    ],
+    "Lnormalizations": [
+      {
+        "Lvalues": [
+          "R_non_nature",
+          "R_non_nature2"
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "$type": "type"
+      },
+      {
+        "Lvalues": [
+          "R_Taxonomy1",
+          "R_taxonomy2"
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "$type": "taxonomy"
+      }
+    ]
+  }
+]

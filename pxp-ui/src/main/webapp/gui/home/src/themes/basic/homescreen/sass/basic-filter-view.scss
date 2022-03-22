@@ -1,0 +1,2452 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+//todo: change remaining font sizes and images with constants
+
+$primary-font-size: 11px;
+$max-width-for-labels: 250px;
+.contentScreenContainer {
+
+  .filterSearchViewContainer {
+    position: absolute;
+    top: 9px;
+    width: 500px;
+    height: 32px;
+    z-index: 15;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: table;
+
+    &.taxonomySelectorHidden {
+      display: flex;
+      justify-content: center;
+
+      .searchBarWrapper {
+        overflow: hidden;
+
+        .searchBarContainer {
+          //border-left: 1px solid $color-light-4;
+          display: flex;
+
+          .searchInput.size_0 {
+            width: calc(100% - 90px);
+          }
+        }
+      }
+    }
+
+    &.disableSearchBar {
+      opacity: .8;
+
+      .searchBarWrapper {
+        background: $color-light-1;
+        cursor: not-allowed;
+      }
+
+      .taxonomySelectorContainer {
+        .selectTaxonomyButton {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .taxonomySelectorContainer {
+      height: 32px;
+      display: inline-block;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 3px;
+
+      .selectTaxonomyButton {
+        height: 30px;
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 4px 0 4px;
+        border: $border-header-search-border;
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+        background-color: $brand-header-taxonomy-btn-color;
+        //width: 180px;
+
+        .selectTaxonomyButtonLabel {
+          padding: 0 10px 0 5px;
+          float: left;
+          //color: $brand-header-taxonomy-btn-label-color;
+          font-weight: 500;
+          line-height: 30px;
+          font-size: $primary-font-size;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          word-wrap: break-word;
+          white-space: nowrap;
+          width: auto;
+          overflow: hidden;
+        }
+
+        .downArrowIcon {
+          vertical-align: top;
+          height: 28px;
+          width: 20px;
+          float: right;
+          @include background-properties($image-CS-expand-arrow-icon, 14px, 3px);
+          cursor: pointer;
+        }
+
+        //&:hover {
+        //  background-color: $color-light-3;
+        //}
+      }
+
+      .selectTaxonomyButtonDisabled {
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 4px 0 4px;
+        border: 1px solid $color-light-4;
+        border-radius: 2px 0 0 2px;
+        background-color: $color-light-3;
+        width: 180px;
+
+        .selectTaxonomyButtonLabel {
+          padding: 0 0 0 5px;
+          float: left;
+          //color: $brand-header-taxonomy-btn-label-color;
+          font-weight: 500;
+          line-height: 28px;
+          font-size: $primary-font-size;
+        }
+
+        .downArrowIcon {
+          vertical-align: top;
+          height: 28px;
+          width: 20px;
+          float: right;
+          @include background-properties($image-CS-expand-arrow-icon, 14px 3px);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .searchBarWrapper {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% - 180px);
+      height: 32px;
+      border-width: 1px;
+      border-style: solid;
+      border-left-width: 0;
+      border-radius: 3px;
+
+      .searchBarContainer {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        background-color: $brand-header-search-btn-color;
+        border: $border-header-search-border;
+        border-radius: 0 3px 3px 0;
+        transition: all .2s;
+        &.disabled {
+          background-color: $color-light-3;
+
+          .searchInputIcon {
+            display: none;
+          }
+        }
+
+        .searchInputIcon {
+          display: inline-block;
+          vertical-align: top;
+          left: 2px;
+          top: 0;
+          height: 30px;
+          opacity: .7;
+          width: 30px;
+          cursor: pointer;
+          @include background-properties($image-CS-SearchFilled-32, 16px, 6px);
+        }
+
+        .searchInput {
+          line-height: 30px;
+          border: none;
+          padding: 0px;
+          outline: none;
+          display: inline-block;
+          vertical-align: top;
+          background: transparent;
+          transition: all .2s;
+          //color: $brand-search-input-color;
+
+          &:placeholder-shown {
+            width: calc(100% - 85px) !important;
+          }
+          &::placeholder {
+            //color: $brand-header-search-btn-placeholder-color;
+          }
+
+          &.disabled {
+            cursor: not-allowed;
+            .searchClearIcon {
+              display: none;
+            }
+          }
+
+          &:hover {
+          }
+
+          &.size_0 {
+            width: calc(100% - 90px);
+          }
+
+          &.size_1 {
+            width: calc(100% - 95px);
+          }
+
+          &.size_2 {
+            width: calc(100% - 60px);
+          }
+        }
+
+        .searchClearIcon {
+          width: 30px;
+          height: 30px;
+          //opacity: .6;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: top;
+          transition: all .2s;
+          filter: $brand-header-search-cancel-btn-color;
+          @include background-properties($image-CS-Cross, 18px, 5px);
+        }
+
+        &.isFocused {
+          position: absolute;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
+          margin: -2px 0 0 -2px;
+          z-index: 2;
+          border: 1px solid $color-light-4;
+          padding: 2px;
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+
+          .searchInput {
+            width: calc(100% - 60px) !important;
+          }
+        }
+      }
+    }
+
+    .collectionOptionsContainer {
+      display: inline-block;
+      vertical-align: top;
+      background-color: $color-light-1;
+      border-radius: 0 2px 2px 0;
+      position: relative;
+
+      .dynamicCollectionsSection {
+        position: absolute;
+        left: -30px;
+
+        .dynamicCollectionsButton {
+          width: 25px;
+          height: 30px;
+          cursor: pointer;
+          @include background-properties($image-CS-Bookmark-Ribbon-64, 18px, 50%);
+
+          &:hover {
+            /*background-size: 20px;
+              filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+              -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));*/
+          }
+
+          &.isActive {
+            @include background-properties($image-CS-Bookmark-Ribbon-64);
+          }
+        }
+      }
+
+      .staticCollectionsSection {
+        position: absolute;
+        left: 12px;
+        width: 34px;
+        border-radius: 3px;
+        border-width: 1px;
+        border-style: solid;
+
+        .staticCollectionSectionContainer {
+          background-color: $brand-pin-bg-color;
+          border-radius: 3px;
+
+          .staticCollectionsButton {
+            width: 34px;
+            height: 30px;
+            cursor: pointer;
+            @include background-properties($image-CS-collection-static-collection-new, 18px, 50%);
+
+            &.isActive {
+              @include background-properties($image-CS-collection-static-collection-blue, 18px, 50%);
+            }
+          }
+        }
+      }
+      .popOverAnchor {
+        position: absolute;
+        height: 30px;
+      }
+
+      .viewCollectionsSection {
+        display: inline-block;
+        vertical-align: top;
+
+        .viewCollectionsButton {
+          width: 30px;
+          height: 30px;
+          border: 1px solid $color-light-4;
+          border-radius: 0 2px 2px 0;
+          background-color: $color-light-3;
+          cursor: pointer;
+          @include background-properties($image-CS-OpenFolderFilled-50, 18px 50%);
+
+          &:hover {
+            background-size: 20px;
+            background-color: $color-light-1;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);
+            z-index: 2;
+          }
+
+          &.isSelected {
+            background-color: $color-light-1;
+            background-size: 16px;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4) inset;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/*
+.contentThumbsDialogWrapper{
+  .filterSearchViewContainer {
+    position: absolute;
+    top: 9px;
+    width: 500px;
+    height: 32px;
+    z-index: 15;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: table;
+
+    &.taxonomySelectorHidden {
+      display: flex;
+      justify-content: center;
+
+      .searchBarWrapper {
+        overflow: hidden;
+
+        .searchBarContainer {
+          //border-left: 1px solid $color-light-4;
+          display: flex;
+
+          .searchInput.size_0 {
+            width: calc(100% - 90px);
+          }
+        }
+      }
+    }
+
+    &.disableSearchBar {
+      opacity: .8;
+
+      .searchBarWrapper {
+        background: $color-light-1;
+        cursor: not-allowed;
+      }
+
+      .taxonomySelectorContainer {
+        .selectTaxonomyButton {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .taxonomySelectorContainer {
+      display: inline-block;
+
+      .selectTaxonomyButton {
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 4px 0 4px;
+        border: none;
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+        background-color: rgba(242, 242, 242, 0.2);
+        width: auto;
+
+        .selectTaxonomyButtonLabel {
+          padding: 0 10px 0 5px;
+          float: left;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          word-wrap: break-word;
+          white-space: nowrap;
+          width: auto;
+          overflow: hidden;
+          //color: #616367;
+          font-weight: 500;
+          line-height: 30px;
+          font-size: 11px;
+        }
+
+        .downArrowIcon {
+          vertical-align: top;
+          height: 28px;
+          width: 20px;
+          float: right;
+          @include background-properties($image-CS-expand-arrow-icon, 14px, 3px);
+          cursor: pointer;
+        }
+
+        //&:hover {
+        //  background-color: $color-light-3;
+        //}
+      }
+
+      .selectTaxonomyButtonDisabled {
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 4px 0 4px;
+        border: 1px solid $color-light-4;
+        border-radius: 2px 0 0 2px;
+        background-color: $color-light-3;
+        width: 180px;
+
+        .selectTaxonomyButtonLabel {
+          padding: 0 0 0 5px;
+          float: left;
+          //color: $brand-header-taxonomy-btn-label-color;
+          font-weight: 500;
+          line-height: 28px;
+          font-size: $primary-font-size;
+        }
+
+        .downArrowIcon {
+          vertical-align: top;
+          height: 28px;
+          width: 20px;
+          float: right;
+          @include background-properties($image-CS-expand-arrow-icon, 14px 3px);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .searchBarWrapper {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% - 180px);
+      height: 30px;
+
+      .searchBarContainer {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 0 3px 3px 0;
+        transition: all .2s;
+        &.disabled {
+          background-color: $color-light-3;
+
+          .searchInputIcon {
+            display: none;
+          }
+        }
+
+        .searchInputIcon {
+          display: inline-block;
+          vertical-align: top;
+          left: 2px;
+          top: 0;
+          height: 30px;
+          opacity: .7;
+          width: 30px;
+          cursor: pointer;
+          @include background-properties($image-CS-SearchFilled-32, 16px, 6px);
+        }
+
+        .searchInput {
+          line-height: 30px;
+          border: none;
+          padding: 0px;
+          outline: none;
+          display: inline-block;
+          vertical-align: top;
+          background: transparent;
+          transition: all .2s;
+          //color: #000;
+
+          &:placeholder-shown {
+            width: calc(100% - 85px) !important;
+          }
+          &::placeholder {
+            //color: $brand-header-search-btn-placeholder-color;
+          }
+
+          &.disabled {
+            cursor: not-allowed;
+            .searchClearIcon {
+              display: none;
+            }
+          }
+
+          &:hover {
+          }
+
+          &.size_0 {
+            width: calc(100% - 90px);
+          }
+
+          &.size_1 {
+            width: calc(100% - 95px);
+          }
+
+          &.size_2 {
+            width: calc(100% - 60px);
+          }
+        }
+
+        .searchClearIcon {
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: top;
+          transition: all .2s;
+          //filter:invert(0);
+          @include background-properties($image-CS-Cross, 18px, 5px);
+        }
+
+        &.isFocused {
+          position: absolute;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
+          margin: -2px 0 0 -2px;
+          z-index: 2;
+          border: 1px solid $color-light-4;
+          padding: 2px;
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+
+          .searchInput {
+            width: calc(100% - 60px) !important;
+          }
+        }
+      }
+    }
+
+    .collectionOptionsContainer {
+      display: inline-block;
+      vertical-align: top;
+      background-color: $color-light-1;
+      border-radius: 0 2px 2px 0;
+      position: relative;
+
+      .dynamicCollectionsSection {
+        position: absolute;
+        left: -30px;
+
+        .dynamicCollectionsButton {
+          width: 25px;
+          height: 30px;
+          cursor: pointer;
+          @include background-properties($image-CS-Bookmark-Ribbon-64, 18px, 50%);
+
+          &:hover {
+            !*background-size: 20px;
+              filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+              -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));*!
+          }
+
+          &.isActive {
+            @include background-properties($image-CS-Bookmark-Ribbon-64);
+          }
+        }
+      }
+
+      .staticCollectionsSection {
+        position: absolute;
+        left: 12px;
+        width: 34px;
+        background-color: $brand-pin-bg-color;
+        border-radius: 3px;
+        border: $brand-pin-border;
+
+        .staticCollectionsButton {
+          width: 34px;
+          height: 30px;
+          cursor: pointer;
+          @include background-properties($image-CS-collection-static-collection-new, 18px, 50%);
+
+          &.isActive {
+            @include background-properties($image-CS-collection-static-collection-blue, 18px, 50%);
+          }
+        }
+      }
+      .popOverAnchor {
+        position: absolute;
+        height: 30px;
+      }
+
+      .viewCollectionsSection {
+        display: inline-block;
+        vertical-align: top;
+
+        .viewCollectionsButton {
+          width: 30px;
+          height: 30px;
+          border: 1px solid $color-light-4;
+          border-radius: 0 2px 2px 0;
+          background-color: $color-light-3;
+          cursor: pointer;
+          @include background-properties($image-CS-OpenFolderFilled-50, 18px 50%);
+
+          &:hover {
+            background-size: 20px;
+            background-color: $color-light-1;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);
+            z-index: 2;
+          }
+
+          &.isSelected {
+            background-color: $color-light-1;
+            background-size: 16px;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4) inset;
+          }
+        }
+      }
+
+    }
+  }
+}
+*/
+
+@media screen and (max-width: 1750px) {
+  .contentScreenContainer {
+    .filterSearchViewContainer {
+      right: 650px;
+      left: auto;
+    }
+     .taxonomySelectorContainer .selectTaxonomyButton {
+      max-width: 150px;
+    }
+     .searchBarWrapper {
+      width: calc(100% - 90px);
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .contentScreenContainer {
+    .filterSearchViewContainer {
+      width: 430px;
+    }
+  }
+}
+@media screen and (max-width: 1150px) {
+  .contentScreenContainer {
+    .filterSearchViewContainer {
+      width: 330px;
+    }
+  }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1049px) {
+  .contentScreenContainer {
+    .filterSearchViewContainer {
+      width: 300px;
+      right: 490px;
+      left: auto;
+    }
+
+     .taxonomySelectorContainer .selectTaxonomyButton {
+      width: 140px;
+    }
+
+     .taxonomySelectorContainer .selectTaxonomyButton .selectTaxonomyButtonLabel {
+      width: 110px;
+    }
+
+     .searchBarWrapper {
+      width: calc(100% - 140px);
+    }
+  }
+}
+
+.taxonomyTreeSearchBarContainer {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  background-color: $color-light-1;
+  border: 1px solid $color-light-4;
+  border-radius: 0 2px 2px 0;
+
+  /*
+  .taxonomyTreeSearchInputIcon {
+    display: inline-block;
+    vertical-align: top;
+    left: 2px;
+    top: 0;
+    height: 28px;
+    opacity: .7;
+    width: 30px;
+    @include background-properties($image-CS-SearchFilled-32,16px, 6px);
+    filter: $brand-header-all-btn-color;
+  }
+  */
+
+  input {
+    line-height: 28px;
+    border: none;
+    padding: 0 10px 0 0px;
+    outline: none;
+    width: calc(91% - 36px);
+    display: inline-block;
+    vertical-align: top;
+
+    &:hover {
+    }
+  }
+  .searchClearIcon {
+    width: 28px;
+    height: 28px;
+    opacity: .6;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    @include background-properties($image-CS-Cross, 10px, 5px);
+  }
+
+  .simpleSearchBarView {
+    height: 28px;
+  }
+}
+
+.taxonomyTreeToolbarButton{
+  height: 30px;
+  background-position: center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  float: right;
+  background-color: $color-light-1;
+  border: 1px solid $color-light-4;
+  margin-left: 5px;
+  border-radius: 2px;
+  line-height: 27px;
+  opacity: .8;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: all .2s;
+  font-size: $font-normal;
+
+  &.noShow{
+    display: none;
+  }
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.taxonomyTreeHideEmptyButton {
+  display: inline-block;
+  cursor: pointer;
+  margin: 6px 10px;
+  float: right;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: $color-dark-4;
+}
+
+.filterSectionContainer {
+  width: 100%;
+  position: relative;
+  margin: 0 0 10px 0;
+  &.filterApplied {
+    min-height: 65px;
+  }
+
+  .filterBody {
+
+    .summaryViewContainer {
+      display: flex;
+      position: relative;
+      margin-top: 2px;
+      min-height: 15px;
+
+      .filterSummarySectionContainer {
+        display: inline-block;
+        padding-bottom: 0;
+        line-height: 0;
+        .filterSummaryLittleRowContainer {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .lessMoreToggleButton {
+        display: inline-block;
+        line-height: 22px;
+        position: absolute;
+        bottom: 1px;
+        right: 0px;
+        font-weight: 500;
+        opacity: 0.7;
+
+        .lessMore {
+          span {
+            font-size: $primary-font-size - 1px;
+            text-transform: uppercase;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          .lessMoreIcon {
+            font-size: 9px;
+            padding: 0 0 0 5px;
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .lessMoreToggleButton {
+    cursor: pointer;
+    text-align: right;
+    color: $color-dark-4;
+    width: 90px;
+    display: inline-block;
+    line-height: 22px;
+    font-size: 11px;
+    opacity: 0.7;
+    font-weight: 500;
+    height: 22px;
+    @include ellipsis();
+
+    .lessMore {
+      span {
+        font-size: $primary-font-size - 1px;
+        text-transform: uppercase;
+      }
+      .lessMoreIcon {
+        font-size: 9px;
+        padding: 0 0 0 5px;
+      }
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .filterSummarySectionContainer {
+    padding-bottom: 3px;
+    line-height: 22px;
+    width: calc(100% - 50px);
+
+    & + .lessMoreToggleButton {
+      bottom: 5px;
+    }
+
+    .filterSummaryLittleRowContainer {
+
+      .filterSummarySectionWrapper {
+        display: inline-block;
+
+        .filterSummaryLittleRowFilterLabel, .filterSummaryLittleRowSortLabel, .filterSortSummaryLittleRowFilterLabel {
+          float: left;
+          margin-right: 0px;
+          color: $color-dark-4;
+          font-weight: 500;
+          line-height: 22px;
+          text-shadow: 0 0 0 #333;
+        }
+
+        .filterSummaryViewWrapper {
+          display: inline;
+
+          .summaryLittleObject {
+            float: left;
+            border-radius: 2px;
+            margin-right: 10px;
+
+            .summaryLittleObjectDetails {
+              float: left;
+
+              .summaryLittleObjectDetailsLabel {
+                float: left;
+                color: #999;
+                line-height: 22px;
+
+                span {
+                  font-size: $primary-font-size;
+                  line-height: 18px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  max-width: $max-width-for-labels;
+                  display: inline-block;
+                  vertical-align: top;
+                  margin-top: 2px;
+                }
+              }
+
+              .summaryLittleObjectDetailsValue {
+                float: left;
+                margin-left: 0px;
+                font-size: $primary-font-size;
+                color: $color-dark-4;
+                line-height: 22px;
+                max-width: 200px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+
+              .customIcon {
+                width: 15px;
+                height: 15px;
+                float: left;
+                position: relative;
+                margin: 4px 5px 0 5px;
+
+                .imageSimpleViewNoImage{
+                  background-size: 13px;
+                }
+              }
+            }
+            &:last-child {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        .filterSortSummaryViewWrapper {
+          display: inline;
+          .summaryLittleObject {
+            float: left;
+            border-radius: 2px;
+            margin-right: 10px;
+
+            .summaryLittleObjectDetails {
+              float: left;
+
+              .summaryLittleObjectDetailsLabel {
+                float: left;
+                color: #999;
+                line-height: 22px;
+
+                span {
+                  font-size: $primary-font-size;
+                  line-height: 18px;
+                }
+              }
+
+              .summaryLittleObjectDetailsValue {
+                float: left;
+                margin-left: 5px;
+                font-size: $primary-font-size;
+                color: $color-dark-4;
+                line-height: 22px;
+                max-width: 200px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                padding-right: 5px;
+              }
+
+              .sortOrder{
+                height: 18px;
+                overflow: hidden;
+                padding: 0 7px 0 5px;
+                color: #999;
+                line-height: 20px;
+                border-radius: 2px 2px 0 0;
+                background-repeat: no-repeat;
+                background-size: 12px 14px;
+                background-position: right 1px top 5px;
+                margin-right: 2px;
+                float: left;
+                &.asc {
+                  background-image: url($image-CS-Sort-Ascending);
+                }
+                &.desc {
+                  background-image: url($image-CS-Sort-Descending);
+                }
+              }
+
+              .customIcon {
+                width: 15px;
+                height: 15px;
+                float: left;
+                position: relative;
+                margin: 4px 5px 0 5px;
+
+                .imageSimpleViewNoImage{
+                  background-size: 13px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      &.collapsed {
+        height: 0;
+      }
+
+      * {
+        font-size: $primary-font-size;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .sortByViewContainer {
+    overflow: hidden;
+    margin-top: 2px;
+    //height: 28px;
+
+    .sortByViewLabel {
+      float: left;
+      line-height: 20px;
+      padding-right: 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: $color-dark-4;
+    }
+
+    .sortByViewItems {
+      overflow: hidden;
+      float: left;
+      width: auto;
+
+      .dragNDropViewContainer {
+        display: inline-flex;
+
+        &.hideMe {
+          display: none;
+        }
+      }
+
+      .loadMoreSortData {
+        font-style: italic;
+        color: $color-dark-5;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .sortItem {
+        line-height: 20px;
+        overflow: hidden;
+        padding: 0 7px 0 5px;
+        cursor: pointer;
+        color: #999;
+        font-size: $primary-font-size;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: $max-width-for-labels;
+
+        &:hover {
+          color: #423f3f;
+        }
+
+        &.activeSortItem {
+          box-shadow: 0px -2px 0px 0px #aaa inset;
+          font-weight: 500;
+          color: #333;
+          line-height: 20px;
+          border-radius: 2px 2px 0 0;
+          background-repeat: no-repeat;
+          background-size: 12px 12px;
+          background-position: right 1px top 4px;
+
+          &:hover {
+            box-shadow: 0px -2px 0px 0px $color-light-4 inset;
+          }
+        }
+
+        &.ascending {
+          background-image: url($image-CS-Sort-Ascending);
+        }
+
+        &.descending {
+          background-image: url($image-CS-Sort-Descending);
+        }
+      }
+      .customIcon {
+        width: 15px;
+        float: left;
+        position: relative;
+        height: 15px;
+        margin: 3px 0px 3px 3px;
+
+        .imageSimpleViewNoImage{
+          background-size: 13px;
+        }
+      }
+
+      .sortButton {
+        overflow: hidden;
+        padding: 0 7px 0 5px;
+        cursor: pointer;
+        color: #999;
+        line-height: 20px;
+        border-radius: 2px 2px 0 0;
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: right 1px top 4px;
+        margin-right: 2px;
+
+        &:hover {
+          color: #423f3f;
+        }
+
+        &.activeSortItem {
+          color: #333;
+          box-shadow: 0px -2px 0px 0px #aaa inset;
+
+          &:hover {
+            box-shadow: 0px -2px 0px 0px $color-light-4 inset;
+          }
+        }
+
+        &.ascending {
+          background-image: url($image-CS-Sort-Ascending);
+        }
+
+        &.descending {
+          background-image: url($image-CS-Sort-Descending);
+        }
+      }
+    }
+
+    .sortOrderToggle {
+      cursor: pointer;
+      padding: 2px 10px;
+      float: left;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      line-height: 17px;
+
+      .sortOrderButton {
+        margin-left: 8px;
+        background-image: linear-gradient($color-light-3, $color-light-4);
+        padding: 2px 6px 2px 8px;
+        display: inline-block;
+        box-shadow: 0px 0px 0px 1px $color-light-4 inset;
+        border-radius: 3px;
+        transition: all .2s;
+        color: $color-dark-4;
+
+        .sortOrderButtonIcon {
+          height: 16px;
+          width: 16px;
+          float: right;
+          transition: all .2s;
+          margin-left: 5px;
+          opacity: 0.8;
+          background-repeat: no-repeat;
+          background-position: 1px;
+          background-size: 14px;
+          background-image: url($image-CS-Up-52);
+
+          &.descending {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:hover {
+          background-image: linear-gradient($color-light-3, $color-light-4);
+          box-shadow: 0px 0px 0px 1px #bbb inset;
+          color: #333;
+        }
+      }
+
+      & * {
+        font-size: $primary-font-size;
+      }
+    }
+
+    .ascending {
+    }
+
+    .descending {
+    }
+
+    .moreSectionContainer {
+      width: 100px;
+      height: 20px;
+      display: flex;
+
+      .selectedOption {
+        width: 80px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        line-height: 20px;
+        overflow: hidden;
+        color: #999;
+        font-size: 11px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 15px 0 8px;
+
+        &.activeSortItem {
+          box-shadow: 0px -2px 0px 0px #aaa inset;
+          font-weight: 500;
+          color: #333;
+          line-height: 20px;
+          border-rAdius: 2px 2px 0 0;
+          transform: scale(1, 1);
+        }
+        &.ascending {
+          background-image: url($image-CS-Sort-Ascending);
+          background-repeat: no-repeat;
+          background-size: 12px 12px;
+          background-position: right 4px top 4px;
+          cursor: pointer;
+        }
+
+        &.descending {
+          background-image: url($image-CS-Sort-Descending);
+          background-repeat: no-repeat;
+          background-size: 12px 12px;
+          background-position: right 4px top 4px;
+          cursor: pointer;
+        }
+      }
+
+      .showMoreButton {
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+        cursor: pointer;
+        box-shadow: 0px 0px 1px 0px #8c8c8c;
+        @include background-properties($image-CS-double-right-arrow, 10px);
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .sortOrderButtonContainer {
+      padding: 0px 15px;
+      float: left;
+      height: 25px;
+
+      .sortOrderIconContainer {
+        padding: 3px;
+
+        .ascending {
+          @include background-properties-with-theme-white-color($image-CS-Product-menu);
+          background-size: cover;
+          width: 15px;
+          height: 15px;
+          //transform: rotateX(180deg);
+        }
+
+        .descending {
+          background-image: url($image-CS-Sort-Descending);
+          background-size: cover;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    /*
+    .selectMoreSortItems {
+      max-width: 140px;
+      float: left;
+      font-size: $primary-font-size;
+      border: none;
+      line-height: 20px;
+      height: 20px;
+      background-color: #fcfcfc;
+      box-shadow: 0px -2px 0px 0px #aaa inset;
+      font-weight: 500;
+      color: #333;
+      text-align-last: center;
+      -moz-text-align-last: center;
+
+      .hideMe {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      option {
+        font-weight: normal;
+        white-space: pre;
+        min-height: 1.2em;
+        padding: 0 2px 1px 0;
+        color: #999;
+      }
+    }
+    */
+
+    .noHighlight {
+      max-width: 150px;
+      float: left;
+      font-size: $primary-font-size;
+      border: none;
+      background-color: #fcfcfc;
+      color: #999;
+      margin-top: -1px;
+      box-shadow: none;
+      line-height: 25px;
+      font-weight: 400;
+    }
+
+    .hideMe {
+      display: none;
+    }
+  }
+}
+
+
+
+.filterDetailsSectionContainer {
+
+  .selectedCategoriesContainer {
+
+    .klassObject {
+      height: 20px;
+      background: $color-light-3;
+      border-radius: 2px;
+      line-height: 20px;
+      float: left;
+      padding: 0 0 0 5px;
+      position: relative;
+      margin: 3px 5px 3px 0;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .klassObjectLabel {
+        float: left;
+        font-size: $primary-font-size;
+        max-width: $max-width-for-labels;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &:hover {
+          cursor: context-menu;
+        }
+      }
+
+      .klassObjectRemove, .klassObjectExpand {
+        width: 20px;
+        height: 20px;
+        opacity: .6;
+        cursor: pointer;
+        float: left;
+        @include background-properties($image-CS-Cross, 10px, 5px);
+        &:hover {
+          opacity: .9;
+        }
+      }
+
+      .klassObjectExpand {
+        @include background-properties($image-CS-expand-arrow-icon, 12px, 7px);
+      }
+    }
+  }
+
+  .availableFiltersContainer {
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .availableFiltersLabel {
+      float: left;
+      line-height: 25px;
+      padding-right: 10px;
+      font-size: $primary-font-size;
+      font-weight: 500;
+      color: $color-dark-4;
+    }
+
+    .availableFilterItemsContainer {
+      overflow: hidden;
+
+      .availableFilterItemWrapper {
+        overflow: hidden;
+        float: left;
+        max-width: 100%;
+        padding-right: 2px;
+
+        &.hideMe {
+          display: none;
+        }
+
+        .availableFilterItem {
+          cursor: pointer;
+          background: $color-light-3;
+          border-radius: 2px;
+          line-height: 20px;
+          overflow: hidden;
+          float: left;
+          padding: 0 0 0 5px;
+          margin: 3px 3px 3px 0px;
+          transition: all ease .2s;
+
+          &:hover {
+            background: $color-light-3;
+            transition: all ease .2s;
+          }
+
+          .availableFilterItemLabel {
+            font-size: $primary-font-size;
+            float: left;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: $max-width-for-labels;
+          }
+
+          .availableFilterItemExpand {
+            width: 20px;
+            height: 20px;
+            opacity: .6;
+            cursor: pointer;
+            float: left;
+            @include background-properties($image-CS-expand-arrow-icon, 10px, 5px);
+          }
+
+          .customIcon {
+            width: 20px;
+            height: 20px;
+            float: left;
+            position: relative;
+
+            .imageFitToContainer{
+              .imageFitToContainerImage {
+                padding: 3px 0;
+              }
+            }
+          }
+        }
+      }
+
+      .extraMargin {
+        margin-top: 5px;
+      }
+
+    }
+
+    .moreSectionContainer {
+      float: right;
+
+      &.hideMe {
+        display: none;
+      }
+
+      .moreFiltersButton {
+        cursor: pointer;
+        background: $color-light-3;
+        border-radius: 2px;
+        line-height: 20px;
+        overflow: hidden;
+        float: right;
+        padding: 0 0 0 10px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+        .moreFiltersButtonLabel {
+          font-size: $primary-font-size;
+          float: left;
+        }
+
+        .moreFiltersButtonExpand {
+          width: 20px;
+          height: 20px;
+          opacity: .6;
+          cursor: pointer;
+          float: left;
+          @include background-properties($image-CS-expand-arrow-icon, 10px, 5px);
+        }
+      }
+
+    }
+
+    .advancedSearchButton{
+      //opacity: .7;
+      padding-left: 13px;
+      float: right;
+      font-size: $primary-font-size;
+      font-weight: 500;
+      line-height: 25px;
+      color: $color-dark-4;
+      cursor: pointer;
+      //text-transform: uppercase;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+
+    .showFilterHierarchyButton{
+      //To show Text
+      //opacity: .7;
+      padding-left: 10px;
+      float: right;
+      font-size: $primary-font-size;
+      font-weight: 500;
+      line-height: 25px;
+      color: $color-dark-4;
+      cursor: pointer;
+      //text-transform: uppercase;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  .appliedFilterContainer {
+    overflow: hidden;
+    .filterSummaryRowContainer {
+      width: calc(100% - 70px);
+      max-height: 105px;
+      overflow: hidden;
+    }
+    .filterSummaryRowClearLabel {
+      float: right;
+      bottom: -3px;
+    }
+
+    .advancedSearchButton{
+      opacity: .7;
+      margin-left: 10px;
+      float: right;
+      font-size: $font-small;
+      font-weight: 500;
+      line-height: 25px;
+      color: $color-dark-4;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.summaryObject {
+  background: $color-light-3;
+  border-radius: 2px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 0 0 0 5px;
+  margin: 3px 5px 3px 0;
+  display: inline-flex;
+  float: left;
+
+  .summaryObjectDetails {
+    overflow: hidden;
+    height: 20px;
+    display: flex;
+
+    &:hover {
+      cursor: context-menu;
+    }
+
+    .summaryObjectDetailsLabel {
+      line-height: 20px;
+      font-size: $primary-font-size;
+      margin-right: 3px;
+
+      span {
+        font-size: $primary-font-size;
+        color: #888;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: $max-width-for-labels;
+      }
+    }
+
+    .summaryObjectDetailsValue {
+      margin-left: 3px;
+      font-size: $primary-font-size;
+      line-height: 20px;
+      overflow: hidden;
+      max-width: 190px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .customIcon {
+      width: 20px;
+      float: left;
+      height: 20px;
+      position: relative;
+      margin-right: 2px;
+
+      .imageFitToContainer {
+        .imageFitToContainerImage {
+          padding: 3px 0 3px 0;
+        }
+      }
+
+    }
+    }
+
+  .summaryObjectRemove {
+    width: 20px;
+    height: 20px;
+    opacity: .6;
+    cursor: pointer;
+    transition: all ease .2s;
+    display: inline-block;
+    @include background-properties($image-CS-Cross, 10px, 5px);
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+.filterSummaryRowClearLabel {
+  float: right;
+  line-height: 20px;
+  //opacity: .7;
+  cursor: pointer;
+  font-size: $primary-font-size;
+  font-weight: 500;
+  position: relative;
+  bottom: -4px;
+  //width: 90px;
+  //text-transform: uppercase;
+  color: $color-dark-4;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .clearFilterLabel {
+    font-size: 11px;
+  }
+}
+
+.filterSummaryRowContainer {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .filterSummaryRowFilterLabel {
+    float: left;
+    line-height: 25px;
+    margin-right: 10px;
+    font-size: $primary-font-size;
+    font-weight: 500;
+    color: $color-dark-4;
+    max-width: 113px;
+    @include ellipsis();
+  }
+
+  .appliedFilterWrapper {
+    overflow: hidden;
+
+    .groupActiveChips {
+      .groupChips.hideMe {
+        display: none;
+      }
+      .groupChips {
+        height: 20px;
+        background: #eee;
+        border-radius: 2px;
+        line-height: 20px;
+        float: left;
+        padding: 0 0 0 5px;
+        position: relative;
+        margin: 3px 5px 3px 0;
+        width: auto;
+        max-width: 150px;
+        overflow: hidden;
+        min-width: 30px;
+        cursor: pointer;
+
+        .customIcon {
+          height: 16px;
+          width: 15px;
+          float: left;
+          margin: 2px;
+          position: relative;
+
+          &.noImage {
+            opacity: .4;
+            @include background-properties($image-CS-ImageFile, 12px);
+          }
+        }
+
+        .selectedItemLabel {
+          float: left;
+          font-size: 11px;
+          max-width: 100px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          line-height: 22px;
+        }
+
+        .crossIcon {
+          width: 20px;
+          height: 20px;
+          opacity: .6;
+          cursor: pointer;
+          float: left;
+          @include background-properties($image-CS-Cross, 10px, 5px);
+          &:hover {
+            opacity: .9;
+          }
+        }
+
+        &.groupChipsCount {
+          .groupChipsCountLabel {
+            float: left;
+          }
+          .moreFiltersExpand {
+            width: 20px;
+            height: 20px;
+            opacity: .6;
+            cursor: pointer;
+            float: left;
+            @include background-properties($image-CS-expand-arrow-icon, 10px, 5px);
+          }
+
+        }
+      }
+      .triggerElement{
+        height: 20px;
+      }
+    }
+
+  }
+
+  .filterSummaryRowClearLabel {
+    max-width: 95px;
+    @include ellipsis();
+    float: right;
+  }
+}
+
+//Below class are kept outside as they are being used in Popover view
+
+.taxonomyTreeControlWrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 46px;
+  border-top: 1px solid $color-light-4;
+  background-color: $color-light-3;
+
+  .applyTaxonomy {
+    display: inline-block;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+    width: 150px;
+    float: right;
+    height: 28px;
+    line-height: 24px;
+    color: #fdfdfd;
+    background-color: #999999;
+    padding: 2px 8px;
+    text-align: center;
+    font-size: $primary-font-size;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-light-1;
+      background-color: $color-dark-4;
+    }
+  }
+
+  .applyButtonContainer {
+    float: right;
+    height: 100%;
+    padding: 8px 8px 8px 8px;
+  }
+
+  .cancelButtonContainer {
+    float: right;
+    height: 100%;
+    padding: 8px 0px 8px 8px;
+  }
+
+  .organiseButtonContainer{
+    float: right;
+    height: 100%;
+    padding: 8px 0px 8px 8px;
+  }
+}
+
+.taxonomyTreeSearchBarWrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 40px;
+  border-top: 5px solid $color-light-3;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background-color: $color-light-3;
+  padding: 0 5px;
+
+  .taxonomyTreeSearchResultCount {
+    display: inline-block;
+    height: 40px;
+    line-height: 30px;
+    padding: 0 8px;
+    font-size: $font-normal;
+    font-style: italic;
+  }
+}
+
+.klassTreeViewContainer {
+  .horizontalTreeViewContainer {
+    overflow: auto;
+    height: 400px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+
+  .treeNodeContainer {
+    overflow: hidden;
+    margin: 5px 0 0 0;
+
+    /*
+    .treeNodeContent {
+      overflow: hidden;
+      .treeNodeToggle {
+        float: left;
+        width: 13px;
+        height: 20px;
+        text-align: center;
+        &.expand {
+          background-image: url($image-CS-minus-25);
+          background-repeat: no-repeat;
+          background-size: 14px;
+          background-position: 1px 50%;
+          cursor: pointer;
+        }
+
+        &.collapsed {
+          background-image: url($image-CS-Plus-32);
+          background-repeat: no-repeat;
+          background-size: 14px;
+          background-position: 1px 50%;
+          cursor: pointer;
+        }
+      }
+    }
+    */
+
+    .treeNodeCheck {
+      height: 20px;
+      width: 20px;
+      float: left;
+      opacity: .5;
+      cursor: pointer;
+      @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 14px , 3px);
+
+      &.checked {
+        opacity: 1;
+        @include background-properties-with-theme-color($image-cs-checkbox-checked, 14px, 3px);
+      }
+
+      &.partialChecked {
+        @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 14px, 3px);
+      }
+    }
+
+    .treeNodeLabel {
+      line-height: 20px;
+      font-size: $primary-font-size;
+      float: left;
+    }
+  }
+
+  .horizontalTreeViewContainer {
+
+    .horizontalTreeLevelContainer {
+      width: 200px;
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px 0px;
+      height: 100%;
+      overflow: auto;
+      white-space: nowrap;
+
+      .horizontalTreeGroupContainer {
+
+        .toggleIcon {
+          height: 15px;
+          width: 15px;
+          float: left;
+        }
+
+        &.expanded {
+          .toggleIcon {
+            @include background-properties($image-CS-expand-arrow-icon, 15px);
+          }
+        }
+
+        &.collapsed {
+          .toggleIcon {
+            @include background-properties($image-CS-Collapse-Arrow-32, 15px)
+          }
+
+          .horizontalTreeGroupNodes {
+            height: 0;
+          }
+        }
+
+        .horizontalTreeGroupHeader {
+          color: $color-dark-4;
+          font-size: $font-small;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin: 5px 14px 7px 0px;
+          padding: 0px 0px;
+          border-bottom: 1px solid $color-light-4;
+          max-width: calc(100% - 14px);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          &.zeroLevelGroupHeader{
+            margin: 7px 14px 7px 0px;
+            padding: 0 4px;
+          }
+
+          span {
+            color: $color-dark-4;
+            font-size: $font-small;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 1px 0px;
+            max-width: calc(100% - 14px);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 20px;
+          }
+          .treeNodeCheck {
+            height: 14px;
+            width: 20px;
+            float: left;
+            opacity: .5;
+            cursor: pointer;
+            margin-top: -1px;
+            @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 13px , 3px);
+
+            &.checked {
+              opacity: 1;
+              @include background-properties($image-cs-checkbox-checked, 13px, 3px);
+            }
+
+            &.partialChecked {
+              @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 13px, 3px);
+            }
+          }
+        }
+
+        .horizontalTreeGroupNodes {
+          transition: all 0.8s;
+          overflow: hidden;
+          padding-bottom: 5px;
+          margin: 0px 10px 8px 5px;
+
+
+        }
+      }
+
+    }
+
+    & .horizontalTreeLevelContainer:nth-of-type(even) {
+      background-color: #fafafa;
+    }
+  }
+
+  .treeChildrenNodeContainer {
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 1px;
+  }
+
+  .klassTreeViewHeader {
+    padding: 5px 9px;
+    background: $color-light-3;
+  }
+
+  .klassTreeViewHeaderLabel {
+    font-size: 11px;
+    color: $color-dark-4;
+    font-weight: 500;
+
+    span {
+      font-size: 11px;
+    }
+  }
+
+  .klassTreeViewHeaderCheckbox {
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+    float: left;
+    background-size: 14px;
+    opacity: .5;
+    cursor: pointer;
+    @include background-properties($image-CS-Unchecked-Checkbox-48-Material, 14px , 1px);
+
+    &.checked {
+      @include background-properties($image-CS-checked-checkbox-icon, 14px , 1px);
+    }
+  }
+
+  .klassTreeViewBody {
+    height: calc(100% - 25px);
+    overflow: auto;
+    padding-left: 7px;
+  }
+}
+
+.horizontalTreeGroupElContainer {
+  padding: 0px 0px 3px 0px;
+  overflow: hidden;
+
+  &.active {
+    background-color: $color-light-3;
+    padding: 3px 8px;
+    color: $color-light-1 !important;
+    border-radius: 24px;
+    font-weight: 500;
+  }
+
+  &.zeroLevelGroupEl{
+    padding: 3px 8px;
+    .settingIcon{
+      background-position: center;
+    }
+  }
+
+  $tree-node-check-icon-width: 20px;
+
+  &:hover{
+    .settingIcon{
+      display: block;
+    }
+  }
+
+  .settingIcon{
+    height: 18px;
+    width: $tree-node-check-icon-width;
+    float: right;
+    opacity: .5;
+    cursor: pointer;
+    display: none;
+    transition: all .2s;
+    @include background-properties($image-CS-Settings-48, 13px, 0 5px);
+
+    &:hover {
+      opacity: .9
+    }
+  }
+
+  .treeNodeCheck {
+    height: 18px;
+    width: $tree-node-check-icon-width;
+    float: left;
+    opacity: .5;
+    cursor: pointer;
+    transition: all .2s;
+    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 13px , 3px);
+
+    &.checked {
+      opacity: 1;
+      @include background-properties($image-cs-checkbox-checked, 13px, 3px);
+    }
+
+    &.partialChecked {
+      @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 13px, 3px);
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .horizontalTreeGroupElLabel {
+    float: left;
+    line-height: 18px;
+    color: #999;
+    cursor: pointer;
+    width: calc(100% - #{$tree-node-check-icon-width});
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    &.settingIconPresent{
+      width: calc(100% - 2*#{$tree-node-check-icon-width});
+    }
+
+    span {
+      font-size: $primary-font-size;
+    }
+
+    .labelSpan {
+      display: inline-block;
+      vertical-align: top;
+      max-width: calc(100% - 30px);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 1px 0 0 0;
+      color: $color-dark-4;
+    }
+
+    .countSpan {
+      color: $color-dark-4;
+      font-weight: 500;
+      font-size: $font-small;
+      line-height: 14px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 1px 0 0 2px;
+      white-space: pre;
+    }
+
+    &.groupExpanded {
+      font-weight: 500;
+    }
+  }
+
+  .horizontalTreeGroupGreyedElLabel {
+    float: left;
+    line-height: 18px;
+    color: #bbb;
+    cursor: pointer;
+    width: calc(100% - #{$tree-node-check-icon-width});
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    span {
+      font-size: $primary-font-size;
+    }
+
+    .labelSpan {
+      display: inline-block;
+      vertical-align: top;
+      max-width: calc(100% - 30px);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 1px 0 0 0;
+    }
+
+    .countSpan {
+      color: #999;
+      font-size: $font-small;
+      line-height: 14px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 1px 0 0 2px;
+      white-space: pre;
+    }
+  }
+
+  .taxonomyTreeHighlightedText{
+    background-color: yellow;
+  }
+}
+
+.filterItemWrapper {
+  min-width: 200px;
+
+  .filterSearchBoxWrapper {
+    display: inline-block;
+    width: 100%;
+    //margin-bottom: 5px;
+    .filterSearchBox {
+      margin: 4px;
+      position: relative;
+      .searchBox {
+        width: 100%;
+        height: 25px;
+        padding: 0 20px 0 8px;
+        line-height: 25px;
+        margin: 0;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px $color-light-4 inset;
+      }
+      .searchClearIcon {
+        @include background-properties($image-CS-Cross, 10px, 5px);
+        width: 20px;
+        height: 25px;
+        opacity: .6;
+        cursor: pointer;
+        margin: 0;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    }
+  }
+
+  .filterItemChildrenContainer {
+    padding: 3px 3px;
+    max-height: 300px;
+    overflow: auto;
+
+    .moreCount {
+      padding: 0 7px;
+      max-height: 300px;
+      overflow: auto;
+      font-size: $font-normal;
+      color: #999;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .filterItemChildContainer {
+      overflow: hidden;
+      cursor: pointer;
+
+      .filterItemChildCheckbox {
+        height: 24px;
+        width: 26px;
+        float: left;
+        opacity: .5;
+        cursor: pointer;
+        @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 14px , 6px);
+
+        &.checked {
+          opacity: 1;
+          @include background-properties-with-theme-color($image-cs-checkbox-checked, 14px, 6px);
+        }
+      }
+
+      .filterItemChildLabel {
+        float: left;
+        line-height: 24px;
+        padding-right: 10px;
+        margin-top: -1px;
+        max-width: 250px;
+        width: calc(100% - 55px);
+
+        & * {
+          font-size: $primary-font-size;
+        }
+
+        .filterItemLabelSpan{
+          float: left;
+          max-width: 220px;
+          width: calc(100% - 25px);
+          @include ellipsis();
+        }
+
+        .countSpan{
+          float: left;
+          white-space: pre;
+        }
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: default;
+
+        .filterItemChildCheckbox {
+          cursor: default;
+        }
+      }
+
+      &.inFocus {
+        background-color: $color-light-5;
+      }
+
+      .customIcon{
+        position: relative;
+        width:20px;
+        height:20px;
+        float: left;
+        margin-right: 5px;
+
+        .imageSimpleViewNoImage{
+          background-size: 13px;
+        }
+      }
+    }
+  }
+
+  .filterControlWrapper {
+    text-align: right;
+    padding: 0 2px;
+    //margin-top: 10px;
+    overflow: hidden;
+    background-color: $color-light-3;
+    border-top: 1px solid $color-light-4;
+    .applyFilter {
+      font-size: $font-normal;
+      display: inline-block;
+      line-height: 17px;
+      cursor: default;
+      margin: 0 5px 5px 5px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background-image: linear-gradient($color-light-3, $color-light-4);
+      box-shadow: 0 0 0 1px $color-light-4 inset;
+      transition: all .2s;
+      color: $color-dark-4;
+      &:hover {
+        background-image: linear-gradient($color-light-3, $color-light-4);
+        box-shadow: 0 0 0 1px #bbb inset;
+        color: #333;
+      }
+
+      .applyButtonContainer {
+        float: right;
+        height: 100%;
+        padding: 4px;
+      }
+    }
+
+    .applyButtonContainer { //for the material button
+      float: right;
+      height: 100%;
+      padding: 5px 5px 5px 5px;
+    }
+  }
+}
+
+.moreFiltersSection {
+  padding: 5px 3px;
+  overflow: auto;
+  max-height: 350px;
+
+  .moreFiltersItemContainer {
+    padding: 0 20px 0 0;
+    max-width: 350px;
+    cursor: pointer;
+    white-space: nowrap;
+    @include no_select();
+
+    &.hideMe {
+      display: none;
+    }
+
+    .moreFiltersItemCheckbox {
+      height: 24px;
+      width: 26px;
+      display: inline-block;
+      opacity: .5;
+      cursor: pointer;
+      @include background-properties($image-CS-Unchecked-Checkbox-48-Material, 14px , 6px);
+
+      &.checked {
+        @include background-properties($image-CS-checked-checkbox-icon, 14px , 6px);
+      }
+    }
+
+    .moreFiltersItem {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 24px;
+      width: calc(100% - 5px);
+
+      .moreFiltersItemLabel {
+        font-size: $primary-font-size;
+        @include ellipsis();
+      }
+
+      .moreFiltersItemBuffer {
+        width: 26px;
+
+      }
+    }
+  }
+
+  .moreFilterLoadMore {
+    font-style: italic;
+    color: $color-dark-5;
+    text-align: center;
+    cursor: pointer;
+  }
+
+}
+
+.countSpan {
+  color: #999;
+  white-space: pre;
+}
+
+.moreOptions {
+  .extraSortItem {
+    padding: 3px 14px;
+    cursor: pointer;
+    color: #999;
+    font-size: 11px;
+    max-width: 200px;
+    //min-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $color-light-3;
+    }
+
+    &.activeSortItem {
+      font-weight: 500;
+      color: #333;
+      line-height: 20px;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-position: 0px 6px;
+    }
+  }
+
+  .loadMoreSortData {
+    font-style: italic;
+    color: $color-dark-5;
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+  }
+}
+
+.hideMe {
+  display: none;
+}

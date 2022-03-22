@@ -1,0 +1,11 @@
+/bin/
+/.settings/
+/.gradle/
+/bin/
+.classpath
+.project
+/build/classes/
+/build/dependency-cache/
+/build/resources/
+/build/tmp/
+/build/

@@ -1,0 +1,35 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>new_virtual_catalog $type=CLASS]",
+    "_subtype": "VIRTUAL_CATALOG_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "new_virtual_catalog",
+    "isabstract": false,
+    "Lstatustags": [
+      "lifestatustag",
+      "listingstatustag"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "",
+    "Jsections": {
+      
+    },
+    "parentCode": "virtual_catalog",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  }
+]

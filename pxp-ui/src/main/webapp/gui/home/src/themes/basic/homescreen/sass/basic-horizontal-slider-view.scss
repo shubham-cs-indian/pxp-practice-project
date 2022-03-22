@@ -1,0 +1,47 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+//todo: change remaining font sizes and images with constants
+
+$primary-font-size: 11px;
+$max-width-for-labels: 250px;
+
+.horizontalSliderView {
+    position: relative;
+    width: 100%;
+    .horizontalSliderSection {
+        .horizontalParentContainer {
+            position: relative;
+            overflow: hidden;
+            height: 25px;;
+            .horizontalListView {
+                // overflow: auto;
+                position: absolute;
+                white-space: nowrap;
+                //width: max-content;
+            }
+        }
+        .scrollButton {
+            height: 25px;
+            width: 20px;
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+            cursor: pointer;
+            background-color: $color-light-1;
+            top: 0;
+      
+            &.left {
+              left: 0;
+              box-shadow: 3px 0 20px rgba(66, 66, 66, 0.25), inset 0 -1px 0 $color-light-3;
+              @include background-properties($image-CS-arrow-left-grey, 11px, 50%);
+            }
+      
+            &.right {
+              right: 0;
+              box-shadow: -3px 0 20px rgba(66, 66, 66, 0.25), inset 0 1px 0 $color-light-3;
+              @include background-properties($image-CS-arrow-right-grey, 11px, 50%);
+            }
+        }
+    }
+}

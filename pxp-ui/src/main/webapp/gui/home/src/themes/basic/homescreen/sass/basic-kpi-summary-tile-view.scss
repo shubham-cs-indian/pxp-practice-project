@@ -1,0 +1,276 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.performanceIndexSection {
+  margin: 10px 10px 0 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  background: #fcfcfc;
+  position: relative;
+
+  .kpiTileType {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 3px;
+    border: 1px solid #c5c8cc;
+    border-radius: 2px;
+    cursor: pointer;
+    .icon{
+      width: 40px;
+      height: 28px;
+      float: left;
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.doughnut{
+        background-image: url($image-CS-icons8-doughnut-chart-filled);
+        border-right: 1px solid #c5c8cc;
+        opacity: 0.4;
+      }
+      &.bar{
+        background-image: url($image-CS-icons8-bar-chart-filled);
+        opacity: 0.4;
+      }
+      &.selected{
+        background-color: #eee;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .kpiSummarySectionViewContainer {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .kpiSummarySectionView {
+      //margin: 20px;
+      height: 100px;
+      margin: 0 10px;
+      overflow: hidden;
+
+      .kpiSectionHeader {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 10px 0px;
+      }
+      .nothingToDisplayContainer {
+        height: calc(100% - 46px);
+      }
+    }
+  }
+
+  .dashboardView {
+    background: #fcfcfc;
+
+    .dashboardViewSection {
+      margin: 0;
+      overflow: hidden;
+
+      .dashboardSectionContainer {
+        padding: 10px;
+        height: 394px;
+
+        .dashboardSectionHeader {
+          font-size: 12px;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 0 0 10px;
+        }
+
+        .dashboardTilesContainerWrapper {
+          width: 100%;
+          height: calc(100% - 27px);
+          background: #eee;
+          position: relative;
+          overflow: hidden;
+
+          .dashboardTilesContainer {
+            top: 20px;
+            padding-left: 20px;
+            height: 333px;
+
+            .dashboardTileContainer {
+              padding: 5px 0;
+            }
+          }
+
+          .scrollButton {
+            top: 112px;
+          }
+
+          .kpiSummaryTile {
+            background-color: #fff;
+            box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            height: 300px;
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin: 4px 20px 7px 4px;
+            position: relative;
+
+            .kpiSummaryView {
+              padding: 0;
+
+              .kpiLabel {
+                padding: 5px 15px 5px 3px;
+                box-shadow: 0px -11px 0 -10px #E0E0E0;
+                justify-self: end;
+                max-height: 44px;
+                margin-left: 7px;
+                overflow: hidden;
+                line-height: 22px;
+                width: calc(100% - 35px);
+                text-decoration: none;
+                text-shadow: 0px 0px 0px #777;
+                position: relative;
+                margin-right: 20px;
+                font-weight: 500;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 12px;
+                color: #666;
+              }
+
+              .KPIDialogOpenButton {
+                position: absolute;
+                height: 15px;
+                width: 15px;
+                right: 11px;
+                bottom: 13px;
+                background: url($image-CS-expand-000-96);
+                background-size: 15px;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.7;
+
+                &:hover {
+                  opacity: 0.9;
+                  background-size: 17px;
+                }
+
+                &:active {
+                  background-size: 15px;
+                }
+              }
+
+              $kpiSelectorHeight: 32px;
+              .kpiSelectorSection {
+                width: inherit;
+                height: $kpiSelectorHeight;
+                cursor: pointer;
+                display: flex;
+
+                .kpiKey {
+                  text-transform: uppercase;
+                  height: $kpiSelectorHeight;
+                  line-height: $kpiSelectorHeight;
+                  flex: 0 0;
+                }
+
+                .selectedKpiLabel {
+                  width: calc(100% - #{$kpiSelectorHeight});
+                  height: $kpiSelectorHeight;
+                  line-height: $kpiSelectorHeight;
+                  @include ellipsis();
+                  flex: 1 0;
+                  padding-left: 5px;
+                }
+
+                .dropDownIcon {
+                  $iconMargin: 5px;
+                  margin: $iconMargin;
+                  height: calc(#{$kpiSelectorHeight} - 2 * #{$iconMargin});
+                  width: calc(#{$kpiSelectorHeight} - 2 * #{$iconMargin});
+                  background-image: url($image-CS-triangle-south-25);
+                  background-repeat: no-repeat;
+                  background-size: 16px;
+                  position: relative;
+                  background-position: center;
+                  opacity: .6;
+                  background-color: #eee;
+
+                  &:hover {
+                    opacity: .8;
+                  }
+                }
+              }
+
+              .kpiSummarySectionContainer {
+                width: 100%;
+                padding: 10px 15px 15px 15px;
+                flex: 1 0;
+                max-height: calc(100% - 44px);
+                border-top: 1px solid #ddd;
+                color: #666;
+                .kpiSummarySection {
+                  width: inherit;
+                  display: flex;
+                  flex-wrap: wrap;
+
+                  .dimensionContainer {
+                    flex: auto;
+                    @include topInlineBlock();
+                    overflow: hidden;
+                    text-align: center;
+                    width: 130px;
+
+                    //todo: change classNames
+                    .mnmtSectionTagWrapper {
+                      height: 79px;
+                      width: 78px;
+                      border-radius: 50%;
+                      display: inline-block;
+                      margin: 3px 2px 0px 0px;
+                      float: none !important;
+
+                      .mnmtSectionTagInnerCircle {
+                        height: 67px;
+                        width: 66px;
+                        border-radius: 50%;
+                        margin: 6px;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .mnmtSectionTagLetter {
+                          //font-size: 11px !important;
+                          //font-weight: bold !important;
+                          color: #666;
+                          width: 100%;
+                          font-size: 12px;
+                          font-weight: 500;
+
+                          &.noShow {
+                            display: none;
+                          }
+                        }
+                      }
+                    }
+
+                    .dimensionLabel {
+                      font-size: 13px;
+                      padding: 3px 0 0 0;
+                      @include ellipsis();
+                    }
+
+                  }
+                }
+
+                .lastModifiedSection {
+                 display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

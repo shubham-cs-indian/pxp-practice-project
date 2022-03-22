@@ -1,0 +1,197 @@
+{
+  "id": "",
+  "logo": "",
+  "type": "onboarding",
+  "screens": [
+    {
+      "id": "runtime",
+      "name": "Runtime",
+      "title": "ALL",
+      "icon": "",
+      "isVisible": true,
+      "isDefault": true,
+      "canFilter": true,
+      "canSort": true,
+      "canFilterTaxonomy": true,
+      "isBookmarkEnabled": true,
+      "isStaicCollectionEnabled": true,
+      "type": "home",
+      "modules": [
+        {
+          "id": "filesmodule",
+          "label": "FILES",
+          "defaultView": "list_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "FileInstance"
+          ]
+        },
+		{
+          "id": "josstatus",
+          "label": "PROCESSES_STATUS",
+          "defaultView": "job_screen_mode",
+          "defaultZoomLevel": 3,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            
+          ]
+        },
+		{
+          "id": "allmodule",
+          "label": "ALL_TAB",
+          "className": "allModule",
+          "entities": [
+            "ArticleInstance",
+            "AssetInstance",
+            "SupplierInstance",
+            "MarketInstance",
+            "TextAssetInstance"
+          ],
+          "defaultView": "tile_mode",
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "pimmodule",
+          "label": "CATALOG",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "ArticleInstance"
+          ]
+        },
+        {
+          "id": "mammodule",
+          "label": "TAB_MEDIA",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "AssetInstance"
+          ]
+        },
+        {
+          "id": "textassetmodule",
+          "label": "TEXTASSET_TAB",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "TextAssetInstance"
+          ]
+        },
+        {
+          "id": "suppliermodule",
+          "label": "SUPPLIER_TAB",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "SupplierInstance"
+          ]
+        },
+        {
+          "id": "targetmodule",
+          "label": "CHANNELS",
+          "className": "marketModule",
+          "defaultView": "tile_mode",
+          "defaultZoomLevel": 2,
+          "allowedZoomLevels": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "allowedViews": [
+            "tile",
+            "list"
+          ],
+          "entities": [
+            "MarketInstance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "setting",
+      "name": "Settings",
+      "title": "SETTINGS_MENU_ITEM_TITLE",
+      "icon": "",
+      "isVisible": false,
+      "isDefault": false,
+      "type": "setting",
+      "entities": [
+        "users",
+        "roles",
+        "profile",
+        "processevent",
+        "mapping"
+      ]
+    }
+  ]
+}

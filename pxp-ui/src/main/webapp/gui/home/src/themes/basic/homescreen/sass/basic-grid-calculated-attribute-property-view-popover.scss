@@ -1,0 +1,176 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.concatenatedFormulaWrapper {
+  overflow: hidden;
+
+  .concatenatedFormulaButtons {
+    float: left;
+    width: 100%;
+    .concatButton {
+      float: left;
+      background: #f1f1f1;
+      margin: 0 5px;
+      padding: 0 5px;
+      border-radius: 2px;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        background: #cacaca;
+        transition: all .1s ease;
+      }
+    }
+
+  }
+
+  .concatenatedFormulaBody {
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 0;
+    max-height: calc(100vh - 75px);
+    overflow: auto;
+
+    .inputDomWrapper {
+      display: inline-block;
+      .autoSizeContainer {
+        float: left;
+        .concatInput {
+          float: left;
+          color: #555;
+          outline: none;
+          margin: 8px 0px 8px 2px;
+          border: 1px inset rgba(241, 241, 241, 0.83);
+          border-radius: 4px;
+          padding: 0px 3px;
+          height: 22px;
+          min-width: 40px;
+        }
+      }
+
+      &:hover {
+        .crossIcon {
+          opacity: .5;
+        }
+      }
+    }
+
+    .froalaDomWrapper {
+      min-width: 40px;
+      display: inline-block;
+
+      .froalaWrapperView {
+        float: left;
+
+        .disconnectedHTMLViewContainer {
+          padding: 3px;
+          word-break: break-all;
+        }
+
+        .customFroalaView {
+          margin: 9px 0px 6px 2px;
+
+          .froalaContainer {
+            min-width: 80px;
+            border: inset 1px;
+            border-radius: 3px;
+            padding-right: 25px;
+            min-height: 18px;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        .fr-counter {
+          border: none;
+          background: #f7f7f7;
+          font-size: 12px;
+        }
+
+        .fr-inline {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:hover {
+        .crossIcon {
+          opacity: .5;
+        }
+      }
+    }
+
+    .selectDomWrapper {
+      display: inline-block;
+
+      .multiSelectSearchViewWrapper {
+        width: calc(100% - 15px);
+        float: left;
+        padding: 5px 0;
+      }
+
+      select {
+        float: left;
+        color: #555;
+        outline: none;
+        margin: 8px 0 8px 2px;
+        border-radius: 4px;
+        padding: 0 10px;
+        height: 23px;
+        max-width: 150px;
+        border: 1px solid #f1f1f1;
+        background: linear-gradient(to bottom, #ffffff 0%, rgba(208, 206, 206, 0.72) 100%);
+      }
+
+      &:hover {
+        .crossIcon {
+          opacity: .5;
+        }
+      }
+    }
+
+    .userDefinedTextContainer {
+      display: inline-block;
+
+      .customTextFieldViewContainer {
+        width: calc(100% - 15px);
+        float: left;
+        padding: 5px 0;
+        margin: 0;
+
+        .userDefinedText {
+          border: inset 1px;
+          border-radius: 3px;
+        }
+      }
+
+      .crossIcon {
+        margin: 5px 0;
+      }
+    }
+
+    .crossIconWrapper {
+      width: 15px;
+      float: left;
+      .crossIcon {
+        background: url($image-CS-Cross) no-repeat 0;
+        background-size: 16px;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+        opacity: 0.6;
+        transition: all .2s;
+        cursor: pointer;
+        height: 20px;
+        width: 14px;
+        margin: 9px 0 4px 0;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

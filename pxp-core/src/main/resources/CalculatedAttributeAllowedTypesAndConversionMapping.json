@@ -1,0 +1,981 @@
+{
+  "com.cs.core.config.interactor.entity.attribute.LengthAttribute": {
+    "km": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "km"
+    },
+    "m": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m"
+    },
+    "dm": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "dm"
+    },
+    "cm": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "cm"
+    },
+    "mm": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "mm"
+    },
+    "um": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "um"
+    },
+    "nm": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "nm"
+    },
+    "mi": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "mi"
+    },
+    "yd": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "yd"
+    },
+    "ft": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "ft"
+    },
+    "in": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "in"
+    },
+    "nmi": {
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "nmi"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": {
+    "A": {
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": "ohm",
+      "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": "S",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "J",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "mA": {
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "mA"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": {
+    "V": {
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": "ohm",
+      "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": "S",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "J",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "mV": {
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "mV"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.FrequencyAttribute": {
+    "Hz": {
+      "com.cs.core.config.interactor.entity.attribute.FrequencyAttribute": "Hz",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "kHz": {
+      "com.cs.core.config.interactor.entity.attribute.FrequencyAttribute": "kHz"
+    },
+    "MHz": {
+      "com.cs.core.config.interactor.entity.attribute.FrequencyAttribute": "MHz"
+    },
+    "GHz": {
+      "com.cs.core.config.interactor.entity.attribute.FrequencyAttribute": "GHz"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.TimeAttribute": {
+    "ns": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "ns"
+    },
+    "us": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "us"
+    },
+    "ms": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "ms"
+    },
+    "sec": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec",
+      "com.cs.core.config.interactor.entity.attribute.FrequencyAttribute": "Hz",
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempC",
+      "com.cs.core.config.interactor.entity.attribute.HeatingRateAttribute": "°C/sec"
+    },
+    "min": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "min"
+    },
+    "hr": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "days": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "days"
+    },
+    "weeks": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "weeks"
+    },
+    "years": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "years"
+    },
+    "decades": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "decades"
+    },
+    "centuries": {
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "centuries"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": {
+    "tempC": {
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempC",
+      "com.cs.core.config.interactor.entity.attribute.HeatingRateAttribute": "°C/sec"
+    },
+    "tempF": {
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempF"
+    },
+    "tempK": {
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempK"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": {
+    "gal": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "gal"
+    },
+    "qt": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "qt"
+    },
+    "pt": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "pt"
+    },
+    "cu": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "cu"
+    },
+    "floz": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "floz"
+    },
+    "tbsp": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "tbsp"
+    },
+    "tsp": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "tsp"
+    },
+    "m3": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "m3",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2"
+    },
+    "L": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "L",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2"
+    },
+    "ml": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "ml",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2"
+    },
+    "ft3": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "ft3",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "ft",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "sqft"
+    },
+    "in3": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "in3",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "in",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "in2"
+    },
+    "cm3": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "cm3",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "cm",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "cm2"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.AreaAttribute": {
+    "km2": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "km2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "km"
+    },
+    "m2": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m"
+    },
+    "mi2": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "mi2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "mi"
+    },
+    "yd2": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "yd2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "yd"
+    },
+    "sqft": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "sqft",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "ft"
+    },
+    "in2": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "in2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "in"
+    },
+    "hectare": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "hectare",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m"
+    },
+    "acre": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "acre",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m"
+    },
+    "cm2": {
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "cm2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "cm"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.MassAttribute": {
+    "tonne": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "tonne"
+    },
+    "kg": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg"
+    },
+    "g": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g"
+    },
+    "mg": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "mg"
+    },
+    "ug": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "ug"
+    },
+    "ton": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "ton"
+    },
+    "stone": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "stone"
+    },
+    "lbs": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "lbs"
+    },
+    "oz": {
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "oz"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": {
+    "b": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "b"
+    },
+    "kb": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "kb"
+    },
+    "Kib": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Kib"
+    },
+    "Mb": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Mb"
+    },
+    "Mib": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Mib"
+    },
+    "Gb": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Gb"
+    },
+    "Gib": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Gib"
+    },
+    "Tb": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Tb"
+    },
+    "Tib": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Tib"
+    },
+    "Pb": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Pb"
+    },
+    "Pib": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "Pib"
+    },
+    "B": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "B"
+    },
+    "kB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "kB"
+    },
+    "KiB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "KiB"
+    },
+    "MB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "MB"
+    },
+    "MiB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "MiB"
+    },
+    "GB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "GB"
+    },
+    "GiB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "GiB"
+    },
+    "TB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "TB"
+    },
+    "TiB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "TiB"
+    },
+    "PB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "PB"
+    },
+    "PiB": {
+      "com.cs.core.config.interactor.entity.attribute.DigitalStorageAttribute": "PiB"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": {
+    "J": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "J",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": "ohm",
+      "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": "S",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "kJ": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "kJ"
+    },
+    "Cal": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "Cal"
+    },
+    "Wh": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "Wh",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "kWh": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "kWh",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "kW",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "BTU": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "BTU"
+    },
+    "therm": {
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "therm"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.PlaneAngleAttribute": {
+    "deg": {
+      "com.cs.core.config.interactor.entity.attribute.PlaneAngleAttribute": "deg"
+    },
+    "gon": {
+      "com.cs.core.config.interactor.entity.attribute.PlaneAngleAttribute": "gon"
+    },
+    "mrad": {
+      "com.cs.core.config.interactor.entity.attribute.PlaneAngleAttribute": "mrad"
+    },
+    "rad": {
+      "com.cs.core.config.interactor.entity.attribute.PlaneAngleAttribute": "rad"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.PressureAttribute": {
+    "Pa": {
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "Pa",
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "N",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2"
+    },
+    "atm": {
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "atm"
+    },
+    "bar": {
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "bar"
+    },
+    "psi": {
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "psi",
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "lbf",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "in2"
+    },
+    "torr": {
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "torr"
+    },
+    "kPa": {
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "kPa"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.SpeedAttribute": {
+    "mph": {
+      "com.cs.core.config.interactor.entity.attribute.SpeedAttribute": "mph",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "mi",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "fps": {
+      "com.cs.core.config.interactor.entity.attribute.SpeedAttribute": "fps",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "ft",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "kph": {
+      "com.cs.core.config.interactor.entity.attribute.SpeedAttribute": "kph",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "km",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "m/s": {
+      "com.cs.core.config.interactor.entity.attribute.SpeedAttribute": "m/s",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "knot": {
+      "com.cs.core.config.interactor.entity.attribute.SpeedAttribute": "knot"
+    }
+  },
+  "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": {
+    "AUD": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "AUD"
+    },
+    "BGN": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "BGN"
+    },
+    "BRL": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "BRL"
+    },
+    "CAD": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "CAD"
+    },
+    "CHF": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "CHF"
+    },
+    "CNY": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "CNY"
+    },
+    "CZK": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "CZK"
+    },
+    "DKK": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "DKK"
+    },
+    "GBP": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "GBP"
+    },
+    "HKD": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "HKD"
+    },
+    "HRK": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "HRK"
+    },
+    "HUF": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "HUF"
+    },
+    "IDR": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "IDR"
+    },
+    "ILS": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "ILS"
+    },
+    "INR": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "INR"
+    },
+    "JPY": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "JPY"
+    },
+    "KRW": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "KRW"
+    },
+    "MXN": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "MXN"
+    },
+    "MYR": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "MYR"
+    },
+    "NOK": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "NOK"
+    },
+    "NZD": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "NZD"
+    },
+    "PHP": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "PHP"
+    },
+    "PLN": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "PLN"
+    },
+    "RON": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "RON"
+    },
+    "RUB": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "RUB"
+    },
+    "SEK": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "SEK"
+    },
+    "SGD": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "SGD"
+    },
+    "THB": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "THB"
+    },
+    "TRY": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "TRY"
+    },
+    "ZAR": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "ZAR"
+    },
+    "EUR": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "EUR"
+    },
+    "USD": {
+      "com.cs.config.interactor.entity.concrete.attribute.CurrencyAttribute": "USD"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.PowerAttribute": {
+    "W": {
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": "ohm",
+      "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": "S",
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "J",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "hp": {
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "hp"
+    },
+    "kW": {
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "kW"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.LuminosityAttribute": {
+    "cd": {
+      "com.cs.core.config.interactor.entity.attribute.LuminosityAttribute": "cd"
+    },
+    "mcd": {
+      "com.cs.core.config.interactor.entity.attribute.LuminosityAttribute": "mcd"
+    },
+    "lm": {
+      "com.cs.core.config.interactor.entity.attribute.LuminosityAttribute": "lm"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.RadiationAttribute": {
+    "Gy": {
+      "com.cs.core.config.interactor.entity.attribute.RadiationAttribute": "Gy"
+    },
+    "R": {
+      "com.cs.core.config.interactor.entity.attribute.RadiationAttribute": "R"
+    },
+    "Sv": {
+      "com.cs.core.config.interactor.entity.attribute.RadiationAttribute": "Sv"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.IlluminanceAttribute": {
+    "lux": {
+      "com.cs.core.config.interactor.entity.attribute.IlluminanceAttribute": "lux"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ForceAttribute": {
+    "N": {
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "N"
+    },
+    "dyn": {
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "dyn"
+    },
+    "lbf": {
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "lbf"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.AccelerationAttribute": {
+    "gee": {
+      "com.cs.core.config.interactor.entity.attribute.AccelerationAttribute": "gee"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.CapacitanceAttribute": {
+    "F": {
+      "com.cs.core.config.interactor.entity.attribute.CapacitanceAttribute": "F"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ViscocityAttribute": {
+    "P": {
+      "com.cs.core.config.interactor.entity.attribute.ViscocityAttribute": "P",
+      "com.cs.core.config.interactor.entity.attribute.PressureAttribute": "Pa",
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "N",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "St": {
+      "com.cs.core.config.interactor.entity.attribute.ViscocityAttribute": "St",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.InductanceAttribute": {
+    "H": {
+      "com.cs.core.config.interactor.entity.attribute.InductanceAttribute": "H"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": {
+    "ohm": {
+      "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": "ohm",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "J",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec",
+      "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": "S"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.MagnetismAttribute": {
+    "T": {
+      "com.cs.core.config.interactor.entity.attribute.MagnetismAttribute": "T",
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "I",
+      "com.cs.core.config.interactor.entity.attribute.ChargeAttribute": "C",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.ForceAttribute": "N",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "G": {
+      "com.cs.core.config.interactor.entity.attribute.MagnetismAttribute": "G"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ChargeAttribute": {
+    "C": {
+      "com.cs.core.config.interactor.entity.attribute.ChargeAttribute": "C",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "Ah": {
+      "com.cs.core.config.interactor.entity.attribute.ChargeAttribute": "Ah",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": {
+    "S": {
+      "com.cs.core.config.interactor.entity.attribute.ConductanceAttribute": "S",
+      "com.cs.core.config.interactor.entity.attribute.CurrentAttribute": "A",
+      "com.cs.core.config.interactor.entity.attribute.PotentialAttribute": "V",
+      "com.cs.core.config.interactor.entity.attribute.ResistanceAttribute": "ohm",
+      "com.cs.core.config.interactor.entity.attribute.PowerAttribute": "W",
+      "com.cs.core.config.interactor.entity.attribute.EnergyAttribute": "J",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.SubstanceAttribute": {
+    "mol": {
+      "com.cs.core.config.interactor.entity.attribute.SubstanceAttribute": "mol"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": {
+    "kg/m2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "kg/m2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2"
+    },
+    "gm/m2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "gm/m2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2"
+    },
+    "lb/yd2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "lb/yd2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "lbs",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "yd2"
+    },
+    "lb/ft2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "lb/ft2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "lbs",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "sqft"
+    },
+    "lb/in2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "lb/in2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "lbs",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "in2"
+    },
+    "oz/in2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "oz/in2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "oz",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "in2"
+    },
+    "oz/ft2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "oz/ft2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "oz",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "sqft"
+    },
+    "tn/mi2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "tn/mi2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "ton",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "mi2"
+    },
+    "tn/ac1": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "tn/ac1",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "ton",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "acre"
+    },
+    "t/km2": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerAreaAttribute": "t/km2",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "tonne",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "km2"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ThermalInsulationAttribute": {
+    "m2K/W": {
+      "com.cs.core.config.interactor.entity.attribute.ThermalInsulationAttribute": "m2K/W"
+    },
+    "hr-ft2-F/BTU": {
+      "com.cs.core.config.interactor.entity.attribute.ThermalInsulationAttribute": "hr-ft2-F/BTU"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.ProportionAttribute": {
+    "%": {
+      "com.cs.core.config.interactor.entity.attribute.ProportionAttribute": "%"
+    },
+    "x/y": {
+      "com.cs.core.config.interactor.entity.attribute.ProportionAttribute": "x/y"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.HeatingRateAttribute": {
+    "°C/sec": {
+      "com.cs.core.config.interactor.entity.attribute.HeatingRateAttribute": "°C/sec",
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempC",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "°C/min": {
+      "com.cs.core.config.interactor.entity.attribute.HeatingRateAttribute": "°C/min",
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempC",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "min"
+    },
+    "°C/hr": {
+      "com.cs.core.config.interactor.entity.attribute.HeatingRateAttribute": "°C/hr",
+      "com.cs.core.config.interactor.entity.attribute.TemperatureAttribute": "tempC",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.DensityAttribute": {
+    "kg/m3": {
+      "com.cs.core.config.interactor.entity.attribute.DensityAttribute": "kg/m3",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "m3"
+    },
+    "kg/cm3": {
+      "com.cs.core.config.interactor.entity.attribute.DensityAttribute": "kg/cm3",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "cm3"
+    },
+    "g/m3": {
+      "com.cs.core.config.interactor.entity.attribute.DensityAttribute": "g/m3",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "m3"
+    },
+    "g/cm3": {
+      "com.cs.core.config.interactor.entity.attribute.DensityAttribute": "g/cm3",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "cm3"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": {
+    "gm/sec": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "gm/sec",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "gm/min": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "gm/min",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "min"
+    },
+    "gm/hr": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "gm/hr",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "gm/day": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "gm/day",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "g",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "days"
+    },
+    "kg/sec": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "kg/sec",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "kg/min": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "kg/min",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "min"
+    },
+    "kg/hour": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "kg/hour",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "kg/day": {
+      "com.cs.core.config.interactor.entity.attribute.WeightPerTimeAttribute": "kg/day",
+      "com.cs.core.config.interactor.entity.attribute.MassAttribute": "kg",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "days"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": {
+    "m3/sec": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": "m3/sec",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "m3",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "m3/min": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": "m3/sec",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "m3",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "min"
+    },
+    "m3/hr": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": "m3/sec",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "m3",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    },
+    "L/sec": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": "L/sec",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "L",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "sec"
+    },
+    "L/min": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": "L/min",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "L",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "min"
+    },
+    "L/hr": {
+      "com.cs.core.config.interactor.entity.attribute.VolumeFlowRateAttribute": "L/hr",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "L",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m",
+      "com.cs.core.config.interactor.entity.attribute.TimeAttribute": "hr"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.AreaPerVolumeAttribute": {
+    "cm2/mL": {
+      "com.cs.core.config.interactor.entity.attribute.AreaPerVolumeAttribute": "cm2/mL",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "ml",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "cm2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "cm"
+    },
+    "cm2/L": {
+      "com.cs.core.config.interactor.entity.attribute.AreaPerVolumeAttribute": "cm2/L",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "L",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "cm2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "cm"
+    },
+    "m2/mL": {
+      "com.cs.core.config.interactor.entity.attribute.AreaPerVolumeAttribute": "m2/mL",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "ml",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m"
+    },
+    "m2/L": {
+      "com.cs.core.config.interactor.entity.attribute.AreaPerVolumeAttribute": "m2/L",
+      "com.cs.core.config.interactor.entity.attribute.VolumeAttribute": "L",
+      "com.cs.core.config.interactor.entity.attribute.AreaAttribute": "m2",
+      "com.cs.core.config.interactor.entity.attribute.LengthAttribute": "m"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.RotationFrequencyAttribute": {
+    "rev/sec": {
+      "com.cs.core.config.interactor.entity.attribute.RotationFrequencyAttribute": "rev/sec"
+    },
+    "rev/min": {
+      "com.cs.core.config.interactor.entity.attribute.RotationFrequencyAttribute": "rev/min"
+    },
+    "rev/hr": {
+      "com.cs.core.config.interactor.entity.attribute.RotationFrequencyAttribute": "rev/hr"
+    }
+  },
+  "com.cs.core.config.interactor.entity.attribute.PriceAttribute": {
+    "AUD": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "AUD"
+    },
+    "BGN": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "BGN"
+    },
+    "BRL": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "BRL"
+    },
+    "CAD": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "CAD"
+    },
+    "CHF": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "CHF"
+    },
+    "CNY": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "CNY"
+    },
+    "CZK": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "CZK"
+    },
+    "DKK": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "DKK"
+    },
+    "GBP": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "GBP"
+    },
+    "HKD": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "HKD"
+    },
+    "HRK": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "HRK"
+    },
+    "HUF": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "HUF"
+    },
+    "IDR": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "IDR"
+    },
+    "ILS": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "ILS"
+    },
+    "INR": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "INR"
+    },
+    "JPY": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "JPY"
+    },
+    "KRW": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "KRW"
+    },
+    "MXN": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "MXN"
+    },
+    "MYR": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "MYR"
+    },
+    "NOK": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "NOK"
+    },
+    "NZD": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "NZD"
+    },
+    "PHP": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "PHP"
+    },
+    "PLN": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "PLN"
+    },
+    "RON": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "RON"
+    },
+    "RUB": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "RUB"
+    },
+    "SEK": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "SEK"
+    },
+    "SGD": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "SGD"
+    },
+    "THB": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "THB"
+    },
+    "TRY": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "TRY"
+    },
+    "ZAR": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "ZAR"
+    },
+    "EUR": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "EUR"
+    },
+    "USD": {
+      "com.cs.core.config.interactor.entity.attribute.PriceAttribute": "USD"
+    }
+  }
+}

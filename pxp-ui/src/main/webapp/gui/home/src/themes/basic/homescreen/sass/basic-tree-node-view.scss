@@ -1,0 +1,177 @@
+@import "./../../../../styleguide/style-guide";
+.treeNodeViewContainer {
+  background: #fff;
+}
+
+/*.treeNodeViewNode {
+  padding: 4px;
+  cursor: default;
+  overflow: hidden;
+  height: 26px;
+  position: relative;
+
+  .dropViewContainer {
+    height: 100%;
+  }
+}*/
+
+.treeNodeViewChildContainer {
+  background: #fff;
+}
+
+/*
+.treeNodeViewName {
+  font-size: 12px;
+  color: #333;
+  float: left;
+  line-height: 18px;
+  max-width: calc(100% - 45px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+*/
+
+#container {
+  width: 250px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nodeEven {
+  background: #F3F9FF;
+}
+
+.nodeOdd {
+  background: #fff;
+}
+
+.arrow {
+  width: 22px;
+  height: 18px;
+  opacity: 0.7;
+  float: left;
+}
+
+.arrow-right {
+  background: url($image-CS-triangle-east-25) no-repeat;
+  background-size: 7px;
+  background-position: 7px;
+}
+
+.arrow-down {
+  background: url($image-CS-triangle-south-25) no-repeat;
+  background-size: 7px;
+  background-position: 7px;
+}
+
+.treeView {
+  border: 1px solid #F3F9FF;
+  height: calc(100% - 30px);
+  overflow: auto;
+}
+
+.treeViewCheckBox {
+  width: 18px;
+  height: 18px;
+  float: left;
+  opacity: .6;
+}
+
+/*
+.treeViewCheckBoxChecked {
+  background: url($image-CS-Checked-48Black) no-repeat;
+  background-size: 11px;
+  background-position: 0px 4px;
+}
+
+.treeViewCheckBoxUnChecked {
+  background: url($image-CS-Unchecked-Checkbox-48-Material) no-repeat;
+  background-size: 11px;
+  background-position: 0px 4px;
+}
+
+.treeViewCheckBoxHalfChecked {
+  background: url($image-checkbox-partial) no-repeat;
+  background-size: 11px;
+  background-position: 0px 4px;
+}
+
+.activeNodeIcon {
+  float: right;
+  display: none;
+}
+*/
+
+/*.treeNodeChecked {
+  box-shadow: 0px 2px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+  background-color: rgba(99, 99, 99, 0.17);
+}*/
+
+/*.treeNodeSelected {
+  box-shadow: 0px 2px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+  background-color: rgba(99, 99, 99, 0.17);
+
+  .activeNodeIcon {
+    display: block;
+    background: url($image-CS-Edit-32) 0 2px no-repeat;
+    background-size: 15px;
+    height: 20px;
+    width: 20px;
+    opacity: .7;
+  }
+}*/
+
+/*
+.treeNodeViewNameInput {
+  width: calc(100% - 50px);
+  height: 18px;
+  border-radius: 2px;
+  padding-left: 2px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+!*.selectedContext .treeNodeViewNode {
+  box-shadow: 0 0 0 1px #0086b3 inset;
+}*!
+
+.treeViewLoader {
+  background: url($image-smallLoading) 0 2px no-repeat;
+  background-size: 15px;
+  height: 20px;
+  width: 20px;
+  float: right;
+  transition: .2s all;
+}
+*/
+
+.treeViewLoadingOn {
+  opacity: 1;
+}
+
+.treeViewLoadingOff {
+  opacity: 0;
+}
+
+.nodeId {
+  margin-left: 5px;
+  background: #e8e6e6;
+  color: #717171;
+  font-style: italic;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 13px;
+}
+
+.tooltipNodeId {
+  margin-left: 8px;
+  color: #acacac;
+  font-style: italic;
+  font-size: 10px;
+}

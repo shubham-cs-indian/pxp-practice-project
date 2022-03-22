@@ -1,0 +1,169 @@
+[
+  {
+    "id": "standardArticleAssetRelationship",
+    "code": "standardArticleAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "article"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardMarketAssetRelationship",
+    "code": "standardMarketAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "market"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardSupplierAssetRelationship",
+    "code": "standardSupplierAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "supplier"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardTextAsset-AssetRelationship",
+    "code": "standardTextAsset-AssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "text_asset"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardArticleMarketRelationship",
+    "code": "standardArticleMarketRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "article",
+      "code": "standardArticleMarketRelationshipside1Id"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "market",
+      "code": "standardArticleMarketRelationshipside2Id"
+    }
+  },
+  {
+    "id": "standardArticleGoldenArticleRelationship",
+    "code": "standardArticleGoldenArticleRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "One",
+      "isVisible": false,
+      "klassId": "article"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "golden_article_klass"
+    }
+  },
+  {
+    "id": "standardMarketingArticleAssetRelationship",
+    "code": "standardMarketingArticleAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "marketing_product"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardMarketingBundleAssetRelationship",
+    "code": "standardMarketingBundleAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "marketing_bundle"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardMakeupMarketRelationship",
+    "code": "standardMakeupMarketRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "makeup"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "market"
+    }
+  },
+  {
+    "id": "standardMakeupAssetRelationship",
+    "code": "standardMakeupAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "makeup"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  },
+  {
+    "id": "standardPresetTemplateAssetRelationship",
+    "code": "standardPresetTemplateAssetRelationship",
+    "isStandard": true,
+    "side1": {
+      "cardinality": "Many",
+      "isVisible": true,
+      "klassId": "preset_template"
+    },
+    "side2": {
+      "cardinality": "Many",
+      "isVisible": false,
+      "klassId": "asset_asset"
+    }
+  }
+]

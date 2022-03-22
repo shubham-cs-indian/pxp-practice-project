@@ -1,0 +1,158 @@
+/*
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.userFormContainer {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+  .mandatory {
+    color: red;
+  }
+  .userFormLeftContainer {
+    width: 50%;
+    display: inline-block;
+    .parentContainer {
+      width: calc(100% - 10px);
+      margin: 1px 5px 0 5px;
+      overflow: hidden;
+      .titleBox {
+        width: 25%;
+        padding: 9px;
+        float: left;
+        line-height: 20px;
+        font-size: 12px;
+        overflow: inherit;
+        text-overflow: clip;
+        white-space: normal;
+      }
+
+      .userValueContainer {
+        width: 75%;
+        padding: 5px;
+        float: left;
+
+        .userDetailInput {
+          width: 100%;
+          height: 28px;
+          color: #555;
+          padding: 0 7px;
+          font-size: 12px;
+          font-weight: normal;
+          border-radius: 0px;
+          box-shadow: none;
+          outline: none;
+          background-color: #fff;
+          border: none;
+          border-bottom: 1px solid rgba(238, 238, 238, 0.15);
+        }
+
+        .datePickerCustom {
+          hr {
+            display: none;
+          }
+        }
+        .errorMsg {
+          color: red;
+          font-size: 10px;
+        }
+      }
+      !*.errorMsg {
+        color: red;
+        font-size: 10px;
+        float: right;
+        padding-right: 20px;
+        display: none;
+      }*!
+    }
+  }
+  .userFormRightContainer {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    vertical-align: top;
+
+    .imageContainer {
+      height: 100%;
+      width: 100%;
+      position: relative;
+
+      .imageWrapper {
+        background-size: 150px 150px;
+        border: none;
+        vertical-align: top;
+        height: 150px;
+        width: 150px;
+        margin-top: 10px;
+        //outline: 1px solid #ccc;
+
+        &.defaultUserIcon {
+          background: url($image-CS-sing-default-user-icon) no-repeat;
+          background-size: 100%;
+          opacity: 0.3;
+        }
+
+        .userImage {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 150px;
+          max-height: 150px;
+        }
+      }
+
+      .userImageChange {
+        bottom: 0;
+        color: #fff;
+        font-size: 12px;
+        left: 0;
+        line-height: 15px;
+        position: absolute;
+        padding: 7px 0;
+        text-align: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.24);
+        &:hover {
+          background: rgba(0, 0, 0, 0.50);
+          cursor: pointer;
+        }
+      }
+
+      .iconRemoveImage{
+        height: 20px;
+        width: 20px;
+        background: url($image-CS-Cancel-Black) no-repeat;
+        background-size: 15px;
+        opacity: 0.2;
+        position: absolute;
+        right: -6px;
+
+        &.dispN {
+          display: none;
+        }
+
+        &:hover{
+          opacity: 0.9;
+          background: url($image-CS-Cancel-Black) no-repeat;
+          background-size: 15px;
+        }
+      }
+    }
+
+    .btnChangePassword {
+      padding: 7px 0;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      background-color: rgba(0,0,0,0.24);
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.5);
+      }
+    }
+  }
+}*/

@@ -1,0 +1,27 @@
+.thumbnailScrollerContainer {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-bottom: 35px;
+
+  .thumbnailContainer {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s;
+
+    .scrollerItem {
+      display: inline-block;
+
+      .thumbnailViewContainer {
+        margin: 10px auto;
+        display: block;
+      }
+    }
+  }
+
+  .navigationWrapper {
+    bottom: 8px;
+
+  }
+}

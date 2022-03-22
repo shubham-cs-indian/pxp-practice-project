@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_3c94a174-ae8b-4f21-9f10-5b7073686440" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.2">
+  <bpmn:process id="Process_3c94a174-ae8b-4f21-9f10-5b7073686440" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_3c94a174-ae8b-4f21-9f10-5b7073686440" camunda:asyncAfter="true">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${camundaTask}" event="start" />
+        <camunda:properties>
+          <camunda:property name="runtimeVariables" value="data,pxonFile" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>SequenceFlow_01csw2n</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_01csw2n" sourceRef="StartEvent_3c94a174-ae8b-4f21-9f10-5b7073686440" targetRef="Task_1se7v9j" />
+    <bpmn:endEvent id="EndEvent_0x7ajra">
+      <bpmn:extensionElements>
+        <camunda:executionListener delegateExpression="${camundaTask}" event="end" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1rkt5x5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Task_1se7v9j" name="Excel To PXON Task" implementation="##WebService" camunda:delegateExpression="${camundaTask}">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="RECEIVED_DATA" parameterType="input">${data}</camunda:inputParameter>
+          <camunda:inputParameter name="taskId" parameterType="input">excelToPXONTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">excelToPXONTask</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">CustomServiceTask</camunda:inputParameter>
+          <camunda:inputParameter name="PXON" parameterType="output">pxonFile</camunda:inputParameter>
+          <camunda:inputParameter name="FAILED_FILES" parameterType="output">failedFiles</camunda:inputParameter>
+          <camunda:inputParameter name="EXECUTION_STATUS" parameterType="output">executionstatus</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_01csw2n</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1itcyav</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Task_1o8bkly" name="PXON Import" calledElement="STD_PXON_IMPORT">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="FILE_NAME" parameterType="input">${pxonFile}</camunda:inputParameter>
+          <camunda:inputParameter name="taskId" parameterType="input">PXONImportActivity</camunda:inputParameter>
+          <camunda:inputParameter name="customElementID">PXONImportActivity</camunda:inputParameter>
+          <camunda:inputParameter name="customElementType">customCallActivity</camunda:inputParameter>
+          <camunda:inputParameter name="JOB_ID" parameterType="output">jobId</camunda:inputParameter>
+          <camunda:inputParameter name="SUCCESS_IIDS" parameterType="output">successIID</camunda:inputParameter>
+          <camunda:inputParameter name="FAILED_IIDS" parameterType="output">FailedIID</camunda:inputParameter>
+          <camunda:inputParameter name="EXECUTION_STATUS" parameterType="output">importStatus</camunda:inputParameter>
+        </camunda:inputOutput>
+        <camunda:in variables="all" />
+        <camunda:out variables="all" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1itcyav</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1rkt5x5</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="SequenceFlow_1itcyav" sourceRef="Task_1se7v9j" targetRef="Task_1o8bkly" />
+    <bpmn:sequenceFlow id="SequenceFlow_1rkt5x5" sourceRef="Task_1o8bkly" targetRef="EndEvent_0x7ajra" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_3c94a174-ae8b-4f21-9f10-5b7073686440">
+    <bpmndi:BPMNPlane id="BPMNPlane_3c94a174-ae8b-4f21-9f10-5b7073686440" bpmnElement="Process_3c94a174-ae8b-4f21-9f10-5b7073686440">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_3c94a174-ae8b-4f21-9f10-5b7073686440" bpmnElement="StartEvent_3c94a174-ae8b-4f21-9f10-5b7073686440">
+        <dc:Bounds x="284" y="91" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="257" y="127" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_01csw2n_di" bpmnElement="SequenceFlow_01csw2n">
+        <di:waypoint x="320" y="109" />
+        <di:waypoint x="348" y="109" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="289" y="87.5" width="90" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0x7ajra_di" bpmnElement="EndEvent_0x7ajra">
+        <dc:Bounds x="623" y="91" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="596" y="130" width="90" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1anmxo6_di" bpmnElement="Task_1se7v9j">
+        <dc:Bounds x="348" y="69" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_1u8gvp1_di" bpmnElement="Task_1o8bkly">
+        <dc:Bounds x="484" y="69" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1itcyav_di" bpmnElement="SequenceFlow_1itcyav">
+        <di:waypoint x="448" y="109" />
+        <di:waypoint x="484" y="109" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="466" y="88" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1rkt5x5_di" bpmnElement="SequenceFlow_1rkt5x5">
+        <di:waypoint x="584" y="109" />
+        <di:waypoint x="623" y="109" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="603.5" y="88" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

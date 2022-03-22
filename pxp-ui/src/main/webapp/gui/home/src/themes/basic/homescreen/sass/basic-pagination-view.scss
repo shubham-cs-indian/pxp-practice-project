@@ -1,0 +1,170 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$pageButtonHeight: 30px;
+
+@mixin fontStyling() {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+
+@mixin commonDivStyling() {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #d6d6d6;
+  text-align: center;
+}
+
+@mixin darkThemeDivStyling() {
+  text-align: center;
+  background-color: #4a4a4a;
+  box-shadow: 0 0 0 1px #666;
+  color: #eee;
+}
+
+.paginationView {
+  margin: 5px;
+
+  .currentPageInformation {
+    @include topInlineBlock();
+    @include fontStyling();
+    padding: 6px;
+    height: $pageButtonHeight;
+  }
+
+  .pageSizeSelector {
+    @include topInlineBlock();
+    margin-left: 10px;
+    position: relative;
+    height: $pageButtonHeight;
+
+
+    .selectedPageSize {
+      @include commonDivStyling();
+      @include fontStyling();
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 6px 10px;
+      height: $pageButtonHeight;
+      cursor: pointer;
+    }
+  }
+
+  .pageNavigationSection {
+    @include topInlineBlock();
+    padding-left: 10px;
+
+    .pageButton {
+      @include topInlineBlock();
+      @include commonDivStyling();
+      @include fontStyling();
+      min-width: 30px;
+      padding: 6px 10px;
+      cursor: pointer;
+      height: $pageButtonHeight;
+      user-select: none;
+      -moz-user-select: none;
+
+      &:hover {
+        background-color: #f9f9f9;
+      }
+
+      &.selected {
+        background-color: #E0E0E0;
+      }
+
+      &.dots {
+        cursor: default;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+
+      &.previous {
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+      }
+
+      &.next {
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+
+      &.disabled {
+        color: $color-dark-5;
+        cursor: default;
+        background-color: #eee;
+      }
+    }
+
+    .pageListContainer {
+      @include topInlineBlock();
+    }
+  }
+}
+
+.pageSizeList {
+  opacity: 1;
+  max-height: 500px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 20;
+  overflow: hidden;
+
+  &.darkTheme {
+    @include darkThemeDivStyling();
+  }
+
+  .pageSizeListItem {
+    @include fontStyling();
+    padding: 6px 10px;
+    cursor: pointer;
+    height: $pageButtonHeight;
+
+    &.darkTheme {
+      color: #ccc;
+      &:hover {
+        background-color: #4a4a4a;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.goToPageContainer {
+  border-radius: 3px;
+  z-index: 20;
+  overflow: hidden;
+  padding: 5px;
+  width: auto;
+
+  &.darkTheme {
+    @include darkThemeDivStyling();
+  }
+
+  .goToPage {
+    display: inline-block;
+    line-height: 22px;
+  }
+
+  .numberLocaleViewContainer {
+    display: inline-block;
+    border-radius: 2px;
+    padding-left: 5px;
+    width: auto;
+    margin: 0;
+
+    .numberLocaleInput {
+      color: $color-dark-1;
+      border-radius: 2px;
+      width: 30px;
+      display: inline-block;
+      outline: none;
+      margin: 0;
+    }
+  }
+}

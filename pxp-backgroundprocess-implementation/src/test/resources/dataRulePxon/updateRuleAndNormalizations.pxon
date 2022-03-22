@@ -1,0 +1,142 @@
+[
+  {
+    "Ltags": [
+      {
+        "Lcouplings": [
+          {
+		   "Ltagvalues": [
+          
+            ],
+            "$type": "notempty"
+          }
+        ],
+        "entityid": "availabilitytag"
+      },
+      {
+        "Lcouplings": [
+          {
+            "Ltagvalues": [
+              {
+                "from": 100,
+                "to": 100,
+                "id": "listing_status_catlog"
+              }
+            ],
+            "$type": "exact"
+          }
+        ],
+        "entityid": "listingstatustag"
+      }
+    ],
+    "Llanguages": [
+      
+    ],
+    "Ltaxonomies": [
+      "R_Taxonomy1",
+      "R_taxonomy3"
+    ],
+    "Lorganizations": [
+      "-1"
+    ],
+    "csid": "[R>R_Rules206]",
+    "Ltypes": [
+      "r_non_nature"
+    ],
+    "$isstandard": false,
+    "$islanguagedependent": false,
+    "label": "R_Rules206_Label",
+    "Lrelationships": [
+      
+    ],
+    "Lphysicalcatalogids": [
+      "pim",
+      "dataIntegration"
+    ],
+    "$type": "standardization_and_normalization",
+    "Lattributes": [
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              
+            ],
+            "comparewithsysdate": false,
+            "type": "notempty"
+          }
+        ],
+        "entityid": "discountattribute"
+      },
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              "Hello2"
+            ],
+            "comparewithsysdate": false,
+            "type": "exact"
+          }
+        ],
+        "entityid": "descriptionattribute"
+      },
+      {
+        "Lrules": [
+          {
+            "Lvalues": [
+              
+            ],
+            "comparewithsysdate": true,
+            "type": "exact"
+          }
+        ],
+        "entityid": "duedateattribute"
+      }
+    ],
+    "Lnormalizations": [
+      {
+        "Lvalues": [
+          "R_non_nature",
+          "R_non_nature3"
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "$type": "type"
+      },
+      {
+        "Lvalues": [
+          "R_Taxonomy1",
+          "R_taxonomy3"
+        ],
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "$type": "taxonomy"
+      },
+      {
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "entityid": "addressattribute",
+        "transformationtype": "uppercase",
+        "$type": "attribute"
+      },
+      {
+        "Lvalues": [
+          "rosh"
+        ],
+        "valueashtml": "<b>rosh</b>",
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "entityid": "descriptionattribute",
+        "transformationtype": "value",
+        "$type": "attribute"
+      },
+      {
+        "basetype": "com.cs.core.config.interactor.model.datarule.Normalization",
+        "entityid": "availabilitytag",
+        "transformationtype": "value",
+        "$type": "tag",
+        "Ltagvalues": [
+          {
+            "from": 100,
+            "to": 100,
+            "id": "onstock"
+          }
+        ]
+      }
+    ]
+  }
+]

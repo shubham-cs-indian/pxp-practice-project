@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/tx 
+            http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+            http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/aop 
+            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+            http://www.springframework.org/schema/data/jpa
+            http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+            http://www.springframework.org/schema/util 
+            http://www.springframework.org/schema/util/spring-util-2.5.xsd
+            http://www.springframework.org/schema/task 
+            http://www.springframework.org/schema/task/spring-task-3.0.xsd 
+            ">
+	<!-- <import resource="classpath*:*config/camunda.cfg.xml" /> -->
+	<beans default-lazy-init="true">
+		<context:property-placeholder
+			location="classpath:config/*.properties" />
+		<context:component-scan
+			base-package="com.cs.print.*, com.cs.pim.*, 
+			              com.cs.etl.*, com.cs.dam.*, 
+			              ,com.cs.core.*,com.cs.base.*, com.cs.workflow.*, com.cs.startup.*,com.cs.di.config.strategy.*,
+			              com.cs.di.*">
+			<context:exclude-filter type="assignable"
+				expression="com.cs.core.config.interactor.model.portal.PortalConfiguration" />
+			<context:exclude-filter type="regex"
+				expression="com.cs.core.runtime.interactor.usecase.kafka.*" />
+			<context:exclude-filter type="assignable"
+				expression="com.cs.core.runtime.strategy.usecase.transfer.initialize.PostgresConnectionStrategy" />
+			<context:exclude-filter type="assignable"
+				expression="com.cs.dam.runtime.interactor.usecase.assetinstance" />
+		</context:component-scan>
+		<aop:aspectj-autoproxy />
+		<bean id="receiverTask"
+			class="com.cs.di.workflow.tasks.ReceiverTask"></bean>
+				<!-- <bean id="processStartEvent"
+			class="com.cs.di.workflow.events.ProcessStartEvent"></bean>
+				<bean id="processEndEvent"
+			class="com.cs.di.workflow.events.ProcessEndEvent"></bean> -->
+		<bean id="tasksMap" class="java.util.HashMap" scope="prototype">
+			<constructor-arg>
+				<map key-type="java.lang.String"
+					value-type="com.cs.di.workflow.tasks.AbstractTask">
+					<entry key="receiverTask" value-ref="receiverTask" />
+					<!-- <entry key="processStartEvent" value-ref="processStartEvent" />
+					<entry key="processEndEvent" value-ref="processEndEvent" /> -->
+				</map>
+			</constructor-arg>
+		</bean>
+		<!-- orientdb config starts -->
+
+		<bean id="orientDBHost" class="java.lang.String">
+			<constructor-arg value="${orientdb.host}" />
+		</bean>
+
+		<bean id="orientDBPort" class="java.lang.String">
+			<constructor-arg value="${orientdb.port}" />
+		</bean>
+
+		<bean id="orientDBUser" class="java.lang.String">
+			<constructor-arg value="${orientdb.user}" />
+		</bean>
+	
+		<bean id="orientDBPassword" class="java.lang.String">
+			<constructor-arg value="${orientdb.password}" />
+		</bean>
+
+		<bean id="orientDBdatabase" class="java.lang.String">
+			<constructor-arg value="${orientdb.database}" />
+		</bean>
+		<bean id="orientLoadBalancerLog" class="java.lang.String">
+		<constructor-arg value="/opt/cs/LoadBal/orient.log" />
+	    </bean>
+		<!-- orientdb ends -->
+
+		<bean id="executeWithLoadBalancer" class="java.lang.Boolean">
+			<constructor-arg value="false" />
+		</bean>
+		<util:map id="assetUploadStatusMap" scope="singleton"
+			map-class="java.util.HashMap">
+		</util:map>
+		<bean id="loggingTaskExecutor"
+			class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+			<property name="corePoolSize" value="1" />
+			<property name="maxPoolSize" value="2" />
+			<property name="WaitForTasksToCompleteOnShutdown"
+				value="true" />
+		</bean>
+		<!-- JMS Connection Properties -->
+
+		<bean id="jndiContextFactory" class="java.lang.String">
+			<constructor-arg
+				value="org.apache.activemq.jndi.ActiveMQInitialContextFactory" />
+		</bean>
+
+		<bean id="connectionFactoryName" class="java.lang.String">
+			<constructor-arg value="QueueConnectionFactory" />
+		</bean>
+
+		<bean id="jmsUsername" class="java.lang.String">
+			<constructor-arg value="" />
+		</bean>
+
+		<bean id="jmsPassword" class="java.lang.String">
+			<constructor-arg value="" />
+		</bean>
+
+		<bean id="jmsConcurrency" class="java.lang.String">
+			<constructor-arg value="1-1" />
+		</bean>
+		<bean id="mode" class="java.lang.String">
+			<constructor-arg value="developemnt" />
+		</bean>
+		<bean id="performanceLogIP" class="java.lang.String">
+		<constructor-arg value="localhost" />
+	   </bean>
+	   <bean id="performanceLogPort" class="java.lang.String">
+		<constructor-arg value="${logserver.port}" />
+		</bean>
+	
+		<bean id="performanceLogIndex" class="java.lang.String">
+			<constructor-arg value="${logserver.index}" />
+		</bean>
+	
+		<bean id="performanceLogDocType" class="java.lang.String">
+			<constructor-arg value="${logserver.doctype}" />
+		</bean>
+		<util:map id="assetStoreAuthenticationMap">
+			<entry key="account" value="${asset.account}" />
+			<entry key="user" value="${asset.user}" />
+			<entry key="passkey" value="${asset.passkey}" />
+		</util:map>
+		<bean id="assetServerAuthURL" class="java.lang.String">
+			<constructor-arg value="test" />
+		</bean>
+		<!-- Camunda -->
+		<bean id="dataSource"
+			class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+			<property name="targetDataSource">
+				<bean
+					class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+					<property name="driverClass"
+						value="${camunda.driverclass}" />
+					<property name="url" value="${camunda.dburl}" />
+					<property name="username" value="${camunda.username}" />
+					<property name="password" value="${camunda.password}" />
+				</bean>
+			</property>
+		</bean>
+
+		<bean id="transactionManager"
+			class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+			<property name="dataSource" ref="dataSource" />
+		</bean>
+
+	<bean id="processEngineConfiguration"
+		class="com.cs.core.config.strategy.cammunda.broadcast.CamundaCustomSpringProcessEngineConfiguration">
+		<property name="processEngineName" value="default" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="databaseSchemaUpdate" value="true" />
+		<property name="jdbcBatchProcessing" value="true" />
+		<property name="jobExecutorActivate" value="true" />
+		<property name="createIncidentOnFailedJobEnabled"
+			value="false" />
+		<property name="deploymentResources" value="classpath*:*.*mn" />
+	</bean>
+
+		<bean id="processEngine"
+			class="org.camunda.bpm.engine.spring.ProcessEngineFactoryBean">
+			<property name="processEngineConfiguration"
+				ref="processEngineConfiguration" />
+		</bean>
+
+		<bean id="repositoryService" factory-bean="processEngine"
+			factory-method="getRepositoryService" />
+		<bean id="runtimeService" factory-bean="processEngine"
+			factory-method="getRuntimeService" />
+		<bean id="taskService" factory-bean="processEngine"
+			factory-method="getTaskService" />
+		<bean id="historyService" factory-bean="processEngine"
+			factory-method="getHistoryService" />
+		<bean id="managementService" factory-bean="processEngine"
+			factory-method="getManagementService" />
+		<bean id="formService" factory-bean="processEngine"
+			factory-method="getFormService" />
+
+		<context:annotation-config />
+
+	</beans>
+	<!-- https://www.nurkiewicz.com/2010/12/speeding-up-spring-integration-tests.html -->
+</beans>

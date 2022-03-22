@@ -1,0 +1,80 @@
+/*
+
+.horizontalBarComponentContainer {
+  float: left;
+  width: calc(100% - 6px);
+  margin: 3px;
+
+  .horizontalBarComponentBody {
+    float: left;
+    width: 100%;
+
+    .horizontalBarComponentBodyWrapper {
+      float: left;
+      width: 100%;
+
+      .barContainer {
+        float: left;
+        width: 100%;
+
+        .barBlock {
+          height: 13px;
+          float: left;
+          cursor: pointer;
+          border-top: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+
+          &.successBlock {
+            background: rgba(0, 128, 0, 0.75);
+          }
+
+          &.inProgressBlock {
+            background: rgba(255, 255, 0, 0.75);
+          }
+
+          &.failedBlock {
+            background: rgba(255, 0, 0, 0.75);
+          }
+
+          &.notApplicableBlock {
+            background: rgba(125, 125, 125, 0.75);
+          }
+
+          &.remainingBlock {
+            background: rgba(211,211,209,0.75);
+          }
+
+          &.otherBlock {
+
+            &.defaultBlock {
+              background: rgba(169,169,169,0.75);
+            }
+
+            &.redBlock {
+              background: rgba(255, 0, 0, 0.75);
+            }
+
+            &.orangeBlock {
+              background: rgba(255,69,0,0.75);
+            }
+
+            &.yellowBlock {
+              background: rgba(255, 255, 0, 0.75);
+            }
+
+          }
+
+        }
+      }
+    }
+
+    .nothingToDisplay {
+      font-size: 11px;
+      text-align: center;
+      font-style: italic;
+      line-height: 20px;
+      opacity: .5;
+      font-weight: 500;
+    }
+  }
+}*/

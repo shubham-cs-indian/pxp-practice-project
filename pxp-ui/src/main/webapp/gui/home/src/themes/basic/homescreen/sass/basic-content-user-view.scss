@@ -1,0 +1,67 @@
+@import "./../../../../styleguide/style-guide";
+
+
+.userViewPopover {
+  > div {
+    height: 100%;
+    > div {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+.changePasswordDialog {
+
+  .changePasswordContainer {
+
+    .changePasswordInputContainer {
+      width: 100%;
+      padding: 10px;
+      overflow: hidden;
+
+      .changePasswordInputText {
+        width: 50%;
+        float: left;
+        text-align: left;
+        padding-right: 10px;
+        font-size: 14px;
+      }
+
+      .changePasswordInputField {
+        width: 40%;
+        float: right;
+      }
+
+    }
+
+
+
+    .changePasswordButtonsWrapper > *:last-child {
+      margin-left: 20px;
+    }
+
+  }
+  .changePasswordButtonsWrapper {
+    margin-top: 20px;
+    //text-align: center;
+    width: 100%;
+    overflow: hidden;
+    height: 46px;
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+
+      .changePassword {
+        /*padding: 5px;*/
+        text-align: center;
+        background-color: #6f6f6f;
+        cursor: pointer;
+        display: inline-block;
+        color: #fff;
+
+      &:hover {
+        background-color: #585858;
+      }
+    }
+  }
+}

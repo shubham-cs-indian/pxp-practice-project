@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+//sourceCompatibility = 11
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+}
+
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = ''
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //compile group: 'org.json', name: 'json', version: '20180813'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            exclude '**'
+        }
+    }
+}

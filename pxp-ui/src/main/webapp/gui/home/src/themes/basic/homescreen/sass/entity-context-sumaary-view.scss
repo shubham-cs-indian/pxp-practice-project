@@ -1,0 +1,106 @@
+.entityContextSummaryViewContainer {
+  position: relative;
+  min-width: 200px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  background: #fcfcfc;
+
+  .contextHeader{
+    /*position: relative;
+    height: 22px;
+    padding: 0 10px;
+    width: 100%;
+    background-color: #7a7a7a;
+    color: white;*/
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contextBody {
+    width: 100%;
+
+    .contextTimeRange {
+      overflow: hidden;
+      margin-bottom: 5px;
+
+      .contextTimeLabel {
+        font-size: 11px;
+        float: left;
+        color: #777;
+      }
+
+      .contextTimeValue {
+        margin-left: 8px;
+        font-size: 11px;
+        float: left;
+      }
+    }
+
+    .entityTagsSummaryView {
+      position: relative;
+    }
+
+    /*
+    .variantLinkedInstanceContainer {
+      position: relative;
+
+      .variantLinkedInstanceLabel {
+        font-size: 11px;
+        font-weight: normal;
+        text-transform: none;
+        margin: 0;
+
+        span {
+          font-size: 11px;
+        }
+      }
+    }
+    */
+
+    .emptyContext {
+      font-size: 11px;
+      font-style: italic;
+    }
+
+    .variantTagsEditContainer {
+      height: auto;
+      padding: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .variantSectionViewVariantLabelAndDateFieldsContainer {
+      margin-bottom: 10px;
+    }
+
+    .circledTagGroupViewContainer {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      &:nth-child(even){
+        background: #fff;
+      }
+    }
+
+    .linkedInstanceContainer{
+      border-bottom: 1px solid #eee;
+      background: #fff;
+
+      .variantLinkedEntitiesContainer .linkedInstanceContainer .linkedInstanceBody{
+        margin-left: 0px;
+      }
+
+      &:nth-child(even){
+        background: #fff;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,51 @@
+/**
+ * Script to reload PGSQL schema
+ * Author:  vallee
+ * Created: Apr 11, 2019
+ */
+-- C:>SET PGPASSWORD=pxp123
+-- C:>psql -h localhost -p 5433 -d pxp -U pxp -f postgres-renew-schema.psql
+
+\set PGSQL_SCRIPT ./PGSQL11
+SET client_min_messages TO WARNING;
+
+\i :PGSQL_SCRIPT/0a-Db-infrastructure-DDL.sql
+\i :PGSQL_SCRIPT/1a-Db-infrastructure-DDL.sql
+\i :PGSQL_SCRIPT/1ac-Db-infrastructure-DDL.sql
+\i :PGSQL_SCRIPT/1avcs-Db-infrastructure-DDL.sql
+\i :PGSQL_SCRIPT/1b-Db-infrastructure-DML.sql
+\i :PGSQL_SCRIPT/2a-Tracking-DDL.sql
+\i :PGSQL_SCRIPT/2av-Tracking-DDL.sql
+\i :PGSQL_SCRIPT/2at-Tracking-DDL.sql
+\i :PGSQL_SCRIPT/3a-Entities-DDL.sql
+\i :PGSQL_SCRIPT/3ab-CoupledRecord-DML.sql
+\i :PGSQL_SCRIPT/2b-Tracking-DML.sql
+\i :PGSQL_SCRIPT/3at-Entities-DDL.sql
+\i :PGSQL_SCRIPT/3av-Entities-DDL.sql
+\i :PGSQL_SCRIPT/3avcs-Entities-DDL.sql
+\i :PGSQL_SCRIPT/3b-CoupledRecords-DML.sql
+\i :PGSQL_SCRIPT/3b-Entities-DML.sql
+\i :PGSQL_SCRIPT/3b-ValueRecords-DML.sql
+\i :PGSQL_SCRIPT/3b-TagsRecords-DML.sql
+\i :PGSQL_SCRIPT/3b-RelationsSetRecords-DML.sql
+\i :PGSQL_SCRIPT/4b-BGP-DML.sql
+\i :PGSQL_SCRIPT/5a-Graph-DDL.sql
+\i :PGSQL_SCRIPT/5b-Graph-DML.sql
+\i :PGSQL_SCRIPT/6a-Rules-DDL.sql
+\i :PGSQL_SCRIPT/6av-Rules-DDL.sql
+\i :PGSQL_SCRIPT/6b-Rules-DML.sql
+\i :PGSQL_SCRIPT/7a-Tasks-DDL.sql
+\i :PGSQL_SCRIPT/7b-Tasks-DML.sql
+\i :PGSQL_SCRIPT/7v-Tasks-DDL.sql
+\i :PGSQL_SCRIPT/8a-AuditLog-DDL.sql
+\i :PGSQL_SCRIPT/3acs-Entities-DML.sql
+\i :PGSQL_SCRIPT/8a-Workflow-DDL.sql
+\i :PGSQL_SCRIPT/9a-AuditLogExport-DDL.sql
+\i :PGSQL_SCRIPT/9a-LinkSharing-DDL.sql
+\i :PGSQL_SCRIPT/10a-DownloadTracker-DDL.sql
+\i :PGSQL_SCRIPT/11a-UniquenessViolation-DDL.sql
+\i :PGSQL_SCRIPT/12a-Notification-DDL.sql
+\i :PGSQL_SCRIPT/13a-RelationCoupleRecord-DDL.sql
+\i :PGSQL_SCRIPT/14a-AssetPurging-DDL.sql
+\i :PGSQL_SCRIPT/15a-GoldenRecord-DDL.sql
+\i :PGSQL_SCRIPT/15b-GoldenRecord-DML.sql

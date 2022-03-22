@@ -1,0 +1,677 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.contextMenuView {
+  min-width: 200px;
+  z-index: 9999;
+  outline: 1px solid #DCDCDC;
+  /*box-shadow: 0 5px 10px -3px #464646;
+  border-radius: 5px;*/
+  background-color: #fff;
+  font-size: 11px;
+  color: #333;
+  //max-width: 200px;
+
+  .handle {
+    float: right;
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 14px;
+    height: 10px;
+    opacity: .25;
+    margin: 4px 10px 0px 4px;
+    cursor: row-resize;
+    background: -webkit-linear-gradient(top, #000, #000 20%, #fff 0, #fff 40%, #000 0, #000 60%, #fff 0, #fff 80%, #000 0, #000);
+    background: linear-gradient(180deg, #000, #000 20%, #fff 0, #fff 40%, #000 0, #000 60%, #fff 0, #fff 80%, #000 0, #000);
+  }
+
+  &.withCheckbox {
+
+    .contextMenuSearch {
+
+      .contextMenuSearchInput {
+        width: calc(100% - 52px);
+      }
+    }
+  }
+
+  .contextMenuHeader{
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    padding: 5px;
+    background: #eee;
+
+    .contextMenuSearch {
+      float: left;
+      position: relative;
+      width: calc(100% - 25px);
+
+      .contextMenuSearchIcon {
+        height: 23px;
+        width: 23px;
+        @include background-properties($image-CS-SearchFilled-32,14px,4px);
+        position: absolute;
+        opacity: .6;
+        display: none;
+      }
+
+      .contextMenuSearchInput {
+        outline: none;
+        width: calc(100% - 24px);
+        border: 0;
+        float: left;
+        border-radius: 2px;
+        padding-left: 2px;
+        background: transparent;
+        line-height: 22px;
+      }
+
+      .customTextFieldViewContainer {
+        outline: none;
+        width: calc(100% - 24px);
+        border: 0;
+        float: left;
+        border-radius: 2px;
+        padding-left: 4px;
+        background: transparent;
+        line-height: 22px;
+        margin-bottom: 0;
+        .customTextField {
+          background: #eee;
+        }
+      }
+
+      .contextMenuSearchClear{
+        height: 24px;
+        width: 20px;
+        position: absolute;
+        right: 0;
+        opacity: .6;
+        cursor: pointer;
+        @include background-properties($image-CS-Cross,14px);
+
+        &:hover{
+          opacity: .8;
+        }
+
+        &.noShow{
+          display: none;
+        }
+      }
+    }
+
+    .contextMenuCheckboxAll {
+      float: left;
+      height: 24px;
+      margin-right: 2px;
+      width: 20px;
+      cursor: pointer;
+      @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 14px);
+
+      &.checked {
+        @include background-properties-with-theme-color($image-cs-checkbox-checked, 14px);
+      }
+
+      &.halfChecked{
+        @include background-properties-with-gray-color($image-cs-checkbox-partial-checked, 14px);
+      }
+    }
+  }
+
+  .contextMenuItemWrapper {
+    background: $color-light-1;
+
+    .contextMenuItem {
+      border: none;
+      width: calc(100% - 20px);
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &.inFocus {
+        background-color: transparent;
+      }
+    }
+  }
+  .contextMenuItem {
+    padding: 5px 5px 5px 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: #fafafa;
+
+      .deleteIcon {
+        visibility: visible;
+      }
+    }
+
+    &.inFocus {
+      background-color: $color-light-5;
+    }
+
+    .contextMenuIcon {
+      float: left;
+      margin: 1px 5px 1px 0px;
+
+      &.imageSimpleViewImage {
+        background-size: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    @-moz-document url-prefix() {
+      .contextMenuIcon {
+        max-width: 18px;
+        margin: 1px 2px;
+      }
+    }
+
+    .imageSimpleViewNoImage {
+      height: 15px;
+      width: 15px;
+      flex: 0 0 12px;
+      background-size: 12px;
+      margin-top: 2px;
+      float: left;
+      margin-right: 5px;
+    }
+
+    .contextMenuData {
+      line-height: 20px;
+      flex: 1;
+      font-size : $font-normal;
+      float: left;
+      @include ellipsis();
+
+      &.contextMenuLabel{
+        flex: 0 0 50%;
+        float: left;
+      }
+    }
+
+    .contextMenuCheckbox {
+      height: 20px;
+      width: 11px;
+      margin-right: 7px;
+      float: left;
+      @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 14px);
+
+      &.checked{
+        @include background-properties-with-theme-color($image-cs-checkbox-checked, 14px);
+      }
+
+    }
+
+    .contextMenuCustomIcon{
+      flex: 0 0 20px;
+      opacity: 0.6;
+      background-size: 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+      float: left;
+      height: 18px;
+      width: 18px;
+      margin: 1px 5px 1px 0px;
+
+      &.logoutButtonContainer {
+        @include background-properties($image-CS-menu-item-logout, 18px);
+      }
+
+      &.aboutButtonContainer {
+        @include background-properties($image-CS-menu-item-about, 18px);
+      }
+
+      &.helpButton {
+        @include background-properties($image-CS-menu-item-support, 18px);
+      }
+
+      &.noImage {
+        @include background-properties($image-CS-menu-item-my_account, 18px);
+      }
+
+      &.imageVariant {
+        @include background-properties($image-technical-image-icon-filled-black, 40px);
+      }
+
+      &.customTemplate{
+        @include background-properties($image-CS-Template-Filled-32,18px);
+      }
+
+      &.klassTemplate{
+        @include background-properties($image-Class-32,18px);
+      }
+
+      &.taxonomyTemplate{
+        @include background-properties($image-CS-Multicast-Filled-50,18px);
+      }
+
+      &.CollectionTemplate{
+        @include background-properties-with-gray-color($image-CS-collection-static-collection-new,18px);
+      }
+
+      &.attribute, &.standard_attribute  {
+        @include background-properties($image-CS-Text-Color-Filled-50,18px);
+      }
+
+      &.tag {
+        @include background-properties($image-CS-Price-Tag-Filled-50,18px);
+      }
+
+      &.refresh {
+        @include background-properties($image-CS-Refresh-48-black,18px);
+      }
+
+      &.deleteLanguage {
+        @include background-properties($image-CS-delete-bin-black,18px);
+      }
+
+      &.createClone {
+        @include background-properties($image-CS-create-clone,18px);
+      }
+
+      &.discard {
+        @include background-properties($image-CS-Restart-26,18px);
+      }
+
+      &.onboarding {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-physical-catalog-onboarding,18px);
+      }
+
+      &.pim {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-physical-catalog-pim,18px);
+      }
+
+      &.offboarding {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-physical-catalog-offboarding,18px);
+      }
+
+      &.allPropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-eye-black,17px);
+      }
+      &.completePropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-icons8-ok-filled,17px);
+      }
+      &.incompletePropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-icons8-50-filled,17px);
+      }
+      &.violatedPropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        background-size: 17px;
+        @include background-properties-with-gray-color($image-CS-Error-Conflict,17px);
+      }
+
+      &.mandatoryPropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-icons8-asterisk,17px);
+      }
+
+      &.dependentPropertyIcon {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-geography,17px);
+      }
+
+      &.mappedPropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-mapped-handshake-black,17px);
+      }
+
+      &.unmappedPropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-unmapped-handshake-black,17px);
+      }
+
+      &.ignorePropertyIcon{
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-ignored-black,17px);
+      }
+
+      &.pimArchival {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-physical-catalog-pimArchival,17px);
+      }
+
+      &.all_slots {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-eye-black,18px);
+      }
+
+      &.slots_in_sync {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-icons8-ok-filled,18px);
+      }
+
+      &.slots_out_of_sync {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-icons8-50-filled,18px);
+      }
+
+      &.uploadPicture {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-Upload-Black, 17px);
+      }
+
+      &.removePicture {
+        opacity: 1;
+        width: 18px;
+        height: 18px;
+        @include background-properties($image-CS-Cross, 17px);
+      }
+
+      &.articleIcon {
+        @include background-properties($image-CS-Product-menu,18px);
+      }
+
+      &.assetIcon {
+        @include background-properties($image-CS-ImageFile,18px);
+      }
+
+      &.supplierIcon {
+        @include background-properties($image-CS-Truck,18px);
+      }
+
+      &.targetIcon {
+        @include background-properties($image-CS-Goal,18px);
+      }
+
+      &.textAssetIcon {
+        @include background-properties($image-CS-Overview,18px);
+      }
+
+      &.smartDocumentTemplateIcon {
+        @include background-properties($image-CS-smart-document-template-icon,18px);
+      }
+
+      &.actionItemAttributionTaxonomy {
+        @include background-properties($image-CS-group-objects,18px);
+      }
+
+      &.singleArticle {
+        @include background-properties($image-CS-Google-News,18px);
+      }
+
+      &.setOfProducts {
+        @include background-properties($image-shapes-Black,18px);
+      }
+
+      &.fixedBundle {
+        @include background-properties($image-CS-Cardboard-Box-Filled-50-Black,18px);
+      }
+      &.viewSources {
+        @include background-properties-with-theme-black-color($image-CS-view-sources,13px);
+      }
+      &.remergeSources {
+        @include background-properties($image-CS-icons8-compare,18px);
+      }
+
+
+    }
+
+    .contextMenuItemShuffleKeys {
+      opacity: 0.6;
+      float: right;
+      height: 20px;
+      flex: 0 0 20px;
+
+      &.Up {
+        @include background-properties($image-CS-arrow-up,7px);
+      }
+
+      &.Down {
+        @include background-properties($image-CS-arrow-down,7px);
+      }
+    }
+
+    .contextMenuItemCode{
+      margin: 2px 5px 2px 5px;
+      line-height: 16px;
+      background: #e8e6e6;
+      color: #717171;
+      font-style: italic;
+      font-size: 10px;
+      padding: 0 8px;
+      border-radius: 13px;
+      @include ellipsis();
+    }
+
+    .contextMenuItemCount {
+      margin: 0 5px 0 auto;
+      white-space: pre;
+      color: #999;
+    }
+
+    .deleteIcon {
+      float: left;
+      visibility: hidden;
+      opacity: .4;
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin-left: 5px;
+      @include background-properties($image-CS-delete-bin-black, 18px);
+      visibility: visible;
+    }
+
+    .contextMenuContent {
+      width: calc(100% - 18px);
+      display: flex;
+      align-items: center;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .contextMenuSeparator {
+    border-top: 1px solid #aaaaaa;
+  }
+
+  .actionButtonContainer {
+    height: 35px;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  .contextMenuList {
+    //max-height: none;
+    //overflow: auto;
+
+    .contextMenuListWrapper{
+      overflow-y: auto;
+      height: inherit;
+      max-height: inherit;
+      scrollbar-width: thin;
+    }
+
+    .menuItemLoadMore {
+      font-style: italic;
+      color: #777;
+      padding: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .applyButton {
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 25px;
+    background-color: #efefef;
+    margin: 5px;
+    display: inline-block;
+    width: calc(100% - 10px);
+
+    &:hover {
+      background-color: #8f9091;
+      color: white;
+      box-shadow: 0 1px 0 0px #7e7d79;
+    }
+  }
+
+  .contextMenuCheckBox {
+    float: left;
+    height: 20px;
+    width: 20px;
+    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 16px, 2px);
+
+    &.checked{
+      @include background-properties-with-theme-color($image-cs-checkbox-checked, 16px);
+    }
+
+  }
+
+  .contextMenuItemInActive {
+    .customIcon{
+      position: relative;
+      width:15px;
+      height:15px;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  .contextMenuItemIsActive {
+    background-color: #f5f5f5;
+  }
+
+  &.contextMenuSingleSelect{
+    max-width: 600px;
+
+    .contextMenuHeader {
+
+      .contextMenuSearch {
+        width: 100%;
+      }
+
+      .contextMenuCheckboxAll{
+        display: none;
+      }
+    }
+  }
+
+  .contextMenuItemButtonContainer {
+    text-align: right;
+    background: #eee;
+    box-shadow: 0px 1px 0px 0px #ddd inset;
+    padding: 6px 0;
+    width: 100%;
+    float: left;
+  }
+
+  .isSubHeader {
+    font-weight: 500;
+    color: #aaa;
+    background-color: unset;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .selectedItem {
+    @include background-properties-with-theme-color($image-CS-Ok-blue);
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
+    margin-right: 7px;
+  }
+}
+
+.nothingFoundMessage {
+  padding: 0 8px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 24px;
+  font-style: italic;
+  color: $color-dark-5;
+}
+
+.contextMenuShuffleItemContainer {
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  z-index: 2000;
+
+  .contextMenuItem {
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 30px);
+    display: inline-flex;
+    background: none;
+    border: none;
+
+    .contextMenuData {
+      margin-left: 5px;
+      line-height: 20px;
+      flex: 1;
+      float: left;
+      @include ellipsis();
+      background: none;
+    }
+
+    .contextMenuCheckbox {
+      flex: 0 0 20px;
+      @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 13px);
+      height: 12px;
+      width: 12px;
+      margin: 5px 2px 0px 0px;
+      float: left;
+
+      &.checked{
+        @include background-properties-with-theme-color($image-cs-checkbox-checked, 13px);
+      }
+
+    }
+
+  }
+}

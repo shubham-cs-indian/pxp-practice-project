@@ -1,0 +1,1474 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.classConfigViewContainer, .propertyCollectionViewContainer {
+  height: 100%;
+  //border: 1px solid #eee;
+
+  /*
+  .treeNodeViewNode {
+    .nodeIconClass {
+      width: 20px;
+      height: 20px;
+      display: block;
+      float: right;
+      background-size: 16px;
+      background-color: #ddd;
+      border-radius: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+
+      &.fixedBundle {
+        background-image: url($image-CS-Cardboard-Box-Filled-50-Black);
+      }
+
+      &.singleArticle {
+        background-image: url($image-CS-Google-News);
+      }
+
+      &.setOfProducts {
+        background-image: url($image-shapes-Black);
+      }
+
+      &.pidSku {
+        background-image: url($image-cs-dyn-coupled);
+      }
+
+      &.specialNode {
+        background-image: url($image-CS-glasses);
+      }
+
+      &.unit{
+        background-image: url($image-unit-logo);
+      }
+
+      &.gtin{
+        background-image: url($image-CS-GTIN);
+      }
+
+      &.embedded{
+        background-image: url($image-CS-Price-Tag-Filled-50);
+      }
+
+      //TODO: Change Icons if necessary
+      &.imageAsset {
+        background-image: url($image-CS-Google-News);
+      }
+
+      &.videoAsset {
+        background-image: url($image-CS-Box-Filled-Filled-50-Black);
+      }
+
+      &.documentAsset {
+        background-image: url($image-shapes-Black);
+      }
+
+      &.market {
+        background-image: url($image-CS-Google-News);
+      }
+
+      &.textAsset {
+        background-image: url($image-shapes-Black);
+      }
+
+      &.supplier {
+        background-image: url($image-shapes-Black);
+      }
+
+      &.fileAsset{
+        background-image: url($image-CS-attachment);
+      }
+    }
+  }
+  */
+
+  .classListViewContainer {
+    max-width: 50%;
+    //height: 100%;
+    float: left;
+    //border-right: 1px solid #bbb;
+
+    &.propertyCollection {
+      width: 300px;
+      height: 100%;
+      overflow: hidden;
+
+      .listViewNewContainer {
+        .listView{
+          height: calc(100% - 82px);
+          .listNodeViewContainer {
+            &:hover {
+              .listViewWrapper {
+                .listNodeViewName {
+                  flex: 0 0  calc(100% - 20px);
+                  max-width: calc(100% - 20px);
+                }
+              }
+            }
+            .listViewWrapper {
+              .listNodeViewName {
+                .list-label {
+                  width: 100%;
+                }
+              }
+            }
+          }
+
+          &.LoadMoreAdded {
+            height: calc(100% - 112px);
+          }
+        }
+        .tabLayoutView {
+          width: 100%;
+          .tabLayoutListContainer {
+            height: 100%;
+            .tabsList {
+              display: flex;
+              .tabItem {
+                flex: 1;
+                background-color: #fffb;
+                &.isActive {
+                  border-bottom: 2px solid $color-dark-blue;
+                  background-color: $color-light-9;
+                }
+                .tabIcon {
+                  background-size: 16px;
+                  background-position: 50%;
+                  width: 28px;
+                  height: 100%;
+                  float: left;
+                  background-repeat: no-repeat;
+                  &.propertyCollectionTabIcon {
+                    background-image: url($image-CS-table-black-50);
+                    opacity: 0.7;
+                  }
+                  &.xRayPropertyCollectionTabIcon {
+                    background-image: url($image-CS-glasses);
+                    opacity: 0.7;
+                  }
+                  &.isActive {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contentHierarchyTreeViewContainer {
+      width: 100%;
+      border-right: none;
+
+      .contentHorizontalTreeGroupHeader {
+        padding: 0 5px 8px 10px !important;
+
+        .levelLabel {
+          width: calc(100% - 30px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          float: left;
+          font-size: 11px;
+        }
+
+          .levelActionItem {
+            float: right;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            margin: 0px 10px 0px 0px;
+
+            &.create {
+              @include background-properties-with-gray-color($image-CS-Plus-32-black,18px);
+            }
+
+            &.delete {
+              @include background-properties($image-CS-delete-bin-black,18px);
+            }
+          }
+      }
+    }
+
+  }
+
+  $saveBarHeight: 40px;
+  .classDetailedViewContainer {
+    //height: 100%;
+    min-width: 50%;
+    float: left;
+    //overflow: auto;
+    flex: 1 0;
+    width: 100%;
+
+    &.propertyCollection {
+      width: calc(100% - 300px);
+      height: calc(100% - 58px);
+    }
+
+    .classConfigDetailViewWrapper {
+      width: 100%;
+      position: relative;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: auto;
+      height: 100%;
+      scrollbar-width: thin;
+
+      &.dirty {
+        height: calc(100% - #{$saveBarHeight});
+      }
+    }
+
+
+    /*
+    .linkBar {
+      background: #4a4a4a;
+      height: 28px;
+      color: #FFFFFF;
+
+      .linkBarSection {
+        font-size: 13px;
+        line-height: 28px;
+
+        .linkIcon {
+          background-position: 0px 5px;
+
+          &.classConfig1 {
+            background-image: url($image-CS-Circled1-32);
+
+            &:hover {
+              background-image: url($image-CS-Circled1Filled-32);
+            }
+
+            &.linkSelected {
+              background-image: url($image-CS-Circled1Filled-32);
+            }
+          }
+
+          &.classConfig2 {
+            background-image: url($image-CS-Circled2-32);
+
+            &:hover {
+              background-image: url($image-CS-Circled2Filled-32);
+            }
+
+            &.linkSelected {
+              background-image: url($image-CS-Circled2Filled-32);
+            }
+          }
+
+          &.classConfig3 {
+            background-image: url($image-CS-Circled3-32);
+
+            &:hover {
+              background-image: url($image-CS-Circled3Filled-32);
+            }
+
+            &.linkSelected {
+              background-image: url($image-CS-Circled3Filled-32);
+            }
+          }
+
+          &.classConfig4 {
+            background-image: url($image-CS-Circled4-32);
+
+            &:hover {
+              background-image: url($image-CS-Circled4Filled-32);
+            }
+
+            &.linkSelected {
+              background-image: url($image-CS-Circled4Filled-32);
+            }
+          }
+
+          &.classConfig5 {
+            background-image: url($image-CS-Circled4-32);
+
+            &:hover {
+              background-image: url($image-CS-Circled4Filled-32);
+            }
+
+            &.linkSelected {
+              background-image: url($image-CS-Circled4Filled-32);
+            }
+          }
+        }
+      }
+    }
+    */
+
+    .classAttributeListContainer {
+      width: 275px;
+      float: left;
+      height: 100%;
+
+      .classAttributeListHeader {
+        background-color: #f1f1f1;
+        text-align: center;
+        overflow: auto;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+      }
+
+      .classAttributeListBody {
+        height: calc(100% - 30px);
+        overflow: auto;
+
+        .listNodeViewContainer {
+          font-size: large;
+          padding: 6px 8px;
+          cursor: default;
+          overflow: hidden;
+          height: 30px;
+
+        }
+
+        .listView {
+          border: none;
+          height: 100%;
+        }
+      }
+
+      .classAttributeListPlusIcon {
+        width: 18px;
+        height: 18px;
+        transition: all 0.3s ease;
+        @include background-properties-with-theme-white-color($image-CS-Plus-32-black,18px);
+        opacity: .4;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    .classAttributeDetailsContainer {
+      width: calc(100% - 280px);
+      float: left;
+      overflow: hidden;
+      padding: 0 0 0 2px;
+      height: 100%;
+
+      .table {
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+
+        .tableHeader {
+          text-align: center;
+          overflow: auto;
+          .table-row {
+            float: left;
+            width: 100%;
+            .table-col {
+              float: left;
+              height: 30px;
+              line-height: 30px;
+              font-size: 12px;
+              background-color: #f1f1f1;
+
+              &.attributeName {
+                width: 27%;
+              }
+
+              &.defaultValue {
+                width: 19%;
+              }
+
+              &.extendedName {
+                width: 19%;
+              }
+
+              &.isMandatory {
+                width: 14%;
+              }
+
+              &.isInherited {
+                width: 14%;
+              }
+
+              &.deleteSelectedAttribute {
+                width: 7%;
+              }
+              /*
+                            &.attributeName {
+                              width: 27%;
+                            }
+
+                            &.defaultValue{
+                              width: 19%;
+                            }
+
+                            &.extendedName{
+                              width: 19%;
+                            }
+
+                            &.isMandatory {
+                              width: 14%;
+                            }
+
+                            &.isInherited {
+                              width: 14%;
+                            }
+
+                            &.deleteSelectedAttribute {
+                              width: 7%;
+                            }*/
+
+            }
+          }
+        }
+
+        .tableBody {
+          height: calc(100% - 30px);
+          overflow: auto;
+          .table-row {
+            float: left;
+            width: 100%;
+            &:nth-child(even) {
+              background: #F3F9FF;
+            }
+            .table-col {
+              float: left;
+              height: 30px;
+              padding: 5px;
+              line-height: 20px;
+
+              &.attributeName {
+                width: 27%;
+                max-width: calc(100% - 20px);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+              }
+
+              &.defaultValue {
+                width: 19%;
+                padding: 0;
+                text-align: center;
+              }
+
+              &.extendedName {
+                width: 19%;
+                padding: 0;
+                text-align: center;
+              }
+
+              &.isMandatory {
+                width: 14%;
+                text-align: center;
+              }
+
+              &.isInherited {
+                width: 14%;
+                text-align: center;
+                .isInheritedFlag {
+                  background: url($image-CS-CheckMark-black) no-repeat 50% 3px;
+                  width: 100%;
+                  height: 25px;
+                  background-size: 15px;
+                }
+              }
+
+              &.deleteSelectedAttribute {
+                width: 7%;
+                text-align: center;
+                .deleteSelectedClassAttribute {
+                  background: url($image-CS-Cancel-2-Filled-30-Red);
+                  background-size: 15px;
+                  width: 15px;
+                  height: 15px;
+                  opacity: .4;
+                  margin: 3px;
+                  float: right;
+                  transition: all 0.2s;
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+              }
+
+              &.centerAlign {
+                text-align: center;
+              }
+
+              .attributeInput {
+                width: 100%;
+                height: 100%;
+                color: #555;
+                padding: 0 7px;
+                font-size: 12px;
+                font-weight: normal;
+                outline: none;
+                border: none;
+                text-align: center;
+                background-color: transparent;
+                &:focus {
+                  outline: 1px solid #82c4f8;
+                }
+              }
+
+              .classRelationshipListPlusIcon {
+                width: 18px;
+                height: 18px;
+                transition: all 0.3s ease;
+                background: url($image-CS-Cancel-Black);
+                background-size: 18px;
+                background-repeat: no-repeat;
+                opacity: .4;
+                &:hover {
+                  opacity: .8;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .classRelationshipListContainer {
+      width: 275px;
+      float: left;
+      height: 100%;
+
+      .classRelationshipListHeader {
+        background-color: #f1f1f1;
+        text-align: center;
+        overflow: auto;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+      }
+
+      .classRelationshipListBody {
+        height: calc(100% - 30px);
+        overflow: auto;
+
+        .listNodeViewContainer {
+          font-size: large;
+          padding: 6px 8px;
+          cursor: default;
+          overflow: hidden;
+          height: 30px;
+        }
+
+        .listView {
+          border: none;
+          height: 100%;
+        }
+      }
+
+      .classRelationshipListPlusIcon {
+        width: 18px;
+        height: 18px;
+        transition: all 0.3s ease;
+        @include background-properties-with-theme-white-color($image-CS-Plus-32-black,18px);
+        opacity: .4;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    .classRelationshipAddedContainer {
+      width: calc(100% - 280px);
+      height: 100%;
+      float: left;
+      padding: 0px 0 0 2px;
+
+      .classRelationshipDetailsContainer {
+        width: 100%;
+        height: calc(100% - 30px);
+
+        .classRelationshipAddedHeader {
+          width: 100%;
+          background-color: #f1f1f1;
+          text-align: center;
+          height: 30px;
+          font-size: 12px;
+          line-height: 30px;
+        }
+        .classAddedRelationshipListContainer {
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+
+          .relationshipBox {
+            height: 135px;
+            width: 100%;
+            box-shadow: 0px 0px 0px 1px #ddd;
+
+            .relInput {
+              width: 90%;
+              height: 28px;
+              color: #555;
+              padding: 0 7px;
+              font-size: 12px;
+              font-weight: normal;
+              border-radius: 0px;
+              box-shadow: none;
+              outline: none;
+              background-color: #edf1fe;
+              border: none;
+              border-bottom: 1px solid rgba(238, 238, 238, 0.15);
+            }
+
+            .relSelect, .relCardinalitySelect {
+              height: 28px;
+              color: #555;
+              padding: 0 7px;
+              font-size: 12px;
+              font-weight: normal;
+              border-radius: 0px;
+              box-shadow: none;
+              outline: none;
+              background-color: #edf1fe;
+              border: none;
+              border-bottom: 1px solid rgba(238, 238, 238, 0.15); }
+
+            .classLock {
+              color: #b9b9b9;
+            }
+
+            .relationshipHeader {
+              width: 100%;
+              height: 25px;
+              padding-top: 5px;
+              background-color: #F1F1F1;
+              font-size: 12px;
+              line-height: 25px;
+              padding-left: 10px;
+              .relationshipText {
+                float: left;
+              }
+            }
+            .relativeContainer {
+              width: 100%;
+              height: calc(100% - 25px);
+              padding: 5px;
+
+              .relative {
+                width: 49%;
+                height: 100%;
+                float: left;
+                padding: 3px;
+                box-shadow: 0px 0px 0px 1px #ddd;
+              }
+
+              .lock {
+                box-shadow: 3px 0px 0px 0px gray inset, 0px 0px 0px 1px #ddd;
+              }
+
+              .leftRelative {
+                margin-right: 2%;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    .linkButtonContainer{
+      top: 10px;
+      left: 7px;
+    }
+
+    .linkedElement:first-child{
+      height: auto;
+    }
+
+    .linkedElement {
+      margin: 5px 3px;
+    }
+
+  }
+
+  .saveBar {
+    height: 0;
+    width: 100%;
+    transition: height 0.5s;
+    padding: 0;
+    overflow: hidden;
+
+    .saveBarButtonsWrapper {
+      float: right;
+    }
+
+    &.dirty {
+      height: $saveBarHeight;
+      padding: 5px;
+      width: 100%;
+      background-color: #cccccc;
+      float: left;
+    }
+  }
+
+  .linkedElement {
+    height: 100%;
+  }
+
+  .classConfig1 {
+
+    &:hover {
+    }
+
+    &.linkSelected {
+    }
+  }
+
+  .classConfig2 {
+
+    &:hover {
+    }
+
+    &.linkSelected {
+    }
+  }
+
+  .classConfig3 {
+
+    &:hover {
+    }
+
+    &.linkSelected {
+    }
+  }
+
+  .classConfig4 {
+
+    &:hover {
+    }
+
+    &.linkSelected {
+    }
+  }
+
+  .classConfig5 {
+
+    &:hover {
+    }
+
+    &.linkSelected {
+    }
+  }
+
+  .classConfig6 {
+
+    &:hover {
+    }
+
+    &.linkSelected {
+    }
+  }
+
+  /*
+  .classIconContainer {
+    float: right;
+    margin-top: 6px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #999;
+    .classIcon {
+      height: 32px;
+      width: 32px;
+      margin-top: -1px;
+      margin-left: -1px;
+    }
+  }
+  */
+
+  .uploadIcon {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .classBasicInfoWrapper {
+
+    .commonConfigSectionViewContainer {
+      .commonConfigSection {
+        margin: 15px 15px 15px 15px;
+      }
+    }
+
+   /* .classBasicInfoHeader {
+      background-color: #f1f1f1;
+      text-align: center;
+      overflow: auto;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+    }*/
+
+   /* .classUploadImageIcon {
+      height: 25px;
+      width: 25px;
+      display: inline-block;
+      float: right;
+      margin: 8px;
+      background: url($image-CS-Upload-Black) no-repeat;
+      background-size: 15px;
+      background-position: 5px;
+      opacity: .7;
+      border-radius: 50%;
+    }*/
+
+    .iconRemoveImage{
+      height: 20px;
+      width: 20px;
+      background: url($image-CS-Cancel-Black) no-repeat;
+      background-size: 15px;
+      opacity: 0.2;
+      float: right;
+      margin-left: -5px;
+
+      &.dispN {
+        display: none;
+      }
+
+      &:hover{
+        opacity: 0.9;
+        background: url($image-CS-Cancel-Black) no-repeat;
+        background-size: 15px;
+      }
+    }
+
+    .fieldName {
+      width: 25%;
+      padding: 5px;
+      float: left;
+      line-height: 28px;
+      font-size: 12px;
+    }
+
+   /* .fieldNameInputContainer {
+      width: 75%;
+      padding: 5px;
+      float: left;
+      line-height: 28px;
+    }
+
+    input.classNameInput {
+      width: 100%;
+      height: 28px;
+      color: #555;
+      border-radius: 0px;
+      padding: 0 7px;
+      background-color: #edf1fe;
+      border: none;
+      font-size: 12px;
+      font-weight: normal;
+      box-shadow: none;
+      outline: none;
+      border-bottom: 1px solid rgba(238, 238, 238, 0.15);
+    }*/
+
+  }
+  //}
+
+  /*.classIconUploadContainer {
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .classAttributeWrapper {
+    height: calc(100% - 45px);
+  }
+
+  .classRelationshipWrapper {
+    height: 100%;
+  }
+
+  .classTagWrapper {
+    height: 100%;
+
+    .classTagListContainer {
+      width: 275px;
+      float: left;
+      height: 100%;
+
+      .classTagListHeader {
+        background-color: #f1f1f1;
+        text-align: center;
+        overflow: auto;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+      }
+
+      .classTagListBody {
+        height: calc(100% - 30px);
+        overflow: auto;
+
+        .listNodeViewContainer {
+          font-size: large;
+          padding: 6px 8px;
+          cursor: default;
+          overflow: hidden;
+          height: 30px;
+        }
+
+        .listView {
+          border: none;
+          height: 100%;
+        }
+      }
+
+      .classTagListPlusIcon {
+        width: 18px;
+        height: 18px;
+        transition: all 0.3s ease;
+        background: url($image-CS-Plus-32);
+        background-size: 18px;
+        background-repeat: no-repeat;
+        opacity: .4;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    .classTagAddedContainer {
+      width: 70%;
+      height: 100%;
+      float: left;
+      padding: 0px 0 0 2px;
+
+      .classTagDetailsContainer {
+        width: 100%;
+        height: calc(100% - 30px);
+
+        .classTagAddedHeader {
+          width: 100%;
+          background-color: #f1f1f1;
+          text-align: center;
+          height: 30px;
+          font-size: 12px;
+          line-height: 30px;
+        }
+        .classAddedTagListContainer {
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+
+          .tagRow {
+            padding: 6px 8px;
+            box-shadow: 0px 1px 0px 0px #f6f6f6;
+            height: 30px;
+            position: relative;
+
+            .tagLabel {
+              display: inline-block;
+            }
+
+            .deleteSelectedClassAttribute {
+              background: url($image-CS-Cancel-2-Filled-30-Red);
+              background-size: 15px;
+              width: 15px;
+              height: 15px;
+              opacity: .4;
+              margin: 0px 4px;
+              float: right;
+              transition: all 0.2s;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .classRoleWrapper {
+    height: 100%;
+
+    .classRoleListContainer {
+      width: 275px;
+      float: left;
+      height: 100%;
+
+      .classRoleListHeader {
+        background-color: #f1f1f1;
+        text-align: center;
+        overflow: auto;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+      }
+
+      .classRoleListBody {
+        height: calc(100% - 30px);
+        overflow: auto;
+
+        .listNodeViewContainer {
+          font-size: large;
+          padding: 6px 8px;
+          cursor: default;
+          overflow: hidden;
+          height: 30px;
+        }
+
+        .listView {
+          border: none;
+          height: 100%;
+        }
+      }
+
+      .classRoleListPlusIcon {
+        width: 18px;
+        height: 18px;
+        transition: all 0.3s ease;
+        background: url($image-CS-Plus-32);
+        background-size: 18px;
+        background-repeat: no-repeat;
+        opacity: .4;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    .classRoleAddedContainer {
+      width: 70%;
+      height: 100%;
+      float: left;
+      padding: 0px 0 0 2px;
+
+      .classRoleDetailsContainer {
+        width: 100%;
+        height: calc(100% - 30px);
+
+        .classRoleAddedHeader {
+          width: 100%;
+          background-color: #f1f1f1;
+          text-align: center;
+          height: 30px;
+          font-size: 12px;
+          line-height: 30px;
+        }
+        .classAddedRoleListContainer {
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+
+          .roleRow {
+            padding: 6px 8px;
+            box-shadow: 0px 1px 0px 0px #f6f6f6;
+            height: 30px;
+            position: relative;
+
+            .roleLabel {
+              display: inline-block;
+            }
+
+            .deleteSelectedClassRole {
+              background: url($image-CS-Cancel-2-Filled-30-Red);
+              background-size: 15px;
+              width: 15px;
+              height: 15px;
+              opacity: .4;
+              margin: 0px 4px;
+              float: right;
+              transition: all 0.2s;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .raisedButtonContainer {
+    float: right;
+  }
+  .fields {
+    padding: 2px 8px;
+    width: 40%;
+    //display: inline-block;
+    float: left;
+  }
+
+  .enforceTaxonomyContainer {
+    padding: 2px 8px;
+    width: 20%;
+    float: left;
+
+    .enforceTaxonomyLabel {
+      padding: 5px;
+      float: left;
+      line-height: 28px;
+      font-size: 12px;
+    }
+
+    input.enforceTaxonomyCheckbox {
+      float: left;
+      margin: 14px 5px;
+    }
+  }
+
+  .shouldVersionClassContainer,.numberOfVersionsContainer {
+    padding: 2px 8px;
+    float: left;
+    width: 60%;
+
+    input,div{
+      float:left;
+    }
+
+    .numberOfVersionsInput{
+      width: 22%;
+      height: 28px;
+      color: #555;
+      border-radius: 4px;
+      padding: 0 7px;
+      background-color: #FFF;
+      border: 1px solid #CCC;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      font-size: 12px;
+      font-weight: normal;
+      margin: 5px;
+    }
+
+    .numberOfVersionsLabel{
+      width: 25%;
+      padding: 5px;
+      float: left;
+      line-height: 28px;
+      font-size: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .relSelect {
+    width: 100%;
+  }
+  .visibility-checkbox {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    vertical-align: top;
+  }
+  .deleteRelationship {
+    text-align: center;
+    float: right;
+  }
+  .deleteClassRelationship {
+    background: url($image-CS-Cancel-2-Filled-30-Red);
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    opacity: .4;
+    margin: 0px 4px;
+    float: right;
+    transition: all 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .singleRelationshipContainer {
+    padding: 5px;
+  }*/
+}
+
+.propertyCollectionViewContainer {
+  .arrow {
+    display: none;
+  }
+
+  .classDetailedViewContainer {
+    height: 100%;
+  }
+
+  /*.treeNodeViewNode {
+    background-color: white;
+    box-shadow: 0px 1px 0px 0px #f6f6f6;
+    margin-bottom: 1px;
+
+    .treeNodeViewName {
+      padding-left: 8px;
+    }
+
+    &.treeNodeSelected {
+      box-shadow: 0px 2px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+      background: rgba(99, 99, 99, 0.17);
+    }
+
+    &.treeNodeChecked {
+      box-shadow: 0px 2px 1px -1px #aaa inset, 0px -1px 2px -1px #999 inset;
+      background-color: rgba(99, 99, 99, 0.17);
+    }
+  }*/
+
+  .configHeaderView{
+    padding: 0px;
+    align-items: center;
+
+    .searchBarContainer{
+      background: #f7f7f7;
+      width: 300px;
+      float: left;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-right:1px solid #eee;
+      flex: unset;
+
+      .simpleSearchBarView{
+        width: calc(100% - 20px);
+      }
+    }
+
+    .actionButtonsContainer{
+      margin-right: 10px;
+    }
+  }
+}
+
+.classConfigViewContainerWrapper {
+  height: 100%;
+  .classConfigViewContainer {
+    display: flex;
+
+    &.withHeader {
+      height: calc(100% - 52px);
+    }
+  }
+}
+
+ .sectionsWrapper {
+   .contextMenuViewNewContainer {
+     .classAddPropertyCollection {
+       background: url($image-CS-Plus-32-black);
+       width: 20px;
+       height: 20px;
+       background-size: cover;
+       opacity: 0.4;
+       cursor: pointer;
+
+       &:hover {
+         opacity: 0.8;
+       }
+     }
+   }
+   .classConfigAddPropertyCollection {
+     position: absolute;
+     right: 6px;
+     top: 6px;
+   }
+ }
+
+.classConfigLinkScrollElementWrapper {
+  background-color: #fff;
+  margin-bottom: 15px;
+  //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  //overflow: auto;
+  // height: calc(100% - 28px);
+
+  .classConfigBasicSection {
+    height: 100%;
+  }
+
+}
+
+.sectionsWrapper {
+  background-color: #fff;
+  margin: 15px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  //overflow: auto;
+  // height: calc(100% - 28px);
+
+  .classConfigBasicSection {
+    height: 100%;
+  }
+
+}
+
+.propertyCollectionViewContainer {
+  height: calc(100% - 20px);
+  margin: 10px;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  .classConfigLinkScrollElementWrapper, .sectionsWrapper {
+    height: calc(100% - 28px);
+  }
+  .propertyCollectionDetailedView{
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+
+    .classConfigLinkScrollElementWrapper{
+      margin: 15px 15px 0 15px;
+      padding: 0px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+      border-radius: 2px;
+      background: #f9f9f9;
+
+      .classSectionContainer{
+        background: #fff;
+        border: 1px solid #eee;
+
+        .classElementListContainer{
+          width: 100%;
+          height: 100%;
+
+
+        }
+      }
+    }
+    .commonConfigSectionViewContainer {
+      .commonConfigSection {
+        .commonConfigSectionBody {
+          .commonConfigSectionRow {
+            .commonConfigSectionElementWrapper {
+              border:1px solid #d9d9d9;
+              .commonConfigSectionElement {
+                .commonConfigSectionElementBody {
+                  .elementWrapper {
+                    &.iconDetailRow {
+                      float: left;
+                      margin-bottom: 10px;
+                      .iconContainer {
+                        float: left;
+                        height: 30px;
+                        width: 35px;
+                        position: relative;
+                        border: 1px solid #D9D9D9;
+                        border-radius: 2px;
+                        margin-left: 5px;
+                        .iconWrapper{
+                          height: inherit;
+                          width: inherit;
+
+                          &.defaultIcon{
+                            background-size: 18px;
+                            opacity: 0.4;
+                            background-position: 7px center;
+                          }
+                        }
+                        .iconRemoveImage{
+                          top: -7px;
+                          right: -7px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sectionsWrapper {
+  position: relative;
+  background: #fff;
+  min-height: 200px;
+
+  .classSectionHeader {
+    text-align: center;
+    background: #ccc;
+    line-height: 34px;
+  }
+
+  .propertyCollectionGridHeader {
+    .tileIcon {
+      position: initial;
+    }
+  }
+
+  .tileIcon{
+    float: left;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 3px;
+    width: 20px;
+    height: 20px;
+    opacity: .6;
+    transition: all 0.2s;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #999;
+    border-radius: 3px;
+    position: absolute;
+    left: 6px;
+
+    &.tileIconAttribute{
+      background-image: url($image-CS-Text-Color-Filled-50);
+    }
+
+    &.tileIconTag{
+      background-image: url($image-CS-Price-Tag-Filled-50);
+    }
+
+    &.tileIconRelationship{
+      @include background-properties-with-gray-color($image-CS-hub);
+    }
+
+    &.tileIconRole{
+      background-image: url($image-CS-Manager-Filled-50-Black);
+    }
+
+    &.tileIconTaxonomy{
+      background-image: url($image-CS-Multicast-Filled-50);
+    }
+  }
+}
+
+
+/*
+.propertyCollectionDropdownContainer {
+  width: 200px;
+  height: auto;
+
+  .propertyCollectionDropdownItem {
+    padding: 4px 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #317df7;
+      color: #fff;
+    }
+  }
+}
+*/
+
+.createClassModalDialog {
+  .createClassNatureDialogMessaage {
+    font-size: 14px;
+  }
+  .createClassNatureButtons {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+
+    .natureButtonContainer {
+      display: inline-block;
+
+      .radioButton, .buttonLabel {
+        float: left;
+        line-height: 34px;
+      }
+    }
+    .natureTypeContainer {
+      margin-top: -10px;
+    }
+
+  }
+}

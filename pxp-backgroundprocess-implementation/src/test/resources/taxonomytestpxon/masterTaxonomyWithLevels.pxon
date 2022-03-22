@@ -1,0 +1,39 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "csid": "[c>R_Taxonomy_new_3 $iid=0 $type=TAXONOMY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_Taxonomy_new_3",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "Jembeddedclasses": {
+      
+    },
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "LLevelCode": [
+      "R_taxo_level1",
+      "R_taxo_level2"
+    ],
+    "LLevelLabels": [
+      "R_Hie_level1123",
+      "R_Hie_level2123"
+    ],
+    "taxonomytype": "majorTaxonomy",
+    "parentCode": "-1"
+  }
+]

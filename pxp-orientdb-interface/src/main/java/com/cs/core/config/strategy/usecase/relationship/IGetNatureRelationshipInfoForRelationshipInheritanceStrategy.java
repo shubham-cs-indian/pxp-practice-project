@@ -1,0 +1,12 @@
+package com.cs.core.config.strategy.usecase.relationship;
+
+import com.cs.core.config.strategy.configuration.base.IConfigStrategy;
+import com.cs.core.runtime.interactor.entity.relationshipinstance.IGetNatureRelationshipInfoForRelationshipInheritanceRequestModel;
+import com.cs.core.runtime.interactor.entity.relationshipinstance.IGetNatureRelationshipInfoForRelationshipInheritanceResponseModel;
+
+public interface IGetNatureRelationshipInfoForRelationshipInheritanceStrategy extends
+IConfigStrategy<IGetNatureRelationshipInfoForRelationshipInheritanceRequestModel, IGetNatureRelationshipInfoForRelationshipInheritanceResponseModel> {
+  
+
+
+}

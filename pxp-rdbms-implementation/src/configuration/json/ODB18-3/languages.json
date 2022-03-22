@@ -1,0 +1,50 @@
+[
+  {
+    "id": "en_US",
+    "isStandard": true,
+    "isDataLanguage": true,
+    "isUserInterfaceLanguage": true,
+    "code": "en_US",
+    "abbreviation": "en",
+    "localeId": "2057",
+    "numberFormat": "###,###,###.##",
+    "dateFormat": "DD/MM/YYYY HH:mm:ss",
+    "isDefaultLanguage": true
+  },
+  {
+    "id": "de_DE",
+    "isStandard": true,
+    "isDataLanguage": true,
+    "isUserInterfaceLanguage": true,
+    "code": "de_DE",
+    "abbreviation": "de",
+    "localeId": "1031",
+    "numberFormat": "###.###.###,##",
+    "dateFormat": "DD.MM.YYYY HH:mm:ss",
+    "isDefaultLanguage": false
+  },
+  {
+    "id": "fr_FR",
+    "isStandard": true,
+    "isDataLanguage": true,
+    "isUserInterfaceLanguage": true,
+    "code": "fr_FR",
+    "abbreviation": "fr",
+    "localeId": "1036",
+    "numberFormat": "### ### ###,##",
+    "dateFormat": "DD/MM/YYYY HH:mm:ss",
+    "isDefaultLanguage": false
+  },
+  {
+    "id": "es_ES",
+    "isStandard": true,
+    "isDataLanguage": true,
+    "isUserInterfaceLanguage": true,
+    "code": "es_ES",
+    "abbreviation": "es",
+    "localeId": "3082",
+    "numberFormat": "###.###.###,##",
+    "dateFormat": "DD/MM/YYYY HH:mm:ss",
+    "isDefaultLanguage": false
+  }
+]

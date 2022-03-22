@@ -1,0 +1,511 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+@import "basic-tab-layout-view";
+$primary-font-size: $font-small;
+$border-color: $color-light-15;
+$border-radius: 3px;
+$spacing: 20px;
+
+.bulkEditView{
+  height: 100%;
+  padding: $spacing;
+
+  .tabLayoutView{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px $color-light-4;
+    overflow: hidden;
+    $tabHeight: 32px;
+    .tabsSection {
+      @include tabsSectionHeight($tabHeight);
+
+      .tabsList {
+        height: inherit;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-flex;
+
+        .tabItem {
+          background-color: inherit !important;
+          box-shadow: 0 0 0 1px #eee;
+          margin: 0 1px 1px 0;
+          padding: 0 14px 0 6px;
+          float: right;
+          font-size: 12px;
+
+          .tabCount {
+            height: 18px;
+            width: 18px;
+            border-radius: 9px;
+            background-color: $color-theme-accent;
+            border: 1px solid $color-theme-accent;
+            float: right;
+            color: white;
+            line-height: 18px;
+            margin: 10px 0 10px 10px;
+            font-weight: 500;
+            font-size: 11px;
+          }
+
+          &.isActive {
+            box-shadow: 0 1px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 #3248A7 !important;
+            color: #3248A7 !important;
+          }
+
+          &:hover {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .toolbarViewContainer {
+      padding: 0 0 $spacing;
+
+    .bulkEditToolbar {
+      margin: 0;
+
+      &.clubbedButtonsWrapper {
+        border-radius: 4px;
+
+        .customButtonContainer {
+          overflow: hidden;
+          border: none;
+          cursor: pointer;
+
+          .customButton {
+            .iconTextWrapper {
+              overflow: hidden;
+
+              .textContent.light {
+                height: 28px;
+                line-height: 28px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .bulkEditLeftPanelView {
+    width: 250px;
+    height: calc(100% - 12px);
+    float: left;
+    box-shadow: 0 0 0 1px $border-color;
+    border-radius: $border-radius;
+
+    .groupWrapper {
+      max-height: none;
+
+      .groupList {
+        height: 100%;
+        padding-bottom: 3px;
+
+        .searchWrapper {
+          padding: 10px;
+          border-bottom: 1px solid $border-color;
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+          background-color: $color-light-11;
+        }
+
+        .groupBody {
+          height: calc(100% - 50px);
+
+          .groupsList {
+            height: calc(100% - 34px);
+            margin-bottom: 3px;
+
+            &.collapsed {
+              height: initial;
+            }
+
+            &.expanded {
+              .groupHeader {
+                .groupTitle {
+                  font-weight: 500;
+                }
+              }
+            }
+
+            .groupOptionsWrapper {
+              height: calc(100% - 30px);
+              max-height: none;
+
+              .groupOptions {
+                padding-left: 20px;
+                .selected {
+                  font-weight: 500;
+                }
+                .customIcon {
+                  width: 15px;
+                  height: 15px;
+                  float: left;
+                  .imageFitToContainer{
+                    .imageFitToContainerImage{
+                      padding: 0px 0;
+                    }
+                    .imageSimpleViewNoImage{
+                      background-size: 13px;
+                    }
+                  }
+                }
+              }
+
+              .loadMoreMessage {
+                color: $color-dark-8;
+                text-transform: capitalize;
+                font-style: italic;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bulkEditRightPanelView {
+    float: left;
+    width: calc(100% - 260px);
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    margin-left: 10px;
+    background-color: $color-light-11;
+    height: calc(100% - 12px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+      .appliedElementViewContainer {
+        float: left;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+
+        .appliedAttributes, .appliedTags {
+          overflow: hidden;
+        }
+
+        .appliedElementsGroupHeader {
+          padding-bottom: 10px;
+          font-weight: 500;
+          font-size: $font-normal;
+          @include ellipsis();
+          line-height: $spacing;
+        }
+
+        .sectionElementNew {
+          width: 100%;
+          margin: 0 0 15px 0;
+          box-shadow: inset 0 0 0 1px $color-light-4;
+
+          .clickableIconsContainer, .notClickableIconsContainer {
+              float: right;
+          }
+          .entityTagsSummaryView {
+            padding: 5px;
+          }
+        }
+
+        .appliedTags {
+          padding-top: $spacing;
+        }
+      }
+    }
+
+  .selectedSummaryView {
+    height: 170px;
+    border: 1px solid $border-color;
+    background-color: $color-light-11;
+    padding: 10px;
+    position: relative;
+    border-radius: $border-radius;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    .summaryIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 20px;
+      width: 20px;
+      margin: 10px 20px 0 0;
+      opacity: 0.5;
+
+      &.class {
+        @include background-properties-with-gray-color($image-CS-Product-menu);
+      }
+
+      &.taxonomy {
+        @include background-properties($image-CS-MulticastFilled-30);
+      }
+    }
+
+    .addTaxonomy, .removeTaxonomy, .addClass, .removeClass {
+      .header {
+        text-align: left;
+        font-weight: 500;
+        font-size: $font-normal;
+        display: flex;
+
+        .infoIcon {
+          @include background-properties-with-theme-gray-color($image-CS-menu-item-about);
+          width: 14px;
+          height: 14px;
+          background-size: 12px;
+          background-size: cover;
+          margin: 2px 4px;
+        }
+
+        .headerDescription {
+          color: $color-light-16;
+          padding-left: 10px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+
+      .summary {
+        padding-top: 5px;
+        overflow: hidden;
+        min-height: 50px;
+
+        .nothingFoundMessage {
+          text-align: left;
+          padding: 0;
+          font-size: $font-normal;
+          line-height: 35px;
+        }
+
+        .taxonomyType {
+          margin: 2px 5px 2px 0;
+          height: 20px;
+          width: 20px;
+          opacity: 0.7;
+          float: left;
+
+          &.majorTaxonomy {
+            @include background-properties($image-Letter-M-26, 11px);
+          }
+
+          &.minorTaxonomy {
+            @include background-properties($image-CS-Letter-M--small, 13px);
+          }
+        }
+
+        .chipsView {
+          .itemWrapper {
+            .removeItem {
+              display: none;
+            }
+
+            &:last-child {
+              .removeItem {
+                display: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .removeTaxonomy, .removeClass {
+      padding-top: 5px;
+    }
+
+    .addTaxonomy, .addClass {
+      padding-bottom: 5px;
+      border-bottom: 1px solid $color-light-4;
+    }
+  }
+
+  .bulkEditTaxonomyTreeView {
+    margin-top: $spacing;
+    height: calc(100% - 198px);
+    overflow-x: auto;
+    .treeView {
+      height: 100%;
+      border: none;
+    }
+    .treeLevel {
+      width: 250px;
+      .treeNode {
+        .collapse-removed, .collapse-added {
+          display: none;
+        }
+        &:hover {
+          .collapse-added, .collapse-removed {
+            display: inherit;
+          }
+        }
+        .treeNodeIconLabelDOM {
+          .treeNodeLabel {
+            &.selected {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bulkEditSummary {
+  .summaryHeader {
+    padding-bottom: 5px;
+  }
+
+  .summaryContent {
+    padding: 10px 0;
+    height: 350px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    .summaryRow {
+      display: flex;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .elementHeader {
+        flex: 1;
+        background-color: $color-light-11;
+        border-radius: $border-radius;
+        margin-right: 10px;
+        padding: 10px 20px 10px 10px;
+        position: relative;
+
+        .elementType {
+          height: 15px;
+          width: 15px;
+          position: absolute;
+          top: 10px;
+          right: 5px;
+          opacity: 0.7;
+
+          &.taxonomy {
+            @include background-properties($image-CS-MulticastFilled-30);
+          }
+
+          &.class {
+            @include background-properties($image-Class-32);
+          }
+
+          &.attribute {
+            @include background-properties($image-CS-Text-Color-Filled-50, 16px);
+          }
+          &.tag {
+            @include background-properties($image-CS-Price-Tag-Filled-50, 16px);
+          }
+        }
+
+        .customIcon {
+          position: relative;
+          width: 15px;
+          float: left;
+          height: 16px;
+          margin-right: 5px;
+          .imageSimpleViewNoImage{
+            background-size: 12px;
+          }
+        }
+      }
+
+      .elementValue {
+        flex: 3;
+        background-color: $color-light-11;
+        border-radius: $border-radius;
+        padding: 5px 10px 5px 10px;
+
+        .customTextField.isDisabled {
+          padding-top: 4px;
+        }
+        .customFroalaView .fr-inline{
+          margin: 4px 0 0 0;
+        }
+        .customFroalaView, .numberLocaleInput  {
+          margin: 0;
+          background: transparent;
+          color: $color-dark-2;
+        }
+
+        .tagsGroupContainer {
+          .tagsSectionBody {
+            cursor: default;
+          }
+          .rulerTagTypeView {
+            .rulerTagIconLabel {
+              display: none;
+
+              &.rulerTagIconLabelSelected {
+                display: unset;
+                box-shadow: none;
+                cursor: default;
+
+                .rulerTagLabel {
+                  color: $color-dark-2;
+                }
+
+                .rulerTagIconTick {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        .taxonomyType {
+          margin: 2px 5px 2px 0;
+          height: 20px;
+          width: 20px;
+          opacity: 0.7;
+          float: left;
+
+          &.majorTaxonomy {
+            @include background-properties($image-Letter-M-26, 11px);
+          }
+
+          &.minorTaxonomy {
+            @include background-properties($image-CS-Letter-M--small, 13px);
+          }
+        }
+
+        .chipsView {
+          width: calc(100% - 25px);
+          float: left;
+          height: unset;
+          cursor: default;
+
+          .itemWrapper {
+            .removeItem {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .summaryFooter {
+    padding-top: 10px;
+
+    .warningMessage {
+      background-color: $color-light-17;
+      border-radius: 3px;
+      padding: 0 10px;
+      height: 50px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

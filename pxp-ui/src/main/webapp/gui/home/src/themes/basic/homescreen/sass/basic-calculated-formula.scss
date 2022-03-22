@@ -1,0 +1,145 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$height: 100%;
+$width: 100%;
+$marginLeft: 5px;
+
+.calculatedFormulaWrapper {
+  width: $width;
+  height: auto;
+  overflow: hidden;
+
+  .multiSelectSearchViewWrapper {
+    border-radius: 2px;
+    box-shadow: 0 0 1px;
+  }
+
+  .formulaGeneratorButtons {
+    height: 23px;
+
+    select {
+      margin: 1px auto;
+    }
+
+    .elementWithType {
+      margin-bottom: 2px;
+    }
+  }
+
+  .measurementTypeMSSViewWrapper {
+    width: $width;
+    margin: 5px;
+
+    .measurementTypeTitle {
+      @include topInlineBlock();
+      color: $color-light-19;
+      height: 30px;
+      padding: 3px 10px 0 0;
+    }
+
+    .multiSelectSearchViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+    }
+  }
+
+  .measurementUnitMSSViewWrapper {
+    width: $width;
+    margin: 5px;
+
+    .measurementUnitTitle {
+      @include topInlineBlock();
+      color: $color-light-19;
+      height: 30px;
+      padding: 3px 10px 0 0;
+    }
+
+    .multiSelectSearchViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+    }
+
+    .froalaViewWrapper {
+      @include topInlineBlock();
+      width: 200px;
+      padding: 2px 2px 0 2px;
+      border: 1px solid darkgray;
+    }
+  }
+
+  .calculatedFormulaViewWrapper {
+    width: $width;
+
+    span {
+      margin: 5px;
+    }
+
+    .expressionWrapper {
+      width: $width;
+      padding: 4px;
+      border: 1px solid darkgray;
+      outline: none;
+      min-height: 60px;
+    }
+
+    .operatorWrapper {
+      background-color: $color-light-21;
+      display: inline-block;
+      vertical-align: top;
+      padding: 2px;
+      margin: 2px;
+
+      .operatorButtonWrapper {
+
+      }
+
+      .contextMenuViewNewContainer {
+        height: inherit;
+        overflow: hidden;
+
+        .triggerElement {
+
+          .elementWithType {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin: 2px 0 0 0;
+            color: $color-dark-1;
+            background-color: $color-light-1;
+            border-radius: 3px;
+            padding: 0 25px 0 4px;
+            box-shadow: 0 0 0 1px $color-light-22;
+            background-size: 16px;
+            position: relative;
+
+            .typeIcon {
+              height: $height;
+              width: 22px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-repeat: no-repeat;
+              background-position: 50%;
+              opacity: 0.7;
+
+              &.attribute {
+                @include background-properties($image-CS-Text-Color-Filled-50, 14px);
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .nativeDropdownWrapper {
+      .nativeDropdown {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        width: 25%;
+      }
+    }
+  }
+}

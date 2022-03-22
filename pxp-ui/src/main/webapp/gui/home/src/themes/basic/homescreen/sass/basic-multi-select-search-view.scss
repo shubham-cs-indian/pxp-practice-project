@@ -1,0 +1,388 @@
+@import "./../../../../styleguide/style-guide";
+.searchBarView {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  min-height: 55px;
+
+  .multiSelectSearchLabel {
+    font-size: 11px;
+    color: #777;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 50px);
+  }
+
+  .multiSelectNothingSelected{
+    margin-top: 10px;
+    font-style: italic;
+    color: $color-dark-5;
+    padding: 2px;
+    margin-bottom: 3px;
+  }
+
+  .searchBarContainer {
+    width: 100%;
+    height: auto;
+    min-height: 28px;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 4px;
+
+    .selectedItems, .singleSelectedItem {
+      width: auto;
+      height: 22px;
+      margin: 3px 5px 2px 2px;
+      background-color: #eee;
+      cursor: default;
+      white-space: nowrap;
+      display: inline-block;
+      /*padding: 2px;*/
+      max-width: 100%;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+
+      /*&:hover {
+        border-color: #b9b9b9;
+
+        .crossIcon {
+          width: 14px;
+          opacity: .5;
+          right: -12px;
+        }
+      }*/
+      .selectedItemsNameContainer, .disabledMultiSearch {
+        height: 100%;
+        width: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: normal;
+        color: #555;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .disabledMultiSearch {
+        color: #b9b9b9;
+      }
+
+      /*.crossIcon {
+        background: url($image-CS-Cross) no-repeat 0;
+        background-size: 16px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        opacity: 0;
+        transition: all .2s;
+        cursor: pointer;
+        height: 20px;
+        width: 14px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }*/
+    }
+
+    .singleSelectedItem {
+      /*background-color: transparent;*/
+      background-color: #eee;
+      /*border: none;*/
+      .tagContainer {
+        height: 100%;
+
+        .tagIconWrapper {
+          float: left;
+          height: 100%;
+          margin: 0;
+          .tagIcon {
+            height: 22px;
+            width: 22px;
+            display: inline-block;
+            padding: 0;
+            border-radius: 50%;
+            color: #797979;
+            background-color: #FFF;
+            box-shadow: 0 0 0 1px #eee inset;
+
+            .imageFitToContainer {
+              position: relative;
+              overflow: hidden;
+              border-radius: 50%;
+              z-index: 2;
+              .imageFitToContainerImage {
+                z-index: 1;
+                height: initial;
+              }
+            }
+          }
+
+          .tagColor {
+            height: 22px;
+            width: 22px;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            border-radius: 50%;
+            background-color: #6eceb2;
+          }
+
+          .tagText {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px 0 7px;
+            height: 100%;
+            line-height: 22px;
+            font-size: 11px;
+          }
+
+          &:hover{
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+
+        .tagValue {
+          line-height: 20px;
+          margin: 0 10px;
+          &:hover {
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+
+        .crossIcon {
+          background: url($image-CS-Cross) no-repeat 0;
+          background-size: 14px;
+          display: inline-block;
+          transition: all .2s;
+          cursor: pointer;
+          width: 14px;
+          opacity: 0.6;
+          height: 100%;
+          //transform: scale(0);
+          &:hover {
+            opacity: 1;
+          }
+        }
+        &:hover {
+          /*background-color: #d6d6d6;*/
+          .crossIcon {
+            opacity: 1;
+           // width: 14px;
+           // margin-right: 4px;
+            //transform: scale(1);
+          }
+        }
+      }
+    }
+
+    .multiSearchInputBox {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      overflow: visible;
+      color: #555;
+      padding: 0 2px;
+      font-weight: normal;
+      height: 20px;
+      margin: 4px 1px 0 1px;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .crossIcon {
+      text-align: center;
+    }
+
+    .moreCounter {
+      width: auto;
+      margin: 2px;
+      float: right;
+      padding: 5px 3px 0 3px;
+      height: 22px;
+      display: none;
+
+      .selectedItemsNameContainer, .disabledMultiSearch {
+        display: inline-block;
+        float: right;
+        padding: 0 2px 0 2px;
+        margin: 1px;
+        font-weight: normal;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.870588);
+      }
+
+      .disabledMultiSearch {
+        color: #b9b9b9;
+      }
+    }
+
+    .selectedItems {
+      .tagContainer {
+        height: 100%;
+
+        .tagIconWrapper {
+          float: left;
+          height: 100%;
+          margin: 0;
+          .tagIcon {
+            height: 22px;
+            width: 22px;
+            display: inline-block;
+            padding: 0;
+            border-radius: 50%;
+            color: #797979;
+            background-color: #FFF;
+            box-shadow: 0 0 0 1px #eee inset;
+
+            .imageFitToContainer {
+              position: relative;
+              overflow: hidden;
+              border-radius: 50%;
+              z-index: 2;
+              .imageFitToContainerImage {
+                z-index: 1;
+                height: initial;
+              }
+            }
+          }
+
+          .tagColor {
+            height: 22px;
+            width: 22px;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            border-radius: 50%;
+            background-color: #6eceb2;
+          }
+
+          .tagText {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px 0 7px;
+            height: 100%;
+            line-height: 22px;
+            font-size: 11px;
+          }
+
+          &:hover{
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+        /*.tagIcon {
+          padding: 1px 5px;
+          width: 20px;
+          height: 20px;
+          position: relative;
+
+          &:hover{
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }*/
+        /*.tagColor {
+          line-height: 20px;
+          margin: 0 10px;
+          &:hover{
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }*/
+        .tagValue {
+          line-height: 20px;
+          margin: 0 10px;
+          &:hover {
+            cursor: context-menu;
+          }
+
+          &.greenBorder {
+            border: 1px solid #25af2a;
+          }
+
+          &.redBorder {
+            border: 1px solid #ff5d54
+          }
+        }
+
+        .crossIcon {
+          background: url($image-CS-Cross) no-repeat 0;
+          background-size: 14px;
+          display: inline-block;
+          transition: all .2s;
+          cursor: pointer;
+          width: 14px;
+          opacity: 0.6;
+          height: 100%;
+          //transform: scale(0);
+          &:hover {
+            opacity: 1;
+          }
+        }
+        &:hover {
+          /*background-color: #d6d6d6;*/
+          .crossIcon {
+            opacity: 1;
+            //width: 14px;
+            //margin-right: 4px;
+            //transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

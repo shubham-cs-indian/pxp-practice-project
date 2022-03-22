@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@page{
+	-ro-crop-size: media;
+	-ro-trim-size: media;
+	-ro-art-size: media;
+	-ro-media-size: SRA4;
+	-ro-marks-width: 1pt;
+	-ro-marks-color: black;
+	-ro-colorbar-top-right: progressive-color;
+	-ro-colorbar-top-left: gradient-tint;
+}

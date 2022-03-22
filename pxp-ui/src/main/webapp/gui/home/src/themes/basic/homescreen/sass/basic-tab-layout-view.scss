@@ -1,0 +1,690 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/images";
+
+@mixin tabsSectionHeight( $tabSectionHeight : 37px) {
+  height: $tabSectionHeight;
+
+  .tabItem {
+    $tabItemHeight: calc(#{$tabSectionHeight} - 1px);
+    height: $tabItemHeight;
+    line-height: $tabItemHeight;
+    $tabIconImageLength: calc(#{$tabItemHeight} * 0.5);
+    $tabIconImageMargin: calc(#{$tabItemHeight} * 0.25);
+
+    .tabIconImage {
+      width: $tabIconImageLength;
+      height: $tabIconImageLength;
+      margin: $tabIconImageMargin;
+    }
+  }
+}
+
+.dropdownSection{
+  float: left;
+  height: 26px;
+  margin: 7px;
+  padding: 0;
+  display: inline-flex;
+
+  .multiSelectSearchViewWrapper {
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    &.disabled {
+      background-color: #eee;
+    }
+    .triggerElement {
+      position: relative;
+      height: 100%;
+      display: inline-flex;
+      .multiSelectSearchIcon {
+        height: 26px;
+        width: 37px;
+        margin: 0 1px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        background-image: url($image-CS-eye-black);
+        cursor: pointer;
+      }
+      .multiSelectSearchView {
+        .multiSelectSummary .selectedItems {
+          background-color: #fff;
+          cursor: pointer;
+          &.disabled {
+            background-color: #eee;
+            cursor: default;
+          }
+          .selectedItemIcon{
+            margin: 2px;
+            background-size: 18px;
+            opacity: 1;
+            width: 18px;
+            height: 18px;
+            background-position: center;
+            &.allPropertyIcon{
+              background-image: url($image-CS-eye-black);
+            }
+            &.mappedPropertyIcon{
+              background-image: url($image-CS-mapped-handshake-black);
+            }
+            &.unmappedPropertyIcon{
+              background-image: url($image-CS-unmapped-handshake-black);
+            }
+            &.ignorePropertyIcon{
+              background-image: url($image-CS-ignored-black);
+            }
+
+          }
+          .selectedItemLabel{
+            margin: 0 7px 0 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabLayoutView {
+
+  $tabItemMaximumWidth: 200px;
+  .tabLayoutListContainer {
+    height: 44px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .tabsSection {
+    width: 100%;
+    @include tabsSectionHeight();
+    box-shadow: inset 0px -1px 0 $color-light-3, -1px 0 0 $color-light-3;
+    position: relative;
+    overflow: hidden;
+
+    .parentScrollContainer {
+      width: 100%;
+      height: 38px;
+      box-shadow: inset 0px -1px 0 $color-light-3, -1px 0 0 $color-light-3;
+      position: relative;
+      overflow: hidden;
+
+      .tabsList {
+
+        .tabItem {
+          @include topInlineBlock();
+          @include ellipsis();
+          padding: 0px 10px;
+          background-color: $color-light-3;
+          max-width: $tabItemMaximumWidth;
+          text-align: center;
+          cursor: pointer;
+          user-select: none;
+          box-shadow: 0 1px 0 1px $color-light-4;
+          transition: all .2s;
+          color: $color-dark-4;
+          margin:  0;
+
+          .tabIconImage {
+            float: left;
+            position: relative;
+            overflow: hidden;
+            margin-left: 0 !important;
+          }
+
+          &:hover {
+            color: $color-dark-2;
+            background-color: $color-light-2;
+          }
+
+          &.isActive {
+            font-weight: 500;
+            color: $color-dark-2;
+            background-color: $color-light-1;
+            cursor: default;
+            box-shadow: 0 1px 0 0 $color-light-1, 0 0 0 1px $color-light-4;
+          }
+        }
+      }
+    }
+    .scrollButton {
+      height: inherit;
+      width: 30px;
+      visibility: hidden;
+      position: absolute;
+      z-index: 1;
+      cursor: pointer;
+      background-color: $color-light-1;
+      top: 0;
+
+      &.left {
+        left: 0;
+        box-shadow: 3px 0 20px rgba(66, 66, 66, 0.25), inset 0 -1px 0 $color-light-3;
+        @include background-properties($image-CS-arrow-left-grey, 14px, 50%);
+      }
+
+      &.right {
+        right: 0;
+        box-shadow: -3px 0 20px rgba(66, 66, 66, 0.25), inset 0 1px 0 $color-light-3;
+        @include background-properties($image-CS-arrow-right-grey, 14px, 50%);
+      }
+    }
+  }
+
+  .bodySection {
+    width: 100%;
+    padding-top: 8px;
+    overflow: hidden;
+
+    &.withBorder {
+      box-shadow: 0 0 0 1px $color-light-4;
+
+      .checkboxWrapper {
+        padding: 10px;
+        width: 100%;
+        float: left;
+        height: 100%;
+
+        .propertyCheckbox {
+          display: inline-block;
+          float: left;
+          margin-right: 5px;
+        }
+
+        .propertyCheckboxLabel {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .toggleSelection {
+          float: right;
+          display: flex;
+          vertical-align: middle;
+          align-items: center;
+
+          .gridYesNoPropertyView {
+            padding: 0;
+            width: auto;
+            float: left;
+            margin-right: 5px;
+          }
+        }
+
+
+        .containerListView {
+          width: 100%;
+          float: left;
+          border: none;
+          margin-top: 10px;
+          box-shadow: 0px 0px 0px 1px #e8e8e8;
+
+          .headerWrapper {
+            width: 100%;
+            float: left;
+            background-color: #ddd;
+
+            .contextMenuViewNewContainer {
+              width: 25px;
+              float: left;
+
+              .addTemplateHandler {
+                background: url($image-CS-Plus-32-black);
+                width: 15px;
+                height: 15px;
+                background-size: cover;
+                opacity: 0.6;
+                cursor: pointer;
+                display: inline-block;
+                float: left;
+                margin: 5px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+
+            .headerLabel {
+              padding: 5px;
+              margin-top: 0;
+              background-color: transparent;
+            }
+          }
+
+          .listGroup {
+            width: 100%;
+            float: left;
+            .list {
+              padding: 10px;
+              width: 100%;
+              float: left;
+
+              .deleteRow {
+                @include background-properties($image-CS-delete-bin-black, 18px);
+                width: 18px;
+                height: 18px;
+                background-size: 18px;
+                opacity: 0.6;
+                cursor: pointer;
+                display: inline-block;
+                float: right;
+                margin: 0px;
+              }
+            }
+
+            .list:nth-child(even) {
+              background-color: #fbfbfb;
+            }
+          }
+        }
+      }
+
+
+      .checkboxWrapperForOutboundMapping {
+        padding-left: 26px;
+        width: 100%;
+        float: left;
+        height: 100%;
+
+        &.checkboxWrapperSupportForPropertyGroup {
+          padding-top: 8px;
+
+          .outboundPropertyTabWrapper{
+            display: flex;
+            align-items: center;
+
+            .propCollectionToggle{
+              display: block;
+              width: auto;
+              float: left;
+              margin-left: 10px;
+
+              .propCollectionToggleLabel {
+                width: auto;
+                float: left;
+              }
+            }
+          }
+        }
+
+        .listGroupCheckbox {
+          float: left;
+          height: 16px;
+          width: 16px;
+          margin-right: 10px;
+          cursor: pointer;
+          @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 18px);
+
+          &.checkedItem {
+            @include background-properties($image-checked-checkbox-without-border-radius, 18px);
+          }
+
+          &.checkedSomeItem {
+            @include background-properties($image-checked-checkbox-line, 18px);
+          }
+
+          &.isDisabled {
+            opacity: 0.6;
+            pointer-events: none;
+          }
+        }
+
+        .propertyCheckboxLabel {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .propCollectionToggle {
+          display: flex;
+          align-items: center;
+
+          .gridYesNoPropertyView {
+            overflow: hidden;
+            width: auto;
+            float: left;
+            margin-right: 10px;
+          }
+
+        }
+
+        .containerListView {
+          width: 100%;
+          float: left;
+          border: none;
+          margin-top: 10px;
+          box-shadow: 0px 0px 0px 1px #e8e8e8;
+
+          .column {
+            float: left;
+            padding: 10px;
+          }
+
+          .leftSideForPropertyGroupView {
+            width: 30%;
+            border-right: 1px solid #eee;
+            box-sizing: border-box;
+
+            .searchBarContainer {
+              flex: 1 1 0;
+              height: auto;
+              display: inline-block;
+              vertical-align: top;
+              width: 100%;
+
+              .simpleSearchBarView {
+                border-radius: 3px;
+                border: solid 1px $color-light-4;
+              }
+            }
+          }
+
+          .rightSideForPropertyGroupView {
+            width: 70%;
+            border-left: 1px solid #eee;
+          }
+
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+
+          .headerWrapper {
+            width: calc(100% - 35%);
+            float: left;
+            background-color: #eee;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+
+            .contextMenuViewNewContainer {
+              width: 25px;
+              float: left;
+
+              .addTemplateHandler {
+                background: url($image-CS-Plus-32-black);
+                width: 15px;
+                height: 15px;
+                background-size: cover;
+                opacity: 0.6;
+                cursor: pointer;
+                display: inline-block;
+                float: left;
+                margin: 5px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+
+            .headerLabel {
+              padding: 5px;
+              margin-top: 0;
+              background-color: transparent;
+              color: #333;
+              font-size: 12px;
+              opacity: 0.7;
+            }
+          }
+
+          .listGroupForAttributesAndTags {
+            width: 100%;
+            float: left;
+            padding-left: 40px;
+            min-height: 0px;
+            max-height: 350px;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .headingForAttributeAndTag {
+              display: grid;
+              width: 100%;
+              margin-bottom: 15px;
+
+              &.inboundMappingHeading {
+                grid-template-columns: 1fr 3fr 3fr;
+              }
+
+              &.outboundMappingHeading {
+                grid-template-columns: 2fr 4fr 5fr;
+              }
+
+              .mappedElementLabelCss {
+                &.inboundMappedElement {
+                  grid-column-start: 3;
+                }
+
+                &.outboundMappedElement {
+                  grid-column-start: 2;
+                }
+              }
+
+              .columnNameLabelCss {
+                &.inboundColumnName {
+                  grid-column-start: 2;
+                }
+
+                &.outboundColumnName {
+                  grid-column-start: 3;
+                }
+              }
+            }
+
+            .listForAttributesAndTags {
+              padding: 10px;
+              width: 100%;
+              float: right;
+              //display: inline-flex;
+              display: grid;
+
+              &.inboundMapping {
+                grid-template-columns: 1fr 3fr 0.5fr 4fr;
+              }
+
+              &.outboundMapping {
+                grid-template-columns: 1fr 4fr 0.5fr 5fr;
+              }
+
+              &.paddingForSubTag {
+                padding-left: 45px;
+              }
+
+              .listGroupCheckbox {
+                float: left;
+                height: 16px;
+                width: 16px;
+                margin-right: 10px;
+                cursor: pointer;
+                @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 18px);
+
+                &.checkedItem {
+                  @include background-properties($image-checked-checkbox-without-border-radius, 18px);
+                }
+
+                &.checkedSomeItem {
+                  @include background-properties($image-checked-checkbox-line, 18px);
+                }
+
+                &.isDisabled {
+                  opacity: 0.6;
+                  pointer-events: none;
+                }
+              }
+
+              .propertyGroupCheckBox {
+                //padding-right: 10px;
+              }
+
+              .propertyGroupLabel {
+                display: grid;
+                grid-template-columns: 5fr 1fr 50fr;
+                //border: 1px solid #EBEBEB;
+                &.inboundMappingForLabel {
+                  grid-column-start: 4;
+                  grid-column-end: 5;
+                }
+
+                &.outboundMappingForLabel {
+                  grid-column-start: 2;
+                  grid-column-end: 3;
+                }
+
+                .mappedValueCss {
+                  @include ellipsis();
+                  cursor: default;
+                }
+
+                .tileIcon {
+                  float: left;
+                  background-size: 14px;
+                  background-repeat: no-repeat;
+                  background-position: 3px;
+                  width: 18px;
+                  height: 18px;
+                  opacity: .6;
+                  transition: all 0.2s;
+                  background-color: #fff;
+                  box-shadow: 0 0 0 1px #999;
+                  border-radius: 3px;
+                  position: relative;
+                  left: 0;
+                  top: 0;
+                  margin-right: 10px;
+                  grid-column-start: 2;
+
+                  &.tileIconAttribute {
+                    @include background-properties($image-CS-Text-Color-Filled-50, 18px);
+                  }
+
+                  &.tileIconTag {
+                    @include background-properties($image-CS-Price-Tag-Filled-50, 18px);
+                  }
+                }
+              }
+
+              .enableDisableTextBox {
+                pointer-events: none;
+                opacity: 0.5;
+                background: #CCC;
+              }
+
+              .propertyGroupTextBox {
+
+                &.inboundMappingForTextBox {
+                  grid-column-start: 2;
+                  grid-column-end: 3;
+                }
+
+                &.outboundMappingForTextBox {
+                  grid-column-start: 4;
+                }
+
+                .inputTextPadding {
+                  padding-left: 8px;
+                  @include ellipsis();
+                }
+
+                ::-webkit-input-placeholder {
+                  text-align: left;
+                  padding-left: 10px;
+                }
+              }
+            }
+
+            .listForAttributesAndTags:nth-child(even) {
+              background-color: #F7F7F7;
+            }
+
+            .nothingFoundViewContainer .nothingFoundInnerContainer {
+              position: relative;
+              width: 100%;
+              height: 100px;
+              text-align: center;
+              top:50%;
+              transform: translateX(-50%);
+            }
+
+
+          }
+
+          .listGroupForPropertyCollection {
+            width: 100%;
+            float: left;
+            min-height: 0px !important;
+            max-height: 300px;
+            overflow-y: auto;
+
+            .listForPropertyCollection {
+              padding: 10px;
+              width: 100%;
+              float: left;
+              display: inline-flex;
+              justify-content: space-between;
+              cursor: pointer;
+
+              &.effectForSelectedPropertyCollection {
+                background-color: #E4E7F7;
+              }
+
+              .deleteRow1 {
+                @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+                width: 18px;
+                height: 18px;
+                background-size: 18px;
+                opacity: 0.6;
+                cursor: pointer;
+                display: inline-block;
+                float: right;
+                margin: 0px;
+              }
+
+              .propertyGroupListLabel {
+                width: 85%;
+              }
+
+              .deleteRowForPropertyGroup {
+                background: transparent url($image-CS-Cross);
+                width: 15%;
+                height: 18px;
+                background-size: 18px;
+                opacity: 0.6;
+                cursor: pointer;
+                display: inline-block;
+                float: right;
+                margin: 0px;
+                background-repeat: no-repeat;
+              }
+            }
+
+            .listForPropertyCollection:nth-child(even) {
+              background-color: #fbfbfb;
+
+              &.effectForSelectedPropertyCollection {
+                background-color: #E4E7F7;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+  .nothingToDisplayContainer {
+    height: 200px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nothingToDisplay {
+      padding: 0 8px;
+      text-align: center;
+      line-height: 24px;
+      font-style: italic;
+      font-size: 18px;
+      color: $color-dark-5;
+    }
+  }
+}

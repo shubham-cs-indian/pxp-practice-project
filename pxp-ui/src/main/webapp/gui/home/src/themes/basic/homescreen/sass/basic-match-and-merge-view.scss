@@ -1,0 +1,435 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.comparisonTables {
+  .matchAndMergeView {
+
+    .isRecommended {
+      background: lightyellow;
+    }
+    //margin: 20px 50px; //temporary
+    overflow: hidden;
+    display: flex;
+    //max-height: 500px;
+
+    .mnmLeftFixedSection {
+      //width: 400px;
+      position: relative;
+      overflow-y: hidden;
+      //overflow-x: scroll;
+      z-index: 10;
+      box-shadow: 0px 0 15px 0px rgba(0, 0, 0, 0.1);
+      max-height: inherit;
+      background-color: #f6f6ff;
+
+      .mnmTableSection {
+        width: 100%;
+
+        .mnmTableRow {
+          display: flex;
+          .mnmTableCell {
+            //padding: 2px;
+            width: 250px;
+
+            &.firstColumnCell {
+              display: inline-flex;
+              //align-items: center;
+              padding-left: 8px;
+              //font-size: 14px;
+              //@include ellipsis();
+              height: 100%;
+              line-height: 34px;
+              font-weight: 500;
+              background: #ffffff;
+
+              span {
+                font-size: 12px;
+              }
+
+              .mnmTableCellLabel {
+                width: calc(100% - 45px);
+              }
+
+              .customIcon {
+                width: 20px;
+                height: 20px;
+                position:relative;
+                float: left;
+                margin: 5px ;
+
+                .imageFitToContainer{
+                  .imageSimpleViewNoImage{
+                    background-size: 13px;
+                  }
+                }
+              }
+            }
+
+            .mnmTableCellLabel {
+              @include ellipsis();
+              text-align: left;
+            }
+
+            &:nth-child(odd) {
+              //background-color: #EAF2E5;
+            }
+
+            &:nth-child(even) {
+              //background-color: #fefce0;
+            }
+            .creationDetails {
+              @include topInlineBlock();
+              color: grey;
+              padding-left: 8px;
+
+              .normal {
+                width: 40px;
+                display: inline-block;
+                font-size: 10px;
+              }
+
+              .highlighted {
+                font-weight: 500;
+                margin-right: 4px;
+                color: #353535;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mnmScrollableSection {
+      flex: 1 0;
+      position: relative;
+      overflow-y: auto;
+      //overflow-x: scroll;
+      max-height: inherit;
+      display: flex;
+
+      .mnmTableSection {
+        flex: 1;
+
+        .mnmTableRow {
+          display: flex;
+
+          .mnmTableCell {
+            flex: 1;
+            min-width: 200px;
+            //padding: 2px;
+            //text-align: center;
+            height: 100%;
+            box-shadow: 1px 1px 0px 0px #eee inset;
+
+            /*&:first-child {
+              background-color: #fefce0;
+            }*/
+
+            &:nth-child(odd) {
+              //background-color: #fff;
+            }
+
+            &:nth-child(even) {
+              //background-color: #fafafa;
+            }
+
+            &.mnmScrollableCell {
+              position: relative;
+              .rollback {
+                background-image: url($image-rollback-version1);
+                height: 18px;
+                width: 18px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 18px;
+                cursor: pointer;
+                opacity: 0.6;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                &:hover {
+                  opacity: 0.9;
+                }
+              }
+            }
+
+            &.forComparison {
+              background-color: #f7f7ff;
+
+              .matchAndMergeCellView{
+                box-shadow: 0px 1px 0px 0px #e6e6f5 inset;
+              }
+            }
+          }
+        }
+
+        &.mnmScrollableRow {
+
+        }
+
+      }
+    }
+
+    .mnmTableSection {
+      //padding-top: 40px; //temp: as we are not displaying headers
+
+      .mnmTableRow {
+        //min-height: 40px;
+
+        &.headerRow {
+          position: absolute;
+          height: 40px;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+
+        .mnmTableCell {
+          @include topInlineBlock();
+          min-height: 34px;
+          //width: 200px;
+          //text-align: center;
+          height: 100%;
+          box-shadow: 1px 1px 0px 0px #eee inset;
+          //padding-top: 5px;
+
+          &.headerCell {
+            @include topInlineBlock();
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            //font-size: 16px;
+            font-weight: 500;
+            @include ellipsis();
+            box-shadow: 1px 1px 0px 0px #eee inset, inset 0 -1px 0 0 #d6d6d6;
+          }
+
+          &.clickableHeader {
+            cursor: pointer;
+          }
+
+          &.mnmScrollableCell {
+            position: relative;
+            overflow: hidden;
+            .rollback {
+              background-image: url($image-rollback-version1);
+              height: 18px;
+              width: 18px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 18px;
+              cursor: pointer;
+              opacity: 0.6;
+              position: absolute;
+              right: 10px;
+              top: 10px;
+              &:hover {
+                opacity: 0.9;
+              }
+            }
+
+            .creationDetails {
+              @include topInlineBlock();
+              color: grey;
+              padding-left: 8px;
+
+              .normal {
+                width: 40px;
+                display: inline-block;
+                font-size: 10px;
+              }
+
+              .highlighted {
+                @include ellipsis();
+                font-weight: 500;
+                color: #353535;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      &.mnmScrollableRow {
+
+      }
+
+    }
+  }
+
+  .matchAndMergeCellView {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 1px 0px 0px #eee inset;
+
+    .readOnlyText {
+      height: 100%;
+      width: 100%;
+      //font-size: 14px;
+      padding: 8px 34px 8px 8px;
+      cursor: default;
+      word-wrap: break-word;
+
+      &.mnmClickableText {
+        cursor: pointer;
+      }
+
+      &.isDisabled {
+        background: #fafafa;
+        box-shadow: 1px 1px #eee inset;
+      }
+    }
+
+    .matchAndMergerImageCell {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .matchAndMergeImage {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: 0.5px solid #b5b5b5;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .mnmrIcon {
+          max-width: 80px;
+          max-height: 80px;
+        }
+      }
+
+      .comparisonIcon {
+        display: block;
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        top: 4px;
+        right: 4px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        background-size: 10px;
+        background-position: 3px;
+        background-color: #32ca32;
+        border-radius: 10px;
+        background-image: url($image-CS-EqualSign-52White);
+      }
+    }
+
+    input {
+      background-color: transparent;
+    }
+
+    .customTextField, .numberLocaleInput, .conversionList {
+      background-color: transparent;
+
+      &.isDisabled {
+        background-color: transparent;
+      }
+
+    }
+
+    .contentAttributeElementViewWrapper {
+      .numberLocaleViewContainer {
+        .numberLocaleInput {
+          background-color: transparent;
+          &.isDisabled {
+            background-color: transparent;
+            color: $color-dark-5;
+          }
+        }
+      }
+    }
+
+    .mnmDatePickerEmptyButtonStyle {
+      .customDatePickerWrapper {
+        .customDatePickerEmptyButton {
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  .notApplicableText {
+    height: 100%;
+    width: 100%;
+    padding: 8px 34px 8px 8px;
+  }
+
+  .comparisonRed {
+    background: #FFE6E6;
+    //border-radius: 5px;
+    //padding: 0 3px;
+    //border: 1px solid #ff8e90;
+    //color: #ff4444;
+    text-decoration: line-through;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .comparisonGreen {
+    background: #E6FFE6;
+    //border-radius: 5px;
+    //padding: 0 3px;
+    //border: 1px solid #3fe63f;
+    //color: #3fe63f;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .comparisonEqual {
+
+    .compIcon {
+      background-size: 10px;
+      background-position: 3px;
+      background-color: #32ca32;
+      border-radius: 10px;
+      background-image: url($image-CS-EqualSign-52White);
+    }
+  }
+
+  .comparisonLesser {
+
+    .compIcon {
+      @include background-properties-with-theme-red-color($image-CS-CircledDown32);
+    }
+  }
+
+  .comparisonGreater {
+
+    .compIcon {
+      background-image: url($image-CS-CircledUp-26);
+    }
+  }
+
+  .compIcon {
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 10px;
+    right: 10px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+
+  .languageDependentIndicator {
+    opacity: 0.7;
+    float: right;
+    height: 100%;
+    width: 15px;
+    @include background-properties($image-CS-language, 16px);
+  }
+}

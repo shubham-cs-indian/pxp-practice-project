@@ -1,0 +1,41 @@
+[
+  {
+    "Ltasks": [
+      
+    ],
+    "csid": "[c>R_Hie_R1 $iid=0 $type=HIERARCHY]",
+    "_subtype": "TAXONOMY_KLASS_TYPE",
+    "productvariantcontextcode": [
+      
+    ],
+    "label": "R_Hie_R1",
+    "Lstatustags": [
+      
+    ],
+    "LRelationships": [
+      
+    ],
+    "Jsections": {
+      
+    },
+    "Jembeddedclasses": {
+      
+    },
+    "masterParentTag": "",
+    "contextcode": null,
+    "promotionalversioncontextcode": [
+      
+    ],
+    "LLevelCode": [
+      "R_Hie_level1",
+      "R_Hie_level2"
+    ],
+    "LLevelLabels": [
+      "R_Hie_level1123",
+      "R_Hie_level2123",
+      
+    ],
+    "taxonomytype": "majorTaxonomy",
+    "parentCode": "-1"
+  }
+]

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+@page{
+	-ro-marks: trim bleed registration;
+	-ro-bleed-width: 3mm;
+	-ro-bleed-size: media;
+	size: A4 portrait;
+}

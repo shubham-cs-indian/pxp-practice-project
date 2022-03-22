@@ -1,0 +1,86 @@
+[
+  {
+    "id": "overview_tab",
+    "code": "overview_tab",
+    "isStandard": true,
+    "sequence": 0
+  },
+  {
+    "id": "property_collection_tab",
+    "code": "property_collection_tab",
+    "isStandard": true,
+    "sequence": 1
+  },
+  {
+    "id": "relationship_tab",
+    "code": "relationship_tab",
+    "isStandard": true,
+    "sequence": 2
+  },
+  {
+    "id": "context_tab",
+    "code": "context_tab",
+    "isStandard": true,
+    "sequence": 3
+  },
+  {
+    "id": "task_tab",
+    "code": "task_tab",
+    "isStandard": true,
+    "sequence": 4
+  },
+  {
+    "id": "timeline_tab",
+    "code": "timeline_tab",
+    "isStandard": true,
+    "sequence": 5
+  },
+  {
+    "id": "rendition_tab",
+    "code": "rendition_tab",
+    "isStandard": true,
+    "sequence": 6
+  },
+  {
+    "id": "makeup_tab",
+    "code": "makeup_tab",
+    "isStandard": true,
+    "sequence": 7
+  },
+  {
+    "id": "preset_tab",
+    "code": "preset_tab",
+    "isStandard": true,
+    "sequence": 8
+  },
+  {
+    "id": "preset_makeup_tab",
+    "code": "preset_makeup_tab",
+    "isStandard": true,
+    "sequence": 9
+  },
+  {
+    "id": "configurations_tab",
+    "code": "configurations_tab",
+    "isStandard": true,
+    "sequence": 10
+  },
+  {
+    "id": "mdm_tab",
+    "code": "mdm_tab",
+    "isStandard": true,
+    "sequence": 11
+  },
+  {
+    "id": "duplicate_tab",
+    "code": "duplicate_tab",
+    "isStandard": true,
+    "sequence": 12
+  },
+  {
+    "id": "usage_tab",
+    "code": "usage_tab",
+    "isStandard": true,
+    "sequence": 13
+  }
+]

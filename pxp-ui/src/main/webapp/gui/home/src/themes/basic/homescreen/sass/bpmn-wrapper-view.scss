@@ -1,0 +1,114 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+@import "./basic-content-toolbar-view";
+
+@mixin workFlowComponentStyle($strokeColor) {
+  stroke: $strokeColor !important;
+  stroke-width: 3px !important;
+}
+
+@mixin workFlowComponentStyleWithBorder($strokeColor , $strokeWidth) {
+  stroke: $strokeColor !important;
+  stroke-width: $strokeWidth !important;
+}
+
+@mixin modelerButton($left, $imageToShow) {
+  position: absolute;
+  top: 20px;
+  left: $left;
+  z-index: 500;
+  @include toolBarItem();
+  @include background-properties($imageToShow, 16px);
+}
+
+.bpnmWrapperContainer {
+  height: 100%;
+  position: relative;
+  //todo use from stylesheet
+  .highlightGreen:not(.djs-connection) .djs-visual > :first-child {
+    @include workFlowComponentStyle($color-bpmn-green);
+  }
+
+  .highlightBlue:not(.djs-connection) .djs-visual > :first-child {
+    @include workFlowComponentStyle($color-bpmn-blue);
+  }
+
+  .highlightRed:not(.djs-connection) .djs-visual > :first-child {
+    @include workFlowComponentStyle($color-bpmn-red);
+  }
+
+  .highlightYellow:not(.djs-connection) .djs-visual > :first-child {
+    @include workFlowComponentStyle($color-bpmn-yellow);
+  }
+
+  .highlightGrey:not(.djs-connection) .djs-visual > :first-child {
+    @include workFlowComponentStyle($color-bpmn-grey);
+  }
+
+  .highlightTask:not(.djs-connection) .djs-visual > :first-child {
+    @include workFlowComponentStyleWithBorder($color-bpmn-red, 2px);
+  }
+
+  .downloadBPMNButton {
+    @include modelerButton(170px, $image-download-contents);
+  }
+
+  .uploadBPMNButton {
+    @include modelerButton(130px, $image-CS-Upload-Black);
+  }
+
+  .bjs-powered-by {
+    opacity: 0.4;
+  }
+
+  .djs-popup-body {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .content {
+    height: 100%;
+    display: flex;
+
+    .canvas {
+      flex-shrink: 1;
+      height: 100%;
+    }
+
+    .properties {
+      flex-shrink: 3;
+      height: 100%;
+      overflow: auto;
+      scrollbar-width:thin;
+
+      .bpp-properties-panel {
+        .bpp-properties {
+          .bpp-properties-header {
+            @include ellipsis();
+
+            .label {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .actionButtonWrapper {
+    background-color: #eee;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+
+    .actionButtonView {
+      bottom: 30px;
+      right: 0;
+      float: right;
+      z-index: 1501;
+      overflow: hidden;
+    }
+  }
+
+}

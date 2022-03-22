@@ -1,0 +1,66 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+$chipHeight: 24px;
+$spacing: 10px;
+
+.classSwitchingView, .taxonomySwitchingView {
+  height: 100%;
+  padding: $spacing;
+
+  .taxonomyConflictIcon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 0 2px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    float: right;
+    background-image: url($image-CS-Error-Conflict);
+    background-size: 20px;
+  }
+  .taxonomyConflictCoupling {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 0 2px;
+    opacity: .7;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    float: right;
+    background-image: url($image-tight-coupling);
+    background-size: 20px;  
+  }
+
+  .sectionTitle {
+    font-size: $font-normal;
+    font-weight: 500;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .multiClassificationView {
+    height: calc(100% - 23px);
+    padding-top: $spacing;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    .nothingSelectedView {
+      color: $color-relevance-gray;
+      font-size: $font-normal;
+      font-style: italic;
+    }
+  }
+
+  .editMultiClassificationIcon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    opacity: .7;
+    float: right;
+    @include background-properties($image-CS-Edit-32, 20px);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

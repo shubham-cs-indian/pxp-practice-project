@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+version = "1.0.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+   	def springFrameworkVersion = "5.2.1.RELEASE"
+   	def jacksonVersion = "2.10.1"
+   
+   	compile 'org.apache.commons:commons-collections4:4.0'
+   	compile project(path: ':pxp-rdbms-interface')
+	
+	compile "org.springframework:spring-web:${springFrameworkVersion}"
+   	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+
+   	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+   	compile 'com.fasterxml.jackson.core:jackson-core:${jacksonVersion}'
+   	compile 'com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}'
+   	compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: jacksonVersion
+    compile 'org.javers:javers-core:1.4.3'
+    compile "org.apache.poi:poi-ooxml:3.11"
+    compile group: 'org.springframework', name: 'spring-jms', version: '4.3.5.RELEASE'
+}
+
+
+configurations {
+}

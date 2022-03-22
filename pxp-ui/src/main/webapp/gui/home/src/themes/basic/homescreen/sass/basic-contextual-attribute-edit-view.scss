@@ -1,0 +1,480 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+$tagLabelWidth: 100px;
+
+.contextualAttributeEditSectionSelect {
+
+  height: calc(100% - 32px);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  $headerHeight: 32px;
+
+  .editSection {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    flex: 1;
+    align-content: stretch;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    .editCombinationViewContainer {
+      float: left;
+      width: 100%;
+      .editCombinations {
+        float: left;
+        width: 97%;
+        .editCombinationElementWrapper {
+          float: left;
+          min-width: 20%;
+          margin: 5px;
+          flex: 1;
+          align-content: stretch;
+          border: 1px solid #cccccc;
+          background: #fff;
+          height: 60px;
+          .editCombinationViewHeader {
+            //font-family: "Open Sans", sans-serif;
+            font-size: 11px;
+            padding: 5px 5px 0px 5px;
+            color: #838181;
+          }
+          .editCombinationMSS {
+            padding: 5px;
+          }
+        }
+      }
+    }
+    .editCombinationViewMasterControls {
+      float: right;
+
+      .editCombinationViewMasterOk {
+        height: 25px;
+        width: 25px;
+        float: right;
+        margin-right: 6px;
+        margin-top: 2px;
+        @include background-properties($image-CS-CheckMark-black,20px,50%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .combinationRow {
+    overflow: hidden;
+    width: 100%;
+    &:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    .rowWrapper {
+      float: left;
+      flex: 1;
+      align-content: stretch;
+      border-bottom: 1px solid #eee;
+      padding: 0px;
+      width: 100%;
+      .combinationsWrapper {
+        max-width: 95%;
+        padding: 5px;
+        float: left;
+        .combinations {
+          float: left;
+          width: 100%;
+          .combination {
+            border: 1px solid #cccccc;
+            box-shadow: black;
+            background-color: rgb(235, 235, 235);
+            margin: 5px;
+            padding: 3px;
+            float: left;
+            border-radius: 2em;
+            .combinationKey {
+              display: inline-block;
+              padding: 2px 0px 2px 15px;
+              opacity: 0.8;
+              overflow: hidden;
+              //font-family: "Open Sans", sans-serif;
+              font-size: 11px;
+              margin-right: 5px;
+            }
+            .combinationValues {
+              display: inline-block;
+              max-width: 930px;
+              /* max-width: 87%; */
+              overflow: hidden;
+              text-overflow: ellipsis;
+              padding: 2px 15px 2px 0px;
+              //font-family: "Open Sans", sans-serif;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+      .controls {
+        float: right;
+        margin-right: 5px;
+        margin-top: 5px;
+
+        .editCombination {
+          height: 20px;
+          width: 20px;
+          display: inline-block;
+          @include background-properties($image-CS-Edit-32,12px,50%);
+          cursor: pointer;
+        }
+
+        .deleteCombination {
+          display: inline-block;
+          height: 20px;
+          width: 20px;
+          @include background-properties($image-CS-Cross,12px,50%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.contextualAttributeEditSectionContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  $headerHeight: 32px;
+
+  .contextualAttributeHeader {
+    height: $headerHeight;
+    width: 100%;
+    background-color: #eee;
+
+    .attributeName {
+      width: 100%;
+      height: 20px;
+      line-height: 32px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .closeButton {
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      opacity: .6;
+      @include background-properties($image-CS-Cross,22px,50%);
+
+      &:hover {
+        background-size: 24px;
+      }
+    }
+  }
+
+
+  /*
+  .contextualAttributeEditSection {
+    height: calc(100% - #{$headerHeight});
+    width: 100%;
+    overflow: auto;
+    padding: 0 20px;
+
+    .tableContainer {
+      display: inline-block;
+      //border: 1px solid;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      background-color: #fff;
+      margin: 20px 0;
+      min-width: 100%;
+
+      .tableHeaders {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-color: hsla(220, 30%, 20%, 0.8);
+
+        .tableHeader {
+          //width: $tagLabelWidth;
+          display: inline-block;
+          vertical-align: top;
+          //border-left: 1px solid;
+          box-shadow: -1px 0px 0px rgba(36, 46, 66, 0.8);
+          cursor: pointer;
+          height: 28px;
+          line-height: 28px;
+          color: #fff;
+          background-color: hsla(220, 30%, 50%, 0.8);
+
+          &:last-child {
+            //width: 99px;
+            box-shadow: 0px 0px 0px 1px rgba(36, 46, 66, 0.8)
+          }
+
+          //&:hover {
+          //  background-color: hsla(220, 30%, 60%, 0.8);
+          //}
+
+          &.disabled {
+            //color: #ddd;
+            opacity: .5;
+            background-color: transparent;
+
+            &:hover {
+              background-color: hsla(220, 13%, 50%, 1);
+            }
+          }
+
+          .headerLabel {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 30px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover {
+              background-color: hsla(220, 30%, 60%, 0.8);
+            }
+          }
+
+          .shiftLeft {
+            display: inline-block;
+            vertical-align: top;
+            height: 28px;
+            width: 15px;
+            @include background-properties-with-theme-white-color($image-CS-arrow-backward);
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: 50%;
+            opacity: .4;
+
+            &:hover {
+              opacity: .7;
+              background-color: hsla(220, 30%, 60%, 0.8);
+            }
+          }
+
+          .shiftRight {
+            display: inline-block;
+            vertical-align: top;
+            height: 28px;
+            width: 15px;
+            background-image: url($image-CS-More-Than-Filled-50);
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: 50%;
+            opacity: .4;
+
+            &:hover {
+              opacity: .7;
+              background-color: hsla(220, 30%, 60%, 0.8);
+            }
+          }
+        }
+
+        .showAllButton {
+          text-transform: uppercase;
+          position: absolute;
+          cursor: pointer;
+          right: 10px;
+          font-size: 10px;
+          height: 28px;
+          line-height: 28px;
+          color: #fff;
+          opacity: .7;
+
+          &:hover {
+            opacity: .9;
+          }
+        }
+      }
+
+      .tableRows {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        .tagValueContainer {
+          width: 100%;
+          height: auto;
+          //border-top: 1px solid;
+          box-shadow: 0px -1px 0px #999;
+
+          &:first-child {
+            border: none;
+          }
+
+          .leftSection {
+            //width: $tagLabelWidth;
+            height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+
+            .tagValueLabel {
+              //width: $tagLabelWidth;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .rightSection {
+            width: 100%;
+            min-width: 150px;
+            height: auto;
+            display: table-cell;
+            vertical-align: top;
+            //border-left: 1px solid;
+            box-shadow: -1px 0px 0px #999;
+            background-color: hsla(220, 30%, 20%, 0.03);
+          }
+        }
+
+        .inputContainer {
+          padding: 5px;
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+          min-width: 150px;
+          text-align: left;
+          overflow: hidden;
+
+          .valueInput {
+            width: 100%;
+            padding: 0 0 0 5px;
+            border: 1px solid #999;
+            border-radius: 3px;
+          }
+
+          .combinedValue {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 38px);
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+          .toolButtons {
+            display: inline-block;
+          }
+
+          .editButton {
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            background-image: url($image-CS-Edit-32);
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: 50%;
+
+            &:hover {
+              background-size: 14px;
+            }
+          }
+
+          .removeButton {
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            background-image: url($image-CS-Broom-50Black);
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: 50%;
+
+            &:hover {
+              background-size: 14px;
+            }
+          }
+        }
+
+        .combinedValueSection {
+
+          .buffer {
+            height: auto;
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          .inputContainer {
+            width: auto;
+          }
+
+        }
+      }
+
+      .contentMeasurementMetricsContainer{
+        margin-bottom: 0;
+
+        .measurementMetricInputLabel{}
+
+        .measurementMetricWrapper{
+          vertical-align: top;
+          .measurementMetricElementWrapper{
+            width: 75%;
+            margin-right: 2%;
+
+            .measurementMetricInput{
+              !*margin-top: 7px;
+              margin-bottom: 7px;*!
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+
+          .measurementMetricElementListWrapper{
+            min-width: 20px;
+
+            .conversionList{
+              height: 22px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .measurementMetricInputDescription {
+          margin-bottom: 0;
+        }
+
+      }
+    }
+
+    .customTextFieldViewContainer {
+      margin-bottom: 0;
+      .customTextFieldDescription {
+        margin-bottom: 0;
+      }
+    }
+
+    .numberLocaleViewContainer {
+      margin-bottom: 50px;
+      .numberLocaleInput {
+        margin-top: -20px;
+        margin-bottom: 0;
+      }
+      .numberLocaleDescription {
+        margin-bottom: 0;
+      }
+    }
+
+    .customDatePickerWrapper {
+      .customDatePickerEmptyButton {
+        top: 5px;
+      }
+    }
+
+  }
+  */
+}

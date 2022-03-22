@@ -1,0 +1,76 @@
+@import "./../../../../styleguide/style-guide";
+.rightPanelWrapper {
+  height: 100%;
+  transition: all 0.2s;
+  overflow: auto;
+  background: #fafafa;
+  margin-top: 10px;
+
+  &.dispN {
+    width: 0px;
+  }
+
+  .actionBarContainer {
+    height: 28px;
+  }
+
+  &.noActionBar{
+    .detailContainer{
+      height: 100%;
+    }
+  }
+
+  .detailContainer {
+    height: calc(100% - 28px);
+    overflow: auto;
+
+    .dragViewContainer {
+      width: 100%;
+
+    }
+  }
+
+}
+
+.toolbarContainer {
+  height: 100%;
+  float: right;
+  width: 30px;
+
+  .rightToolbarToggleButton{
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+    background-color: #4A4A4A;
+    @include background-properties-with-theme-white-color($image-CS-menu-list,15px,7px);
+  }
+
+  .rightToolbarBody {
+    height: calc(100% - 28px);
+
+    &.dispN {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.rightBarWrapper {
+
+  width: 30px;
+  background-color: #4A4A4A;
+  float: right;
+  height: 100%;
+  transition: all 0.2s;
+
+  .rightBarItem {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 18px;
+    background-size: 18px;
+
+  }
+
+}

@@ -1,0 +1,10 @@
+{
+  "id": "admin",
+  "code": "admin",
+  "userName": "admin",
+  "password": "Pass@123$",
+  "firstName": "admin",
+  "lastName": "",
+  "email": "kontentsphere@gmail.com",
+  "type":"com.cs.config.interactor.entity.User"
+}

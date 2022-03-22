@@ -1,0 +1,898 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.contentHierarchyPreviewWrapper{
+  background-color: #fff;
+  height: 100%; //calc(100% - 54px);
+  border: 1px solid rgba(128, 128, 128, 0.13);
+  position: relative;
+
+  .nothingFoundWithToolBarView{
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &.taxonomyHierarchy {
+    display: flex;
+  }
+
+  &.collectionHierarchy {
+    display: flex;
+  }
+
+  .taxonomySectionsViewContainer{
+
+  }
+}
+
+.contentHierarchyTreeViewContainer{
+  background-color: #fff;
+  height: 100%;
+  width: 50%;
+  float: left;
+  //overflow-x: auto;
+  border-right: 2px solid rgba(128, 128, 128, 0.13);
+
+  &.taxonomyHierarchy{
+    width: unset;
+    max-width: 50%;
+    border-right: 10px solid rgba(128, 128, 128, 0.13);
+  }
+
+  &.collectionHierarchy {
+    width: unset;
+    max-width: 50%;
+    border-right: 10px solid rgba(128, 128, 128, 0.13);
+  }
+
+  &.permissionConfig {
+    float: left;
+    width: auto;
+
+    .contentHorizontalTreeViewContainer{
+      //overflow: hidden;
+      .contentHorizontalTreeLevelContainer{
+        width: 245px;
+        overflow: hidden;
+        padding-bottom: 0;
+        .contentHorizontalTreeGroupContainer{
+          //height: auto;
+          margin-bottom: 0;
+          height: 100%;
+
+          .tabsList {
+            .tabItem {
+              width: 50%;
+            }
+          }
+
+          .hierarchyLoadMore {
+            height: 30px;
+            line-height: 30px;
+            font-style: italic;
+            font-weight: 400;
+            color: gray;
+            text-align: center;
+            cursor: pointer;
+          }
+          .contentHorizontalTreeGroupNodes{
+            margin: 0px 0 8px;
+            height:100%;
+            overflow: auto;
+            scrollbar-width: thin;
+            .contentHorizontalTreeGroupElContainer{
+              .contentHorizontalTreeGroupElLabel{
+                display: flex;
+                padding: 5px 0;
+                align-items: center;
+
+                .nodeIconClass {
+                  margin: 2px 5px;
+                  flex:0 0 14px;
+                }
+
+                .tableLabelCodeWrapper {
+                  flex: auto;
+                  display: grid;
+                  grid-template-rows: 16px;
+                  max-width: calc(100% - 75px);
+
+                  .treeNodeLabelSpan {
+                    line-height: 18px;
+                    padding-left: 2px;
+                    max-width: 100%;
+                    &.specialNode {
+                      padding-left: 0;
+                      font-style: inherit;
+                      text-decoration: inherit;
+                    }
+                  }
+
+                  .treeNodeCodeSpan {
+                    line-height: 18px;
+                    font-size: 10px;
+                    padding-left: 2px;
+                    max-width: 100%;
+                    &.specialNode {
+                      padding-left: 0;
+                      font-style: inherit;
+                      text-decoration: inherit;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .contentHorizontalTreeViewContainer {
+    height: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+
+    .contentHorizontalTreeLevelContainer{
+      @include topInlineBlock();
+      padding: 10px 0;
+      width: 200px;
+      height: 100%;
+      overflow: hidden;
+      border-right: 1px solid rgba(128, 128, 128, 0.13);
+      white-space: nowrap;
+
+      .contentHorizontalTreeGroupContainer{
+        margin-bottom: 15px;
+        height: calc(100% - 25px);
+
+        &.expanded.withHeader.withSearch {
+          height: 100%;
+        }
+
+        &.withHeader {
+          .contentHorizontalTreeGroupNodesWrapper {
+            height: calc(100% - 26px);
+          }
+        }
+
+        &.withSearch {
+          .contentHorizontalTreeGroupNodesWrapper {
+            height: calc(100% - 37px);
+          }
+        }
+
+        &.withHeader.withSearch {
+          .contentHorizontalTreeGroupNodesWrapper {
+            height: calc(100% - 63px);
+          }
+        }
+
+        .tabsList {
+          .tabItem {
+            color: $color-dark-2;
+            background-color: $color-light-1;
+
+            &.isActive {
+              font-weight: 500;
+              background-color: $color-light-3;
+              color: $color-dark-4;
+              box-shadow: 0 1px 0 0 $color-light-1, 0 0 0 1px #eee, inset 0 -3px 0 0 $color-theme-accent;
+            }
+          }
+        }
+
+        .contentHorizontalTreeGroupNodesWrapper {
+          height: 100%;
+        }
+
+        .contentHorizontalTreeGroupHeader{
+          font-size: 11px;
+          border: none;
+          padding: 0 5px 10px 10px;
+          opacity: .8;
+          font-weight: 500;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.13);
+          text-transform: uppercase;
+          color: #555;
+          @include ellipsis();
+
+          .classLabel{
+            @include ellipsis();
+            max-width: calc(100% - 10px);
+            font-size: 11px;
+            border: none;
+            cursor: context-menu;
+          }
+
+          .relationshipLabel{
+            font-size: 9px;
+            border: none;
+            font-style: italic;
+          }
+        }
+
+        .hierarchySearchContainer {
+          position: relative;
+          padding: 5px 5px 0 5px;
+
+          .hierarchySearchInput {
+            width: calc(100% - 4px);
+            padding: 4px 4px 4px 30px;
+            margin: 2px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+          }
+
+          &:before {
+            position: absolute;
+            left: 9px;
+            top: 9px;
+            height: 25px;
+            width: 25px;
+            content: '';
+            background: url($image-CS-SearchFilled-32) no-repeat center;
+            background-size: 15px;
+            opacity: .7;
+          }
+
+          .searchClearIcon {
+            position: absolute;
+            right: 7px;
+            top: 7px;
+            width: 28px;
+            height: 28px;
+            background: url($image-CS-Cross) no-repeat center;
+            background-size: 16px;
+            opacity: .6;
+            cursor: pointer;
+          }
+        }
+
+        .contentHorizontalTreeGroupNodes{
+          transition: all 0.8s;
+          overflow: hidden;
+          margin: 0px 0px 8px 0px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+          height: 100%;
+
+          .dragViewContainer {
+            display: block;
+          }
+
+          .contentHorizontalTreeGroupElContainer{
+            overflow: hidden;
+            margin: 2px;
+            transition: all .2s;
+
+            &.selected {
+              background-color: #ddd;
+              font-weight: 500;
+
+              .contentHorizontalTreeGroupElLabel{
+
+                .collapseExpandArrow{
+                  opacity: 1;
+                  &.collapsed{
+                    transform: rotate(90deg);
+                    //@include background-properties-with-theme-white-color($image-CS-Collapse-Arrow-32);
+                  }
+
+                  &.expanded{
+                    //background-image: url($image-CS-expand-arrow-icon); //Do not delete this line
+                    transform: rotate(90deg);
+                    //@include background-properties-with-theme-white-color($image-CS-Collapse-Arrow-32);
+                  }
+                }
+
+                .deleteHierarchyNode {
+                  opacity: 1;
+                  //@include background-properties-with-theme-white-color($image-CS-Cross);
+                }
+              }
+
+              &:hover {
+                background-color: #ddd;
+              }
+            }
+
+            &.active {
+              box-shadow: 0px 0px 0px 2px $color-theme-accent;
+            }
+
+            &.disabled {
+              opacity: 0.5;
+              pointer-events: none;
+            }
+
+            &.zeroLevelGroupEl{
+              padding: 3px 8px;
+            }
+
+            &:hover{
+              background-color: #eee;
+
+              .contentHorizontalTreeGroupElLabel{
+
+                .collapseExpandArrow {
+                  opacity: 1;
+                  transition: none;
+
+                  &.collapsed{
+                    transform: rotate(90deg);
+                    //@include background-properties-with-theme-white-color($image-CS-Collapse-Arrow-32);
+                  }
+
+                  &.expanded{
+                    //background-image: url($image-CS-expand-arrow-icon); //Do not delete this line
+                    transform: rotate(90deg);
+                    //@include background-properties-with-theme-white-color($image-CS-Collapse-Arrow-32);
+                  }
+                }
+
+                .deleteHierarchyNode {
+                }
+              }
+            }
+
+            .contentHorizontalTreeGroupElLabel {
+              float: left;
+              line-height: 30px;
+              color: #555;
+              cursor: pointer;
+              //width: calc(100% - 10px);
+              width: 100%;
+              @include ellipsis();
+
+              .permissionButtonsView {
+
+                float: right;
+                display: inline-flex;
+                height: 16px;
+
+                &.readButton {
+                  float: left;
+                }
+
+                .permissionButton {
+
+                  padding: 0px;
+                  margin: 0 3px;
+                  width: 16px;
+                  height: 16px;
+                  padding: 0;
+
+                  &.selected {
+
+                    cursor: pointer;
+                    color: #fff;
+
+                    .buttonIcon {
+
+                      &.canCreate {
+                        @include background-properties-with-light-green-color($image-CS-Create, 16px);
+                      }
+                      &.canDelete {
+                        @include background-properties-with-light-green-color($image-CS-delete-bin-black, 16px);
+                      }
+                      &.canDownload {
+                        @include background-properties-with-light-green-color($image-CS-download-black, 16px);
+                      }
+                      &.canRead {
+                        @include background-properties-with-light-green-color($image-CS-eye-black, 16px);
+                      }
+                      &.canEdit{
+                        @include background-properties-with-light-green-color($image-CS-Update, 14px);
+                      }
+                    }
+                  }
+                  &.disabledNode {
+                    cursor: not-allowed;
+                    pointer-events: none;
+                    opacity: 0.5;
+                  }
+
+                  .buttonIcon {
+                    width: 100%;
+                    height: 100%;
+
+                    &.canCreate{
+                      @include background-properties-with-theme-light-gray-color($image-CS-Create, 16px);
+                    }
+                    &.canDelete{
+                      @include background-properties-with-theme-light-gray-color($image-CS-delete-bin-black, 16px);
+                    }
+                    &.canDownload{
+                      @include background-properties-with-theme-light-gray-color($image-CS-download-black, 16px);
+                    }
+                    &.canRead {
+                      @include background-properties-with-theme-light-gray-color($image-CS-eye-black, 16px);
+                    }
+                    &.canEdit{
+                      @include background-properties-with-theme-light-gray-color($image-CS-Update, 14px);
+                    }
+                  }
+                }
+
+                .copyToClipboard {
+                  width: 16px;
+                  height: 16px;
+                  opacity: 0;
+                  margin:0 3px;
+                  cursor: pointer;
+                  @include background-properties($image-CS-copy-to-clipboard, 14px);
+                }
+              }
+
+              span {
+                font-size: 12px;
+              }
+
+              &:hover{
+                .deleteHierarchyNode{
+                  visibility: visible;
+                }
+
+                .viewHierarchyNode{
+                  visibility: visible;
+                }
+
+                .copyToClipboard {
+                  opacity: 0.8;
+                }
+              }
+
+              .tableLabelCodeWrapper {
+                width: 100%;
+                float: left;
+                max-width: calc(100% - 60px);
+
+                .treeNodeLabelSpan {
+                  @include topInlineBlock();
+                  @include ellipsis();
+                  //max-width: calc(100% - 60px);
+                  width: inherit;
+                  float: left;
+                  padding-left: 8px;
+                  &.specialNode {
+                    font-style: italic;
+                    text-decoration: underline;
+                  }
+                }
+
+                .treeNodeCodeSpan {
+                  @include topInlineBlock();
+                  @include ellipsis();
+                  //max-width: calc(100% - 60px);
+                  width: inherit;
+                  float: left;
+                  width: 100%;
+                  color: $color-light-25;
+
+                  &.specialNode {
+                    font-style: italic;
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              .gridYesNoPropertyView{
+                float: right;
+                margin-top: 4px;
+                margin-right: 6px;
+              }
+
+              .showCount{
+                float: left;
+                margin: 0 5px;
+                opacity: .7;
+                font-size: 12px;
+                &.specialNode{
+                  font-style: italic;
+                }
+              }
+
+              .treeNodeImageContainer{
+                .imageSimpleViewNoImage{
+                  margin: 2px 5px;
+                  height: 26px;
+                  width: 26px;
+                  float: left;
+                  background-size: 80%;
+                  opacity: .5;
+                }
+
+                .imageSimpleViewImage{
+                  margin: 2px 5px;
+                  height: 26px;
+                  width: 26px;
+                  float: left;
+                  transition: all .2s;
+                }
+
+                &.noImage{
+                  transition: all .2s;
+                  margin: 2px 5px;
+                  height: 26px;
+                  width: 26px;
+                  float: left;
+                  opacity: .5;
+                  background-size: 20px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-image: url($image-CS-ImageFile);
+                }
+              }
+
+              .collapseExpandArrow{
+                float: right;
+                background-size: 13px;
+                opacity: .5;
+                cursor: pointer;
+                transition: all .2s;
+                height: 14px;
+                width: 14px;
+                margin: 8px 0;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                &.dispN{
+                  visibility: hidden;
+                }
+
+                &.collapsed{
+                  transform: rotate(90deg);
+                  background-image: url($image-CS-Collapse-Arrow-32);
+                }
+
+                &.expanded{
+                  //background-image: url($image-CS-expand-arrow-icon); //Do not delete this line
+                  transform: rotate(90deg);
+                  background-image: url($image-CS-Collapse-Arrow-32);
+                }
+              }
+
+              .deleteHierarchyNode{
+                visibility: hidden;
+                float: right;
+                opacity: .5;
+                cursor: pointer;
+                //transition: all .2s;
+                height: 14px;
+                width: 14px;
+                margin: 7px 5px 7px 0;
+                @include background-properties($image-CS-delete-bin-black, 13px);
+
+                &:hover{
+                  opacity: .8;
+                }
+              }
+
+              .nodeIconClass{
+                float: left;
+                background-size: 15px;
+                opacity: .6;
+                cursor: pointer;
+                transition: all .2s;
+                height: 14px;
+                width: 14px;
+                margin: 8px 0 8px 5px;
+
+                &.language {
+                  @include background-properties($image-CS-language);
+                }
+
+                &.articleIcon {
+                  @include background-properties($image-CS-Product-menu);
+                }
+
+                &.assetIcon {
+                  @include background-properties($image-CS-ImageFile);
+                }
+
+                &.smartDocumentTemplateIcon {
+                  @include background-properties($image-CS-smart-document-template-icon);
+                }
+
+                &.smartDocumentPresetIcon {
+                  @include background-properties($image-CS-smart-document-preset-icon);
+                }
+
+                &.supplierIcon {
+                  @include background-properties($image-CS-Refresh-48-black);
+                }
+
+                &.targetIcon {
+                  @include background-properties($image-CS-target-icon-filled-black);
+                }
+
+                &.textAssetIcon {
+                  @include background-properties($image-CS-text-asset-filled-black);
+                }
+
+                &.productCatalog {
+                  @include background-properties($image-CS-product-virtual-catalog-icon-filled-black, 20px);
+                }
+
+                &.mediaCatalog {
+                  @include background-properties($image-CS-media-virtual-catalog-icon-filled-black, 22px);
+                }
+
+                &.technicalImage {
+                  @include background-properties($image-technical-image-icon-filled-black, 40px);
+                }
+
+                &.fixedBundle {
+                  background-image: url($image-CS-Cardboard-Box-Filled-50-Black);
+                }
+
+                &.singleArticle {
+                  @include background-properties($image-CS-Google-News);
+                }
+
+                &.setOfProducts {
+                  @include background-properties($image-shapes-Black);
+                }
+
+                &.pidSku {
+                 @include background-properties($image-cs-dyn-coupled);
+                }
+
+                &.specialNode {
+                  @include background-properties($image-CS-glasses);
+                }
+
+                &.gtin{
+                  @include background-properties($image-CS-GTIN);
+                }
+
+                &.embedded{
+                  @include background-properties($image-CS-Price-Tag-Filled-50);
+                }
+
+                &.time_based {
+                  @include background-properties($image-CS-Advertising-Black);
+                }
+
+                &.fixed_discount_price {
+                  @include background-properties($image-CS-Advertising-Black);
+                }
+
+                &.fixed_discount_percentage {
+                  @include background-properties($image-CS-Advertising-Black);
+                }
+
+                //TODO: Change Icons if necessary
+                &.imageAsset {
+                  @include background-properties($image-CS-Google-News);
+                }
+
+                &.videoAsset {
+                  @include background-properties($image-CS-Box-Filled-Filled-50-Black);
+                }
+
+                &.documentAsset {
+                  @include background-properties($image-shapes-Black);
+                }
+
+                &.market {
+                  @include background-properties($image-CS-Google-News);
+                }
+
+                &.textAsset {
+                  @include background-properties($image-shapes-Black);
+                }
+
+                &.supplier {
+                  @include background-properties($image-shapes-Black);
+                }
+
+                &.fileAsset{
+                  @include background-properties($image-CS-attachment);
+                }
+
+                &.cloneIcon {
+                  @include background-properties($image-CS-create-clone,14px) ;
+                }
+
+                &.bulkEditIcon {
+                  @include background-properties($image-CS-Edit-Property,14px);
+                }
+
+                &.gridEditIcon {
+                  @include background-properties($image-CS-grid-edit,14px);
+                }
+
+                &.exportIcon {
+                  @include background-properties($image-CS-export-black,14px);
+                }
+
+                &.importIcon {
+                  @include background-properties($image-import-black, 14px);
+                }
+
+                &.transferIcon {
+                  @include background-properties($image-CS-data-transfer,14px);
+                  background-size: 14px;
+                }
+
+                &.shareIcon {
+                  @include background-properties($image-CS-bulkShareBlack,14px);
+                }
+              }
+
+              .viewHierarchyNode{
+                visibility: hidden;
+                float: right;
+                opacity: .5;
+                cursor: pointer;
+                //transition: all .2s;
+                height: 16px;
+                width: 16px;
+                margin: 8px 5px 5px 0;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url($image-CS-eye-black);
+
+                &:hover{
+                  opacity: .8;
+                }
+              }
+
+              .visibilityModeButton{
+                background-image: url($image-CS-unlock);
+                float: right;
+                opacity: .5;
+                cursor: pointer;
+                height: 14px;
+                width: 14px;
+                margin: 8px 5px 5px 0;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                &.isPrivate{
+                  background-image: url($image-CS-lock);
+                }
+
+                &:hover{
+                  opacity: .8;
+                }
+              }
+
+            }
+
+          }
+
+          .horizontalTreeNoContentFound{
+            font-style: italic;
+            font-weight: 400;
+            color: $color-dark-5;
+            text-align: center;
+            //opacity: .6;
+            border-bottom: 1px dotted gray;
+            margin: 0px 5px 10px 5px;
+            line-height: 30px;
+          }
+
+          .createNewNodeMainWrapper{
+            .editHierarchyNodeNameContainer{
+              width: 100%;
+              float: left;
+
+              .editNameInputContainer{
+                float: left;
+                width: 100%;
+                padding: 5px;
+                background-color: #eee;
+
+                .editNodeNameInput{
+                  width: 100%;
+                  border: none;
+                  background-color: #eee;
+
+                  &:focus {
+                    outline: none;
+                  }
+                }
+              }
+
+
+              .popoverButtons{
+                float: left;
+                width: 100%;
+                padding: 2px 5px;
+
+                .popButton{
+                  float: right;
+                  font-size: 11px;
+                  margin: 2px;
+                  padding: 0 10px;
+                  border-radius: 3px;
+                  cursor: pointer;
+
+                  &.okButton{
+                    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+                    color: #fff;
+                    background-color: #616367;
+                    &:hover{
+                      opacity: .5;
+                    }
+                  }
+
+                  &.cancelButton{
+
+                    &:hover{
+                      background: rgba(153,153,153,0.2);
+                    }
+                  }
+                }
+              }
+            }
+
+            .createNewNodeContainer{
+              float: left;
+              width: 100%;
+              margin: 2px;
+              opacity: .6;
+              transition: all .2s;
+              cursor: pointer;
+
+              &:hover{
+                opacity: .9;
+              }
+
+              .createIcon{
+                float: left;
+                width: 16px;
+                height: 16px;
+                margin: 7px;
+                opacity: .6;
+                border-radius: 50%;
+                @include background-properties-with-theme-white-color($image-CS-Plus-32-black);
+              }
+
+              .createNewIconLabel{
+                line-height: 30px;
+                font-size: 11px;
+                text-transform: uppercase;
+                color: #777;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+              }
+            }
+          }
+
+        }
+        .horizontalTreeNoContentFound {
+          margin-left: 10px;
+        }
+      }
+
+    }
+  }
+}
+
+.hierarchyNodeContextMenuContainer{
+  .contextMenuNode{
+    width: 100px;
+    line-height: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    padding: 3px 10px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover{
+      background: #d1d1d1;
+    }
+
+    &:last-child{
+      border: none;
+    }
+  }
+}

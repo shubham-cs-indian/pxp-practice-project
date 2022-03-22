@@ -1,0 +1,33 @@
+/*
+@import "./../../../../styleguide/style-guide";
+.zoomToolbarViewContainer{
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  z-index: 3;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px -1px #555;
+
+  .zoomTool{
+    height: 20px;
+    width: 20px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 2px;
+    float: left;
+    cursor: pointer;
+    margin: 2px;
+
+    &.disabled{
+      opacity: .4;
+      cursor: default;
+    }
+  }
+
+  .zoomToolZoomIn{
+    background-image: url($image-zoom-in-filled);
+  }
+
+  .zoomToolZoomOut{
+    background-image: url($image-zoom-out-filled);
+  }
+}*/

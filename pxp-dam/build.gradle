@@ -1,0 +1,56 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+version = "1.0.0"
+//sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	// Uncomment the application dependency for deployment purpose
+	//compile(group: 'com.cs', name: 'pxp-core', version: '1.0.0')
+	//compile(group: 'com.cs', name: 'pxp-pim', version: '1.0.0')
+	
+	// Add the project dependency management
+	compile project(path: ':pxp-core')
+	compile project(path: ':pxp-pim')
+	compile project(path: ':pxp-rdbms-implementation')
+	compile project(path: ':pxp-rdbms-interface')
+	compile project(path: ':pxp-technical-services')
+	compile project(path: ':pxp-shared-services')
+	compile project(path: ':pxp-exception')
+	
+	
+    def springFrameworkVersion = "4.3.5.RELEASE"
+	compile "org.springframework:spring-context:${springFrameworkVersion}"
+	compile "org.springframework:spring-core:${springFrameworkVersion}"
+	compile 'org.apache.curator:curator-test:3.2.1'
+	compile 'org.apache.curator:curator-framework:3.2.1'
+    compile "org.springframework:spring-web:${springFrameworkVersion}"
+	compile "org.springframework:spring-webmvc:${springFrameworkVersion}"
+	compile group: 'com.netflix.ribbon', name: 'ribbon-httpclient', version: '2.2.5'
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	compile group: 'commons-io', name: 'commons-io', version: '2.5'
+	
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+configurations {
+	runtime.exclude module: 'pxp-core'
+    runtime.exclude module: 'spring-context'
+    runtime.exclude module: 'spring-core'
+    runtime.exclude module: 'curator-test'
+    runtime.exclude module: 'curator-framework'
+    runtime.exclude module: 'spring-web'
+    runtime.exclude module: 'spring-webmvc'
+    runtime.exclude module: 'ribbon-httpclient'
+}
+

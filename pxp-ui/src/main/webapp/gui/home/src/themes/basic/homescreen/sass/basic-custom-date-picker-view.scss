@@ -1,0 +1,26 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.customDatePickerWrapper {
+  height: inherit;
+  .customDatePicker {
+    &.datePickerCustom {
+      height: inherit;
+      max-width: unset;
+      width:inherit;
+      > div {
+        width: 100%;
+      }
+      input {
+        padding:0px 0 7px;
+      }
+    }
+  }
+  .customDatePickerEmptyButton {
+    position: absolute;
+    right: 10px;
+    &.noShow {
+
+    }
+  }
+}

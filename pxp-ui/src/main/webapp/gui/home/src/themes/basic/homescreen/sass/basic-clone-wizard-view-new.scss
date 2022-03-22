@@ -1,0 +1,419 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$listNodeHeight: 30px;
+$padding: 20px;
+$labelColor: #5d5d5d;
+
+.cloneWizardView {
+  width: 100%;
+  height: 100%;
+
+  .cloneHeaderView {
+    width: 100%;
+    float: left;
+    height: 40px;
+
+    .cloneHeaderLabel {
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+      width: auto;
+      float: left;
+    }
+    .cloneHeaderItemContainer {
+      .cloneWizardCloneCountContainer {
+        float: right;
+        display: inline-block;
+        height: 30px;
+        width: 310px;
+        font-size: $font-normal;
+
+        .cloneWizardCloneCountLabel {
+          cursor: default;
+          margin: 3px 5px 5px 0px;
+          line-height: 20px;
+          font-size: $font-normal;
+        }
+
+        .numberLocaleViewContainer .numberLocaleInput {
+          float: right;
+          border-radius: 2px;
+          border: 1px solid #ddd;
+          padding: 0 0 0 5px;
+          margin: 2px;
+          width: auto;
+          height: 23px;
+        }
+      }
+    }
+    .exactCloneView {
+      float: right;
+      width: auto;
+      padding: 4px;
+
+      .cloneWizardCheckButton {
+        float: left;
+        height: 18px;
+        width: 18px;
+        background-size: cover;
+        cursor: pointer;
+        background-color: transparent;
+        @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 18px);
+
+        &.checkedItem {
+          @include background-properties($image-checked-checkbox-without-border-radius, 18px);
+        }
+      }
+
+      .exactCloneLabel {
+        width: auto;
+        float: left;
+        margin-left: 10px;
+        color: #8f8f8f;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .cloneWizardBody {
+    height: calc(100% - 40px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 320px calc(100% - 320px);
+
+    &.productVariant {
+      height: 100%;
+    }
+
+    .classificationSelectionView {
+      border: 1px solid #d9d9d9;
+      padding: $padding;
+      margin-right: 15px;
+      border-radius: 3px;
+
+      .listGroupContainer:first-child {
+        .chipsView {
+          height: 42px;
+        }
+      }
+
+      .listGroupItemCheckbox {
+        margin-top: 14px;
+      }
+    }
+
+    .propertiesSelectionView {
+      border: 1px solid #d9d9d9;
+      padding: $padding;
+      background: #F7F7F7;
+      border-radius: 3px;
+
+      .cloneWizardSearchBarContainer {
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+
+        .cloneWizardSearchBar {
+          height: 30px;
+          width: 100%;
+          padding: 2px;
+          border: 1px solid #ddd;
+          border-radius: 3px;
+
+          .simpleSearchBarView {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+            background: transparent;
+          }
+        }
+      }
+
+      .propertiesGroupContainer {
+        height: calc(100% - 30px);
+        width: 100%;
+        margin-top: 5px;
+
+        .listGroupContainer {
+          .listGroup {
+            display: grid;
+            width: calc(100% - 15px);
+            float: right;
+
+            .listGroupItem {
+              display: flex;
+              align-items: center;
+            }
+            .listGroupNoItem {
+                text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .listGroupContainer {
+      margin: 5px 0;
+      text-transform: capitalize;
+
+      .listGroupHeader {
+        height: 40px;
+        line-height: 40px;
+        font-weight: 500;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .listGroupCheckbox {
+          float: left;
+          height: 16px;
+          width: 16px;
+          margin-right: 10px;
+          cursor: pointer;
+          @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 18px);
+
+          &.checkedItem {
+            @include background-properties($image-checked-checkbox-without-border-radius, 18px);
+          }
+
+          &.checkedSomeItem {
+            @include background-properties($image-checked-checkbox-line, 18px);
+          }
+
+          &.isDisabled {
+            opacity: 0.6;
+            pointer-events: none;
+          }
+        }
+
+        .listGroupHeaderLabel {
+          float: left;
+          text-transform: capitalize;
+          color: $labelColor;
+          max-width: calc(100% - 50px);
+          @include ellipsis();
+          font-size: 14px;
+
+          span {
+            font-size: 14px;
+          }
+
+          .cloneWizardHighlightedText {
+            background-color: $color-yellow;
+          }
+        }
+
+        .listGroupExpandIcon {
+          float: left;
+          height: 16px;
+          width: 16px;
+          margin-left: 10px;
+          cursor: pointer;
+          opacity: 0.6;
+          @include background-properties($image-CS-expand-arrow-icon);
+
+          &.isCollapsed {
+            @include background-properties-with-theme-color($image-CS-Collapse-Arrow-32);
+          }
+        }
+      }
+
+      .listGroup {
+        .listGroupItem {
+          &.isNatureClass {
+            .listGroupItemCheckbox {
+              opacity: 0.6;
+              pointer-events: none;
+            }
+            .chipsView {
+              .items {
+                background-color: $color-dark-8;
+                color: #fff;
+              }
+            }
+            &.dropDown {
+              .chipsView {
+                .items {
+                  background-color: $color-blue;
+                  color: #fff;
+                  position: relative;
+                  padding-right: 25px;
+                }
+                .items:before {
+                  position: absolute;
+                  content: "";
+                  right: 10px;
+                  @include background-properties-with-theme-white-color($image-CS-expand-arrow-icon, 12px);
+                  width: 14px;
+                  height: 12px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+
+          .listGroupItemCheckbox {
+            &.isDisabled {
+              opacity: 0.6;
+              pointer-events: none;
+            }
+          }
+
+          .chipsView {
+            width: calc(100% - 24px);
+            padding: 3px 0px;
+
+            .items {
+              background-color: $color-light-5;
+              color: $color-dark-6;
+              margin: 5px;
+
+              .imageFitToContainer {
+                height: 26px;
+                width: 26px;
+                float: left;
+                position: relative;
+                background: #d9d9d9;
+                border-radius: 50%;
+
+                img {
+                  max-width: 16px;
+                }
+              }
+
+              .itemLabel {
+                font-size: 12px;
+                line-height: 26px;
+                font-weight: 400;
+                max-width: 150px;
+              }
+            }
+          }
+
+          .listGroupItemCheckbox {
+            float: left;
+            height: 15px;
+            width: 15px;
+            margin-right: 5px;
+            cursor: pointer;
+            @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 18px);
+
+            &.checkedItem {
+              //opacity: 0.8;
+              @include background-properties($image-checked-checkbox-without-border-radius, 18px);
+            }
+          }
+
+          .listGroupItemLabel {
+            float: left;
+            width: calc(100% - 40px);
+            line-height: 30px;
+            @include ellipsis();
+
+            &.highLightedText {
+              .cloneWizardHighlightedText {
+                background-color: $color-yellow;
+              }
+            }
+          }
+
+          .listGroupItemIcon {
+            float: left;
+            width: 15px;
+            height: 15px;
+            margin: 5px 0px 5px;
+
+            &.attribute {
+              @include background-properties-with-theme-lighter-gray-color($image-CS-Text-Color-Filled-50, 18px);
+            }
+
+            &.tag {
+              @include background-properties-with-theme-lighter-gray-color($image-CS-Price-Tag-Filled-50, 18px);
+            }
+
+            &.minorTaxonomy {
+              @include background-properties-with-theme-lighter-gray-color($image-CS-Letter-M--small, 18px);
+            }
+
+            &.relationship {
+              @include background-properties-with-theme-lighter-gray-color($image-CS-Relationships, 18px);
+            }
+          }
+
+          &.isDisabled {
+            .listGroupItemCheckbox {
+              opacity: 0.6;
+            }
+          }
+
+          &.dropDown {
+            .chipsView {
+              .items {
+                background-color: $color-dark-8;
+                padding-right: 25px;
+                position: relative;
+
+                .itemLabel {
+                  color: white;
+                }
+              }
+              .items:before {
+                position: absolute;
+                content: "";
+                right: 10px;
+                @include background-properties-with-theme-white-color($image-CS-expand-arrow-icon, 12px);
+                width: 14px;
+                height: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+
+          .customIcon {
+            width: 20px;
+            float: left;
+            position: relative;
+            height: 20px;
+            margin-right: 5px;
+
+            .imageSimpleViewNoImage{
+              background-size: 13px;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+.cloneWizardCloneCountContainer {
+  display: block;
+  height: 30px;
+  width: 100%;
+  position: relative;
+  font-size: $font-normal;
+
+  .cloneWizardCloneCountLabel {
+    float: left;
+    cursor: default;
+    margin: 5px 5px 5px 0px;
+    line-height: 20px;
+    font-size: $font-normal;
+  }
+
+  .numberLocaleViewContainer .numberLocaleInput {
+    float: left;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    padding: 0 0 0 5px;
+    margin: 2px;
+    width: 100px;
+    height: 23px;
+  }
+}
+

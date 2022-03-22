@@ -1,0 +1,10 @@
+[
+	{
+	  "id": "price_context",
+	  "code": "price_context",
+      "isStandard": true,
+      "type":"priceContext",
+      "isAutoCreate":false,
+      "isTimeEnabled":true
+	}
+]

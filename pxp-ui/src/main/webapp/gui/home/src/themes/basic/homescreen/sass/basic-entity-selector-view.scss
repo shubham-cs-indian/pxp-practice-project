@@ -1,0 +1,37 @@
+/*
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.entitySelectorViewContainer {
+  width: 100%;
+  padding: 10px;
+
+  .selectorListViewItem {
+    padding: 6px;
+    position: relative;
+    box-shadow: 0 0 0 1px #ddd;
+    border-radius: 3PX;
+    margin: 10px 0px;
+    cursor: pointer;
+
+    &.selected {
+      box-shadow: 0 0 0 1px $color-theme-accent;
+
+      .selectedItem {
+        @include background-properties-with-theme-color($image-CS-Ok-blue);
+        background-size: 15px;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        right: 9px;
+        top: 9px;
+      }
+    }
+
+    .selectorListItemLabel {
+      font-weight: 500;
+      width: 95%;
+      @include ellipsis();
+    }
+  }
+}*/

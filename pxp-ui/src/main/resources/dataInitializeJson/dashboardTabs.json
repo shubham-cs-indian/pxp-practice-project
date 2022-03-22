@@ -1,0 +1,14 @@
+[
+  {
+    "id": "dashboardtab",
+    "code": "dashboardtab"
+  },
+  {
+    "id": "onboardTab",
+    "code": "onboardTab"
+  },
+  {
+    "id": "publishTab",
+    "code": "publishTab"
+  }
+]

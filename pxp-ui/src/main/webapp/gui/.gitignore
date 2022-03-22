@@ -1,0 +1,8 @@
+/node_modules
+/appbuild
+/app/libraries/projectinfo
+/app/libraries/translations
+.idea
+/package-lock.json
+/__tests__
+*.settings

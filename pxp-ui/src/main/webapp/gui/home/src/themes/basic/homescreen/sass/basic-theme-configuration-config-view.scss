@@ -1,0 +1,29 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.themeConfigurationViewContainer {
+  height: 100%;
+
+  .themesConfigurationSection {
+    margin-top: 10px;
+    .themesConfigurationHeaderLabel {
+      font-size: $font-normal;
+      font-weight: 500;
+      margin: 0 15px;
+      @include ellipsis();
+    }
+  }
+
+  .snackBarView {
+    width: 100%;
+    transition: height 0.5s;
+    overflow: hidden;
+    height: 40px;
+    padding: 5px;
+    background-color: #cccccc;
+    > button{
+      float: right;
+    }
+  }
+
+}

@@ -1,0 +1,403 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+//sourceCompatibility = 11
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+}
+
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = ''
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://artifactory.contentserv.com/artifactory/rest'
+    }
+}
+
+dependencies {
+    // Uncomment the application dependency for deployment purpose
+    //compile(group: 'com.cs', name: 'pxp-rdbms-interface', version: '1.0.0')
+    compile project(path: ':pxp-rdbms-interface')
+    compile project(path: ':pxp-technical-services')
+    compile project(path: ':pxp-shared-services')
+    compile project(path: ':pxp-models')
+	compile project(path: ':elastic-sync')
+	compile project(path: ':IElastic')
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+	compile group: 'com.google.guava', name: 'guava', version: 'r05'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+// Make test output displayed in console
+test {
+    testLogging.showStandardStreams = false
+}
+
+tasks['test'].shouldRunAfter 'pgsql-test'
+tasks['test'].shouldRunAfter 'oracle-test'
+
+task 'oracle-test' {
+doLast {
+// Generate marker file for Oracle
+new File( 'src/test/oracle.selector' ).withWriterAppend { w ->
+  w << "\n"}
+test_run()
+  
+  }
+}
+
+task 'oracle-select' {
+doLast {
+// Generate marker file for Oracle
+new File( 'src/test/oracle.selector' ).withWriterAppend { w ->
+  w << "\n"}
+  
+  
+  }
+}
+
+task 'pgsql-select' {
+doLast {
+ delete 'src/test/oracle.selector'
+ 
+ }
+}
+
+task 'pgsql-test' {
+doLast {
+ delete 'src/test/oracle.selector'
+ test_run()
+ 
+ }
+}
+
+void test_run() {
+  if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+  
+  exec{
+  commandLine 'cmd', '/c', 'gradle test'
+  }
+  
+  }
+  else {
+  exec{
+  commandLine 'sh', '-c', 'gradle test'
+  }
+  }
+}
+
+task 'enum-parser' {
+        doLast {
+                exec {
+                        println 'parsing enum'
+                        workingDir 'src/build-scripts/javascript/enum-parser'
+                        println 'working dir is: '
+                        println workingDir
+                        if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+                                commandLine 'cmd', '/c', 'node', 'enum-parser.js'
+                        } else{
+                                commandLine 'node', 'enum-parser.js'
+                        }
+                }
+        }
+}
+
+task 'rdbms-generate' {
+
+	dependsOn tasks.'enum-parser'
+	doFirst {
+		println 'RDBMS generate'
+
+		exec {
+			workingDir 'src/main/sql/'
+			println 'working dir is: '
+			println workingDir
+
+			copy {
+				from('src/build-scripts/shell')
+				into('src/main/sql')
+				include('env.properties')
+			}
+
+			copy {
+				from('src/build-scripts/shell')
+				into('src/main/sql')
+				include('command.awk')
+			}
+			copy {
+			from('src/build-scripts/shell')
+			into('src/main/sql')
+			include('sql_generator.sh')
+			}
+			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+				println 'In windows'
+				commandLine 'cmd', '/c', 'bash -c ./sql_generator.sh'
+			} else {
+				println 'Not windows '
+				commandLine 'sh', '-c', './sql_generator.sh'
+			}
+		}
+		//println 'Completed generation of SQL scripts'
+	}
+	doLast {
+		delete 'src/main/sql/env.properties'
+		delete 'src/main/sql/command.awk'
+		delete 'src/main/sql/sql_generator.sh'
+	}
+}
+
+
+task 'rdbms-renew' {
+
+	dependsOn tasks.'rdbms-generate'
+
+	doLast {
+		// check file for oracle.selector exists
+		def file = new File( 'src/test/oracle.selector' )
+
+		if (!file.exists()) {
+
+			copy {
+				from('src/build-scripts/psql')
+				into('src/main/sql')
+				include('postgres-renew-schema.psql')
+			}
+
+			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+				exec {
+					workingDir 'src/main/sql/'
+					print'Running command for PGSQL in windows'
+					commandLine 'cmd', '/c','psql -h localhost -p 5432 -d pxp -U pxp -f postgres-renew-schema.psql'
+				}
+			} else {
+				exec {
+					workingDir 'src/main/sql/'
+					print'Running command for PGSQL in bash'
+					commandLine 'sh','-c','psql -h localhost -p 5432 -d pxp -U pxp -f postgres-renew-schema.psql'
+				}
+			} 
+			delete 'src/main/sql/postgres-renew-schema.psql'
+		} else {
+			// oracle script
+			copy {
+				from('src/build-scripts/psql')
+				into('src/main/sql')
+				include('oracle-renew-schema.psql')
+			}
+ 			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+  				exec {
+					print'Running command for ORACLE'
+					workingDir 'src/main/sql/'
+					commandLine 'cmd', '/c', 'SET ORACLE_SID=PXP && sqlplus pxp/\"pxp123\" @oracle-renew-schema.psql'
+				}
+			} else {
+				exec {
+					print'Running command for ORACLE'
+					workingDir 'src/main/sql/'
+					commandLine 'sh', '-c' ,'export ORACLE_SID=PXP','sqlplus pxp/\"pxp123\" @oracle-renew-schema.psql'
+				}
+			}
+			delete 'src/main/sql/oracle-renew-schema.psql'
+		}
+	}
+}
+
+task 'rdbms-renew-functionality' {
+
+	dependsOn tasks.'rdbms-generate'
+
+	doLast {
+			copy {
+				from('src/build-scripts/psql')
+				into('src/main/sql')
+				include('postgres-renew-function.psql')
+			}
+
+			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+				exec {
+					workingDir 'src/main/sql/'
+					print'Running command for PGSQL in windows'
+					commandLine 'cmd', '/c','psql -h localhost -p 5432 -d pxp -U pxp -f postgres-renew-function.psql'
+				}
+			} else {
+				exec {
+					workingDir 'src/main/sql/'
+					print'Running command for PGSQL in bash'
+					commandLine 'sh','-c','psql -h localhost -p 5432 -d pxp -U pxp -f postgres-renew-function.psql'
+				}
+			} 
+			delete 'src/main/sql/postgres-renew-function.psql'
+		} 
+}
+
+
+
+
+task 'rdbms-load-test' {
+
+doLast 	{
+    // Run the csv generator
+    
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+	exec {
+    workingDir 'src/test/data/Test-Data/xlsx/'
+    commandLine 'cmd', '/c','java -jar ../../../../build-scripts/programs/XLS2CSV.jar  -i . -o ../csv'
+		 }
+		 
+		 exec {
+    workingDir 'src/test/data/Test-Data/xlsx/'
+    commandLine 'cmd', '/c','java -jar ../../../../build-scripts/programs/XLS2CSV.jar  -i . -o ../sql -f sql'
+		 }
+		 }
+		 		 	 
+		 else {
+		 exec {
+		 workingDir 'src/test/data/Test-Data/xlsx/'
+    commandLine 'sh', '-c','java -jar ../../../../build-scripts/programs/XLS2CSV.jar  -i . -o ../csv'
+		 }
+		 
+		 	 exec {
+    workingDir 'src/test/data/Test-Data/xlsx/'
+     commandLine 'sh', '-c','java -jar ../../../../build-scripts/programs/XLS2CSV.jar  -i . -o ../sql -f sql'
+		 }	
+		 
+		 }
+
+	def file = new File( 'src/test/oracle.selector' )
+if( !file.exists() ) {
+	pgsql_steps()
+					}
+else 				{
+	oracle_steps()
+					}
+		}
+}
+
+void oracle_steps() {
+
+if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+
+ exec {
+    workingDir 'src/build-scripts/psql/'
+        commandLine 'cmd', '/c', 'SET ORACLE_SID=PXP && sqlplus pxp/\"pxp123\" @oracle-load.sql'
+ }
+ 		}
+ 																				
+ else {
+ 
+ exec {
+    workingDir 'src/build-scripts/psql/'
+    commandLine 'sh', '-c' ,'export ORACLE_SID=PXP','sqlplus pxp/\"pxp123\" @oracle-load.sql'
+ }
+ 
+ }
+				}
+void pgsql_steps() {
+ 
+ if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+ 
+ exec {
+    workingDir 'src/build-scripts/psql/'
+    commandLine 'cmd', '/c','psql -h localhost -p 5432 -d pxp -U pxp -f postgres-load.sql'
+	 }
+																					 }
+	else {
+	
+	 exec {
+    workingDir 'src/build-scripts/psql/'
+    commandLine 'sh', '-c','psql -h localhost -p 5432 -d pxp -U pxp -f postgres-load.sql'
+	 }
+	}
+					}
+
+task 'rdbms-init-test' {
+
+    dependsOn 'rdbms-renew'
+    finalizedBy 'rdbms-load-test'
+}
+
+
+task 'rdbms-installer' {
+
+dependsOn tasks.'rdbms-generate'
+
+	doLast {
+		delete 'build/scripts/rdbms_installer.zip'
+
+		// check file for oracle.selector exists
+		def file = new File( 'src/test/oracle.selector' )
+
+		if (!file.exists()) {
+
+                       	copy {
+                               	from ('src/build-scripts/psql/')
+                               	into ('build/scripts')
+                               	include ('postgres-renew-schema.psql');
+								include ('postgres-renew-function.psql');
+			}
+			copy {
+				from ('src/main/sql/PGSQL11')
+				into ('build/scripts/PGSQL11')
+				include ('*.sql');
+                       	}
+			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+				print 'Running ZIP command for PGSQL on Windows'
+				exec{
+					workingDir 'build/scripts/'
+					commandLine 'cmd', '/c','7z a -tzip rdbms_installer.zip postgres-renew-schema.psql postgres-renew-function.psql PGSQL11'
+				}
+			} else {
+				print 'Running ZIP command for PGSQL on Linux'
+				exec {
+					workingDir 'build/scripts/'
+					commandLine 'sh', '-c','tar -czf rdbms_installer.tar.gz postgres-renew-schema.psql postgres-renew-function.psql PGSQL11'
+				}
+			}
+			delete 'build/scripts/postgres-renew-function.psql'
+			delete 'build/scripts/postgres-renew-schema.psql'
+			delete 'build/scripts/PGSQL11'
+		} else { //ORACLE scripts
+                       	copy {
+                               	from ('src/build-scripts/psql/')
+                               	into ('build/scripts')
+                               	include ('oracle-renew-schema.psql');
+			}
+			copy {
+				from ('src/main/sql/ORACLE12C')
+				into ('build/scripts/ORACLE12C')
+				include ('*.sql');
+                       	}
+			if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+				print 'Running ZIP command for ORACLE on Windows'
+				exec {
+					workingDir 'build/scripts/'
+					commandLine 'cmd', '/c', 'zip -rq rdbms_installer.zip oracle-renew-schema.psql ORACLE12C'
+				}
+			} else {
+				print 'Running ZIP command for ORACLE on Linux'
+				exec {
+					workingDir 'build/scripts/'
+					commandLine 'sh', '-c', 'tar -czf rdbms_installer.tar.gz oracle-renew-schema.psql ORACLE12C'
+				}
+			}
+			delete 'build/scripts/oracle-renew-schema.psql'
+			delete 'build/scripts/ORACLE12C'
+		}
+	}
+}

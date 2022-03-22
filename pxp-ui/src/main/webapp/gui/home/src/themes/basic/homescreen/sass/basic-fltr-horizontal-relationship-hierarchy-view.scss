@@ -1,0 +1,268 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.horizontalTreeLevelContainer{
+
+  .levelIndicator{
+    font-size: 11px;
+    font-style: italic;
+    padding: 5px 0 10px 10px;
+    color: gray;
+  }
+
+  .horizontalTreeGroupContainer{
+    $tree-node-icon-width: 20px;
+    .horizontalTreeGroupHeader{
+      margin: 7px 14px 7px 0px;
+      font-weight: 600;
+      .hierarchyLabel{
+        float: left;
+        font-size: 10px;
+        width: calc(100% - 14px);
+        overflow: hidden;
+        @include ellipsis;
+      }
+
+      .createHierarchyIcon{
+        height: 13px;
+        width: 13px;
+        float: right;
+        opacity: .5;
+         @include background-properties-with-theme-white-color($image-CS-Plus-32-black);
+
+        &:hover{
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .horizontalTreeGroupNodes{
+
+      .triggerElement{
+        float: left;
+      }
+
+      .addClassIconContainer{
+        height: auto;
+        width: auto;
+        float: left;
+        border: 1px solid rgba(128, 128, 128, 0.72);
+        border-radius: 5px;
+        padding: 2px 5px;
+        margin: 10px 0 0 0;
+        cursor: pointer;
+        opacity: .5;
+        transition: all .2s;
+
+        &:hover{
+          opacity: .8;
+        }
+
+        .plusIcon{
+          height: 14px;
+          width: 14px;
+          float: left;
+          margin: 1px 3px 0 0;
+         @include background-properties-with-theme-white-color($image-CS-Plus-32-black);
+        }
+
+        .addLabel{
+          font-size: 10px;
+          line-height: 17px;
+          float: left;
+        }
+      }
+    }
+
+    .horizontalTreeGroupElContainer{
+      /*opacity: 0.7;*/
+      &:hover{
+        opacity: 1;
+      }
+
+      .horizontalTreeGroupElLabel {
+        &.removeIconPresent {
+          width: calc(100% - #{$tree-node-icon-width});
+          span{
+            margin-left: 8px;
+          }
+        }
+
+        .hierarchyClassLabelsWrapper{
+          float: left;
+          margin-bottom: 5px;
+          width: 100%;
+          span{
+            &.hierarchySpan{
+              max-width: calc(100% - 30px);
+              padding: 1px 0 0 0;
+              @include topInlineBlock();
+              @include ellipsis();
+              width: 100%;
+              float: left;
+
+              &.classLabelSpan {
+                font-weight: 500;
+              }
+
+              &.relationshipLabelSpan {
+                font-size: 9px;
+                font-style: italic;
+                width: 100%;
+                float: left;
+                line-height: 8px;
+                //padding-left: 5px;
+              }
+            }
+          }
+
+        }
+
+      }
+
+      &:hover{
+        .nodeRightIcon{
+          display: block;
+        }
+      }
+
+      .nodeRightIcon{
+        background-position: center;
+        background-repeat: no-repeat;
+        float: right;
+        background-size: 13px;
+        opacity: .5;
+        cursor: pointer;
+        display: none;
+        transition: all .2s;
+
+        &:hover {
+          opacity: .9
+        }
+
+        &.editIcon{
+          height: 18px;
+          width: $tree-node-icon-width;
+          background-image: url($image-CS-Edit-32);
+        }
+
+        &.removeIcon{
+          height: 18px;
+          width: $tree-node-icon-width;
+          background-size: 15px;
+          background-image: url($image-CS-Cross);
+        }
+      }
+
+
+      .labelInput{
+        //border: inset 1px;
+        border: none;
+        border-bottom: 1px solid #bbbbbb;
+        font-size: 10px;
+        border-radius: 0;
+        padding-left: 5px;
+        margin-left: 5px;
+        background-color: transparent;
+        &:focus{
+          outline: none
+        }
+      }
+    }
+
+  }
+}
+
+/*
+.classListDropDownContainer{
+  width: 100%;
+  max-height: 400px;
+  padding: 5px;
+  float: left;
+  //overflow: auto;
+
+  .classGroupContainer{
+    margin: 5px 2px;
+    float: left;
+    width: 100%;
+    overflow: auto;
+
+    .classGroupLabel{
+      float: left;
+      font-size: 10px;
+      width: 100%;
+      font-style: italic;
+      font-weight: bolder;
+      @include ellipsis();
+    }
+
+    .classGroupBody{
+      float: left;
+      width: 100%;
+    }
+  }
+
+  .dropDownClassNode{
+    //float: left;
+    //font-size: 12px;
+    //padding-left: 15px;
+    //width: 100%;
+    //cursor: pointer;
+    //opacity: 0.7;
+    //line-height: 20px;
+    //border-bottom: 1px solid rgba(128, 128, 128, 0.23);
+    @include ellipsis();
+    padding: 5px;
+    //border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    border: none;
+    line-height: 20px;
+    flex: 1;
+    font-size: 12px;
+    float: left;
+    @include ellipsis;
+    //width: 100%;
+
+    &:last-child{
+      border: none;
+    }
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+*/
+
+/*
+.fltrHorizontalTreeViewNothingToDisplay{
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 600;
+  color: gray;
+  text-align: center;
+  opacity: .6;
+}
+*/
+
+.klassTreeViewContainer{
+  .horizontalTreeViewContainer{
+    .horizontalTreeLevelContainer{
+      .horizontalTreeGroupContainer{
+        .horizontalTreeGroupNodes{
+          .horizontalTreeGroupElContainer{
+            .horizontalTreeGroupElLabel{
+              &.editAndRemoveIconPresent{
+                width: calc(100% - 40px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

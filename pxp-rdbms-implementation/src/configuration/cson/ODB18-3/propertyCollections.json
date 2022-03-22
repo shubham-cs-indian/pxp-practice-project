@@ -1,0 +1,15 @@
+[
+  {
+    "cse": "[[@Create articlegeneralInformationPropertyCollection $id=articlegeneralInformationPropertyCollection $type=propertyCollection]]",
+    "isStandard": true,
+    "propertySequenceIds": ["pid_attribute", "pnameattribute"],
+    "elements": [
+      {
+        "cse": "[pid_attribute]"
+      },
+      {
+        "cse": "[pnameattribute]"
+      }
+	  ]
+  }
+]

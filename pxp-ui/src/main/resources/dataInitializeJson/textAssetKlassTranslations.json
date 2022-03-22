@@ -1,0 +1,19 @@
+[
+  {
+    "id": "text_asset",
+    "translations": {
+      "en_US": {
+        "label": "TextAsset"
+      },
+      "es_ES": {
+        "label": "Activo de texto"
+      },
+      "fr_FR": {
+        "label": "Élément textuel"
+      },
+      "de_DE": {
+        "label": "Text Asset"
+      }
+    }
+  }
+]

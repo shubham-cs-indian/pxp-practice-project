@@ -1,0 +1,125 @@
+@import "./../../../../styleguide/style-guide";
+.froalaWrapperView {
+  height: 100%;
+  .customFroalaView {
+    height: inherit;
+    min-height: 20px;
+
+    .froalaContainer {
+
+      .fr-counter {
+        padding: 0px 5px 0px 5px;
+        border: none;
+        background: #f7f7f7;
+        font-size: 12px;
+        //font-family: "Open Sans";
+      }
+    }
+
+    &.toolbarHidden {
+
+      .fr-toolbar {
+        display: none !important;
+      }
+    }
+  }
+}
+.froalaBold {
+  & * {
+    font-weight: bold;
+  }
+
+  .writingInstructionWrapper {
+    & * {
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+
+  .fr-element {
+    &.fr-view {
+      font-weight: bold;
+    }
+  }
+
+  .fr-placeholder {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+.froalaItalic {
+
+  & * {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .writingInstructionWrapper {
+    & * {
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+
+  .fr-element {
+    &.fr-view {
+      font-style: italic;
+    }
+  }
+
+  .fr-placeholder {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+.fr-wrapper {
+  height: 100%;
+  &.show-placeholder{
+    .fr-placeholder {
+      font-weight: normal;
+      font-style: italic;
+      color: $color-dark-5;
+      z-index: 1;
+      font-size: 13px;
+      height: inherit;
+    }
+  }
+}
+
+.froalaItalic {
+  &.froalaBold {
+    & * {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .writingInstructionWrapper {
+      & * {
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+
+    .fr-element {
+      &.fr-view {
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
+
+    .fr-placeholder {
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
+}
+
+.fr-element {
+  &.fr-view {
+    * {
+      font-size: inherit;
+      font-family: inherit;
+    }
+  }
+}

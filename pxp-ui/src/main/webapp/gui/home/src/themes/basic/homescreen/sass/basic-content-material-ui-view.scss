@@ -1,0 +1,1254 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+.contentEditMaterialUIContainer {
+  height: 100%;
+  &.leftPanelVisible {
+    width: calc(100% - 310px);
+  }
+
+  .contentHeaderSection {
+    padding: 10px 20px;
+    height: 40px;
+    width: 100%;
+    display: none;
+
+    .headerTitle {
+      text-align: center;
+      width: calc(100% - 30px);
+      line-height: 20px;
+      vertical-align: middle;
+      height: 20px;
+      float: left;
+      font-size: 15px;
+    }
+  }
+
+  .linkedContentsAndPanelWrapper {
+
+    .classVisiblitySelectionContainer {
+      float: left;
+    }
+
+    .addClassContainer {
+      float: right;
+    }
+
+    .lifeCycleStatusView {
+      border: 1px solid $color-light-4;
+      margin: 10px 10px 0 10px;
+
+      .customIcon{
+        position: relative;
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin: 10px 5px;
+
+        .imageSimpleViewNoImage{
+          background-size: 13px;
+        }
+      }
+
+      .sectionTitle {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 10px 10px 10px 3px;
+        width: calc(100% - 30px);
+        float: left;
+      }
+      .contentInformationSection{
+        /*padding-left: 10px;*/
+      }
+      .lifecycleTagsContainer {
+        display: inline-block;
+        width: 100%;
+        margin-left: 10px;
+
+        .tagsGroupContainer {
+          width: 100%;
+          float: left;
+
+       /*   .tagsSectionHeader {
+            float: left;
+            width: auto;
+            margin: 0 10px 0 1px;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 24px;
+          }*/
+
+          .rulerTagTypeView {
+            float: left;
+            margin: 4px 0px 6px 1px;
+
+            .rulerTagIconLabel {
+              height: 22px;
+              margin: 3px 5px;
+
+              .imageSimpleViewNoImage{
+                height: 22px;
+                width: 22px;
+                display: inline-block;
+                margin: 0;
+                border-radius: 50%;
+                float: left;
+                padding: 3px;
+                background-size: 11px;
+              }
+            }
+
+            .rulerTagIcon {
+              max-width:17px;
+              padding: 3px;
+            }
+
+            .rulerTagLabel {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+    .multiClassificationView {
+      overflow: hidden;
+      .classVisiblitySelectionContainer {
+        padding: 1px;
+        overflow: hidden;
+        float: left;
+
+        .classVisiblitySelectionItem {
+          float: left;
+          background-size: 12px;
+          margin: 2px 5px 2px 0;
+          cursor: pointer;
+          background-color: $color-light-5;
+          border-radius: 20px;
+
+          .classVisibilityIcon {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            background-color: #d6d6d6;
+            max-width: 100%;
+
+            .imageFitToContainerImage {
+              padding: 3px;
+            }
+
+            &.defaultIcon {
+              opacity: 0.6;
+            }
+
+            &.articleIcon {
+              @include background-properties($image-CS-Product-menu, 16px);
+            }
+
+            &.assetIcon {
+              @include background-properties($image-CS-ImageFile, 16px);
+            }
+
+            &.supplierIcon {
+              @include background-properties($image-CS-Truck, 16px);
+            }
+
+            &.targetIcon {
+              @include background-properties($image-CS-Goal, 16px);
+            }
+
+            &.textAssetIcon {
+              @include background-properties($image-CS-Overview, 16px);
+            }
+
+            &.smartDocumentTemplateIcon {
+              @include background-properties($image-CS-smart-document-template-icon, 16px);
+            }
+          }
+        }
+
+          .classVisibilityInitials {
+            font-size: 10px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            font-weight: 500;
+            margin: 0 10px;
+            height: 20px;
+            max-width: 200px;
+          }
+
+
+          .classSelection{
+            height: 20px;
+            width: 23px;
+            background-size: 14px;
+            position: relative;
+            display: inline-block;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            vertical-align: top;
+            margin-right: 3px;
+            background-position: 50% 50%;
+            background-image: url($image-CS-eye-black);
+
+            &.classDeselected {
+              width: 0;
+              opacity: 0.5;
+            }
+
+            &.noShow {
+              display: none;
+            }
+          }
+
+          &:hover {
+            .classDeselected {
+              width: 23px;
+            }
+          }
+
+          .removeClass {
+            height: 20px;
+            width: 15px;
+            background-size: 12px;
+            display: inline-block;
+            vertical-align: top;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            margin-right: 3px;
+            background-position: center;
+            background-image: url($image-CS-Cross);
+            transition: all .2s;
+            opacity: 0.5;
+
+            &:hover {
+              background-size: 14px;
+              transition: none;
+            }
+          }
+
+          &:hover {
+
+            .removeClass {
+              background-size: 14px;
+              opacity: 1;
+            }
+          }
+        }
+
+        &:hover {
+
+        }
+
+        .contextMenuContainer {
+          float: left;
+          .addClassItem {
+            height: 20px;
+            width: auto;
+            position: relative;
+            float: left;
+            display: inline-block;
+            background-size: 15px;
+            text-align: center;
+            background-repeat: no-repeat;
+            margin: 2px 5px 0px 0px;
+            cursor: pointer;
+            border: 1px solid #d2d2d2;
+            border-radius: 20px;
+            line-height: 18px;
+            padding: 0 10px 0 20px;
+            color: #9c9c9c;
+            font-size: 10px;
+            &:before {
+              content: '+';
+              width: 10px;
+              height: 10px;
+              font-size: 15px;
+              position: absolute;
+              left: 5px;
+              top: 0px;
+              color: #aaa;
+            }
+            &:hover {
+              color: #808080;
+              border-color: #9a9a9a;
+              &:before {
+                color: #808080;
+              }
+            }
+          }
+        }
+
+        .contextMenuContainer {
+          float: left;
+
+          .addNatureClassItem {
+            height: 20px;
+            width: auto;
+            position: relative;
+            float: left;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 20px;
+            line-height: 18px;
+            background-color: #666;
+
+            .addNatureClassItemLabel{
+              @include ellipsis();
+              float: left;
+              color: #FFF;
+              font-size: 10px;
+              padding: 0 10px;
+              font-weight: 500;
+              max-width: 250px;
+            }
+
+            .addNatureClassItemViewButton{
+              float: left;
+              height: 18px;
+              margin-left: 0px;
+              width: 0px;
+              cursor: pointer;
+              background-position: center;
+              background-size: 14px;
+              background-repeat: no-repeat;
+              @include background-properties-with-theme-white-color($image-CS-eye-black);
+              opacity: .4;
+              transition: all .2s;
+
+              &.buttonSelected{
+                opacity: 1;
+                margin-left: 5px;
+                width: 20px;
+              }
+
+              &.noShow{
+                display: none;
+              }
+            }
+
+            .addNatureClassDropDownButton{
+              float: left;
+              background-image: url($image-CS-expand-arrow-icon);
+              background-repeat: no-repeat;
+              background-size: 10px;
+              width: 15px;
+              height: 18px;
+              position: relative;
+              background-position: center;
+            }
+
+            /*&:hover {
+              border-color: #666;
+              background-color: #777;
+
+              .addNatureClassItemViewButton{
+                &.enableEyeHover{
+                  margin-left: 5px;
+                  width: 20px;
+                }
+              }
+            }*/
+
+            &.isDisabled {
+              padding: 0 10px 0 10px;
+              cursor: default;
+
+              &:before {
+                content: none;
+              }
+
+              &:hover {
+                background-color: #666;
+              }
+            }
+
+          }
+        }
+      }
+
+      .addClassContainer {
+        padding: 1px;
+        overflow: hidden;
+        float: left;
+      }
+    }
+
+    /*
+    .multiTaxonomyView {
+      overflow: hidden;
+      .taxonomySelectionContainer {
+        padding: 1px;
+        overflow: hidden;
+        float: left;
+
+        .taxonomySelectionItem  {
+          width: auto;
+          position: relative;
+          float: left;
+          display: inline-block;
+          background-size: 15px;
+          text-align: center;
+          background-repeat: no-repeat;
+          margin: 2px 5px 2px 0;
+          cursor: pointer;
+          background-color: $color-light-5;
+          border-radius: 20px;
+          .imageFitToContainerImage {
+            padding: 3px;
+          }
+
+          &:hover {
+            .removeClass {
+              opacity: 1;
+            }
+          }
+
+          .taxonomyIcon {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            background-color: #d6d6d6;
+          }
+
+          .taxonomyLabel {
+            font-size: 10px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 5px;
+            font-weight: 500;
+            max-width: 200px;
+          }
+        }
+        .contextMenuContainer {
+          float: left;
+          .addTaxonomyItem {
+            height: 20px;
+            width: auto;
+            position: relative;
+            float: left;
+            display: inline-block;
+            background-size: 15px;
+            text-align: center;
+            background-repeat: no-repeat;
+            margin: 2px 5px 0px 0px;
+            cursor: pointer;
+            border: 1px solid #d2d2d2;
+            border-radius: 20px;
+            line-height: 18px;
+            padding: 0 10px 0 20px;
+            color: #9c9c9c;
+            font-size: 10px;
+            &:before {
+              content: '+';
+              width: 10px;
+              height: 10px;
+              font-size: 15px;
+              position: absolute;
+              left: 5px;
+              top: -1px;
+              color: #aaa;
+            }
+          }
+        }
+      }
+
+      .addTaxonomyContainer {
+        padding: 1px;
+        overflow: hidden;
+      }
+      .removeClass {
+        height: 20px;
+        width: 15px;
+        background-size: 12px;
+        display: inline-block;
+        vertical-align: top;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        margin: 0 6px 0 0;
+        background-position: center;
+        background-image: url($image-CS-Cross);
+        transition: all .2s;
+        opacity: 0.5;
+      }
+    }
+    */
+
+    .templateDropDownContainer {
+      overflow: hidden;
+      margin-left: 20px;
+      float: left;
+
+      .templateListContainer {
+        height: 24px;
+        width: auto;
+        position: relative;
+        float: left;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        line-height: 24px;
+        padding-right: 6px;
+        border-radius: 15px;
+        background-color: #f1f1f1;
+
+        .templateIcon {
+          float: left;
+          border-radius: 50%;
+          height: 24px;
+          width: 24px;
+          cursor: pointer;
+          background-size: 14px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: #ddd;
+          background-image: url($image-CS-glasses);
+          opacity: 0.7;
+          filter: invert(1);
+        }
+
+        .activeTemplateLabel {
+          float: left;
+          font-size: 10px;
+          margin-left: 5px;
+          max-width: 200px;
+        }
+
+        .changeTemplateDropDownButton {
+          float: left;
+          background-image: url($image-CS-expand-arrow-icon);
+          background-repeat: no-repeat;
+          background-size: 10px;
+          width: 15px;
+          height: 15px;
+          position: relative;
+          background-position: center;
+          margin: 3px 0px 5px 5px;
+          filter: invert(70%);
+        }
+
+        &:hover {
+          background-color: #ccc;
+        }
+
+        &.disabled {
+          cursor: default;
+
+          &:before {
+            content: none;
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+
+          .changeTemplateDropDownButton {
+            display: none;
+          }
+
+        }
+
+      }
+    }
+
+    .addClassItem, .addTaxonomyItem, .addNatureClassItem {
+      overflow: hidden;
+
+      .addClassSelectionItem, .addTaxonomySelectionItem {
+        margin: 2px 0;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        float: left;
+
+        .addClassIcon, .addTaxonomyIcon {
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          float: left;
+          margin: 5px 0 5px 6px;
+          @include background-properties-with-theme-white-color($image-CS-Plus-32-black,16px);
+          opacity: .3;
+        }
+
+        .addClassLabel, .addTaxonomyLabel {
+          font-size: 12px;
+          line-height: 25px;
+          margin: 0 10px;
+          color: #aaa;
+          font-weight: 200;
+          float: left;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .smallTaxonomyViewContainer {
+      display: inline-block;
+      width: 100%;
+      .taxonomyDataWrapper {
+        /*display: inline-block;
+        width: 100%;*/
+        /*max-height: 120px;
+        overflow: auto;*/
+        .selectedTaxonomyWrapper {
+          width: 100%;
+          display: inline-block;
+          vertical-align: top;
+          .addedClassificationListWrapper {
+
+            .taxonomySelectionItem  {
+              width: auto;
+              position: relative;
+              float: left;
+              display: inline-block;
+              background-size: 15px;
+              text-align: center;
+              background-repeat: no-repeat;
+              margin: 2px 5px 2px 0;
+              cursor: pointer;
+              background-color: $color-light-5;
+              border-radius: 20px;
+              height: 24px;
+
+              .imageFitToContainerImage {
+                padding: 3px;
+              }
+
+              &:hover {
+                .removeClass {
+                  opacity: 1;
+                }
+              }
+
+              .taxonomyIcon {
+                height: 24px;
+                width: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                background-color: #d6d6d6;
+              }
+
+              .taxonomyLabel {
+                font-size: 12px;
+                line-height: 24px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 8px;
+                font-weight: normal;
+                height: 20px;
+                max-width: 200px;
+
+                &.isDisabled {
+                  padding: 0 10px 0 10px;
+                }
+              }
+
+              .removeClass {
+                height: 20px;
+                width: 15px;
+                background-size: 12px;
+                display: inline-block;
+                vertical-align: top;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                margin: 0 6px 0 0;
+                background-position: center;
+                background-image: url($image-CS-Cross);
+                transition: all .2s;
+                opacity: 0.5;
+              }
+
+              &.withRemoveIcon{
+              }
+            }
+          }
+
+          .furtherClassificationListWrapper {
+            /*.furtherClassificationWrapper {
+              .furtherClassificationHandler {
+                height: 20px;
+                width: auto;
+                position: relative;
+                float: left;
+                display: inline-block;
+                background-size: 15px;
+                text-align: center;
+                background-repeat: no-repeat;
+                margin: 2px 5px 0px 0px;
+                cursor: pointer;
+                border: 1px solid #d2d2d2;
+                border-radius: 20px;
+                line-height: 18px;
+                padding: 0 6px 0 7px;
+                color: #9c9c9c;
+                font-size: 10px;
+              }
+            }*/
+            .taxonomyHandlerWrapper {
+              float: left;
+              .addItemHandler {
+                border: 1px solid #d2d2d2;
+                border-radius: 20px;
+                line-height: 18px;
+                font-size: 10px;
+                height: 20px;
+                width: auto;
+                position: relative;
+                float: left;
+                display: inline-block;
+                text-align: center;
+                margin: 2px 3px 0 0;
+                cursor: pointer;
+                padding: 0 20px 0 10px;
+                color: #aaa;
+                background-color: #fff;
+
+                &:hover {
+                  color: #808080;
+                  border-color: #9a9a9a;
+                }
+                &:before{
+                  content: '';
+                  background-image: url($image-CS-expand-arrow-icon);
+                  background-repeat: no-repeat;
+                  background-size: 10px;
+                  width: 15px;
+                  height: 15px;
+                  font-size: 15px;
+                  position: absolute;
+                  right: 2px;
+                  top: 2px;
+                  background-position: 2px 2px;
+                  filter: invert(50%);
+                }
+              }
+            }
+          }
+        }
+      }
+      .taxonomyHandler {
+        overflow: hidden;
+        .taxonomyHandlerWrapper {
+          float: left;
+          .addItemHandler {
+            height: 20px;
+            width: auto;
+            position: relative;
+            float: left;
+            display: inline-block;
+            background-size: 15px;
+            text-align: center;
+            background-repeat: no-repeat;
+            margin: 2px 5px 0px 0px;
+            cursor: pointer;
+            border: 1px solid #d2d2d2;
+            border-radius: 20px;
+            line-height: 18px;
+            padding: 0 10px 0 20px;
+            color: #9c9c9c;
+            font-size: 10px;
+            &:before {
+              content: '+';
+              width: 10px;
+              height: 10px;
+              font-size: 15px;
+              position: absolute;
+              left: 5px;
+              top: 0px;
+              color: #aaa;
+            }
+            &:hover {
+              color: #808080;
+              border-color: #9a9a9a;
+              &:before {
+                color: #808080;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*
+    .variantTagSummaryViewContainer{
+      display: inline-block;
+      width: 100%;
+
+      .variantContextLabel{
+        float: left;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px;
+      }
+
+      .variantContextTagsContainer{
+        float: left;
+        display: inline-block;
+
+        .entityTagsSummaryView{
+          .noTagsGrey{
+            font-size: 10px;
+            background: rgb(241, 241, 241);
+            border-radius: 15px;
+            padding: 4px 10px;
+            margin: 3px 0px;
+            !* text-transform: uppercase; *!
+          }
+        }
+      }
+
+      .threeDots{
+        float: left;
+        display: inline-block;
+      }
+
+      .variantTagsEditButton{
+        height: 24px;
+        width: 24px;
+        background-image: url($image-CS-Edit-32);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 2px;
+        float: left;
+        opacity: .7;
+        background-color: #eee;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+
+    }
+    */
+
+  }
+
+  .contentEditMaterialLinkScrollContainer {
+    width: 100%;
+    height: 100%;
+
+    &.rightPanelVisible {
+      width: calc(100% - 300px);
+      float: left;
+      height: 100%;
+    }
+  }
+
+ /* .rightPanelContainer {
+    width: 300px;
+    float: left;
+    height: 100%;
+
+    .contentScreenRightPanel {
+      height: 100%;
+    }
+  }*/
+
+  /*  .basicInfo {
+      height: 550px;
+      margin: 10px 20px;
+      padding: 20px;
+      background: linear-gradient(45deg, rgb(255, 255, 255), rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3));
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    }
+
+    .targeting {
+      height: 550px;
+      margin: 10px 20px;
+      padding: 20px;
+      background: linear-gradient(45deg, rgb(255, 255, 255), rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3));
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    }
+
+    .collaborators {
+      height: 550px;
+      margin: 10px 20px;
+      padding: 20px;
+      background: linear-gradient(45deg, rgb(255, 255, 255), rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3));
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    }
+
+    .timeline {
+      height: 550px;
+      margin: 10px 20px;
+      padding: 20px;
+      background: linear-gradient(45deg, rgb(255, 255, 255), rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0.3));
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    }*/
+
+  /*  .linkedContents .linkedElement:last-child {
+      height: auto !important;
+    }*/
+
+  .linkedElement:last-child {
+    margin-bottom: 15px;
+  }
+
+  .addItem {
+    height: 25px;
+    width: 35px;
+    padding: 4px;
+    text-align: center;
+    font-size: 11px;
+    box-shadow: 0 0 0 1px #ccc;
+    cursor: pointer;
+    margin: 4px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  .duplicateAssetsTabViewWrapper{
+    height: 100%;
+    width: 100%;
+      .contentFilterViewContainer{
+        display: none;
+      }
+  }
+
+
+.contextMenuIcon {
+  height: 16px;
+  width: 16px;
+  -webkit-background-size: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+
+  &.articleFolder {
+    background-image: url($image-CS-Books-52);
+  }
+
+  &.articleContent {
+    background-image: url($image-CS-Book-52);
+  }
+
+}
+
+/*.addClassDropDownContainer {
+  width: 200px;
+  height: auto;
+
+  .addClassDropDownItem {
+    padding: 4px 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #bbb;
+      color: #fff;
+    }
+  }
+}
+
+.addTaxonomyDropDownContainer {
+  width: 200px;
+  height: auto;
+
+  .addTaxonomyDropDownItem {
+    padding: 4px 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #bbb;
+      color: #fff;
+    }
+  }
+}
+
+.variantEditDialog {
+  height: 100%;
+
+  > div {
+    height: 100%;
+  }
+
+  .variantEditDialogContent {
+    height: 80%;
+    max-width: none !important;
+
+    > div {
+      height: 100%;
+    }
+
+    .variantEditDialogBody {
+      border-radius: 3px;
+      padding: 0 !important;
+      height: calc(100% - 102px);
+      max-height: 100% !important;
+    }
+  }
+}*/
+
+/*
+.variantEditSectionContainer {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  $headerHeight: 32px;
+
+  .variantEditHeader {
+    height: $headerHeight;
+    width: 100%;
+    background-color: #eee;
+
+    .variantEditHeaderLabel {
+      width: 100%;
+      height: 20px;
+      line-height: 32px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .closeButton {
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      opacity: .6;
+      background-position: 50%;
+      background-size: 22px;
+      background-image: url($image-CS-Cross);
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-size: 24px;
+      }
+    }
+  }
+
+  .variantSummaryEditSection {
+    width: 100%;
+    overflow: auto;
+    padding: 0 20px;
+  }
+}
+*/
+
+.variantTagsEditContainer{
+
+  height: 100%;
+  width: 100%;
+
+  overflow: auto;
+  padding: 16px 24px 0 24px;
+}
+
+.variantSectionViewVariantLabelAndDateFieldsContainer{
+
+  height: 50px;
+
+
+  float: left;
+  width: 100%;
+  border: 1px solid #dadada;
+  background-color: white;
+
+  .variantDateLabelContainer{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    .variantSectionViewVariantLabelDateKey{
+      line-height: 50px;
+      margin: 0 10px 0 20px;
+      float: left;
+    }
+
+
+    .variantDateFieldWrapper{
+      margin: 2px;
+      float: left;
+      width: 80%;
+      .customDatePickerWrapper {
+        width: 120px;
+        /*top: 7px;*/
+        .customDatePicker {
+          &.datePickerCustom {
+            width: 100%;
+            input {
+              padding: 0;
+            }
+          }
+        }
+        .infinityButton {
+          background-position: center;
+          right: 0;
+          position: absolute;
+        }
+        .customDatePickerEmptyButton{
+          background-position: center;
+          left: 80px;
+        }
+        &.disabled {
+          .infinityButton {
+            top: 0px;
+          }
+          .customDatePickerDisabledValue{
+            padding: 0;
+            font-size: 12px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*
+.variantLinkedInstanceContainer {
+  overflow: hidden;
+  max-width: 100%;
+
+  .variantLinkedInstanceLabel {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #777;
+    cursor: default;
+  }
+
+  .variantLinkedInstanceBody {
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    max-width: calc(100% - 100px);
+
+    .circledVariantLinkedInstanceNodeViewContainer {
+      float: left;
+      text-align: center;
+      cursor: default;
+      width: 60px;
+
+      .nodeVariantImageCircleContainer {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        margin: 2px 0;
+        border-color: #d8d8d8;
+        border-style: solid;
+        border-width: thin;
+
+        .variantLinkedInstanceImageWrapper {
+          overflow: hidden;
+          height: 36px;
+          width: 36px;
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+
+          .imageFitToContainer {
+            .imageFitToContainerImage {
+
+            }
+          }
+
+          .defaultVariantLinkedImage {
+            height: 25px;
+            width: 25px;
+            background-size: cover;
+            display: inline-block;
+            margin-top: 3px;
+            opacity: 0.4;
+            background-image: url($image-CS-ImageFile);
+          }
+        }
+
+        .variantInstanceRemoveImage {
+          height: 12Px;
+          width: 12px;
+          background: url($image-CS-Cancel-52) no-repeat;
+          background-size: cover;
+          position: absolute;
+          right: -2px;
+          z-index: 1;
+          top: -2px;
+          opacity: 0.6;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+
+        }
+
+      }
+
+      .nodeVariantTextContainer {
+        text-align: center;
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .variantLinkedInstanceControl {
+      float: left;
+      line-height: 60px;
+      vertical-align: top;
+      .addVariantInstanceHandle {
+        color: #aaa;
+        border: 1px solid;
+        line-height: 25px;
+        display: inline-block;
+        padding: 0 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover {
+          background-color: #efefef;
+          color: #777;
+        }
+      }
+    }
+
+  }
+
+}*/

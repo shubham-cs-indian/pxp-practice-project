@@ -1,0 +1,248 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+$spacing: 10px;
+$border-radius: 3px;
+$border-color: $color-light-15;
+
+.treeViewWrapper {
+  border: 1px solid $color-light-4;
+  border-radius: $border-radius;
+  height: 100%;
+
+  .treeSearchBarContainer {
+    padding: $spacing;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    height: 50px;
+    background: $color-light-11;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    .simpleSearchBarView {
+      height: 29px;
+      width: 100%;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+    }
+  }
+
+  .treeLevelContainer {
+    height: calc(100% - 50px);
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .treeWrapper {
+      height: 100%;
+      padding: 10px 20px;
+      width: max-content;
+
+      @-moz-document url-prefix() {
+        width: -moz-max-content;
+      }
+
+      .treeLevel {
+        width: 230px;
+        height: 100%;
+        margin-right: $spacing;
+        border-right: 1px solid $color-light-4;
+        float: left;
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        .levelHeader {
+          font-size: $font-normal;
+          font-weight: 500;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 5px;
+        }
+
+        .levelListItems {
+          height: 100%;
+
+          &.withHeader {
+            height: calc(100% - 30px);
+          }
+
+          .treeLevelView {
+            margin-right: 10px;
+          }
+        }
+
+        .treeNode {
+          height: 30px;
+          padding: 0 3px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 2px;
+
+          .treeNodeIcon {
+            height: 100%;
+            width: 20px;
+            background-color: transparent;
+
+            &.isDisabled {
+              opacity: 0.5;
+              cursor: not-allowed;
+            }
+
+            &.majorTaxonomy {
+              @include background-properties($image-Letter-M-26, 11px);
+            }
+
+            &.minorTaxonomy {
+              @include background-properties($image-CS-Letter-M--small, 13px);
+            }
+            &.leftSideButton {
+              &.checked {
+                @include background-properties($image-checked-checkbox-without-border-radius, 17px);
+              }
+
+              &.unChecked {
+                @include background-properties-with-theme-light-gray-color($image-CS-Unchecked-Checkbox-48-Material, 17px);
+              }
+            }
+          }
+
+          .rightSideActionButton {
+            display: flex;
+            justify-content: flex-end;
+            width: 60px;
+            .treeNodeIcon {
+              height: 100%;
+              width: 20px;
+              background-color: transparent;
+
+              &.isDisabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+              }
+
+              &.rightSideButton {
+                &.expanded {
+                  opacity: 0.7;
+                  @include background-properties($image-CS-arrow-forward, 15px);
+                }
+
+                &.added {
+                  @include background-properties-with-theme-green-color($image-CS-Plus-32-black, 15px);
+                }
+
+                &.removed {
+                  @include background-properties-with-theme-red-color($image-CS-Minus-32-Black, 15px);
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .addButtonIcon {
+              @include background-properties($image-CS-Plus-32-black, 15px);
+            }
+            .removeButtonIcon {
+              @include background-properties($image-CS-Minus-32-Black, 15px);
+            }
+          }
+
+          &.selected {
+            background-color: $color-light-blue;
+          }
+
+          .imageFitToContainer {
+            width: 22px;
+            height: 22px;
+            position: relative;
+            background: $color-light-11;
+            border-radius: 50%;
+            margin: 4px 3px;
+            float: left;
+
+            img {
+              max-width: 70%;
+              max-height: 70%;
+            }
+          }
+
+          .treeNodeIconLabelDOM {
+            height: 100%;
+            width: calc(100% - 80px);
+            display: flex;
+
+            .treeNodeIcon {
+              &.customIcon {
+                background: $color-light-8;
+                border-radius: 50%;
+                margin: 4px 3px;
+                height: 22px;
+                width: 22px;
+                opacity: 0.7;
+              }
+
+              &.articleIcon {
+                @include background-properties($image-CS-Product-menu, 16px);
+              }
+
+              &.assetIcon {
+                @include background-properties($image-CS-ImageFile, 16px);
+              }
+
+              &.supplierIcon {
+                @include background-properties($image-CS-Truck, 16px);
+              }
+
+              &.targetIcon {
+                @include background-properties($image-CS-Goal, 16px);
+              }
+
+              &.textAssetIcon {
+                @include background-properties($image-CS-Overview, 16px);
+              }
+
+              &.smartDocumentTemplateIcon {
+                @include background-properties($image-CS-smart-document-template-icon, 16px);
+              }
+
+              &.actionItemAttributionTaxonomy {
+                @include background-properties($image-CS-group-objects, 16px);
+              }
+            }
+
+            .treeNodeLabel {
+              height: 100%;
+              width: calc(100% - 28px);
+              color: $color-dark-6;
+              font-size: $font-normal;
+              opacity: 1;
+              float: left;
+              line-height: 30px;
+              padding-left: 2px;
+              @include ellipsis();
+
+              .highLightedTextValue {
+                background-color: $color-yellow;
+                padding: 5px 0;
+              }
+            }
+          }
+        }
+
+        .loadMore {
+          background: none;
+          font-style: italic;
+          font-size: $font-small;
+          color: $color-dark-8;
+          padding: $spacing 0;
+          height: 30px;
+          text-transform: capitalize;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+  @supports (-webkit-hyphens:none) { .treeLevelContainer { height :calc(100vh - 50vh) } }
+}

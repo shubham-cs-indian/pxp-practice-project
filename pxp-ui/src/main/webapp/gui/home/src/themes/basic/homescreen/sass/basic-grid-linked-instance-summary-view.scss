@@ -1,0 +1,55 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+
+.gridLinkedInstanceSummaryView {
+  height: 100%;
+  width: 100%;
+  .multiSelectSearchViewWrapper .multiSelectSearchView .multiSelectSummary {
+    //width: calc(100% - 35px);
+    .selectedItems .selectedItemLabel {
+      cursor: unset;
+    }
+  }
+  .multiSelectNothingSelected{
+    display: none;
+  }
+
+  .multiSelectSearchViewWrapper {
+    width: calc(100% - 27px);
+    float: left;
+    height: 100%;
+
+    .multiSelectSearchView {
+      .multiSelectSummary {
+        width: calc(100% - 35px);
+        .selectedItems {
+         .selectedItemLabel {
+           margin: 0;
+           width: calc(100% - 20px);
+           padding: 0 5px 0 10px;
+         }
+        }
+        .moreSection {
+          position: absolute;
+          right: 30px;
+          top: 3px;
+          margin: 0;
+          .moreLabel {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .gridLinkedInstanceSummaryAddButton {
+    @include background-properties($image-CS-Plus-32-black, 18px, center top);
+    height: 18px;
+    width: 18px;
+    opacity: 1;
+    float: right;
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,449 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$basic-z1-height: 118px;
+
+.thumbnailTemplateViewNewWrapper {
+  height: 100%;
+  cursor: pointer;
+  border: solid 1px $color-light-4;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .thumbnailTemplateViewContainer {
+    height: 100%;
+
+    &.basicTemplateContainerZoom1 {
+      height: $basic-z1-height;
+      width: 100%;
+      position: relative;
+
+      .imageContainer {
+        height: 100%;
+        position: relative;
+        width: 35%;
+        overflow: hidden;
+        float: left;
+        border-right: solid 1px $color-light-4;
+        border-bottom: none;
+      }
+
+      .thumbnailFooterViewWrapper {
+        height: 100%;
+        float: left;
+        width: 65%;
+
+        .thumbnailTemplateClassAndContentName {
+          .entityClassNameText {
+            line-height: 20px;
+            max-width: calc(100% - 65px);
+            @include ellipsis();
+          }
+        }
+
+      }
+    }
+  }
+
+  &:hover {
+
+    .thumbnailTemplateViewContainer {
+
+      .thumbnailTemplateHeaderView {
+
+        .thumbnailCheckButtonIcon, .thumbnailRadioButtonIcon {
+          opacity: 1;
+        }
+      }
+
+      .thumbnailFooterViewWrapper {
+
+        .entityClassName {
+        }
+
+        .thumbnailActionItemWrapper {
+        }
+      }
+
+      &.basicTemplateContainerZoom1 {
+
+        .thumbnailTemplateHeaderView {
+
+          .thumbnailCheckButtonIcon .thumbnailRadioButtonIcon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.selected {
+    border: solid 1px $color-theme-accent;
+
+    .thumbnailTemplateViewContainer {
+      .imageContainer {
+        border-bottom: solid 1px $color-theme-accent;
+      }
+    }
+
+    .basicTemplateContainerZoom1 {
+      .imageContainer {
+        border-right: solid 1px $color-theme-accent;
+      }
+    }
+
+  }
+}
+
+.imageContainer {
+  height: calc(100% - 110px);
+  position: relative;
+  border-bottom: solid 1px #ddd;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+
+  .imageSimpleViewImage  {
+    max-height: 100%;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    //left: 0;
+    //right: 0;
+  }
+}
+
+.thumbnailTemplateHeaderView {
+
+  overflow: hidden;
+  background-color: $color-light-1;
+
+  .thumbnailRadioButtonIcon {
+    opacity: 0;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 5px;
+    &.isSelected {
+      opacity: 1;
+    }
+  }
+
+  .thumbnailCheckButtonIcon {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    //background-color: $color-light-1;
+    background-color: transparent;
+    @include background-properties-with-gray-color($image-cs-checkbox-unchecked, 20px);
+    &:hover {
+    }
+
+    &.isSelected {
+      box-shadow: none;
+      opacity: 1;
+      /*height: 17px;
+      width: 17px;*/
+      @include background-properties($image-cs-checkbox-checked, 20px);
+
+      //@include background-properties-with-theme-color($image-thumbnail-checked-checkbox, 20px);
+      &:hover {
+      }
+    }
+  }
+
+  &.isSelected {
+  }
+}
+
+.thumbnailInformationIndicators {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  overflow: hidden;
+  z-index: 1;
+
+  .thumbnailInformationIndicatorsIcon {
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    float: left;
+    margin: 2px;
+    color: $color-light-1;
+    line-height: 16px;
+    font-size: $font-small;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+
+    &.recentlyUpdatedContent {
+      background-color: $color-orange;
+
+    }
+
+    &.newlyCreatedContent {
+      background-color: $color-theme-accent;
+
+    }
+
+    &.creationLanguageInitials {
+      background: #333;
+      text-transform: uppercase;
+      font-size: 8px;
+    }
+  }
+
+}
+
+.thumbnailFooterViewWrapper {
+  height: 110px;
+  padding: 7px;
+
+  .thumbnailTemplateClassAndContentName {
+    height: calc(100% - 25px);
+    padding-left: 5px;
+    text-align: left;
+
+    .entityClassName {
+
+      .entityClassIcon {
+
+        &.fixedBundle {
+        }
+        &.singleArticle {
+        }
+
+        &.setOfProducts {
+        }
+
+        &.pidSku {
+        }
+
+        &.imageAsset {
+        }
+        &.documentAsset {
+        }
+        &.videoAsset {
+        }
+        &.market {
+        }
+
+        &.supplier {
+        }
+        &.textAsset {
+        }
+        &.productCatalog {
+        }
+      }
+
+      .userDefinedIcon {
+        height: 25px;
+        width: 25px;
+        float: left;
+        padding: 4px;
+
+        .imageFitToContainer {
+          & > img {
+            max-height: 100%;
+            max-width: 100%;
+            position: unset;
+            vertical-align: baseline;
+            transform: none;
+          }
+        }
+      }
+
+      .entityClassNameText {
+        font-size: $font-small;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 15px;
+        max-width: 210px;
+      }
+    }
+
+    .thumbnailTemplateName {
+      overflow: hidden;
+      display: -webkit-box;
+      font-weight: 500;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      height: 40px;
+      padding-top: 5px;
+      &.isSelected {
+      }
+    }
+  }
+}
+
+.thumbnailActionItemAndInformationView {
+  overflow: hidden;
+  margin: 0 -2px -2px 0;
+  width: 100%;
+
+  .thumbnailInformationView {
+    /*width: 40%;
+    opacity: 0.7;
+    position: absolute;
+    right: 0;
+    height: 30px;
+    padding: 0 10px 10px 5px;
+    vertical-align: top;*/
+    float: right;
+    &:hover {
+      opacity: 1;
+    }
+
+    .thumbnailInformationContainer {
+      /*right: 0;
+      padding: 0px 10px 2px 5px;*/
+      display: inline-flex;
+      overflow: hidden;
+
+      .thumbInfo {
+        width: 25px;
+        height: 25px;
+      }
+
+      .entityInformationIconIndicator{
+        .entityInformationIcon {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .cloneOfContainer {
+        background-size: 18px;
+      }
+
+      .ruleViolationCount {
+        float: left;
+        margin: 2px 2px 2px 0;
+
+        .totalRuleViolation {
+          width: 22px;
+          height: 22px;
+
+          .totalRuleViolationColor {
+            background-size: 22px;
+          }
+
+          .totalRuleViolationCount {
+            //top: 2px;
+            font-size: $font-micro;
+            line-height: 26px;
+            width: 22px;
+          }
+        }
+
+      }
+    }
+  }
+  .thumbnailActionItemWrapper {
+    overflow: hidden;
+    float: left;
+
+    .ThumbnailActionItemContainer {
+      float: left;
+      .thumbnailActionButton {
+        float: right;
+        height: 25px;
+        width: 25px;
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        opacity: 0.7;
+
+        &.thumbnailRemoveButton {
+          @include background-properties($image-CS-Cross, 18px);
+          &:hover {
+            opacity: 1;
+          }
+        }
+        &.thumbnailDeleteButton {
+          @include background-properties($image-CS-delete-bin-black, 18px);
+
+          &:hover {
+            opacity: 1;
+          }
+
+        }
+
+        &.thumbnailCreateVariantButton {
+          @include background-properties($image-exchange-slots, 18px);
+
+          &:hover {
+            opacity: 1;
+          }
+
+        }
+
+        &.thumbnailCloneButton {
+          @include background-properties($image-CS-create-clone, 18px);
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.thumbnailEditRelationshipVariantButton {
+          @include background-properties($image-CS-Edit-32, 15px);
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.thumbnailPreviewButton {
+          @include background-properties($image-CS-eye-black, 18px);
+          &:hover {
+            opacity: 1;
+          }
+
+        }
+
+        &.thumbnailDownloadButton {
+          @include background-properties-with-theme-white-color($image-CS-download-black,15px);
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.thumbnailRestoreButton {
+          @include background-properties($image-CS-Restart-26, 15px, center);
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .thumbnailAddToCollectionContainer {
+        float: right;
+
+        .staticCollectionListContainer {
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          transition: all .2s;
+          opacity: 0.7;
+          @include background-properties($image-CS-collection-static-collection-new, 18px);
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+

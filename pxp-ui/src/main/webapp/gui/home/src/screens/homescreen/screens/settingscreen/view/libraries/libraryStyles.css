@@ -1,0 +1,140 @@
+.dropDownListView {
+    position: absolute;
+    width: calc(100% - 2px);
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    cursor: default;
+    font-size: 13px;
+    margin-top: 0px;
+    outline: none;
+    padding: 6px 0;
+    z-index: 10;
+    overflow: auto;
+}
+
+.dropDownListView.dropDownItemHidden {
+    display: none;
+}
+
+.dropDownListView .dropDownNodeContainer {
+    height: auto;
+    line-height: normal;
+    color: #333;
+    padding: 5px;
+}
+
+.dropDownListView .dropDownNodeContainer:hover {
+    background-color: #eee;
+}
+
+.searchBarView {
+    width: 100%;
+    height: 34px;
+    /* border-radius: 5px; */
+    position: relative;
+    box-shadow: 0 1px 1px 0 #D0D0D0;
+    padding: 5px;
+    color: #9CA7AD;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.searchBarView .searchBarContainer .selectedItems, .searchBarView .searchBarContainer .singleSelectedItem {
+    width: auto;
+    height: 22px;
+    margin: 2px 4px 2px 2px;
+    background-color: #f5f5f5;
+    border: 1px solid #d9d9d9;
+    cursor: default;
+    white-space: nowrap;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px;
+}
+
+.searchBarView .searchBarContainer .selectedItems:hover, .searchBarView .searchBarContainer .singleSelectedItem:hover {
+    border-color: #b9b9b9;
+}
+
+.searchBarView .searchBarContainer .selectedItems:hover .crossIcon, .searchBarView .searchBarContainer .singleSelectedItem:hover .crossIcon {
+    width: 14px;
+    opacity: .5;
+}
+
+.searchBarView .searchBarContainer .selectedItems .selectedItemsNameContainer, .searchBarView .searchBarContainer .selectedItems .disabledMultiSearch, .searchBarView .searchBarContainer .singleSelectedItem .selectedItemsNameContainer, .searchBarView .searchBarContainer .singleSelectedItem .disabledMultiSearch {
+    height: 100%;
+    width: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    color: #555;
+}
+
+.searchBarView .searchBarContainer .selectedItems .disabledMultiSearch, .searchBarView .searchBarContainer .singleSelectedItem .disabledMultiSearch {
+    color: #b9b9b9;
+}
+
+.searchBarView .searchBarContainer .selectedItems .crossIcon, .searchBarView .searchBarContainer .singleSelectedItem .crossIcon {
+    display: inline-block;
+    width: 0;
+    height: 15px;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s ease-out;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABKElEQVRYR+2W3ZHCMAyEZbsAKOGoAI3TwJXAdQAVARVACXTAVZBxKVBAJCYMYTJMgiWbnxfnNYr2y8rKxsCXL/NlfSgAxYHiQNQBRJw6547MvK3rei9Z26qqFsy8JqK/EEJ49kwUwHsfjDHztgkzr2IQ3vulMWZ3qz8R0SyEcBqDkADcG8Yg+uKx2g4oCtAWShpLaoZcEAHEIFLF275igDGIa5PbzKW2951QAQxB9JtJDunjGNQAYxAp4uoRdPSPM0+xXrUFfduGxLv7KS6oRjB02j92CJ+t2tvXUCIgqUn6EGkaa2rFh1AbRoj465w7AMAEAM5N0/xkhVEbx9bafwDYxJKweytERGvtgYgW2XEsyf+cGtUa5ggl/w+8QzQrjF4NVEZQHLgA1ozdITzy/2AAAAAASUVORK5CYII=) no-repeat 0;
+    background-size: 12px;
+}
+
+.searchBarView .searchBarContainer .selectedItems .crossIcon:hover, .searchBarView .searchBarContainer .singleSelectedItem .crossIcon:hover {
+    opacity: 1;
+}
+
+.searchBarView .searchBarContainer .singleSelectedItem {
+    background-color: transparent;
+    border: none;
+}
+
+.searchBarView .searchBarContainer .multiSearchInputBox {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    overflow: visible;
+    color: #555;
+    padding: 0 5px;
+    font-weight: normal;
+    height: 19px;
+    margin: 4px 1px;
+}
+
+.searchBarView .searchBarContainer .crossIcon {
+    text-align: center;
+}
+
+.searchBarView .searchBarContainer .moreCounter {
+    width: auto;
+    margin: 2px;
+    float: right;
+    padding: 3px;
+    height: 22px;
+    display: none;
+}
+
+.searchBarView .searchBarContainer .moreCounter .selectedItemsNameContainer, .searchBarView .searchBarContainer .moreCounter .disabledMultiSearch {
+    display: inline-block;
+    float: right;
+    padding: 0 2px 0 2px;
+    margin: 1px;
+    font-size: 11px;
+    font-weight: normal;
+    color: #555;
+}
+
+.searchBarView .searchBarContainer .moreCounter .disabledMultiSearch {
+    color: #b9b9b9;
+}

@@ -1,0 +1,92 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.breadcrumbViewContainer {
+  display: flex;
+  vertical-align: top;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  background-color: $color-light-1;
+  box-shadow: 0 0 0 1px $color-light-4;
+
+  .breadCrumbView {
+    margin-left: 14px;
+    height: 45px;
+    overflow: hidden;
+    float: left;
+    line-height: 45px;
+    flex: 1;
+
+    & * {
+      font-size: $font-normal;
+      color: $color-dark-4;
+    }
+
+    .breadcrumbContainer {
+      display: flex;
+      .breadcrumbItem {
+        position: relative;
+        float: left;
+        cursor: pointer;
+        font-weight: 500;
+
+        @include ellipsis();
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:first-child {
+          min-width: min-content;
+        }
+
+        &:last-child {
+          text-decoration: none;
+          cursor: default;
+          text-shadow: 0 0 0 $color-dark-4;
+
+          .breadcrumbLabel {
+            max-width: none;
+            font-size: 12px;
+            float: left;
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+
+        &.disabled {
+          text-decoration: none;
+          cursor: default;
+          text-shadow: 0 0 0 $color-dark-4;
+        }
+      }
+
+      .contextMenuViewNewContainer {
+        float: left;
+        position: relative;
+      }
+
+      .breadcrumbItemSeparator {
+        width: 9px;
+        height: 9px;
+        opacity: 0.6;
+        margin: 18px 8px;
+        flex-shrink: 0;
+        @include background-properties($image-CS-arrow-forward);
+      }
+    }
+  }
+  .upperSectionToolbarContainer {
+    height: 45px;
+    display: flex;
+    background-color: $color-light-1;
+    padding: 8px;
+  }
+  .leftSectionToolbarContainer {
+    padding: 10px 8px;
+    float: left;
+  }
+}

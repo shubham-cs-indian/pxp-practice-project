@@ -1,0 +1,318 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.taxonomyMasterListConfigView {
+  //height: calc(100% - 30px);
+  height: 100%;
+
+  & > div {
+    vertical-align: middle;
+  }
+
+  .taxonomyDetailViewContainer {
+    height: calc(100% - 50px);
+    padding: 0px;
+    overflow: hidden;
+    .nothingFoundMessage {
+      padding: 0 8px 0 8px;
+      text-align: center;
+      font-size: 11px;
+      font-style: italic;
+      color: $color-dark-5;
+      line-height: 24px;
+    }
+
+    $saveBarHeight: 40px;
+    .attributionTaxonomyDetailView {
+      transition: height 0.5s;
+      border: 1px solid #ddd;
+      position: relative;
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: auto;
+      float: left;
+      height: 100%;
+      scrollbar-width: thin;
+      &.dirty {
+        height: calc(100% - #{$saveBarHeight});
+      }
+    }
+
+    .saveBar {
+      height: 0;
+      width: 100%;
+      transition: height 0.5s;
+      padding: 0;
+      overflow: hidden;
+
+      .saveBarButtonsWrapper {
+        float: right;
+      }
+
+      &.dirty {
+        height: $saveBarHeight;
+        padding: 5px;
+        width: 100%;
+        background-color: #cccccc;
+        float: left;
+      }
+    }
+  }
+  .taxonomyMasterTagContainer {
+    max-width: 100%;
+  }
+  .taxonomyMasterListContainer {
+    max-width: 50%;
+  }
+  .languageTaxonomyListContainer {
+    max-width: 100%;
+  }
+  .taxonomyMasterListContainer,.taxonomyMasterTagContainer,.languageTaxonomyListContainer {
+    border: 1px solid #ddd;
+    position: relative;
+    height: calc(100% - 50px);
+    float: left;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .contextMenuViewNewContainer {
+      display: inline-block;
+      width: 200px;
+      height: 25px;
+      vertical-align: top;
+
+     .addNewLevelView {
+       width: 200px;
+       height: 40px;
+       opacity: 0.4;
+       margin: 10px 0;
+       cursor: pointer;
+       .addNewLevelLabel {
+         width: 127px;
+         float: left;
+         line-height: 25px;
+         height: 100%;
+         margin-left: 20px;
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         text-align: center;
+       }
+
+       .addNewLevelButton {
+         width: 40px;
+         height: 100%;
+         @include background-properties($image-CS-Plus-32-black,18px,95% 0px);
+         opacity: 0.4;
+         float: left;
+       }
+       &:hover {
+         opacity: 0.8;
+       }
+     }
+    }
+
+    .taxonomyLevelView {
+      width: 200px;
+      border-right: 1px solid #ddd;
+      padding: 0 5px;
+      height: 100%;
+      position: relative;
+      display: inline-block;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .levelHeader {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #ddd;
+
+        .levelLabel {
+          text-align: center;
+          padding: 10px 0;
+          width: calc(100% - 20px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        .levelActionItems {
+          top: 11px;
+          right: 10px;
+          position: absolute;
+
+          .levelActionItem {
+            float: right;
+            width: 18px;
+            height: 18px;
+            background-size: 18px;
+            cursor: pointer;
+
+            &.create {
+              @include background-properties-with-gray-color($image-CS-Plus-32-black);
+            }
+
+            &.delete {
+              @include background-properties($image-CS-delete-bin-black);
+              opacity: 0.5;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      .levelChildren {
+        height: calc(100% - 40px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        .taxonomyLevelParentContainer {
+          margin: 4px 2px;
+          padding: 3px 5px;
+          height: 25px;
+
+          .taxonomyLevelParent {
+            font-weight: 500;
+            float: left;
+            text-decoration: underline;
+            width: calc(100% - 18px);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+
+          .contextMenuViewNewContainer {
+            float: right;
+            width: 18px;
+            height: 18px;
+            .addMasterListChildren {
+              width: 18px;
+              height: 18px;
+              cursor: pointer;
+              @include background-properties($image-CS-Plus-32-black,18px);
+              margin-top: 0px;
+            }
+          }
+        }
+
+        .taxonomyLevelChild {
+          margin: 2px;
+          padding: 3px 5px;
+          border-radius: 3px;
+          font-size: 12px;
+          position: relative;
+          cursor: pointer;
+          height: 24px;
+
+          &:hover {
+            background-color: #eee;
+          }
+
+          .taxonomyIcon {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 100%;
+            float: left;
+
+            &.actionItemAttributionTaxonomy {
+              @include background-properties($image-CS-group-objects, 16px);
+              opacity: 0.6;
+            }
+          }
+
+          .childLabel {
+            width: calc(100% - 60px);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            float: left;
+            padding-left: $spacing-xs;
+            line-height: 20px;
+          }
+
+          &.selected {
+            background: #ddd;
+            .childLabelInput{
+              height: 18px;
+              //width: calc(100% - 50px);
+              width: 100%;
+              border-radius: 3px;
+              border: 1px solid gray;
+              &:focus{
+                outline : none;
+              }
+            }
+          }
+
+          &.activeLevel {
+            box-shadow: 0 0 0 1px #f79646;
+          }
+
+          &:hover {
+            .childActionItems {
+              visibility: visible;
+            }
+          }
+
+          .childActionItems {
+           float: right;
+            visibility: hidden;
+
+            .childActionItem {
+              float: right;
+              /*margin: 2px 0;*/
+              width: 18px;
+              height: 18px;
+              cursor: pointer;
+              opacity: 0.5;
+              /* margin: 2px 0; */
+
+              &.delete {
+                @include background-properties($image-CS-delete-bin-black,13px);
+              }
+
+              &.edit {
+                @include background-properties($image-CS-Edit-32,13px);
+              }
+              &.openButton{
+                @include background-properties($image-CS-eye-black,13px);
+              }
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+          .majorTaxonomy,.minorTaxonomy{
+            width: 18px;
+            height: 18px;
+            /*margin: -2px 159px;*/
+            float: right;
+            background-size: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+          }
+          .majorTaxonomy{
+            @include background-properties($image-Letter-M-26,13px);
+          }
+          .minorTaxonomy{
+            @include background-properties($image-CS-Letter-M--small,13px);
+          }
+        }
+      }
+    }
+  }
+}

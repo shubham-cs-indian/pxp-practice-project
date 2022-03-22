@@ -1,0 +1,35 @@
+[
+  {
+    "Ltasks": [
+      "R_TASK1","R_TASK2"
+    ],
+    "LLevelLabels": [
+      
+    ],
+    "csid": "[c>Chandrani_1 $type=CLASS]",
+    "_subtype": "PROJECT_KLASS_TYPE",
+    "LLevelCode": [
+      
+    ],
+    "label": "Chandrani_1",
+    "isabstract": false,
+    "Lstatustags": [
+      "listingstatustag",
+	  "R_TAG"
+    ],
+    "numberofversionstomaintain": 0,
+    "LRelationships": [
+      
+    ],
+    "$naturetype": "singleArticle",
+    "Jsections": {
+      
+    },
+    "parentCode": "article",
+    "Jembeddedclasses": {
+      
+    },
+    "isdefault": false,
+    "$isnature": false
+  }
+]

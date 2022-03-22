@@ -1,0 +1,331 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+@import "basic-tab-layout-view";
+
+.contentTileListViewContainerWrapper {
+  height: 100%;
+  width: 100%;
+  .contentTileListViewContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .headerViewContainer {
+      .breadcrumbSection {
+        position: absolute;
+        left: 0px;
+        width: auto;
+      }
+    }
+
+    /*&.withoutCollectionScreen {
+      padding: 15px;
+    }*/
+    &.withCollectionScreen {
+
+      .tabLayoutView {
+        margin: 10px;
+        width: calc(100% - 20px);
+      }
+      .breadcrumbViewContainer {
+        .breadCrumbView{
+          .breadcrumbItem {
+            .leftSectionToolbarContainer {
+              padding: 10px 8px;
+            }
+          }
+        }
+      }
+    }
+    .tabLayoutView {
+      //flex: 1 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      $tabHeight: 32px;
+
+      .tabsSection {
+        @include tabsSectionHeight($tabHeight);
+
+        .tabsList {
+          height: inherit;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: inline-flex;
+
+          .tabItem {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px #eee;
+            margin: 0 1px 1px 0;
+            padding: 0 14px 0 6px;
+            float: right;
+            font-size: 12px;
+
+            &.isActive {
+              box-shadow: 0 1px 0 0 #fff, 0 0 0 1px #eee, inset 0 3px 0 0 $color-theme-accent;
+            }
+
+            &:hover {
+              background-color: #fff;
+            }
+
+            .tabIcon {
+              background-size: 16px;
+              background-position: 50%;
+              width: 28px;
+              height: 100%;
+              float: left;
+              background-repeat: no-repeat;
+              //margin: 2px 2px;
+              &.pimModule {
+                @include background-properties-with-theme-white-color($image-CS-Product-menu);
+                &.isActive {
+                  @include background-properties-with-theme-white-color($image-CS-Product-menu);
+                }
+              }
+              &.mamModule {
+                @include background-properties-with-theme-white-color($image-CS-ImageFile);
+                &.isActive {
+                  @include background-properties-with-theme-white-color($image-CS-ImageFile);
+                }
+              }
+              &.marketModule {
+                @include background-properties-with-theme-white-color($image-CS-Goal);
+                &.isActive {
+                  @include background-properties-with-theme-white-color($image-CS-Goal);
+                }
+              }
+              &.supplierModule {
+                @include background-properties-with-theme-white-color($image-CS-Truck);
+                &.isActive {
+                  @include background-properties-with-theme-white-color($image-CS-Truck);
+                }
+              }
+              &.textassetModule {
+                @include background-properties-with-theme-white-color($image-CS-Overview);
+                &.isActive {
+                  @include background-properties-with-theme-white-color($image-CS-Overview);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .bodySection {
+        //height: calc(100% - #{$tabHeight});
+        background-color: #fff;
+        overflow: hidden;
+        flex: 1;
+
+        &.withBorder {
+          box-shadow: 0 0 0 1px #eee;
+        }
+      }
+    }
+  }
+}
+
+  .contentTilePaperView {
+    height: calc(100% - 30px);
+    .paperViewHeader {
+      display: none;
+    }
+  }
+
+  .contentTileListView {
+
+    /*------------------------------------------------------------------------------------------------------------------
+      W3C specification says, "By default, flex items won't shrink below their minimum content size (the length of the
+      longest word or fixed-size element). To change this, set the ‘min-width’ or ‘min-height’ property."
+    ------------------------------------------------------------------------------------------------------------------*/
+    max-height: 100%; //shouldn't GROW beyond a certain limit
+    min-height: 0;
+    /*----------------------------------------------------------------------------------------------------------------*/
+    box-shadow: 0 0 0 1px $color-light-4;
+    flex: 1 0 0;
+    //width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 15px;
+
+    .contentFilterViewContainer {
+      border-bottom: solid 1px $color-light-4;
+      margin: 10px 15px 0;
+    }
+  }
+
+  .contentTileViewContainer {
+    height: calc(100% - 54px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contentThumbContainer {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+    .contentViewContainer {
+      width: 100%;
+      height: 100%;
+      float: left;
+      transition: all 0.2s;
+      background: #f3f3f3;
+
+    .contentListViewWrapper {
+        height: 100%;
+        .fullScreenView {
+          z-index: 1200;
+        }
+      }
+
+      .userDoesNotHavePermission {
+        text-align: center;
+        margin-top: 19%;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      /*.dashboardScreenIframeContainer {
+        width: 100%;
+        height: 100%;
+        .dashboardScreenIframeWrapper {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .dashboard-iframe-wrapper {
+            width: 100%;
+            height: 100%;
+          }
+          .loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.001);
+            &.hide {
+              height: 0;
+              width: 0;
+              display: none;
+            }
+            .loading-icon {
+              background: url($image-loading-icon)  50% 50%  no-repeat;
+              height: 200px;
+              width: 200px;
+              background-size: 200px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }*/
+    }
+  }
+
+  .no-results-found-container {
+    vertical-align: middle;
+    font-size: 20px;
+    position: relative;
+    top: 100px;
+    opacity: 0.7;
+    text-align: center;
+    text-shadow: 1px 1px 1px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: 41%;
+    background-image: url($image-CS-Urgent-Property-64);
+  }
+
+  .contentTileListViewWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+    padding: 0 15px 15px;
+    //background-image: linear-gradient(#f1f1f1, #f6f6f6);
+
+    /*
+    .verticalToolbarDiv {
+      .addEntityButton {
+        height: 34px;
+        width: 34px;
+        float: left;
+        background-position: 9px;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-color: #616367;
+        border-radius: 50%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+
+        @include background-properties-with-theme-white-color($image-CS-Plus-32);
+
+        &:hover {
+          opacity: .68;
+        }
+      }
+    }
+    */
+
+    .createCloneButton{
+      width: auto;
+      float: left;
+      padding: 0px 10px 0 0;
+
+      span{
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .popover-root {
+    left: -31415px;
+  }
+
+.collectionEditContainer {
+  //padding: 8px 18px 30px;
+  border: solid 1px $color-light-4;
+  border-radius: 3px;
+  .customButtonContainer {
+    .toolbarItemNew {
+      height: 26px;
+    }
+  }
+}
+
+.visibilityModeIcon {
+  width: 20px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  opacity: 0.6;
+  @include background-properties($image-CS-unlock, 17px, 0px 3px);
+  &.privateMode {
+    @include background-properties($image-CS-lock, 17px, 0px 3px);
+  }
+
+}
+
+/*
+.contentThumbsDialogWrapper {
+  height: 100%;
+  width: 100%;
+  .filterSearchViewContainer {
+    top: 25px;
+    left: 0;
+    right: 0;
+  }
+  .contentTileListViewContainer {
+    padding: 0px;
+  }
+}
+*/

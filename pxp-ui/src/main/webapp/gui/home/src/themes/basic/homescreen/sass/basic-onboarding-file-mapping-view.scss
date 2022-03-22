@@ -1,0 +1,177 @@
+@import "./../../../../styleguide/style-guide";
+
+.onBoardingFileMappingViewContainer {
+  height: calc(100% - 20px);
+  .mappingView {
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    background: #fcfcfc;
+    height: 100%;
+
+    .mappingViewActionItemWrapper {
+      padding: 5px;
+      display: inline-block;
+      width: 100%;
+
+      .mappingViewActionItemWrapperLeft {
+        float: left;
+      }
+      .mappingViewActionItemWrapperRight {
+        float: right;
+
+        .dropdownSection{
+          height: 27px;
+          margin: 0px 7px;
+
+          .multiSelectSearchViewWrapper{
+            border-radius: 3px;
+            border: solid 1px $color-light-4;
+            box-shadow: none;
+
+          }
+        }
+      }
+
+      .toolbarItemNew {
+        height: 27px;
+        width: 27px;
+        float: left;
+        opacity: .7;
+        background-position: center;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        margin: 0 5px;
+        cursor: pointer;
+        background-color: #fff;
+        border: solid 1px $color-light-4;
+        border-radius: 3px;
+        overflow: hidden;
+        &.onboardingBackButton {
+          background-image: url($image-CS-arrow-backward);
+          background-position: 9px;
+          &:hover {
+            opacity: 1;
+          }
+        }
+        &.onboardingImportFile {
+          @include background-properties-with-theme-white-color($image-CS-export-black,18px);
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+     /* .toolbarItem {
+        height: 34px;
+        width: 34px;
+        float: left;
+        opacity: .7;
+        background-position: center;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        margin: 0 5px;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+        &.importMapping {
+          background-image: url($image-CS-export-black);
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.saveMapping {
+          background-image: url($image-CS-SaveFilled-50Black);
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+      }*/
+
+  .mappingViewHeader {
+    line-height: 34px;
+    background: #eee;
+    margin-top: 10px;
+
+    .mappingViewHeaderElement {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #777;
+      display: inline-block;
+    }
+
+    .columnName {
+      width: 41%;;
+      padding: 0 10px;
+    }
+
+    .mappedElement {
+      width: 41%;
+    }
+  }
+
+  .mappingRows {
+    height: calc(100% - 94px);
+    background: #fff;
+    border: 1px solid #eee;
+
+    .mappingRow {
+
+      &.highlightUnmappedRow {
+        background-color: $color-light-yellow;
+      }
+
+      .mappingTagValuesRow {
+        .tagValueRowWrapper {
+          .tagValuesWrapper {
+            width: 44%;
+          }
+        }
+      }
+    }
+  }
+
+  .mappingSummary {
+    border: 1px solid #ccc;
+  }
+
+  .tabLayoutView {
+    height: calc(100% - 50px);
+    .bodySection {
+      padding-top: 1px;
+      height: calc(100% - 30px);
+      .mappingViewTabDetailView {
+        height: 100%;
+        .mappingViewHeader {
+          margin-top: 0;
+        }
+        .mappingRows {
+          height: calc(100% - 35px);
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+}
+
+.dashboardScreenControllerWrapper {
+  .dashboardScreenController {
+    .endpointDialogContainerView {
+      .onBoardingFileMappingViewContainer {
+        .mappingView {
+          .tabLayoutView {
+            height: calc(100% - 64px);
+          }
+        }
+      }
+    }
+  }
+}

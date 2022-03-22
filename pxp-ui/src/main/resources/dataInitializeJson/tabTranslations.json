@@ -1,0 +1,274 @@
+[
+  {
+    "id": "configurations_tab",
+    "translations": {
+      "en_US": {
+        "label": "configurations_tab"
+      },
+      "es_ES": {
+        "label": "Configuraciones"
+      },
+      "fr_FR": {
+        "label": "Konfigurationen"
+      },
+      "de_DE": {
+        "label": "Configurations"
+      }
+    }
+  },
+  {
+    "id": "context_tab",
+    "translations": {
+      "en_US": {
+        "label": "context_tab"
+      },
+      "es_ES": {
+        "label": "Contexto"
+      },
+      "fr_FR": {
+        "label": "Le contexte"
+      },
+      "de_DE": {
+        "label": "Kontext"
+      }
+    }
+  },
+  {
+    "id": "duplicate_tab",
+    "translations": {
+      "en_US": {
+        "label": "duplicates_tab"
+      },
+      "es_ES": {
+        "label": "Duplicados"
+      },
+      "fr_FR": {
+        "label": "Doublons"
+      },
+      "de_DE": {
+        "label": "Duplikate"
+      }
+    }
+  },
+  {
+    "id": "event_tab",
+    "translations": {
+      "en_US": {
+        "label": "event_tab"
+      },
+      "es_ES": {
+        "label": "Evento"
+      },
+      "fr_FR": {
+        "label": "un événement"
+      },
+      "de_DE": {
+        "label": "Veranstaltung"
+      }
+    }
+  },
+  {
+    "id": "makeup_tab",
+    "translations": {
+      "en_US": {
+        "label": "makeup_tab"
+      },
+      "es_ES": {
+        "label": "Maquillaje"
+      },
+      "fr_FR": {
+        "label": "Maquillage"
+      },
+      "de_DE": {
+        "label": "Bilden"
+      }
+    }
+  },
+  {
+    "id": "preset_makeup_tab",
+    "translations": {
+      "en_US": {
+        "label": "makeups_tab"
+      },
+      "es_ES": {
+        "label": "Maquillajes"
+      },
+      "fr_FR": {
+        "label": "Maquillage"
+      },
+      "de_DE": {
+        "label": "Make-ups"
+      }
+    }
+  },
+  {
+    "id": "mdm_tab",
+    "translations": {
+      "en_US": {
+        "label": "MDM"
+      },
+      "es_ES": {
+        "label": "MDM"
+      },
+      "fr_FR": {
+        "label": "MDM"
+      },
+      "de_DE": {
+        "label": "MDM"
+      }
+    }
+  },
+  {
+    "id": "overview_tab",
+    "translations": {
+      "en_US": {
+        "label": "overview_tab"
+      },
+      "es_ES": {
+        "label": "Visión general"
+      },
+      "fr_FR": {
+        "label": "Aperçu"
+      },
+      "de_DE": {
+        "label": "Überblick"
+      }
+    }
+  },
+  {
+    "id": "preset_tab",
+    "translations": {
+      "en_US": {
+        "label": "preset_tab"
+      },
+      "es_ES": {
+        "label": "Preestablecido"
+      },
+      "fr_FR": {
+        "label": "Préréglage"
+      },
+      "de_DE": {
+        "label": "Voreinstellung"
+      }
+    }
+  },
+  {
+    "id": "property_collection_tab",
+    "translations": {
+      "en_US": {
+        "label": "property_collection_tab"
+      },
+      "es_ES": {
+        "label": "Colección de propiedad"
+      },
+      "fr_FR": {
+        "label": "Collection de propriété"
+      },
+      "de_DE": {
+        "label": "Immobiliensammlung"
+      }
+    }
+  },
+  {
+    "id": "relationship_tab",
+    "translations": {
+      "en_US": {
+        "label": "relationship_tab"
+      },
+      "es_ES": {
+        "label": "Relación"
+      },
+      "fr_FR": {
+        "label": "Relation"
+      },
+      "de_DE": {
+        "label": "Beziehung"
+      }
+    }
+  },
+  {
+    "id": "rendition_tab",
+    "translations": {
+      "en_US": {
+        "label": "renditions_tab"
+      },
+      "es_ES": {
+        "label": "Entregas"
+      },
+      "fr_FR": {
+        "label": "Les rendus"
+      },
+      "de_DE": {
+        "label": "Relación"
+      }
+    }
+  },
+  {
+    "id": "task_tab",
+    "translations": {
+      "en_US": {
+        "label": "task_tab"
+      },
+      "es_ES": {
+        "label": "Tarea"
+      },
+      "fr_FR": {
+        "label": "Tâche"
+      },
+      "de_DE": {
+        "label": "Aufgabe"
+      }
+    }
+  },
+  {
+    "id": "timeline_tab",
+    "translations": {
+      "en_US": {
+        "label": "timeline_tab"
+      },
+      "es_ES": {
+        "label": "Cronología"
+      },
+      "fr_FR": {
+        "label": "Chronologie"
+      },
+      "de_DE": {
+        "label": "Zeitleiste"
+      }
+    }
+  },
+  {
+    "id": "usage_tab",
+    "translations": {
+      "en_US": {
+        "label": "Usages"
+      },
+      "es_ES": {
+        "label": "Usos"
+      },
+      "fr_FR": {
+        "label": "Coutumes"
+      },
+      "de_DE": {
+        "label": "Verwendungen"
+      }
+    }
+  },
+    {
+    "id": "promotional_products_tab",
+    "translations": {
+      "en_US": {
+        "label": "Promotional Products"
+      },
+      "es_ES": {
+        "label": "Promotional Products__es_ES"
+      },
+      "fr_FR": {
+        "label": "Promotional Products__fr_FR"
+      },
+      "de_DE": {
+        "label": "Promotional Products__de_DE"
+      }
+    }
+  }
+]

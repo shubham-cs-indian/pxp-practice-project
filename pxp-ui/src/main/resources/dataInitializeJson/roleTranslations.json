@@ -1,0 +1,257 @@
+[
+  {
+    "id": "accountablerole",
+    "translations": {
+      "en_US": {
+        "label": "Accountable"
+      },
+      "es_ES": {
+        "label": "Explicable"
+      },
+      "fr_FR": {
+        "label": "Redevable"
+      },
+      "de_DE": {
+        "label": "Verantwortlich"
+      }
+    }
+  },
+  {
+    "id": "adminrole",
+    "translations": {
+      "en_US": {
+        "label": "Admin"
+      },
+      "es_ES": {
+        "label": "Administración"
+      },
+      "fr_FR": {
+        "label": "Administrateur"
+      },
+      "de_DE": {
+        "label": "Administrator"
+      }
+    }
+  },
+  {
+    "id": "approverrole",
+    "translations": {
+      "en_US": {
+        "label": "Approver(Sign-Off)"
+      },
+      "es_ES": {
+        "label": "Aprobador (Aprobación)"
+      },
+      "fr_FR": {
+        "label": "Approbateur (approbation)"
+      },
+      "de_DE": {
+        "label": "Genehmiger (Abmeldung)"
+      }
+    }
+  },
+  {
+    "id": "assigneerole",
+    "translations": {
+      "en_US": {
+        "label": "Assignee"
+      },
+      "es_ES": {
+        "label": "Cesionario"
+      },
+      "fr_FR": {
+        "label": "Cessionnaire"
+      },
+      "de_DE": {
+        "label": "Beauftragter"
+      }
+    }
+  },
+  {
+    "id": "consultedrole",
+    "translations": {
+      "en_US": {
+        "label": "Consulted"
+      },
+      "es_ES": {
+        "label": "Consultado"
+      },
+      "fr_FR": {
+        "label": "Consulté"
+      },
+      "de_DE": {
+        "label": "Konsultiert"
+      }
+    }
+  },
+  {
+    "id": "contributorrole",
+    "translations": {
+      "en_US": {
+        "label": "Contributor(Consulted)"
+      },
+      "es_ES": {
+        "label": "Colaborador (consultado)"
+      },
+      "fr_FR": {
+        "label": "Contributeur (consulté)"
+      },
+      "de_DE": {
+        "label": "Mitwirkender (konsultiert)"
+      }
+    }
+  },
+  {
+    "id": "informedrole",
+    "translations": {
+      "en_US": {
+        "label": "Informed"
+      },
+      "es_ES": {
+        "label": "Informado"
+      },
+      "fr_FR": {
+        "label": "Informé"
+      },
+      "de_DE": {
+        "label": "Informiert"
+      }
+    }
+  },
+  {
+    "id": "ownerrole",
+    "translations": {
+      "en_US": {
+        "label": "Owner(Responsible)"
+      },
+      "es_ES": {
+        "label": "Propietario (Responsable)"
+      },
+      "fr_FR": {
+        "label": "Propriétaire (responsable)"
+      },
+      "de_DE": {
+        "label": "Besitzer (verantwortlich)"
+      }
+    }
+  },
+  {
+    "id": "responsiblerole",
+    "translations": {
+      "en_US": {
+        "label": "Responsible"
+      },
+      "es_ES": {
+        "label": "Responsable"
+      },
+      "fr_FR": {
+        "label": "Responsable"
+      },
+      "de_DE": {
+        "label": "Verantwortlich"
+      }
+    }
+  },
+  {
+    "id": "reviewerrole",
+    "translations": {
+      "en_US": {
+        "label": "Reviewer(Verify)"
+      },
+      "es_ES": {
+        "label": "Revisor (verificar)"
+      },
+      "fr_FR": {
+        "label": "Réviseur (vérifier)"
+      },
+      "de_DE": {
+        "label": "Gutachter (überprüfen)"
+      }
+    }
+  },
+  {
+    "id": "seniormanagerrole",
+    "translations": {
+      "en_US": {
+        "label": "Senior Manager(Accountable)"
+      },
+      "es_ES": {
+        "label": "SGerente Senior (Responsable)"
+      },
+      "fr_FR": {
+        "label": "Gestionnaire principal (responsable)"
+      },
+      "de_DE": {
+        "label": "Senior Manager (Verantwortlich)"
+      }
+    }
+  },
+  {
+    "id": "signoffrole",
+    "translations": {
+      "en_US": {
+        "label": "Sign-off"
+      },
+      "es_ES": {
+        "label": "Cerrar sesión"
+      },
+      "fr_FR": {
+        "label": "Approuver"
+      },
+      "de_DE": {
+        "label": "Ausloggen"
+      }
+    }
+  },
+  {
+    "id": "subscriberrole",
+    "translations": {
+      "en_US": {
+        "label": "Subscriber(Informed)"
+      },
+      "es_ES": {
+        "label": "Suscriptor (informado)"
+      },
+      "fr_FR": {
+        "label": "Abonné (informé)"
+      },
+      "de_DE": {
+        "label": "Abonnent (informiert)"
+      }
+    }
+  },
+  {
+    "id": "verifyrole",
+    "translations": {
+      "en_US": {
+        "label": "Verify"
+      },
+      "es_ES": {
+        "label": "Verificar"
+      },
+      "fr_FR": {
+        "label": "Vérifier"
+      },
+      "de_DE": {
+        "label": "Überprüfen"
+      }
+    }
+  },
+  {
+    "id": "backgroundrolestandardorganization",
+    "translations": {
+      "en_US": {
+        "label": "Background"
+      },
+      "es_ES": {
+        "label": "Antecedentes"
+      },
+      "fr_FR": {
+        "label": "Contexte"
+      },
+      "de_DE": {
+        "label": "Hintergrund"
+      }
+    }
+  }
+]

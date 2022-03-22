@@ -1,0 +1,474 @@
+@import "../../../../styleguide/mixin";
+@import "./../../../../styleguide/style-guide";
+.bpmnCustomComponentsPropertiesView {
+
+  .bpmnCustomProperty {
+    padding: 5px 0px;
+    position: relative;
+    .bpmnCustomPropertyView {
+      &.errorField {
+        border: 1px solid $color-bpmn-red;
+      }
+
+      .customTextFieldViewContainer {
+        .customTextField {
+          //&.customNODE_TYPE {
+          //  opacity: 0.6;
+          //  cursor: no-drop;
+          //}
+        }
+      }
+    }
+    .bpmnCustomPropertyLabel {
+      padding: 5px 0px;
+      &.bpmnCustomPropertyLabelBold{
+        font-weight: bolder;
+        color: #666;
+      }
+    }
+    &.checkbox {
+      .bpmnCustomPropertyLabel {
+        display: inline-block;
+        width: calc(100% - 20px);
+      }
+      .bpmnCustomPropertyView {
+        float: left;
+        .propertyCheckbox {
+          margin: 0px 5px 0px 0px;
+          position: static;
+          height: 28px;
+        }
+      }
+    }
+
+    &.groupMss {
+      display: flex;
+      .bpmnCustomPropertyLabel {
+        padding: 5px 0px;
+        &.bpmnCustomPropertyLabelBold{
+          font-weight: bolder;
+          color: #666;
+          flex: 1;
+        }
+      }
+      .bpmnCustomPropertyView {
+        flex: 2;
+        .propertyCheckbox {
+          margin: 0px 5px 0px 0px;
+          position: static;
+          height: 28px;
+        }
+
+        .taskMSSViewContainer {
+
+          .taskMSSLabel {
+            float: left;
+            padding: 2px;
+            width: 25%;
+            height: 30px;
+            line-height: 25px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+          }
+
+          .taskMSSDetail {
+            height: 28px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    &.searchFilterContent{
+      .filterSummaryRowContainer{
+        float: left;
+        width: calc(100% - 65px);
+      }
+    }
+
+    &.inlineText{
+      display: flex;
+      .inlineTextWrapper{
+        display: flex;
+
+        .customTextFieldViewContainer{
+          border: 1px solid $color-light-3;
+          width: 40px;
+          margin: 0px 10px;
+        }
+        .postLabel{
+          font-weight: bolder;
+          color: $color-dark-10;
+          line-height: 25px;
+        }
+      }
+    }
+
+    &.searchCriteria {
+      .bpmnCustomPropertyView {
+        .taxonomySelectorContainer {
+          .selectTaxonomyButtonDisabled {
+            .selectTaxonomyButtonLabel {
+              color: #fafafa;
+              background-color: $color-bpmn-blue;
+              width: 136px;
+              padding: 3px 2px 3px 6px;
+              font-weight: bolder;
+            }
+            .downArrowIcon {
+              vertical-align: top;
+              height: 28px;
+              width: 20px;
+              float: right;
+              @include background-properties($image-CS-expand-arrow-icon, 14px, 3px);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .textAreaWrapper{
+        .customTextFieldLabel{
+          font-weight: bolder;
+          color: #666;
+        }
+        .customTextFieldViewContainer{
+          .customTextField {
+            &.customTextFieldView {
+              &.isDisabled {
+                opacity: 0.6;
+                cursor: no-drop;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rowListWrapper {
+    .addRowListButton {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      @include background-properties-with-theme-gray-color($image-CS-Plus-32-black, 13px);
+      opacity: .7;
+    }
+
+    .rowListBody {
+      background: #fff;
+      padding: 5px;
+      margin-top: 5px;
+
+      .parameterRow:last-child {
+        margin-bottom: 0;
+      }
+
+      .parameterRow {
+        margin-bottom: 5px;
+      }
+    }
+
+    .klassSelector {
+      margin-bottom: 5px;
+    }
+
+    .customTextFieldViewContainer {
+      margin: 0px;
+      .customTextField {
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 85%;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .parameterRow {
+      position: relative;
+      .parameterValue {
+        margin-top: 3px;
+        background: #fff;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+      }
+    }
+
+    .removeRowList {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      height: 20px;
+      opacity: 0.5;
+      width: 20px;
+      cursor: pointer;
+      background-image: url($image-CS-Cross);
+      background-repeat: no-repeat;
+      background-size: 20px;
+    }
+  }
+
+  .tagGroupWrapper {
+    .addTagGroupButton {
+      position: absolute;
+      top: 12px;
+      right: 5px;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      @include background-properties-with-theme-gray-color($image-CS-Plus-32-black, 13px);
+      opacity: .7;
+    }
+
+    .tagGroupBody {
+      margin-top: 5px;
+      max-height: 120px;
+      overflow: auto;
+
+      .parameterRow:last-child {
+        margin-bottom: 0;
+      }
+
+      .parameterRow {
+        margin-bottom: 5px;
+        overflow: hidden;
+      }
+    }
+
+    .klassSelector {
+      margin-bottom: 5px;
+    }
+
+    .customTextFieldViewContainer {
+      margin: 0px;
+      .customTextField {
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 85%;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .parameterRow {
+      position: relative;
+      .parameterValue {
+        //margin-top: 3px;
+        //background: #fff;
+        //border-radius: 2px;
+        //border: 1px solid #ddd;
+      }
+    }
+
+    .removeTagGroup {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      height: 20px;
+      opacity: 0.5;
+      width: 20px;
+      cursor: pointer;
+      background-image: url($image-CS-Cross);
+      background-repeat: no-repeat;
+      background-size: 13px;
+      background-position: center;
+      z-index: 10;
+    }
+  }
+
+  .bpmnPropertiesTagGroup {
+    //display: inline-block;
+    //float: left;
+
+    .customTextFieldViewContainer {
+      margin: 0px;
+      .customTextField {
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        padding: 0px;
+        width: 85%;
+        border: none;
+        box-shadow: none;
+        height:25px;
+      }
+    }
+
+    .datePickerCustomImBPMN{
+      max-width: 85%;
+      background-color: #FFF;
+
+      & > div > input{
+        border-radius: 3px;
+        padding: 0;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        height: 25px;
+      }
+
+      .MuiInput-underline-188:before, .MuiInput-underline-188:after{
+        border-bottom: none;
+        content: none;
+      }
+    }
+
+    .multiSelectNothingSelected{
+      font-size: 13px;
+      background-image: none;
+      color: $color-brand-primary-text;
+      font-weight: 500;
+    }
+  }
+
+  .parameters{
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: middle;
+    color: #666;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    transition: margin 0.218s linear;
+    font-style: italic;
+  }
+
+  .parameters:first-child{
+    margin-top: 5px;
+  }
+
+  .variableMapWrapper {
+    .addVariableMapButton {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      @include background-properties-with-theme-white-color($image-CS-Plus-32-black,18px);
+      opacity: .7;
+    }
+
+    .variableMapRow {
+      padding: 5px;
+      margin-top: 5px;
+
+      .variableMapRow:last-child {
+        margin-bottom: 0;
+      }
+
+      .variableMapRow {
+        margin-bottom: 5px;
+      }
+    }
+
+    .customTextFieldViewContainer {
+      margin: 0px;
+      .customTextField {
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 85%;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .variableMapRow {
+      position: relative;
+      display: grid;
+      grid-template-columns: 45% 45% 10%;
+      grid-gap: 10px;
+      .variableKey {
+        margin-top: 3px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px #ddd;
+      }
+      .variableValue {
+        margin-top: 3px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px #ddd;
+      }
+    }
+
+    .removeVariableMap {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      height: 20px;
+      opacity: 0.5;
+      cursor: pointer;
+      background-image: url($image-CS-Cross);
+      background-repeat: no-repeat;
+      background-size: 18px;
+    }
+  }
+  .entityMapWrapper {
+
+    .entityMapRow {
+      padding: 5px;
+      margin-top: 5px;
+
+      .entityMapRow:last-child {
+        margin-bottom: 0;
+      }
+
+      .entityMapRow {
+        margin-bottom: 5px;
+      }
+    }
+
+    .customTextFieldViewContainer {
+      margin: 0px;
+      .customTextField {
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        width: 85%;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .entityMapRow {
+      position: relative;
+      display: grid;
+      //grid-template-columns: 45% 45% 10%;
+      grid-gap: 10px;
+      .entityMapKey {
+       /* margin-top: 3px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px #ddd;*/
+      }
+      .entityMapValue {
+        margin-top: 3px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0 0 1px #ddd;
+      }
+    }
+
+    .removeVariableMap {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      height: 20px;
+      opacity: 0.5;
+      cursor: pointer;
+      background-image: url($image-CS-Cross);
+      background-repeat: no-repeat;
+      background-size: 18px;
+    }
+  }
+}

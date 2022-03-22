@@ -1,0 +1,69 @@
+ @import "../../../../styleguide/style-guide";
+ @import "../../../../styleguide/mixin";
+
+.physicalCatalogSelectorView {
+  @include topInlineBlock();
+  height: 100%;
+  float: right;
+  .contextMenuViewNewContainer {
+    height: 100%;
+
+    .physicalCatalogSelectorIcon {
+      display: flex;
+      max-width: 180px;
+      height: 100%;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 5px;
+
+      &.isDisabled {
+        opacity: .5;
+        cursor: default;
+        //border-right: unset;
+        pointer-events: none;
+      }
+
+      .physicalCatalogIcon {
+        background-size: 20px;
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 20px;
+
+        &.pim {
+          background-image: url($image-CS-physical-catalog-pim);
+        }
+
+        &.onboarding {
+          background-image: url($image-CS-physical-catalog-onboarding);
+        }
+
+        &.offboarding {
+          background-image: url($image-CS-physical-catalog-offboarding);
+        }
+
+        &.dataIntegration {
+          background-image: url($image-CS-data-integration-000-50);
+        }
+
+        &.pimArchival {
+          background-image: url($image-CS-physical-catalog-pimArchival);
+        }
+      }
+
+      .physicalCatalogLabel {
+        margin-left: 10px;
+        text-transform: capitalize;
+        @include ellipsis();
+        //color: $color-brand-primary-text;
+      }
+
+      .buttonIcon {
+        height: 100%;
+        width: 20px;
+        float: left;
+        @include background-properties($image-CS-expand-arrow-icon, 16px);
+      }
+    }
+  }
+
+}

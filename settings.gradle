@@ -1,0 +1,3 @@
+include 'pxp-core', 'pxp-dam', 'pxp-di', 'pxp-pim', 'pxp-rdbms-interface', 'pxp-rdbms-implementation', 'pxp-technical-services', 'pxp-ui','OrientDB', 'pxp-backgroundprocess-implementation', 'pxp-workflow', 'pxp-shared-services', 'pxp-models', 'pxp-orientdb-implementation', 'pxp-orientdb-interface','business-service-interface', 'business-service-api',  'di-workflow-api', 'pxp-indesign-loadbalancer', 'pxp-exception','elastic-sync', 'IElastic'
+
+project(':OrientDB').projectDir = new File('pxp-core/ServerPlugins/OrientDB')

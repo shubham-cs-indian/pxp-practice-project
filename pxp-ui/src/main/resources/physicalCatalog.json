@@ -1,0 +1,20 @@
+{
+	"physicalCatalogs": [
+		{
+			"id": "pim",
+			"label": "PIM"
+		},
+		{
+			"id": "dataIntegration",
+			"label": "DATA_INTEGRATION"
+		},
+		{
+			"id": "onboarding",
+			"label": "ONBOARDING"
+		},
+		{
+			"id": "offboarding",
+			"label": "OFFBOARDING"
+		}
+	]
+}

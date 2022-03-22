@@ -1,0 +1,208 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+$selectedMenuItemBorder: 2px solid $color-theme-secondary;
+
+.newHeaderMenuContainer {
+  overflow: hidden;
+  height: 48px;
+  border-bottom: none;
+  position: relative;
+  background: $brand-header-background-color;
+  box-shadow: 0 0 3px 0 #383838;
+
+  .aboutButtonDialogViewContainer .aboutButtonContainer {
+    background-repeat: no-repeat;
+  }
+
+  .newMenuViewContainer {
+    .physicalCatalogMenuItem {
+      width: 80px;
+      overflow: auto;
+      .multiSelectSearchViewWrapper {
+        padding: 15px 0 10px 0;
+      }
+    }
+  }
+
+  .newHeaderMenuRightSideContainer {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    padding: 5px 2px;
+    display: flex;
+    align-items: center;
+  }
+  .headerMenuSubContainer {
+    display: flex;
+    align-items: center;
+    height: 20px;
+
+    .helpButtonContainer {
+      display: flex;
+      align-items: center;
+      .helpButton {
+        @include background-properties($image-CS-help-button, 27px);
+      }
+    }
+    .aboutButtonDialogViewContainer {
+      .aboutButtonContainer {
+        @include background-properties($image-CS-menu-item-about);
+      }
+    }
+    .notificationButtonViewContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .notificationButton {
+        @include background-properties($image-CS-notification-button);
+      }
+    }
+    .taskPlannedButtonViewContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .taskPlannedButton {
+        @include background-properties($image-CS-Planned-Task);
+      }
+    }
+    .newMenuViewContainer {
+      display: flex;
+      align-items: center;
+
+      .menuItem {
+        opacity: 0.7;
+        &.selected {
+          opacity: 1;
+        }
+
+        &.contentMenuItem {
+          @include background-properties($image-CS-Product-menu, 25px);
+        }
+
+        &.settingsMenuItem {
+          @include background-properties($image-CS-Settings-48);
+        }
+
+        &.archivalButton {
+          @include background-properties($image-CS-physical-catalog-pimArchival);
+        }
+      }
+    }
+    .tooltipWrapper{
+      display: flex;
+      align-items: center;
+    }
+  }
+  .headerMenuSubContainer {
+    padding: 0 9px;
+
+    .physicalCatalogSelectorView {
+      @include topInlineBlock();
+      float: left;
+      height: 100%;
+      padding: 0;
+
+      .contextMenuViewNewContainer {
+        padding: 0 3px 0 0;
+
+        .physicalCatalogSelectorIcon {
+          display: flex;
+          max-width: 180px;
+          height: 100%;
+          align-items: center;
+          cursor: pointer;
+
+          &.isDisabled {
+            opacity: .7;
+            cursor: default;
+            pointer-events: none;
+          }
+
+          .physicalCatalogIcon {
+            background-size: 25px;
+            background-repeat: no-repeat;
+            width: 22px;
+            height: 24px;
+
+            &.pim {
+              @include background-properties($image-CS-physical-catalog-pim);
+            }
+
+            &.onboarding {
+              @include background-properties($image-CS-physical-catalog-onboarding);
+            }
+
+            &.offboarding {
+              @include background-properties($image-CS-physical-catalog-offboarding);
+            }
+
+            &.dataIntegration {
+              @include background-properties($image-CS-data-integration-000-50);
+            }
+
+            &.pimArchival {
+              @include background-properties($image-CS-physical-catalog-pimArchival);
+            }
+          }
+
+          .physicalCatalogLabel {
+            margin-left: 5px;
+            margin-right: 3px;
+            text-transform: capitalize;
+            @include ellipsis();
+            //color: $brand-header-font-color;
+            font-size: 12px;
+          }
+
+          .buttonIcon {
+            height: 20px;
+            width: 20px;
+            float: left;
+            @include background-properties($image-CS-expand-arrow-icon, 12px);
+          }
+        }
+      }
+
+    }
+  }
+
+  .headerMenuSubContainer:not(:first-child) {
+    box-shadow: $brand-header-divider-line-color;
+    padding: 0 9px;
+
+  }
+
+  .logoContainer {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+    margin-left: 14px;
+  }
+
+  .menuItem {
+    display: inline-block;
+    transition: all .2s ease-out;
+    float: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
+  }
+
+  .logoImageContainer {
+    float: left;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+
+  .default-icon{
+    @include defaultLogo();
+  }
+
+  .img{
+    @include brandLogo();
+  }
+}

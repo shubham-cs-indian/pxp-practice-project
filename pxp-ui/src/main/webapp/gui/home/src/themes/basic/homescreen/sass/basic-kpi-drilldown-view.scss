@@ -1,0 +1,70 @@
+@import "./../../../../styleguide/style-guide";
+.kpiDrillDownContainer {
+
+  .drillDownLevelRow {
+    position: relative;
+    padding: 3px;
+    overflow: hidden;
+
+    .drillDownLevelLabel {
+      float: left;
+      width: 92px;
+      margin-right: 10px;
+      line-height: 22px;
+    }
+
+    .drillDownLevelTypeContainer {
+      float: left;
+      border: 1px solid orange;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .drillDownMSSContainer {
+      float: left;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .drillTaxonomyLabelsContainer {
+      //width: calc(100% - 230px);
+      //overflow: auto;
+
+      .kpiDrillDownTaxonomyLabel {
+        width: auto;
+        position: relative;
+        float: left;
+        display: inline-block;
+        background-size: 15px;
+        text-align: center;
+        background-repeat: no-repeat;
+        margin: 2px 0 2px 10px;
+        cursor: default;
+        background-color: $color-light-5;
+        border-radius: 20px;
+        padding: 0 10px;
+        max-width: 300px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .drillDownRemoveLevel {
+      position: absolute;
+      right: 10px;
+      height: 22px;
+      width: 22px;
+      background-image: url($image-CS-Cross);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px;
+      cursor: pointer;
+    }
+
+  }
+
+  .addMoreOptionContainer {
+    margin: 10px 0 3px;
+  }
+}

@@ -1,0 +1,40 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+.attributeContextView {
+
+  .attributeLabel {
+    font-size: 11px;
+    color: #777;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 50px);
+  }
+
+  .showVariationButton {
+    margin: 10px 0 10px 4px;
+    height: 25px;
+    min-width: 80px;
+  }
+
+  .variantMaxMinInfo {
+    display: inline-block;
+    margin-right: 17px;
+    padding-left: 3px;
+    opacity: 0.8;
+  }
+
+  .showVariationsLabel {
+    display: inline-block;
+    color: #75a9f9;
+    padding: 10px 0 0 2px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .customMaterialButton{
+    background-color: $color-light-8;
+  }
+}

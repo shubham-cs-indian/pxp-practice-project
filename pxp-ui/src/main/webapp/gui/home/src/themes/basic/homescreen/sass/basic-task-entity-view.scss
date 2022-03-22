@@ -1,0 +1,99 @@
+@import "../../../../styleguide/mixin";
+@import "../../../../styleguide/style-guide";
+
+$bottom-section-height : 57px;
+$font-size-entity-name : 57px;
+$font-size-class-name : 10px;
+
+.taskEntityViewWrapper {
+  height: 68px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding: 5px 15px;
+  .entityImageContainer {
+    height: $bottom-section-height;
+    width: $bottom-section-height;
+    display: inline-block;
+    vertical-align: top;
+    .imageWrapper {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background-color: #fff;
+      overflow: hidden;
+      .thumbnailImagePreview {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        display: inline-block;
+        background-color: white;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .primaryInformationSection {
+    width: calc(100% - 70px);
+    transition: all .2s;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: 100%;
+    margin-left: 22px;
+
+    .entityName {
+      vertical-align: top;
+      line-height: 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #000;
+      max-width: 290px;
+      height: 18px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .className {
+      vertical-align: top;
+      font-size: 10px;
+      line-height: 15px;
+      font-style: italic;
+      color: #999;
+      max-width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .taskOpenEntityButtonView{
+      border: solid 1px #ddd;
+      border-radius: 2px;
+      background-color: white;
+      height: 21px;
+      float: left;
+      margin-top: 2px;
+      cursor: pointer;
+
+      .customButtonContainer{
+        background-color: white;
+        .customButton {
+          display: block;
+          .textContent {
+            font-size: 11px;
+            color: #999;
+            height: 17px;
+            line-height: 17px;
+            padding: 0 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

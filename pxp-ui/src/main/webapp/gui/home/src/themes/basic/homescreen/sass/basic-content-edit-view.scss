@@ -1,0 +1,207 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.contentEditViewContainer {
+  height: 100%;
+  .contentCarouselContainer {
+    width: 100%;
+    height: 245px;
+    position: relative;
+  }
+  .contentEditorContainer {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .nothingToDisplayContainer {
+    height: 100%;
+    background-color: $color-light-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nothingToDisplay {
+      padding: 0 8px;
+      text-align: center;
+      line-height: 24px;
+      font-style: italic;
+      font-size: $font-title;
+      color: $color-dark-5;
+    }
+  }
+}
+
+.contentBasicInformationContainer {
+  height: 320px;
+  overflow: hidden;
+}
+
+.contentAttributeListContainer {
+  height: auto;
+  overflow: hidden;
+}
+
+.contentRelationship {
+  height: 100%;
+}
+
+.contentEditViewContainer > div:last-child {
+  height: 100%;
+}
+
+.articleRelationshipPaper {
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  transition: all ease .3s;
+  position: relative;
+  margin: 10px 10px 0;
+  border: 1px $color-light-4 solid;
+  border-radius: 2px;
+
+  &.dispN {
+  }
+
+  &.showAvailableEntity {
+    width: 315px;
+    height: 635px;
+    float: right;
+    transition: all ease .3s;
+  }
+
+  .relationshipPaperWrapper {
+    height: calc(100% - 30px);
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+
+    .addEntityButtonContainer{
+      padding-left: 5px;
+
+      .customButtonContainer {
+        border: solid 1px $color-light-4;
+        .addEntityButton{
+          float: left;
+          opacity: 1;
+          cursor: pointer;
+
+          @include background-properties-with-theme-white-color($image-CS-Plus-32-black, 16px);
+        }
+      }
+    }
+
+    .articleEditViewThumbsContainer{
+      height: 100%;
+      text-align: center;
+      overflow: visible; //it was hiding thumbnail's on hover box shadow
+
+      .dropViewContainer{
+        height: inherit;
+        position: relative;
+      }
+    }
+
+    .relationshipLoadMoreContainer {
+      padding-top: 40px;
+      width: 100%;
+      position: relative;
+    }
+
+    .relationshipVariantTagDrawerContainer{
+      padding: 5px;
+      display: inline-block;
+      width: 100%;
+
+      .relationshipTagDrawerButtonContainer{
+        padding-top: 5px;
+        float: right;
+      }
+    }
+
+    &.extraPadding{
+
+      .articleEditViewThumbsContainer{
+        min-height: 0;
+        padding-left: 10px;
+      }
+
+      .articleThumbnailContainer{
+        padding-left: 0px;
+
+        .nothingFoundViewContainer {
+          height: 70px;
+          margin-top: 10px;
+
+          .nothingFoundInnerContainer {
+            height: 70px;
+
+            .nothingFoundIcon {
+              height: 35px;
+              background-size: 35px;
+            }
+
+            .nothingFoundMsg {
+              margin-top: 3px;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .presentEntityContainer{
+    position: relative;
+    height: 100%;
+
+    .upperBlockContainer{
+      float: left;
+      border-radius: 2px;
+      width: 100%;
+
+      .sectionLabel{
+        float: left;
+        line-height: 34px;
+        margin: 0 10px;
+        font-size: $font-normal;
+      }
+      .okButtonContainer{
+        float: right;
+
+        .okButton{
+          height: 34px;
+          width: 34px;
+          float: left;
+          opacity: .5;
+          margin: 0 5px;
+          cursor: pointer;
+          background-color: $color-light-1;
+          border-radius: 50%;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+          @include background-properties($image-CS-arrow-left, 16px, 9px);
+          &:hover{
+            opacity: .68;
+          }
+        }
+
+      }
+    }
+
+    .lowerEntityListContainer{
+      height: calc(100% - 30px);
+      padding-top: 10px;
+      overflow: auto;
+      float: left;
+
+      .dropViewContainer{
+        height: 100%;
+        overflow: auto;
+      }
+
+    }
+  }
+
+  /*.mainToolbarContainer{
+    padding: 10px 5px;
+  }*/
+}

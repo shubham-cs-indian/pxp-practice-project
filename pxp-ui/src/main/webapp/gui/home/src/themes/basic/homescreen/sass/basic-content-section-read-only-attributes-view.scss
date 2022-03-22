@@ -1,0 +1,93 @@
+@import "../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.readOnlySectionElement {
+  background: #f6f6f6;
+  opacity: 0.7;
+
+  .headerView {
+    .ruleViolationIcon {
+      float: right;
+      height: 20px;
+      width: 20px;
+      margin: 5px 5px 0 0;
+
+      &.orange {
+        @include background-properties($image-CS-Registered-Trademark-Filled-orange-32, 14px);
+      }
+      &.red {
+        @include background-properties($image-CS-Registered-Trademark-Filled-32, 14px);
+      }
+      &.yellow {
+        @include background-properties($image-CS-Registered-Trademark-Filled-yellow, 14px);
+      }
+    }
+  }
+
+  .sectionElementContainerNew {
+    .sectionElementTextAreaValue {
+      resize: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 14px;
+      margin: 0;
+      overflow: hidden;
+      word-wrap: break-word;
+      background: #f6f6f6;
+    }
+
+    .sectionElementValue {
+      white-space: pre-wrap;
+      margin-left:5px;
+    }
+
+    .customFroalaView {
+      .fr-disabled {
+        background: #f6f6f6;
+      }
+    }
+
+    .customTextField {
+      &.isDisabled {
+        background: #f6f6f6;
+      }
+    }
+  }
+
+
+}
+
+.ruleViolationsTooltip {
+  display: inline-block;
+
+  .ruleContainer {
+    overflow: hidden;
+    margin-bottom: 5px;
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .ruleColor {
+      z-index: 2;
+      border-radius: 50%;
+      height: 15px;
+      width: 20px;
+
+      &.red {
+        @include background-properties($image-CS-HighImportance-48Red, 15px);
+      }
+
+      &.orange {
+        @include background-properties($image-CS-HighImportance-48Orange, 15px);
+      }
+
+      &.yellow {
+        @include background-properties($image-CS-HighImportance-48Yellow, 15px);
+      }
+    }
+  }
+
+}

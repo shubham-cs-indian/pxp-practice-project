@@ -1,0 +1,204 @@
+@import "./../../../../styleguide/style-guide";
+/*
+.collectionChildrenViewContainer {
+  height: 100%;
+
+  .collectionChildrenContainer {
+    height: calc(100% - 56px);
+    background-image: linear-gradient(#E8E8E8, #E6E6E6);
+    overflow: auto;
+    padding: 7px;
+
+    .collectionThumbnailContainer {
+      border-bottom: 1px solid #ccc;
+      overflow: hidden;
+
+    }
+  }
+}
+*/
+
+
+/*.entityFolderVisibilityContainer {
+  position: absolute;
+  top: 10px;
+  right: 76px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  z-index: 3;
+  overflow: hidden;
+  box-shadow: 0px 1px 4px -1px #555;
+}*/
+
+/*
+.articleFolderVisibility {
+  padding: 3px 3px;
+  height: 24px;
+
+  .articleFolder {
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    background: no-repeat center;
+    background-size: 13px;
+
+    &.selected {
+      border: 1px solid #f79646;
+      border-radius: 50%;
+    }
+
+    &.showFolders{
+      background-image: url($image-CS-Books-52);
+    }
+
+    &.showArticles{
+      margin-left: 3px;
+      background-image: url($image-CS-Book-52);
+    }
+
+    &.getAllChildren{
+      margin-left: 3px;
+      background-image: url($image-CS-Expand);
+    }
+
+  }
+}
+*/
+
+
+.articleEditViewThumbsContainer{
+  //height: 100%;
+  overflow: auto;
+  margin-left: 30px;
+  min-height: 40px;
+  padding-bottom: 10px;
+
+  &.selected {
+    box-shadow: 0 0 0 2px #F79646;
+  }
+  // TODO: Refactor
+
+ /* .entityFolderVisibilityContainer {
+    top: -35px;
+    right: 180px;
+  }*/
+
+  .articleSetView{
+    text-align: center;
+  }
+
+  .dropViewContainer  {
+    min-height: 440px;
+  }
+
+  .actionGroup {
+    float: left;
+    background-color: #eee;
+    position: absolute;
+    top: -36px;
+    right: 1px;
+
+    .actionItemSelectAll {
+      background-image: url($image-CS-Checked-48Black);
+      &.selected, &:hover {
+        background-image: url($image-CS-Checked-48Black);
+      }
+    }
+
+    .actionItemTileView{
+      background-image: url($image-CS-MediumIcons);
+
+      &.selected, &:hover {
+        background-image: url($image-CS-MediumIcons);
+      }
+    }
+
+    .actionItemGridView{
+      background-image: url($icons8-CS-Grid);
+
+      &.selected, &:hover {
+        background-image: url($icons8-CS-Grid);
+      }
+    }
+
+    .actionItemListView{
+      background-image: url($image-CS-List-50Black);
+
+      &.selected, &:hover {
+        background-image: url($image-CS-Todo-List-Filled-30);
+      }
+    }
+
+    .actionItemDelete{
+      @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+
+      &.selected, &:hover {
+        @include background-properties-with-theme-white-color($image-CS-delete-bin-black);
+      }
+    }
+
+    .actionItemSave{
+
+      background-image: url($image-CS-SaveFilled-50Black);
+
+      &.selected, &:hover {
+        background-image: url($image-CS-SaveFilled-50Black);
+      }
+    }
+  }
+
+  .sortViewWrapper {
+    float: left;
+  }
+
+  .horizontalToolbarViewContainer{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+  }
+}
+
+.articleEditViewThumbsContainer{
+  margin-left: 0;
+}
+
+.articleEditViewThumbsContainer {
+
+  .dropViewContainer {
+    height: calc(100% - 8px);
+    width: 100%;
+    float: left;
+  }
+}
+
+
+/*
+.collectionEditViewThumbsContainer {
+  min-height: 200px;
+
+  &.collectionLinkedContentContainer {
+    min-height: 200px;
+
+    .dropViewContainer {
+      min-height: 200px;
+      height: calc(100% - 8px);
+      width: 100%;
+      float: left;
+    }
+
+    &.selected {
+      box-shadow: 0 0 0 2px #F79646;
+    }
+  }
+}
+*/
+/*
+
+.rootNode {
+  .entityFolderVisibilityContainer {
+    top: 10px;
+    right: 76px;
+  }
+}
+*/

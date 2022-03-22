@@ -1,0 +1,16 @@
+export default {
+    "ASSET_INSTANCE_CLASS_ID"       : "assetInstanceClassId",
+    "ASSET_INSTANCE_CLASS_NAME"     : "assetInstanceClassName",
+    "RENDITION_INSTANCE_CLASS_ID"   : "renditionInstanceClassId",
+    "RENDITION_INSTANCE_CLASS_NAME" : "renditionInstanceClassName",
+    "USER_ID"                       : "userId",
+    "TIMESTAMP"                     : "timestamp",
+    "USER_NAME"                     : "userName",
+    "DOWNLOADED_BY"                 : "downloadedBy",
+    "DATE"                          : "date",
+    "COMMENT"                       : "comment",
+    "ASSET_FILE_NAME"               : "assetFileName",
+    "ASSET_INSTANCE_NAME"           : "assetInstanceName",
+    "RENDITION_FILENAME"            : "renditionFileName",
+    "RENDITION_INSTANCE_NAME"       : "renditionInstanceName",
+};

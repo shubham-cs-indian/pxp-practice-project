@@ -1,0 +1,18 @@
+<div style="color:#a1a4aa;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">
+	<div style="font-size:12px;color:#a1a4aa">TASK</div>
+	<div style="color:#179dba;font-size:24px;margin-bottom:10px">{{taskName}}</div>
+	<div style="font-weight:bold">{{reporter}} assigned to you {{date}}</div>
+	<div style="margin:20px;">
+		<div>TASK DETAILS</div>
+		<table>
+			<tr>
+				<td style="padding:5px;">ASSIGNEE</td>
+				<td style="padding:5px;">{{assignee}}</td>
+			</tr>
+			<tr>
+				<td style="padding:5px;">DUE DATE</td>
+				<td style="padding:5px;">{{dueDate}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

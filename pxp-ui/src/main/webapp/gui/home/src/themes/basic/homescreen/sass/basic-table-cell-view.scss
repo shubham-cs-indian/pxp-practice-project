@@ -1,0 +1,74 @@
+@import "./../../../../styleguide/style-guide";
+@import "../../../../styleguide/mixin";
+
+.tableCell {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: default;
+  max-height: 200px;
+  min-height: 25px;
+  overflow: auto;
+
+  &.disabled {
+    background-color: $color-light-7;
+  }
+
+  .cellValueContainerWrapper{
+    height: 100%;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+
+    .cellValueContainer{
+      height: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .checkMark {
+      height: 15px;
+      width: 15px;
+      background-image: url($image-CS-CheckMark-black);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .cellHTMLValue {
+      min-height: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      //white-space: nowrap;
+      width: 100%;
+    }
+
+    &:hover{
+      //box-shadow: inset 0px 0px 0px 1px gray;
+    }
+  }
+
+  &.isSortable{
+    width: calc(100% - 20px);
+  }
+}
+
+.tableCellPopover{
+  .contentAttributeElementViewWrapper{
+    .customDatePickerWrapper{
+      .dateActionItems{
+        top: 10px
+      }
+    }
+
+    .textField{
+      .measurementMetricWrapper{
+        .measurementMetricElementListWrapper{
+          min-width : 60px;
+        }
+      }
+    }
+  }
+}

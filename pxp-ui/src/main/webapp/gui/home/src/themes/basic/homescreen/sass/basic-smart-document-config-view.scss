@@ -1,0 +1,135 @@
+@import "./../../../../styleguide/style-guide";
+
+.smartDocumentConfigViewContainer {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  //border: 1px solid #eee;
+
+  .smartDocumentListContainer{
+    max-width: 50%;
+    height: 100%;
+    float: left;
+    /*border-right: 1px solid #bbb;*/
+
+    &.propertyCollection {
+      width: 25%;
+    }
+
+    .contentHierarchyTreeViewContainer {
+      width: 100%;
+      border-right: none;
+
+      .contentHorizontalTreeGroupHeader {
+        padding: 0 5px 8px 10px !important;
+
+        .levelLabel {
+          width: calc(100% - 30px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          float: left;
+          font-size: 11px;
+        }
+
+        .levelActionItem {
+          float: right;
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+          margin: 0px 10px 0 0;
+
+          &.create {
+            @include background-properties-with-gray-color($image-CS-Plus-32-black,18px);
+          }
+
+          &.delete {
+            @include background-properties-with-gray-color($image-CS-delete-bin-black,18px);
+          }
+        }
+      }
+    }
+  }
+  .levelActionItem {
+    float: right;
+    width: 12px;
+    height: 12px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 4px 10px 0 0;
+
+    &.create {
+      @include background-properties-with-gray-color($image-CS-Plus-32-black);
+    }
+
+    &.delete {
+      @include background-properties-with-gray-color($image-CS-delete-bin-black);
+    }
+  }
+
+  .smartDocumentDetailViewContainer {
+    min-width: 50%;
+    float: left;
+    flex: 1 0;
+    width: 100%;
+    //min-height: 100%;
+    .smartDocumentCommonConfigSection {
+      width: 100%;
+      position: relative;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: auto;
+      height: 100%;
+      .commonConfigSectionViewContainer {
+        width: 100%;
+        position: relative;
+        white-space: nowrap;
+        //height: 100%;
+        .smallTaxonomyViewContainer {
+          .selectedTaxonomyWrapper {
+            float: left;
+          }
+          .taxonomyHandler {
+            float: left;
+          }
+        }
+      }
+      &.dirty {
+        height: calc(100% - 40px);
+      }
+    }
+
+    /*.snackBarView {
+      height: 40px;
+      padding: 5px;
+      width: 100%;
+      background-color: #cccccc;
+      float: left;
+
+      .saveBarButtonsWrapper {
+        float: right;
+      }
+    }*/
+
+    .snackBarView {
+      height: 0;
+      width: 100%;
+      transition: height 0.5s;
+      padding: 0;
+      overflow: hidden;
+
+      .saveBarButtonsWrapper {
+        float: right;
+      }
+
+      &.dirty {
+        height: 40px;
+        padding: 5px;
+        width: 100%;
+        background-color: #cccccc;
+        float: left;
+      }
+    }
+
+  }
+}

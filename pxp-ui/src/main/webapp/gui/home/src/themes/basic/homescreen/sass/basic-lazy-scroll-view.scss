@@ -1,0 +1,9 @@
+.lazyScrollView {
+  height: 100%;
+  overflow: auto;
+  padding: 5px 7px 0px 30px;
+  text-align: center;
+  background-image: linear-gradient(#f1f1f1, #f6f6f6);
+  position: relative;
+  scrollbar-width: thin;
+}

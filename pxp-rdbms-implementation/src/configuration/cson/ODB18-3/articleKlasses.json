@@ -1,0 +1,19 @@
+[
+	{
+		"cse":"<<@Create @line='3' article $id=article $iid=4000 $supertype=Class>>"
+		"isAbstract": true,
+		"natureType": "",
+		"isStandard": true,
+		"isNature": false,
+		"isAllowedAtTopLevel": true
+	},
+	{
+		"cse":"<<@Create @line='3' product_types $id=product_types $iid=4001 $supertype=Class>>"
+		"parent": "<<article>>",
+		"isAbstract": true,
+		"natureType": "",
+		"isStandard": true,
+		"isNature": false,
+		"isAllowedAtTopLevel": true
+	}
+]

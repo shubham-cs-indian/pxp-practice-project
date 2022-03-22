@@ -1,0 +1,15 @@
+.variantDialogContent {
+  .variantDetailDialogBody {
+    .uomView {
+      height: 100%;
+
+      .uomGridViewWrapper, .nothingFoundViewContainer {
+        height: calc(100% - 30px);
+        .gridView {
+          padding: 20px 0 0 0;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

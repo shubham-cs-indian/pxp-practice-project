@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>1410</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*Technical Services {1}*
+com.cs.pxp.core.tservices</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>470</x>
+      <y>260</y>
+      <w>450</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*Data Services*
+com.cs.pxp.core.rdbms</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>930</x>
+      <y>260</y>
+      <w>450</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*Tracking Services*
+com.cs.core.tracking</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>10</x>
+      <y>260</y>
+      <w>450</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*Metadata Services*
+com.cs.pxp.core.metadata</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>0</x>
+      <y>620</y>
+      <w>1390</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+*MDM Services*
+com.cs.pxp.core.mdm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>20</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+asset</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>160</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+csexpress</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>300</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+formatting</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>440</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+json</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>580</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+rdbms</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>860</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+logger</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1000</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Properties</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1140</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Cache</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>720</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+graph</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>40</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+constants
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>180</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+sqldefs
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>320</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+partitions
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>460</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+sequences
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>20</x>
+      <y>310</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+config
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>600</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+uniqueID
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>940</x>
+      <y>330</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+session
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>740</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+text-search
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1080</x>
+      <y>330</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+tracking
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1220</x>
+      <y>330</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+event
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>940</x>
+      <y>390</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+revision
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1080</x>
+      <y>390</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+bgp
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1280</x>
+      <y>130</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Workflow
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>0</x>
+      <y>920</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+special/generated
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>150</x>
+      <y>920</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+PSQL
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>300</x>
+      <y>920</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+NEW!!
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>450</x>
+      <y>920</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Java</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>600</x>
+      <y>920</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Plugin
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>880</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+graph
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>320</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+coupling
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>620</x>
+      <y>320</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+entities
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>760</x>
+      <y>920</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Java/BGP
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>760</x>
+      <y>320</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+value records
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>380</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+tags records
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>620</x>
+      <y>380</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+relations set records
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>180</x>
+      <y>680</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+data-repair
+(purge)
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>160</x>
+      <y>310</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+rule
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1160</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Testing</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>940</x>
+      <y>460</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+EQ Engine</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>20</x>
+      <y>380</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Ref. Config</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>160</x>
+      <y>380</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Configuration</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>780</x>
+      <y>660</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Application</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>620</x>
+      <y>440</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+BaseEntity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>440</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+LocaleCatalog</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>760</x>
+      <y>500</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+BulkBaseEntity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>500</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Cursor
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>620</x>
+      <y>500</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+RSearch
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1090</x>
+      <y>460</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Object Tracking</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1230</x>
+      <y>460</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Event queue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>940</x>
+      <y>520</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+User Session</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1090</x>
+      <y>520</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Revision
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>760</x>
+      <y>440</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Records
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>760</x>
+      <y>380</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Calculation</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>30</x>
+      <y>750</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+BGP-Application</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1230</x>
+      <y>520</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+BGP-Monitoring</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>30</x>
+      <y>820</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Asset-upload
+fg=blue
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>180</x>
+      <y>820</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Bulk update
+fg=blue
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>180</x>
+      <y>750</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Cloning
+fg=blue
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>330</x>
+      <y>750</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Transfer
+fg=blue
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>330</x>
+      <y>820</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+PXON Exporter
+fg=blue
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>820</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+PXON Importer
+fg=blue
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>750</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+Data Maintenance
+fg=blue
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
